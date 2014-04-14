@@ -1,0 +1,33 @@
+\hypertarget{Command_8java_source}{\section{Command.\-java}
+}
+
+\begin{DoxyCode}
+00001 
+00011 \textcolor{keyword}{class }Command \{
+00017     \textcolor{keyword}{private} String command;
+00018 
+00024     \textcolor{keyword}{private} String parameter;
+00025 
+00031     \textcolor{keyword}{public} Command(String firstWord, String parameter) \{
+00032         command = firstWord;
+00033         this.parameter = parameter;
+00034     \}
+00035 
+00040     \textcolor{keyword}{public} String getCommandWord() \{
+00041         \textcolor{keywordflow}{return} command;
+00042     \}
+00043 
+00048     \textcolor{keyword}{public} String getSecondWord() \{
+00049         \textcolor{keywordflow}{return} parameter;
+00050     \}
+00051 
+00055     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} isUnknown() \{
+00056         \textcolor{keywordflow}{return} (command == null);
+00057     \}
+00058 
+00062     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} hasSecondWord() \{
+00063         \textcolor{keywordflow}{return} (parameter != null);
+00064     \}
+00065 \}
+00066 
+\end{DoxyCode}

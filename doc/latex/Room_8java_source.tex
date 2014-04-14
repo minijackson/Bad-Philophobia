@@ -1,0 +1,50 @@
+\hypertarget{Room_8java_source}{\section{Room.\-java}
+}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{import} java.util.Set;
+00002 \textcolor{keyword}{import} java.util.HashMap;
+00003 \textcolor{keyword}{import} java.util.Iterator;
+00004 
+\hypertarget{Room_8java_source_l00010}{}\hyperlink{classRoom}{00010} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classRoom}{Room} \{
+00011 
+00015     \textcolor{keyword}{private} String description;
+00016 
+00021     \textcolor{keyword}{private} HashMap < String, Room > exits;
+00022 
+00026     \textcolor{keyword}{private} String imageName;
+00027 
+\hypertarget{Room_8java_source_l00033}{}\hyperlink{classRoom_a2cdcbb3d86746330a5a01c7fae4de02c}{00033}     \textcolor{keyword}{public} \hyperlink{classRoom_a2cdcbb3d86746330a5a01c7fae4de02c}{Room}(String description, String image) \{
+00034         this.description = description;
+00035         exits = \textcolor{keyword}{new} HashMap < String, Room > ();
+00036         imageName = image;
+00037     \}
+00038 
+\hypertarget{Room_8java_source_l00044}{}\hyperlink{classRoom_ae4bc6837f331b5249beb0651fc277018}{00044}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classRoom_ae4bc6837f331b5249beb0651fc277018}{setExit}(String direction, \hyperlink{classRoom}{Room} neighbor) \{
+00045         exits.put(direction, neighbor);
+00046     \}
+00047 
+\hypertarget{Room_8java_source_l00051}{}\hyperlink{classRoom_a85e561bc5fa9d9c965300e9ad264b02a}{00051}     \textcolor{keyword}{public} String \hyperlink{classRoom_a85e561bc5fa9d9c965300e9ad264b02a}{getShortDescription}() \{
+00052         \textcolor{keywordflow}{return} description;
+00053     \}
+00054 
+\hypertarget{Room_8java_source_l00058}{}\hyperlink{classRoom_a23a25854d7544fb0b41190a4d6bd1322}{00058}     \textcolor{keyword}{public} String \hyperlink{classRoom_a23a25854d7544fb0b41190a4d6bd1322}{getLongDescription}() \{
+00059         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"You are "} + description + \textcolor{stringliteral}{".\(\backslash\)n"} + getExitString();
+00060     \}
+00061 
+00065     \textcolor{keyword}{private} String getExitString() \{
+00066         StringBuilder returnString = \textcolor{keyword}{new} StringBuilder(\textcolor{stringliteral}{"Exits:"});
+00067         \textcolor{keywordflow}{for}(String vS:exits.keySet())
+00068             returnString.append(\textcolor{stringliteral}{" "} + vS);
+00069         \textcolor{keywordflow}{return} returnString.toString();
+00070     \}
+00071 
+\hypertarget{Room_8java_source_l00076}{}\hyperlink{classRoom_a384ab8c844e5775f87de24d6c470637e}{00076}     \textcolor{keyword}{public} \hyperlink{classRoom}{Room} \hyperlink{classRoom_a384ab8c844e5775f87de24d6c470637e}{getExit}(String direction) \{
+00077         \textcolor{keywordflow}{return} exits.get(direction);
+00078     \}
+00079 
+\hypertarget{Room_8java_source_l00083}{}\hyperlink{classRoom_a8177668df4d8be718812934673c42649}{00083}     \textcolor{keyword}{public} String \hyperlink{classRoom_a8177668df4d8be718812934673c42649}{getImageName}() \{
+00084         \textcolor{keywordflow}{return} imageName;
+00085     \}
+00086 \}
+\end{DoxyCode}

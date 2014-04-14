@@ -1,0 +1,173 @@
+\hypertarget{classRoom}{\section{Room Class Reference}
+\label{classRoom}\index{Room@{Room}}
+}
+
+
+Collaboration diagram for Room\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classRoom__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRoom_a2cdcbb3d86746330a5a01c7fae4de02c}{Room} (String description, String image)
+\item 
+void \hyperlink{classRoom_ae4bc6837f331b5249beb0651fc277018}{set\-Exit} (String direction, \hyperlink{classRoom}{Room} neighbor)
+\item 
+String \hyperlink{classRoom_a85e561bc5fa9d9c965300e9ad264b02a}{get\-Short\-Description} ()
+\item 
+String \hyperlink{classRoom_a23a25854d7544fb0b41190a4d6bd1322}{get\-Long\-Description} ()
+\item 
+\hyperlink{classRoom}{Room} \hyperlink{classRoom_a384ab8c844e5775f87de24d6c470637e}{get\-Exit} (String direction)
+\item 
+String \hyperlink{classRoom_a8177668df4d8be718812934673c42649}{get\-Image\-Name} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used to handle a game's room. \begin{DoxyAuthor}{Author}
+Rémi N\-I\-C\-O\-L\-E 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{Room_8java_source_l00010}{10} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classRoom_a2cdcbb3d86746330a5a01c7fae4de02c}{\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\subsubsection[{Room}]{\setlength{\rightskip}{0pt plus 5cm}Room.\-Room (
+\begin{DoxyParamCaption}
+\item[{String}]{description, }
+\item[{String}]{image}
+\end{DoxyParamCaption}
+)}}\label{classRoom_a2cdcbb3d86746330a5a01c7fae4de02c}
+\hyperlink{classRoom}{Room} class constructor. 
+\begin{DoxyParams}{Parameters}
+{\em description} & Description for the room \\
+\hline
+{\em image} & Image path to display \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Room_8java_source_l00033}{33} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00033                                                   \{
+00034         this.description = description;
+00035         exits = \textcolor{keyword}{new} HashMap < String, Room > ();
+00036         imageName = image;
+00037     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classRoom_a384ab8c844e5775f87de24d6c470637e}{\index{Room@{Room}!get\-Exit@{get\-Exit}}
+\index{get\-Exit@{get\-Exit}!Room@{Room}}
+\subsubsection[{get\-Exit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Room} Room.\-get\-Exit (
+\begin{DoxyParamCaption}
+\item[{String}]{direction}
+\end{DoxyParamCaption}
+)}}\label{classRoom_a384ab8c844e5775f87de24d6c470637e}
+Return the room in a specific direction. 
+\begin{DoxyParams}{Parameters}
+{\em direction} & The direction of the wanted room. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Room_8java_source_l00076}{76} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00076                                           \{
+00077         \textcolor{keywordflow}{return} exits.get(direction);
+00078     \}
+\end{DoxyCode}
+\hypertarget{classRoom_a8177668df4d8be718812934673c42649}{\index{Room@{Room}!get\-Image\-Name@{get\-Image\-Name}}
+\index{get\-Image\-Name@{get\-Image\-Name}!Room@{Room}}
+\subsubsection[{get\-Image\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String Room.\-get\-Image\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classRoom_a8177668df4d8be718812934673c42649}
+Getter for the image\-Name field. 
+
+Definition at line \hyperlink{Room_8java_source_l00083}{83} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00083                                  \{
+00084         \textcolor{keywordflow}{return} imageName;
+00085     \}
+\end{DoxyCode}
+\hypertarget{classRoom_a23a25854d7544fb0b41190a4d6bd1322}{\index{Room@{Room}!get\-Long\-Description@{get\-Long\-Description}}
+\index{get\-Long\-Description@{get\-Long\-Description}!Room@{Room}}
+\subsubsection[{get\-Long\-Description}]{\setlength{\rightskip}{0pt plus 5cm}String Room.\-get\-Long\-Description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classRoom_a23a25854d7544fb0b41190a4d6bd1322}
+Return the description of the room plus the available exits. 
+
+Definition at line \hyperlink{Room_8java_source_l00058}{58} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00058                                        \{
+00059         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"You are "} + description + \textcolor{stringliteral}{".\(\backslash\)n"} + getExitString();
+00060     \}
+\end{DoxyCode}
+\hypertarget{classRoom_a85e561bc5fa9d9c965300e9ad264b02a}{\index{Room@{Room}!get\-Short\-Description@{get\-Short\-Description}}
+\index{get\-Short\-Description@{get\-Short\-Description}!Room@{Room}}
+\subsubsection[{get\-Short\-Description}]{\setlength{\rightskip}{0pt plus 5cm}String Room.\-get\-Short\-Description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classRoom_a85e561bc5fa9d9c965300e9ad264b02a}
+Getter for the description field. 
+
+Definition at line \hyperlink{Room_8java_source_l00051}{51} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00051                                         \{
+00052         \textcolor{keywordflow}{return} description;
+00053     \}
+\end{DoxyCode}
+\hypertarget{classRoom_ae4bc6837f331b5249beb0651fc277018}{\index{Room@{Room}!set\-Exit@{set\-Exit}}
+\index{set\-Exit@{set\-Exit}!Room@{Room}}
+\subsubsection[{set\-Exit}]{\setlength{\rightskip}{0pt plus 5cm}void Room.\-set\-Exit (
+\begin{DoxyParamCaption}
+\item[{String}]{direction, }
+\item[{{\bf Room}}]{neighbor}
+\end{DoxyParamCaption}
+)}}\label{classRoom_ae4bc6837f331b5249beb0651fc277018}
+Define a room in a relative direction to the current room. 
+\begin{DoxyParams}{Parameters}
+{\em direction} & Direction in which the room is. \\
+\hline
+{\em neighbor} & The room in that direction. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Room_8java_source_l00044}{44} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00044                                                          \{
+00045         exits.put(direction, neighbor);
+00046     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Room_8java}{Room.\-java}\end{DoxyCompactItemize}
