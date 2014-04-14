@@ -18,9 +18,14 @@ public class GameEngine
 	private Room currentRoom;
 
 	/**
-	 * User interface for the game.
+	  User interface for the game.
 	 */
 	private UserInterface gui;
+
+	/**
+	 * Help query counter
+	 */
+	private int helpCount;
 
 	/**
 	 * GameEngine class constructor.
@@ -28,6 +33,7 @@ public class GameEngine
 	public GameEngine() {
 		parser = new Parser();
 		createRooms();
+		helpCount = 0;
 	}
 
 	/**
@@ -112,9 +118,14 @@ public class GameEngine
 	 * Print user's help.
 	 */
 	private void printHelp() {
-		gui.println("Help ? Who needs help ? Only the weak ones.")
+		if(helpCount == 0)
+			gui.println("Help ? Who needs help ? Only the weak ones.");
+		else {
+			if(helpCount == 1)
+				gui.println("All right, all right! If you insist...");
 			gui.println("Your command words are: " + parser.showCommands());
-		gui.println("That will be all.");
+			gui.println("That will be all.");
+		}
 	}
 
 	/**
