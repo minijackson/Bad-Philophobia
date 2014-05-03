@@ -3,6 +3,7 @@
  * If the command field is equal to <null>, that means
  * that the command is unknown. If the parameter field
  * is equal to <null>, that means that the command has
+ *
  * no parameter or wasn't given any parameter.
  *
  * @author Rémi NICOLE 
@@ -45,7 +46,7 @@ class Command {
 	 * Parameter field getter.
 	 * @see Command#parameter
 	 */
-	public String getSecondWord() {
+	public String getParameter() {
 		return parameter;
 	}
 
@@ -59,7 +60,7 @@ class Command {
 	/**
 	 * Return true if the parameter is <null>.
 	 */
-	public boolean hasSecondWord() {
+	public boolean hasParameter() {
 		return (parameter != null);
 	}
 }

@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Class handling the gameplay for the game.
  * It takes care of room, parser, and room creations
@@ -65,27 +67,45 @@ public class GameEngine
 	 */
 	private void createRooms() {
 		// create the rooms
-		Room outside = new Room("outside the main entrance of the university", "outside.gif");
-		Room theatre = new Room("in a lecture theatre", "castle.gif");
-		Room pub = new Room("in the campus pub", "courtyard.gif");
-		Room lab = new Room("in a computing lab", "stairs.gif");
-		Room office = new Room("the computing admin office", "dungeon.gif");
+		Room temperateBroadleaf = new Room("in temperate forest", "temperatebroadleaf.gif");
+		Room taiga = new Room("in a boreal forest", "taiga.gif");
+		Room alpineTundra = new Room("on an alpine mountain", "alpinetundra.gif");
+		Room steppe = new Room("on a vast grass plain", "steppe.gif");
+		Room cave = new Room("inside a dark cave", "cave.gif");
+		Room polarDesert = new Room("in a cold polar desert", "polardesert.gif");
+		Room xericShrublands = new Room("in a sand desert", "xericShrublands.gif");
+		Room savanna = new Room("in a savanna", "savanna.gif");
 
 		// initialise room exits
-		outside.setExit("east", theatre);
-		outside.setExit("south", lab);
-		outside.setExit("west", pub);
+		temperateBroadleaf.setExit("east", taiga);
+		temperateBroadleaf.setExit("south", steppe);
 
-		theatre.setExit("west", outside);
+		taiga.setExit("west", temperateBroadleaf);
+		taiga.setExit("east", alpineTundra);
+		taiga.setExit("south", cave);
 
-		pub.setExit("east", outside);
+		alpineTundra.setExit("west", taiga);
+		alpineTundra.setExit("south", polarDesert);
 
-		lab.setExit("north", outside);
-		lab.setExit("east", office);
+		steppe.setExit("north", temperateBroadleaf);
+		steppe.setExit("east", cave);
+		steppe.setExit("south", xericShrublands);
 
-		office.setExit("west", lab);
+		cave.setExit("north", taiga);
+		cave.setExit("south", savanna);
+		cave.setExit("east", polarDesert);
+		cave.setExit("west", steppe);
 
-		currentRoom = outside;  // start game outside
+		polarDesert.setExit("north", alpineTundra);
+		polarDesert.setExit("west", cave);
+
+		xericShrublands.setExit("north", steppe);
+		xericShrublands.setExit("east", savanna);
+
+		savanna.setExit("north", cave);
+		savanna.setExit("west", xericShrublands);
+
+		currentRoom = temperateBroadleaf;  // start game outside
 	}
 
 	/**
@@ -107,7 +127,7 @@ public class GameEngine
 		else if (commandWord.equals("go"))
 			goRoom(command);
 		else if (commandWord.equals("quit")) {
-			if(command.hasSecondWord())
+			if(command.hasParameter())
 				gui.println("Quit what?");
 			else
 				endGame();
@@ -134,13 +154,13 @@ public class GameEngine
 	 * an error message is printed.
 	 */
 	private void goRoom(Command command) {
-		if(!command.hasSecondWord()) {
-			// if there is no second word, we don't know where to go...
+		if(!command.hasParameter()) {
+			// If there is no second word, we don't know where to go...
 			gui.println("Go where?");
 			return;
 		}
 
-		String direction = command.getSecondWord();
+		String direction = command.getParameter();
 
 		// Try to leave current room.
 		Room nextRoom = currentRoom.getExit(direction);
@@ -163,4 +183,15 @@ public class GameEngine
 		gui.enable(false);
 	}
 
+	private void test(final Command command) {
+		if(!command.hasParameter()) {
+			gui.println("Please specify a file");
+			return;
+		} else {
+			Scanner scan = new Scanner(command.getParameter());
+			while(scan.hasNext()) {
+				processCommand(scan.nextLine());
+			}
+		}
+	}
 }
