@@ -1,5 +1,6 @@
 import java.util.Set;
 import java.util.HashMap;
+import java.util.Enumeration;
 import java.util.Iterator;
 
 /**
@@ -26,14 +27,30 @@ public class Room {
 	private String imageName;
 
 	/**
+	 * Item currently being in the room.
+	 */
+	private HashMap<String, Item> containedItems;
+
+	/**
 	 * Room class constructor.
 	 * @param description Description for the room
 	 * @param image Image path to display
 	 */
 	public Room(String description, String image) {
+		this(description, image, new HashMap<String, Item>());
+	}
+
+	/**
+	 * Room class constructor with the items.
+	 * @param description Description for the room
+	 * @param image Image path to display
+	 * @param itemList The items currently in the room
+	 */
+	public Room(String description, String image, HashMap<String, Item> itemList) {
 		this.description = description;
 		exits = new HashMap < String, Room > ();
 		imageName = image;
+		containedItems = itemList;
 	}
 
 	/**
@@ -46,17 +63,72 @@ public class Room {
 	}
 
 	/**
+	 * Add an Item in the Room.
+	 */
+	public void addItem(Item item) {
+		containedItems.put(item.getName(), item);
+	}
+
+	/**
+	 * containedItem field getter.
+	 */
+	public HashMap<String, Item> getContainedItems() {
+		return containedItems;
+	}
+
+	public Item getItem(String name) {
+		return containedItems.get(name);
+	}
+
+	public boolean hasItem(String name) {
+		return containedItems.get(name) != null;
+	}
+
+	/**
 	 * Getter for the description field.
+	 * @return String The description field
 	 */
 	public String getShortDescription() {
 		return description;
 	}
 
 	/**
-	 * Return the description of the room plus the available exits.
+	 * Return the description of the room, the available exits
+	 * plus the items in the room if any.
+	 * @return String The description.
 	 */
 	public String getLongDescription() {
-		return "You are " + description + ".\n" + getExitString();
+		return "You are " + description + ".\n"
+				+ ((!containedItems.isEmpty())? "You can see" + getHumanItemsList() + " near you.\n" : "")
+				+ getExitString();
+	}
+
+	/**
+	 * Return a human readable list of the items in the room.
+	 * @return String The list of the items
+	 */
+	public String getHumanItemsList() {
+		String itemsList = "";
+		Set<String> names = containedItems.keySet();
+		Iterator<String> it = names.iterator();
+		while(it.hasNext()) {
+
+			String itemName = it.next();
+			// If the item's name begins with a vowel, the prefix is ' an '
+			// if not, the prefix is ' a '
+			String prefix = " a" + (((new String("aeiouy")).contains(itemName.substring(0,1)))? "n" : "") + " ";
+
+			if(itemsList.equals(""))
+				itemsList += prefix + itemName;
+			else {
+				// Check if it is the last item
+				if(it.hasNext())
+					itemsList += "," + prefix + itemName;
+				else
+					itemsList += " and" + prefix + itemName;
+			}
+		}
+		return itemsList;
 	}
 
 	/**

@@ -12,7 +12,7 @@ public class CommandWords
 	 * A array containing all the known command for the game.
 	 */
 	private static final String knownCommands[] = {
-		"go", "quit", "help", "credits"
+		"go", "back", "look", "quit", "help", "credits"
 	};
 
 	/**

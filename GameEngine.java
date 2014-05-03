@@ -17,7 +17,12 @@ public class GameEngine
 	/**
 	 * Room where the player is currently in.
 	 */
-	private Room currentRoom;
+	private Room currentRooms;
+
+	/**
+	 * Room where the player was before now.
+	 */
+	private Room previousRoom;
 
 	/**
 	  User interface for the game.
@@ -38,6 +43,7 @@ public class GameEngine
 	public GameEngine() {
 		parser = new Parser();
 		createRooms();
+		previousRoom = null;
 		helpCount = 0;
 	}
 
@@ -60,7 +66,7 @@ public class GameEngine
 		gui.println("At least I can see that you don't remember anything. At last something that I can take advantage of.");
 		gui.println("That was predictable, human minds are weak.");
 		gui.println("\nBecause you're stupid, I will describe you everything that will be around us.");
-		gui.println("Who know ? Maybe you can turn into something useful. One day. Maybe.");
+		gui.println("Who knows ? Maybe you can turn into something useful. One day. Maybe.");
 		gui.println(currentRoom.getLongDescription());
 		gui.showImage(currentRoom.getImageName());
 	}
@@ -71,13 +77,31 @@ public class GameEngine
 	private void createRooms() {
 		// create the rooms
 		Room temperateBroadleaf = new Room("in temperate forest", "temperatebroadleaf.jpg");
+		temperateBroadleaf.addItem(new Item("wand", 3, "just an ordinary wand"));
+
 		Room taiga = new Room("in a boreal forest", "taiga.jpg");
+		taiga.addItem(new Item("snowball", 1, "some weirdly yellowy snowball"));
+		taiga.addItem(new Item("bird", 6, "a frozen inert black bird"));
+
 		Room alpineTundra = new Room("on an alpine mountain", "alpinetundra.jpg");
+		alpineTundra.addItem(new Item("rock", 15, "a surprisingly solid magnificent rock"));
+		alpineTundra.addItem(new Item("plank", 10, "a plank of wood, maybe from a chalet"));
+		alpineTundra.addItem(new Item("snowball", 1, "a snowball. Yes, there is still snow in an alpine biome."));
+
 		Room steppe = new Room("on a vast grass plain", "steppe.jpg");
+		steppe.addItem(new Item("grass", 1, "a tuft of yellowish grass. Looking at the grass made you look like stupid"));
+
 		Room cave = new Room("inside a dark cave", "cave.jpg");
+
 		Room polarDesert = new Room("in a cold polar desert", "polardesert.jpg");
+		polarDesert.addItem(new Item("ice", 5, "a little block of ice. But you don't have any drink"));
+
 		Room xericShrublands = new Room("in a sand desert", "xericshrublands.jpg");
+		xericShrublands.addItem(new Item("shrub", 10, "a spicky shrub. Useful if you want to make a shruberry"));
+
 		Room savanna = new Room("in a savanna", "savanna.jpg");
+		savanna.addItem(new Item("elephant", 1000, "a huge elephant looking at you, dazed. I bet he's smarter than you"));
+		savanna.addItem(new Item("grass", 1, "a tuft of yellowish grass. You may have other things to do instead of looking at that"));
 
 		// initialise room exits
 		temperateBroadleaf.setExit("east", taiga);
@@ -131,6 +155,14 @@ public class GameEngine
 			printCredits();
 		else if (commandWord.equals("go"))
 			goRoom(command);
+		else if (commandWord.equals("back"))
+			if(previousRoom != null) {
+				goRoom(previousRoom);
+			} else {
+				gui.println("No previous room");
+			}
+		else if (commandWord.equals("look"))
+			lookAround(command);
 		else if (commandWord.equals("quit")) {
 			if(command.hasParameter())
 				gui.println("Quit what?");
@@ -172,8 +204,7 @@ public class GameEngine
 
 	/**
 	 * Go to the given Room.
-	 * If the user can't go to the given room,
-	 * an error message is printed.
+	 * @param command Command used by the user
 	 */
 	private void goRoom(Command command) {
 		if(!command.hasParameter()) {
@@ -186,15 +217,38 @@ public class GameEngine
 
 		// Try to leave current room.
 		Room nextRoom = currentRoom.getExit(direction);
+		goRoom(nextRoom);
+	}
 
-		if (nextRoom == null)
+	/**
+	 * Go to the given Room.
+	 * If the user can't go to the given room,
+	 * an error message is printed.
+	 * @param room Room where the user want to go
+	 */
+	private void goRoom(Room room) {
+		if (room == null)
 			gui.println("There is no door!");
 		else {
-			currentRoom = nextRoom;
+			previousRoom = currentRoom;
+			currentRoom = room;
 			gui.println(currentRoom.getLongDescription());
 			if(currentRoom.getImageName() != null)
 				gui.showImage(currentRoom.getImageName());
-		}
+		}	
+	}
+
+	/**
+	 * Get the description of the room or a specific object.
+	 * @param command Command used by the user
+	 */
+	private void lookAround(Command command) {
+		if(!command.hasParameter())
+			gui.println(currentRoom.getLongDescription());
+		else if(currentRoom.hasItem(command.getParameter()))
+			gui.println("This is " + currentRoom.getItem(command.getParameter()).getDescription() + ".");
+		else
+			gui.println("I'm not sure you want to look at that.");
 	}
 
 	/**
