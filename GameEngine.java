@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Stack;
 
 /**
  * Class handling the gameplay for the game.
@@ -17,12 +18,12 @@ public class GameEngine
 	/**
 	 * Room where the player is currently in.
 	 */
-	private Room currentRooms;
+	private Room currentRoom;
 
 	/**
 	 * Room where the player was before now.
 	 */
-	private Room previousRoom;
+	private Stack<Room> previousRooms;
 
 	/**
 	  User interface for the game.
@@ -43,7 +44,7 @@ public class GameEngine
 	public GameEngine() {
 		parser = new Parser();
 		createRooms();
-		previousRoom = null;
+		previousRooms = new Stack<Room>();
 		helpCount = 0;
 	}
 
@@ -156,11 +157,7 @@ public class GameEngine
 		else if (commandWord.equals("go"))
 			goRoom(command);
 		else if (commandWord.equals("back"))
-			if(previousRoom != null) {
-				goRoom(previousRoom);
-			} else {
-				gui.println("No previous room");
-			}
+			goBack();
 		else if (commandWord.equals("look"))
 			lookAround(command);
 		else if (commandWord.equals("quit")) {
@@ -222,20 +219,42 @@ public class GameEngine
 
 	/**
 	 * Go to the given Room.
-	 * If the user can't go to the given room,
-	 * an error message is printed.
+	 * This function is equivalent to
+	 * goRoom(room, false).
 	 * @param room Room where the user want to go
 	 */
 	private void goRoom(Room room) {
+		goRoom(room, false);
+	}
+
+	/**
+	 * Go to the given Room.
+	 * If the user can't go to the given room,
+	 * an error message is printed.
+	 * @param room Room where the user want to go
+	 * @param back true if it is called via the 'back' command
+	 */
+	private void goRoom(Room room, boolean back) {
 		if (room == null)
 			gui.println("There is no door!");
 		else {
-			previousRoom = currentRoom;
+			if(!back)
+				previousRooms.push(currentRoom);
+			else
+				previousRooms.pop();
 			currentRoom = room;
 			gui.println(currentRoom.getLongDescription());
 			if(currentRoom.getImageName() != null)
 				gui.showImage(currentRoom.getImageName());
-		}	
+		}
+	}
+
+	private void goBack() {	
+		if(!previousRooms.empty()) {
+			goRoom(previousRooms.peek(), true);
+		} else {
+			gui.println("No previous room");
+		}
 	}
 
 	/**
