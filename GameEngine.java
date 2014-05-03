@@ -72,12 +72,12 @@ public class GameEngine
 		// create the rooms
 		Room temperateBroadleaf = new Room("in temperate forest", "temperatebroadleaf.jpg");
 		Room taiga = new Room("in a boreal forest", "taiga.jpg");
-		Room alpineTundra = new Room("on an alpine mountain", "alpinetundra.gif");
-		Room steppe = new Room("on a vast grass plain", "steppe.gif");
-		Room cave = new Room("inside a dark cave", "cave.gif");
-		Room polarDesert = new Room("in a cold polar desert", "polardesert.gif");
-		Room xericShrublands = new Room("in a sand desert", "xericShrublands.gif");
-		Room savanna = new Room("in a savanna", "savanna.gif");
+		Room alpineTundra = new Room("on an alpine mountain", "alpinetundra.jpg");
+		Room steppe = new Room("on a vast grass plain", "steppe.jpg");
+		Room cave = new Room("inside a dark cave", "cave.jpg");
+		Room polarDesert = new Room("in a cold polar desert", "polardesert.jpg");
+		Room xericShrublands = new Room("in a sand desert", "xericshrublands.jpg");
+		Room savanna = new Room("in a savanna", "savanna.jpg");
 
 		// initialise room exits
 		temperateBroadleaf.setExit("east", taiga);
@@ -162,6 +162,12 @@ public class GameEngine
 	private void printCredits() {
 		gui.println("Temperate rainforest photo (cc-by-nc-nd) : myheimu (http://www.fotopedia.com/wiki/Temperate_rainforest#!/items/flickr-7995237868)");
 		gui.println("Taiga photo (public domain) : Becker0804 (https://commons.wikimedia.org/wiki/File:Talkessel_von_Werchojansk.JPG)");
+		gui.println("Alpine tundra photo (public domain) : Zewu (https://en.wikipedia.org/wiki/File:Tarfala_Valley_-_Sweden.jpg)");
+		gui.println("Steppe photo (cc-by-sa) : Matt Lavin (http://www.fotopedia.com/wiki/Steppe#!/items/flickr-7495949260)");
+		gui.println("Lava tube photo : Tim Laman (http://science.nationalgeographic.com/science/photos/caves-gallery/#/lava-tube-cave_1036_600x450.jpg)");
+		gui.println("Polar desert photo (cc-by) : Stephen Hudson (https://commons.wikimedia.org/wiki/File:AntarcticaDomeCSnow.jpg)");
+		gui.println("Thar desert photo (cc-by-sa) : Gégard JANOT (https://commons.wikimedia.org/wiki/File:D%C3%A9sert_du_Rajasthan.jpg)");
+		gui.println("Savanna photo (public domain) : United States Geological Survey (https://commons.wikimedia.org/wiki/File:Oldoinyolengai.jpg)");
 	}
 
 	/**

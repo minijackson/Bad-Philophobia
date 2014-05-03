@@ -81,6 +81,6 @@ public class Room {
 	 * Getter for the imageName field.
 	 */
 	public String getImageName() {
-		return imageName;
+		return "Images/"  + imageName;
 	}
 }
