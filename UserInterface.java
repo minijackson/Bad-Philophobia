@@ -100,12 +100,44 @@ public class UserInterface implements ActionListener {
 		listScroller.setMinimumSize(new Dimension(100, 100));
 
 		JPanel panel = new JPanel();
+		JPanel buttonsPanel = new JPanel();
+		buttonsPanel.setPreferredSize(new Dimension(200,200));
 		image = new JLabel();
+
+		JButton buttonNorth = new JButton("↑");
+		buttonNorth.addActionListener(this);
+
+		JButton buttonSouth = new JButton("↓");
+		buttonSouth.addActionListener(this);
+
+		JButton buttonEast = new JButton("→");
+		buttonEast.addActionListener(this);
+
+		JButton buttonWest = new JButton("←");
+		buttonWest.addActionListener(this);
+
+		JButton buttonHelp = new JButton("?");
+		buttonHelp.addActionListener(this);
+
+		JButton buttonReturn = new JButton("⏎");
+		buttonReturn.addActionListener(this);
+
+		buttonsPanel.setLayout(new GridLayout(3,3));
+		buttonsPanel.add(new JButton(""));
+		buttonsPanel.add(buttonNorth);
+		buttonsPanel.add(new JButton(""));
+		buttonsPanel.add(buttonWest);
+		buttonsPanel.add(buttonHelp);
+		buttonsPanel.add(buttonEast);
+		buttonsPanel.add(buttonReturn);
+		buttonsPanel.add(buttonSouth);
+		buttonsPanel.add(new JButton(""));
 
 		panel.setLayout(new BorderLayout());
 		panel.add(image, BorderLayout.NORTH);
 		panel.add(listScroller, BorderLayout.CENTER);
 		panel.add(entryField, BorderLayout.SOUTH);
+		panel.add(buttonsPanel, BorderLayout.EAST);
 
 		myFrame.getContentPane().add(panel, BorderLayout.CENTER);
 
@@ -127,7 +159,19 @@ public class UserInterface implements ActionListener {
 	 * @param e Event.
 	 */
 	public void actionPerformed(ActionEvent e) {
-		processCommand();
+		if(e.getActionCommand().equals("↑")) {
+			engine.processCommand("go north");
+		} else if(e.getActionCommand().equals("↓")) {
+			engine.processCommand("go south");
+		} else if(e.getActionCommand().equals("←")) {
+			engine.processCommand("go west");
+		} else if(e.getActionCommand().equals("→")) {
+			engine.processCommand("go east");
+		} else if(e.getActionCommand().equals("?")) {
+			engine.processCommand("help");
+		} else {
+			processCommand();
+		}
 	}
 
 	/**

@@ -25,7 +25,10 @@ public class GameEngine
 	private UserInterface gui;
 
 	/**
-	 * Help query counter
+	 * Help query counter.
+	 * It is equal to 0 if the user did not asked for help,
+	 * 1 if the user asked once the help and
+	 * 2 if the user asked twice or more for the help
 	 */
 	private int helpCount;
 
@@ -67,8 +70,8 @@ public class GameEngine
 	 */
 	private void createRooms() {
 		// create the rooms
-		Room temperateBroadleaf = new Room("in temperate forest", "temperatebroadleaf.gif");
-		Room taiga = new Room("in a boreal forest", "taiga.gif");
+		Room temperateBroadleaf = new Room("in temperate forest", "temperatebroadleaf.jpg");
+		Room taiga = new Room("in a boreal forest", "taiga.jpg");
 		Room alpineTundra = new Room("on an alpine mountain", "alpinetundra.gif");
 		Room steppe = new Room("on a vast grass plain", "steppe.gif");
 		Room cave = new Room("inside a dark cave", "cave.gif");
@@ -124,6 +127,8 @@ public class GameEngine
 		String commandWord = command.getCommandWord();
 		if (commandWord.equals("help"))
 			printHelp();
+		else if (commandWord.equals("credits"))
+			printCredits();
 		else if (commandWord.equals("go"))
 			goRoom(command);
 		else if (commandWord.equals("quit")) {
@@ -138,14 +143,25 @@ public class GameEngine
 	 * Print user's help.
 	 */
 	private void printHelp() {
-		if(helpCount == 0)
+		if(helpCount == 0) {
 			gui.println("Help ? Who needs help ? Only the weak ones.");
-		else {
-			if(helpCount == 1)
+			helpCount++;
+		} else {
+			if(helpCount == 1) {
 				gui.println("All right, all right! If you insist...");
+				helpCount++;
+			}
 			gui.println("Your command words are: " + parser.showCommands());
 			gui.println("That will be all.");
 		}
+	}
+
+	/**
+	 * Print the credits for the game.
+	 */
+	private void printCredits() {
+		gui.println("Temperate rainforest photo (cc-by-nc-nd) : myheimu (http://www.fotopedia.com/wiki/Temperate_rainforest#!/items/flickr-7995237868)");
+		gui.println("Taiga photo (public domain) : Becker0804 (https://commons.wikimedia.org/wiki/File:Talkessel_von_Werchojansk.JPG)");
 	}
 
 	/**
