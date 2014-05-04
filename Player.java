@@ -15,6 +15,16 @@ public class Player {
 	private ItemList backpack;
 
 	/**
+	 * Weight of the carried items.
+	 */
+	private int backpackWeight;
+
+	/**
+	 * The maximum weight of Items th player can carry.
+	 */
+	private int maxWeight = 100;
+
+	/**
 	 * Room where the player is currently in.
 	 */
 	private Room currentRoom;
@@ -31,6 +41,7 @@ public class Player {
 	public Player(String name, Room firstRoom) {
 		this.name = name;
 		backpack = new ItemList();
+		backpackWeight = 0;
 		currentRoom = firstRoom;
 		previousRooms = new Stack<Room>();
 	}
@@ -117,12 +128,17 @@ public class Player {
 		return backpack.containsKey(item);
 	}
 
+	public boolean canCarry(Item item) {
+		return backpackWeight + item.getWeight() < maxWeight;
+	}
+
 	/**
 	 * Take the given object.
 	 * @param item Item to be taken.
 	 */
 	public void takeObject(Item item) {
 		currentRoom.getContainedItems().transfer(item.getName(), backpack);
+		backpackWeight += item.getWeight();
 	}
 
 	/**
@@ -130,6 +146,7 @@ public class Player {
 	 * @param item Item to be dropped
 	 */
 	public void dropObject(String item) {
+		backpackWeight -= backpack.get(item).getWeight();
 		backpack.transfer(item, currentRoom.getContainedItems());
 	}
 

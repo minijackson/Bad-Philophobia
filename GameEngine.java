@@ -270,8 +270,11 @@ public class GameEngine
 	private void takeItem(Command command) {
 		if(command.hasParameter()) {
 			if(player.getCurrentRoom().hasItem(command.getParameter())) {
-				player.takeObject(player.getCurrentRoom().getItem(command.getParameter()));
-				gui.println("Oh, dear. He took a" + (((new String("aeiouy")).contains(command.getParameter().substring(0,1)))? "n " : " ") + command.getParameter() + ".");
+				if(player.canCarry(player.getCurrentRoom().getItem(command.getParameter()))) {
+					player.takeObject(player.getCurrentRoom().getItem(command.getParameter()));
+					gui.println("Oh, dear. He took a" + (((new String("aeiouy")).contains(command.getParameter().substring(0,1)))? "n " : " ") + command.getParameter() + ".");
+				} else
+					gui.println("That's way too much items for you. I know, humans are weak.");
 			} else
 				gui.println("I'm not sure you want to take that.");
 		} else

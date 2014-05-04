@@ -10,4 +10,5 @@ public class ItemList extends HashMap<String, Item> {
 	public void transfer(String item, HashMap<String, Item> itemMap) {
 		itemMap.put(item, this.remove(item));
 	}
+
 }
