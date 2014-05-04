@@ -9,6 +9,11 @@ public class Player {
 	private String name;
 
 	/**
+	 * Item held by the player.
+	 */
+	private Item backpack;
+
+	/**
 	 * Room where the player is currently in.
 	 */
 	private Room currentRoom;
@@ -100,6 +105,14 @@ public class Player {
 		else
 			description += "I'm not sure you want to look at that.\n";
 		return description;
+	}
+
+	/**
+	 * Take the given object.
+	 * @param item Item to be taken.
+	 */
+	public void takeObject(Item item) {
+		backpack = item;
 	}
 
 }

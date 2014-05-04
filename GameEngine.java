@@ -157,6 +157,8 @@ public class GameEngine
 			goBack();
 		else if (commandWord.equals("look"))
 			gui.print(player.lookAround(command));
+		else if (commandWord.equals("take"))
+			takeItem(command);
 		else if (commandWord.equals("test"))
 			testCommands(command);
 		else if (commandWord.equals("quit")) {
@@ -254,6 +256,18 @@ public class GameEngine
 		} else {
 			gui.println("No previous room");
 		}
+	}
+
+	private void takeItem(Command command) {
+		if(command.hasParameter()) {
+			if(player.getCurrentRoom().hasItem(command.getParameter())) {
+				player.takeObject(player.getCurrentRoom().getItem(command.getParameter()));
+				gui.println("Oh, dear. He took a" + (((new String("aeiouy")).contains(command.getParameter().substring(0,1)))? "n" : "") + " " + command.getParameter());
+			} else
+				gui.println("I'm not sure you want to take that.");
+		} else
+			gui.println("Wanna take a photo?");
+
 	}
 
 	/**
