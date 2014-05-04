@@ -76,7 +76,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -94,13 +94,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="classGameEngine.html">GameEngine</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classGameEngine.html#a9e8a92f5021a34293060f9aaff4005de">GameEngine</a>()</td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classGameEngine.html#ad7133885f313fa99bca3bb7cb8272f64">processCommand</a>(String commandLine)</td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classGameEngine.html#aec901a5b590b3cd204f196165da5dfb6">setGUI</a>(UserInterface userInterface)</td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classGameEngine.html#ac32e0d61566d0cca0a1683b5fcf37a00">createRooms</a>()</td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classGameEngine.html#aa08e7cbb458047a2f72ff594d2e230bc">currentRoom</a></td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classGameEngine.html#abebbf1bda82aa3ca162f7187a64e41ed">endGame</a>()</td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classGameEngine.html#a9e8a92f5021a34293060f9aaff4005de">GameEngine</a>()</td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classGameEngine.html#ac22dcdb540cb27f39597ee4f03ad167a">goBack</a>()</td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classGameEngine.html#a2ec577574f345764435837fc0204b2e0">goRoom</a>(Command command)</td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classGameEngine.html#a09acb51b95ec98aed78d928f91e61a3d">goRoom</a>(Room room)</td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classGameEngine.html#ae847246e53c53b84787eec490aedf9ad">goRoom</a>(Room room, boolean back)</td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classGameEngine.html#a2a7d0bb6183b3f3ef3ee2008926374a0">gui</a></td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classGameEngine.html#a308a9926d553d53cb4c56c28588f6c62">helpCount</a></td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classGameEngine.html#ab620e2e6c8627aba28cc2c33fefe50e3">lookAround</a>(Command command)</td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classGameEngine.html#a2e0d2b1fa2961a930e58e5e6102dc89b">parser</a></td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classGameEngine.html#a46c905c0610d22223520a8db0e519ec1">previousRooms</a></td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classGameEngine.html#a0cc83a912708431a667e73c9a8aa3698">printCredits</a>()</td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classGameEngine.html#a8959e384cc77e69ab0ce9da8ba5057cd">printHelp</a>()</td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classGameEngine.html#a9a2f3cb921bb19399e357bf14d26425b">printWelcome</a>()</td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classGameEngine.html#ad7133885f313fa99bca3bb7cb8272f64">processCommand</a>(String commandLine)</td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classGameEngine.html#aec901a5b590b3cd204f196165da5dfb6">setGUI</a>(UserInterface userInterface)</td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classGameEngine.html#a0cfc6fc69e60ffe8a436d04de0938349">test</a>(final Command command)</td><td class="entry"><a class="el" href="classGameEngine.html">GameEngine</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 12 2014 23:11:11 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 3 2014 20:23:19 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

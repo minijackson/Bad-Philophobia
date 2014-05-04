@@ -3,17 +3,30 @@
 }
 
 
-Collaboration diagram for Game\-:\nopagebreak
+Collaboration diagram for Game\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=138pt]{classGame__coll__graph}
+\includegraphics[height=550pt]{classGame__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classGame_a2e034e53e9c032964ecd2a831b29a616}{Game} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classGame_ae52595a27ac1b327b05db2129ad81fca}{main} (String\mbox{[}$\,$\mbox{]} args)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUserInterface}{User\-Interface} \hyperlink{classGame_a9003da90b15756c7975d03db874632a4}{gui}
+\item 
+\hyperlink{classGameEngine}{Game\-Engine} \hyperlink{classGame_a899fc9c2339c51abd4594b6a5e44284f}{engine}
 \end{DoxyCompactItemize}
 
 
@@ -39,16 +52,97 @@ Definition at line \hyperlink{Game_8java_source_l00007}{7} of file \hyperlink{Ga
 )}}\label{classGame_a2e034e53e9c032964ecd2a831b29a616}
 \hyperlink{classGame}{Game} class constructor 
 
-Definition at line \hyperlink{Game_8java_source_l00022}{22} of file \hyperlink{Game_8java_source}{Game.\-java}.
+Definition at line \hyperlink{Game_8java_source_l00026}{26} of file \hyperlink{Game_8java_source}{Game.\-java}.
+
+
+
+References \hyperlink{Game_8java_source_l00021}{engine}, and \hyperlink{Game_8java_source_l00016}{gui}.
+
+
+
+Referenced by \hyperlink{Game_8java_source_l00009}{main()}.
 
 
 \begin{DoxyCode}
-00022                    \{
-00023         engine = \textcolor{keyword}{new} \hyperlink{classGameEngine}{GameEngine}();
-00024         gui = \textcolor{keyword}{new} \hyperlink{classUserInterface}{UserInterface}(engine);
-00025         engine.setGUI(gui);
-00026     \}
+00026                    \{
+00027         \hyperlink{classGame_a899fc9c2339c51abd4594b6a5e44284f}{engine} = \textcolor{keyword}{new} \hyperlink{classGameEngine}{GameEngine}();
+00028         \hyperlink{classGame_a9003da90b15756c7975d03db874632a4}{gui} = \textcolor{keyword}{new} \hyperlink{classUserInterface}{UserInterface}(\hyperlink{classGame_a899fc9c2339c51abd4594b6a5e44284f}{engine});
+00029         engine.setGUI(\hyperlink{classGame_a9003da90b15756c7975d03db874632a4}{gui});
+00030     \}
 \end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classGame_a2e034e53e9c032964ecd2a831b29a616_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classGame_ae52595a27ac1b327b05db2129ad81fca}{\index{Game@{Game}!main@{main}}
+\index{main@{main}!Game@{Game}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void Game.\-main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classGame_ae52595a27ac1b327b05db2129ad81fca}
+
+
+Definition at line \hyperlink{Game_8java_source_l00009}{9} of file \hyperlink{Game_8java_source}{Game.\-java}.
+
+
+
+References \hyperlink{Game_8java_source_l00026}{Game()}.
+
+
+\begin{DoxyCode}
+00009                                            \{
+00010         \hyperlink{classGame}{Game} game = \textcolor{keyword}{new} \hyperlink{classGame_a2e034e53e9c032964ecd2a831b29a616}{Game}();
+00011     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classGame_ae52595a27ac1b327b05db2129ad81fca_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classGame_a899fc9c2339c51abd4594b6a5e44284f}{\index{Game@{Game}!engine@{engine}}
+\index{engine@{engine}!Game@{Game}}
+\subsubsection[{engine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\-Engine} Game.\-engine\hspace{0.3cm}{\ttfamily [private]}}}\label{classGame_a899fc9c2339c51abd4594b6a5e44284f}
+The gameplay manager. 
+
+Definition at line \hyperlink{Game_8java_source_l00021}{21} of file \hyperlink{Game_8java_source}{Game.\-java}.
+
+
+
+Referenced by \hyperlink{Game_8java_source_l00026}{Game()}.
+
+\hypertarget{classGame_a9003da90b15756c7975d03db874632a4}{\index{Game@{Game}!gui@{gui}}
+\index{gui@{gui}!Game@{Game}}
+\subsubsection[{gui}]{\setlength{\rightskip}{0pt plus 5cm}{\bf User\-Interface} Game.\-gui\hspace{0.3cm}{\ttfamily [private]}}}\label{classGame_a9003da90b15756c7975d03db874632a4}
+The game's user interface. 
+
+Definition at line \hyperlink{Game_8java_source_l00016}{16} of file \hyperlink{Game_8java_source}{Game.\-java}.
+
+
+
+Referenced by \hyperlink{Game_8java_source_l00026}{Game()}.
+
 
 
 The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}

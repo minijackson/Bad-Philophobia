@@ -1,0 +1,6 @@
+<map id="Room.getExitString" name="Room.getExitString">
+<area shape="rect" id="node2" href="$classRoom.html#a23a25854d7544fb0b41190a4d6bd1322" title="Room.getLongDescription" alt="" coords="189,5,363,32"/>
+<area shape="rect" id="node3" href="$classGameEngine.html#ab620e2e6c8627aba28cc2c33fefe50e3" title="GameEngine.lookAround" alt="" coords="411,5,578,32"/>
+<area shape="rect" id="node4" href="$classGameEngine.html#ad7133885f313fa99bca3bb7cb8272f64" title="GameEngine.processCommand" alt="" coords="627,5,834,32"/>
+<area shape="rect" id="node5" href="$classGameEngine.html#a0cfc6fc69e60ffe8a436d04de0938349" title="GameEngine.test" alt="" coords="883,5,1005,32"/>
+</map>

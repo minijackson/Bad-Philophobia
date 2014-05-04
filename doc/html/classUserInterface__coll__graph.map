@@ -1,2 +1,6 @@
 <map id="UserInterface" name="UserInterface">
+<area shape="rect" id="node3" href="$classGameEngine.html" title="{GameEngine\n|&#45; helpCount\l|+ GameEngine()\l+ setGUI()\l+ processCommand()\l&#45; printWelcome()\l&#45; createRooms()\l&#45; printHelp()\l&#45; printCredits()\l&#45; goRoom()\l&#45; goRoom()\l&#45; goRoom()\l&#45; goBack()\l&#45; lookAround()\l&#45; endGame()\l&#45; test()\l}" alt="" coords="389,510,536,778"/>
+<area shape="rect" id="node5" href="$classRoom.html" title="{Room\n|&#45; description\l&#45; imageName\l|+ Room()\l+ Room()\l+ setExit()\l+ addItem()\l+ getContainedItems()\l+ getItem()\l+ hasItem()\l+ getShortDescription()\l+ getLongDescription()\l+ getHumanItemsList()\l+ getExit()\l+ getImageName()\l&#45; getExitString()\l}" alt="" coords="211,177,368,445"/>
+<area shape="rect" id="node8" href="$classParser.html" title="{Parser\n||+ Parser()\l+ getCommand()\l+ showCommands()\l}" alt="" coords="393,257,532,364"/>
+<area shape="rect" id="node9" href="$classCommandWords.html" title="{CommandWords\n|&#45; knownCommands\l|+ CommandWords()\l+ isCommand()\l+ getCommandList()\l}" alt="" coords="403,5,543,112"/>
 </map>

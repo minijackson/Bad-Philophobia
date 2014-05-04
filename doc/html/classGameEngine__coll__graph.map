@@ -1,2 +1,6 @@
 <map id="GameEngine" name="GameEngine">
+<area shape="rect" id="node6" href="$classUserInterface.html" title="{UserInterface\n|&#45; myFrame\l&#45; entryField\l&#45; log\l&#45; image\l|+ UserInterface()\l+ print()\l+ println()\l+ showImage()\l+ enable()\l+ actionPerformed()\l&#45; createGUI()\l&#45; processCommand()\l}" alt="" coords="140,843,284,1067"/>
+<area shape="rect" id="node3" href="$classRoom.html" title="{Room\n|&#45; description\l&#45; imageName\l|+ Room()\l+ Room()\l+ setExit()\l+ addItem()\l+ getContainedItems()\l+ getItem()\l+ hasItem()\l+ getShortDescription()\l+ getLongDescription()\l+ getHumanItemsList()\l+ getExit()\l+ getImageName()\l&#45; getExitString()\l}" alt="" coords="211,177,368,445"/>
+<area shape="rect" id="node8" href="$classParser.html" title="{Parser\n||+ Parser()\l+ getCommand()\l+ showCommands()\l}" alt="" coords="398,257,537,364"/>
+<area shape="rect" id="node9" href="$classCommandWords.html" title="{CommandWords\n|&#45; knownCommands\l|+ CommandWords()\l+ isCommand()\l+ getCommandList()\l}" alt="" coords="403,5,543,112"/>
 </map>

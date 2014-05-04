@@ -2,117 +2,238 @@
 }
 
 \begin{DoxyCode}
-00001 
-\hypertarget{GameEngine_8java_source_l00008}{}\hyperlink{classGameEngine}{00008} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classGameEngine}{GameEngine}
-00009 \{
-00013     \textcolor{keyword}{private} \hyperlink{classParser}{Parser} parser;
-00014 
-00018     \textcolor{keyword}{private} \hyperlink{classRoom}{Room} currentRoom;
-00019 
-00023     \textcolor{keyword}{private} \hyperlink{classUserInterface}{UserInterface} gui;
-00024 
-\hypertarget{GameEngine_8java_source_l00028}{}\hyperlink{classGameEngine_a9e8a92f5021a34293060f9aaff4005de}{00028}     \textcolor{keyword}{public} \hyperlink{classGameEngine_a9e8a92f5021a34293060f9aaff4005de}{GameEngine}() \{
-00029         parser = \textcolor{keyword}{new} \hyperlink{classParser}{Parser}();
-00030         createRooms();
-00031     \}
+00001 \textcolor{keyword}{import} java.util.Scanner;
+00002 \textcolor{keyword}{import} java.util.Stack;
+00003 
+\hypertarget{GameEngine_8java_source_l00011}{}\hyperlink{classGameEngine}{00011} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classGameEngine}{GameEngine}
+00012 \{
+\hypertarget{GameEngine_8java_source_l00016}{}\hyperlink{classGameEngine_a2e0d2b1fa2961a930e58e5e6102dc89b}{00016}     \textcolor{keyword}{private} \hyperlink{classParser}{Parser} \hyperlink{classGameEngine_a2e0d2b1fa2961a930e58e5e6102dc89b}{parser};
+00017 
+\hypertarget{GameEngine_8java_source_l00021}{}\hyperlink{classGameEngine_aa08e7cbb458047a2f72ff594d2e230bc}{00021}     \textcolor{keyword}{private} \hyperlink{classRoom}{Room} \hyperlink{classGameEngine_aa08e7cbb458047a2f72ff594d2e230bc}{currentRoom};
+00022 
+\hypertarget{GameEngine_8java_source_l00026}{}\hyperlink{classGameEngine_a46c905c0610d22223520a8db0e519ec1}{00026}     \textcolor{keyword}{private} Stack<Room> \hyperlink{classGameEngine_a46c905c0610d22223520a8db0e519ec1}{previousRooms};
+00027 
+\hypertarget{GameEngine_8java_source_l00031}{}\hyperlink{classGameEngine_a2a7d0bb6183b3f3ef3ee2008926374a0}{00031}     \textcolor{keyword}{private} \hyperlink{classUserInterface}{UserInterface} \hyperlink{classGameEngine_a2a7d0bb6183b3f3ef3ee2008926374a0}{gui};
 00032 
-\hypertarget{GameEngine_8java_source_l00037}{}\hyperlink{classGameEngine_aec901a5b590b3cd204f196165da5dfb6}{00037}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_aec901a5b590b3cd204f196165da5dfb6}{setGUI}(\hyperlink{classUserInterface}{UserInterface} userInterface) \{
-00038         gui = userInterface;
-00039         printWelcome();
-00040     \}
-00041 
-00045     \textcolor{keyword}{private} \textcolor{keywordtype}{void} printWelcome() \{
-00046         gui.println(\textcolor{stringliteral}{"Greetings human."});
-00047         gui.println(\textcolor{stringliteral}{"I see the assassins have failed. Too bad..."});
-00048         gui.println(\textcolor{stringliteral}{"You know what they say: if you want something done, do it yourself."});
-00049         gui.println(\textcolor{stringliteral}{"At least I can see that you don't remember anything. At last something that I can take
+\hypertarget{GameEngine_8java_source_l00039}{}\hyperlink{classGameEngine_a308a9926d553d53cb4c56c28588f6c62}{00039}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \hyperlink{classGameEngine_a308a9926d553d53cb4c56c28588f6c62}{helpCount};
+00040 
+\hypertarget{GameEngine_8java_source_l00044}{}\hyperlink{classGameEngine_a9e8a92f5021a34293060f9aaff4005de}{00044}     \textcolor{keyword}{public} \hyperlink{classGameEngine_a9e8a92f5021a34293060f9aaff4005de}{GameEngine}() \{
+00045         \hyperlink{classGameEngine_a2e0d2b1fa2961a930e58e5e6102dc89b}{parser} = \textcolor{keyword}{new} \hyperlink{classParser}{Parser}();
+00046         \hyperlink{classGameEngine_ac32e0d61566d0cca0a1683b5fcf37a00}{createRooms}();
+00047         \hyperlink{classGameEngine_a46c905c0610d22223520a8db0e519ec1}{previousRooms} = \textcolor{keyword}{new} Stack<Room>();
+00048         \hyperlink{classGameEngine_a308a9926d553d53cb4c56c28588f6c62}{helpCount} = 0;
+00049     \}
+00050 
+\hypertarget{GameEngine_8java_source_l00055}{}\hyperlink{classGameEngine_aec901a5b590b3cd204f196165da5dfb6}{00055}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_aec901a5b590b3cd204f196165da5dfb6}{setGUI}(\hyperlink{classUserInterface}{UserInterface} userInterface) \{
+00056         \hyperlink{classGameEngine_a2a7d0bb6183b3f3ef3ee2008926374a0}{gui} = userInterface;
+00057         \hyperlink{classGameEngine_a9a2f3cb921bb19399e357bf14d26425b}{printWelcome}();
+00058     \}
+00059 
+\hypertarget{GameEngine_8java_source_l00063}{}\hyperlink{classGameEngine_a9a2f3cb921bb19399e357bf14d26425b}{00063}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_a9a2f3cb921bb19399e357bf14d26425b}{printWelcome}() \{
+00064         gui.println(\textcolor{stringliteral}{"Greetings human."});
+00065         gui.println(\textcolor{stringliteral}{"I see the assassins have failed. Too bad..."});
+00066         gui.println(\textcolor{stringliteral}{"You know what they say: if you want something done, do it yourself."});
+00067         gui.println(\textcolor{stringliteral}{"At least I can see that you don't remember anything. At last something that I can take
        advantage of."});
-00050         gui.println(\textcolor{stringliteral}{"That was predictable, human minds are weak."});
-00051         gui.println(\textcolor{stringliteral}{"\(\backslash\)nBecause you're stupid, I will describe you everything that will be around us."});
-00052         gui.println(\textcolor{stringliteral}{"Who know ? Maybe you can turn into something useful. One day. Maybe."});
-00053         gui.println(currentRoom.getLongDescription());
-00054         gui.showImage(currentRoom.getImageName());
-00055     \}
-00056 
-00060     \textcolor{keyword}{private} \textcolor{keywordtype}{void} createRooms() \{
-00061         \textcolor{comment}{// create the rooms}
-00062         \hyperlink{classRoom}{Room} outside = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"outside the main entrance of the university"}, \textcolor{stringliteral}{"outside.gif"});
-00063         \hyperlink{classRoom}{Room} theatre = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in a lecture theatre"}, \textcolor{stringliteral}{"castle.gif"});
-00064         \hyperlink{classRoom}{Room} pub = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in the campus pub"}, \textcolor{stringliteral}{"courtyard.gif"});
-00065         \hyperlink{classRoom}{Room} lab = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in a computing lab"}, \textcolor{stringliteral}{"stairs.gif"});
-00066         \hyperlink{classRoom}{Room} office = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"the computing admin office"}, \textcolor{stringliteral}{"dungeon.gif"});
-00067 
-00068         \textcolor{comment}{// initialise room exits}
-00069         outside.setExit(\textcolor{stringliteral}{"east"}, theatre);
-00070         outside.setExit(\textcolor{stringliteral}{"south"}, lab);
-00071         outside.setExit(\textcolor{stringliteral}{"west"}, pub);
-00072 
-00073         theatre.setExit(\textcolor{stringliteral}{"west"}, outside);
+00068         gui.println(\textcolor{stringliteral}{"That was predictable, human minds are weak."});
+00069         gui.println(\textcolor{stringliteral}{"\(\backslash\)nBecause you're stupid, I will describe you everything that will be around us."});
+00070         gui.println(\textcolor{stringliteral}{"Who knows ? Maybe you can turn into something useful. One day. Maybe."});
+00071         gui.println(currentRoom.getLongDescription());
+00072         gui.showImage(currentRoom.getImageName());
+00073     \}
 00074 
-00075         pub.setExit(\textcolor{stringliteral}{"east"}, outside);
-00076 
-00077         lab.setExit(\textcolor{stringliteral}{"north"}, outside);
-00078         lab.setExit(\textcolor{stringliteral}{"east"}, office);
-00079 
-00080         office.setExit(\textcolor{stringliteral}{"west"}, lab);
-00081 
-00082         currentRoom = outside;  \textcolor{comment}{// start game outside}
-00083     \}
-00084 
-\hypertarget{GameEngine_8java_source_l00089}{}\hyperlink{classGameEngine_ad7133885f313fa99bca3bb7cb8272f64}{00089}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_ad7133885f313fa99bca3bb7cb8272f64}{processCommand}(String commandLine) \{
-00090         gui.println(commandLine);
-00091         Command command = parser.getCommand(commandLine);
-00092 
-00093         \textcolor{keywordflow}{if}(command.isUnknown()) \{
-00094             gui.println(\textcolor{stringliteral}{"I don't know what you mean..."});
-00095             \textcolor{keywordflow}{return};
-00096         \}
-00097 
-00098         String commandWord = command.getCommandWord();
-00099         \textcolor{keywordflow}{if} (commandWord.equals(\textcolor{stringliteral}{"help"}))
-00100             printHelp();
-00101         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (commandWord.equals(\textcolor{stringliteral}{"go"}))
-00102             goRoom(command);
-00103         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (commandWord.equals(\textcolor{stringliteral}{"quit"})) \{
-00104             \textcolor{keywordflow}{if}(command.hasSecondWord())
-00105                 gui.\hyperlink{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}{println}(\textcolor{stringliteral}{"Quit what?"});
-00106             \textcolor{keywordflow}{else}
-00107                 endGame();
-00108         \}
-00109     \}
+\hypertarget{GameEngine_8java_source_l00078}{}\hyperlink{classGameEngine_ac32e0d61566d0cca0a1683b5fcf37a00}{00078}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_ac32e0d61566d0cca0a1683b5fcf37a00}{createRooms}() \{
+00079         \textcolor{comment}{// create the rooms}
+00080         \hyperlink{classRoom}{Room} temperateBroadleaf = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in temperate forest"}, \textcolor{stringliteral}{"temperatebroadleaf.jpg"});
+00081         temperateBroadleaf.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"wand"}, 3, \textcolor{stringliteral}{"just an ordinary wand"}));
+00082 
+00083         \hyperlink{classRoom}{Room} taiga = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in a boreal forest"}, \textcolor{stringliteral}{"taiga.jpg"});
+00084         taiga.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"snowball"}, 1, \textcolor{stringliteral}{"some weirdly yellowy snowball"}));
+00085         taiga.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"bird"}, 6, \textcolor{stringliteral}{"a frozen inert black bird"}));
+00086 
+00087         \hyperlink{classRoom}{Room} alpineTundra = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"on an alpine mountain"}, \textcolor{stringliteral}{"alpinetundra.jpg"});
+00088         alpineTundra.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"rock"}, 15, \textcolor{stringliteral}{"a surprisingly solid magnificent rock"}));
+00089         alpineTundra.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"plank"}, 10, \textcolor{stringliteral}{"a plank of wood, maybe from a chalet"}));
+00090         alpineTundra.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"snowball"}, 1, \textcolor{stringliteral}{"a snowball. Yes, there is still snow in an alpine
+       biome."}));
+00091 
+00092         \hyperlink{classRoom}{Room} steppe = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"on a vast grass plain"}, \textcolor{stringliteral}{"steppe.jpg"});
+00093         steppe.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"grass"}, 1, \textcolor{stringliteral}{"a tuft of yellowish grass. Looking at the grass made you
+       look like stupid"}));
+00094 
+00095         \hyperlink{classRoom}{Room} cave = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"inside a dark cave"}, \textcolor{stringliteral}{"cave.jpg"});
+00096 
+00097         \hyperlink{classRoom}{Room} polarDesert = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in a cold polar desert"}, \textcolor{stringliteral}{"polardesert.jpg"});
+00098         polarDesert.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"ice"}, 5, \textcolor{stringliteral}{"a little block of ice. But you don't have any drink"}));
+00099 
+00100         \hyperlink{classRoom}{Room} xericShrublands = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in a sand desert"}, \textcolor{stringliteral}{"xericshrublands.jpg"});
+00101         xericShrublands.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"shrub"}, 10, \textcolor{stringliteral}{"a spicky shrub. Useful if you want to make a
+       shruberry"}));
+00102 
+00103         \hyperlink{classRoom}{Room} savanna = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in a savanna"}, \textcolor{stringliteral}{"savanna.jpg"});
+00104         savanna.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"elephant"}, 1000, \textcolor{stringliteral}{"a huge elephant looking at you, dazed. I bet he's
+       smarter than you"}));
+00105         savanna.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"grass"}, 1, \textcolor{stringliteral}{"a tuft of yellowish grass. You may have other things to
+       do instead of looking at that"}));
+00106 
+00107         \textcolor{comment}{// initialise room exits}
+00108         temperateBroadleaf.setExit(\textcolor{stringliteral}{"east"}, taiga);
+00109         temperateBroadleaf.setExit(\textcolor{stringliteral}{"south"}, steppe);
 00110 
-00114     \textcolor{keyword}{private} \textcolor{keywordtype}{void} printHelp() \{
-00115         gui.println(\textcolor{stringliteral}{"Help ? Who needs help ? Only the weak ones."})
-00116             gui.\hyperlink{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}{println}(\textcolor{stringliteral}{"Your command words are: "} + parser.\hyperlink{classParser_ae99d8549c08045804cc52576d7b4b453}{showCommands}());
-00117         gui.println(\textcolor{stringliteral}{"That will be all."});
-00118     \}
-00119 
-00125     \textcolor{keyword}{private} \textcolor{keywordtype}{void} goRoom(Command command) \{
-00126         \textcolor{keywordflow}{if}(!command.hasSecondWord()) \{
-00127             \textcolor{comment}{// if there is no second word, we don't know where to go...}
-00128             gui.println(\textcolor{stringliteral}{"Go where?"});
-00129             \textcolor{keywordflow}{return};
-00130         \}
-00131 
-00132         String direction = command.getSecondWord();
-00133 
-00134         \textcolor{comment}{// Try to leave current room.}
-00135         \hyperlink{classRoom}{Room} nextRoom = currentRoom.getExit(direction);
-00136 
-00137         \textcolor{keywordflow}{if} (nextRoom == null)
-00138             gui.println(\textcolor{stringliteral}{"There is no door!"});
-00139         \textcolor{keywordflow}{else} \{
-00140             currentRoom = nextRoom;
-00141             gui.println(currentRoom.getLongDescription());
-00142             \textcolor{keywordflow}{if}(currentRoom.\hyperlink{classRoom_a8177668df4d8be718812934673c42649}{getImageName}() != null)
-00143                 gui.\hyperlink{classUserInterface_ab793a0f12878c698ba3e1720a9f86f3b}{showImage}(currentRoom.\hyperlink{classRoom_a8177668df4d8be718812934673c42649}{getImageName}());
-00144         \}
-00145     \}
+00111         taiga.setExit(\textcolor{stringliteral}{"west"}, temperateBroadleaf);
+00112         taiga.setExit(\textcolor{stringliteral}{"east"}, alpineTundra);
+00113         taiga.setExit(\textcolor{stringliteral}{"south"}, cave);
+00114 
+00115         alpineTundra.setExit(\textcolor{stringliteral}{"west"}, taiga);
+00116         alpineTundra.setExit(\textcolor{stringliteral}{"south"}, polarDesert);
+00117 
+00118         steppe.setExit(\textcolor{stringliteral}{"north"}, temperateBroadleaf);
+00119         steppe.setExit(\textcolor{stringliteral}{"east"}, cave);
+00120         steppe.setExit(\textcolor{stringliteral}{"south"}, xericShrublands);
+00121 
+00122         cave.setExit(\textcolor{stringliteral}{"north"}, taiga);
+00123         cave.setExit(\textcolor{stringliteral}{"south"}, savanna);
+00124         cave.setExit(\textcolor{stringliteral}{"east"}, polarDesert);
+00125         cave.setExit(\textcolor{stringliteral}{"west"}, steppe);
+00126 
+00127         polarDesert.setExit(\textcolor{stringliteral}{"north"}, alpineTundra);
+00128         polarDesert.setExit(\textcolor{stringliteral}{"west"}, cave);
+00129 
+00130         xericShrublands.setExit(\textcolor{stringliteral}{"north"}, steppe);
+00131         xericShrublands.setExit(\textcolor{stringliteral}{"east"}, savanna);
+00132 
+00133         savanna.setExit(\textcolor{stringliteral}{"north"}, cave);
+00134         savanna.setExit(\textcolor{stringliteral}{"west"}, xericShrublands);
+00135 
+00136         \hyperlink{classGameEngine_aa08e7cbb458047a2f72ff594d2e230bc}{currentRoom} = temperateBroadleaf;  \textcolor{comment}{// start game outside}
+00137     \}
+00138 
+\hypertarget{GameEngine_8java_source_l00143}{}\hyperlink{classGameEngine_ad7133885f313fa99bca3bb7cb8272f64}{00143}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_ad7133885f313fa99bca3bb7cb8272f64}{processCommand}(String commandLine) \{
+00144         gui.println(commandLine);
+00145         Command command = parser.getCommand(commandLine);
 00146 
-00150     \textcolor{keyword}{private} \textcolor{keywordtype}{void} endGame() \{
-00151         gui.println(\textcolor{stringliteral}{"Thank you for playing.  Good bye."});
-00152         gui.enable(\textcolor{keyword}{false});
-00153     \}
-00154 
-00155 \}
+00147         \textcolor{keywordflow}{if}(command.isUnknown()) \{
+00148             gui.println(\textcolor{stringliteral}{"I don't know what you mean..."});
+00149             \textcolor{keywordflow}{return};
+00150         \}
+00151 
+00152         String commandWord = command.getCommandWord();
+00153         \textcolor{keywordflow}{if} (commandWord.equals(\textcolor{stringliteral}{"help"}))
+00154             \hyperlink{classGameEngine_a8959e384cc77e69ab0ce9da8ba5057cd}{printHelp}();
+00155         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (commandWord.equals(\textcolor{stringliteral}{"credits"}))
+00156             \hyperlink{classGameEngine_a0cc83a912708431a667e73c9a8aa3698}{printCredits}();
+00157         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (commandWord.equals(\textcolor{stringliteral}{"go"}))
+00158             \hyperlink{classGameEngine_a2ec577574f345764435837fc0204b2e0}{goRoom}(command);
+00159         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (commandWord.equals(\textcolor{stringliteral}{"back"}))
+00160             \hyperlink{classGameEngine_ac22dcdb540cb27f39597ee4f03ad167a}{goBack}();
+00161         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (commandWord.equals(\textcolor{stringliteral}{"look"}))
+00162             \hyperlink{classGameEngine_ab620e2e6c8627aba28cc2c33fefe50e3}{lookAround}(command);
+00163         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (commandWord.equals(\textcolor{stringliteral}{"quit"})) \{
+00164             \textcolor{keywordflow}{if}(command.hasParameter())
+00165                 \hyperlink{classGameEngine_a2a7d0bb6183b3f3ef3ee2008926374a0}{gui}.\hyperlink{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}{println}(\textcolor{stringliteral}{"Quit what?"});
+00166             \textcolor{keywordflow}{else}
+00167                 \hyperlink{classGameEngine_abebbf1bda82aa3ca162f7187a64e41ed}{endGame}();
+00168         \}
+00169     \}
+00170 
+\hypertarget{GameEngine_8java_source_l00174}{}\hyperlink{classGameEngine_a8959e384cc77e69ab0ce9da8ba5057cd}{00174}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_a8959e384cc77e69ab0ce9da8ba5057cd}{printHelp}() \{
+00175         \textcolor{keywordflow}{if}(\hyperlink{classGameEngine_a308a9926d553d53cb4c56c28588f6c62}{helpCount} == 0) \{
+00176             gui.println(\textcolor{stringliteral}{"Help ? Who needs help ? Only the weak ones."});
+00177             \hyperlink{classGameEngine_a308a9926d553d53cb4c56c28588f6c62}{helpCount}++;
+00178         \} \textcolor{keywordflow}{else} \{
+00179             \textcolor{keywordflow}{if}(\hyperlink{classGameEngine_a308a9926d553d53cb4c56c28588f6c62}{helpCount} == 1) \{
+00180                 gui.println(\textcolor{stringliteral}{"All right, all right! If you insist..."});
+00181                 \hyperlink{classGameEngine_a308a9926d553d53cb4c56c28588f6c62}{helpCount}++;
+00182             \}
+00183             gui.println(\textcolor{stringliteral}{"Your command words are: "} + parser.showCommands());
+00184             gui.println(\textcolor{stringliteral}{"That will be all."});
+00185         \}
+00186     \}
+00187 
+\hypertarget{GameEngine_8java_source_l00191}{}\hyperlink{classGameEngine_a0cc83a912708431a667e73c9a8aa3698}{00191}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_a0cc83a912708431a667e73c9a8aa3698}{printCredits}() \{
+00192         gui.println(\textcolor{stringliteral}{"Temperate rainforest photo (cc-by-nc-nd) : myheimu
+       (http://www.fotopedia.com/wiki/Temperate\_rainforest#!/items/flickr-7995237868)"});
+00193         gui.println(\textcolor{stringliteral}{"Taiga photo (public domain) : Becker0804
+       (https://commons.wikimedia.org/wiki/File:Talkessel\_von\_Werchojansk.JPG)"});
+00194         gui.println(\textcolor{stringliteral}{"Alpine tundra photo (public domain) : Zewu
+       (https://en.wikipedia.org/wiki/File:Tarfala\_Valley\_-\_Sweden.jpg)"});
+00195         gui.println(\textcolor{stringliteral}{"Steppe photo (cc-by-sa) : Matt Lavin
+       (http://www.fotopedia.com/wiki/Steppe#!/items/flickr-7495949260)"});
+00196         gui.println(\textcolor{stringliteral}{"Lava tube photo : Tim Laman
+       (http://science.nationalgeographic.com/science/photos/caves-gallery/#/lava-tube-cave\_1036\_600x450.jpg)"});
+00197         gui.println(\textcolor{stringliteral}{"Polar desert photo (cc-by) : Stephen Hudson
+       (https://commons.wikimedia.org/wiki/File:AntarcticaDomeCSnow.jpg)"});
+00198         gui.println(\textcolor{stringliteral}{"Thar desert photo (cc-by-sa) : Gégard JANOT
+       (https://commons.wikimedia.org/wiki/File:D%C3%A9sert\_du\_Rajasthan.jpg)"});
+00199         gui.println(\textcolor{stringliteral}{"Savanna photo (public domain) : United States Geological Survey
+       (https://commons.wikimedia.org/wiki/File:Oldoinyolengai.jpg)"});
+00200     \}
+00201 
+\hypertarget{GameEngine_8java_source_l00206}{}\hyperlink{classGameEngine_a2ec577574f345764435837fc0204b2e0}{00206}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_a2ec577574f345764435837fc0204b2e0}{goRoom}(Command command) \{
+00207         \textcolor{keywordflow}{if}(!command.hasParameter()) \{
+00208             \textcolor{comment}{// If there is no second word, we don't know where to go...}
+00209             gui.println(\textcolor{stringliteral}{"Go where?"});
+00210             \textcolor{keywordflow}{return};
+00211         \}
+00212 
+00213         String direction = command.getParameter();
+00214 
+00215         \textcolor{comment}{// Try to leave current room.}
+00216         \hyperlink{classRoom}{Room} nextRoom = currentRoom.getExit(direction);
+00217         \hyperlink{classGameEngine_a2ec577574f345764435837fc0204b2e0}{goRoom}(nextRoom);
+00218     \}
+00219 
+\hypertarget{GameEngine_8java_source_l00226}{}\hyperlink{classGameEngine_a09acb51b95ec98aed78d928f91e61a3d}{00226}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_a09acb51b95ec98aed78d928f91e61a3d}{goRoom}(\hyperlink{classRoom}{Room} room) \{
+00227         \hyperlink{classGameEngine_a2ec577574f345764435837fc0204b2e0}{goRoom}(room, \textcolor{keyword}{false});
+00228     \}
+00229 
+\hypertarget{GameEngine_8java_source_l00237}{}\hyperlink{classGameEngine_ae847246e53c53b84787eec490aedf9ad}{00237}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_ae847246e53c53b84787eec490aedf9ad}{goRoom}(\hyperlink{classRoom}{Room} room, \textcolor{keywordtype}{boolean} back) \{
+00238         \textcolor{keywordflow}{if} (room == null)
+00239             gui.println(\textcolor{stringliteral}{"There is no door!"});
+00240         \textcolor{keywordflow}{else} \{
+00241             \textcolor{keywordflow}{if}(!back)
+00242                 previousRooms.push(\hyperlink{classGameEngine_aa08e7cbb458047a2f72ff594d2e230bc}{currentRoom});
+00243             \textcolor{keywordflow}{else}
+00244                 previousRooms.pop();
+00245             \hyperlink{classGameEngine_aa08e7cbb458047a2f72ff594d2e230bc}{currentRoom} = room;
+00246             gui.println(currentRoom.getLongDescription());
+00247             \textcolor{keywordflow}{if}(currentRoom.getImageName() != null)
+00248                 \hyperlink{classGameEngine_a2a7d0bb6183b3f3ef3ee2008926374a0}{gui}.\hyperlink{classUserInterface_ab793a0f12878c698ba3e1720a9f86f3b}{showImage}(currentRoom.getImageName());
+00249         \}
+00250     \}
+00251 
+\hypertarget{GameEngine_8java_source_l00252}{}\hyperlink{classGameEngine_ac22dcdb540cb27f39597ee4f03ad167a}{00252}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_ac22dcdb540cb27f39597ee4f03ad167a}{goBack}() \{   
+00253         \textcolor{keywordflow}{if}(!\hyperlink{classGameEngine_a46c905c0610d22223520a8db0e519ec1}{previousRooms}.empty()) \{
+00254             \hyperlink{classGameEngine_a2ec577574f345764435837fc0204b2e0}{goRoom}(\hyperlink{classGameEngine_a46c905c0610d22223520a8db0e519ec1}{previousRooms}.peek(), \textcolor{keyword}{true});
+00255         \} \textcolor{keywordflow}{else} \{
+00256             gui.println(\textcolor{stringliteral}{"No previous room"});
+00257         \}
+00258     \}
+00259 
+\hypertarget{GameEngine_8java_source_l00264}{}\hyperlink{classGameEngine_ab620e2e6c8627aba28cc2c33fefe50e3}{00264}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_ab620e2e6c8627aba28cc2c33fefe50e3}{lookAround}(Command command) \{
+00265         \textcolor{keywordflow}{if}(!command.hasParameter())
+00266             \hyperlink{classGameEngine_a2a7d0bb6183b3f3ef3ee2008926374a0}{gui}.\hyperlink{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}{println}(\hyperlink{classGameEngine_aa08e7cbb458047a2f72ff594d2e230bc}{currentRoom}.\hyperlink{classRoom_a23a25854d7544fb0b41190a4d6bd1322}{getLongDescription}());
+00267         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classGameEngine_aa08e7cbb458047a2f72ff594d2e230bc}{currentRoom}.\hyperlink{classRoom_ad779b367b26018c9f343ca3044c4b54f}{hasItem}(command.getParameter()))
+00268             gui.println(\textcolor{stringliteral}{"This is "} + currentRoom.getItem(command.getParameter()).getDescription() + \textcolor{stringliteral}{"."});
+00269         \textcolor{keywordflow}{else}
+00270             gui.println(\textcolor{stringliteral}{"I'm not sure you want to look at that."});
+00271     \}
+00272 
+\hypertarget{GameEngine_8java_source_l00276}{}\hyperlink{classGameEngine_abebbf1bda82aa3ca162f7187a64e41ed}{00276}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_abebbf1bda82aa3ca162f7187a64e41ed}{endGame}() \{
+00277         gui.println(\textcolor{stringliteral}{"Thank you for playing.  Good bye."});
+00278         gui.enable(\textcolor{keyword}{false});
+00279     \}
+00280 
+\hypertarget{GameEngine_8java_source_l00281}{}\hyperlink{classGameEngine_a0cfc6fc69e60ffe8a436d04de0938349}{00281}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_a0cfc6fc69e60ffe8a436d04de0938349}{test}(\textcolor{keyword}{final} Command command) \{
+00282         \textcolor{keywordflow}{if}(!command.hasParameter()) \{
+00283             gui.println(\textcolor{stringliteral}{"Please specify a file"});
+00284             \textcolor{keywordflow}{return};
+00285         \} \textcolor{keywordflow}{else} \{
+00286             Scanner scan = \textcolor{keyword}{new} Scanner(command.getParameter());
+00287             \textcolor{keywordflow}{while}(scan.hasNext()) \{
+00288                 \hyperlink{classGameEngine_ad7133885f313fa99bca3bb7cb8272f64}{processCommand}(scan.nextLine());
+00289             \}
+00290         \}
+00291     \}
+00292 \}
 \end{DoxyCode}

@@ -6,10 +6,10 @@
 00002 
 \hypertarget{Parser_8java_source_l00009}{}\hyperlink{classParser}{00009} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classParser}{Parser} \{
 00010 
-00014     \textcolor{keyword}{private} \hyperlink{classCommandWords}{CommandWords} commands;
+\hypertarget{Parser_8java_source_l00014}{}\hyperlink{classParser_a6afb99e1595e6bc0705a09ee00dbddd6}{00014}     \textcolor{keyword}{private} \hyperlink{classCommandWords}{CommandWords} \hyperlink{classParser_a6afb99e1595e6bc0705a09ee00dbddd6}{commands};
 00015 
 \hypertarget{Parser_8java_source_l00019}{}\hyperlink{classParser_a5b20dc7a1c7a26ce3cec6cc070839bd4}{00019}     \textcolor{keyword}{public} \hyperlink{classParser_a5b20dc7a1c7a26ce3cec6cc070839bd4}{Parser}() \{
-00020         commands = \textcolor{keyword}{new} \hyperlink{classCommandWords}{CommandWords}();
+00020         \hyperlink{classParser_a6afb99e1595e6bc0705a09ee00dbddd6}{commands} = \textcolor{keyword}{new} \hyperlink{classCommandWords}{CommandWords}();
 00021     \}
 00022 
 \hypertarget{Parser_8java_source_l00026}{}\hyperlink{classParser_a5ee0a1ad3df67b8814d34c81e7276371}{00026}     \textcolor{keyword}{public} Command \hyperlink{classParser_a5ee0a1ad3df67b8814d34c81e7276371}{getCommand}(String inputLine) \{
@@ -28,7 +28,7 @@
 00039         \textcolor{keywordflow}{else}
 00040             word2 = null;
 00041 
-00042         \textcolor{keywordflow}{if}(commands.\hyperlink{classCommandWords_a98619d278b3fa23fed18b5834f9d20a8}{isCommand}(word1))
+00042         \textcolor{keywordflow}{if}(\hyperlink{classParser_a6afb99e1595e6bc0705a09ee00dbddd6}{commands}.\hyperlink{classCommandWords_a98619d278b3fa23fed18b5834f9d20a8}{isCommand}(word1))
 00043             \textcolor{keywordflow}{return} \textcolor{keyword}{new} Command(word1, word2);
 00044         \textcolor{keywordflow}{else}
 00045             \textcolor{keywordflow}{return} \textcolor{keyword}{new} Command(null, word2);

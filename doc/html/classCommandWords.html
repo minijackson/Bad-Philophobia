@@ -76,7 +76,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,6 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classCommandWords-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CommandWords Class Reference</div>  </div>
@@ -97,7 +98,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Collaboration diagram for CommandWords:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classCommandWords__coll__graph.svg" width="152" height="152"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classCommandWords__coll__graph.svg" width="150" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -108,6 +110,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a98619d278b3fa23fed18b5834f9d20a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa26f54985e39543739e0ae291dcdb8f1"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandWords.html#aa26f54985e39543739e0ae291dcdb8f1">getCommandList</a> ()</td></tr>
 <tr class="separator:aa26f54985e39543739e0ae291dcdb8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a328bb081d9a9e5cb1aa6362523b28783"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandWords.html#a328bb081d9a9e5cb1aa6362523b28783">knownCommands</a> []</td></tr>
+<tr class="separator:a328bb081d9a9e5cb1aa6362523b28783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class used to verify the commands given by the user. It contains all known commands and can verify if a String is a known command.</p>
@@ -152,13 +159,16 @@ Public Member Functions</h2></td></tr>
 <p>Getter for the knownCommands field. </p>
 
 <p>Definition at line <a class="el" href="CommandWords_8java_source.html#l00039">39</a> of file <a class="el" href="CommandWords_8java_source.html">CommandWords.java</a>.</p>
+
+<p>References <a class="el" href="CommandWords_8java_source.html#l00014">knownCommands</a>.</p>
 <div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                   {</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        StringBuilder commands = <span class="keyword">new</span> StringBuilder();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; knownCommands.length; i++) {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            commands.append( knownCommands[i] + <span class="stringliteral">&quot;  &quot;</span> );</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            commands.append( <a class="code" href="classCommandWords.html#a328bb081d9a9e5cb1aa6362523b28783">knownCommands</a>[i] + <span class="stringliteral">&quot;  &quot;</span> );</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> commands.toString();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="ttc" id="classCommandWords_html_a328bb081d9a9e5cb1aa6362523b28783"><div class="ttname"><a href="classCommandWords.html#a328bb081d9a9e5cb1aa6362523b28783">CommandWords.knownCommands</a></div><div class="ttdeci">static final String knownCommands[]</div><div class="ttdef"><b>Definition:</b> <a href="CommandWords_8java_source.html#l00014">CommandWords.java:14</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -179,14 +189,17 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="CommandWords_8java_source.html#l00028">28</a> of file <a class="el" href="CommandWords_8java_source.html">CommandWords.java</a>.</p>
 
+<p>References <a class="el" href="CommandWords_8java_source.html#l00014">knownCommands</a>.</p>
+
 <p>Referenced by <a class="el" href="Parser_8java_source.html#l00026">Parser.getCommand()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                             {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; knownCommands.length; i++) {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">if</span>(knownCommands[i].equals(aString))</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="classCommandWords.html#a328bb081d9a9e5cb1aa6362523b28783">knownCommands</a>[i].equals(aString))</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="ttc" id="classCommandWords_html_a328bb081d9a9e5cb1aa6362523b28783"><div class="ttname"><a href="classCommandWords.html#a328bb081d9a9e5cb1aa6362523b28783">CommandWords.knownCommands</a></div><div class="ttdeci">static final String knownCommands[]</div><div class="ttdef"><b>Definition:</b> <a href="CommandWords_8java_source.html#l00014">CommandWords.java:14</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -197,13 +210,42 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a328bb081d9a9e5cb1aa6362523b28783"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String CommandWords.knownCommands[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">        <span class="stringliteral">&quot;go&quot;</span>, <span class="stringliteral">&quot;back&quot;</span>, <span class="stringliteral">&quot;look&quot;</span>, <span class="stringliteral">&quot;quit&quot;</span>, <span class="stringliteral">&quot;help&quot;</span>, <span class="stringliteral">&quot;credits&quot;</span></div>
+<div class="line">    }</div>
+</div><!-- fragment --><p>A array containing all the known command for the game. </p>
+
+<p>Definition at line <a class="el" href="CommandWords_8java_source.html#l00014">14</a> of file <a class="el" href="CommandWords_8java_source.html">CommandWords.java</a>.</p>
+
+<p>Referenced by <a class="el" href="CommandWords_8java_source.html#l00039">getCommandList()</a>, and <a class="el" href="CommandWords_8java_source.html#l00028">isCommand()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="CommandWords_8java_source.html">CommandWords.java</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 12 2014 23:11:11 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 3 2014 20:23:19 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

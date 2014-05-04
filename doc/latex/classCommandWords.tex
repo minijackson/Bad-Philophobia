@@ -3,11 +3,12 @@
 }
 
 
-Collaboration diagram for Command\-Words\-:\nopagebreak
+Collaboration diagram for Command\-Words\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=186pt]{classCommandWords__coll__graph}
+\includegraphics[width=184pt]{classCommandWords__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -18,6 +19,11 @@ Collaboration diagram for Command\-Words\-:\nopagebreak
 boolean \hyperlink{classCommandWords_a98619d278b3fa23fed18b5834f9d20a8}{is\-Command} (String a\-String)
 \item 
 String \hyperlink{classCommandWords_aa26f54985e39543739e0ae291dcdb8f1}{get\-Command\-List} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classCommandWords_a328bb081d9a9e5cb1aa6362523b28783}{known\-Commands} \mbox{[}$\,$\mbox{]}
 \end{DoxyCompactItemize}
 
 
@@ -66,11 +72,15 @@ Getter for the known\-Commands field.
 Definition at line \hyperlink{CommandWords_8java_source_l00039}{39} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
 
 
+
+References \hyperlink{CommandWords_8java_source_l00014}{known\-Commands}.
+
+
 \begin{DoxyCode}
 00039                                    \{
 00040         StringBuilder commands = \textcolor{keyword}{new} StringBuilder();
 00041         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < knownCommands.length; i++) \{
-00042             commands.append( knownCommands[i] + \textcolor{stringliteral}{"  "} );
+00042             commands.append( \hyperlink{classCommandWords_a328bb081d9a9e5cb1aa6362523b28783}{knownCommands}[i] + \textcolor{stringliteral}{"  "} );
 00043         \}
 00044         \textcolor{keywordflow}{return} commands.toString();
 00045     \}
@@ -88,13 +98,17 @@ Definition at line \hyperlink{CommandWords_8java_source_l00028}{28} of file \hyp
 
 
 
+References \hyperlink{CommandWords_8java_source_l00014}{known\-Commands}.
+
+
+
 Referenced by \hyperlink{Parser_8java_source_l00026}{Parser.\-get\-Command()}.
 
 
 \begin{DoxyCode}
 00028                                              \{
 00029         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < knownCommands.length; i++) \{
-00030             \textcolor{keywordflow}{if}(knownCommands[i].equals(aString))
+00030             \textcolor{keywordflow}{if}(\hyperlink{classCommandWords_a328bb081d9a9e5cb1aa6362523b28783}{knownCommands}[i].equals(aString))
 00031                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 00032         \}
 00033         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
@@ -110,6 +124,26 @@ Here is the caller graph for this function\-:\nopagebreak
 \end{center}
 \end{figure}
 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCommandWords_a328bb081d9a9e5cb1aa6362523b28783}{\index{Command\-Words@{Command\-Words}!known\-Commands@{known\-Commands}}
+\index{known\-Commands@{known\-Commands}!CommandWords@{Command\-Words}}
+\subsubsection[{known\-Commands}]{\setlength{\rightskip}{0pt plus 5cm}final String Command\-Words.\-known\-Commands\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classCommandWords_a328bb081d9a9e5cb1aa6362523b28783}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \{
+        \textcolor{stringliteral}{"go"}, \textcolor{stringliteral}{"back"}, \textcolor{stringliteral}{"look"}, \textcolor{stringliteral}{"quit"}, \textcolor{stringliteral}{"help"}, \textcolor{stringliteral}{"credits"}
+    \}
+\end{DoxyCode}
+A array containing all the known command for the game. 
+
+Definition at line \hyperlink{CommandWords_8java_source_l00014}{14} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
+
+
+
+Referenced by \hyperlink{CommandWords_8java_source_l00039}{get\-Command\-List()}, and \hyperlink{CommandWords_8java_source_l00028}{is\-Command()}.
 
 
 

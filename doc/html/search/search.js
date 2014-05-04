@@ -7,10 +7,11 @@
 
 var indexSectionsWithContent =
 {
-  0: "acegiprsu",
-  1: "cgpru",
-  2: "cgpru",
-  3: "acegiprsu"
+  0: "acdeghiklmnprstuw",
+  1: "cgipru",
+  2: "cgipru",
+  3: "aceghilmprstu",
+  4: "cdeghiklmnpw"
 };
 
 var indexSectionNames =
@@ -18,7 +19,8 @@ var indexSectionNames =
   0: "all",
   1: "classes",
   2: "files",
-  3: "functions"
+  3: "functions",
+  4: "variables"
 };
 
 function convertToId(search)

@@ -1,3 +1,5 @@
 <map id="UserInterface.println" name="UserInterface.println">
-<area shape="rect" id="node3" href="$classGameEngine.html#ad7133885f313fa99bca3bb7cb8272f64" title="GameEngine.processCommand" alt="" coords="196,5,401,38"/>
+<area shape="rect" id="node2" href="$classGameEngine.html#ab620e2e6c8627aba28cc2c33fefe50e3" title="GameEngine.lookAround" alt="" coords="195,5,362,32"/>
+<area shape="rect" id="node3" href="$classGameEngine.html#ad7133885f313fa99bca3bb7cb8272f64" title="GameEngine.processCommand" alt="" coords="411,31,618,57"/>
+<area shape="rect" id="node4" href="$classGameEngine.html#a0cfc6fc69e60ffe8a436d04de0938349" title="GameEngine.test" alt="" coords="667,31,789,57"/>
 </map>

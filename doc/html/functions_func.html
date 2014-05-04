@@ -75,6 +75,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
+      <li><a href="functions_vars.html"><span>Variables</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li><a href="#index_a"><span>a</span></a></li>
+      <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_e"><span>e</span></a></li>
+      <li><a href="#index_g"><span>g</span></a></li>
+      <li><a href="#index_h"><span>h</span></a></li>
+      <li><a href="#index_i"><span>i</span></a></li>
+      <li><a href="#index_l"><span>l</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_p"><span>p</span></a></li>
+      <li><a href="#index_r"><span>r</span></a></li>
+      <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_t"><span>t</span></a></li>
+      <li class="current"><a href="#index_u"><span>u</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -83,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -93,16 +111,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 <div class="contents">
-&#160;<ul>
+&#160;
+
+<h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>actionPerformed()
 : <a class="el" href="classUserInterface.html#a0a1ee40a4dbca4aeee002c3d0537c7d5">UserInterface</a>
 </li>
+<li>addItem()
+: <a class="el" href="classRoom.html#a0b4fcc1c1c04e60efa7ae5f82ea37157">Room</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
 <li>CommandWords()
 : <a class="el" href="classCommandWords.html#a2d8c096723adb3f822cc001bccd92ed7">CommandWords</a>
 </li>
+<li>createGUI()
+: <a class="el" href="classUserInterface.html#a5aa4ca5e24c9fce93ef91e5a6d0abd60">UserInterface</a>
+</li>
+<li>createRooms()
+: <a class="el" href="classGameEngine.html#ac32e0d61566d0cca0a1683b5fcf37a00">GameEngine</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
 <li>enable()
 : <a class="el" href="classUserInterface.html#ab9e499c6c847d52c8753f08d62f1adfc">UserInterface</a>
 </li>
+<li>endGame()
+: <a class="el" href="classGameEngine.html#abebbf1bda82aa3ca162f7187a64e41ed">GameEngine</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
 <li>Game()
 : <a class="el" href="classGame.html#a2e034e53e9c032964ecd2a831b29a616">Game</a>
 </li>
@@ -115,36 +159,113 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getCommandList()
 : <a class="el" href="classCommandWords.html#aa26f54985e39543739e0ae291dcdb8f1">CommandWords</a>
 </li>
+<li>getContainedItems()
+: <a class="el" href="classRoom.html#a4d50f61fe592736e56e9e083b124ff83">Room</a>
+</li>
+<li>getDescription()
+: <a class="el" href="classItem.html#abfe361bd046f5acdf4946bda076a8c8f">Item</a>
+</li>
 <li>getExit()
 : <a class="el" href="classRoom.html#a384ab8c844e5775f87de24d6c470637e">Room</a>
+</li>
+<li>getExitString()
+: <a class="el" href="classRoom.html#a2ccc382c07890a9827be232767eb98a0">Room</a>
+</li>
+<li>getHumanItemsList()
+: <a class="el" href="classRoom.html#ab8a87ad306f77a936873094b479bcde8">Room</a>
 </li>
 <li>getImageName()
 : <a class="el" href="classRoom.html#a8177668df4d8be718812934673c42649">Room</a>
 </li>
+<li>getItem()
+: <a class="el" href="classRoom.html#a9b53c8d9f87f4a6d9cc954aeb744d1a2">Room</a>
+</li>
 <li>getLongDescription()
 : <a class="el" href="classRoom.html#a23a25854d7544fb0b41190a4d6bd1322">Room</a>
+</li>
+<li>getName()
+: <a class="el" href="classItem.html#a78dd5a8370c5267c3f1f992167ab84ac">Item</a>
 </li>
 <li>getShortDescription()
 : <a class="el" href="classRoom.html#a85e561bc5fa9d9c965300e9ad264b02a">Room</a>
 </li>
+<li>getWeight()
+: <a class="el" href="classItem.html#a2ff9daec3cf9585fb5741062447a779d">Item</a>
+</li>
+<li>goBack()
+: <a class="el" href="classGameEngine.html#ac22dcdb540cb27f39597ee4f03ad167a">GameEngine</a>
+</li>
+<li>goRoom()
+: <a class="el" href="classGameEngine.html#ae847246e53c53b84787eec490aedf9ad">GameEngine</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
+<li>hasItem()
+: <a class="el" href="classRoom.html#ad779b367b26018c9f343ca3044c4b54f">Room</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
 <li>isCommand()
 : <a class="el" href="classCommandWords.html#a98619d278b3fa23fed18b5834f9d20a8">CommandWords</a>
 </li>
+<li>Item()
+: <a class="el" href="classItem.html#acf7048ce82d4f6f047d926b1f6260f7c">Item</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>lookAround()
+: <a class="el" href="classGameEngine.html#ab620e2e6c8627aba28cc2c33fefe50e3">GameEngine</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>main()
+: <a class="el" href="classGame.html#ae52595a27ac1b327b05db2129ad81fca">Game</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
 <li>Parser()
 : <a class="el" href="classParser.html#a5b20dc7a1c7a26ce3cec6cc070839bd4">Parser</a>
 </li>
 <li>print()
 : <a class="el" href="classUserInterface.html#a7a0de5ce2b0e0d25ba6573e87c63c1de">UserInterface</a>
 </li>
+<li>printCredits()
+: <a class="el" href="classGameEngine.html#a0cc83a912708431a667e73c9a8aa3698">GameEngine</a>
+</li>
+<li>printHelp()
+: <a class="el" href="classGameEngine.html#a8959e384cc77e69ab0ce9da8ba5057cd">GameEngine</a>
+</li>
 <li>println()
 : <a class="el" href="classUserInterface.html#a79f606b4b1f5d1523e50eea00039ed94">UserInterface</a>
 </li>
+<li>printWelcome()
+: <a class="el" href="classGameEngine.html#a9a2f3cb921bb19399e357bf14d26425b">GameEngine</a>
+</li>
 <li>processCommand()
 : <a class="el" href="classGameEngine.html#ad7133885f313fa99bca3bb7cb8272f64">GameEngine</a>
+, <a class="el" href="classUserInterface.html#a8729aa2e61c87f957663577707f449a5">UserInterface</a>
 </li>
+</ul>
+
+
+<h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
 <li>Room()
 : <a class="el" href="classRoom.html#a2cdcbb3d86746330a5a01c7fae4de02c">Room</a>
 </li>
+</ul>
+
+
+<h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
 <li>setExit()
 : <a class="el" href="classRoom.html#ae4bc6837f331b5249beb0651fc277018">Room</a>
 </li>
@@ -157,6 +278,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>showImage()
 : <a class="el" href="classUserInterface.html#ab793a0f12878c698ba3e1720a9f86f3b">UserInterface</a>
 </li>
+</ul>
+
+
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>test()
+: <a class="el" href="classGameEngine.html#a0cfc6fc69e60ffe8a436d04de0938349">GameEngine</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
 <li>UserInterface()
 : <a class="el" href="classUserInterface.html#a3afe416f3ee335fec8bc815d382c3874">UserInterface</a>
 </li>
@@ -164,7 +296,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 12 2014 23:11:11 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 3 2014 20:23:19 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

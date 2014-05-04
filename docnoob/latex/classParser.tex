@@ -1,0 +1,133 @@
+\hypertarget{classParser}{\section{Parser Class Reference}
+\label{classParser}\index{Parser@{Parser}}
+}
+
+
+Collaboration diagram for Parser\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classParser__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classParser_a5b20dc7a1c7a26ce3cec6cc070839bd4}{Parser} ()
+\item 
+Command \hyperlink{classParser_a5ee0a1ad3df67b8814d34c81e7276371}{get\-Command} (String input\-Line)
+\item 
+String \hyperlink{classParser_ae99d8549c08045804cc52576d7b4b453}{show\-Commands} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used to parse the commands with or without parameters given by the user.
+
+\begin{DoxyAuthor}{Author}
+Rémi N\-I\-C\-O\-L\-E 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{Parser_8java_source_l00009}{9} of file \hyperlink{Parser_8java_source}{Parser.\-java}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classParser_a5b20dc7a1c7a26ce3cec6cc070839bd4}{\index{Parser@{Parser}!Parser@{Parser}}
+\index{Parser@{Parser}!Parser@{Parser}}
+\subsubsection[{Parser}]{\setlength{\rightskip}{0pt plus 5cm}Parser.\-Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classParser_a5b20dc7a1c7a26ce3cec6cc070839bd4}
+\hyperlink{classParser}{Parser} class constructor. 
+
+Definition at line \hyperlink{Parser_8java_source_l00019}{19} of file \hyperlink{Parser_8java_source}{Parser.\-java}.
+
+
+\begin{DoxyCode}
+00019                     \{
+00020         commands = \textcolor{keyword}{new} \hyperlink{classCommandWords}{CommandWords}();
+00021     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classParser_a5ee0a1ad3df67b8814d34c81e7276371}{\index{Parser@{Parser}!get\-Command@{get\-Command}}
+\index{get\-Command@{get\-Command}!Parser@{Parser}}
+\subsubsection[{get\-Command}]{\setlength{\rightskip}{0pt plus 5cm}Command Parser.\-get\-Command (
+\begin{DoxyParamCaption}
+\item[{String}]{input\-Line}
+\end{DoxyParamCaption}
+)}}\label{classParser_a5ee0a1ad3df67b8814d34c81e7276371}
+Get a new command from the user. 
+
+Definition at line \hyperlink{Parser_8java_source_l00026}{26} of file \hyperlink{Parser_8java_source}{Parser.\-java}.
+
+
+
+References \hyperlink{CommandWords_8java_source_l00028}{Command\-Words.\-is\-Command()}.
+
+
+\begin{DoxyCode}
+00026                                                 \{
+00027 
+00028         String word1;
+00029         String word2;
+00030 
+00031         StringTokenizer tokenizer = \textcolor{keyword}{new} StringTokenizer(inputLine);
+00032 
+00033         \textcolor{keywordflow}{if}(tokenizer.hasMoreTokens())
+00034             word1 = tokenizer.nextToken();  \textcolor{comment}{// First word}
+00035         \textcolor{keywordflow}{else}
+00036             word1 = null;
+00037         \textcolor{keywordflow}{if}(tokenizer.hasMoreTokens())
+00038             word2 = tokenizer.nextToken();  \textcolor{comment}{// Second word}
+00039         \textcolor{keywordflow}{else}
+00040             word2 = null;
+00041 
+00042         \textcolor{keywordflow}{if}(commands.\hyperlink{classCommandWords_a98619d278b3fa23fed18b5834f9d20a8}{isCommand}(word1))
+00043             \textcolor{keywordflow}{return} \textcolor{keyword}{new} Command(word1, word2);
+00044         \textcolor{keywordflow}{else}
+00045             \textcolor{keywordflow}{return} \textcolor{keyword}{new} Command(null, word2);
+00046     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classParser_a5ee0a1ad3df67b8814d34c81e7276371_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classParser_ae99d8549c08045804cc52576d7b4b453}{\index{Parser@{Parser}!show\-Commands@{show\-Commands}}
+\index{show\-Commands@{show\-Commands}!Parser@{Parser}}
+\subsubsection[{show\-Commands}]{\setlength{\rightskip}{0pt plus 5cm}String Parser.\-show\-Commands (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classParser_ae99d8549c08045804cc52576d7b4b453}
+Getter for the known\-Commands field of the commands field. \begin{DoxySeeAlso}{See Also}
+Command\-Words\-::known\-Commands 
+\end{DoxySeeAlso}
+
+
+Definition at line \hyperlink{Parser_8java_source_l00052}{52} of file \hyperlink{Parser_8java_source}{Parser.\-java}.
+
+
+\begin{DoxyCode}
+00052                                  \{
+00053         \textcolor{keywordflow}{return} commands.getCommandList();
+00054     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Parser_8java}{Parser.\-java}\end{DoxyCompactItemize}
