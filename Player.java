@@ -108,11 +108,27 @@ public class Player {
 	}
 
 	/**
+	 * Check if the player has a given Item.
+	 * @param item Item name to be checked
+	 */
+	public boolean hasItem(String item) {
+		return backpack.getName().equals(item);
+	}
+
+	/**
 	 * Take the given object.
 	 * @param item Item to be taken.
 	 */
 	public void takeObject(Item item) {
 		backpack = item;
+	}
+
+	/**
+	 * Drop the given object.
+	 * @param item Item to be dropped
+	 */
+	public void dropObject(String item) {
+		backpack = null;
 	}
 
 }

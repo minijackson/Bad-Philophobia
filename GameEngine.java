@@ -159,6 +159,8 @@ public class GameEngine
 			gui.print(player.lookAround(command));
 		else if (commandWord.equals("take"))
 			takeItem(command);
+		else if (commandWord.equals("drop"))
+			dropItem(command);
 		else if (commandWord.equals("test"))
 			testCommands(command);
 		else if (commandWord.equals("quit")) {
@@ -250,6 +252,9 @@ public class GameEngine
 		}
 	}
 
+	/**
+	 * Make the Player go to the previous Room.
+	 */
 	private void goBack() {
 		if(!player.noPreviousRooms()) {
 			goRoom(player.getPreviousRoom(), true);
@@ -258,16 +263,34 @@ public class GameEngine
 		}
 	}
 
+	/**
+	 * Make the Player take a given item.
+	 * @param command Command used by the user
+	 */
 	private void takeItem(Command command) {
 		if(command.hasParameter()) {
 			if(player.getCurrentRoom().hasItem(command.getParameter())) {
 				player.takeObject(player.getCurrentRoom().getItem(command.getParameter()));
-				gui.println("Oh, dear. He took a" + (((new String("aeiouy")).contains(command.getParameter().substring(0,1)))? "n" : "") + " " + command.getParameter());
+				gui.println("Oh, dear. He took a" + (((new String("aeiouy")).contains(command.getParameter().substring(0,1)))? "n " : " ") + command.getParameter() + ".");
 			} else
 				gui.println("I'm not sure you want to take that.");
 		} else
 			gui.println("Wanna take a photo?");
+	}
 
+	/**
+	 * Make the Player drop a given item.
+	 * @param command Command used by the user
+	 */
+	private void dropItem(Command command) {
+		if(command.hasParameter()) {
+			if(player.hasItem(command.getParameter())) {
+				player.dropObject(command.getParameter());
+				gui.println("I don't think that was useful to drop a" + (((new String("aeiouy")).contains(command.getParameter().substring(0,1)))? "n " : " ") + command.getParameter() + "?");
+			} else
+				gui.println("If you want to drop that, you may have a mental disorder. As expected.");
+		} else
+			gui.println("I agree. We both want you to drop dead.");
 	}
 
 	/**
