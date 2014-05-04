@@ -286,7 +286,7 @@ public class GameEngine
 		if(command.hasParameter()) {
 			if(player.hasItem(command.getParameter())) {
 				player.dropObject(command.getParameter());
-				gui.println("I don't think that was useful to drop a" + (((new String("aeiouy")).contains(command.getParameter().substring(0,1)))? "n " : " ") + command.getParameter() + "?");
+				gui.println("I don't think that was useful to drop a" + (((new String("aeiouy")).contains(command.getParameter().substring(0,1)))? "n " : " ") + command.getParameter() + ".");
 			} else
 				gui.println("If you want to drop that, you may have a mental disorder. As expected.");
 		} else

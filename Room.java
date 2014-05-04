@@ -60,14 +60,7 @@ public class Room {
 	 */
 	public void setExit(String direction, Room neighbor) {
 		exits.put(direction, neighbor);
-	}
-
-	/**
-	 * Add an Item in the Room.
-	 */
-	public void addItem(Item item) {
-		containedItems.put(item.getName(), item);
-	}
+	}	
 
 	/**
 	 * containedItem field getter.
@@ -76,12 +69,34 @@ public class Room {
 		return containedItems;
 	}
 
+	/**
+	 * Return the given Item.
+	 */
 	public Item getItem(String name) {
 		return containedItems.get(name);
 	}
 
+	/**
+	 * Check if the room has the given Item.
+	 */
 	public boolean hasItem(String name) {
 		return containedItems.get(name) != null;
+	}
+
+	/**
+	 * Add the given Item in the Room.
+	 * @param item Item to be added
+	 */
+	public void addItem(Item item) {
+		containedItems.put(item.getName(), item);
+	}
+
+	/**
+	 * Remove the given Item to the Room.
+	 * @param item Item to be removed
+	 */
+	public void removeItem(String itemName) {
+		containedItems.remove(itemName);
 	}
 
 	/**

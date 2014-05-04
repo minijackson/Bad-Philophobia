@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Stack;
 
 public class Player {
@@ -9,9 +10,9 @@ public class Player {
 	private String name;
 
 	/**
-	 * Item held by the player.
+	 * Items carried by the player.
 	 */
-	private Item backpack;
+	private HashMap<String, Item> backpack;
 
 	/**
 	 * Room where the player is currently in.
@@ -29,6 +30,7 @@ public class Player {
 	 */
 	public Player(String name, Room firstRoom) {
 		this.name = name;
+		backpack = new HashMap<String, Item>();
 		currentRoom = firstRoom;
 		previousRooms = new Stack<Room>();
 	}
@@ -112,7 +114,7 @@ public class Player {
 	 * @param item Item name to be checked
 	 */
 	public boolean hasItem(String item) {
-		return backpack.getName().equals(item);
+		return backpack.containsKey(item);
 	}
 
 	/**
@@ -120,7 +122,8 @@ public class Player {
 	 * @param item Item to be taken.
 	 */
 	public void takeObject(Item item) {
-		backpack = item;
+		currentRoom.removeItem(item.getName());
+		backpack.put(item.getName(), item);
 	}
 
 	/**
@@ -128,7 +131,7 @@ public class Player {
 	 * @param item Item to be dropped
 	 */
 	public void dropObject(String item) {
-		backpack = null;
+		currentRoom.addItem(backpack.remove(item));
 	}
 
 }
