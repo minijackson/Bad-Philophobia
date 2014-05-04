@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Stack;
 import java.io.File;
 import java.io.FileNotFoundException;
 
@@ -13,19 +12,14 @@ import java.io.FileNotFoundException;
 public class GameEngine
 {
 	/**
+	 * Player for the game.
+	 */
+	private Player player;
+
+	/**
 	 * Parser for the game.
 	 */
 	private Parser parser;
-
-	/**
-	 * Room where the player is currently in.
-	 */
-	private Room currentRoom;
-
-	/**
-	 * Room where the player was before now.
-	 */
-	private Stack<Room> previousRooms;
 
 	/**
 	  User interface for the game.
@@ -45,8 +39,8 @@ public class GameEngine
 	 */
 	public GameEngine() {
 		parser = new Parser();
-		createRooms();
-		previousRooms = new Stack<Room>();
+		player = new Player((javax.swing.JOptionPane.showInputDialog("What is your name").toLowerCase().equals("retard"))? "moron" : "retard", createRooms());
+		javax.swing.JOptionPane.showMessageDialog(null, "Whatever, I'll call you " + player.getName() + ".");
 		helpCount = 0;
 	}
 
@@ -70,14 +64,15 @@ public class GameEngine
 		gui.println("That was predictable, human minds are weak.");
 		gui.println("\nBecause you're stupid, I will describe you everything that will be around us.");
 		gui.println("Who knows ? Maybe you can turn into something useful. One day. Maybe.");
-		gui.println(currentRoom.getLongDescription());
-		gui.showImage(currentRoom.getImageName());
+		gui.println(player.getCurrentRoom().getLongDescription());
+		gui.showImage(player.getCurrentRoom().getImageName());
 	}
 
 	/**
-	 * Create the rooms and link them.
+	 * Create the rooms, link them and return the first Room.
+	 * @return Room The first Room where the player should ba at start.
 	 */
-	private void createRooms() {
+	private Room createRooms() {
 		// create the rooms
 		Room temperateBroadleaf = new Room("in temperate forest", "temperatebroadleaf.jpg");
 		temperateBroadleaf.addItem(new Item("wand", 3, "just an ordinary wand"));
@@ -135,7 +130,7 @@ public class GameEngine
 		savanna.setExit("north", cave);
 		savanna.setExit("west", xericShrublands);
 
-		currentRoom = temperateBroadleaf;  // start game outside
+		return temperateBroadleaf;
 	}
 
 	/**
@@ -161,7 +156,7 @@ public class GameEngine
 		else if (commandWord.equals("back"))
 			goBack();
 		else if (commandWord.equals("look"))
-			lookAround(command);
+			gui.print(player.lookAround(command));
 		else if (commandWord.equals("test"))
 			testCommands(command);
 		else if (commandWord.equals("quit")) {
@@ -217,7 +212,7 @@ public class GameEngine
 		String direction = command.getParameter();
 
 		// Try to leave current room.
-		Room nextRoom = currentRoom.getExit(direction);
+		Room nextRoom = player.getCurrentRoom().getExit(direction);
 		goRoom(nextRoom);
 	}
 
@@ -243,35 +238,22 @@ public class GameEngine
 			gui.println("There is no door!");
 		else {
 			if(!back)
-				previousRooms.push(currentRoom);
+				player.pushForward();
 			else
-				previousRooms.pop();
-			currentRoom = room;
-			gui.println(currentRoom.getLongDescription());
-			if(currentRoom.getImageName() != null)
-				gui.showImage(currentRoom.getImageName());
+				player.popPreviousRooms();
+			player.goRoom(room);
+			gui.println(player.getCurrentRoom().getLongDescription());
+			if(player.getCurrentRoom().getImageName() != null)
+				gui.showImage(player.getCurrentRoom().getImageName());
 		}
 	}
 
 	private void goBack() {
-		if(!previousRooms.empty()) {
-			goRoom(previousRooms.peek(), true);
+		if(!player.noPreviousRooms()) {
+			goRoom(player.getPreviousRoom(), true);
 		} else {
 			gui.println("No previous room");
 		}
-	}
-
-	/**
-	 * Get the description of the room or a specific object.
-	 * @param command Command used by the user
-	 */
-	private void lookAround(Command command) {
-		if(!command.hasParameter())
-			gui.println(currentRoom.getLongDescription());
-		else if(currentRoom.hasItem(command.getParameter()))
-			gui.println("This is " + currentRoom.getItem(command.getParameter()).getDescription() + ".");
-		else
-			gui.println("I'm not sure you want to look at that.");
 	}
 
 	/**
