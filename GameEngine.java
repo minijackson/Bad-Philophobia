@@ -1,5 +1,7 @@
 import java.util.Scanner;
 import java.util.Stack;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 /**
  * Class handling the gameplay for the game.
@@ -160,6 +162,8 @@ public class GameEngine
 			goBack();
 		else if (commandWord.equals("look"))
 			lookAround(command);
+		else if (commandWord.equals("test"))
+			testCommands(command);
 		else if (commandWord.equals("quit")) {
 			if(command.hasParameter())
 				gui.println("Quit what?");
@@ -249,7 +253,7 @@ public class GameEngine
 		}
 	}
 
-	private void goBack() {	
+	private void goBack() {
 		if(!previousRooms.empty()) {
 			goRoom(previousRooms.peek(), true);
 		} else {
@@ -268,6 +272,26 @@ public class GameEngine
 			gui.println("This is " + currentRoom.getItem(command.getParameter()).getDescription() + ".");
 		else
 			gui.println("I'm not sure you want to look at that.");
+	}
+
+	/**
+	 * Test a series of commands in a file.
+	 * @param command Command used by the user
+	 */
+	private void testCommands(Command command) {
+		if (!command.hasParameter()){
+			gui.println("What do you want to test?");
+			return;
+		}
+		try {
+			Scanner s = new Scanner(new File(command.getParameter() + ".test"));
+			while (s.hasNextLine()) {
+				processCommand(s.nextLine());
+			}
+			s.close();
+		} catch(FileNotFoundException e) {
+			gui.println("No such test");
+		}
 	}
 
 	/**

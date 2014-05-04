@@ -1,15 +1,30 @@
-/* ---- Search Box ---- */
+/*---------------- Search Box */
 
 #FSearchBox {
+    float: left;
 }
 
 #MSearchBox {
     white-space : nowrap;
-    position: relative;
+    position: absolute;
+    float: none;
+    display: inline;
+    margin-top: 8px;
+    right: 0px;
+    width: 170px;
+    z-index: 102;
     background-color: white;
 }
 
-#MSearchBox .left {
+#MSearchBox .left
+{
+    display:block;
+    position:absolute;
+    left:10px;
+    width:20px;
+    height:19px;
+    background:url('search_l.png') no-repeat;
+    background-position:right;
 }
 
 #MSearchSelect {
@@ -20,8 +35,7 @@
 }
 
 .left #MSearchSelect {
-    left: 1.3em;
-    top: .3em;
+    left:4px;
 }
 
 .right #MSearchSelect {
@@ -29,13 +43,17 @@
 }
 
 #MSearchField {
-    height: 2em;
-    border:1px solid rgba(0,0,0,0.2);
-    padding: 4px 12px;
+    display:block;
+    position:absolute;
+    height:19px;
+    background:url('search_m.png') repeat-x;
+    border:none;
+    width:111px;
+    margin-left:20px;
+    padding-left:4px;
     color: #909090;
     outline: none;
-    font-size: 0.7em;
-    border-radius: 2px;
+    font: 9pt Arial, Verdana, sans-serif;
 }
 
 #FSearchBox #MSearchField {
@@ -43,8 +61,13 @@
 }
 
 #MSearchBox .right {
+    display:block;
+    position:absolute;
+    right:10px;
+    top:0px;
     width:20px;
     height:19px;
+    background:url('search_r.png') no-repeat;
     background-position:left;
 }
 
@@ -59,12 +82,12 @@
     outline: none;
 }
 
-#navrow1 > ul > li a#MSearchClose {
-    border: none;
+.left #MSearchClose {
+    left: 6px;
 }
 
-#navrow1 > ul > li a#MSearchClose:hover {
-    border: none;
+.right #MSearchClose {
+    right: 2px;
 }
 
 .MSearchBoxActive #MSearchField {
@@ -77,11 +100,16 @@
     display: none;
     position: absolute;
     left: 0; top: 0;
-    border: 1px solid rgba(0,0,0,0.2);
-    background-color: hsla(217, 57%, 95%, 1);
+    border: 1px solid #90A5CE;
+    background-color: #F9FAFC;
     z-index: 1;
     padding-top: 4px;
     padding-bottom: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
     -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
 }
 
@@ -117,7 +145,7 @@ a.SelectItem:active {
 
 a.SelectItem:hover {
     color: #FFFFFF;
-    background-color: hsla(217, 57%, 60%, 1);
+    background-color: #3D578C;
     outline-style: none;
     text-decoration: none;
     cursor: pointer;
