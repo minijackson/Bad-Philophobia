@@ -19,7 +19,7 @@ public class Room {
 	 * Collection which match a direction
 	 * with the room in that direction.
 	 */
-	private HashMap < String, Room > exits;
+	private HashMap<String, Room> exits;
 
 	/**
 	 * Image to display for the current room.
@@ -29,7 +29,7 @@ public class Room {
 	/**
 	 * Item currently being in the room.
 	 */
-	private HashMap<String, Item> containedItems;
+	private ItemList containedItems;
 
 	/**
 	 * Room class constructor.
@@ -37,7 +37,7 @@ public class Room {
 	 * @param image Image path to display
 	 */
 	public Room(String description, String image) {
-		this(description, image, new HashMap<String, Item>());
+		this(description, image, new ItemList());
 	}
 
 	/**
@@ -46,7 +46,7 @@ public class Room {
 	 * @param image Image path to display
 	 * @param itemList The items currently in the room
 	 */
-	public Room(String description, String image, HashMap<String, Item> itemList) {
+	public Room(String description, String image, ItemList itemList) {
 		this.description = description;
 		exits = new HashMap < String, Room > ();
 		imageName = image;
@@ -65,7 +65,7 @@ public class Room {
 	/**
 	 * containedItem field getter.
 	 */
-	public HashMap<String, Item> getContainedItems() {
+	public ItemList getContainedItems() {
 		return containedItems;
 	}
 

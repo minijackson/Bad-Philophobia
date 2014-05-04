@@ -12,7 +12,7 @@ public class Player {
 	/**
 	 * Items carried by the player.
 	 */
-	private HashMap<String, Item> backpack;
+	private ItemList backpack;
 
 	/**
 	 * Room where the player is currently in.
@@ -30,7 +30,7 @@ public class Player {
 	 */
 	public Player(String name, Room firstRoom) {
 		this.name = name;
-		backpack = new HashMap<String, Item>();
+		backpack = new ItemList();
 		currentRoom = firstRoom;
 		previousRooms = new Stack<Room>();
 	}
@@ -122,8 +122,7 @@ public class Player {
 	 * @param item Item to be taken.
 	 */
 	public void takeObject(Item item) {
-		currentRoom.removeItem(item.getName());
-		backpack.put(item.getName(), item);
+		currentRoom.getContainedItems().transfer(item.getName(), backpack);
 	}
 
 	/**
@@ -131,7 +130,7 @@ public class Player {
 	 * @param item Item to be dropped
 	 */
 	public void dropObject(String item) {
-		currentRoom.addItem(backpack.remove(item));
+		backpack.transfer(item, currentRoom.getContainedItems());
 	}
 
 }
