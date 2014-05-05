@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="51cm" height="26cm" viewBox="299 198 1002 503" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="300" y="200" width="200" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="300" y="200" width="200" height="100"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="400" y="253.9">
+      <tspan x="400" y="253.9">Temperate Broadleaf</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="700" y="200" width="200" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="700" y="200" width="200" height="100"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="800" y="253.9">
+      <tspan x="800" y="253.9">Taiga</tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="800" y="250">
+    <tspan x="800" y="250"></tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="1100" y="200" width="200" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1100" y="200" width="200" height="100"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1200" y="253.9">
+      <tspan x="1200" y="253.9">Alpine Tundra</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="300" y="400" width="200" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="300" y="400" width="200" height="100"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="400" y="453.9">
+      <tspan x="400" y="453.9">Steppe</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="500.964" y1="250" x2="700" y2="250"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="900.964" y1="250" x2="1100" y2="250"/>
+  <g>
+    <rect style="fill: #ffffff" x="300" y="600" width="200" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="300" y="600" width="200" height="100"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="400" y="653.9">
+      <tspan x="400" y="653.9">Desert &amp; Xeric shrublands</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="400" y1="500" x2="400" y2="600"/>
+  <g>
+    <rect style="fill: #ffffff" x="1100" y="400" width="200" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1100" y="400" width="200" height="100"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="1200" y="453.9">
+      <tspan x="1200" y="453.9">Polar Desert</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="400" y1="300.995" x2="400" y2="400"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="900" y1="450" x2="1100" y2="450"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="1200" y1="400" x2="1200" y2="300"/>
+  <g>
+    <rect style="fill: #ffffff" x="700" y="400" width="200" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="700" y="400" width="200" height="100"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="800" y="453.9">
+      <tspan x="800" y="453.9">Cave</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="800" y1="300" x2="800" y2="400"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="700" y1="450" x2="500" y2="450"/>
+  <g>
+    <rect style="fill: #ffffff" x="700" y="600" width="200" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="700" y="600" width="200" height="100"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="800" y="653.9">
+      <tspan x="800" y="653.9">Savanna</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="800" y1="500" x2="800" y2="600"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="500" y1="650" x2="700" y2="650"/>
+</svg>
