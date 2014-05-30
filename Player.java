@@ -153,6 +153,24 @@ public class Player {
 	}
 
 	/**
+	 * Eat an object.
+	 * @param command The Command used to call this method
+	 * @return String Message to be printed
+	 */
+	public String eat(Command command) {
+		if(command.hasParameter()) {
+			if(backpack.containsKey(command.getParameter()) && command.getParameter().equals("magiccookie")) {
+				maxWeight += 10;
+				backpack.remove("magiccookie");
+				return "You found an out of date cookie inside a moist cave and you just ate it.\nNow you can carry more objects. That's logic.";
+			} else
+				return "I'm afraid I can't let you eat that.\nBy the way, remind never to go at your place at dinner.";
+		} else {
+			return "Go eat yourself!";
+		}
+	}
+
+	/**
 	 * Return a String containing information
 	 * about the items carried by the player.
 	 * @return String The inventory
@@ -177,8 +195,9 @@ public class Player {
 					returnString += " and" + prefix + itemName;
 			}
 		}
-		return (returnString.equals(""))? "You have nothing. This may be a metaphor for your life.\nBut as always you didn't understand a word I said, don't you?"
-										: "You have" + returnString + ".\nCan't you remember that?";
+		return (returnString.equals(""))?
+			"You have nothing. This may be a metaphor for your life.\nBut as always you didn't understand a word I said, don't you?"
+			: "You have" + returnString + ".\nCan't you remember that?";
 	}
 
 }

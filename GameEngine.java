@@ -90,6 +90,7 @@ public class GameEngine
 		steppe.addItem(new Item("grass", 1, "a tuft of yellowish grass. Looking at the grass made you look like stupid"));
 
 		Room cave = new Room("inside a dark cave", "cave.jpg");
+		cave.addItem(new Item("magiccookie", 3, "a cookie with mould on it. The use-by date has faded out. Why not eat it?"));
 
 		Room polarDesert = new Room("in a cold polar desert", "polardesert.jpg");
 		polarDesert.addItem(new Item("ice", 5, "a little block of ice. But you don't have any drink"));
@@ -161,8 +162,10 @@ public class GameEngine
 			takeItem(command);
 		else if (commandWord.equals("drop"))
 			dropItem(command);
+		else if (commandWord.equals("eat"))
+			gui.println(player.eat(command));
 		else if (commandWord.equals("inventory"))
-			printInventory();
+			gui.println(player.getInventory());
 		else if (commandWord.equals("test"))
 			testCommands(command);
 		else if (commandWord.equals("quit")) {
@@ -296,13 +299,6 @@ public class GameEngine
 				gui.println("If you want to drop that, you may have a mental disorder. As expected.");
 		} else
 			gui.println("I agree. We both want you to drop dead.");
-	}
-
-	/**
-	 * Print the inventory of the player
-	 */
-	private void printInventory() {
-		gui.println(player.getInventory());
 	}
 
 	/**
