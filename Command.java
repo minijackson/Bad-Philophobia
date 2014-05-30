@@ -1,12 +1,12 @@
 /**
- * Class used to handle a command of one or two words. 
+ * Class used to handle a command of one or two words.
  * If the command field is equal to <null>, that means
  * that the command is unknown. If the parameter field
  * is equal to <null>, that means that the command has
  *
  * no parameter or wasn't given any parameter.
  *
- * @author Rémi NICOLE 
+ * @author Rémi NICOLE
  */
 
 class Command {
@@ -15,7 +15,7 @@ class Command {
 	 * It equals to <null> if there is
 	 * no command or no known command.
 	 */
-	private String command;
+	private CommandWord command;
 
 	/**
 	 * Parameter for the command.
@@ -29,8 +29,8 @@ class Command {
 	 * @param firstWord The command.
 	 * @param parameter The parameter of the command.
 	 */
-	public Command(String firstWord, String parameter) {
-		command = firstWord;
+	public Command(CommandWord commandWord, String parameter) {
+		command = commandWord;
 		this.parameter = parameter;
 	}
 
@@ -38,7 +38,7 @@ class Command {
 	 * Command field getter.
 	 * @see Command#command
 	 */
-	public String getCommandWord() {
+	public CommandWord getCommandWord() {
 		return command;
 	}
 

@@ -40,7 +40,7 @@ public class Parser {
 			word2 = null;
 
 		if(commands.isCommand(word1))
-			return new Command(word1, word2);
+			return new Command(commands.getCommandWord(word1), word2);
 		else
 			return new Command(null, word2);
 	}
