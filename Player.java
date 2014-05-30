@@ -56,6 +56,22 @@ public class Player {
 	}
 
 	/**
+	 * maxWeight field getter.
+	 * @return int The maxWeight field
+	 */
+	public int getMaxWeight() {
+		return maxWeight;
+	}
+
+	/**
+	 * maxWeight field setter.
+	 * @param maxWeight The value for the maxWeight field
+	 */
+	public void setMaxWeight(int maxWeight) {
+		this.maxWeight = maxWeight;
+	}
+
+	/**
 	 * currentRoom field getter.
 	 */
 	public Room getCurrentRoom() {
@@ -153,21 +169,11 @@ public class Player {
 	}
 
 	/**
-	 * Eat an object.
-	 * @param command The Command used to call this method
-	 * @return String Message to be printed
+	 * Destroy an object.
+	 * @param itemName Item to be destroyed.
 	 */
-	public String eat(Command command) {
-		if(command.hasParameter()) {
-			if(backpack.containsKey(command.getParameter()) && command.getParameter().equals("magiccookie")) {
-				maxWeight += 10;
-				backpack.remove("magiccookie");
-				return "You found an out of date cookie inside a moist cave and you just ate it.\nNow you can carry more objects. That's logic.";
-			} else
-				return "I'm afraid I can't let you eat that.\nBy the way, remind never to go at your place at dinner.";
-		} else {
-			return "Go eat yourself!";
-		}
+	public void eatObject(String itemName) {
+		backpack.remove(itemName);
 	}
 
 	/**

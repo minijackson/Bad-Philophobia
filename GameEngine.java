@@ -90,7 +90,7 @@ public class GameEngine
 		steppe.addItem(new Item("grass", 1, "a tuft of yellowish grass. Looking at the grass made you look like stupid"));
 
 		Room cave = new Room("inside a dark cave", "cave.jpg");
-		cave.addItem(new Item("magiccookie", 3, "a cookie with mould on it. The use-by date has faded out. Why not eat it?"));
+		cave.addItem(new Item("magiccookie", 3, "a pretend magic cookie with mould on it, probably left there for many years. The use-by date has faded out. Why not eat it?"));
 
 		Room polarDesert = new Room("in a cold polar desert", "polardesert.jpg");
 		polarDesert.addItem(new Item("ice", 5, "a little block of ice. But you don't have any drink"));
@@ -163,7 +163,7 @@ public class GameEngine
 		else if (commandWord == CommandWord.DROP)
 			dropItem(command);
 		else if (commandWord == CommandWord.EAT)
-			gui.println(player.eat(command));
+			eat(command);
 		else if (commandWord == CommandWord.INVENTORY)
 			gui.println(player.getInventory());
 		else if (commandWord == CommandWord.TEST)
@@ -299,6 +299,25 @@ public class GameEngine
 				gui.println("If you want to drop that, you may have a mental disorder. As expected.");
 		} else
 			gui.println("I agree. We both want you to drop dead.");
+	}
+
+	/**
+	 * Make the player eat an item.
+	 * @param command Command used by the user
+	 */
+	private void eat(Command command) {
+		if(command.hasParameter()) {
+			if(player.hasItem(command.getParameter())) {
+				if(command.getParameter().equals("magiccookie")) {
+					player.eatObject(command.getParameter());
+					player.setMaxWeight(player.getMaxWeight() + 100);
+					gui.println("You found an out of date \"magic\" cookie inside a cave and you just ate it.\nNow you can carry more items. That's logic!");
+				} else
+					gui.println("If that's what you eat, I don't want to be invited to any of your meals.\nI'm afraid I can't allow you to do that.");
+			} else
+				gui.println("You don't have that. And I'm sure that if you did, it wouldn't be smart to eat that.");
+		} else
+			gui.println("Eat my shorts?");
 	}
 
 	/**
