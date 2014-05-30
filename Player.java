@@ -1,4 +1,6 @@
 import java.util.HashMap;
+import java.util.Set;
+import java.util.Iterator;
 import java.util.Stack;
 
 public class Player {
@@ -148,6 +150,35 @@ public class Player {
 	public void dropObject(String item) {
 		backpackWeight -= backpack.get(item).getWeight();
 		backpack.transfer(item, currentRoom.getContainedItems());
+	}
+
+	/**
+	 * Return a String containing information
+	 * about the items carried by the player.
+	 * @return String The inventory
+	 */
+	public String getInventory() {
+		String returnString = "";
+		Set<String> itemsNames = backpack.keySet();
+		Iterator<String> it = itemsNames.iterator();
+		while(it.hasNext()) {
+			String itemName = it.next();
+			// If the item's name begins with a vowel, the prefix is ' an '
+			// if not, the prefix is ' a '
+			String prefix = " a" + (((new String("aeiouy")).contains(itemName.substring(0,1)))? "n" : "") + " ";
+
+			if(returnString.equals(""))
+				returnString += prefix + itemName;
+			else {
+				// Check if it is the last item
+				if(it.hasNext())
+					returnString += "," + prefix + itemName;
+				else
+					returnString += " and" + prefix + itemName;
+			}
+		}
+		return (returnString.equals(""))? "You have nothing. This may be a metaphor for your life.\nBut as always you didn't understand a word I said, don't you?"
+										: "You have" + returnString + ".\nCan't you remember that?";
 	}
 
 }

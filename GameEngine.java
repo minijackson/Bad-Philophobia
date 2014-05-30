@@ -22,7 +22,7 @@ public class GameEngine
 	private Parser parser;
 
 	/**
-	  User interface for the game.
+	 * User interface for the game.
 	 */
 	private UserInterface gui;
 
@@ -161,6 +161,8 @@ public class GameEngine
 			takeItem(command);
 		else if (commandWord.equals("drop"))
 			dropItem(command);
+		else if (commandWord.equals("inventory"))
+			printInventory();
 		else if (commandWord.equals("test"))
 			testCommands(command);
 		else if (commandWord.equals("quit")) {
@@ -294,6 +296,13 @@ public class GameEngine
 				gui.println("If you want to drop that, you may have a mental disorder. As expected.");
 		} else
 			gui.println("I agree. We both want you to drop dead.");
+	}
+
+	/**
+	 * Print the inventory of the player
+	 */
+	private void printInventory() {
+		gui.println(player.getInventory());
 	}
 
 	/**
