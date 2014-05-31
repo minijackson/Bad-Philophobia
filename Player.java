@@ -37,6 +37,11 @@ public class Player {
 	private Stack<Room> previousRooms;
 
 	/**
+	 * Room remembered by the beamer.
+	 */
+	private Room beamerRoom;
+
+	/**
 	 * Player class constructor.
 	 * @param firstRoom Room where the player start.
 	 */
@@ -120,6 +125,14 @@ public class Player {
 	 */
 	public boolean noPreviousRooms() {
 		return previousRooms.empty();
+	}
+
+	public void setBeamerRoom(Room beamerRoom) {
+		this.beamerRoom = beamerRoom;
+	}
+
+	public Room getBeamerRoom() {
+		return beamerRoom;
 	}
 
 	/**

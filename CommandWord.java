@@ -9,6 +9,7 @@ public enum CommandWord
     // commands.
 	GO("go"),
 	BACK("back"),
+	BEAMER("beamer"),
 	LOOK("look"),
 	TAKE("take"),
 	DROP("drop"),

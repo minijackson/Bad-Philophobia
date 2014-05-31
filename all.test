@@ -1,9 +1,10 @@
 look
 go
 take
+back
 go east
 look
-go west
+back
 go south
 go north
 go west
@@ -19,6 +20,11 @@ go east
 take elephant
 go north
 go east
+back
 go north
+go east
+go south
+go north
+back
 quit game
 quit

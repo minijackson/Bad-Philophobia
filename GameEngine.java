@@ -171,6 +171,8 @@ public class GameEngine
 			goRoom(command);
 		else if (commandWord == CommandWord.BACK)
 			goBack();
+		else if (commandWord == CommandWord.BEAMER)
+			beamerAction(command);
 		else if (commandWord == CommandWord.LOOK)
 			gui.print(player.lookAround(command));
 		else if (commandWord == CommandWord.TAKE)
@@ -288,6 +290,50 @@ public class GameEngine
 				gui.println("You cannot go there anymore");
 		} else {
 			gui.println("No previous room.");
+		}
+	}
+
+	/**
+	 * An action has been triggered on the beamer.
+	 */
+	public void beamerAction(Command command) {
+		if(!command.hasParameter())
+			gui.println("You can either charge or teleport with the beamer.\nBut that may be too much complicated for you, isn't it?");
+		else if(command.getParameter().equals("charge"))
+			beamerCharge();
+		else if(command.getParameter().equals("teleport"))
+			beamerTeleport();
+		else
+			gui.println("In order to do that, I may need to upgrade. But I don't want to.");
+	}
+
+	/**
+	 * The user requested a charge on the beamer.
+	 * @return String The message to be printed
+	 */
+	public void beamerCharge() { 
+		if(player.getBeamerRoom() == null)
+			gui.println("Useless room remembered.");
+		else
+			gui.println("Useful room overridden by a useless room.");
+
+		player.setBeamerRoom(player.getCurrentRoom());
+	}
+
+	/**
+	 * The user requested a teleport on the beamer.
+	 * @return String The message to be printed
+	 */
+	public void beamerTeleport() {
+		if(player.getBeamerRoom() == null)
+			gui.println("I'm sorry but I can't teleport you nowhere.");
+		else if(player.getBeamerRoom() == player.getCurrentRoom()) {
+			player.setBeamerRoom(null);
+			gui.println("Teleporting you right where you are...");
+		} else {
+			goRoom(player.getBeamerRoom());
+			player.setBeamerRoom(null);
+			gui.println("Teleporting you to useless room...");
 		}
 	}
 
