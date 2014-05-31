@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Random;
 import java.io.File;
 import java.io.FileNotFoundException;
 
@@ -15,6 +17,11 @@ public class GameEngine
 	 * Player for the game.
 	 */
 	private Player player;
+
+	/**
+	 * A list of all the rooms in the game.
+	 */
+	ArrayList<Room> gameRooms;
 
 	/**
 	 * Parser for the game.
@@ -45,6 +52,7 @@ public class GameEngine
 	 */
 	public GameEngine() {
 		parser = new Parser();
+		gameRooms = new ArrayList<Room>();
 		player = new Player((javax.swing.JOptionPane.showInputDialog("What is your name").toLowerCase().equals("retard"))? "moron" : "retard", createRooms());
 		javax.swing.JOptionPane.showMessageDialog(null, "Whatever, I'll call you " + player.getName() + ".");
 		helpCount = 0;
@@ -138,6 +146,21 @@ public class GameEngine
 
 		savanna.setExit("north", cave);
 		savanna.setExit("west", xericShrublands);
+
+		Room randomRoom = new Room("", "");
+
+		polarDesert.setExit("south", randomRoom);
+		savanna.setExit("east", randomRoom);
+
+		gameRooms.add(randomRoom);
+		gameRooms.add(temperateBroadleaf);
+		gameRooms.add(taiga);
+		gameRooms.add(alpineTundra);
+		gameRooms.add(steppe);
+		gameRooms.add(cave);
+		gameRooms.add(polarDesert);
+		gameRooms.add(xericShrublands);
+		gameRooms.add(savanna);
 
 		return temperateBroadleaf;
 	}
@@ -244,6 +267,13 @@ public class GameEngine
 
 		// Try to leave current room.
 		Room nextRoom = player.getCurrentRoom().getExit(direction);
+
+		// Random room
+		if(nextRoom == gameRooms.get(0)) {
+			gui.println("Infinite improbability drive!");
+			Random random = new Random();
+			nextRoom = gameRooms.get(random.nextInt(gameRooms.size() - 1) + 1);
+		}
 		goRoom(nextRoom);
 	}
 
@@ -311,7 +341,7 @@ public class GameEngine
 	 * The user requested a charge on the beamer.
 	 * @return String The message to be printed
 	 */
-	public void beamerCharge() { 
+	public void beamerCharge() {
 		if(player.getBeamerRoom() == null)
 			gui.println("Useless room remembered.");
 		else
