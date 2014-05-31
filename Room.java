@@ -164,6 +164,10 @@ public class Room {
 		return exits.get(direction);
 	}
 
+	public boolean isExit(Room exit) {
+		return exits.containsValue(exit);
+	}
+
 	/**
 	 * Getter for the imageName field.
 	 */

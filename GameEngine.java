@@ -129,7 +129,8 @@ public class GameEngine
 		cave.setExit("east", polarDesert);
 		cave.setExit("west", steppe);
 
-		polarDesert.setExit("north", alpineTundra);
+		// Trap Door
+		// polarDesert.setExit("north", alpineTundra);
 		polarDesert.setExit("west", cave);
 
 		xericShrublands.setExit("north", steppe);
@@ -281,9 +282,12 @@ public class GameEngine
 	 */
 	private void goBack() {
 		if(!player.noPreviousRooms()) {
-			goRoom(player.getPreviousRoom(), true);
+			if(player.getCurrentRoom().isExit(player.getPreviousRoom()))
+				goRoom(player.getPreviousRoom(), true);
+			else
+				gui.println("You cannot go there anymore");
 		} else {
-			gui.println("No previous room");
+			gui.println("No previous room.");
 		}
 	}
 
