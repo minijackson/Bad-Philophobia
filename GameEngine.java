@@ -273,6 +273,15 @@ public class GameEngine
 			gui.println("Infinite improbability drive!");
 			Random random = new Random();
 			nextRoom = gameRooms.get(random.nextInt(gameRooms.size() - 1) + 1);
+			for(Room effectRoom : gameRooms) {
+				if(effectRoom.getImageName() != null)
+					gui.showImage(effectRoom.getImageName());
+				try {
+					Thread.sleep(70);
+				} catch (InterruptedException e) {
+					System.out.println(e.getMessage());
+				}
+			}
 		}
 		goRoom(nextRoom);
 	}
