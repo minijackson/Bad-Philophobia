@@ -35,6 +35,12 @@ public class GameEngine
 	private int helpCount;
 
 	/**
+	 * The command number limit of the game.
+	 * It is initially equals to 42
+	 */
+	private int commandCountDown;
+
+	/**
 	 * GameEngine class constructor.
 	 */
 	public GameEngine() {
@@ -42,6 +48,7 @@ public class GameEngine
 		player = new Player((javax.swing.JOptionPane.showInputDialog("What is your name").toLowerCase().equals("retard"))? "moron" : "retard", createRooms());
 		javax.swing.JOptionPane.showMessageDialog(null, "Whatever, I'll call you " + player.getName() + ".");
 		helpCount = 0;
+		commandCountDown = 42;
 	}
 
 	/**
@@ -147,6 +154,13 @@ public class GameEngine
 			return;
 		}
 
+		if(commandCountDown > 1)
+			gui.println("You now have " + --commandCountDown + " commands left. Death is coming");
+		else {
+			gui.println("You have no more commands left. Death is here...");
+			--commandCountDown;
+		}
+
 		CommandWord commandWord = command.getCommandWord();
 		if (commandWord == CommandWord.HELP)
 			printHelp();
@@ -172,8 +186,13 @@ public class GameEngine
 			if(command.hasParameter())
 				gui.println("Quit what?");
 			else
-				endGame();
+				endGame(false);
 		}
+
+		if(commandCountDown == 0) {
+			endGame(false);
+		}
+
 	}
 
 	/**
@@ -342,9 +361,11 @@ public class GameEngine
 
 	/**
 	 * Print goodbye message and disable gui.
+	 * @param winning Equals to true if the player won
 	 */
-	private void endGame() {
-		gui.println("Thank you for playing.  Good bye.");
+	private void endGame(boolean winning) {
+		gui.println("Thank you for playing. Good bye. By the way, you "
+				+ ((winning)? "won" : "lost") + ".");
 		gui.enable(false);
 	}
 
