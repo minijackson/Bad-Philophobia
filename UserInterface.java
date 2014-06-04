@@ -36,12 +36,21 @@ public class UserInterface implements ActionListener {
 	private JLabel image;
 
 	/**
+	 * Container for the String of commands left.
+	 */
+	private JLabel commandsLeftLabel;
+
+	/**
 	 * UserInterface class constructor.
 	 * @param gameEngine  The gameplay GameEngine object.
 	 */
 	public UserInterface(GameEngine gameEngine) {
 		engine = gameEngine;
 		createGUI();
+	}
+
+	public void setCommandsLeft(int commandsLeft) {
+		commandsLeftLabel.setText(" Commands left: " + commandsLeft + "  ");
 	}
 
 	/**
@@ -90,7 +99,7 @@ public class UserInterface implements ActionListener {
 	 * Create the user interface.
 	 */
 	private void createGUI() {
-		myFrame = new JFrame("Zork");
+		myFrame = new JFrame("Bad Philophobia");
 		entryField = new JTextField(34);
 
 		log = new JTextArea();
@@ -136,8 +145,15 @@ public class UserInterface implements ActionListener {
 		panel.setLayout(new BorderLayout());
 		panel.add(image, BorderLayout.NORTH);
 		panel.add(listScroller, BorderLayout.CENTER);
-		panel.add(entryField, BorderLayout.SOUTH);
 		panel.add(buttonsPanel, BorderLayout.EAST);
+
+		JPanel bottomPanel = new JPanel();
+		bottomPanel.setLayout(new BorderLayout());
+		bottomPanel.add(entryField, BorderLayout.CENTER);
+		commandsLeftLabel = new JLabel();
+		bottomPanel.add(commandsLeftLabel, BorderLayout.EAST);
+
+		panel.add(bottomPanel, BorderLayout.SOUTH);
 
 		myFrame.getContentPane().add(panel, BorderLayout.CENTER);
 

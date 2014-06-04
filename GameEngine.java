@@ -59,6 +59,7 @@ public class GameEngine
 	 */
 	public void setGUI(UserInterface userInterface) {
 		gui = userInterface;
+		gui.setCommandsLeft(commandCountDown);
 		printWelcome();
 	}
 
@@ -73,6 +74,7 @@ public class GameEngine
 		gui.println("That was predictable, human minds are weak.");
 		gui.println("\nBecause you're stupid, I will describe you everything that will be around us.");
 		gui.println("Who knows ? Maybe you can turn into something useful. One day. Maybe.");
+		gui.println("\nBeware: Death is coming!\n");
 		gui.println(player.getCurrentRoom().getLongDescription());
 		gui.showImage(player.getCurrentRoom().getImageName());
 	}
@@ -172,12 +174,7 @@ public class GameEngine
 			return;
 		}
 
-		if(commandCountDown > 1)
-			gui.println("You now have " + --commandCountDown + " commands left. Death is coming");
-		else {
-			gui.println("You have no more commands left. Death is here...");
-			--commandCountDown;
-		}
+		gui.setCommandsLeft(--commandCountDown);
 
 		try {
 			boolean quit = command.execute(player);
