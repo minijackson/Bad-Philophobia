@@ -9,14 +9,7 @@
  * @author Rémi NICOLE
  */
 
-class Command {
-	/**
-	 * Command given by the user.
-	 * It equals to <null> if there is
-	 * no command or no known command.
-	 */
-	private CommandWord command;
-
+abstract class Command {
 	/**
 	 * Parameter for the command.
 	 * It equals to <null> if there is
@@ -25,22 +18,11 @@ class Command {
 	private String parameter;
 
 	/**
-	 * Command class constructor.
-	 * @param firstWord The command.
-	 * @param parameter The parameter of the command.
+	 * Message to be printed.
+	 * This message is printed if and only if the command
+	 * was successfully processed
 	 */
-	public Command(CommandWord commandWord, String parameter) {
-		command = commandWord;
-		this.parameter = parameter;
-	}
-
-	/**
-	 * Command field getter.
-	 * @see Command#command
-	 */
-	public CommandWord getCommandWord() {
-		return command;
-	}
+	private String message;
 
 	/**
 	 * Parameter field getter.
@@ -50,11 +32,8 @@ class Command {
 		return parameter;
 	}
 
-	/**
-	 * Return true if the command is <null>.
-	 */
-	public boolean isUnknown() {
-		return (command == null);
+	public void setParameter(String parameter) {
+		this.parameter = parameter;
 	}
 
 	/**
@@ -63,5 +42,19 @@ class Command {
 	public boolean hasParameter() {
 		return (parameter != null);
 	}
+
+	protected void setMessage(String message) {
+		this.message = message;
+	}
+
+	public String getMessage() {
+		return (message == null)? "" : message;
+	}
+
+	public boolean hasMessage() {
+		return (message == null) ? false : !message.equals("");
+	}
+
+	public abstract boolean execute(Player player) throws NoArgumentException,IllegalArgumentException,UnauthorizedException;
 }
 

@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Iterator;
 
 /**
  * Class used to verify the commands given by the user.
@@ -10,36 +11,45 @@ import java.util.HashMap;
 
 public class CommandWords
 {
-	private HashMap<String, CommandWord> validCommands;
+	private HashMap<String, Command> commands;
 
 	/**
 	 * CommandWords class constructor.
 	 */
 	public CommandWords() {
-		validCommands = new HashMap<String, CommandWord>();
-		for(CommandWord command : CommandWord.values()) {
-			if(command != CommandWord.UNKNOWN) {
-				validCommands.put(command.toString(), command);
-			}
-		}
+		commands = new HashMap<String, Command>();
+		commands.put("go", new GoCommand());
+		commands.put("back", new BackCommand());
+		commands.put("beamer", new BeamerCommand());
+		commands.put("look", new LookCommand());
+		commands.put("take", new TakeCommand());
+		commands.put("drop", new DropCommand());
+		commands.put("inventory", new InventoryCommand());
+		commands.put("eat", new EatCommand());
+		commands.put("test", new TestCommand());
+		commands.put("quit", new QuitCommand());
+		commands.put("help", new HelpCommand());
+		commands.put("credits", new CreditsCommand());
 	}
 
 	/**
 	 * Return true if and only if the command is known.
 	 */
 	public boolean isCommand(String aString) {
-		return validCommands.containsKey(aString);
+		return commands.containsKey(aString);
 	}
 
 	/**
 	 * Getter for the knownCommands field.
 	 */
 	public String getCommandList() {
-		String commands = "";
-		for(String command : validCommands.keySet()) {
-			commands += command + " ";
+		String commandsString = "";
+		Iterator<String> it = commands.keySet().iterator();
+		while(it.hasNext()) {
+			String command = it.next();
+			commandsString += command + ((it.hasNext())? ", " : ".");
 		}
-		return commands;
+		return commandsString;
 	}
 
     /**
@@ -48,15 +58,9 @@ public class CommandWords
      * @return The CommandWord correspondng to commandWord, or UNKNOWN
      *         if it is not a valid command word.
      */
-    public CommandWord getCommandWord(String commandWord)
+    public Command getCommand(String commandWord)
     {
-        CommandWord command = validCommands.get(commandWord);
-        if(command != null) {
-            return command;
-        }
-        else {
-            return CommandWord.UNKNOWN;
-        }
+        return commands.get(commandWord);
     }
 }
 

@@ -95,7 +95,7 @@ public class Player {
 	 * Return the last Room.
 	 */
 	public Room getPreviousRoom() {
-		return previousRooms.peek();
+		return (previousRooms.empty())? null : previousRooms.peek();
 	}
 
 	/**
@@ -149,6 +149,10 @@ public class Player {
 		else
 			description += "I'm not sure you want to look at that.\n";
 		return description;
+	}
+
+	public Item getItem(String item) {
+		return backpack.get(item);
 	}
 
 	/**

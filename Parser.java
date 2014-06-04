@@ -11,19 +11,12 @@ public class Parser {
 	/**
 	 * Field used to get the list of known commands.
 	 */
-	private CommandWords commands;
-
-	/**
-	 * Parser class constructor.
-	 */
-	public Parser() {
-		commands = new CommandWords();
-	}
+	private static CommandWords commands = new CommandWords();
 
 	/**
 	 * Get a new command from the user.
 	 */
-	public Command getCommand(String inputLine) {
+	public static Command getCommand(String inputLine) {
 
 		String word1;
 		String word2;
@@ -39,17 +32,18 @@ public class Parser {
 		else
 			word2 = null;
 
-		if(commands.isCommand(word1))
-			return new Command(commands.getCommandWord(word1), word2);
-		else
-			return new Command(null, word2);
+        Command command = commands.getCommand(word1);
+        if(command != null) {
+            command.setParameter(word2);
+        }
+        return command;
 	}
 
 	/**
 	 * Getter for the knownCommands field of the commands field.
 	 * @see CommandWords#knownCommands
 	 */
-	public String showCommands() {
+	public static String showCommands() {
 		return commands.getCommandList();
 	}
 }

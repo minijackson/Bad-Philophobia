@@ -24,11 +24,6 @@ public class GameEngine
 	ArrayList<Room> gameRooms;
 
 	/**
-	 * Parser for the game.
-	 */
-	private Parser parser;
-
-	/**
 	 * User interface for the game.
 	 */
 	private UserInterface gui;
@@ -51,7 +46,6 @@ public class GameEngine
 	 * GameEngine class constructor.
 	 */
 	public GameEngine() {
-		parser = new Parser();
 		gameRooms = new ArrayList<Room>();
 		player = new Player((javax.swing.JOptionPane.showInputDialog("What is your name").toLowerCase().equals("retard"))? "moron" : "retard", createRooms());
 		javax.swing.JOptionPane.showMessageDialog(null, "Whatever, I'll call you " + player.getName() + ".");
@@ -170,10 +164,10 @@ public class GameEngine
 	 * @param commandLine The command to process.
 	 */
 	public void processCommand(String commandLine) {
-		gui.println(commandLine);
-		Command command = parser.getCommand(commandLine);
+		gui.println("\n" + commandLine + "\n");
+		Command command = Parser.getCommand(commandLine);
 
-		if(command.isUnknown()) {
+		if(command == null) {
 			gui.println("I don't know what you mean...");
 			return;
 		}
@@ -185,267 +179,35 @@ public class GameEngine
 			--commandCountDown;
 		}
 
-		CommandWord commandWord = command.getCommandWord();
-		if (commandWord == CommandWord.HELP)
-			printHelp();
-		else if (commandWord == CommandWord.CREDITS)
-			printCredits();
-		else if (commandWord == CommandWord.GO)
-			goRoom(command);
-		else if (commandWord == CommandWord.BACK)
-			goBack();
-		else if (commandWord == CommandWord.BEAMER)
-			beamerAction(command);
-		else if (commandWord == CommandWord.LOOK)
-			gui.print(player.lookAround(command));
-		else if (commandWord == CommandWord.TAKE)
-			takeItem(command);
-		else if (commandWord == CommandWord.DROP)
-			dropItem(command);
-		else if (commandWord == CommandWord.EAT)
-			eat(command);
-		else if (commandWord == CommandWord.INVENTORY)
-			gui.println(player.getInventory());
-		else if (commandWord == CommandWord.TEST)
-			testCommands(command);
-		else if (commandWord == CommandWord.QUIT) {
-			if(command.hasParameter())
-				gui.println("Quit what?");
-			else
+		try {
+			boolean quit = command.execute(player);
+
+			if(command.hasMessage())
+				gui.println(command.getMessage());
+			// If we can cast the command into a GoCommand
+			// Or if it is the test command
+			if(GoCommand.class.isInstance(command) || command.getClass().equals(TestCommand.class)) {
+				// The game image is reloaded
+				if(player.getCurrentRoom().getImageName() != null) {
+					gui.showImage(player.getCurrentRoom().getImageName());
+				}
+			}
+
+			if(quit) {
 				endGame(false);
+			}
+		} catch(NoArgumentException e) {
+			gui.println(e.getMessage());
+		} catch(IllegalArgumentException e) {
+			gui.println(e.getMessage());
+		} catch(UnauthorizedException e) {
+			gui.println(e.getMessage());
 		}
 
 		if(commandCountDown == 0) {
 			endGame(false);
 		}
 
-	}
-
-	/**
-	 * Print user's help.
-	 */
-	private void printHelp() {
-		if(helpCount == 0) {
-			gui.println("Help ? Who needs help ? Only the weak ones.");
-			helpCount++;
-		} else {
-			if(helpCount == 1) {
-				gui.println("All right, all right! If you insist...");
-				helpCount++;
-			}
-			gui.println("Your command words are: " + parser.showCommands());
-			gui.println("That will be all.");
-		}
-	}
-
-	/**
-	 * Print the credits for the game.
-	 */
-	private void printCredits() {
-		gui.println("Temperate rainforest photo (cc-by-nc-nd) : myheimu (http://www.fotopedia.com/wiki/Temperate_rainforest#!/items/flickr-7995237868)");
-		gui.println("Taiga photo (public domain) : Becker0804 (https://commons.wikimedia.org/wiki/File:Talkessel_von_Werchojansk.JPG)");
-		gui.println("Alpine tundra photo (public domain) : Zewu (https://en.wikipedia.org/wiki/File:Tarfala_Valley_-_Sweden.jpg)");
-		gui.println("Steppe photo (cc-by-sa) : Matt Lavin (http://www.fotopedia.com/wiki/Steppe#!/items/flickr-7495949260)");
-		gui.println("Lava tube photo : Tim Laman (http://science.nationalgeographic.com/science/photos/caves-gallery/#/lava-tube-cave_1036_600x450.jpg)");
-		gui.println("Polar desert photo (cc-by) : Stephen Hudson (https://commons.wikimedia.org/wiki/File:AntarcticaDomeCSnow.jpg)");
-		gui.println("Thar desert photo (cc-by-sa) : Gégard JANOT (https://commons.wikimedia.org/wiki/File:D%C3%A9sert_du_Rajasthan.jpg)");
-		gui.println("Savanna photo (public domain) : United States Geological Survey (https://commons.wikimedia.org/wiki/File:Oldoinyolengai.jpg)");
-	}
-
-	/**
-	 * Go to the given Room.
-	 * @param command Command used by the user
-	 */
-	private void goRoom(Command command) {
-		if(!command.hasParameter()) {
-			// If there is no second word, we don't know where to go...
-			gui.println("Go where?");
-			return;
-		}
-
-		String direction = command.getParameter();
-
-		// Try to leave current room.
-		Room nextRoom = player.getCurrentRoom().getExit(direction);
-
-		// Random room
-		if(nextRoom == gameRooms.get(0)) {
-			gui.println("Infinite improbability drive!");
-			Random random = new Random();
-			nextRoom = gameRooms.get(random.nextInt(gameRooms.size() - 1) + 1);
-			for(Room effectRoom : gameRooms) {
-				if(effectRoom.getImageName() != null)
-					gui.showImage(effectRoom.getImageName());
-				try {
-					Thread.sleep(70);
-				} catch (InterruptedException e) {
-					System.out.println(e.getMessage());
-				}
-			}
-		}
-		goRoom(nextRoom);
-	}
-
-	/**
-	 * Go to the given Room.
-	 * This function is equivalent to
-	 * goRoom(room, false).
-	 * @param room Room where the user want to go
-	 */
-	private void goRoom(Room room) {
-		goRoom(room, false);
-	}
-
-	/**
-	 * Go to the given Room.
-	 * If the user can't go to the given room,
-	 * an error message is printed.
-	 * @param room Room where the user want to go
-	 * @param back true if it is called via the 'back' command
-	 */
-	private void goRoom(Room room, boolean back) {
-		if (room == null)
-			gui.println("There is no door!");
-		else {
-			if(!back)
-				player.pushForward();
-			else
-				player.popPreviousRooms();
-			player.goRoom(room);
-			gui.println(player.getCurrentRoom().getLongDescription());
-			if(player.getCurrentRoom().getImageName() != null)
-				gui.showImage(player.getCurrentRoom().getImageName());
-		}
-	}
-
-	/**
-	 * Make the Player go to the previous Room.
-	 */
-	private void goBack() {
-		if(!player.noPreviousRooms()) {
-			if(player.getCurrentRoom().isExit(player.getPreviousRoom()))
-				goRoom(player.getPreviousRoom(), true);
-			else
-				gui.println("You cannot go there anymore");
-		} else {
-			gui.println("No previous room.");
-		}
-	}
-
-	/**
-	 * An action has been triggered on the beamer.
-	 */
-	public void beamerAction(Command command) {
-		if(!command.hasParameter())
-			gui.println("You can either charge or teleport with the beamer.\nBut that may be too much complicated for you, isn't it?");
-		else if(command.getParameter().equals("charge"))
-			beamerCharge();
-		else if(command.getParameter().equals("teleport"))
-			beamerTeleport();
-		else
-			gui.println("In order to do that, I may need to upgrade. But I don't want to.");
-	}
-
-	/**
-	 * The user requested a charge on the beamer.
-	 * @return String The message to be printed
-	 */
-	public void beamerCharge() {
-		if(player.getBeamerRoom() == null)
-			gui.println("Useless room remembered.");
-		else
-			gui.println("Useful room overridden by a useless room.");
-
-		player.setBeamerRoom(player.getCurrentRoom());
-	}
-
-	/**
-	 * The user requested a teleport on the beamer.
-	 * @return String The message to be printed
-	 */
-	public void beamerTeleport() {
-		if(player.getBeamerRoom() == null)
-			gui.println("I'm sorry but I can't teleport you nowhere.");
-		else if(player.getBeamerRoom() == player.getCurrentRoom()) {
-			player.setBeamerRoom(null);
-			gui.println("Teleporting you right where you are...");
-		} else {
-			goRoom(player.getBeamerRoom());
-			player.setBeamerRoom(null);
-			gui.println("Teleporting you to useless room...");
-		}
-	}
-
-	/**
-	 * Make the Player take a given item.
-	 * @param command Command used by the user
-	 */
-	private void takeItem(Command command) {
-		if(command.hasParameter()) {
-			if(player.getCurrentRoom().hasItem(command.getParameter())) {
-				if(player.canCarry(player.getCurrentRoom().getItem(command.getParameter()))) {
-					player.takeObject(player.getCurrentRoom().getItem(command.getParameter()));
-					gui.println("Oh, dear. He took a" + (((new String("aeiouy")).contains(command.getParameter().substring(0,1)))? "n " : " ") + command.getParameter() + ".");
-				} else
-					gui.println("That's way too much items for you. I know, humans are weak.");
-			} else
-				gui.println("I'm not sure you want to take that.");
-		} else
-			gui.println("Wanna take a photo?");
-	}
-
-	/**
-	 * Make the Player drop a given item.
-	 * @param command Command used by the user
-	 */
-	private void dropItem(Command command) {
-		if(command.hasParameter()) {
-			if(player.hasItem(command.getParameter())) {
-				player.dropObject(command.getParameter());
-				gui.println("I don't think that was useful to drop a" + (((new String("aeiouy")).contains(command.getParameter().substring(0,1)))? "n " : " ") + command.getParameter() + ".");
-			} else
-				gui.println("If you want to drop that, you may have a mental disorder. As expected.");
-		} else
-			gui.println("I agree. We both want you to drop dead.");
-	}
-
-	/**
-	 * Make the player eat an item.
-	 * @param command Command used by the user
-	 */
-	private void eat(Command command) {
-		if(command.hasParameter()) {
-			if(player.hasItem(command.getParameter())) {
-				if(command.getParameter().equals("magiccookie")) {
-					player.eatObject(command.getParameter());
-					player.setMaxWeight(player.getMaxWeight() + 100);
-					gui.println("You found an out of date \"magic\" cookie inside a cave and you just ate it.\nNow you can carry more items. That's logic!");
-				} else
-					gui.println("If that's what you eat, I don't want to be invited to any of your meals.\nI'm afraid I can't allow you to do that.");
-			} else
-				gui.println("You don't have that. And I'm sure that if you did, it wouldn't be smart to eat that.");
-		} else
-			gui.println("Eat my shorts?");
-	}
-
-	/**
-	 * Test a series of commands in a file.
-	 * @param command Command used by the user
-	 */
-	private void testCommands(Command command) {
-		if (!command.hasParameter()){
-			gui.println("What do you want to test?");
-			return;
-		}
-		try {
-			Scanner s = new Scanner(new File(command.getParameter() + ".test"));
-			while (s.hasNextLine()) {
-				processCommand(s.nextLine());
-			}
-			s.close();
-		} catch(FileNotFoundException e) {
-			gui.println("No such test");
-		}
 	}
 
 	/**
@@ -458,15 +220,4 @@ public class GameEngine
 		gui.enable(false);
 	}
 
-	private void test(final Command command) {
-		if(!command.hasParameter()) {
-			gui.println("Please specify a file");
-			return;
-		} else {
-			Scanner scan = new Scanner(command.getParameter());
-			while(scan.hasNext()) {
-				processCommand(scan.nextLine());
-			}
-		}
-	}
 }
