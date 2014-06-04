@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classGameEngine.html#a9a2f3cb921bb19399e357bf14d26425b" target="_top" xlink:title="GameEngine.printWelcome">
+<g id="a_node2"><a xlink:href="classGameEngine.html#a9a2f3cb921bb19399e357bf14d26425b" target="_top" xlink:title="Welcome the user at the start of the game. ">
 <polygon fill="white" stroke="black" points="144,-0.5 144,-19.5 280,-19.5 280,-0.5 144,-0.5"/>
 <text text-anchor="middle" x="212" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">GameEngine.printWelcome</text>
 </a>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['userinterface',['UserInterface',['../classUserInterface.html',1,'']]]
+  ['helpcommand',['HelpCommand',['../classHelpCommand.html',1,'']]]
 ];

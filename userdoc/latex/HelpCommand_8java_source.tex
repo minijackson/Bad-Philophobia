@@ -1,0 +1,32 @@
+\hypertarget{HelpCommand_8java_source}{\section{Help\-Command.\-java}
+}
+
+\begin{DoxyCode}
+00001 
+\hypertarget{HelpCommand_8java_source_l00005}{}\hyperlink{classHelpCommand}{00005} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classHelpCommand}{HelpCommand} \textcolor{keyword}{extends} Command \{
+00006 
+00013     \textcolor{keyword}{private} \textcolor{keywordtype}{int} helpCount;
+00014 
+\hypertarget{HelpCommand_8java_source_l00018}{}\hyperlink{classHelpCommand_aad2ff84710aafcbf325b91129d9827df}{00018}     \textcolor{keyword}{public} \hyperlink{classHelpCommand_aad2ff84710aafcbf325b91129d9827df}{HelpCommand}()\{
+00019         helpCount = 0;
+00020     \}
+00021 
+\hypertarget{HelpCommand_8java_source_l00028}{}\hyperlink{classHelpCommand_ac93c4d17e1bed11f86d0f3c21ba00e34}{00028}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classHelpCommand_ac93c4d17e1bed11f86d0f3c21ba00e34}{execute}(\hyperlink{classPlayer}{Player} player) \{
+00029         setMessage(\textcolor{stringliteral}{""});
+00030         \textcolor{keywordflow}{if}(helpCount == 0) \{
+00031             setMessage(\textcolor{stringliteral}{"Help ? Who needs help ? Only the weak ones."});
+00032             ++helpCount;
+00033         \} \textcolor{keywordflow}{else} \{
+00034             \textcolor{keywordflow}{if}(helpCount == 1)\{
+00035                 setMessage(\textcolor{stringliteral}{"All right, all right! If you insist...\(\backslash\)n"});
+00036                 ++helpCount;
+00037             \}
+00038             setMessage(getMessage() + \textcolor{stringliteral}{"What you can do is: "} + \hyperlink{classParser}{Parser}.
+      \hyperlink{classParser_a2510fee1c8d7298e222edaf1f34660dc}{showCommands}() + \textcolor{stringliteral}{"\(\backslash\)n"}
+00039                     + \textcolor{stringliteral}{"That will be all."});
+00040         \}
+00041         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00042     \}
+00043 
+00044 \}
+\end{DoxyCode}

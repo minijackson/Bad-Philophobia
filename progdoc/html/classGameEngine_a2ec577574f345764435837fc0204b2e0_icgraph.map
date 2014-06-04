@@ -1,6 +1,0 @@
-<map id="GameEngine.goRoom" name="GameEngine.goRoom">
-<area shape="rect" id="node2" href="$classGameEngine.html#ac22dcdb540cb27f39597ee4f03ad167a" title="GameEngine.goBack" alt="" coords="209,5,354,32"/>
-<area shape="rect" id="node3" href="$classGameEngine.html#ad7133885f313fa99bca3bb7cb8272f64" title="GameEngine.processCommand" alt="" coords="406,31,613,57"/>
-<area shape="rect" id="node5" href="$classGameEngine.html#a09acb51b95ec98aed78d928f91e61a3d" title="GameEngine.goRoom" alt="" coords="206,107,357,133"/>
-<area shape="rect" id="node4" href="$classGameEngine.html#a0cfc6fc69e60ffe8a436d04de0938349" title="GameEngine.test" alt="" coords="661,31,784,57"/>
-</map>

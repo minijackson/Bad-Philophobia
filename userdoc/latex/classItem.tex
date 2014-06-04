@@ -25,9 +25,12 @@ String \hyperlink{classItem_abfe361bd046f5acdf4946bda076a8c8f}{get\-Description}
 
 
 \subsection{Detailed Description}
-Class used to handle an item contained in a \hyperlink{classRoom}{Room}. 
+Class used to handle an item contained in a \hyperlink{classRoom}{Room}. \begin{DoxyAuthor}{Author}
+Rémi Nicole 
+\end{DoxyAuthor}
 
-Definition at line \hyperlink{Item_8java_source_l00005}{5} of file \hyperlink{Item_8java_source}{Item.\-java}.
+
+Definition at line \hyperlink{Item_8java_source_l00006}{6} of file \hyperlink{Item_8java_source}{Item.\-java}.
 
 
 
@@ -43,22 +46,24 @@ Definition at line \hyperlink{Item_8java_source_l00005}{5} of file \hyperlink{It
 )}}\label{classItem_acf7048ce82d4f6f047d926b1f6260f7c}
 \hyperlink{classItem}{Item} class constructor. 
 \begin{DoxyParams}{Parameters}
-{\em description} & Description of the item \\
+{\em name} & Name of the item \\
 \hline
 {\em weight} & Weight of the item \\
+\hline
+{\em description} & Description of the item \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{Item_8java_source_l00027}{27} of file \hyperlink{Item_8java_source}{Item.\-java}.
+Definition at line \hyperlink{Item_8java_source_l00029}{29} of file \hyperlink{Item_8java_source}{Item.\-java}.
 
 
 \begin{DoxyCode}
-00027                                                              \{
-00028         this.name = name;
-00029         this.weight = weight;
-00030         this.description = description;
-00031     \}
+00029                                                              \{
+00030         this.name = name;
+00031         this.weight = weight;
+00032         this.description = description;
+00033     \}
 \end{DoxyCode}
 
 
@@ -70,15 +75,18 @@ Definition at line \hyperlink{Item_8java_source_l00027}{27} of file \hyperlink{I
 {}
 \end{DoxyParamCaption}
 )}}\label{classItem_abfe361bd046f5acdf4946bda076a8c8f}
-description field getter. 
+description field getter. \begin{DoxyReturn}{Returns}
+The description of the item 
+\end{DoxyReturn}
 
-Definition at line \hyperlink{Item_8java_source_l00050}{50} of file \hyperlink{Item_8java_source}{Item.\-java}.
+
+Definition at line \hyperlink{Item_8java_source_l00055}{55} of file \hyperlink{Item_8java_source}{Item.\-java}.
 
 
 \begin{DoxyCode}
-00050                                    \{
-00051         \textcolor{keywordflow}{return} description;
-00052     \}
+00055                                    \{
+00056         \textcolor{keywordflow}{return} description;
+00057     \}
 \end{DoxyCode}
 \hypertarget{classItem_a78dd5a8370c5267c3f1f992167ab84ac}{\index{Item@{Item}!get\-Name@{get\-Name}}
 \index{get\-Name@{get\-Name}!Item@{Item}}
@@ -87,16 +95,35 @@ Definition at line \hyperlink{Item_8java_source_l00050}{50} of file \hyperlink{I
 {}
 \end{DoxyParamCaption}
 )}}\label{classItem_a78dd5a8370c5267c3f1f992167ab84ac}
-name field getter. 
+name field getter. \begin{DoxyReturn}{Returns}
+The name of the item 
+\end{DoxyReturn}
 
-Definition at line \hyperlink{Item_8java_source_l00036}{36} of file \hyperlink{Item_8java_source}{Item.\-java}.
+
+Definition at line \hyperlink{Item_8java_source_l00039}{39} of file \hyperlink{Item_8java_source}{Item.\-java}.
+
+
+
+Referenced by \hyperlink{Player_8java_source_l00186}{Player.\-take\-Object()}.
 
 
 \begin{DoxyCode}
-00036                             \{
-00037         \textcolor{keywordflow}{return} name;
-00038     \}
+00039                             \{
+00040         \textcolor{keywordflow}{return} name;
+00041     \}
 \end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{classItem_a78dd5a8370c5267c3f1f992167ab84ac_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{classItem_a2ff9daec3cf9585fb5741062447a779d}{\index{Item@{Item}!get\-Weight@{get\-Weight}}
 \index{get\-Weight@{get\-Weight}!Item@{Item}}
 \subsubsection[{get\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}int Item.\-get\-Weight (
@@ -104,15 +131,18 @@ Definition at line \hyperlink{Item_8java_source_l00036}{36} of file \hyperlink{I
 {}
 \end{DoxyParamCaption}
 )}}\label{classItem_a2ff9daec3cf9585fb5741062447a779d}
-weight field getter. 
+weight field getter. \begin{DoxyReturn}{Returns}
+The weight of the item 
+\end{DoxyReturn}
 
-Definition at line \hyperlink{Item_8java_source_l00043}{43} of file \hyperlink{Item_8java_source}{Item.\-java}.
+
+Definition at line \hyperlink{Item_8java_source_l00047}{47} of file \hyperlink{Item_8java_source}{Item.\-java}.
 
 
 \begin{DoxyCode}
-00043                            \{
-00044         \textcolor{keywordflow}{return} weight;
-00045     \}
+00047                            \{
+00048         \textcolor{keywordflow}{return} weight;
+00049     \}
 \end{DoxyCode}
 
 

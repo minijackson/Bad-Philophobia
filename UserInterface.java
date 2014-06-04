@@ -49,13 +49,17 @@ public class UserInterface implements ActionListener {
 		createGUI();
 	}
 
+	/**
+	 * Change the text for the commands left JLabel
+	 * @param commandsLeft The number of commands left
+	 */
 	public void setCommandsLeft(int commandsLeft) {
 		commandsLeftLabel.setText(" Commands left: " + commandsLeft + "  ");
 	}
 
 	/**
 	 * Print the given text in the text area.
-	 * @param text Text to display.
+	 * @param text Text to display
 	 */
 	public void print(String text) {
 		log.append(text);
@@ -64,7 +68,7 @@ public class UserInterface implements ActionListener {
 
 	/**
 	 * Print the given text plus a newline in the text area.
-	 * @param text Text to display.
+	 * @param text Text to display
 	 */
 	public void println(String text) {
 		log.append(text + "\n");
@@ -73,7 +77,7 @@ public class UserInterface implements ActionListener {
 
 	/**
 	 * Show the image corresponding to the path of the image.
-	 * @param imageName The path of the image.
+	 * @param imageName The path of the image
 	 */
 	public void showImage(String imageName) {
 		URL imageURL = this.getClass().getClassLoader().getResource(imageName);
@@ -88,6 +92,7 @@ public class UserInterface implements ActionListener {
 
 	/**
 	 * Enable or disable the input field.
+	 * @param on True to activate, False to deactivate
 	 */
 	public void enable(boolean on) {
 		entryField.setEditable(on);
@@ -172,7 +177,7 @@ public class UserInterface implements ActionListener {
 
 	/**
 	 * Actionlistener for the textfield.
-	 * @param e Event.
+	 * @param e Event
 	 */
 	public void actionPerformed(ActionEvent e) {
 		if(e.getActionCommand().equals("↑")) {

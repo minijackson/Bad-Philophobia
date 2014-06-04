@@ -1,4 +1,4 @@
 <map id="Room.getLongDescription" name="Room.getLongDescription">
-<area shape="rect" id="node2" href="$classRoom.html#a2ccc382c07890a9827be232767eb98a0" title="Room.getExitString" alt="" coords="247,5,383,32"/>
-<area shape="rect" id="node3" href="$classRoom.html#ab8a87ad306f77a936873094b479bcde8" title="Room.getHumanItemsList" alt="" coords="227,56,402,83"/>
+<area shape="rect" id="node2" href="$classRoom.html#a2ccc382c07890a9827be232767eb98a0" title="Return the available exits in a human readable format. " alt="" coords="247,5,383,32"/>
+<area shape="rect" id="node3" href="$classRoom.html#ab8a87ad306f77a936873094b479bcde8" title="Return a human readable list of the items in the room. " alt="" coords="227,56,402,83"/>
 </map>

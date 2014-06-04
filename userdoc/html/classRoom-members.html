@@ -43,6 +43,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -76,7 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -95,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>This is the complete list of members for <a class="el" href="classRoom.html">Room</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classRoom.html#a0b4fcc1c1c04e60efa7ae5f82ea37157">addItem</a>(Item item)</td><td class="entry"><a class="el" href="classRoom.html">Room</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classRoom.html#a4d50f61fe592736e56e9e083b124ff83">getContainedItems</a>()</td><td class="entry"><a class="el" href="classRoom.html">Room</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRoom.html#ab9ebd5a52d437f7724bf8474fffae81f">getContainedItems</a>()</td><td class="entry"><a class="el" href="classRoom.html">Room</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRoom.html#a384ab8c844e5775f87de24d6c470637e">getExit</a>(String direction)</td><td class="entry"><a class="el" href="classRoom.html">Room</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classRoom.html#ab8a87ad306f77a936873094b479bcde8">getHumanItemsList</a>()</td><td class="entry"><a class="el" href="classRoom.html">Room</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRoom.html#a8177668df4d8be718812934673c42649">getImageName</a>()</td><td class="entry"><a class="el" href="classRoom.html">Room</a></td><td class="entry"></td></tr>
@@ -103,13 +104,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr class="even"><td class="entry"><a class="el" href="classRoom.html#a23a25854d7544fb0b41190a4d6bd1322">getLongDescription</a>()</td><td class="entry"><a class="el" href="classRoom.html">Room</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classRoom.html#a85e561bc5fa9d9c965300e9ad264b02a">getShortDescription</a>()</td><td class="entry"><a class="el" href="classRoom.html">Room</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRoom.html#ad779b367b26018c9f343ca3044c4b54f">hasItem</a>(String name)</td><td class="entry"><a class="el" href="classRoom.html">Room</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRoom.html#a844b42638a0d2ce68df9adf1674f713b">isExit</a>(Room exit)</td><td class="entry"><a class="el" href="classRoom.html">Room</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRoom.html#a591912d92553130f8f90a5bebd236a5c">removeItem</a>(String itemName)</td><td class="entry"><a class="el" href="classRoom.html">Room</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classRoom.html#a2cdcbb3d86746330a5a01c7fae4de02c">Room</a>(String description, String image)</td><td class="entry"><a class="el" href="classRoom.html">Room</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRoom.html#a05e162f8831368304aa193ad5a05750c">Room</a>(String description, String image, HashMap&lt; String, Item &gt; itemList)</td><td class="entry"><a class="el" href="classRoom.html">Room</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRoom.html#ad8cb507b670aec86cf14baa25fadb0f2">Room</a>(String description, String image, ItemList itemList)</td><td class="entry"><a class="el" href="classRoom.html">Room</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classRoom.html#ae4bc6837f331b5249beb0651fc277018">setExit</a>(String direction, Room neighbor)</td><td class="entry"><a class="el" href="classRoom.html">Room</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 3 2014 20:23:25 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 5 2014 01:29:56 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

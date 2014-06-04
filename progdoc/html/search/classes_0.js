@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['commandwords',['CommandWords',['../classCommandWords.html',1,'']]]
+  ['backcommand',['BackCommand',['../classBackCommand.html',1,'']]],
+  ['beamercommand',['BeamerCommand',['../classBeamerCommand.html',1,'']]]
 ];

@@ -1,7 +1,7 @@
 <map id="Game" name="Game">
-<area shape="rect" id="node2" href="$classGameEngine.html" title="{GameEngine\n|&#45; helpCount\l|+ GameEngine()\l+ setGUI()\l+ processCommand()\l&#45; printWelcome()\l&#45; createRooms()\l&#45; printHelp()\l&#45; printCredits()\l&#45; goRoom()\l&#45; goRoom()\l&#45; goRoom()\l&#45; goBack()\l&#45; lookAround()\l&#45; endGame()\l&#45; test()\l}" alt="" coords="215,510,363,778"/>
-<area shape="rect" id="node7" href="$classUserInterface.html" title="{UserInterface\n|&#45; myFrame\l&#45; entryField\l&#45; log\l&#45; image\l|+ UserInterface()\l+ print()\l+ println()\l+ showImage()\l+ enable()\l+ actionPerformed()\l&#45; createGUI()\l&#45; processCommand()\l}" alt="" coords="127,843,271,1067"/>
-<area shape="rect" id="node4" href="$classRoom.html" title="{Room\n|&#45; description\l&#45; imageName\l|+ Room()\l+ Room()\l+ setExit()\l+ addItem()\l+ getContainedItems()\l+ getItem()\l+ hasItem()\l+ getShortDescription()\l+ getLongDescription()\l+ getHumanItemsList()\l+ getExit()\l+ getImageName()\l&#45; getExitString()\l}" alt="" coords="211,177,368,445"/>
-<area shape="rect" id="node9" href="$classParser.html" title="{Parser\n||+ Parser()\l+ getCommand()\l+ showCommands()\l}" alt="" coords="398,257,537,364"/>
-<area shape="rect" id="node10" href="$classCommandWords.html" title="{CommandWords\n|&#45; knownCommands\l|+ CommandWords()\l+ isCommand()\l+ getCommandList()\l}" alt="" coords="403,5,543,112"/>
+<area shape="rect" id="node2" href="$classGameEngine.html" title="Class handling the gameplay for the game. " alt="" coords="134,984,289,1149"/>
+<area shape="rect" id="node4" href="$classUserInterface.html" title="Class handling the game&#39;s user interface. " alt="" coords="43,1213,191,1467"/>
+<area shape="rect" id="node6" href="$classPlayer.html" title="class Player used to handle the user&#39;s player. " alt="" coords="231,667,393,920"/>
+<area shape="rect" id="node8" href="$classRoom.html" title="Class used to handle a game&#39;s room. " alt="" coords="401,291,559,589"/>
+<area shape="rect" id="node9" href="$classItemList.html" title="class ItemList used to handle a list of Item (inventory). " alt="" coords="275,149,361,227"/>
 </map>

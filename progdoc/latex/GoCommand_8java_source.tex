@@ -1,0 +1,51 @@
+\hypertarget{GoCommand_8java_source}{\section{Go\-Command.\-java}
+}
+
+\begin{DoxyCode}
+00001 
+\hypertarget{GoCommand_8java_source_l00005}{}\hyperlink{classGoCommand}{00005} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classGoCommand}{GoCommand} \textcolor{keyword}{extends} \hyperlink{classCommand}{Command} \{
+00006 
+\hypertarget{GoCommand_8java_source_l00010}{}\hyperlink{classGoCommand_a30d6bd5c2284b97e76ebe702e1cb1d55}{00010}     \textcolor{keyword}{public} \hyperlink{classGoCommand_a30d6bd5c2284b97e76ebe702e1cb1d55}{GoCommand}()\{
+00011 
+00012     \}
+00013 
+\hypertarget{GoCommand_8java_source_l00022}{}\hyperlink{classGoCommand_a77a61c2a3b89dca45b51e06f3bcb3ba7}{00022}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classGoCommand_a77a61c2a3b89dca45b51e06f3bcb3ba7}{execute}(\hyperlink{classPlayer}{Player} player) \textcolor{keywordflow}{throws} 
+      \hyperlink{classNoArgumentException}{NoArgumentException},\hyperlink{classIllegalArgumentException}{IllegalArgumentException},
+      \hyperlink{classUnauthorizedException}{UnauthorizedException} \{
+00023         \hyperlink{classCommand_a715709d8f0ab65879d79ad1725c96f17}{setMessage}(\textcolor{stringliteral}{""});
+00024         \textcolor{keywordflow}{if}(\hyperlink{classCommand_a9b042558156d6749566e0fd9d48d3bfe}{hasParameter}()) \{
+00025             \hyperlink{classGoCommand_a1fce2ad8ed1faf41fa300064585b3616}{goRoomCheck}(player.getCurrentRoom().getExit(\hyperlink{classCommand_a1ced3739d546770ba1389e6ce228255e}{getParameter}()), player, \textcolor{keyword}{
+      false});
+00026         \} \textcolor{keywordflow}{else} \{
+00027             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classNoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"If you were clever, I would have thought that
+       it was a existential question.\(\backslash\)nBut that is not the case and I cannot allow you to go nowhere"});
+00028         \}
+00029         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00030     \}
+00031 
+\hypertarget{GoCommand_8java_source_l00040}{}\hyperlink{classGoCommand_a1fce2ad8ed1faf41fa300064585b3616}{00040}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \hyperlink{classGoCommand_a1fce2ad8ed1faf41fa300064585b3616}{goRoomCheck}(\hyperlink{classRoom}{Room} room, \hyperlink{classPlayer}{Player} player, \textcolor{keywordtype}{boolean} back) \textcolor{keywordflow}{throws} 
+      \hyperlink{classIllegalArgumentException}{IllegalArgumentException},\hyperlink{classUnauthorizedException}{UnauthorizedException} \{
+00041         \textcolor{keywordflow}{if}(player.getCurrentRoom().isExit(room)) \{
+00042             \hyperlink{classGoCommand_a3149bf695c19b78c39cfc4dadece7846}{goRoomNoCheck}(room, player, back);
+00043         \} \textcolor{keywordflow}{else} \{
+00044             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classUnauthorizedException}{UnauthorizedException}(\textcolor{stringliteral}{"I'm sorry but you can't pass through
+       walls."});
+00045         \}
+00046     \}
+00047 
+\hypertarget{GoCommand_8java_source_l00055}{}\hyperlink{classGoCommand_a3149bf695c19b78c39cfc4dadece7846}{00055}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \hyperlink{classGoCommand_a3149bf695c19b78c39cfc4dadece7846}{goRoomNoCheck}(\hyperlink{classRoom}{Room} room, \hyperlink{classPlayer}{Player} player, \textcolor{keywordtype}{boolean} back) \textcolor{keywordflow}{throws} 
+      \hyperlink{classIllegalArgumentException}{IllegalArgumentException} \{
+00056         \textcolor{keywordflow}{if}(room != null) \{
+00057             \textcolor{keywordflow}{if}(!back)
+00058                 player.pushForward();
+00059             \textcolor{keywordflow}{else}
+00060                 player.popPreviousRooms();
+00061             player.goRoom(room);
+00062             \hyperlink{classCommand_a715709d8f0ab65879d79ad1725c96f17}{setMessage}(((\hyperlink{classCommand_a3d232d33894a20dc81b7627d84f14183}{hasMessage}()) ? \hyperlink{classCommand_ac3d4abebefb2aea0ce9757bf9c356882}{getMessage}() + \textcolor{stringliteral}{"\(\backslash\)n"} : \textcolor{stringliteral}{""}) + room.
+      getLongDescription());
+00063         \} \textcolor{keywordflow}{else}
+00064             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classIllegalArgumentException}{IllegalArgumentException}(\textcolor{stringliteral}{"This is a wall, not a door!"});
+00065     \}
+00066 
+00067 \}
+\end{DoxyCode}

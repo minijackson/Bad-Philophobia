@@ -1,5 +1,5 @@
 /**
- * class CreditsCommand
+ * class CreditsCommand used to print the credits of the game
  * @author Rémi Nicole
  */
 public class CreditsCommand extends Command {
@@ -11,6 +11,11 @@ public class CreditsCommand extends Command {
 
 	}
 
+	/**
+	 * Save the credits into the message field.
+	 * @param player The player that called this command
+	 * @return False because it is not the quit command
+	 */
 	public boolean execute(Player player) {
 		setMessage("Temperate rainforest photo (cc-by-nc-nd) : myheimu (http://www.fotopedia.com/wiki/Temperate_rainforest#!/items/flickr-7995237868)\n"
 				+ "Taiga photo (public domain) : Becker0804 (https://commons.wikimedia.org/wiki/File:Talkessel_von_Werchojansk.JPG)\n"

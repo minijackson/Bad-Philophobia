@@ -3,7 +3,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 
 /**
- * class TestCommand
+ * class TestCommand used to test series of commands
  * @author Rémi Nicole
  */
 public class TestCommand extends Command {
@@ -15,6 +15,14 @@ public class TestCommand extends Command {
 
 	}
 
+	/**
+	 * Test series of Commands stored in a .test file and store the messages in the message field.
+	 * Each command in the test file must be separated by an end-of-line character
+	 * @param player The player that called this command
+	 * @throws NoArgumentException When the user typed the command without parameter
+	 * @throws IllegalArgumentException When the user typed a name other than any of the .test files in the directory
+	 * @return False because it is not the quit command
+	 */
 	public boolean execute(Player player) throws NoArgumentException,IllegalArgumentException {
 		setMessage("");
 		if(hasParameter()) {

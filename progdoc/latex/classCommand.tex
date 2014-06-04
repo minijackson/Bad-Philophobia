@@ -1,0 +1,385 @@
+\hypertarget{classCommand}{\section{Command Class Reference}
+\label{classCommand}\index{Command@{Command}}
+}
+
+
+Class used to handle a command of one or two words.  
+
+
+
+
+Inheritance diagram for Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classCommand_a1ced3739d546770ba1389e6ce228255e}{get\-Parameter} ()
+\begin{DoxyCompactList}\small\item\em Parameter field getter. \end{DoxyCompactList}\item 
+void \hyperlink{classCommand_a1301a473bc2a80d40d6ee907c21a1475}{set\-Parameter} (String \hyperlink{classCommand_a02ad27e4576737c16cd78f708188bb54}{parameter})
+\begin{DoxyCompactList}\small\item\em Parameter field setter. \end{DoxyCompactList}\item 
+boolean \hyperlink{classCommand_a9b042558156d6749566e0fd9d48d3bfe}{has\-Parameter} ()
+\begin{DoxyCompactList}\small\item\em Return true if the parameter is null. \end{DoxyCompactList}\item 
+String \hyperlink{classCommand_ac3d4abebefb2aea0ce9757bf9c356882}{get\-Message} ()
+\begin{DoxyCompactList}\small\item\em Message field getter. \end{DoxyCompactList}\item 
+boolean \hyperlink{classCommand_a3d232d33894a20dc81b7627d84f14183}{has\-Message} ()
+\begin{DoxyCompactList}\small\item\em Return true if the message is equal to null or \char`\"{}\char`\"{}. \end{DoxyCompactList}\item 
+abstract boolean \hyperlink{classCommand_a8e57e3c92529fd3e7e6519fa454422b1}{execute} (\hyperlink{classPlayer}{Player} player)  throws No\-Argument\-Exception,\-Illegal\-Argument\-Exception,\-Unauthorized\-Exception
+\begin{DoxyCompactList}\small\item\em Process the command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCommand_a715709d8f0ab65879d79ad1725c96f17}{set\-Message} (String \hyperlink{classCommand_a623fd9ca1e1b03cc35a667bc3e67bc78}{message})
+\begin{DoxyCompactList}\small\item\em Message field setter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classCommand_a02ad27e4576737c16cd78f708188bb54}{parameter}
+\begin{DoxyCompactList}\small\item\em Parameter for the command. \end{DoxyCompactList}\item 
+String \hyperlink{classCommand_a623fd9ca1e1b03cc35a667bc3e67bc78}{message}
+\begin{DoxyCompactList}\small\item\em Message to be printed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used to handle a command of one or two words. 
+
+\begin{DoxyAuthor}{Author}
+Rémi N\-I\-C\-O\-L\-E 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{Command_8java_source_l00005}{5} of file \hyperlink{Command_8java_source}{Command.\-java}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCommand_a8e57e3c92529fd3e7e6519fa454422b1}{\index{Command@{Command}!execute@{execute}}
+\index{execute@{execute}!Command@{Command}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}abstract boolean Command.\-execute (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{player}
+\end{DoxyParamCaption}
+) throws {\bf No\-Argument\-Exception},{\bf Illegal\-Argument\-Exception},{\bf Unauthorized\-Exception}\hspace{0.3cm}{\ttfamily [abstract]}}}\label{classCommand_a8e57e3c92529fd3e7e6519fa454422b1}
+
+
+Process the command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player that called this command \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classNoArgumentException}{No\-Argument\-Exception}} & When the command needed a parameter but the user didn't specify one \\
+\hline
+{\em \hyperlink{classIllegalArgumentException}{Illegal\-Argument\-Exception}} & When the user typed a parameter other than the correct ones \\
+\hline
+{\em \hyperlink{classUnauthorizedException}{Unauthorized\-Exception}} & When the user isn't allowed to do this action \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classCommand_ac3d4abebefb2aea0ce9757bf9c356882}{\index{Command@{Command}!get\-Message@{get\-Message}}
+\index{get\-Message@{get\-Message}!Command@{Command}}
+\subsubsection[{get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}String Command.\-get\-Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCommand_ac3d4abebefb2aea0ce9757bf9c356882}
+
+
+Message field getter. 
+
+\begin{DoxyReturn}{Returns}
+The message to print to the user 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Command_8java_source_l00057}{57} of file \hyperlink{Command_8java_source}{Command.\-java}.
+
+
+
+References \hyperlink{Command_8java_source_l00019}{message}.
+
+
+
+Referenced by \hyperlink{TestCommand_8java_source_l00026}{Test\-Command.\-execute()}, \hyperlink{HelpCommand_8java_source_l00028}{Help\-Command.\-execute()}, and \hyperlink{GoCommand_8java_source_l00055}{Go\-Command.\-go\-Room\-No\-Check()}.
+
+
+\begin{DoxyCode}
+00057                                \{
+00058         \textcolor{keywordflow}{return} (\hyperlink{classCommand_a623fd9ca1e1b03cc35a667bc3e67bc78}{message} == null)? \textcolor{stringliteral}{""} : \hyperlink{classCommand_a623fd9ca1e1b03cc35a667bc3e67bc78}{message};
+00059     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCommand_ac3d4abebefb2aea0ce9757bf9c356882_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classCommand_a1ced3739d546770ba1389e6ce228255e}{\index{Command@{Command}!get\-Parameter@{get\-Parameter}}
+\index{get\-Parameter@{get\-Parameter}!Command@{Command}}
+\subsubsection[{get\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}String Command.\-get\-Parameter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCommand_a1ced3739d546770ba1389e6ce228255e}
+
+
+Parameter field getter. 
+
+\begin{DoxyReturn}{Returns}
+The parameter given by the user 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Command_8java_source_l00025}{25} of file \hyperlink{Command_8java_source}{Command.\-java}.
+
+
+
+References \hyperlink{Command_8java_source_l00012}{parameter}.
+
+
+
+Referenced by \hyperlink{LookCommand_8java_source_l00020}{Look\-Command.\-execute()}, \hyperlink{DropCommand_8java_source_l00021}{Drop\-Command.\-execute()}, \hyperlink{GoCommand_8java_source_l00022}{Go\-Command.\-execute()}, \hyperlink{TakeCommand_8java_source_l00022}{Take\-Command.\-execute()}, \hyperlink{EatCommand_8java_source_l00023}{Eat\-Command.\-execute()}, \hyperlink{BeamerCommand_8java_source_l00025}{Beamer\-Command.\-execute()}, and \hyperlink{TestCommand_8java_source_l00026}{Test\-Command.\-execute()}.
+
+
+\begin{DoxyCode}
+00025                                  \{
+00026         \textcolor{keywordflow}{return} \hyperlink{classCommand_a02ad27e4576737c16cd78f708188bb54}{parameter};
+00027     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCommand_a1ced3739d546770ba1389e6ce228255e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classCommand_a3d232d33894a20dc81b7627d84f14183}{\index{Command@{Command}!has\-Message@{has\-Message}}
+\index{has\-Message@{has\-Message}!Command@{Command}}
+\subsubsection[{has\-Message}]{\setlength{\rightskip}{0pt plus 5cm}boolean Command.\-has\-Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCommand_a3d232d33894a20dc81b7627d84f14183}
+
+
+Return true if the message is equal to null or \char`\"{}\char`\"{}. 
+
+\begin{DoxyReturn}{Returns}
+True if the message is equal to null or \char`\"{}\char`\"{} 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Command_8java_source_l00065}{65} of file \hyperlink{Command_8java_source}{Command.\-java}.
+
+
+
+References \hyperlink{Command_8java_source_l00019}{message}.
+
+
+
+Referenced by \hyperlink{GoCommand_8java_source_l00055}{Go\-Command.\-go\-Room\-No\-Check()}.
+
+
+\begin{DoxyCode}
+00065                                 \{
+00066         \textcolor{keywordflow}{return} (\hyperlink{classCommand_a623fd9ca1e1b03cc35a667bc3e67bc78}{message} == null) ? \textcolor{keyword}{false} : !message.equals(\textcolor{stringliteral}{""});
+00067     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCommand_a3d232d33894a20dc81b7627d84f14183_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classCommand_a9b042558156d6749566e0fd9d48d3bfe}{\index{Command@{Command}!has\-Parameter@{has\-Parameter}}
+\index{has\-Parameter@{has\-Parameter}!Command@{Command}}
+\subsubsection[{has\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}boolean Command.\-has\-Parameter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCommand_a9b042558156d6749566e0fd9d48d3bfe}
+
+
+Return true if the parameter is null. 
+
+\begin{DoxyReturn}{Returns}
+True if the parameter is null 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Command_8java_source_l00041}{41} of file \hyperlink{Command_8java_source}{Command.\-java}.
+
+
+
+References \hyperlink{Command_8java_source_l00012}{parameter}.
+
+
+
+Referenced by \hyperlink{LookCommand_8java_source_l00020}{Look\-Command.\-execute()}, \hyperlink{DropCommand_8java_source_l00021}{Drop\-Command.\-execute()}, \hyperlink{GoCommand_8java_source_l00022}{Go\-Command.\-execute()}, \hyperlink{TakeCommand_8java_source_l00022}{Take\-Command.\-execute()}, \hyperlink{EatCommand_8java_source_l00023}{Eat\-Command.\-execute()}, \hyperlink{BeamerCommand_8java_source_l00025}{Beamer\-Command.\-execute()}, and \hyperlink{TestCommand_8java_source_l00026}{Test\-Command.\-execute()}.
+
+
+\begin{DoxyCode}
+00041                                   \{
+00042         \textcolor{keywordflow}{return} (\hyperlink{classCommand_a02ad27e4576737c16cd78f708188bb54}{parameter} != null);
+00043     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCommand_a9b042558156d6749566e0fd9d48d3bfe_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classCommand_a715709d8f0ab65879d79ad1725c96f17}{\index{Command@{Command}!set\-Message@{set\-Message}}
+\index{set\-Message@{set\-Message}!Command@{Command}}
+\subsubsection[{set\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void Command.\-set\-Message (
+\begin{DoxyParamCaption}
+\item[{String}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCommand_a715709d8f0ab65879d79ad1725c96f17}
+
+
+Message field setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Command_8java_source_l00049}{49} of file \hyperlink{Command_8java_source}{Command.\-java}.
+
+
+
+References \hyperlink{Command_8java_source_l00019}{message}.
+
+
+
+Referenced by \hyperlink{BeamerCommand_8java_source_l00062}{Beamer\-Command.\-charge()}, \hyperlink{InventoryCommand_8java_source_l00019}{Inventory\-Command.\-execute()}, \hyperlink{CreditsCommand_8java_source_l00019}{Credits\-Command.\-execute()}, \hyperlink{LookCommand_8java_source_l00020}{Look\-Command.\-execute()}, \hyperlink{DropCommand_8java_source_l00021}{Drop\-Command.\-execute()}, \hyperlink{TakeCommand_8java_source_l00022}{Take\-Command.\-execute()}, \hyperlink{GoCommand_8java_source_l00022}{Go\-Command.\-execute()}, \hyperlink{EatCommand_8java_source_l00023}{Eat\-Command.\-execute()}, \hyperlink{TestCommand_8java_source_l00026}{Test\-Command.\-execute()}, \hyperlink{HelpCommand_8java_source_l00028}{Help\-Command.\-execute()}, \hyperlink{GoCommand_8java_source_l00055}{Go\-Command.\-go\-Room\-No\-Check()}, and \hyperlink{BeamerCommand_8java_source_l00045}{Beamer\-Command.\-teleport()}.
+
+
+\begin{DoxyCode}
+00049                                               \{
+00050         this.message = \hyperlink{classCommand_a623fd9ca1e1b03cc35a667bc3e67bc78}{message};
+00051     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCommand_a715709d8f0ab65879d79ad1725c96f17_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classCommand_a1301a473bc2a80d40d6ee907c21a1475}{\index{Command@{Command}!set\-Parameter@{set\-Parameter}}
+\index{set\-Parameter@{set\-Parameter}!Command@{Command}}
+\subsubsection[{set\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}void Command.\-set\-Parameter (
+\begin{DoxyParamCaption}
+\item[{String}]{parameter}
+\end{DoxyParamCaption}
+)}}\label{classCommand_a1301a473bc2a80d40d6ee907c21a1475}
+
+
+Parameter field setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & The parameter to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Command_8java_source_l00033}{33} of file \hyperlink{Command_8java_source}{Command.\-java}.
+
+
+
+References \hyperlink{Command_8java_source_l00012}{parameter}.
+
+
+\begin{DoxyCode}
+00033                                                \{
+00034         this.parameter = \hyperlink{classCommand_a02ad27e4576737c16cd78f708188bb54}{parameter};
+00035     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCommand_a623fd9ca1e1b03cc35a667bc3e67bc78}{\index{Command@{Command}!message@{message}}
+\index{message@{message}!Command@{Command}}
+\subsubsection[{message}]{\setlength{\rightskip}{0pt plus 5cm}String Command.\-message\hspace{0.3cm}{\ttfamily [private]}}}\label{classCommand_a623fd9ca1e1b03cc35a667bc3e67bc78}
+
+
+Message to be printed. 
+
+This message is printed if and only if the command was successfully processed 
+
+Definition at line \hyperlink{Command_8java_source_l00019}{19} of file \hyperlink{Command_8java_source}{Command.\-java}.
+
+
+
+Referenced by \hyperlink{Command_8java_source_l00057}{get\-Message()}, \hyperlink{Command_8java_source_l00065}{has\-Message()}, and \hyperlink{Command_8java_source_l00049}{set\-Message()}.
+
+\hypertarget{classCommand_a02ad27e4576737c16cd78f708188bb54}{\index{Command@{Command}!parameter@{parameter}}
+\index{parameter@{parameter}!Command@{Command}}
+\subsubsection[{parameter}]{\setlength{\rightskip}{0pt plus 5cm}String Command.\-parameter\hspace{0.3cm}{\ttfamily [private]}}}\label{classCommand_a02ad27e4576737c16cd78f708188bb54}
+
+
+Parameter for the command. 
+
+It equals to null if there is no parameter. 
+
+Definition at line \hyperlink{Command_8java_source_l00012}{12} of file \hyperlink{Command_8java_source}{Command.\-java}.
+
+
+
+Referenced by \hyperlink{Command_8java_source_l00025}{get\-Parameter()}, \hyperlink{Command_8java_source_l00041}{has\-Parameter()}, and \hyperlink{Command_8java_source_l00033}{set\-Parameter()}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Command_8java}{Command.\-java}\end{DoxyCompactItemize}

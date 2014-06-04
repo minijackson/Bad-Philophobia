@@ -1,3 +1,4 @@
 <map id="GameEngine.processCommand" name="GameEngine.processCommand">
-<area shape="rect" id="node2" href="$classUserInterface.html#a79f606b4b1f5d1523e50eea00039ed94" title="UserInterface.println" alt="" coords="262,5,402,32"/>
+<area shape="rect" id="node2" href="$classPlayer.html#a3a3107df50fc4e35e8c0f46c3f776ce6" title="Player.getCurrentRoom" alt="" coords="262,5,421,32"/>
+<area shape="rect" id="node3" href="$classUserInterface.html#a79f606b4b1f5d1523e50eea00039ed94" title="UserInterface.println" alt="" coords="271,56,411,83"/>
 </map>

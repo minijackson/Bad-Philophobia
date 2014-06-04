@@ -6,9 +6,8 @@ import java.io.FileNotFoundException;
 
 /**
  * Class handling the gameplay for the game.
- * It takes care of room, parser, and room creations
+ * It takes care of rooms, parser, and room creations
  * and command processing.
- *
  * @author Rémi NICOLE
  */
 public class GameEngine
@@ -55,7 +54,7 @@ public class GameEngine
 
 	/**
 	 * Setter for the gui field.
-	 * @see GameEngine#gui;
+	 * @param userInterface The user interface to set
 	 */
 	public void setGUI(UserInterface userInterface) {
 		gui = userInterface;

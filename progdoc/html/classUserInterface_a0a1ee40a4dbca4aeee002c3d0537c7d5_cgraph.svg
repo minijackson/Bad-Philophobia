@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classUserInterface.html#a8729aa2e61c87f957663577707f449a5" target="_top" xlink:title="UserInterface.processCommand">
+<g id="a_node2"><a xlink:href="classUserInterface.html#a8729aa2e61c87f957663577707f449a5" target="_top" xlink:title="Process the command inside the text entry. ">
 <polygon fill="white" stroke="black" points="186,-0.5 186,-19.5 344,-19.5 344,-0.5 186,-0.5"/>
 <text text-anchor="middle" x="265" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">UserInterface.processCommand</text>
 </a>

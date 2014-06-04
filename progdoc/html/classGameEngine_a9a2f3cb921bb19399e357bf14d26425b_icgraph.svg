@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classGameEngine.html#aec901a5b590b3cd204f196165da5dfb6" target="_top" xlink:title="GameEngine.setGUI">
+<g id="a_node2"><a xlink:href="classGameEngine.html#aec901a5b590b3cd204f196165da5dfb6" target="_top" xlink:title="Setter for the gui field. ">
 <polygon fill="white" stroke="black" points="172.5,-0.5 172.5,-19.5 279.5,-19.5 279.5,-0.5 172.5,-0.5"/>
 <text text-anchor="middle" x="226" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">GameEngine.setGUI</text>
 </a>

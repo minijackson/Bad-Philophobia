@@ -1,0 +1,4 @@
+<map id="Player" name="Player">
+<area shape="rect" id="node3" href="$classRoom.html" title="Class used to handle a game&#39;s room. " alt="" coords="272,291,429,589"/>
+<area shape="rect" id="node4" href="$classItemList.html" title="class ItemList used to handle a list of Item (inventory). " alt="" coords="146,149,232,227"/>
+</map>

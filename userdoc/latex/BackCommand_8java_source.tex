@@ -1,0 +1,26 @@
+\hypertarget{BackCommand_8java_source}{\section{Back\-Command.\-java}
+}
+
+\begin{DoxyCode}
+00001 
+\hypertarget{BackCommand_8java_source_l00005}{}\hyperlink{classBackCommand}{00005} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classBackCommand}{BackCommand} \textcolor{keyword}{extends} \hyperlink{classGoCommand}{GoCommand} \{
+00006 
+\hypertarget{BackCommand_8java_source_l00010}{}\hyperlink{classBackCommand_a779456e24dfb281e5917e936da5fd901}{00010}     \textcolor{keyword}{public} \hyperlink{classBackCommand_a779456e24dfb281e5917e936da5fd901}{BackCommand}()\{
+00011         super();
+00012     \}
+00013 
+\hypertarget{BackCommand_8java_source_l00020}{}\hyperlink{classBackCommand_a1f5b1ecc435b3b03d9d1a880c31c9c7a}{00020}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classBackCommand_a1f5b1ecc435b3b03d9d1a880c31c9c7a}{execute}(\hyperlink{classPlayer}{Player} player) \textcolor{keywordflow}{throws} 
+      \hyperlink{classUnauthorizedException}{UnauthorizedException} \{
+00021         \textcolor{keywordflow}{try} \{
+00022             super.goRoomCheck(player.getPreviousRoom(), player, \textcolor{keyword}{true});
+00023         \} \textcolor{keywordflow}{catch}(\hyperlink{classIllegalArgumentException}{IllegalArgumentException} e)  \{
+00024             \textcolor{comment}{// Tried to teleport to null}
+00025             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classUnauthorizedException}{UnauthorizedException}(\textcolor{stringliteral}{"Awww, that's sweet. The little player
+       want to go home.\(\backslash\)n"}
+00026                     + \textcolor{stringliteral}{"But we're just getting started!"});
+00027         \}
+00028         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00029     \}
+00030 
+00031 \}
+\end{DoxyCode}

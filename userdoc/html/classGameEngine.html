@@ -43,6 +43,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -76,7 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -97,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Collaboration diagram for GameEngine:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classGameEngine__coll__graph.svg" width="158" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGameEngine__coll__graph.svg" width="171" height="259"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -111,10 +112,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad7133885f313fa99bca3bb7cb8272f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class handling the gameplay for the game. It takes care of room, parser, and room creations and command processing.</p>
+<div class="textblock"><p>Class handling the gameplay for the game. It takes care of rooms, parser, and room creations and command processing. </p>
 <dl class="section author"><dt>Author</dt><dd>Rémi NICOLE </dd></dl>
 
-<p>Definition at line <a class="el" href="GameEngine_8java_source.html#l00011">11</a> of file <a class="el" href="GameEngine_8java_source.html">GameEngine.java</a>.</p>
+<p>Definition at line <a class="el" href="GameEngine_8java_source.html#l00013">13</a> of file <a class="el" href="GameEngine_8java_source.html">GameEngine.java</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a9e8a92f5021a34293060f9aaff4005de"></a>
 <div class="memitem">
@@ -130,14 +131,15 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p><a class="el" href="classGameEngine.html">GameEngine</a> class constructor. </p>
 
-<p>Definition at line <a class="el" href="GameEngine_8java_source.html#l00044">44</a> of file <a class="el" href="GameEngine_8java_source.html">GameEngine.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                        {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        parser = <span class="keyword">new</span> <a class="code" href="classParser.html">Parser</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        createRooms();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        previousRooms = <span class="keyword">new</span> Stack&lt;Room&gt;();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        helpCount = 0;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
-<div class="ttc" id="classParser_html"><div class="ttname"><a href="classParser.html">Parser</a></div><div class="ttdef"><b>Definition:</b> <a href="Parser_8java_source.html#l00009">Parser.java:9</a></div></div>
+<p>Definition at line <a class="el" href="GameEngine_8java_source.html#l00047">47</a> of file <a class="el" href="GameEngine_8java_source.html">GameEngine.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        gameRooms = <span class="keyword">new</span> ArrayList&lt;Room&gt;();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        player = <span class="keyword">new</span> <a class="code" href="classPlayer.html">Player</a>((javax.swing.JOptionPane.showInputDialog(<span class="stringliteral">&quot;What is your name&quot;</span>).toLowerCase().equals(<span class="stringliteral">&quot;retard&quot;</span>))? <span class="stringliteral">&quot;moron&quot;</span> : <span class="stringliteral">&quot;retard&quot;</span>, createRooms());</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        javax.swing.JOptionPane.showMessageDialog(null, <span class="stringliteral">&quot;Whatever, I&#39;ll call you &quot;</span> + player.getName() + <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        helpCount = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        commandCountDown = 42;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="ttc" id="classPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdef"><b>Definition:</b> <a href="Player_8java_source.html#l00010">Player.java:10</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -163,42 +165,62 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="GameEngine_8java_source.html#l00143">143</a> of file <a class="el" href="GameEngine_8java_source.html">GameEngine.java</a>.</p>
+<p>Definition at line <a class="el" href="GameEngine_8java_source.html#l00167">167</a> of file <a class="el" href="GameEngine_8java_source.html">GameEngine.java</a>.</p>
 
-<p>References <a class="el" href="UserInterface_8java_source.html#l00060">UserInterface.println()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                                                   {</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        gui.println(commandLine);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        Command command = parser.getCommand(commandLine);</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">if</span>(command.isUnknown()) {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            gui.println(<span class="stringliteral">&quot;I don&#39;t know what you mean...&quot;</span>);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        }</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        String commandWord = command.getCommandWord();</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">if</span> (commandWord.equals(<span class="stringliteral">&quot;help&quot;</span>))</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            printHelp();</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (commandWord.equals(<span class="stringliteral">&quot;credits&quot;</span>))</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            printCredits();</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (commandWord.equals(<span class="stringliteral">&quot;go&quot;</span>))</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            goRoom(command);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (commandWord.equals(<span class="stringliteral">&quot;back&quot;</span>))</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            goBack();</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (commandWord.equals(<span class="stringliteral">&quot;look&quot;</span>))</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            lookAround(command);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (commandWord.equals(<span class="stringliteral">&quot;quit&quot;</span>)) {</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordflow">if</span>(command.hasParameter())</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                gui.<a class="code" href="classUserInterface.html#a79f606b4b1f5d1523e50eea00039ed94">println</a>(<span class="stringliteral">&quot;Quit what?&quot;</span>);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                endGame();</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        }</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    }</div>
-<div class="ttc" id="classUserInterface_html_a79f606b4b1f5d1523e50eea00039ed94"><div class="ttname"><a href="classUserInterface.html#a79f606b4b1f5d1523e50eea00039ed94">UserInterface.println</a></div><div class="ttdeci">void println(String text)</div><div class="ttdef"><b>Definition:</b> <a href="UserInterface_8java_source.html#l00060">UserInterface.java:60</a></div></div>
+<p>References <a class="el" href="Player_8java_source.html#l00089">Player.getCurrentRoom()</a>, and <a class="el" href="UserInterface_8java_source.html#l00073">UserInterface.println()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                                                   {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        gui.println(<span class="stringliteral">&quot;\n&quot;</span> + commandLine + <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        Command command = Parser.getCommand(commandLine);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">if</span>(command == null) {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            gui.println(<span class="stringliteral">&quot;I don&#39;t know what you mean...&quot;</span>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        gui.setCommandsLeft(--commandCountDown);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordtype">boolean</span> quit = command.execute(player);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">if</span>(command.hasMessage())</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                gui.<a class="code" href="classUserInterface.html#a79f606b4b1f5d1523e50eea00039ed94">println</a>(command.getMessage());</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="comment">// If we can cast the command into a GoCommand</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="comment">// Or if it is the test command</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="classGoCommand.html">GoCommand</a>.class.isInstance(command) || command.getClass().equals(<a class="code" href="classTestCommand.html">TestCommand</a>.class)) {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                <span class="comment">// The game image is reloaded</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <span class="keywordflow">if</span>(player.<a class="code" href="classPlayer.html#a3a3107df50fc4e35e8c0f46c3f776ce6">getCurrentRoom</a>().getImageName() != null) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                    gui.showImage(player.getCurrentRoom().getImageName());</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordflow">if</span>(quit) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                endGame(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        } <span class="keywordflow">catch</span>(<a class="code" href="classNoArgumentException.html">NoArgumentException</a> e) {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            gui.println(e.getMessage());</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        } <span class="keywordflow">catch</span>(<a class="code" href="classIllegalArgumentException.html">IllegalArgumentException</a> e) {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            gui.println(e.getMessage());</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        } <span class="keywordflow">catch</span>(<a class="code" href="classUnauthorizedException.html">UnauthorizedException</a> e) {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            gui.println(e.getMessage());</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordflow">if</span>(commandCountDown == 0) {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            endGame(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
+<div class="ttc" id="classTestCommand_html"><div class="ttname"><a href="classTestCommand.html">TestCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="TestCommand_8java_source.html#l00009">TestCommand.java:9</a></div></div>
+<div class="ttc" id="classNoArgumentException_html"><div class="ttname"><a href="classNoArgumentException.html">NoArgumentException</a></div><div class="ttdef"><b>Definition:</b> <a href="NoArgumentException_8java_source.html#l00005">NoArgumentException.java:5</a></div></div>
+<div class="ttc" id="classGoCommand_html"><div class="ttname"><a href="classGoCommand.html">GoCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="GoCommand_8java_source.html#l00005">GoCommand.java:5</a></div></div>
+<div class="ttc" id="classUnauthorizedException_html"><div class="ttname"><a href="classUnauthorizedException.html">UnauthorizedException</a></div><div class="ttdef"><b>Definition:</b> <a href="UnauthorizedException_8java_source.html#l00005">UnauthorizedException.java:5</a></div></div>
+<div class="ttc" id="classPlayer_html_a3a3107df50fc4e35e8c0f46c3f776ce6"><div class="ttname"><a href="classPlayer.html#a3a3107df50fc4e35e8c0f46c3f776ce6">Player.getCurrentRoom</a></div><div class="ttdeci">Room getCurrentRoom()</div><div class="ttdef"><b>Definition:</b> <a href="Player_8java_source.html#l00089">Player.java:89</a></div></div>
+<div class="ttc" id="classUserInterface_html_a79f606b4b1f5d1523e50eea00039ed94"><div class="ttname"><a href="classUserInterface.html#a79f606b4b1f5d1523e50eea00039ed94">UserInterface.println</a></div><div class="ttdeci">void println(String text)</div><div class="ttdef"><b>Definition:</b> <a href="UserInterface_8java_source.html#l00073">UserInterface.java:73</a></div></div>
+<div class="ttc" id="classIllegalArgumentException_html"><div class="ttname"><a href="classIllegalArgumentException.html">IllegalArgumentException</a></div><div class="ttdef"><b>Definition:</b> <a href="IllegalArgumentException_8java_source.html#l00005">IllegalArgumentException.java:5</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classGameEngine_ad7133885f313fa99bca3bb7cb8272f64_cgraph.svg" width="408" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGameEngine_ad7133885f313fa99bca3bb7cb8272f64_cgraph.svg" width="427" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
@@ -219,13 +241,19 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <p>Setter for the gui field. </p>
-<dl class="section see"><dt>See Also</dt><dd>GameEngine::gui; </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">userInterface</td><td>The user interface to set </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="GameEngine_8java_source.html#l00055">55</a> of file <a class="el" href="GameEngine_8java_source.html">GameEngine.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                                    {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        gui = userInterface;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        printWelcome();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<p>Definition at line <a class="el" href="GameEngine_8java_source.html#l00059">59</a> of file <a class="el" href="GameEngine_8java_source.html">GameEngine.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                    {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        gui = userInterface;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        gui.setCommandsLeft(commandCountDown);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        printWelcome();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -235,7 +263,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 3 2014 20:23:25 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 5 2014 01:29:56 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

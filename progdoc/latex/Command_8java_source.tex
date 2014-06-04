@@ -3,31 +3,39 @@
 
 \begin{DoxyCode}
 00001 
-00012 \textcolor{keyword}{class }Command \{
-00018     \textcolor{keyword}{private} String command;
-00019 
-00025     \textcolor{keyword}{private} String parameter;
-00026 
-00032     \textcolor{keyword}{public} Command(String firstWord, String parameter) \{
-00033         command = firstWord;
-00034         this.parameter = parameter;
+\hypertarget{Command_8java_source_l00005}{}\hyperlink{classCommand}{00005} \textcolor{keyword}{abstract} \textcolor{keyword}{class }\hyperlink{classCommand}{Command} \{
+00006 
+\hypertarget{Command_8java_source_l00012}{}\hyperlink{classCommand_a02ad27e4576737c16cd78f708188bb54}{00012}     \textcolor{keyword}{private} String \hyperlink{classCommand_a02ad27e4576737c16cd78f708188bb54}{parameter};
+00013 
+\hypertarget{Command_8java_source_l00019}{}\hyperlink{classCommand_a623fd9ca1e1b03cc35a667bc3e67bc78}{00019}     \textcolor{keyword}{private} String \hyperlink{classCommand_a623fd9ca1e1b03cc35a667bc3e67bc78}{message};
+00020 
+\hypertarget{Command_8java_source_l00025}{}\hyperlink{classCommand_a1ced3739d546770ba1389e6ce228255e}{00025}     \textcolor{keyword}{public} String \hyperlink{classCommand_a1ced3739d546770ba1389e6ce228255e}{getParameter}() \{
+00026         \textcolor{keywordflow}{return} \hyperlink{classCommand_a02ad27e4576737c16cd78f708188bb54}{parameter};
+00027     \}
+00028 
+\hypertarget{Command_8java_source_l00033}{}\hyperlink{classCommand_a1301a473bc2a80d40d6ee907c21a1475}{00033}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classCommand_a1301a473bc2a80d40d6ee907c21a1475}{setParameter}(String \hyperlink{classCommand_a02ad27e4576737c16cd78f708188bb54}{parameter}) \{
+00034         this.parameter = \hyperlink{classCommand_a02ad27e4576737c16cd78f708188bb54}{parameter};
 00035     \}
 00036 
-00041     \textcolor{keyword}{public} String getCommandWord() \{
-00042         \textcolor{keywordflow}{return} command;
+\hypertarget{Command_8java_source_l00041}{}\hyperlink{classCommand_a9b042558156d6749566e0fd9d48d3bfe}{00041}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classCommand_a9b042558156d6749566e0fd9d48d3bfe}{hasParameter}() \{
+00042         \textcolor{keywordflow}{return} (\hyperlink{classCommand_a02ad27e4576737c16cd78f708188bb54}{parameter} != null);
 00043     \}
 00044 
-00049     \textcolor{keyword}{public} String getParameter() \{
-00050         \textcolor{keywordflow}{return} parameter;
+\hypertarget{Command_8java_source_l00049}{}\hyperlink{classCommand_a715709d8f0ab65879d79ad1725c96f17}{00049}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \hyperlink{classCommand_a715709d8f0ab65879d79ad1725c96f17}{setMessage}(String \hyperlink{classCommand_a623fd9ca1e1b03cc35a667bc3e67bc78}{message}) \{
+00050         this.message = \hyperlink{classCommand_a623fd9ca1e1b03cc35a667bc3e67bc78}{message};
 00051     \}
 00052 
-00056     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} isUnknown() \{
-00057         \textcolor{keywordflow}{return} (command == null);
-00058     \}
-00059 
-00063     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} hasParameter() \{
-00064         \textcolor{keywordflow}{return} (parameter != null);
-00065     \}
-00066 \}
-00067 
+\hypertarget{Command_8java_source_l00057}{}\hyperlink{classCommand_ac3d4abebefb2aea0ce9757bf9c356882}{00057}     \textcolor{keyword}{public} String \hyperlink{classCommand_ac3d4abebefb2aea0ce9757bf9c356882}{getMessage}() \{
+00058         \textcolor{keywordflow}{return} (\hyperlink{classCommand_a623fd9ca1e1b03cc35a667bc3e67bc78}{message} == null)? \textcolor{stringliteral}{""} : \hyperlink{classCommand_a623fd9ca1e1b03cc35a667bc3e67bc78}{message};
+00059     \}
+00060 
+\hypertarget{Command_8java_source_l00065}{}\hyperlink{classCommand_a3d232d33894a20dc81b7627d84f14183}{00065}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classCommand_a3d232d33894a20dc81b7627d84f14183}{hasMessage}() \{
+00066         \textcolor{keywordflow}{return} (\hyperlink{classCommand_a623fd9ca1e1b03cc35a667bc3e67bc78}{message} == null) ? \textcolor{keyword}{false} : !message.equals(\textcolor{stringliteral}{""});
+00067     \}
+00068 
+00076     \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keywordtype}{boolean} \hyperlink{classCommand_a8e57e3c92529fd3e7e6519fa454422b1}{execute}(\hyperlink{classPlayer}{Player} player) \textcolor{keywordflow}{throws} 
+      \hyperlink{classNoArgumentException}{NoArgumentException},\hyperlink{classIllegalArgumentException}{IllegalArgumentException},
+      \hyperlink{classUnauthorizedException}{UnauthorizedException};
+00077 \}
+00078 
 \end{DoxyCode}

@@ -1,3 +1,3 @@
 <map id="Parser" name="Parser">
-<area shape="rect" id="node2" href="$classCommandWords.html" title="{CommandWords\n|&#45; knownCommands\l|+ CommandWords()\l+ isCommand()\l+ getCommandList()\l}" alt="" coords="4,5,144,112"/>
+<area shape="rect" id="node2" href="$classCommandWords.html" title="Class used to verify the commands given by the user. " alt="" coords="36,147,176,269"/>
 </map>

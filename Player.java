@@ -3,6 +3,10 @@ import java.util.Set;
 import java.util.Iterator;
 import java.util.Stack;
 
+/**
+ * class Player used to handle the user's player.
+ * @author Rémi Nicole
+ */
 public class Player {
 
 	/**
@@ -22,7 +26,7 @@ public class Player {
 	private int backpackWeight;
 
 	/**
-	 * The maximum weight of Items th player can carry.
+	 * The maximum weight of Items the player can carry.
 	 */
 	private int maxWeight = 100;
 
@@ -32,7 +36,7 @@ public class Player {
 	private Room currentRoom;
 
 	/**
-	 * Room where the player was before now.
+	 * Rooms where the player was before now.
 	 */
 	private Stack<Room> previousRooms;
 
@@ -43,7 +47,8 @@ public class Player {
 
 	/**
 	 * Player class constructor.
-	 * @param firstRoom Room where the player start.
+	 * @param name The name of the player
+	 * @param firstRoom Room where the player start
 	 */
 	public Player(String name, Room firstRoom) {
 		this.name = name;
@@ -55,6 +60,7 @@ public class Player {
 
 	/**
 	 * name field getter.
+	 * @return The name of the player
 	 */
 	public String getName() {
 		return name;
@@ -62,7 +68,7 @@ public class Player {
 
 	/**
 	 * maxWeight field getter.
-	 * @return int The maxWeight field
+	 * @return The maximum weight the player can carry
 	 */
 	public int getMaxWeight() {
 		return maxWeight;
@@ -78,6 +84,7 @@ public class Player {
 
 	/**
 	 * currentRoom field getter.
+	 * @return The Room where the player is currently in
 	 */
 	public Room getCurrentRoom() {
 		return currentRoom;
@@ -93,6 +100,7 @@ public class Player {
 
 	/**
 	 * Return the last Room.
+	 * @return The last Room were the Player was
 	 */
 	public Room getPreviousRoom() {
 		return (previousRooms.empty())? null : previousRooms.peek();
@@ -122,35 +130,33 @@ public class Player {
 
 	/**
 	 * Return true if there is no previous rooms.
+	 * @return True if there is no previous rooms
 	 */
 	public boolean noPreviousRooms() {
 		return previousRooms.empty();
 	}
 
+	/**
+	 * beamerRoom field setter.
+	 * @param beamerRoom The beamer Room to be saved
+	 */
 	public void setBeamerRoom(Room beamerRoom) {
 		this.beamerRoom = beamerRoom;
 	}
 
+	/**
+	 * beamerRoom field getter.
+	 * @return The saved Room by the beamer
+	 */
 	public Room getBeamerRoom() {
 		return beamerRoom;
 	}
 
 	/**
-	 * Return the description of the room or a specific object.
-	 * @param command Command used by the user
-	 * @return String The description
+	 * Return the Item in the player's inventory through it's name.
+	 * @param item The name of the Item
+	 * @return The asked Item
 	 */
-	public String lookAround(Command command) {
-		String description = "";
-		if(!command.hasParameter())
-			description +=  currentRoom.getLongDescription() + "\n";
-		else if(currentRoom.hasItem(command.getParameter()))
-			description += "This is " + currentRoom.getItem(command.getParameter()).getDescription() + ".\n";
-		else
-			description += "I'm not sure you want to look at that.\n";
-		return description;
-	}
-
 	public Item getItem(String item) {
 		return backpack.get(item);
 	}
@@ -163,6 +169,12 @@ public class Player {
 		return backpack.containsKey(item);
 	}
 
+	/**
+	 * Check if the player can carry the given Item.
+	 * This methods simply checks the Item with it's weight
+	 * @param item The Item to be checked
+	 * @return True if the Item can be carried
+	 */
 	public boolean canCarry(Item item) {
 		return backpackWeight + item.getWeight() < maxWeight;
 	}

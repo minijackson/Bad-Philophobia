@@ -4,38 +4,35 @@
 \begin{DoxyCode}
 00001 \textcolor{keyword}{import} java.util.StringTokenizer;
 00002 
-\hypertarget{Parser_8java_source_l00009}{}\hyperlink{classParser}{00009} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classParser}{Parser} \{
-00010 
-\hypertarget{Parser_8java_source_l00014}{}\hyperlink{classParser_a6afb99e1595e6bc0705a09ee00dbddd6}{00014}     \textcolor{keyword}{private} \hyperlink{classCommandWords}{CommandWords} \hyperlink{classParser_a6afb99e1595e6bc0705a09ee00dbddd6}{commands};
-00015 
-\hypertarget{Parser_8java_source_l00019}{}\hyperlink{classParser_a5b20dc7a1c7a26ce3cec6cc070839bd4}{00019}     \textcolor{keyword}{public} \hyperlink{classParser_a5b20dc7a1c7a26ce3cec6cc070839bd4}{Parser}() \{
-00020         \hyperlink{classParser_a6afb99e1595e6bc0705a09ee00dbddd6}{commands} = \textcolor{keyword}{new} \hyperlink{classCommandWords}{CommandWords}();
-00021     \}
-00022 
-\hypertarget{Parser_8java_source_l00026}{}\hyperlink{classParser_a5ee0a1ad3df67b8814d34c81e7276371}{00026}     \textcolor{keyword}{public} Command \hyperlink{classParser_a5ee0a1ad3df67b8814d34c81e7276371}{getCommand}(String inputLine) \{
-00027 
-00028         String word1;
-00029         String word2;
-00030 
-00031         StringTokenizer tokenizer = \textcolor{keyword}{new} StringTokenizer(inputLine);
-00032 
-00033         \textcolor{keywordflow}{if}(tokenizer.hasMoreTokens())
-00034             word1 = tokenizer.nextToken();  \textcolor{comment}{// First word}
-00035         \textcolor{keywordflow}{else}
-00036             word1 = null;
-00037         \textcolor{keywordflow}{if}(tokenizer.hasMoreTokens())
-00038             word2 = tokenizer.nextToken();  \textcolor{comment}{// Second word}
-00039         \textcolor{keywordflow}{else}
-00040             word2 = null;
-00041 
-00042         \textcolor{keywordflow}{if}(\hyperlink{classParser_a6afb99e1595e6bc0705a09ee00dbddd6}{commands}.\hyperlink{classCommandWords_a98619d278b3fa23fed18b5834f9d20a8}{isCommand}(word1))
-00043             \textcolor{keywordflow}{return} \textcolor{keyword}{new} Command(word1, word2);
-00044         \textcolor{keywordflow}{else}
-00045             \textcolor{keywordflow}{return} \textcolor{keyword}{new} Command(null, word2);
-00046     \}
-00047 
-\hypertarget{Parser_8java_source_l00052}{}\hyperlink{classParser_ae99d8549c08045804cc52576d7b4b453}{00052}     \textcolor{keyword}{public} String \hyperlink{classParser_ae99d8549c08045804cc52576d7b4b453}{showCommands}() \{
-00053         \textcolor{keywordflow}{return} commands.getCommandList();
-00054     \}
-00055 \}
+\hypertarget{Parser_8java_source_l00008}{}\hyperlink{classParser}{00008} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classParser}{Parser} \{
+00009 
+\hypertarget{Parser_8java_source_l00013}{}\hyperlink{classParser_a6afb99e1595e6bc0705a09ee00dbddd6}{00013}     \textcolor{keyword}{private} \textcolor{keyword}{static} \hyperlink{classCommandWords}{CommandWords} \hyperlink{classParser_a6afb99e1595e6bc0705a09ee00dbddd6}{commands} = \textcolor{keyword}{new} \hyperlink{classCommandWords}{CommandWords}();
+00014 
+\hypertarget{Parser_8java_source_l00020}{}\hyperlink{classParser_a4b9b987a0c1b0f4f742020f1be21edfa}{00020}     \textcolor{keyword}{public} \textcolor{keyword}{static} \hyperlink{classCommand}{Command} \hyperlink{classParser_a4b9b987a0c1b0f4f742020f1be21edfa}{getCommand}(String inputLine) \{
+00021 
+00022         String word1;
+00023         String word2;
+00024 
+00025         StringTokenizer tokenizer = \textcolor{keyword}{new} StringTokenizer(inputLine);
+00026 
+00027         \textcolor{keywordflow}{if}(tokenizer.hasMoreTokens())
+00028             word1 = tokenizer.nextToken();  \textcolor{comment}{// First word}
+00029         \textcolor{keywordflow}{else}
+00030             word1 = null;
+00031         \textcolor{keywordflow}{if}(tokenizer.hasMoreTokens())
+00032             word2 = tokenizer.nextToken();  \textcolor{comment}{// Second word}
+00033         \textcolor{keywordflow}{else}
+00034             word2 = null;
+00035 
+00036         \hyperlink{classCommand}{Command} command = commands.getCommand(word1);
+00037         \textcolor{keywordflow}{if}(command != null) \{
+00038             command.setParameter(word2);
+00039         \}
+00040         \textcolor{keywordflow}{return} command;
+00041     \}
+00042 
+\hypertarget{Parser_8java_source_l00047}{}\hyperlink{classParser_a2510fee1c8d7298e222edaf1f34660dc}{00047}     \textcolor{keyword}{public} \textcolor{keyword}{static} String \hyperlink{classParser_a2510fee1c8d7298e222edaf1f34660dc}{showCommands}() \{
+00048         \textcolor{keywordflow}{return} commands.getCommandList();
+00049     \}
+00050 \}
 \end{DoxyCode}

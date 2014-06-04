@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['parser',['parser',['../classGameEngine.html#a2e0d2b1fa2961a930e58e5e6102dc89b',1,'GameEngine']]],
-  ['previousrooms',['previousRooms',['../classGameEngine.html#a46c905c0610d22223520a8db0e519ec1',1,'GameEngine']]]
+  ['parameter',['parameter',['../classCommand.html#a02ad27e4576737c16cd78f708188bb54',1,'Command']]],
+  ['player',['player',['../classGameEngine.html#a4666c6719428cc43014b30b305eeef5d',1,'GameEngine']]],
+  ['previousrooms',['previousRooms',['../classPlayer.html#af1db286d50de195af75c9c82375fade9',1,'Player']]]
 ];

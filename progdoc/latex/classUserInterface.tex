@@ -3,12 +3,17 @@
 }
 
 
+Class handling the game's user interface.  
+
+
+
+
 Inheritance diagram for User\-Interface\-:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=188pt]{classUserInterface__inherit__graph}
+\includegraphics[width=190pt]{classUserInterface__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -18,48 +23,54 @@ Collaboration diagram for User\-Interface\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classUserInterface__coll__graph}
+\includegraphics[height=550pt]{classUserInterface__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classUserInterface_a3afe416f3ee335fec8bc815d382c3874}{User\-Interface} (\hyperlink{classGameEngine}{Game\-Engine} game\-Engine)
-\item 
+\begin{DoxyCompactList}\small\item\em \hyperlink{classUserInterface}{User\-Interface} class constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classUserInterface_ad12f31e49e7ed0904bc51ad330e55147}{set\-Commands\-Left} (int commands\-Left)
+\begin{DoxyCompactList}\small\item\em Change the text for the commands left J\-Label. \end{DoxyCompactList}\item 
 void \hyperlink{classUserInterface_a7a0de5ce2b0e0d25ba6573e87c63c1de}{print} (String text)
-\item 
+\begin{DoxyCompactList}\small\item\em Print the given text in the text area. \end{DoxyCompactList}\item 
 void \hyperlink{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}{println} (String text)
-\item 
+\begin{DoxyCompactList}\small\item\em Print the given text plus a newline in the text area. \end{DoxyCompactList}\item 
 void \hyperlink{classUserInterface_ab793a0f12878c698ba3e1720a9f86f3b}{show\-Image} (String image\-Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Show the image corresponding to the path of the image. \end{DoxyCompactList}\item 
 void \hyperlink{classUserInterface_ab9e499c6c847d52c8753f08d62f1adfc}{enable} (boolean on)
-\item 
+\begin{DoxyCompactList}\small\item\em Enable or disable the input field. \end{DoxyCompactList}\item 
 void \hyperlink{classUserInterface_a0a1ee40a4dbca4aeee002c3d0537c7d5}{action\-Performed} (Action\-Event e)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Actionlistener for the textfield. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{classUserInterface_a5aa4ca5e24c9fce93ef91e5a6d0abd60}{create\-G\-U\-I} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Create the user interface. \end{DoxyCompactList}\item 
 void \hyperlink{classUserInterface_a8729aa2e61c87f957663577707f449a5}{process\-Command} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Process the command inside the text entry. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classGameEngine}{Game\-Engine} \hyperlink{classUserInterface_a661433c9712933f89b2cf30dfb10ffef}{engine}
-\item 
+\begin{DoxyCompactList}\small\item\em Gameplay handler. \end{DoxyCompactList}\item 
 J\-Frame \hyperlink{classUserInterface_a1bb844238b260f6d4ae1852b6b1e0b97}{my\-Frame}
-\item 
+\begin{DoxyCompactList}\small\item\em J\-Frame containing the graphics. \end{DoxyCompactList}\item 
 J\-Text\-Field \hyperlink{classUserInterface_a940367d996e9e7ad6e1fa1abfe35128b}{entry\-Field}
-\item 
+\begin{DoxyCompactList}\small\item\em Field where the user will put its commands. \end{DoxyCompactList}\item 
 J\-Text\-Area \hyperlink{classUserInterface_a7f6ed10812f99e2cc6ce5f497d8ba2a0}{log}
-\item 
+\begin{DoxyCompactList}\small\item\em Container for the displayed text. \end{DoxyCompactList}\item 
 J\-Label \hyperlink{classUserInterface_a0d115eb19b54f3e002ec6aa0fcfb1db4}{image}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Container for the image of the room. \end{DoxyCompactList}\item 
+J\-Label \hyperlink{classUserInterface_a88813d21f37fc65c1afae2250acd06d0}{commands\-Left\-Label}
+\begin{DoxyCompactList}\small\item\em Container for the String of commands left. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Class handling the game's user interface. \begin{DoxyAuthor}{Author}
+Class handling the game's user interface. 
+
+\begin{DoxyAuthor}{Author}
 Rémi N\-I\-C\-O\-L\-E 
 \end{DoxyAuthor}
 
@@ -76,25 +87,29 @@ Definition at line \hyperlink{UserInterface_8java_source_l00011}{11} of file \hy
 \item[{{\bf Game\-Engine}}]{game\-Engine}
 \end{DoxyParamCaption}
 )}}\label{classUserInterface_a3afe416f3ee335fec8bc815d382c3874}
+
+
 \hyperlink{classUserInterface}{User\-Interface} class constructor. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em game\-Engine} & The gameplay \hyperlink{classGameEngine}{Game\-Engine} object. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{UserInterface_8java_source_l00042}{42} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+Definition at line \hyperlink{UserInterface_8java_source_l00047}{47} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 
-References \hyperlink{UserInterface_8java_source_l00092}{create\-G\-U\-I()}, and \hyperlink{UserInterface_8java_source_l00016}{engine}.
+References \hyperlink{UserInterface_8java_source_l00106}{create\-G\-U\-I()}, and \hyperlink{UserInterface_8java_source_l00016}{engine}.
 
 
 \begin{DoxyCode}
-00042                                                 \{
-00043         \hyperlink{classUserInterface_a661433c9712933f89b2cf30dfb10ffef}{engine} = gameEngine;
-00044         \hyperlink{classUserInterface_a5aa4ca5e24c9fce93ef91e5a6d0abd60}{createGUI}();
-00045     \}
+00047                                                 \{
+00048         \hyperlink{classUserInterface_a661433c9712933f89b2cf30dfb10ffef}{engine} = gameEngine;
+00049         \hyperlink{classUserInterface_a5aa4ca5e24c9fce93ef91e5a6d0abd60}{createGUI}();
+00050     \}
 \end{DoxyCode}
 
 
@@ -118,36 +133,40 @@ Here is the call graph for this function\-:
 \item[{Action\-Event}]{e}
 \end{DoxyParamCaption}
 )}}\label{classUserInterface_a0a1ee40a4dbca4aeee002c3d0537c7d5}
+
+
 Actionlistener for the textfield. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em e} & Event. \\
+{\em e} & Event \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{UserInterface_8java_source_l00161}{161} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+Definition at line \hyperlink{UserInterface_8java_source_l00182}{182} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 
-References \hyperlink{UserInterface_8java_source_l00180}{process\-Command()}.
+References \hyperlink{UserInterface_8java_source_l00201}{process\-Command()}.
 
 
 \begin{DoxyCode}
-00161                                                \{
-00162         \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"↑"})) \{
-00163             engine.processCommand(\textcolor{stringliteral}{"go north"});
-00164         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"↓"})) \{
-00165             engine.processCommand(\textcolor{stringliteral}{"go south"});
-00166         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"←"})) \{
-00167             engine.processCommand(\textcolor{stringliteral}{"go west"});
-00168         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"→"})) \{
-00169             engine.processCommand(\textcolor{stringliteral}{"go east"});
-00170         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"?"})) \{
-00171             engine.processCommand(\textcolor{stringliteral}{"help"});
-00172         \} \textcolor{keywordflow}{else} \{
-00173             \hyperlink{classUserInterface_a8729aa2e61c87f957663577707f449a5}{processCommand}();
-00174         \}
-00175     \}
+00182                                                \{
+00183         \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"↑"})) \{
+00184             engine.processCommand(\textcolor{stringliteral}{"go north"});
+00185         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"↓"})) \{
+00186             engine.processCommand(\textcolor{stringliteral}{"go south"});
+00187         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"←"})) \{
+00188             engine.processCommand(\textcolor{stringliteral}{"go west"});
+00189         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"→"})) \{
+00190             engine.processCommand(\textcolor{stringliteral}{"go east"});
+00191         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"?"})) \{
+00192             engine.processCommand(\textcolor{stringliteral}{"help"});
+00193         \} \textcolor{keywordflow}{else} \{
+00194             \hyperlink{classUserInterface_a8729aa2e61c87f957663577707f449a5}{processCommand}();
+00195         \}
+00196     \}
 \end{DoxyCode}
 
 
@@ -168,84 +187,95 @@ Here is the call graph for this function\-:
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{classUserInterface_a5aa4ca5e24c9fce93ef91e5a6d0abd60}
+
+
 Create the user interface. 
 
-Definition at line \hyperlink{UserInterface_8java_source_l00092}{92} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+
+
+Definition at line \hyperlink{UserInterface_8java_source_l00106}{106} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 
-References \hyperlink{UserInterface_8java_source_l00026}{entry\-Field}, \hyperlink{UserInterface_8java_source_l00036}{image}, \hyperlink{UserInterface_8java_source_l00031}{log}, and \hyperlink{UserInterface_8java_source_l00021}{my\-Frame}.
+References \hyperlink{UserInterface_8java_source_l00041}{commands\-Left\-Label}, \hyperlink{UserInterface_8java_source_l00026}{entry\-Field}, \hyperlink{UserInterface_8java_source_l00036}{image}, \hyperlink{UserInterface_8java_source_l00031}{log}, and \hyperlink{UserInterface_8java_source_l00021}{my\-Frame}.
 
 
 
-Referenced by \hyperlink{UserInterface_8java_source_l00042}{User\-Interface()}.
+Referenced by \hyperlink{UserInterface_8java_source_l00047}{User\-Interface()}.
 
 
 \begin{DoxyCode}
-00092                              \{
-00093         \hyperlink{classUserInterface_a1bb844238b260f6d4ae1852b6b1e0b97}{myFrame} = \textcolor{keyword}{new} JFrame(\textcolor{stringliteral}{"Zork"});
-00094         \hyperlink{classUserInterface_a940367d996e9e7ad6e1fa1abfe35128b}{entryField} = \textcolor{keyword}{new} JTextField(34);
-00095 
-00096         \hyperlink{classUserInterface_a7f6ed10812f99e2cc6ce5f497d8ba2a0}{log} = \textcolor{keyword}{new} JTextArea();
-00097         log.setEditable(\textcolor{keyword}{false});
-00098         JScrollPane listScroller = \textcolor{keyword}{new} JScrollPane(\hyperlink{classUserInterface_a7f6ed10812f99e2cc6ce5f497d8ba2a0}{log});
-00099         listScroller.setPreferredSize(\textcolor{keyword}{new} Dimension(200, 200));
-00100         listScroller.setMinimumSize(\textcolor{keyword}{new} Dimension(100, 100));
-00101 
-00102         JPanel panel = \textcolor{keyword}{new} JPanel();
-00103         JPanel buttonsPanel = \textcolor{keyword}{new} JPanel();
-00104         buttonsPanel.setPreferredSize(\textcolor{keyword}{new} Dimension(200,200));
-00105         \hyperlink{classUserInterface_a0d115eb19b54f3e002ec6aa0fcfb1db4}{image} = \textcolor{keyword}{new} JLabel();
-00106 
-00107         JButton buttonNorth = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"↑"});
-00108         buttonNorth.addActionListener(\textcolor{keyword}{this});
+00106                              \{
+00107         \hyperlink{classUserInterface_a1bb844238b260f6d4ae1852b6b1e0b97}{myFrame} = \textcolor{keyword}{new} JFrame(\textcolor{stringliteral}{"Bad Philophobia"});
+00108         \hyperlink{classUserInterface_a940367d996e9e7ad6e1fa1abfe35128b}{entryField} = \textcolor{keyword}{new} JTextField(34);
 00109 
-00110         JButton buttonSouth = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"↓"});
-00111         buttonSouth.addActionListener(\textcolor{keyword}{this});
-00112 
-00113         JButton buttonEast = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"→"});
-00114         buttonEast.addActionListener(\textcolor{keyword}{this});
+00110         \hyperlink{classUserInterface_a7f6ed10812f99e2cc6ce5f497d8ba2a0}{log} = \textcolor{keyword}{new} JTextArea();
+00111         log.setEditable(\textcolor{keyword}{false});
+00112         JScrollPane listScroller = \textcolor{keyword}{new} JScrollPane(\hyperlink{classUserInterface_a7f6ed10812f99e2cc6ce5f497d8ba2a0}{log});
+00113         listScroller.setPreferredSize(\textcolor{keyword}{new} Dimension(200, 200));
+00114         listScroller.setMinimumSize(\textcolor{keyword}{new} Dimension(100, 100));
 00115 
-00116         JButton buttonWest = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"←"});
-00117         buttonWest.addActionListener(\textcolor{keyword}{this});
-00118 
-00119         JButton buttonHelp = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"?"});
-00120         buttonHelp.addActionListener(\textcolor{keyword}{this});
-00121 
-00122         JButton buttonReturn = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"⏎"});
-00123         buttonReturn.addActionListener(\textcolor{keyword}{this});
-00124 
-00125         buttonsPanel.setLayout(\textcolor{keyword}{new} GridLayout(3,3));
-00126         buttonsPanel.add(\textcolor{keyword}{new} JButton(\textcolor{stringliteral}{""}));
-00127         buttonsPanel.add(buttonNorth);
-00128         buttonsPanel.add(\textcolor{keyword}{new} JButton(\textcolor{stringliteral}{""}));
-00129         buttonsPanel.add(buttonWest);
-00130         buttonsPanel.add(buttonHelp);
-00131         buttonsPanel.add(buttonEast);
-00132         buttonsPanel.add(buttonReturn);
-00133         buttonsPanel.add(buttonSouth);
-00134         buttonsPanel.add(\textcolor{keyword}{new} JButton(\textcolor{stringliteral}{""}));
+00116         JPanel panel = \textcolor{keyword}{new} JPanel();
+00117         JPanel buttonsPanel = \textcolor{keyword}{new} JPanel();
+00118         buttonsPanel.setPreferredSize(\textcolor{keyword}{new} Dimension(200,200));
+00119         \hyperlink{classUserInterface_a0d115eb19b54f3e002ec6aa0fcfb1db4}{image} = \textcolor{keyword}{new} JLabel();
+00120 
+00121         JButton buttonNorth = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"↑"});
+00122         buttonNorth.addActionListener(\textcolor{keyword}{this});
+00123 
+00124         JButton buttonSouth = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"↓"});
+00125         buttonSouth.addActionListener(\textcolor{keyword}{this});
+00126 
+00127         JButton buttonEast = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"→"});
+00128         buttonEast.addActionListener(\textcolor{keyword}{this});
+00129 
+00130         JButton buttonWest = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"←"});
+00131         buttonWest.addActionListener(\textcolor{keyword}{this});
+00132 
+00133         JButton buttonHelp = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"?"});
+00134         buttonHelp.addActionListener(\textcolor{keyword}{this});
 00135 
-00136         panel.setLayout(\textcolor{keyword}{new} BorderLayout());
-00137         panel.add(\hyperlink{classUserInterface_a0d115eb19b54f3e002ec6aa0fcfb1db4}{image}, BorderLayout.NORTH);
-00138         panel.add(listScroller, BorderLayout.CENTER);
-00139         panel.add(\hyperlink{classUserInterface_a940367d996e9e7ad6e1fa1abfe35128b}{entryField}, BorderLayout.SOUTH);
-00140         panel.add(buttonsPanel, BorderLayout.EAST);
-00141 
-00142         myFrame.getContentPane().add(panel, BorderLayout.CENTER);
-00143 
-00144         myFrame.addWindowListener(\textcolor{keyword}{new} WindowAdapter() \{
-00145             \textcolor{keyword}{public} \textcolor{keywordtype}{void} windowClosing(WindowEvent e) \{
-00146                 System.exit(0);
-00147             \}
-00148         \});
+00136         JButton buttonReturn = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"⏎"});
+00137         buttonReturn.addActionListener(\textcolor{keyword}{this});
+00138 
+00139         buttonsPanel.setLayout(\textcolor{keyword}{new} GridLayout(3,3));
+00140         buttonsPanel.add(\textcolor{keyword}{new} JButton(\textcolor{stringliteral}{""}));
+00141         buttonsPanel.add(buttonNorth);
+00142         buttonsPanel.add(\textcolor{keyword}{new} JButton(\textcolor{stringliteral}{""}));
+00143         buttonsPanel.add(buttonWest);
+00144         buttonsPanel.add(buttonHelp);
+00145         buttonsPanel.add(buttonEast);
+00146         buttonsPanel.add(buttonReturn);
+00147         buttonsPanel.add(buttonSouth);
+00148         buttonsPanel.add(\textcolor{keyword}{new} JButton(\textcolor{stringliteral}{""}));
 00149 
-00150         entryField.addActionListener(\textcolor{keyword}{this});
-00151 
-00152         myFrame.pack();
-00153         myFrame.setVisible(\textcolor{keyword}{true});
-00154         entryField.requestFocus();
-00155     \}
+00150         panel.setLayout(\textcolor{keyword}{new} BorderLayout());
+00151         panel.add(\hyperlink{classUserInterface_a0d115eb19b54f3e002ec6aa0fcfb1db4}{image}, BorderLayout.NORTH);
+00152         panel.add(listScroller, BorderLayout.CENTER);
+00153         panel.add(buttonsPanel, BorderLayout.EAST);
+00154 
+00155         JPanel bottomPanel = \textcolor{keyword}{new} JPanel();
+00156         bottomPanel.setLayout(\textcolor{keyword}{new} BorderLayout());
+00157         bottomPanel.add(\hyperlink{classUserInterface_a940367d996e9e7ad6e1fa1abfe35128b}{entryField}, BorderLayout.CENTER);
+00158         \hyperlink{classUserInterface_a88813d21f37fc65c1afae2250acd06d0}{commandsLeftLabel} = \textcolor{keyword}{new} JLabel();
+00159         bottomPanel.add(\hyperlink{classUserInterface_a88813d21f37fc65c1afae2250acd06d0}{commandsLeftLabel}, BorderLayout.EAST);
+00160 
+00161         panel.add(bottomPanel, BorderLayout.SOUTH);
+00162 
+00163         myFrame.getContentPane().add(panel, BorderLayout.CENTER);
+00164 
+00165         myFrame.addWindowListener(\textcolor{keyword}{new} WindowAdapter() \{
+00166             \textcolor{keyword}{public} \textcolor{keywordtype}{void} windowClosing(WindowEvent e) \{
+00167                 System.exit(0);
+00168             \}
+00169         \});
+00170 
+00171         entryField.addActionListener(\textcolor{keyword}{this});
+00172 
+00173         myFrame.pack();
+00174         myFrame.setVisible(\textcolor{keyword}{true});
+00175         entryField.requestFocus();
+00176     \}
 \end{DoxyCode}
 
 
@@ -266,17 +296,26 @@ Here is the caller graph for this function\-:
 \item[{boolean}]{on}
 \end{DoxyParamCaption}
 )}}\label{classUserInterface_ab9e499c6c847d52c8753f08d62f1adfc}
+
+
 Enable or disable the input field. 
 
-Definition at line \hyperlink{UserInterface_8java_source_l00083}{83} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+
+\begin{DoxyParams}{Parameters}
+{\em on} & True to activate, False to deactivate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{UserInterface_8java_source_l00097}{97} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 \begin{DoxyCode}
-00083                                    \{
-00084         entryField.setEditable(on);
-00085         \textcolor{keywordflow}{if}(!on)
-00086             entryField.getCaret().setBlinkRate(0);
-00087     \}
+00097                                    \{
+00098         entryField.setEditable(on);
+00099         \textcolor{keywordflow}{if}(!on)
+00100             entryField.getCaret().setBlinkRate(0);
+00101     \}
 \end{DoxyCode}
 \hypertarget{classUserInterface_a7a0de5ce2b0e0d25ba6573e87c63c1de}{\index{User\-Interface@{User\-Interface}!print@{print}}
 \index{print@{print}!UserInterface@{User\-Interface}}
@@ -285,21 +324,25 @@ Definition at line \hyperlink{UserInterface_8java_source_l00083}{83} of file \hy
 \item[{String}]{text}
 \end{DoxyParamCaption}
 )}}\label{classUserInterface_a7a0de5ce2b0e0d25ba6573e87c63c1de}
+
+
 Print the given text in the text area. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em text} & Text to display. \\
+{\em text} & Text to display \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{UserInterface_8java_source_l00051}{51} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+Definition at line \hyperlink{UserInterface_8java_source_l00064}{64} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 \begin{DoxyCode}
-00051                                    \{
-00052         log.append(text);
-00053         log.setCaretPosition(log.getDocument().getLength());
-00054     \}
+00064                                    \{
+00065         log.append(text);
+00066         log.setCaretPosition(log.getDocument().getLength());
+00067     \}
 \end{DoxyCode}
 \hypertarget{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}{\index{User\-Interface@{User\-Interface}!println@{println}}
 \index{println@{println}!UserInterface@{User\-Interface}}
@@ -308,25 +351,29 @@ Definition at line \hyperlink{UserInterface_8java_source_l00051}{51} of file \hy
 \item[{String}]{text}
 \end{DoxyParamCaption}
 )}}\label{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}
+
+
 Print the given text plus a newline in the text area. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em text} & Text to display. \\
+{\em text} & Text to display \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{UserInterface_8java_source_l00060}{60} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+Definition at line \hyperlink{UserInterface_8java_source_l00073}{73} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 
-Referenced by \hyperlink{GameEngine_8java_source_l00264}{Game\-Engine.\-look\-Around()}, and \hyperlink{GameEngine_8java_source_l00143}{Game\-Engine.\-process\-Command()}.
+Referenced by \hyperlink{GameEngine_8java_source_l00167}{Game\-Engine.\-process\-Command()}.
 
 
 \begin{DoxyCode}
-00060                                      \{
-00061         log.append(text + \textcolor{stringliteral}{"\(\backslash\)n"});
-00062         log.setCaretPosition(log.getDocument().getLength());
-00063     \}
+00073                                      \{
+00074         log.append(text + \textcolor{stringliteral}{"\(\backslash\)n"});
+00075         log.setCaretPosition(log.getDocument().getLength());
+00076     \}
 \end{DoxyCode}
 
 
@@ -347,23 +394,27 @@ Here is the caller graph for this function\-:
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{classUserInterface_a8729aa2e61c87f957663577707f449a5}
+
+
 Process the command inside the text entry. 
 
-Definition at line \hyperlink{UserInterface_8java_source_l00180}{180} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+
+
+Definition at line \hyperlink{UserInterface_8java_source_l00201}{201} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 
-Referenced by \hyperlink{UserInterface_8java_source_l00161}{action\-Performed()}.
+Referenced by \hyperlink{UserInterface_8java_source_l00182}{action\-Performed()}.
 
 
 \begin{DoxyCode}
-00180                                   \{
-00181         \textcolor{keywordtype}{boolean} finished = \textcolor{keyword}{false};
-00182         String input = entryField.getText();
-00183         entryField.setText(\textcolor{stringliteral}{""});
-00184 
-00185         engine.processCommand(input);
-00186     \}
+00201                                   \{
+00202         \textcolor{keywordtype}{boolean} finished = \textcolor{keyword}{false};
+00203         String input = entryField.getText();
+00204         entryField.setText(\textcolor{stringliteral}{""});
+00205 
+00206         engine.processCommand(input);
+00207     \}
 \end{DoxyCode}
 
 
@@ -377,6 +428,32 @@ Here is the caller graph for this function\-:
 \end{figure}
 
 
+\hypertarget{classUserInterface_ad12f31e49e7ed0904bc51ad330e55147}{\index{User\-Interface@{User\-Interface}!set\-Commands\-Left@{set\-Commands\-Left}}
+\index{set\-Commands\-Left@{set\-Commands\-Left}!UserInterface@{User\-Interface}}
+\subsubsection[{set\-Commands\-Left}]{\setlength{\rightskip}{0pt plus 5cm}void User\-Interface.\-set\-Commands\-Left (
+\begin{DoxyParamCaption}
+\item[{int}]{commands\-Left}
+\end{DoxyParamCaption}
+)}}\label{classUserInterface_ad12f31e49e7ed0904bc51ad330e55147}
+
+
+Change the text for the commands left J\-Label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em commands\-Left} & The number of commands left \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{UserInterface_8java_source_l00056}{56} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+
+
+\begin{DoxyCode}
+00056                                                   \{
+00057         commandsLeftLabel.setText(\textcolor{stringliteral}{" Commands left: "} + commandsLeft + \textcolor{stringliteral}{"  "});
+00058     \}
+\end{DoxyCode}
 \hypertarget{classUserInterface_ab793a0f12878c698ba3e1720a9f86f3b}{\index{User\-Interface@{User\-Interface}!show\-Image@{show\-Image}}
 \index{show\-Image@{show\-Image}!UserInterface@{User\-Interface}}
 \subsubsection[{show\-Image}]{\setlength{\rightskip}{0pt plus 5cm}void User\-Interface.\-show\-Image (
@@ -384,101 +461,124 @@ Here is the caller graph for this function\-:
 \item[{String}]{image\-Name}
 \end{DoxyParamCaption}
 )}}\label{classUserInterface_ab793a0f12878c698ba3e1720a9f86f3b}
+
+
 Show the image corresponding to the path of the image. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em image\-Name} & The path of the image. \\
+{\em image\-Name} & The path of the image \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{UserInterface_8java_source_l00069}{69} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
-
-
-
-Referenced by \hyperlink{GameEngine_8java_source_l00237}{Game\-Engine.\-go\-Room()}.
+Definition at line \hyperlink{UserInterface_8java_source_l00082}{82} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 \begin{DoxyCode}
-00069                                             \{
-00070         URL imageURL = this.getClass().getClassLoader().getResource(imageName);
-00071         \textcolor{keywordflow}{if}(imageURL == null)
-00072             System.out.println(\textcolor{stringliteral}{"image not found"});
-00073         \textcolor{keywordflow}{else} \{
-00074             ImageIcon icon = \textcolor{keyword}{new} ImageIcon(imageURL);
-00075             image.setIcon(icon);
-00076             myFrame.pack();
-00077         \}
-00078     \}
+00082                                             \{
+00083         URL imageURL = this.getClass().getClassLoader().getResource(imageName);
+00084         \textcolor{keywordflow}{if}(imageURL == null)
+00085             System.out.println(\textcolor{stringliteral}{"image not found"});
+00086         \textcolor{keywordflow}{else} \{
+00087             ImageIcon icon = \textcolor{keyword}{new} ImageIcon(imageURL);
+00088             image.setIcon(icon);
+00089             myFrame.pack();
+00090         \}
+00091     \}
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classUserInterface_ab793a0f12878c698ba3e1720a9f86f3b_icgraph}
-\end{center}
-\end{figure}
-
-
-
-
 \subsection{Member Data Documentation}
+\hypertarget{classUserInterface_a88813d21f37fc65c1afae2250acd06d0}{\index{User\-Interface@{User\-Interface}!commands\-Left\-Label@{commands\-Left\-Label}}
+\index{commands\-Left\-Label@{commands\-Left\-Label}!UserInterface@{User\-Interface}}
+\subsubsection[{commands\-Left\-Label}]{\setlength{\rightskip}{0pt plus 5cm}J\-Label User\-Interface.\-commands\-Left\-Label\hspace{0.3cm}{\ttfamily [private]}}}\label{classUserInterface_a88813d21f37fc65c1afae2250acd06d0}
+
+
+Container for the String of commands left. 
+
+
+
+Definition at line \hyperlink{UserInterface_8java_source_l00041}{41} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+
+
+
+Referenced by \hyperlink{UserInterface_8java_source_l00106}{create\-G\-U\-I()}.
+
 \hypertarget{classUserInterface_a661433c9712933f89b2cf30dfb10ffef}{\index{User\-Interface@{User\-Interface}!engine@{engine}}
 \index{engine@{engine}!UserInterface@{User\-Interface}}
 \subsubsection[{engine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\-Engine} User\-Interface.\-engine\hspace{0.3cm}{\ttfamily [private]}}}\label{classUserInterface_a661433c9712933f89b2cf30dfb10ffef}
-Gameplay handler 
+
+
+Gameplay handler. 
+
+
 
 Definition at line \hyperlink{UserInterface_8java_source_l00016}{16} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 
-Referenced by \hyperlink{UserInterface_8java_source_l00042}{User\-Interface()}.
+Referenced by \hyperlink{UserInterface_8java_source_l00047}{User\-Interface()}.
 
 \hypertarget{classUserInterface_a940367d996e9e7ad6e1fa1abfe35128b}{\index{User\-Interface@{User\-Interface}!entry\-Field@{entry\-Field}}
 \index{entry\-Field@{entry\-Field}!UserInterface@{User\-Interface}}
 \subsubsection[{entry\-Field}]{\setlength{\rightskip}{0pt plus 5cm}J\-Text\-Field User\-Interface.\-entry\-Field\hspace{0.3cm}{\ttfamily [private]}}}\label{classUserInterface_a940367d996e9e7ad6e1fa1abfe35128b}
+
+
 Field where the user will put its commands. 
+
+
 
 Definition at line \hyperlink{UserInterface_8java_source_l00026}{26} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 
-Referenced by \hyperlink{UserInterface_8java_source_l00092}{create\-G\-U\-I()}.
+Referenced by \hyperlink{UserInterface_8java_source_l00106}{create\-G\-U\-I()}.
 
 \hypertarget{classUserInterface_a0d115eb19b54f3e002ec6aa0fcfb1db4}{\index{User\-Interface@{User\-Interface}!image@{image}}
 \index{image@{image}!UserInterface@{User\-Interface}}
 \subsubsection[{image}]{\setlength{\rightskip}{0pt plus 5cm}J\-Label User\-Interface.\-image\hspace{0.3cm}{\ttfamily [private]}}}\label{classUserInterface_a0d115eb19b54f3e002ec6aa0fcfb1db4}
+
+
 Container for the image of the room. 
+
+
 
 Definition at line \hyperlink{UserInterface_8java_source_l00036}{36} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 
-Referenced by \hyperlink{UserInterface_8java_source_l00092}{create\-G\-U\-I()}.
+Referenced by \hyperlink{UserInterface_8java_source_l00106}{create\-G\-U\-I()}.
 
 \hypertarget{classUserInterface_a7f6ed10812f99e2cc6ce5f497d8ba2a0}{\index{User\-Interface@{User\-Interface}!log@{log}}
 \index{log@{log}!UserInterface@{User\-Interface}}
 \subsubsection[{log}]{\setlength{\rightskip}{0pt plus 5cm}J\-Text\-Area User\-Interface.\-log\hspace{0.3cm}{\ttfamily [private]}}}\label{classUserInterface_a7f6ed10812f99e2cc6ce5f497d8ba2a0}
+
+
 Container for the displayed text. 
+
+
 
 Definition at line \hyperlink{UserInterface_8java_source_l00031}{31} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 
-Referenced by \hyperlink{UserInterface_8java_source_l00092}{create\-G\-U\-I()}.
+Referenced by \hyperlink{UserInterface_8java_source_l00106}{create\-G\-U\-I()}.
 
 \hypertarget{classUserInterface_a1bb844238b260f6d4ae1852b6b1e0b97}{\index{User\-Interface@{User\-Interface}!my\-Frame@{my\-Frame}}
 \index{my\-Frame@{my\-Frame}!UserInterface@{User\-Interface}}
 \subsubsection[{my\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}J\-Frame User\-Interface.\-my\-Frame\hspace{0.3cm}{\ttfamily [private]}}}\label{classUserInterface_a1bb844238b260f6d4ae1852b6b1e0b97}
+
+
 J\-Frame containing the graphics. 
+
+
 
 Definition at line \hyperlink{UserInterface_8java_source_l00021}{21} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 
-Referenced by \hyperlink{UserInterface_8java_source_l00092}{create\-G\-U\-I()}.
+Referenced by \hyperlink{UserInterface_8java_source_l00106}{create\-G\-U\-I()}.
 
 
 

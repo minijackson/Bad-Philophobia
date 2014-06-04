@@ -20,125 +20,138 @@
 00032 
 00036     \textcolor{keyword}{private} JLabel image;
 00037 
-\hypertarget{UserInterface_8java_source_l00042}{}\hyperlink{classUserInterface_a3afe416f3ee335fec8bc815d382c3874}{00042}     \textcolor{keyword}{public} \hyperlink{classUserInterface_a3afe416f3ee335fec8bc815d382c3874}{UserInterface}(\hyperlink{classGameEngine}{GameEngine} gameEngine) \{
-00043         engine = gameEngine;
-00044         createGUI();
-00045     \}
-00046 
-\hypertarget{UserInterface_8java_source_l00051}{}\hyperlink{classUserInterface_a7a0de5ce2b0e0d25ba6573e87c63c1de}{00051}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classUserInterface_a7a0de5ce2b0e0d25ba6573e87c63c1de}{print}(String text) \{
-00052         log.append(text);
-00053         log.setCaretPosition(log.getDocument().getLength());
-00054     \}
-00055 
-\hypertarget{UserInterface_8java_source_l00060}{}\hyperlink{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}{00060}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}{println}(String text) \{
-00061         log.append(text + \textcolor{stringliteral}{"\(\backslash\)n"});
-00062         log.setCaretPosition(log.getDocument().getLength());
-00063     \}
-00064 
-\hypertarget{UserInterface_8java_source_l00069}{}\hyperlink{classUserInterface_ab793a0f12878c698ba3e1720a9f86f3b}{00069}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classUserInterface_ab793a0f12878c698ba3e1720a9f86f3b}{showImage}(String imageName) \{
-00070         URL imageURL = this.getClass().getClassLoader().getResource(imageName);
-00071         \textcolor{keywordflow}{if}(imageURL == null)
-00072             System.out.println(\textcolor{stringliteral}{"image not found"});
-00073         \textcolor{keywordflow}{else} \{
-00074             ImageIcon icon = \textcolor{keyword}{new} ImageIcon(imageURL);
-00075             image.setIcon(icon);
-00076             myFrame.pack();
-00077         \}
-00078     \}
-00079 
-\hypertarget{UserInterface_8java_source_l00083}{}\hyperlink{classUserInterface_ab9e499c6c847d52c8753f08d62f1adfc}{00083}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classUserInterface_ab9e499c6c847d52c8753f08d62f1adfc}{enable}(\textcolor{keywordtype}{boolean} on) \{
-00084         entryField.setEditable(on);
-00085         \textcolor{keywordflow}{if}(!on)
-00086             entryField.getCaret().setBlinkRate(0);
-00087     \}
-00088 
-00092     \textcolor{keyword}{private} \textcolor{keywordtype}{void} createGUI() \{
-00093         myFrame = \textcolor{keyword}{new} JFrame(\textcolor{stringliteral}{"Zork"});
-00094         entryField = \textcolor{keyword}{new} JTextField(34);
-00095 
-00096         log = \textcolor{keyword}{new} JTextArea();
-00097         log.setEditable(\textcolor{keyword}{false});
-00098         JScrollPane listScroller = \textcolor{keyword}{new} JScrollPane(log);
-00099         listScroller.setPreferredSize(\textcolor{keyword}{new} Dimension(200, 200));
-00100         listScroller.setMinimumSize(\textcolor{keyword}{new} Dimension(100, 100));
-00101 
-00102         JPanel panel = \textcolor{keyword}{new} JPanel();
-00103         JPanel buttonsPanel = \textcolor{keyword}{new} JPanel();
-00104         buttonsPanel.setPreferredSize(\textcolor{keyword}{new} Dimension(200,200));
-00105         image = \textcolor{keyword}{new} JLabel();
-00106 
-00107         JButton buttonNorth = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"↑"});
-00108         buttonNorth.addActionListener(\textcolor{keyword}{this});
+00041     \textcolor{keyword}{private} JLabel commandsLeftLabel;
+00042 
+\hypertarget{UserInterface_8java_source_l00047}{}\hyperlink{classUserInterface_a3afe416f3ee335fec8bc815d382c3874}{00047}     \textcolor{keyword}{public} \hyperlink{classUserInterface_a3afe416f3ee335fec8bc815d382c3874}{UserInterface}(\hyperlink{classGameEngine}{GameEngine} gameEngine) \{
+00048         engine = gameEngine;
+00049         createGUI();
+00050     \}
+00051 
+\hypertarget{UserInterface_8java_source_l00056}{}\hyperlink{classUserInterface_ad12f31e49e7ed0904bc51ad330e55147}{00056}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classUserInterface_ad12f31e49e7ed0904bc51ad330e55147}{setCommandsLeft}(\textcolor{keywordtype}{int} commandsLeft) \{
+00057         commandsLeftLabel.setText(\textcolor{stringliteral}{" Commands left: "} + commandsLeft + \textcolor{stringliteral}{"  "});
+00058     \}
+00059 
+\hypertarget{UserInterface_8java_source_l00064}{}\hyperlink{classUserInterface_a7a0de5ce2b0e0d25ba6573e87c63c1de}{00064}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classUserInterface_a7a0de5ce2b0e0d25ba6573e87c63c1de}{print}(String text) \{
+00065         log.append(text);
+00066         log.setCaretPosition(log.getDocument().getLength());
+00067     \}
+00068 
+\hypertarget{UserInterface_8java_source_l00073}{}\hyperlink{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}{00073}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}{println}(String text) \{
+00074         log.append(text + \textcolor{stringliteral}{"\(\backslash\)n"});
+00075         log.setCaretPosition(log.getDocument().getLength());
+00076     \}
+00077 
+\hypertarget{UserInterface_8java_source_l00082}{}\hyperlink{classUserInterface_ab793a0f12878c698ba3e1720a9f86f3b}{00082}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classUserInterface_ab793a0f12878c698ba3e1720a9f86f3b}{showImage}(String imageName) \{
+00083         URL imageURL = this.getClass().getClassLoader().getResource(imageName);
+00084         \textcolor{keywordflow}{if}(imageURL == null)
+00085             System.out.println(\textcolor{stringliteral}{"image not found"});
+00086         \textcolor{keywordflow}{else} \{
+00087             ImageIcon icon = \textcolor{keyword}{new} ImageIcon(imageURL);
+00088             image.setIcon(icon);
+00089             myFrame.pack();
+00090         \}
+00091     \}
+00092 
+\hypertarget{UserInterface_8java_source_l00097}{}\hyperlink{classUserInterface_ab9e499c6c847d52c8753f08d62f1adfc}{00097}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classUserInterface_ab9e499c6c847d52c8753f08d62f1adfc}{enable}(\textcolor{keywordtype}{boolean} on) \{
+00098         entryField.setEditable(on);
+00099         \textcolor{keywordflow}{if}(!on)
+00100             entryField.getCaret().setBlinkRate(0);
+00101     \}
+00102 
+00106     \textcolor{keyword}{private} \textcolor{keywordtype}{void} createGUI() \{
+00107         myFrame = \textcolor{keyword}{new} JFrame(\textcolor{stringliteral}{"Bad Philophobia"});
+00108         entryField = \textcolor{keyword}{new} JTextField(34);
 00109 
-00110         JButton buttonSouth = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"↓"});
-00111         buttonSouth.addActionListener(\textcolor{keyword}{this});
-00112 
-00113         JButton buttonEast = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"→"});
-00114         buttonEast.addActionListener(\textcolor{keyword}{this});
+00110         log = \textcolor{keyword}{new} JTextArea();
+00111         log.setEditable(\textcolor{keyword}{false});
+00112         JScrollPane listScroller = \textcolor{keyword}{new} JScrollPane(log);
+00113         listScroller.setPreferredSize(\textcolor{keyword}{new} Dimension(200, 200));
+00114         listScroller.setMinimumSize(\textcolor{keyword}{new} Dimension(100, 100));
 00115 
-00116         JButton buttonWest = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"←"});
-00117         buttonWest.addActionListener(\textcolor{keyword}{this});
-00118 
-00119         JButton buttonHelp = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"?"});
-00120         buttonHelp.addActionListener(\textcolor{keyword}{this});
-00121 
-00122         JButton buttonReturn = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"⏎"});
-00123         buttonReturn.addActionListener(\textcolor{keyword}{this});
-00124 
-00125         buttonsPanel.setLayout(\textcolor{keyword}{new} GridLayout(3,3));
-00126         buttonsPanel.add(\textcolor{keyword}{new} JButton(\textcolor{stringliteral}{""}));
-00127         buttonsPanel.add(buttonNorth);
-00128         buttonsPanel.add(\textcolor{keyword}{new} JButton(\textcolor{stringliteral}{""}));
-00129         buttonsPanel.add(buttonWest);
-00130         buttonsPanel.add(buttonHelp);
-00131         buttonsPanel.add(buttonEast);
-00132         buttonsPanel.add(buttonReturn);
-00133         buttonsPanel.add(buttonSouth);
-00134         buttonsPanel.add(\textcolor{keyword}{new} JButton(\textcolor{stringliteral}{""}));
+00116         JPanel panel = \textcolor{keyword}{new} JPanel();
+00117         JPanel buttonsPanel = \textcolor{keyword}{new} JPanel();
+00118         buttonsPanel.setPreferredSize(\textcolor{keyword}{new} Dimension(200,200));
+00119         image = \textcolor{keyword}{new} JLabel();
+00120 
+00121         JButton buttonNorth = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"↑"});
+00122         buttonNorth.addActionListener(\textcolor{keyword}{this});
+00123 
+00124         JButton buttonSouth = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"↓"});
+00125         buttonSouth.addActionListener(\textcolor{keyword}{this});
+00126 
+00127         JButton buttonEast = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"→"});
+00128         buttonEast.addActionListener(\textcolor{keyword}{this});
+00129 
+00130         JButton buttonWest = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"←"});
+00131         buttonWest.addActionListener(\textcolor{keyword}{this});
+00132 
+00133         JButton buttonHelp = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"?"});
+00134         buttonHelp.addActionListener(\textcolor{keyword}{this});
 00135 
-00136         panel.setLayout(\textcolor{keyword}{new} BorderLayout());
-00137         panel.add(image, BorderLayout.NORTH);
-00138         panel.add(listScroller, BorderLayout.CENTER);
-00139         panel.add(entryField, BorderLayout.SOUTH);
-00140         panel.add(buttonsPanel, BorderLayout.EAST);
-00141 
-00142         myFrame.getContentPane().add(panel, BorderLayout.CENTER);
-00143 
-00144         myFrame.addWindowListener(\textcolor{keyword}{new} WindowAdapter() \{
-00145             \textcolor{keyword}{public} \textcolor{keywordtype}{void} windowClosing(WindowEvent e) \{
-00146                 System.exit(0);
-00147             \}
-00148         \});
+00136         JButton buttonReturn = \textcolor{keyword}{new} JButton(\textcolor{stringliteral}{"⏎"});
+00137         buttonReturn.addActionListener(\textcolor{keyword}{this});
+00138 
+00139         buttonsPanel.setLayout(\textcolor{keyword}{new} GridLayout(3,3));
+00140         buttonsPanel.add(\textcolor{keyword}{new} JButton(\textcolor{stringliteral}{""}));
+00141         buttonsPanel.add(buttonNorth);
+00142         buttonsPanel.add(\textcolor{keyword}{new} JButton(\textcolor{stringliteral}{""}));
+00143         buttonsPanel.add(buttonWest);
+00144         buttonsPanel.add(buttonHelp);
+00145         buttonsPanel.add(buttonEast);
+00146         buttonsPanel.add(buttonReturn);
+00147         buttonsPanel.add(buttonSouth);
+00148         buttonsPanel.add(\textcolor{keyword}{new} JButton(\textcolor{stringliteral}{""}));
 00149 
-00150         entryField.addActionListener(\textcolor{keyword}{this});
-00151 
-00152         myFrame.pack();
-00153         myFrame.setVisible(\textcolor{keyword}{true});
-00154         entryField.requestFocus();
-00155     \}
-00156 
-\hypertarget{UserInterface_8java_source_l00161}{}\hyperlink{classUserInterface_a0a1ee40a4dbca4aeee002c3d0537c7d5}{00161}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classUserInterface_a0a1ee40a4dbca4aeee002c3d0537c7d5}{actionPerformed}(ActionEvent e) \{
-00162         \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"↑"})) \{
-00163             engine.processCommand(\textcolor{stringliteral}{"go north"});
-00164         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"↓"})) \{
-00165             engine.processCommand(\textcolor{stringliteral}{"go south"});
-00166         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"←"})) \{
-00167             engine.processCommand(\textcolor{stringliteral}{"go west"});
-00168         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"→"})) \{
-00169             engine.processCommand(\textcolor{stringliteral}{"go east"});
-00170         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"?"})) \{
-00171             engine.processCommand(\textcolor{stringliteral}{"help"});
-00172         \} \textcolor{keywordflow}{else} \{
-00173             processCommand();
-00174         \}
-00175     \}
-00176 
-00180     \textcolor{keyword}{private} \textcolor{keywordtype}{void} processCommand() \{
-00181         \textcolor{keywordtype}{boolean} finished = \textcolor{keyword}{false};
-00182         String input = entryField.getText();
-00183         entryField.setText(\textcolor{stringliteral}{""});
-00184 
-00185         engine.processCommand(input);
-00186     \}
-00187 \}
+00150         panel.setLayout(\textcolor{keyword}{new} BorderLayout());
+00151         panel.add(image, BorderLayout.NORTH);
+00152         panel.add(listScroller, BorderLayout.CENTER);
+00153         panel.add(buttonsPanel, BorderLayout.EAST);
+00154 
+00155         JPanel bottomPanel = \textcolor{keyword}{new} JPanel();
+00156         bottomPanel.setLayout(\textcolor{keyword}{new} BorderLayout());
+00157         bottomPanel.add(entryField, BorderLayout.CENTER);
+00158         commandsLeftLabel = \textcolor{keyword}{new} JLabel();
+00159         bottomPanel.add(commandsLeftLabel, BorderLayout.EAST);
+00160 
+00161         panel.add(bottomPanel, BorderLayout.SOUTH);
+00162 
+00163         myFrame.getContentPane().add(panel, BorderLayout.CENTER);
+00164 
+00165         myFrame.addWindowListener(\textcolor{keyword}{new} WindowAdapter() \{
+00166             \textcolor{keyword}{public} \textcolor{keywordtype}{void} windowClosing(WindowEvent e) \{
+00167                 System.exit(0);
+00168             \}
+00169         \});
+00170 
+00171         entryField.addActionListener(\textcolor{keyword}{this});
+00172 
+00173         myFrame.pack();
+00174         myFrame.setVisible(\textcolor{keyword}{true});
+00175         entryField.requestFocus();
+00176     \}
+00177 
+\hypertarget{UserInterface_8java_source_l00182}{}\hyperlink{classUserInterface_a0a1ee40a4dbca4aeee002c3d0537c7d5}{00182}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classUserInterface_a0a1ee40a4dbca4aeee002c3d0537c7d5}{actionPerformed}(ActionEvent e) \{
+00183         \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"↑"})) \{
+00184             engine.processCommand(\textcolor{stringliteral}{"go north"});
+00185         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"↓"})) \{
+00186             engine.processCommand(\textcolor{stringliteral}{"go south"});
+00187         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"←"})) \{
+00188             engine.processCommand(\textcolor{stringliteral}{"go west"});
+00189         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"→"})) \{
+00190             engine.processCommand(\textcolor{stringliteral}{"go east"});
+00191         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"?"})) \{
+00192             engine.processCommand(\textcolor{stringliteral}{"help"});
+00193         \} \textcolor{keywordflow}{else} \{
+00194             processCommand();
+00195         \}
+00196     \}
+00197 
+00201     \textcolor{keyword}{private} \textcolor{keywordtype}{void} processCommand() \{
+00202         \textcolor{keywordtype}{boolean} finished = \textcolor{keyword}{false};
+00203         String input = entryField.getText();
+00204         entryField.setText(\textcolor{stringliteral}{""});
+00205 
+00206         engine.processCommand(input);
+00207     \}
+00208 \}
 \end{DoxyCode}

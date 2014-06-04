@@ -1,0 +1,54 @@
+\hypertarget{BeamerCommand_8java_source}{\section{Beamer\-Command.\-java}
+}
+
+\begin{DoxyCode}
+00001 
+\hypertarget{BeamerCommand_8java_source_l00005}{}\hyperlink{classBeamerCommand}{00005} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classBeamerCommand}{BeamerCommand} \textcolor{keyword}{extends} \hyperlink{classGoCommand}{GoCommand} \{
+00006 
+\hypertarget{BeamerCommand_8java_source_l00010}{}\hyperlink{classBeamerCommand_accb1d84a69588f1b42fba96bf1b32de5}{00010}     \textcolor{keyword}{public} \hyperlink{classBeamerCommand_accb1d84a69588f1b42fba96bf1b32de5}{BeamerCommand}()\{
+00011 
+00012     \}
+00013 
+\hypertarget{BeamerCommand_8java_source_l00025}{}\hyperlink{classBeamerCommand_ab28a7d743569841e463b2c0c65cf6eb1}{00025}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classBeamerCommand_ab28a7d743569841e463b2c0c65cf6eb1}{execute}(\hyperlink{classPlayer}{Player} player) \textcolor{keywordflow}{throws} 
+      \hyperlink{classNoArgumentException}{NoArgumentException},\hyperlink{classIllegalArgumentException}{IllegalArgumentException},
+      \hyperlink{classUnauthorizedException}{UnauthorizedException} \{
+00026         \textcolor{keywordflow}{if}(hasParameter()) \{
+00027             \textcolor{keywordflow}{if}(getParameter().equals(\textcolor{stringliteral}{"charge"})) \{
+00028                 \hyperlink{classBeamerCommand_a130a572b2ec0532c92ea5033a098b1ac}{charge}(player);
+00029                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00030             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(getParameter().equals(\textcolor{stringliteral}{"teleport"})) \{
+00031                 teleport(player);
+00032                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00033             \} \textcolor{keywordflow}{else} \{
+00034                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classIllegalArgumentException}{IllegalArgumentException}(\textcolor{stringliteral}{"In order to do that, I may need
+       to upgrade. But I don't want to."});
+00035             \}
+00036         \} \textcolor{keywordflow}{else} 
+00037             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classNoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"You can either charge or teleport with the
+       beamer.\(\backslash\)nBut that may be too much complicated for you, isn't it?"});
+00038     \}
+00039 
+00045     \textcolor{keyword}{private} \textcolor{keywordtype}{void} teleport(\hyperlink{classPlayer}{Player} player) \textcolor{keywordflow}{throws} \hyperlink{classUnauthorizedException}{UnauthorizedException} \{
+00046         \textcolor{keywordflow}{try} \{
+00047             \textcolor{keywordflow}{if}(player.getBeamerRoom() == player.getCurrentRoom())
+00048                 setMessage(\textcolor{stringliteral}{"Teleporting you right were you are."});
+00049             \textcolor{keywordflow}{else}
+00050                 setMessage(\textcolor{stringliteral}{"Teleporting you to useless room..."});
+00051             \hyperlink{classGoCommand_a3149bf695c19b78c39cfc4dadece7846}{goRoomNoCheck}(player.getBeamerRoom(), player, \textcolor{keyword}{false});
+00052         \} \textcolor{keywordflow}{catch}(\hyperlink{classIllegalArgumentException}{IllegalArgumentException} e) \{
+00053             \textcolor{comment}{// Tried to teleport to null}
+00054             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classUnauthorizedException}{UnauthorizedException}(\textcolor{stringliteral}{"I'm sorry but I can't teleport you
+       nowhere."});
+00055         \}
+00056     \}
+00057 
+\hypertarget{BeamerCommand_8java_source_l00062}{}\hyperlink{classBeamerCommand_a130a572b2ec0532c92ea5033a098b1ac}{00062}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classBeamerCommand_a130a572b2ec0532c92ea5033a098b1ac}{charge}(\hyperlink{classPlayer}{Player} player) \{
+00063         \textcolor{keywordflow}{if}(player.\hyperlink{classPlayer_a9114998742351bf793e093cb198993ca}{getBeamerRoom}() == null)
+00064             setMessage(\textcolor{stringliteral}{"Useless room remembered."});
+00065         \textcolor{keywordflow}{else}
+00066             setMessage(\textcolor{stringliteral}{"Useful room overridden by a useless room."});
+00067         player.setBeamerRoom(player.getCurrentRoom());
+00068     \}
+00069 
+00070 \}
+\end{DoxyCode}

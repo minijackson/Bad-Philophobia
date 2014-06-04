@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classGameEngine.html#ac32e0d61566d0cca0a1683b5fcf37a00" target="_top" xlink:title="GameEngine.createRooms">
+<g id="a_node2"><a xlink:href="classGameEngine.html#a9410d92f7d0e6820059b1d07da364b09" target="_top" xlink:title="Create the rooms, link them and return the first Room. ">
 <polygon fill="white" stroke="black" points="168,-0.5 168,-19.5 302,-19.5 302,-0.5 168,-0.5"/>
 <text text-anchor="middle" x="235" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">GameEngine.createRooms</text>
 </a>

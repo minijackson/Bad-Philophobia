@@ -1,0 +1,9 @@
+<map id="Command.getMessage" name="Command.getMessage">
+<area shape="rect" id="node2" href="$classTestCommand.html#a2c5d98451d5cedb9297caae17378de63" title="Test series of Commands stored in a .test file and store the messages in the message field..." alt="" coords="235,5,394,32"/>
+<area shape="rect" id="node3" href="$classHelpCommand.html#ac93c4d17e1bed11f86d0f3c21ba00e34" title="Saves user&#39;s help in the parameter field. " alt="" coords="235,56,394,83"/>
+<area shape="rect" id="node4" href="$classGoCommand.html#a3149bf695c19b78c39cfc4dadece7846" title="Go to the Room without checking. " alt="" coords="211,107,418,133"/>
+<area shape="rect" id="node5" href="$classBeamerCommand.html#a1f19366fb8b873959f72f38d49d5b178" title="Teleport the player to the remembered room. " alt="" coords="475,81,650,108"/>
+<area shape="rect" id="node7" href="$classGoCommand.html#a1fce2ad8ed1faf41fa300064585b3616" title="Check if the wanted Room is connected to the current Room and go to this room. " alt="" coords="467,132,658,159"/>
+<area shape="rect" id="node6" href="$classBeamerCommand.html#ab28a7d743569841e463b2c0c65cf6eb1" title="Teleport to the remembered room or remember a room. " alt="" coords="707,81,885,108"/>
+<area shape="rect" id="node8" href="$classGoCommand.html#a77a61c2a3b89dca45b51e06f3bcb3ba7" title="Make the player go to the Room through it&#39;s direction in the parameter field. " alt="" coords="721,132,871,159"/>
+</map>

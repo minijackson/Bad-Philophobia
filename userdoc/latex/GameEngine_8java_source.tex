@@ -3,237 +3,185 @@
 
 \begin{DoxyCode}
 00001 \textcolor{keyword}{import} java.util.Scanner;
-00002 \textcolor{keyword}{import} java.util.Stack;
-00003 
-\hypertarget{GameEngine_8java_source_l00011}{}\hyperlink{classGameEngine}{00011} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classGameEngine}{GameEngine}
-00012 \{
-00016     \textcolor{keyword}{private} \hyperlink{classParser}{Parser} parser;
-00017 
-00021     \textcolor{keyword}{private} \hyperlink{classRoom}{Room} currentRoom;
-00022 
-00026     \textcolor{keyword}{private} Stack<Room> previousRooms;
-00027 
-00031     \textcolor{keyword}{private} \hyperlink{classUserInterface}{UserInterface} gui;
-00032 
-00039     \textcolor{keyword}{private} \textcolor{keywordtype}{int} helpCount;
-00040 
-\hypertarget{GameEngine_8java_source_l00044}{}\hyperlink{classGameEngine_a9e8a92f5021a34293060f9aaff4005de}{00044}     \textcolor{keyword}{public} \hyperlink{classGameEngine_a9e8a92f5021a34293060f9aaff4005de}{GameEngine}() \{
-00045         parser = \textcolor{keyword}{new} \hyperlink{classParser}{Parser}();
-00046         createRooms();
-00047         previousRooms = \textcolor{keyword}{new} Stack<Room>();
-00048         helpCount = 0;
-00049     \}
-00050 
-\hypertarget{GameEngine_8java_source_l00055}{}\hyperlink{classGameEngine_aec901a5b590b3cd204f196165da5dfb6}{00055}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_aec901a5b590b3cd204f196165da5dfb6}{setGUI}(\hyperlink{classUserInterface}{UserInterface} userInterface) \{
-00056         gui = userInterface;
-00057         printWelcome();
-00058     \}
-00059 
-00063     \textcolor{keyword}{private} \textcolor{keywordtype}{void} printWelcome() \{
-00064         gui.println(\textcolor{stringliteral}{"Greetings human."});
-00065         gui.println(\textcolor{stringliteral}{"I see the assassins have failed. Too bad..."});
-00066         gui.println(\textcolor{stringliteral}{"You know what they say: if you want something done, do it yourself."});
-00067         gui.println(\textcolor{stringliteral}{"At least I can see that you don't remember anything. At last something that I can take
+00002 \textcolor{keyword}{import} java.util.ArrayList;
+00003 \textcolor{keyword}{import} java.util.Random;
+00004 \textcolor{keyword}{import} java.io.File;
+00005 \textcolor{keyword}{import} java.io.FileNotFoundException;
+00006 
+\hypertarget{GameEngine_8java_source_l00013}{}\hyperlink{classGameEngine}{00013} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classGameEngine}{GameEngine}
+00014 \{
+00018     \textcolor{keyword}{private} \hyperlink{classPlayer}{Player} player;
+00019 
+00023     ArrayList<Room> gameRooms;
+00024 
+00028     \textcolor{keyword}{private} \hyperlink{classUserInterface}{UserInterface} gui;
+00029 
+00036     \textcolor{keyword}{private} \textcolor{keywordtype}{int} helpCount;
+00037 
+00042     \textcolor{keyword}{private} \textcolor{keywordtype}{int} commandCountDown;
+00043 
+\hypertarget{GameEngine_8java_source_l00047}{}\hyperlink{classGameEngine_a9e8a92f5021a34293060f9aaff4005de}{00047}     \textcolor{keyword}{public} \hyperlink{classGameEngine_a9e8a92f5021a34293060f9aaff4005de}{GameEngine}() \{
+00048         gameRooms = \textcolor{keyword}{new} ArrayList<Room>();
+00049         player = \textcolor{keyword}{new} \hyperlink{classPlayer}{Player}((javax.swing.JOptionPane.showInputDialog(\textcolor{stringliteral}{"What is your name"}).toLowerCase
+      ().equals(\textcolor{stringliteral}{"retard"}))? \textcolor{stringliteral}{"moron"} : \textcolor{stringliteral}{"retard"}, createRooms());
+00050         javax.swing.JOptionPane.showMessageDialog(null, \textcolor{stringliteral}{"Whatever, I'll call you "} + player.getName() + \textcolor{stringliteral}{"."}
+      );
+00051         helpCount = 0;
+00052         commandCountDown = 42;
+00053     \}
+00054 
+\hypertarget{GameEngine_8java_source_l00059}{}\hyperlink{classGameEngine_aec901a5b590b3cd204f196165da5dfb6}{00059}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_aec901a5b590b3cd204f196165da5dfb6}{setGUI}(\hyperlink{classUserInterface}{UserInterface} userInterface) \{
+00060         gui = userInterface;
+00061         gui.setCommandsLeft(commandCountDown);
+00062         printWelcome();
+00063     \}
+00064 
+00068     \textcolor{keyword}{private} \textcolor{keywordtype}{void} printWelcome() \{
+00069         gui.println(\textcolor{stringliteral}{"Greetings human."});
+00070         gui.println(\textcolor{stringliteral}{"I see the assassins have failed. Too bad..."});
+00071         gui.println(\textcolor{stringliteral}{"You know what they say: if you want something done, do it yourself."});
+00072         gui.println(\textcolor{stringliteral}{"At least I can see that you don't remember anything. At last something that I can take
        advantage of."});
-00068         gui.println(\textcolor{stringliteral}{"That was predictable, human minds are weak."});
-00069         gui.println(\textcolor{stringliteral}{"\(\backslash\)nBecause you're stupid, I will describe you everything that will be around us."});
-00070         gui.println(\textcolor{stringliteral}{"Who knows ? Maybe you can turn into something useful. One day. Maybe."});
-00071         gui.println(currentRoom.getLongDescription());
-00072         gui.showImage(currentRoom.getImageName());
-00073     \}
-00074 
-00078     \textcolor{keyword}{private} \textcolor{keywordtype}{void} createRooms() \{
-00079         \textcolor{comment}{// create the rooms}
-00080         \hyperlink{classRoom}{Room} temperateBroadleaf = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in temperate forest"}, \textcolor{stringliteral}{"temperatebroadleaf.jpg"});
-00081         temperateBroadleaf.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"wand"}, 3, \textcolor{stringliteral}{"just an ordinary wand"}));
-00082 
-00083         \hyperlink{classRoom}{Room} taiga = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in a boreal forest"}, \textcolor{stringliteral}{"taiga.jpg"});
-00084         taiga.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"snowball"}, 1, \textcolor{stringliteral}{"some weirdly yellowy snowball"}));
-00085         taiga.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"bird"}, 6, \textcolor{stringliteral}{"a frozen inert black bird"}));
-00086 
-00087         \hyperlink{classRoom}{Room} alpineTundra = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"on an alpine mountain"}, \textcolor{stringliteral}{"alpinetundra.jpg"});
-00088         alpineTundra.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"rock"}, 15, \textcolor{stringliteral}{"a surprisingly solid magnificent rock"}));
-00089         alpineTundra.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"plank"}, 10, \textcolor{stringliteral}{"a plank of wood, maybe from a chalet"}));
-00090         alpineTundra.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"snowball"}, 1, \textcolor{stringliteral}{"a snowball. Yes, there is still snow in an alpine
+00073         gui.println(\textcolor{stringliteral}{"That was predictable, human minds are weak."});
+00074         gui.println(\textcolor{stringliteral}{"\(\backslash\)nBecause you're stupid, I will describe you everything that will be around us."});
+00075         gui.println(\textcolor{stringliteral}{"Who knows ? Maybe you can turn into something useful. One day. Maybe."});
+00076         gui.println(\textcolor{stringliteral}{"\(\backslash\)nBeware: Death is coming!\(\backslash\)n"});
+00077         gui.println(player.getCurrentRoom().getLongDescription());
+00078         gui.showImage(player.getCurrentRoom().getImageName());
+00079     \}
+00080 
+00085     \textcolor{keyword}{private} \hyperlink{classRoom}{Room} createRooms() \{
+00086         \textcolor{comment}{// create the rooms}
+00087         \hyperlink{classRoom}{Room} temperateBroadleaf = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in temperate forest"}, \textcolor{stringliteral}{"temperatebroadleaf.jpg"});
+00088         temperateBroadleaf.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"wand"}, 3, \textcolor{stringliteral}{"just an ordinary wand"}));
+00089 
+00090         \hyperlink{classRoom}{Room} taiga = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in a boreal forest"}, \textcolor{stringliteral}{"taiga.jpg"});
+00091         taiga.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"snowball"}, 1, \textcolor{stringliteral}{"some weirdly yellowy snowball"}));
+00092         taiga.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"bird"}, 6, \textcolor{stringliteral}{"a frozen inert black bird"}));
+00093 
+00094         \hyperlink{classRoom}{Room} alpineTundra = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"on an alpine mountain"}, \textcolor{stringliteral}{"alpinetundra.jpg"});
+00095         alpineTundra.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"rock"}, 15, \textcolor{stringliteral}{"a surprisingly solid magnificent rock"}));
+00096         alpineTundra.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"plank"}, 10, \textcolor{stringliteral}{"a plank of wood, maybe from a chalet"}));
+00097         alpineTundra.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"snowball"}, 1, \textcolor{stringliteral}{"a snowball. Yes, there is still snow in an alpine
        biome."}));
-00091 
-00092         \hyperlink{classRoom}{Room} steppe = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"on a vast grass plain"}, \textcolor{stringliteral}{"steppe.jpg"});
-00093         steppe.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"grass"}, 1, \textcolor{stringliteral}{"a tuft of yellowish grass. Looking at the grass made you
+00098 
+00099         \hyperlink{classRoom}{Room} steppe = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"on a vast grass plain"}, \textcolor{stringliteral}{"steppe.jpg"});
+00100         steppe.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"grass"}, 1, \textcolor{stringliteral}{"a tuft of yellowish grass. Looking at the grass made you
        look like stupid"}));
-00094 
-00095         \hyperlink{classRoom}{Room} cave = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"inside a dark cave"}, \textcolor{stringliteral}{"cave.jpg"});
-00096 
-00097         \hyperlink{classRoom}{Room} polarDesert = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in a cold polar desert"}, \textcolor{stringliteral}{"polardesert.jpg"});
-00098         polarDesert.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"ice"}, 5, \textcolor{stringliteral}{"a little block of ice. But you don't have any drink"}));
-00099 
-00100         \hyperlink{classRoom}{Room} xericShrublands = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in a sand desert"}, \textcolor{stringliteral}{"xericshrublands.jpg"});
-00101         xericShrublands.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"shrub"}, 10, \textcolor{stringliteral}{"a spicky shrub. Useful if you want to make a
+00101 
+00102         \hyperlink{classRoom}{Room} cave = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"inside a dark cave"}, \textcolor{stringliteral}{"cave.jpg"});
+00103         cave.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"magiccookie"}, 3, \textcolor{stringliteral}{"a pretend magic cookie with mould on it, probably left
+       there for many years. The use-by date has faded out. Why not eat it?"}));
+00104 
+00105         \hyperlink{classRoom}{Room} polarDesert = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in a cold polar desert"}, \textcolor{stringliteral}{"polardesert.jpg"});
+00106         polarDesert.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"ice"}, 5, \textcolor{stringliteral}{"a little block of ice. But you don't have any drink"}));
+00107 
+00108         \hyperlink{classRoom}{Room} xericShrublands = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in a sand desert"}, \textcolor{stringliteral}{"xericshrublands.jpg"});
+00109         xericShrublands.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"shrub"}, 10, \textcolor{stringliteral}{"a spicky shrub. Useful if you want to make a
        shruberry"}));
-00102 
-00103         \hyperlink{classRoom}{Room} savanna = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in a savanna"}, \textcolor{stringliteral}{"savanna.jpg"});
-00104         savanna.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"elephant"}, 1000, \textcolor{stringliteral}{"a huge elephant looking at you, dazed. I bet he's
-       smarter than you"}));
-00105         savanna.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"grass"}, 1, \textcolor{stringliteral}{"a tuft of yellowish grass. You may have other things to
-       do instead of looking at that"}));
-00106 
-00107         \textcolor{comment}{// initialise room exits}
-00108         temperateBroadleaf.setExit(\textcolor{stringliteral}{"east"}, taiga);
-00109         temperateBroadleaf.setExit(\textcolor{stringliteral}{"south"}, steppe);
 00110 
-00111         taiga.setExit(\textcolor{stringliteral}{"west"}, temperateBroadleaf);
-00112         taiga.setExit(\textcolor{stringliteral}{"east"}, alpineTundra);
-00113         taiga.setExit(\textcolor{stringliteral}{"south"}, cave);
+00111         \hyperlink{classRoom}{Room} savanna = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{"in a savanna"}, \textcolor{stringliteral}{"savanna.jpg"});
+00112         savanna.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"elephant"}, 1000, \textcolor{stringliteral}{"a huge elephant looking at you, dazed. I bet he's
+       smarter than you"}));
+00113         savanna.addItem(\textcolor{keyword}{new} \hyperlink{classItem}{Item}(\textcolor{stringliteral}{"grass"}, 1, \textcolor{stringliteral}{"a tuft of yellowish grass. You may have other things to
+       do instead of looking at that"}));
 00114 
-00115         alpineTundra.setExit(\textcolor{stringliteral}{"west"}, taiga);
-00116         alpineTundra.setExit(\textcolor{stringliteral}{"south"}, polarDesert);
-00117 
-00118         steppe.setExit(\textcolor{stringliteral}{"north"}, temperateBroadleaf);
-00119         steppe.setExit(\textcolor{stringliteral}{"east"}, cave);
-00120         steppe.setExit(\textcolor{stringliteral}{"south"}, xericShrublands);
-00121 
-00122         cave.setExit(\textcolor{stringliteral}{"north"}, taiga);
-00123         cave.setExit(\textcolor{stringliteral}{"south"}, savanna);
-00124         cave.setExit(\textcolor{stringliteral}{"east"}, polarDesert);
-00125         cave.setExit(\textcolor{stringliteral}{"west"}, steppe);
-00126 
-00127         polarDesert.setExit(\textcolor{stringliteral}{"north"}, alpineTundra);
-00128         polarDesert.setExit(\textcolor{stringliteral}{"west"}, cave);
+00115         \textcolor{comment}{// initialise room exits}
+00116         temperateBroadleaf.setExit(\textcolor{stringliteral}{"east"}, taiga);
+00117         temperateBroadleaf.setExit(\textcolor{stringliteral}{"south"}, steppe);
+00118 
+00119         taiga.setExit(\textcolor{stringliteral}{"west"}, temperateBroadleaf);
+00120         taiga.setExit(\textcolor{stringliteral}{"east"}, alpineTundra);
+00121         taiga.setExit(\textcolor{stringliteral}{"south"}, cave);
+00122 
+00123         alpineTundra.setExit(\textcolor{stringliteral}{"west"}, taiga);
+00124         alpineTundra.setExit(\textcolor{stringliteral}{"south"}, polarDesert);
+00125 
+00126         steppe.setExit(\textcolor{stringliteral}{"north"}, temperateBroadleaf);
+00127         steppe.setExit(\textcolor{stringliteral}{"east"}, cave);
+00128         steppe.setExit(\textcolor{stringliteral}{"south"}, xericShrublands);
 00129 
-00130         xericShrublands.setExit(\textcolor{stringliteral}{"north"}, steppe);
-00131         xericShrublands.setExit(\textcolor{stringliteral}{"east"}, savanna);
-00132 
-00133         savanna.setExit(\textcolor{stringliteral}{"north"}, cave);
-00134         savanna.setExit(\textcolor{stringliteral}{"west"}, xericShrublands);
-00135 
-00136         currentRoom = temperateBroadleaf;  \textcolor{comment}{// start game outside}
-00137     \}
+00130         cave.setExit(\textcolor{stringliteral}{"north"}, taiga);
+00131         cave.setExit(\textcolor{stringliteral}{"south"}, savanna);
+00132         cave.setExit(\textcolor{stringliteral}{"east"}, polarDesert);
+00133         cave.setExit(\textcolor{stringliteral}{"west"}, steppe);
+00134 
+00135         \textcolor{comment}{// Trap Door}
+00136         \textcolor{comment}{// polarDesert.setExit("north", alpineTundra);}
+00137         polarDesert.setExit(\textcolor{stringliteral}{"west"}, cave);
 00138 
-\hypertarget{GameEngine_8java_source_l00143}{}\hyperlink{classGameEngine_ad7133885f313fa99bca3bb7cb8272f64}{00143}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_ad7133885f313fa99bca3bb7cb8272f64}{processCommand}(String commandLine) \{
-00144         gui.println(commandLine);
-00145         Command command = parser.getCommand(commandLine);
+00139         xericShrublands.setExit(\textcolor{stringliteral}{"north"}, steppe);
+00140         xericShrublands.setExit(\textcolor{stringliteral}{"east"}, savanna);
+00141 
+00142         savanna.setExit(\textcolor{stringliteral}{"north"}, cave);
+00143         savanna.setExit(\textcolor{stringliteral}{"west"}, xericShrublands);
+00144 
+00145         \hyperlink{classRoom}{Room} randomRoom = \textcolor{keyword}{new} \hyperlink{classRoom}{Room}(\textcolor{stringliteral}{""}, \textcolor{stringliteral}{""});
 00146 
-00147         \textcolor{keywordflow}{if}(command.isUnknown()) \{
-00148             gui.println(\textcolor{stringliteral}{"I don't know what you mean..."});
-00149             \textcolor{keywordflow}{return};
-00150         \}
-00151 
-00152         String commandWord = command.getCommandWord();
-00153         \textcolor{keywordflow}{if} (commandWord.equals(\textcolor{stringliteral}{"help"}))
-00154             printHelp();
-00155         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (commandWord.equals(\textcolor{stringliteral}{"credits"}))
-00156             printCredits();
-00157         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (commandWord.equals(\textcolor{stringliteral}{"go"}))
-00158             goRoom(command);
-00159         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (commandWord.equals(\textcolor{stringliteral}{"back"}))
-00160             goBack();
-00161         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (commandWord.equals(\textcolor{stringliteral}{"look"}))
-00162             lookAround(command);
-00163         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (commandWord.equals(\textcolor{stringliteral}{"quit"})) \{
-00164             \textcolor{keywordflow}{if}(command.hasParameter())
-00165                 gui.\hyperlink{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}{println}(\textcolor{stringliteral}{"Quit what?"});
-00166             \textcolor{keywordflow}{else}
-00167                 endGame();
-00168         \}
-00169     \}
+00147         polarDesert.setExit(\textcolor{stringliteral}{"south"}, randomRoom);
+00148         savanna.setExit(\textcolor{stringliteral}{"east"}, randomRoom);
+00149 
+00150         gameRooms.add(randomRoom);
+00151         gameRooms.add(temperateBroadleaf);
+00152         gameRooms.add(taiga);
+00153         gameRooms.add(alpineTundra);
+00154         gameRooms.add(steppe);
+00155         gameRooms.add(cave);
+00156         gameRooms.add(polarDesert);
+00157         gameRooms.add(xericShrublands);
+00158         gameRooms.add(savanna);
+00159 
+00160         \textcolor{keywordflow}{return} temperateBroadleaf;
+00161     \}
+00162 
+\hypertarget{GameEngine_8java_source_l00167}{}\hyperlink{classGameEngine_ad7133885f313fa99bca3bb7cb8272f64}{00167}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classGameEngine_ad7133885f313fa99bca3bb7cb8272f64}{processCommand}(String commandLine) \{
+00168         gui.println(\textcolor{stringliteral}{"\(\backslash\)n"} + commandLine + \textcolor{stringliteral}{"\(\backslash\)n"});
+00169         Command command = Parser.getCommand(commandLine);
 00170 
-00174     \textcolor{keyword}{private} \textcolor{keywordtype}{void} printHelp() \{
-00175         \textcolor{keywordflow}{if}(helpCount == 0) \{
-00176             gui.println(\textcolor{stringliteral}{"Help ? Who needs help ? Only the weak ones."});
-00177             helpCount++;
-00178         \} \textcolor{keywordflow}{else} \{
-00179             \textcolor{keywordflow}{if}(helpCount == 1) \{
-00180                 gui.println(\textcolor{stringliteral}{"All right, all right! If you insist..."});
-00181                 helpCount++;
-00182             \}
-00183             gui.println(\textcolor{stringliteral}{"Your command words are: "} + parser.showCommands());
-00184             gui.println(\textcolor{stringliteral}{"That will be all."});
-00185         \}
-00186     \}
-00187 
-00191     \textcolor{keyword}{private} \textcolor{keywordtype}{void} printCredits() \{
-00192         gui.println(\textcolor{stringliteral}{"Temperate rainforest photo (cc-by-nc-nd) : myheimu
-       (http://www.fotopedia.com/wiki/Temperate\_rainforest#!/items/flickr-7995237868)"});
-00193         gui.println(\textcolor{stringliteral}{"Taiga photo (public domain) : Becker0804
-       (https://commons.wikimedia.org/wiki/File:Talkessel\_von\_Werchojansk.JPG)"});
-00194         gui.println(\textcolor{stringliteral}{"Alpine tundra photo (public domain) : Zewu
-       (https://en.wikipedia.org/wiki/File:Tarfala\_Valley\_-\_Sweden.jpg)"});
-00195         gui.println(\textcolor{stringliteral}{"Steppe photo (cc-by-sa) : Matt Lavin
-       (http://www.fotopedia.com/wiki/Steppe#!/items/flickr-7495949260)"});
-00196         gui.println(\textcolor{stringliteral}{"Lava tube photo : Tim Laman
-       (http://science.nationalgeographic.com/science/photos/caves-gallery/#/lava-tube-cave\_1036\_600x450.jpg)"});
-00197         gui.println(\textcolor{stringliteral}{"Polar desert photo (cc-by) : Stephen Hudson
-       (https://commons.wikimedia.org/wiki/File:AntarcticaDomeCSnow.jpg)"});
-00198         gui.println(\textcolor{stringliteral}{"Thar desert photo (cc-by-sa) : Gégard JANOT
-       (https://commons.wikimedia.org/wiki/File:D%C3%A9sert\_du\_Rajasthan.jpg)"});
-00199         gui.println(\textcolor{stringliteral}{"Savanna photo (public domain) : United States Geological Survey
-       (https://commons.wikimedia.org/wiki/File:Oldoinyolengai.jpg)"});
-00200     \}
-00201 
-00206     \textcolor{keyword}{private} \textcolor{keywordtype}{void} goRoom(Command command) \{
-00207         \textcolor{keywordflow}{if}(!command.hasParameter()) \{
-00208             \textcolor{comment}{// If there is no second word, we don't know where to go...}
-00209             gui.println(\textcolor{stringliteral}{"Go where?"});
-00210             \textcolor{keywordflow}{return};
-00211         \}
-00212 
-00213         String direction = command.getParameter();
-00214 
-00215         \textcolor{comment}{// Try to leave current room.}
-00216         \hyperlink{classRoom}{Room} nextRoom = currentRoom.getExit(direction);
-00217         goRoom(nextRoom);
-00218     \}
-00219 
-00226     \textcolor{keyword}{private} \textcolor{keywordtype}{void} goRoom(\hyperlink{classRoom}{Room} room) \{
-00227         goRoom(room, \textcolor{keyword}{false});
-00228     \}
-00229 
-00237     \textcolor{keyword}{private} \textcolor{keywordtype}{void} goRoom(\hyperlink{classRoom}{Room} room, \textcolor{keywordtype}{boolean} back) \{
-00238         \textcolor{keywordflow}{if} (room == null)
-00239             gui.println(\textcolor{stringliteral}{"There is no door!"});
-00240         \textcolor{keywordflow}{else} \{
-00241             \textcolor{keywordflow}{if}(!back)
-00242                 previousRooms.push(currentRoom);
-00243             \textcolor{keywordflow}{else}
-00244                 previousRooms.pop();
-00245             currentRoom = room;
-00246             gui.println(currentRoom.getLongDescription());
-00247             \textcolor{keywordflow}{if}(currentRoom.\hyperlink{classRoom_a8177668df4d8be718812934673c42649}{getImageName}() != null)
-00248                 gui.\hyperlink{classUserInterface_ab793a0f12878c698ba3e1720a9f86f3b}{showImage}(currentRoom.\hyperlink{classRoom_a8177668df4d8be718812934673c42649}{getImageName}());
-00249         \}
-00250     \}
-00251 
-00252     \textcolor{keyword}{private} \textcolor{keywordtype}{void} goBack() \{ 
-00253         \textcolor{keywordflow}{if}(!previousRooms.empty()) \{
-00254             goRoom(previousRooms.peek(), \textcolor{keyword}{true});
-00255         \} \textcolor{keywordflow}{else} \{
-00256             gui.println(\textcolor{stringliteral}{"No previous room"});
-00257         \}
-00258     \}
-00259 
-00264     \textcolor{keyword}{private} \textcolor{keywordtype}{void} lookAround(Command command) \{
-00265         \textcolor{keywordflow}{if}(!command.hasParameter())
-00266             gui.\hyperlink{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}{println}(currentRoom.\hyperlink{classRoom_a23a25854d7544fb0b41190a4d6bd1322}{getLongDescription}());
-00267         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(currentRoom.\hyperlink{classRoom_ad779b367b26018c9f343ca3044c4b54f}{hasItem}(command.getParameter()))
-00268             gui.println(\textcolor{stringliteral}{"This is "} + currentRoom.getItem(command.getParameter()).getDescription() + \textcolor{stringliteral}{"."});
-00269         \textcolor{keywordflow}{else}
-00270             gui.println(\textcolor{stringliteral}{"I'm not sure you want to look at that."});
-00271     \}
-00272 
-00276     \textcolor{keyword}{private} \textcolor{keywordtype}{void} endGame() \{
-00277         gui.println(\textcolor{stringliteral}{"Thank you for playing.  Good bye."});
-00278         gui.enable(\textcolor{keyword}{false});
-00279     \}
-00280 
-00281     \textcolor{keyword}{private} \textcolor{keywordtype}{void} test(\textcolor{keyword}{final} Command command) \{
-00282         \textcolor{keywordflow}{if}(!command.hasParameter()) \{
-00283             gui.println(\textcolor{stringliteral}{"Please specify a file"});
-00284             \textcolor{keywordflow}{return};
-00285         \} \textcolor{keywordflow}{else} \{
-00286             Scanner scan = \textcolor{keyword}{new} Scanner(command.getParameter());
-00287             \textcolor{keywordflow}{while}(scan.hasNext()) \{
-00288                 \hyperlink{classGameEngine_ad7133885f313fa99bca3bb7cb8272f64}{processCommand}(scan.nextLine());
-00289             \}
-00290         \}
-00291     \}
-00292 \}
+00171         \textcolor{keywordflow}{if}(command == null) \{
+00172             gui.println(\textcolor{stringliteral}{"I don't know what you mean..."});
+00173             \textcolor{keywordflow}{return};
+00174         \}
+00175 
+00176         gui.setCommandsLeft(--commandCountDown);
+00177 
+00178         \textcolor{keywordflow}{try} \{
+00179             \textcolor{keywordtype}{boolean} quit = command.execute(player);
+00180 
+00181             \textcolor{keywordflow}{if}(command.hasMessage())
+00182                 gui.\hyperlink{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}{println}(command.getMessage());
+00183             \textcolor{comment}{// If we can cast the command into a GoCommand}
+00184             \textcolor{comment}{// Or if it is the test command}
+00185             \textcolor{keywordflow}{if}(\hyperlink{classGoCommand}{GoCommand}.class.isInstance(command) || command.getClass().equals(
+      \hyperlink{classTestCommand}{TestCommand}.class)) \{
+00186                 \textcolor{comment}{// The game image is reloaded}
+00187                 \textcolor{keywordflow}{if}(player.\hyperlink{classPlayer_a3a3107df50fc4e35e8c0f46c3f776ce6}{getCurrentRoom}().getImageName() != null) \{
+00188                     gui.showImage(player.getCurrentRoom().getImageName());
+00189                 \}
+00190             \}
+00191 
+00192             \textcolor{keywordflow}{if}(quit) \{
+00193                 endGame(\textcolor{keyword}{false});
+00194             \}
+00195         \} \textcolor{keywordflow}{catch}(\hyperlink{classNoArgumentException}{NoArgumentException} e) \{
+00196             gui.println(e.getMessage());
+00197         \} \textcolor{keywordflow}{catch}(\hyperlink{classIllegalArgumentException}{IllegalArgumentException} e) \{
+00198             gui.println(e.getMessage());
+00199         \} \textcolor{keywordflow}{catch}(\hyperlink{classUnauthorizedException}{UnauthorizedException} e) \{
+00200             gui.println(e.getMessage());
+00201         \}
+00202 
+00203         \textcolor{keywordflow}{if}(commandCountDown == 0) \{
+00204             endGame(\textcolor{keyword}{false});
+00205         \}
+00206 
+00207     \}
+00208 
+00213     \textcolor{keyword}{private} \textcolor{keywordtype}{void} endGame(\textcolor{keywordtype}{boolean} winning) \{
+00214         gui.println(\textcolor{stringliteral}{"Thank you for playing. Good bye. By the way, you "}
+00215                 + ((winning)? \textcolor{stringliteral}{"won"} : \textcolor{stringliteral}{"lost"}) + \textcolor{stringliteral}{"."});
+00216         gui.enable(\textcolor{keyword}{false});
+00217     \}
+00218 
+00219 \}
 \end{DoxyCode}

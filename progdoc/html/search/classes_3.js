@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['parser',['Parser',['../classParser.html',1,'']]]
+  ['eatcommand',['EatCommand',['../classEatCommand.html',1,'']]]
 ];

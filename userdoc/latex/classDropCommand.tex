@@ -1,0 +1,110 @@
+\hypertarget{classDropCommand}{\section{Drop\-Command Class Reference}
+\label{classDropCommand}\index{Drop\-Command@{Drop\-Command}}
+}
+
+
+Inheritance diagram for Drop\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classDropCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Drop\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classDropCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDropCommand_a98a8cc14e98c04bed31cd1580e5e3048}{Drop\-Command} ()
+\item 
+boolean \hyperlink{classDropCommand_a52432de0841ff8eb85d4f115965aecd1}{execute} (\hyperlink{classPlayer}{Player} player)  throws No\-Argument\-Exception,\-Illegal\-Argument\-Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{classDropCommand}{Drop\-Command} used to make the player drop an \hyperlink{classItem}{Item} \begin{DoxyAuthor}{Author}
+Rémi Nicole 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{DropCommand_8java_source_l00005}{5} of file \hyperlink{DropCommand_8java_source}{Drop\-Command.\-java}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDropCommand_a98a8cc14e98c04bed31cd1580e5e3048}{\index{Drop\-Command@{Drop\-Command}!Drop\-Command@{Drop\-Command}}
+\index{Drop\-Command@{Drop\-Command}!DropCommand@{Drop\-Command}}
+\subsubsection[{Drop\-Command}]{\setlength{\rightskip}{0pt plus 5cm}Drop\-Command.\-Drop\-Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDropCommand_a98a8cc14e98c04bed31cd1580e5e3048}
+Constructor for \hyperlink{classDropCommand}{Drop\-Command} 
+
+Definition at line \hyperlink{DropCommand_8java_source_l00010}{10} of file \hyperlink{DropCommand_8java_source}{Drop\-Command.\-java}.
+
+
+\begin{DoxyCode}
+00010                         \{
+00011 
+00012     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDropCommand_a52432de0841ff8eb85d4f115965aecd1}{\index{Drop\-Command@{Drop\-Command}!execute@{execute}}
+\index{execute@{execute}!DropCommand@{Drop\-Command}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}boolean Drop\-Command.\-execute (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{player}
+\end{DoxyParamCaption}
+) throws {\bf No\-Argument\-Exception},{\bf Illegal\-Argument\-Exception}}}\label{classDropCommand_a52432de0841ff8eb85d4f115965aecd1}
+Drop the \hyperlink{classItem}{Item} through it's name in the parameter field. 
+\begin{DoxyParams}{Parameters}
+{\em player} & The player that called this command \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classNoArgumentException}{No\-Argument\-Exception}} & When the user typed the command without parameter \\
+\hline
+{\em \hyperlink{classIllegalArgumentException}{Illegal\-Argument\-Exception}} & When the user typed a name other than any of the items in the \hyperlink{classPlayer}{Player}'s inventory \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+False because it is not the quit command 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{DropCommand_8java_source_l00021}{21} of file \hyperlink{DropCommand_8java_source}{Drop\-Command.\-java}.
+
+
+\begin{DoxyCode}
+00021                                                                                               \{
+00022         \textcolor{keywordflow}{if}(hasParameter()) \{
+00023             \textcolor{keywordflow}{if}(player.\hyperlink{classPlayer_a90cb3f05b491eaed668fe54b9258b755}{hasItem}(getParameter()))\{
+00024                 player.dropObject(getParameter());
+00025                 setMessage(\textcolor{stringliteral}{"Oh, dear. He took a"} + (((\textcolor{keyword}{new} String(\textcolor{stringliteral}{"aeiouy"})).contains(getParameter().
+      substring(0,1)))? \textcolor{stringliteral}{"n "} : \textcolor{stringliteral}{" "}) + getParameter() + \textcolor{stringliteral}{"."});
+00026             \} \textcolor{keywordflow}{else}
+00027                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classIllegalArgumentException}{IllegalArgumentException}(\textcolor{stringliteral}{"If you want to drop that, you
+       may have a mental disorder. As expected."});
+00028         \} \textcolor{keywordflow}{else}
+00029             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classNoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"I agree. We both want you to drop dead."});
+00030         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00031     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{DropCommand_8java}{Drop\-Command.\-java}\end{DoxyCompactItemize}

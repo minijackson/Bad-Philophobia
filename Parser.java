@@ -3,7 +3,6 @@ import java.util.StringTokenizer;
 /**
  * Class used to parse the commands with or without parameters
  * given by the user.
- *
  * @author Rémi NICOLE
  */
 public class Parser {
@@ -14,7 +13,9 @@ public class Parser {
 	private static CommandWords commands = new CommandWords();
 
 	/**
-	 * Get a new command from the user.
+	 * Return the Command corresponding to the given user's input.
+	 * @param inputLine The user's input
+	 * @return The corresponding Command
 	 */
 	public static Command getCommand(String inputLine) {
 
@@ -41,7 +42,7 @@ public class Parser {
 
 	/**
 	 * Getter for the knownCommands field of the commands field.
-	 * @see CommandWords#knownCommands
+	 * @return The list of available commands
 	 */
 	public static String showCommands() {
 		return commands.getCommandList();

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['commandwords',['CommandWords',['../classCommandWords.html#a2d8c096723adb3f822cc001bccd92ed7',1,'CommandWords']]]
+  ['backcommand',['BackCommand',['../classBackCommand.html#a779456e24dfb281e5917e936da5fd901',1,'BackCommand']]],
+  ['beamercommand',['BeamerCommand',['../classBeamerCommand.html#accb1d84a69588f1b42fba96bf1b32de5',1,'BeamerCommand']]]
 ];

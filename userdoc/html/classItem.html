@@ -43,6 +43,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -76,7 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -114,8 +115,9 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class used to handle an item contained in a <a class="el" href="classRoom.html">Room</a>. </p>
+<dl class="section author"><dt>Author</dt><dd>Rémi Nicole </dd></dl>
 
-<p>Definition at line <a class="el" href="Item_8java_source.html#l00005">5</a> of file <a class="el" href="Item_8java_source.html">Item.java</a>.</p>
+<p>Definition at line <a class="el" href="Item_8java_source.html#l00006">6</a> of file <a class="el" href="Item_8java_source.html">Item.java</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="acf7048ce82d4f6f047d926b1f6260f7c"></a>
 <div class="memitem">
@@ -149,18 +151,19 @@ Public Member Functions</h2></td></tr>
 <p><a class="el" href="classItem.html">Item</a> class constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">description</td><td>Description of the item </td></tr>
+    <tr><td class="paramname">name</td><td>Name of the item </td></tr>
     <tr><td class="paramname">weight</td><td>Weight of the item </td></tr>
+    <tr><td class="paramname">description</td><td>Description of the item </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Item_8java_source.html#l00027">27</a> of file <a class="el" href="Item_8java_source.html">Item.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                                             {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        this.name = name;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        this.weight = weight;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        this.description = description;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<p>Definition at line <a class="el" href="Item_8java_source.html#l00029">29</a> of file <a class="el" href="Item_8java_source.html">Item.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                                             {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        this.name = name;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        this.weight = weight;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        this.description = description;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -178,11 +181,12 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>description field getter. </p>
+<dl class="section return"><dt>Returns</dt><dd>The description of the item </dd></dl>
 
-<p>Definition at line <a class="el" href="Item_8java_source.html#l00050">50</a> of file <a class="el" href="Item_8java_source.html">Item.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                                   {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> description;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<p>Definition at line <a class="el" href="Item_8java_source.html#l00055">55</a> of file <a class="el" href="Item_8java_source.html">Item.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                   {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> description;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -199,12 +203,23 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>name field getter. </p>
+<dl class="section return"><dt>Returns</dt><dd>The name of the item </dd></dl>
 
-<p>Definition at line <a class="el" href="Item_8java_source.html#l00036">36</a> of file <a class="el" href="Item_8java_source.html">Item.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                            {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> name;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<p>Definition at line <a class="el" href="Item_8java_source.html#l00039">39</a> of file <a class="el" href="Item_8java_source.html">Item.java</a>.</p>
+
+<p>Referenced by <a class="el" href="Player_8java_source.html#l00186">Player.takeObject()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                            {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> name;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
 </div><!-- fragment -->
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classItem_a78dd5a8370c5267c3f1f992167ab84ac_icgraph.svg" width="294" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a2ff9daec3cf9585fb5741062447a779d"></a>
@@ -220,11 +235,12 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>weight field getter. </p>
+<dl class="section return"><dt>Returns</dt><dd>The weight of the item </dd></dl>
 
-<p>Definition at line <a class="el" href="Item_8java_source.html#l00043">43</a> of file <a class="el" href="Item_8java_source.html">Item.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                           {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> weight;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<p>Definition at line <a class="el" href="Item_8java_source.html#l00047">47</a> of file <a class="el" href="Item_8java_source.html">Item.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                           {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> weight;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -234,7 +250,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 3 2014 20:23:25 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 5 2014 01:29:56 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

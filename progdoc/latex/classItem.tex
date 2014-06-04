@@ -3,6 +3,11 @@
 }
 
 
+Class used to handle an item contained in a \hyperlink{classRoom}{Room}.  
+
+
+
+
 Collaboration diagram for Item\-:
 \nopagebreak
 \begin{figure}[H]
@@ -15,28 +20,33 @@ Collaboration diagram for Item\-:
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classItem_acf7048ce82d4f6f047d926b1f6260f7c}{Item} (String \hyperlink{classItem_a42fd6d4796fcf652806278f65ce93a3b}{name}, int \hyperlink{classItem_ade554833393860faaece5e514637b5d0}{weight}, String \hyperlink{classItem_a663fa7220137071baee5c660b01a82df}{description})
-\item 
+\begin{DoxyCompactList}\small\item\em \hyperlink{classItem}{Item} class constructor. \end{DoxyCompactList}\item 
 String \hyperlink{classItem_a78dd5a8370c5267c3f1f992167ab84ac}{get\-Name} ()
-\item 
+\begin{DoxyCompactList}\small\item\em name field getter. \end{DoxyCompactList}\item 
 int \hyperlink{classItem_a2ff9daec3cf9585fb5741062447a779d}{get\-Weight} ()
-\item 
+\begin{DoxyCompactList}\small\item\em weight field getter. \end{DoxyCompactList}\item 
 String \hyperlink{classItem_abfe361bd046f5acdf4946bda076a8c8f}{get\-Description} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em description field getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{classItem_a42fd6d4796fcf652806278f65ce93a3b}{name}
-\item 
+\begin{DoxyCompactList}\small\item\em Name of the item. \end{DoxyCompactList}\item 
 int \hyperlink{classItem_ade554833393860faaece5e514637b5d0}{weight}
-\item 
+\begin{DoxyCompactList}\small\item\em Weight of the item. \end{DoxyCompactList}\item 
 String \hyperlink{classItem_a663fa7220137071baee5c660b01a82df}{description}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Description of the item. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Class used to handle an item contained in a \hyperlink{classRoom}{Room}. 
 
-Definition at line \hyperlink{Item_8java_source_l00005}{5} of file \hyperlink{Item_8java_source}{Item.\-java}.
+\begin{DoxyAuthor}{Author}
+Rémi Nicole 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{Item_8java_source_l00006}{6} of file \hyperlink{Item_8java_source}{Item.\-java}.
 
 
 
@@ -50,28 +60,34 @@ Definition at line \hyperlink{Item_8java_source_l00005}{5} of file \hyperlink{It
 \item[{String}]{description}
 \end{DoxyParamCaption}
 )}}\label{classItem_acf7048ce82d4f6f047d926b1f6260f7c}
+
+
 \hyperlink{classItem}{Item} class constructor. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em description} & Description of the item \\
+{\em name} & Name of the item \\
 \hline
 {\em weight} & Weight of the item \\
+\hline
+{\em description} & Description of the item \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{Item_8java_source_l00027}{27} of file \hyperlink{Item_8java_source}{Item.\-java}.
+Definition at line \hyperlink{Item_8java_source_l00029}{29} of file \hyperlink{Item_8java_source}{Item.\-java}.
 
 
 
-References \hyperlink{Item_8java_source_l00020}{description}, \hyperlink{Item_8java_source_l00010}{name}, and \hyperlink{Item_8java_source_l00015}{weight}.
+References \hyperlink{Item_8java_source_l00021}{description}, \hyperlink{Item_8java_source_l00011}{name}, and \hyperlink{Item_8java_source_l00016}{weight}.
 
 
 \begin{DoxyCode}
-00027                                                              \{
-00028         this.name = \hyperlink{classItem_a42fd6d4796fcf652806278f65ce93a3b}{name};
-00029         this.weight = \hyperlink{classItem_ade554833393860faaece5e514637b5d0}{weight};
-00030         this.description = \hyperlink{classItem_a663fa7220137071baee5c660b01a82df}{description};
-00031     \}
+00029                                                              \{
+00030         this.name = \hyperlink{classItem_a42fd6d4796fcf652806278f65ce93a3b}{name};
+00031         this.weight = \hyperlink{classItem_ade554833393860faaece5e514637b5d0}{weight};
+00032         this.description = \hyperlink{classItem_a663fa7220137071baee5c660b01a82df}{description};
+00033     \}
 \end{DoxyCode}
 
 
@@ -83,19 +99,26 @@ References \hyperlink{Item_8java_source_l00020}{description}, \hyperlink{Item_8j
 {}
 \end{DoxyParamCaption}
 )}}\label{classItem_abfe361bd046f5acdf4946bda076a8c8f}
+
+
 description field getter. 
 
-Definition at line \hyperlink{Item_8java_source_l00050}{50} of file \hyperlink{Item_8java_source}{Item.\-java}.
+\begin{DoxyReturn}{Returns}
+The description of the item 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Item_8java_source_l00055}{55} of file \hyperlink{Item_8java_source}{Item.\-java}.
 
 
 
-References \hyperlink{Item_8java_source_l00020}{description}.
+References \hyperlink{Item_8java_source_l00021}{description}.
 
 
 \begin{DoxyCode}
-00050                                    \{
-00051         \textcolor{keywordflow}{return} \hyperlink{classItem_a663fa7220137071baee5c660b01a82df}{description};
-00052     \}
+00055                                    \{
+00056         \textcolor{keywordflow}{return} \hyperlink{classItem_a663fa7220137071baee5c660b01a82df}{description};
+00057     \}
 \end{DoxyCode}
 \hypertarget{classItem_a78dd5a8370c5267c3f1f992167ab84ac}{\index{Item@{Item}!get\-Name@{get\-Name}}
 \index{get\-Name@{get\-Name}!Item@{Item}}
@@ -104,20 +127,43 @@ References \hyperlink{Item_8java_source_l00020}{description}.
 {}
 \end{DoxyParamCaption}
 )}}\label{classItem_a78dd5a8370c5267c3f1f992167ab84ac}
+
+
 name field getter. 
 
-Definition at line \hyperlink{Item_8java_source_l00036}{36} of file \hyperlink{Item_8java_source}{Item.\-java}.
+\begin{DoxyReturn}{Returns}
+The name of the item 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Item_8java_source_l00039}{39} of file \hyperlink{Item_8java_source}{Item.\-java}.
 
 
 
-References \hyperlink{Item_8java_source_l00010}{name}.
+References \hyperlink{Item_8java_source_l00011}{name}.
+
+
+
+Referenced by \hyperlink{Player_8java_source_l00186}{Player.\-take\-Object()}.
 
 
 \begin{DoxyCode}
-00036                             \{
-00037         \textcolor{keywordflow}{return} \hyperlink{classItem_a42fd6d4796fcf652806278f65ce93a3b}{name};
-00038     \}
+00039                             \{
+00040         \textcolor{keywordflow}{return} \hyperlink{classItem_a42fd6d4796fcf652806278f65ce93a3b}{name};
+00041     \}
 \end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{classItem_a78dd5a8370c5267c3f1f992167ab84ac_icgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{classItem_a2ff9daec3cf9585fb5741062447a779d}{\index{Item@{Item}!get\-Weight@{get\-Weight}}
 \index{get\-Weight@{get\-Weight}!Item@{Item}}
 \subsubsection[{get\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}int Item.\-get\-Weight (
@@ -125,19 +171,26 @@ References \hyperlink{Item_8java_source_l00010}{name}.
 {}
 \end{DoxyParamCaption}
 )}}\label{classItem_a2ff9daec3cf9585fb5741062447a779d}
+
+
 weight field getter. 
 
-Definition at line \hyperlink{Item_8java_source_l00043}{43} of file \hyperlink{Item_8java_source}{Item.\-java}.
+\begin{DoxyReturn}{Returns}
+The weight of the item 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Item_8java_source_l00047}{47} of file \hyperlink{Item_8java_source}{Item.\-java}.
 
 
 
-References \hyperlink{Item_8java_source_l00015}{weight}.
+References \hyperlink{Item_8java_source_l00016}{weight}.
 
 
 \begin{DoxyCode}
-00043                            \{
-00044         \textcolor{keywordflow}{return} \hyperlink{classItem_ade554833393860faaece5e514637b5d0}{weight};
-00045     \}
+00047                            \{
+00048         \textcolor{keywordflow}{return} \hyperlink{classItem_ade554833393860faaece5e514637b5d0}{weight};
+00049     \}
 \end{DoxyCode}
 
 
@@ -145,35 +198,47 @@ References \hyperlink{Item_8java_source_l00015}{weight}.
 \hypertarget{classItem_a663fa7220137071baee5c660b01a82df}{\index{Item@{Item}!description@{description}}
 \index{description@{description}!Item@{Item}}
 \subsubsection[{description}]{\setlength{\rightskip}{0pt plus 5cm}String Item.\-description\hspace{0.3cm}{\ttfamily [private]}}}\label{classItem_a663fa7220137071baee5c660b01a82df}
+
+
 Description of the item. 
 
-Definition at line \hyperlink{Item_8java_source_l00020}{20} of file \hyperlink{Item_8java_source}{Item.\-java}.
+
+
+Definition at line \hyperlink{Item_8java_source_l00021}{21} of file \hyperlink{Item_8java_source}{Item.\-java}.
 
 
 
-Referenced by \hyperlink{Item_8java_source_l00050}{get\-Description()}, and \hyperlink{Item_8java_source_l00027}{Item()}.
+Referenced by \hyperlink{Item_8java_source_l00055}{get\-Description()}, and \hyperlink{Item_8java_source_l00029}{Item()}.
 
 \hypertarget{classItem_a42fd6d4796fcf652806278f65ce93a3b}{\index{Item@{Item}!name@{name}}
 \index{name@{name}!Item@{Item}}
 \subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}String Item.\-name\hspace{0.3cm}{\ttfamily [private]}}}\label{classItem_a42fd6d4796fcf652806278f65ce93a3b}
+
+
 Name of the item. 
 
-Definition at line \hyperlink{Item_8java_source_l00010}{10} of file \hyperlink{Item_8java_source}{Item.\-java}.
+
+
+Definition at line \hyperlink{Item_8java_source_l00011}{11} of file \hyperlink{Item_8java_source}{Item.\-java}.
 
 
 
-Referenced by \hyperlink{Item_8java_source_l00036}{get\-Name()}, and \hyperlink{Item_8java_source_l00027}{Item()}.
+Referenced by \hyperlink{Item_8java_source_l00039}{get\-Name()}, and \hyperlink{Item_8java_source_l00029}{Item()}.
 
 \hypertarget{classItem_ade554833393860faaece5e514637b5d0}{\index{Item@{Item}!weight@{weight}}
 \index{weight@{weight}!Item@{Item}}
 \subsubsection[{weight}]{\setlength{\rightskip}{0pt plus 5cm}int Item.\-weight\hspace{0.3cm}{\ttfamily [private]}}}\label{classItem_ade554833393860faaece5e514637b5d0}
+
+
 Weight of the item. 
 
-Definition at line \hyperlink{Item_8java_source_l00015}{15} of file \hyperlink{Item_8java_source}{Item.\-java}.
+
+
+Definition at line \hyperlink{Item_8java_source_l00016}{16} of file \hyperlink{Item_8java_source}{Item.\-java}.
 
 
 
-Referenced by \hyperlink{Item_8java_source_l00043}{get\-Weight()}, and \hyperlink{Item_8java_source_l00027}{Item()}.
+Referenced by \hyperlink{Item_8java_source_l00047}{get\-Weight()}, and \hyperlink{Item_8java_source_l00029}{Item()}.
 
 
 

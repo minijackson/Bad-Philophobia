@@ -1,0 +1,54 @@
+\hypertarget{TestCommand_8java_source}{\section{Test\-Command.\-java}
+}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{import} java.util.Scanner;
+00002 \textcolor{keyword}{import} java.io.File;
+00003 \textcolor{keyword}{import} java.io.FileNotFoundException;
+00004 
+\hypertarget{TestCommand_8java_source_l00009}{}\hyperlink{classTestCommand}{00009} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classTestCommand}{TestCommand} \textcolor{keyword}{extends} Command \{
+00010 
+\hypertarget{TestCommand_8java_source_l00014}{}\hyperlink{classTestCommand_a562eaa3c455e0be709b1caa02c9044e6}{00014}     \textcolor{keyword}{public} \hyperlink{classTestCommand_a562eaa3c455e0be709b1caa02c9044e6}{TestCommand}()\{
+00015 
+00016     \}
+00017 
+\hypertarget{TestCommand_8java_source_l00026}{}\hyperlink{classTestCommand_a2c5d98451d5cedb9297caae17378de63}{00026}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classTestCommand_a2c5d98451d5cedb9297caae17378de63}{execute}(\hyperlink{classPlayer}{Player} player) \textcolor{keywordflow}{throws} 
+      \hyperlink{classNoArgumentException}{NoArgumentException},\hyperlink{classIllegalArgumentException}{IllegalArgumentException} \{
+00027         setMessage(\textcolor{stringliteral}{""});
+00028         \textcolor{keywordflow}{if}(hasParameter()) \{
+00029             \textcolor{keywordflow}{try} \{
+00030                 Scanner s = \textcolor{keyword}{new} Scanner(\textcolor{keyword}{new} File(getParameter() + \textcolor{stringliteral}{".test"}));
+00031                 \textcolor{keywordflow}{while} (s.hasNextLine()) \{
+00032 
+00033                     String commandLine = s.nextLine();
+00034                     Command testedCommand = Parser.getCommand(commandLine);
+00035 
+00036                     \textcolor{keywordflow}{try} \{
+00037 
+00038                         testedCommand.execute(player);
+00039                         \textcolor{keywordflow}{if}(testedCommand.hasMessage())
+00040                             setMessage(getMessage() + \textcolor{stringliteral}{"\(\backslash\)n"} + \textcolor{stringliteral}{"Command: "} + commandLine + \textcolor{stringliteral}{"\(\backslash\)n"}
+00041                                     + testedCommand.getMessage());
+00042 
+00043                     \} \textcolor{keywordflow}{catch} (\hyperlink{classNoArgumentException}{NoArgumentException} e) \{
+00044                         setMessage(getMessage() + \textcolor{stringliteral}{"\(\backslash\)n"} + \textcolor{stringliteral}{"Command: "} + commandLine + \textcolor{stringliteral}{"\(\backslash\)n"}
+00045                                 + e.getMessage());
+00046                     \} \textcolor{keywordflow}{catch} (\hyperlink{classIllegalArgumentException}{IllegalArgumentException} e) \{
+00047                         setMessage(getMessage() + \textcolor{stringliteral}{"\(\backslash\)n"} + \textcolor{stringliteral}{"Command: "} + commandLine + \textcolor{stringliteral}{"\(\backslash\)n"}
+00048                                 + e.getMessage());
+00049                     \} \textcolor{keywordflow}{catch}(\hyperlink{classUnauthorizedException}{UnauthorizedException} e)  \{
+00050                         setMessage(getMessage() + \textcolor{stringliteral}{"\(\backslash\)n"} + \textcolor{stringliteral}{"Command: "} + commandLine + \textcolor{stringliteral}{"\(\backslash\)n"}
+00051                                 + e.getMessage());
+00052                     \}
+00053                 \}
+00054                 s.close();
+00055             \} \textcolor{keywordflow}{catch}(FileNotFoundException e) \{
+00056                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classIllegalArgumentException}{IllegalArgumentException}(\textcolor{stringliteral}{"No such test"});
+00057             \}
+00058         \} \textcolor{keywordflow}{else}
+00059             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classNoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"What do you want to test?"});
+00060         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00061     \}
+00062 
+00063 \}
+\end{DoxyCode}

@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classUserInterface.html#a5aa4ca5e24c9fce93ef91e5a6d0abd60" target="_top" xlink:title="UserInterface.createGUI">
+<g id="a_node2"><a xlink:href="classUserInterface.html#a5aa4ca5e24c9fce93ef91e5a6d0abd60" target="_top" xlink:title="Create the user interface. ">
 <polygon fill="white" stroke="black" points="174,-0.5 174,-19.5 298,-19.5 298,-0.5 174,-0.5"/>
 <text text-anchor="middle" x="236" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">UserInterface.createGUI</text>
 </a>

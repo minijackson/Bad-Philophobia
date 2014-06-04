@@ -64,20 +64,23 @@ public class Room {
 
 	/**
 	 * containedItem field getter.
+	 * @return The Room's inventory
 	 */
 	public ItemList getContainedItems() {
 		return containedItems;
 	}
 
 	/**
-	 * Return the given Item.
+	 * Return an Item through it's name.
+	 * @return The wanted Item
 	 */
 	public Item getItem(String name) {
 		return containedItems.get(name);
 	}
 
 	/**
-	 * Check if the room has the given Item.
+	 * Check if the room has the given Item through it's name.
+	 * @return True if this Room has the Item
 	 */
 	public boolean hasItem(String name) {
 		return containedItems.get(name) != null;
@@ -93,7 +96,7 @@ public class Room {
 
 	/**
 	 * Remove the given Item to the Room.
-	 * @param item Item to be removed
+	 * @param itemName Item to be removed
 	 */
 	public void removeItem(String itemName) {
 		containedItems.remove(itemName);
@@ -101,7 +104,7 @@ public class Room {
 
 	/**
 	 * Getter for the description field.
-	 * @return String The description field
+	 * @return The description field
 	 */
 	public String getShortDescription() {
 		return description;
@@ -110,7 +113,7 @@ public class Room {
 	/**
 	 * Return the description of the room, the available exits
 	 * plus the items in the room if any.
-	 * @return String The description.
+	 * @return The description.
 	 */
 	public String getLongDescription() {
 		return "You are " + description + ".\n"
@@ -120,7 +123,7 @@ public class Room {
 
 	/**
 	 * Return a human readable list of the items in the room.
-	 * @return String The list of the items
+	 * @return The list of the items
 	 */
 	public String getHumanItemsList() {
 		String itemsList = "";
@@ -148,6 +151,7 @@ public class Room {
 
 	/**
 	 * Return the available exits in a human readable format.
+	 * @return The available exits in a human readable format
 	 */
 	private String getExitString() {
 		StringBuilder returnString = new StringBuilder("Exits:");
@@ -158,18 +162,25 @@ public class Room {
 
 	/**
 	 * Return the room in a specific direction.
-	 * @param direction The direction of the wanted room.
+	 * @param direction The direction of the wanted room
+	 * @return The wanted Room
 	 */
 	public Room getExit(String direction) {
 		return exits.get(direction);
 	}
 
+	/**
+	 * Check if the given Room is an exit of this Room.
+	 * @param exit The Room to check
+	 * @return True if the given Room is an exit of this Room
+	 */
 	public boolean isExit(Room exit) {
 		return exits.containsValue(exit);
 	}
 
 	/**
 	 * Getter for the imageName field.
+	 * @return The name of the Room's image representation
 	 */
 	public String getImageName() {
 		return "Images/"  + imageName;

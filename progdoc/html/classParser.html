@@ -88,137 +88,141 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classParser-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Parser Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class used to parse the commands with or without parameters given by the user.  
+ <a href="classParser.html#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for Parser:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classParser__coll__graph.svg" width="154" height="288"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classParser__coll__graph.svg" width="214" height="432"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a5b20dc7a1c7a26ce3cec6cc070839bd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#a5b20dc7a1c7a26ce3cec6cc070839bd4">Parser</a> ()</td></tr>
-<tr class="separator:a5b20dc7a1c7a26ce3cec6cc070839bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ee0a1ad3df67b8814d34c81e7276371"><td class="memItemLeft" align="right" valign="top">Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#a5ee0a1ad3df67b8814d34c81e7276371">getCommand</a> (String inputLine)</td></tr>
-<tr class="separator:a5ee0a1ad3df67b8814d34c81e7276371"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae99d8549c08045804cc52576d7b4b453"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#ae99d8549c08045804cc52576d7b4b453">showCommands</a> ()</td></tr>
-<tr class="separator:ae99d8549c08045804cc52576d7b4b453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a4b9b987a0c1b0f4f742020f1be21edfa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCommand.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#a4b9b987a0c1b0f4f742020f1be21edfa">getCommand</a> (String inputLine)</td></tr>
+<tr class="memdesc:a4b9b987a0c1b0f4f742020f1be21edfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classCommand.html" title="Class used to handle a command of one or two words. ">Command</a> corresponding to the given user's input.  <a href="#a4b9b987a0c1b0f4f742020f1be21edfa">More...</a><br/></td></tr>
+<tr class="separator:a4b9b987a0c1b0f4f742020f1be21edfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2510fee1c8d7298e222edaf1f34660dc"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#a2510fee1c8d7298e222edaf1f34660dc">showCommands</a> ()</td></tr>
+<tr class="memdesc:a2510fee1c8d7298e222edaf1f34660dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the knownCommands field of the commands field.  <a href="#a2510fee1c8d7298e222edaf1f34660dc">More...</a><br/></td></tr>
+<tr class="separator:a2510fee1c8d7298e222edaf1f34660dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a6afb99e1595e6bc0705a09ee00dbddd6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCommandWords.html">CommandWords</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#a6afb99e1595e6bc0705a09ee00dbddd6">commands</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a6afb99e1595e6bc0705a09ee00dbddd6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCommandWords.html">CommandWords</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#a6afb99e1595e6bc0705a09ee00dbddd6">commands</a> = new <a class="el" href="classCommandWords.html">CommandWords</a>()</td></tr>
+<tr class="memdesc:a6afb99e1595e6bc0705a09ee00dbddd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Field used to get the list of known commands.  <a href="#a6afb99e1595e6bc0705a09ee00dbddd6">More...</a><br/></td></tr>
 <tr class="separator:a6afb99e1595e6bc0705a09ee00dbddd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class used to parse the commands with or without parameters given by the user.</p>
+<div class="textblock"><p>Class used to parse the commands with or without parameters given by the user. </p>
 <dl class="section author"><dt>Author</dt><dd>Rémi NICOLE </dd></dl>
 
-<p>Definition at line <a class="el" href="Parser_8java_source.html#l00009">9</a> of file <a class="el" href="Parser_8java_source.html">Parser.java</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a5b20dc7a1c7a26ce3cec6cc070839bd4"></a>
+<p>Definition at line <a class="el" href="Parser_8java_source.html#l00008">8</a> of file <a class="el" href="Parser_8java_source.html">Parser.java</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a4b9b987a0c1b0f4f742020f1be21edfa"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Parser.Parser </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p><a class="el" href="classParser.html">Parser</a> class constructor. </p>
-
-<p>Definition at line <a class="el" href="Parser_8java_source.html#l00019">19</a> of file <a class="el" href="Parser_8java_source.html">Parser.java</a>.</p>
-
-<p>References <a class="el" href="Parser_8java_source.html#l00014">commands</a>.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                    {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="classParser.html#a6afb99e1595e6bc0705a09ee00dbddd6">commands</a> = <span class="keyword">new</span> <a class="code" href="classCommandWords.html">CommandWords</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
-<div class="ttc" id="classCommandWords_html"><div class="ttname"><a href="classCommandWords.html">CommandWords</a></div><div class="ttdef"><b>Definition:</b> <a href="CommandWords_8java_source.html#l00009">CommandWords.java:9</a></div></div>
-<div class="ttc" id="classParser_html_a6afb99e1595e6bc0705a09ee00dbddd6"><div class="ttname"><a href="classParser.html#a6afb99e1595e6bc0705a09ee00dbddd6">Parser.commands</a></div><div class="ttdeci">CommandWords commands</div><div class="ttdef"><b>Definition:</b> <a href="Parser_8java_source.html#l00014">Parser.java:14</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a5ee0a1ad3df67b8814d34c81e7276371"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Command Parser.getCommand </td>
+          <td class="memname">static <a class="el" href="classCommand.html">Command</a> Parser.getCommand </td>
           <td>(</td>
           <td class="paramtype">String&#160;</td>
           <td class="paramname"><em>inputLine</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Get a new command from the user. </p>
 
-<p>Definition at line <a class="el" href="Parser_8java_source.html#l00026">26</a> of file <a class="el" href="Parser_8java_source.html">Parser.java</a>.</p>
+<p>Return the <a class="el" href="classCommand.html" title="Class used to handle a command of one or two words. ">Command</a> corresponding to the given user's input. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputLine</td><td>The user's input </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The corresponding <a class="el" href="classCommand.html" title="Class used to handle a command of one or two words. ">Command</a> </dd></dl>
 
-<p>References <a class="el" href="Parser_8java_source.html#l00014">commands</a>, and <a class="el" href="CommandWords_8java_source.html#l00028">CommandWords.isCommand()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                                {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        String word1;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        String word2;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        StringTokenizer tokenizer = <span class="keyword">new</span> StringTokenizer(inputLine);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span>(tokenizer.hasMoreTokens())</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            word1 = tokenizer.nextToken();  <span class="comment">// First word</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            word1 = null;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">if</span>(tokenizer.hasMoreTokens())</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            word2 = tokenizer.nextToken();  <span class="comment">// Second word</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            word2 = null;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classParser.html#a6afb99e1595e6bc0705a09ee00dbddd6">commands</a>.<a class="code" href="classCommandWords.html#a98619d278b3fa23fed18b5834f9d20a8">isCommand</a>(word1))</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> Command(word1, word2);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> Command(null, word2);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
-<div class="ttc" id="classParser_html_a6afb99e1595e6bc0705a09ee00dbddd6"><div class="ttname"><a href="classParser.html#a6afb99e1595e6bc0705a09ee00dbddd6">Parser.commands</a></div><div class="ttdeci">CommandWords commands</div><div class="ttdef"><b>Definition:</b> <a href="Parser_8java_source.html#l00014">Parser.java:14</a></div></div>
-<div class="ttc" id="classCommandWords_html_a98619d278b3fa23fed18b5834f9d20a8"><div class="ttname"><a href="classCommandWords.html#a98619d278b3fa23fed18b5834f9d20a8">CommandWords.isCommand</a></div><div class="ttdeci">boolean isCommand(String aString)</div><div class="ttdef"><b>Definition:</b> <a href="CommandWords_8java_source.html#l00028">CommandWords.java:28</a></div></div>
+<p>Definition at line <a class="el" href="Parser_8java_source.html#l00020">20</a> of file <a class="el" href="Parser_8java_source.html">Parser.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                                       {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        String word1;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        String word2;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        StringTokenizer tokenizer = <span class="keyword">new</span> StringTokenizer(inputLine);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span>(tokenizer.hasMoreTokens())</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            word1 = tokenizer.nextToken();  <span class="comment">// First word</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            word1 = null;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">if</span>(tokenizer.hasMoreTokens())</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            word2 = tokenizer.nextToken();  <span class="comment">// Second word</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            word2 = null;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="classCommand.html">Command</a> command = commands.getCommand(word1);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">if</span>(command != null) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            command.setParameter(word2);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> command;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="ttc" id="classCommand_html"><div class="ttname"><a href="classCommand.html">Command</a></div><div class="ttdoc">Class used to handle a command of one or two words. </div><div class="ttdef"><b>Definition:</b> <a href="Command_8java_source.html#l00005">Command.java:5</a></div></div>
 </div><!-- fragment -->
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classParser_a5ee0a1ad3df67b8814d34c81e7276371_cgraph.svg" width="395" height="43"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</p>
-
 </div>
 </div>
-<a class="anchor" id="ae99d8549c08045804cc52576d7b4b453"></a>
+<a class="anchor" id="a2510fee1c8d7298e222edaf1f34660dc"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">String Parser.showCommands </td>
+          <td class="memname">static String Parser.showCommands </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Getter for the knownCommands field of the commands field. </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classCommandWords.html#a328bb081d9a9e5cb1aa6362523b28783">CommandWords::knownCommands</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="Parser_8java_source.html#l00052">52</a> of file <a class="el" href="Parser_8java_source.html">Parser.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                 {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> commands.getCommandList();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<p>Getter for the knownCommands field of the commands field. </p>
+<dl class="section return"><dt>Returns</dt><dd>The list of available commands </dd></dl>
+
+<p>Definition at line <a class="el" href="Parser_8java_source.html#l00047">47</a> of file <a class="el" href="Parser_8java_source.html">Parser.java</a>.</p>
+
+<p>Referenced by <a class="el" href="HelpCommand_8java_source.html#l00028">HelpCommand.execute()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> commands.getCommandList();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
 </div><!-- fragment -->
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classParser_a2510fee1c8d7298e222edaf1f34660dc_icgraph.svg" width="382" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -230,20 +234,19 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classCommandWords.html">CommandWords</a> Parser.commands</td>
+          <td class="memname"><a class="el" href="classCommandWords.html">CommandWords</a> Parser.commands = new <a class="el" href="classCommandWords.html">CommandWords</a>()</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Field used to get the list of known commands. </p>
 
-<p>Definition at line <a class="el" href="Parser_8java_source.html#l00014">14</a> of file <a class="el" href="Parser_8java_source.html">Parser.java</a>.</p>
-
-<p>Referenced by <a class="el" href="Parser_8java_source.html#l00026">getCommand()</a>, and <a class="el" href="Parser_8java_source.html#l00019">Parser()</a>.</p>
+<p>Definition at line <a class="el" href="Parser_8java_source.html#l00013">13</a> of file <a class="el" href="Parser_8java_source.html">Parser.java</a>.</p>
 
 </div>
 </div>
@@ -253,7 +256,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 3 2014 20:23:19 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 5 2014 01:25:10 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

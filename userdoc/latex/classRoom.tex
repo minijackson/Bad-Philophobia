@@ -16,17 +16,19 @@ Collaboration diagram for Room\-:
 \item 
 \hyperlink{classRoom_a2cdcbb3d86746330a5a01c7fae4de02c}{Room} (String description, String image)
 \item 
-\hyperlink{classRoom_a05e162f8831368304aa193ad5a05750c}{Room} (String description, String image, Hash\-Map$<$ String, \hyperlink{classItem}{Item} $>$ item\-List)
+\hyperlink{classRoom_ad8cb507b670aec86cf14baa25fadb0f2}{Room} (String description, String image, \hyperlink{classItemList}{Item\-List} item\-List)
 \item 
 void \hyperlink{classRoom_ae4bc6837f331b5249beb0651fc277018}{set\-Exit} (String direction, \hyperlink{classRoom}{Room} neighbor)
 \item 
-void \hyperlink{classRoom_a0b4fcc1c1c04e60efa7ae5f82ea37157}{add\-Item} (\hyperlink{classItem}{Item} item)
-\item 
-Hash\-Map$<$ String, \hyperlink{classItem}{Item} $>$ \hyperlink{classRoom_a4d50f61fe592736e56e9e083b124ff83}{get\-Contained\-Items} ()
+\hyperlink{classItemList}{Item\-List} \hyperlink{classRoom_ab9ebd5a52d437f7724bf8474fffae81f}{get\-Contained\-Items} ()
 \item 
 \hyperlink{classItem}{Item} \hyperlink{classRoom_a9b53c8d9f87f4a6d9cc954aeb744d1a2}{get\-Item} (String name)
 \item 
 boolean \hyperlink{classRoom_ad779b367b26018c9f343ca3044c4b54f}{has\-Item} (String name)
+\item 
+void \hyperlink{classRoom_a0b4fcc1c1c04e60efa7ae5f82ea37157}{add\-Item} (\hyperlink{classItem}{Item} item)
+\item 
+void \hyperlink{classRoom_a591912d92553130f8f90a5bebd236a5c}{remove\-Item} (String item\-Name)
 \item 
 String \hyperlink{classRoom_a85e561bc5fa9d9c965300e9ad264b02a}{get\-Short\-Description} ()
 \item 
@@ -35,6 +37,8 @@ String \hyperlink{classRoom_a23a25854d7544fb0b41190a4d6bd1322}{get\-Long\-Descri
 String \hyperlink{classRoom_ab8a87ad306f77a936873094b479bcde8}{get\-Human\-Items\-List} ()
 \item 
 \hyperlink{classRoom}{Room} \hyperlink{classRoom_a384ab8c844e5775f87de24d6c470637e}{get\-Exit} (String direction)
+\item 
+boolean \hyperlink{classRoom_a844b42638a0d2ce68df9adf1674f713b}{is\-Exit} (\hyperlink{classRoom}{Room} exit)
 \item 
 String \hyperlink{classRoom_a8177668df4d8be718812934673c42649}{get\-Image\-Name} ()
 \end{DoxyCompactItemize}
@@ -73,18 +77,18 @@ Definition at line \hyperlink{Room_8java_source_l00039}{39} of file \hyperlink{R
 
 \begin{DoxyCode}
 00039                                                   \{
-00040         \textcolor{keyword}{this}(description, image, \textcolor{keyword}{new} HashMap<String, Item>());
+00040         \textcolor{keyword}{this}(description, image, \textcolor{keyword}{new} \hyperlink{classItemList}{ItemList}());
 00041     \}
 \end{DoxyCode}
-\hypertarget{classRoom_a05e162f8831368304aa193ad5a05750c}{\index{Room@{Room}!Room@{Room}}
+\hypertarget{classRoom_ad8cb507b670aec86cf14baa25fadb0f2}{\index{Room@{Room}!Room@{Room}}
 \index{Room@{Room}!Room@{Room}}
 \subsubsection[{Room}]{\setlength{\rightskip}{0pt plus 5cm}Room.\-Room (
 \begin{DoxyParamCaption}
 \item[{String}]{description, }
 \item[{String}]{image, }
-\item[{Hash\-Map$<$ String, {\bf Item} $>$}]{item\-List}
+\item[{{\bf Item\-List}}]{item\-List}
 \end{DoxyParamCaption}
-)}}\label{classRoom_a05e162f8831368304aa193ad5a05750c}
+)}}\label{classRoom_ad8cb507b670aec86cf14baa25fadb0f2}
 \hyperlink{classRoom}{Room} class constructor with the items. 
 \begin{DoxyParams}{Parameters}
 {\em description} & Description for the room \\
@@ -100,7 +104,7 @@ Definition at line \hyperlink{Room_8java_source_l00049}{49} of file \hyperlink{R
 
 
 \begin{DoxyCode}
-00049                                                                                   \{
+00049                                                                      \{
 00050         this.description = description;
 00051         exits = \textcolor{keyword}{new} HashMap < String, Room > ();
 00052         imageName = image;
@@ -117,32 +121,40 @@ Definition at line \hyperlink{Room_8java_source_l00049}{49} of file \hyperlink{R
 \item[{{\bf Item}}]{item}
 \end{DoxyParamCaption}
 )}}\label{classRoom_a0b4fcc1c1c04e60efa7ae5f82ea37157}
-Add an \hyperlink{classItem}{Item} in the \hyperlink{classRoom}{Room}. 
+Add the given \hyperlink{classItem}{Item} in the \hyperlink{classRoom}{Room}. 
+\begin{DoxyParams}{Parameters}
+{\em item} & \hyperlink{classItem}{Item} to be added \\
+\hline
+\end{DoxyParams}
 
-Definition at line \hyperlink{Room_8java_source_l00068}{68} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+Definition at line \hyperlink{Room_8java_source_l00093}{93} of file \hyperlink{Room_8java_source}{Room.\-java}.
 
 
 \begin{DoxyCode}
-00068                                    \{
-00069         containedItems.put(item.getName(), item);
-00070     \}
+00093                                    \{
+00094         containedItems.put(item.getName(), item);
+00095     \}
 \end{DoxyCode}
-\hypertarget{classRoom_a4d50f61fe592736e56e9e083b124ff83}{\index{Room@{Room}!get\-Contained\-Items@{get\-Contained\-Items}}
+\hypertarget{classRoom_ab9ebd5a52d437f7724bf8474fffae81f}{\index{Room@{Room}!get\-Contained\-Items@{get\-Contained\-Items}}
 \index{get\-Contained\-Items@{get\-Contained\-Items}!Room@{Room}}
-\subsubsection[{get\-Contained\-Items}]{\setlength{\rightskip}{0pt plus 5cm}Hash\-Map$<$String, {\bf Item}$>$ Room.\-get\-Contained\-Items (
+\subsubsection[{get\-Contained\-Items}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Item\-List} Room.\-get\-Contained\-Items (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classRoom_a4d50f61fe592736e56e9e083b124ff83}
-contained\-Item field getter. 
+)}}\label{classRoom_ab9ebd5a52d437f7724bf8474fffae81f}
+contained\-Item field getter. \begin{DoxyReturn}{Returns}
+The \hyperlink{classRoom}{Room}'s inventory 
+\end{DoxyReturn}
 
-Definition at line \hyperlink{Room_8java_source_l00075}{75} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+Definition at line \hyperlink{Room_8java_source_l00069}{69} of file \hyperlink{Room_8java_source}{Room.\-java}.
 
 
 \begin{DoxyCode}
-00075                                                      \{
-00076         \textcolor{keywordflow}{return} containedItems;
-00077     \}
+00069                                         \{
+00070         \textcolor{keywordflow}{return} containedItems;
+00071     \}
 \end{DoxyCode}
 \hypertarget{classRoom_a384ab8c844e5775f87de24d6c470637e}{\index{Room@{Room}!get\-Exit@{get\-Exit}}
 \index{get\-Exit@{get\-Exit}!Room@{Room}}
@@ -153,18 +165,21 @@ Definition at line \hyperlink{Room_8java_source_l00075}{75} of file \hyperlink{R
 )}}\label{classRoom_a384ab8c844e5775f87de24d6c470637e}
 Return the room in a specific direction. 
 \begin{DoxyParams}{Parameters}
-{\em direction} & The direction of the wanted room. \\
+{\em direction} & The direction of the wanted room \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The wanted \hyperlink{classRoom}{Room} 
+\end{DoxyReturn}
 
 
-Definition at line \hyperlink{Room_8java_source_l00148}{148} of file \hyperlink{Room_8java_source}{Room.\-java}.
+Definition at line \hyperlink{Room_8java_source_l00168}{168} of file \hyperlink{Room_8java_source}{Room.\-java}.
 
 
 \begin{DoxyCode}
-00148                                           \{
-00149         \textcolor{keywordflow}{return} exits.get(direction);
-00150     \}
+00168                                           \{
+00169         \textcolor{keywordflow}{return} exits.get(direction);
+00170     \}
 \end{DoxyCode}
 \hypertarget{classRoom_ab8a87ad306f77a936873094b479bcde8}{\index{Room@{Room}!get\-Human\-Items\-List@{get\-Human\-Items\-List}}
 \index{get\-Human\-Items\-List@{get\-Human\-Items\-List}!Room@{Room}}
@@ -174,42 +189,42 @@ Definition at line \hyperlink{Room_8java_source_l00148}{148} of file \hyperlink{
 \end{DoxyParamCaption}
 )}}\label{classRoom_ab8a87ad306f77a936873094b479bcde8}
 Return a human readable list of the items in the room. \begin{DoxyReturn}{Returns}
-String The list of the items 
+The list of the items 
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{Room_8java_source_l00110}{110} of file \hyperlink{Room_8java_source}{Room.\-java}.
+Definition at line \hyperlink{Room_8java_source_l00128}{128} of file \hyperlink{Room_8java_source}{Room.\-java}.
 
 
 
-Referenced by \hyperlink{Room_8java_source_l00100}{get\-Long\-Description()}.
+Referenced by \hyperlink{Room_8java_source_l00118}{get\-Long\-Description()}.
 
 
 \begin{DoxyCode}
-00110                                       \{
-00111         String itemsList = \textcolor{stringliteral}{""};
-00112         Set<String> names = containedItems.keySet();
-00113         Iterator<String> it = names.iterator();
-00114         \textcolor{keywordflow}{while}(it.hasNext()) \{
-00115 
-00116             String itemName = it.next();
-00117             \textcolor{comment}{// If the item's name begins with a vowel, the prefix is ' an '}
-00118             \textcolor{comment}{// if not, the prefix is ' a '}
-00119             String prefix = \textcolor{stringliteral}{" a"} + (((\textcolor{keyword}{new} String(\textcolor{stringliteral}{"aeiouy"})).contains(itemName.substring(0,1)))? \textcolor{stringliteral}{"n"} : \textcolor{stringliteral}{""}) +
+00128                                       \{
+00129         String itemsList = \textcolor{stringliteral}{""};
+00130         Set<String> names = containedItems.keySet();
+00131         Iterator<String> it = names.iterator();
+00132         \textcolor{keywordflow}{while}(it.hasNext()) \{
+00133 
+00134             String itemName = it.next();
+00135             \textcolor{comment}{// If the item's name begins with a vowel, the prefix is ' an '}
+00136             \textcolor{comment}{// if not, the prefix is ' a '}
+00137             String prefix = \textcolor{stringliteral}{" a"} + (((\textcolor{keyword}{new} String(\textcolor{stringliteral}{"aeiouy"})).contains(itemName.substring(0,1)))? \textcolor{stringliteral}{"n"} : \textcolor{stringliteral}{""}) +
        \textcolor{stringliteral}{" "};
-00120 
-00121             \textcolor{keywordflow}{if}(itemsList.equals(\textcolor{stringliteral}{""}))
-00122                 itemsList += prefix + itemName;
-00123             \textcolor{keywordflow}{else} \{
-00124                 \textcolor{comment}{// Check if it is the last item}
-00125                 \textcolor{keywordflow}{if}(it.hasNext())
-00126                     itemsList += \textcolor{stringliteral}{","} + prefix + itemName;
-00127                 \textcolor{keywordflow}{else}
-00128                     itemsList += \textcolor{stringliteral}{" and"} + prefix + itemName;
-00129             \}
-00130         \}
-00131         \textcolor{keywordflow}{return} itemsList;
-00132     \}
+00138 
+00139             \textcolor{keywordflow}{if}(itemsList.equals(\textcolor{stringliteral}{""}))
+00140                 itemsList += prefix + itemName;
+00141             \textcolor{keywordflow}{else} \{
+00142                 \textcolor{comment}{// Check if it is the last item}
+00143                 \textcolor{keywordflow}{if}(it.hasNext())
+00144                     itemsList += \textcolor{stringliteral}{","} + prefix + itemName;
+00145                 \textcolor{keywordflow}{else}
+00146                     itemsList += \textcolor{stringliteral}{" and"} + prefix + itemName;
+00147             \}
+00148         \}
+00149         \textcolor{keywordflow}{return} itemsList;
+00150     \}
 \end{DoxyCode}
 
 
@@ -230,15 +245,18 @@ Here is the caller graph for this function\-:
 {}
 \end{DoxyParamCaption}
 )}}\label{classRoom_a8177668df4d8be718812934673c42649}
-Getter for the image\-Name field. 
+Getter for the image\-Name field. \begin{DoxyReturn}{Returns}
+The name of the \hyperlink{classRoom}{Room}'s image representation 
+\end{DoxyReturn}
 
-Definition at line \hyperlink{Room_8java_source_l00155}{155} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+Definition at line \hyperlink{Room_8java_source_l00185}{185} of file \hyperlink{Room_8java_source}{Room.\-java}.
 
 
 \begin{DoxyCode}
-00155                                  \{
-00156         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Images/"}  + imageName;
-00157     \}
+00185                                  \{
+00186         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Images/"}  + imageName;
+00187     \}
 \end{DoxyCode}
 \hypertarget{classRoom_a9b53c8d9f87f4a6d9cc954aeb744d1a2}{\index{Room@{Room}!get\-Item@{get\-Item}}
 \index{get\-Item@{get\-Item}!Room@{Room}}
@@ -247,15 +265,18 @@ Definition at line \hyperlink{Room_8java_source_l00155}{155} of file \hyperlink{
 \item[{String}]{name}
 \end{DoxyParamCaption}
 )}}\label{classRoom_a9b53c8d9f87f4a6d9cc954aeb744d1a2}
+Return an \hyperlink{classItem}{Item} through it's name. \begin{DoxyReturn}{Returns}
+The wanted \hyperlink{classItem}{Item} 
+\end{DoxyReturn}
 
 
-Definition at line \hyperlink{Room_8java_source_l00079}{79} of file \hyperlink{Room_8java_source}{Room.\-java}.
+Definition at line \hyperlink{Room_8java_source_l00077}{77} of file \hyperlink{Room_8java_source}{Room.\-java}.
 
 
 \begin{DoxyCode}
-00079                                      \{
-00080         \textcolor{keywordflow}{return} containedItems.get(name);
-00081     \}
+00077                                      \{
+00078         \textcolor{keywordflow}{return} containedItems.get(name);
+00079     \}
 \end{DoxyCode}
 \hypertarget{classRoom_a23a25854d7544fb0b41190a4d6bd1322}{\index{Room@{Room}!get\-Long\-Description@{get\-Long\-Description}}
 \index{get\-Long\-Description@{get\-Long\-Description}!Room@{Room}}
@@ -265,24 +286,24 @@ Definition at line \hyperlink{Room_8java_source_l00079}{79} of file \hyperlink{R
 \end{DoxyParamCaption}
 )}}\label{classRoom_a23a25854d7544fb0b41190a4d6bd1322}
 Return the description of the room, the available exits plus the items in the room if any. \begin{DoxyReturn}{Returns}
-String The description. 
+The description. 
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{Room_8java_source_l00100}{100} of file \hyperlink{Room_8java_source}{Room.\-java}.
+Definition at line \hyperlink{Room_8java_source_l00118}{118} of file \hyperlink{Room_8java_source}{Room.\-java}.
 
 
 
-References \hyperlink{Room_8java_source_l00110}{get\-Human\-Items\-List()}.
+References \hyperlink{Room_8java_source_l00128}{get\-Human\-Items\-List()}.
 
 
 \begin{DoxyCode}
-00100                                        \{
-00101         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"You are "} + description + \textcolor{stringliteral}{".\(\backslash\)n"}
-00102                 + ((!containedItems.isEmpty())? \textcolor{stringliteral}{"You can see"} + 
+00118                                        \{
+00119         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"You are "} + description + \textcolor{stringliteral}{".\(\backslash\)n"}
+00120                 + ((!containedItems.isEmpty())? \textcolor{stringliteral}{"You can see"} + 
       \hyperlink{classRoom_ab8a87ad306f77a936873094b479bcde8}{getHumanItemsList}() + \textcolor{stringliteral}{" near you.\(\backslash\)n"} : \textcolor{stringliteral}{""})
-00103                 + getExitString();
-00104     \}
+00121                 + getExitString();
+00122     \}
 \end{DoxyCode}
 
 
@@ -304,17 +325,17 @@ Here is the call graph for this function\-:
 \end{DoxyParamCaption}
 )}}\label{classRoom_a85e561bc5fa9d9c965300e9ad264b02a}
 Getter for the description field. \begin{DoxyReturn}{Returns}
-String The description field 
+The description field 
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{Room_8java_source_l00091}{91} of file \hyperlink{Room_8java_source}{Room.\-java}.
+Definition at line \hyperlink{Room_8java_source_l00109}{109} of file \hyperlink{Room_8java_source}{Room.\-java}.
 
 
 \begin{DoxyCode}
-00091                                         \{
-00092         \textcolor{keywordflow}{return} description;
-00093     \}
+00109                                         \{
+00110         \textcolor{keywordflow}{return} description;
+00111     \}
 \end{DoxyCode}
 \hypertarget{classRoom_ad779b367b26018c9f343ca3044c4b54f}{\index{Room@{Room}!has\-Item@{has\-Item}}
 \index{has\-Item@{has\-Item}!Room@{Room}}
@@ -323,15 +344,65 @@ Definition at line \hyperlink{Room_8java_source_l00091}{91} of file \hyperlink{R
 \item[{String}]{name}
 \end{DoxyParamCaption}
 )}}\label{classRoom_ad779b367b26018c9f343ca3044c4b54f}
+Check if the room has the given \hyperlink{classItem}{Item} through it's name. \begin{DoxyReturn}{Returns}
+True if this \hyperlink{classRoom}{Room} has the \hyperlink{classItem}{Item} 
+\end{DoxyReturn}
 
 
-Definition at line \hyperlink{Room_8java_source_l00083}{83} of file \hyperlink{Room_8java_source}{Room.\-java}.
+Definition at line \hyperlink{Room_8java_source_l00085}{85} of file \hyperlink{Room_8java_source}{Room.\-java}.
 
 
 \begin{DoxyCode}
-00083                                         \{
-00084         \textcolor{keywordflow}{return} containedItems.get(name) != null;
-00085     \}
+00085                                         \{
+00086         \textcolor{keywordflow}{return} containedItems.get(name) != null;
+00087     \}
+\end{DoxyCode}
+\hypertarget{classRoom_a844b42638a0d2ce68df9adf1674f713b}{\index{Room@{Room}!is\-Exit@{is\-Exit}}
+\index{is\-Exit@{is\-Exit}!Room@{Room}}
+\subsubsection[{is\-Exit}]{\setlength{\rightskip}{0pt plus 5cm}boolean Room.\-is\-Exit (
+\begin{DoxyParamCaption}
+\item[{{\bf Room}}]{exit}
+\end{DoxyParamCaption}
+)}}\label{classRoom_a844b42638a0d2ce68df9adf1674f713b}
+Check if the given \hyperlink{classRoom}{Room} is an exit of this \hyperlink{classRoom}{Room}. 
+\begin{DoxyParams}{Parameters}
+{\em exit} & The \hyperlink{classRoom}{Room} to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the given \hyperlink{classRoom}{Room} is an exit of this \hyperlink{classRoom}{Room} 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Room_8java_source_l00177}{177} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00177                                      \{
+00178         \textcolor{keywordflow}{return} exits.containsValue(exit);
+00179     \}
+\end{DoxyCode}
+\hypertarget{classRoom_a591912d92553130f8f90a5bebd236a5c}{\index{Room@{Room}!remove\-Item@{remove\-Item}}
+\index{remove\-Item@{remove\-Item}!Room@{Room}}
+\subsubsection[{remove\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void Room.\-remove\-Item (
+\begin{DoxyParamCaption}
+\item[{String}]{item\-Name}
+\end{DoxyParamCaption}
+)}}\label{classRoom_a591912d92553130f8f90a5bebd236a5c}
+Remove the given \hyperlink{classItem}{Item} to the \hyperlink{classRoom}{Room}. 
+\begin{DoxyParams}{Parameters}
+{\em item\-Name} & \hyperlink{classItem}{Item} to be removed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Room_8java_source_l00101}{101} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00101                                             \{
+00102         containedItems.remove(itemName);
+00103     \}
 \end{DoxyCode}
 \hypertarget{classRoom_ae4bc6837f331b5249beb0651fc277018}{\index{Room@{Room}!set\-Exit@{set\-Exit}}
 \index{set\-Exit@{set\-Exit}!Room@{Room}}
@@ -356,7 +427,7 @@ Definition at line \hyperlink{Room_8java_source_l00061}{61} of file \hyperlink{R
 \begin{DoxyCode}
 00061                                                          \{
 00062         exits.put(direction, neighbor);
-00063     \}
+00063     \}   
 \end{DoxyCode}
 
 

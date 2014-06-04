@@ -2,32 +2,47 @@
 }
 
 \begin{DoxyCode}
-00001 
-\hypertarget{CommandWords_8java_source_l00009}{}\hyperlink{classCommandWords}{00009} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classCommandWords}{CommandWords}
-00010 \{
-\hypertarget{CommandWords_8java_source_l00014}{}\hyperlink{classCommandWords_a328bb081d9a9e5cb1aa6362523b28783}{00014}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keyword}{final} String \hyperlink{classCommandWords_a328bb081d9a9e5cb1aa6362523b28783}{knownCommands}[] = \{
-00015         \textcolor{stringliteral}{"go"}, \textcolor{stringliteral}{"back"}, \textcolor{stringliteral}{"look"}, \textcolor{stringliteral}{"quit"}, \textcolor{stringliteral}{"help"}, \textcolor{stringliteral}{"credits"}
-00016     \};
-00017 
-\hypertarget{CommandWords_8java_source_l00021}{}\hyperlink{classCommandWords_a2d8c096723adb3f822cc001bccd92ed7}{00021}     \textcolor{keyword}{public} \hyperlink{classCommandWords_a2d8c096723adb3f822cc001bccd92ed7}{CommandWords}() \{
-00022 
-00023     \}
-00024 
-\hypertarget{CommandWords_8java_source_l00028}{}\hyperlink{classCommandWords_a98619d278b3fa23fed18b5834f9d20a8}{00028}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classCommandWords_a98619d278b3fa23fed18b5834f9d20a8}{isCommand}(String aString) \{
-00029         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < knownCommands.length; i++) \{
-00030             \textcolor{keywordflow}{if}(\hyperlink{classCommandWords_a328bb081d9a9e5cb1aa6362523b28783}{knownCommands}[i].equals(aString))
-00031                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-00032         \}
-00033         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-00034     \}
-00035 
-\hypertarget{CommandWords_8java_source_l00039}{}\hyperlink{classCommandWords_aa26f54985e39543739e0ae291dcdb8f1}{00039}     \textcolor{keyword}{public} String \hyperlink{classCommandWords_aa26f54985e39543739e0ae291dcdb8f1}{getCommandList}() \{
-00040         StringBuilder commands = \textcolor{keyword}{new} StringBuilder();
-00041         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < knownCommands.length; i++) \{
-00042             commands.append( \hyperlink{classCommandWords_a328bb081d9a9e5cb1aa6362523b28783}{knownCommands}[i] + \textcolor{stringliteral}{"  "} );
-00043         \}
-00044         \textcolor{keywordflow}{return} commands.toString();
-00045     \}
-00046 \}
-00047 
+00001 \textcolor{keyword}{import} java.util.HashMap;
+00002 \textcolor{keyword}{import} java.util.Iterator;
+00003 
+\hypertarget{CommandWords_8java_source_l00011}{}\hyperlink{classCommandWords}{00011} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classCommandWords}{CommandWords}
+00012 \{
+\hypertarget{CommandWords_8java_source_l00013}{}\hyperlink{classCommandWords_a87d12c01410f3c523f7889d523d537e7}{00013}     \textcolor{keyword}{private} HashMap<String, Command> \hyperlink{classCommandWords_a87d12c01410f3c523f7889d523d537e7}{commands};
+00014 
+\hypertarget{CommandWords_8java_source_l00018}{}\hyperlink{classCommandWords_a2d8c096723adb3f822cc001bccd92ed7}{00018}     \textcolor{keyword}{public} \hyperlink{classCommandWords_a2d8c096723adb3f822cc001bccd92ed7}{CommandWords}() \{
+00019         \hyperlink{classCommandWords_a87d12c01410f3c523f7889d523d537e7}{commands} = \textcolor{keyword}{new} HashMap<String, Command>();
+00020         commands.put(\textcolor{stringliteral}{"go"}, \textcolor{keyword}{new} \hyperlink{classGoCommand}{GoCommand}());
+00021         commands.put(\textcolor{stringliteral}{"back"}, \textcolor{keyword}{new} \hyperlink{classBackCommand}{BackCommand}());
+00022         commands.put(\textcolor{stringliteral}{"beamer"}, \textcolor{keyword}{new} \hyperlink{classBeamerCommand}{BeamerCommand}());
+00023         commands.put(\textcolor{stringliteral}{"look"}, \textcolor{keyword}{new} \hyperlink{classLookCommand}{LookCommand}());
+00024         commands.put(\textcolor{stringliteral}{"take"}, \textcolor{keyword}{new} \hyperlink{classTakeCommand}{TakeCommand}());
+00025         commands.put(\textcolor{stringliteral}{"drop"}, \textcolor{keyword}{new} \hyperlink{classDropCommand}{DropCommand}());
+00026         commands.put(\textcolor{stringliteral}{"inventory"}, \textcolor{keyword}{new} \hyperlink{classInventoryCommand}{InventoryCommand}());
+00027         commands.put(\textcolor{stringliteral}{"eat"}, \textcolor{keyword}{new} \hyperlink{classEatCommand}{EatCommand}());
+00028         commands.put(\textcolor{stringliteral}{"test"}, \textcolor{keyword}{new} \hyperlink{classTestCommand}{TestCommand}());
+00029         commands.put(\textcolor{stringliteral}{"quit"}, \textcolor{keyword}{new} \hyperlink{classQuitCommand}{QuitCommand}());
+00030         commands.put(\textcolor{stringliteral}{"help"}, \textcolor{keyword}{new} \hyperlink{classHelpCommand}{HelpCommand}());
+00031         commands.put(\textcolor{stringliteral}{"credits"}, \textcolor{keyword}{new} \hyperlink{classCreditsCommand}{CreditsCommand}());
+00032     \}
+00033 
+\hypertarget{CommandWords_8java_source_l00039}{}\hyperlink{classCommandWords_a646ed94a6d8d190b7cc445378ee2306e}{00039}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classCommandWords_a646ed94a6d8d190b7cc445378ee2306e}{isCommand}(String command) \{
+00040         \textcolor{keywordflow}{return} commands.containsKey(command);
+00041     \}
+00042 
+\hypertarget{CommandWords_8java_source_l00047}{}\hyperlink{classCommandWords_aa26f54985e39543739e0ae291dcdb8f1}{00047}     \textcolor{keyword}{public} String \hyperlink{classCommandWords_aa26f54985e39543739e0ae291dcdb8f1}{getCommandList}() \{
+00048         String commandsString = \textcolor{stringliteral}{""};
+00049         Iterator<String> it = commands.keySet().iterator();
+00050         \textcolor{keywordflow}{while}(it.hasNext()) \{
+00051             String command = it.next();
+00052             commandsString += command + ((it.hasNext())? \textcolor{stringliteral}{", "} : \textcolor{stringliteral}{"."});
+00053         \}
+00054         \textcolor{keywordflow}{return} commandsString;
+00055     \}
+00056 
+\hypertarget{CommandWords_8java_source_l00062}{}\hyperlink{classCommandWords_af89bc564e4cf32021721ca44f46de6cb}{00062}     \textcolor{keyword}{public} \hyperlink{classCommand}{Command} \hyperlink{classCommandWords_af89bc564e4cf32021721ca44f46de6cb}{getCommand}(String commandWord)
+00063     \{
+00064         \textcolor{keywordflow}{return} commands.get(commandWord);
+00065     \}
+00066 \}
+00067 
 \end{DoxyCode}

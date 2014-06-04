@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['image',['image',['../classUserInterface.html#a0d115eb19b54f3e002ec6aa0fcfb1db4',1,'UserInterface']]],
-  ['imagename',['imageName',['../classRoom.html#a3ddf7c120b54509c43d803d2409158fc',1,'Room']]]
+  ['help',['HELP',['../enumCommandWord.html#a8689456b5990b4dfa2c69427a862784d',1,'CommandWord']]],
+  ['helpcount',['helpCount',['../classGameEngine.html#a308a9926d553d53cb4c56c28588f6c62',1,'GameEngine.helpCount()'],['../classHelpCommand.html#a43be62a6791ea374e55433d33447124d',1,'HelpCommand.helpCount()']]]
 ];

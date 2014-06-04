@@ -1,6 +1,7 @@
 
 /**
  * Class used to handle an item contained in a Room.
+ * @author Rémi Nicole
  */
 public class Item {
 
@@ -21,8 +22,9 @@ public class Item {
 
 	/**
 	 * Item class constructor.
-	 * @param description Description of the item
+	 * @param name Name of the item
 	 * @param weight Weight of the item
+	 * @param description Description of the item
 	 */
 	public Item(String name, int weight, String description) {
 		this.name = name;
@@ -32,6 +34,7 @@ public class Item {
 
 	/**
 	 * name field getter.
+	 * @return The name of the item
 	 */
 	public String getName() {
 		return name;
@@ -39,6 +42,7 @@ public class Item {
 
 	/**
 	 * weight field getter.
+	 * @return The weight of the item
 	 */
 	public int getWeight() {
 		return weight;
@@ -46,6 +50,7 @@ public class Item {
 
 	/**
 	 * description field getter.
+	 * @return The description of the item
 	 */
 	public String getDescription() {
 		return description;

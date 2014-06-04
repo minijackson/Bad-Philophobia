@@ -8,7 +8,7 @@ Inheritance diagram for User\-Interface\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=182pt]{classUserInterface__inherit__graph}
+\includegraphics[width=190pt]{classUserInterface__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -18,13 +18,15 @@ Collaboration diagram for User\-Interface\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=182pt]{classUserInterface__coll__graph}
+\includegraphics[width=190pt]{classUserInterface__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classUserInterface_a3afe416f3ee335fec8bc815d382c3874}{User\-Interface} (\hyperlink{classGameEngine}{Game\-Engine} game\-Engine)
+\item 
+void \hyperlink{classUserInterface_ad12f31e49e7ed0904bc51ad330e55147}{set\-Commands\-Left} (int commands\-Left)
 \item 
 void \hyperlink{classUserInterface_a7a0de5ce2b0e0d25ba6573e87c63c1de}{print} (String text)
 \item 
@@ -63,14 +65,14 @@ Definition at line \hyperlink{UserInterface_8java_source_l00011}{11} of file \hy
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{UserInterface_8java_source_l00042}{42} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+Definition at line \hyperlink{UserInterface_8java_source_l00047}{47} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 \begin{DoxyCode}
-00042                                                 \{
-00043         engine = gameEngine;
-00044         createGUI();
-00045     \}
+00047                                                 \{
+00048         engine = gameEngine;
+00049         createGUI();
+00050     \}
 \end{DoxyCode}
 
 
@@ -84,30 +86,30 @@ Definition at line \hyperlink{UserInterface_8java_source_l00042}{42} of file \hy
 )}}\label{classUserInterface_a0a1ee40a4dbca4aeee002c3d0537c7d5}
 Actionlistener for the textfield. 
 \begin{DoxyParams}{Parameters}
-{\em e} & Event. \\
+{\em e} & Event \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{UserInterface_8java_source_l00161}{161} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+Definition at line \hyperlink{UserInterface_8java_source_l00182}{182} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 \begin{DoxyCode}
-00161                                                \{
-00162         \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"↑"})) \{
-00163             engine.processCommand(\textcolor{stringliteral}{"go north"});
-00164         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"↓"})) \{
-00165             engine.processCommand(\textcolor{stringliteral}{"go south"});
-00166         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"←"})) \{
-00167             engine.processCommand(\textcolor{stringliteral}{"go west"});
-00168         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"→"})) \{
-00169             engine.processCommand(\textcolor{stringliteral}{"go east"});
-00170         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"?"})) \{
-00171             engine.processCommand(\textcolor{stringliteral}{"help"});
-00172         \} \textcolor{keywordflow}{else} \{
-00173             processCommand();
-00174         \}
-00175     \}
+00182                                                \{
+00183         \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"↑"})) \{
+00184             engine.processCommand(\textcolor{stringliteral}{"go north"});
+00185         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"↓"})) \{
+00186             engine.processCommand(\textcolor{stringliteral}{"go south"});
+00187         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"←"})) \{
+00188             engine.processCommand(\textcolor{stringliteral}{"go west"});
+00189         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"→"})) \{
+00190             engine.processCommand(\textcolor{stringliteral}{"go east"});
+00191         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(e.getActionCommand().equals(\textcolor{stringliteral}{"?"})) \{
+00192             engine.processCommand(\textcolor{stringliteral}{"help"});
+00193         \} \textcolor{keywordflow}{else} \{
+00194             processCommand();
+00195         \}
+00196     \}
 \end{DoxyCode}
 \hypertarget{classUserInterface_ab9e499c6c847d52c8753f08d62f1adfc}{\index{User\-Interface@{User\-Interface}!enable@{enable}}
 \index{enable@{enable}!UserInterface@{User\-Interface}}
@@ -117,16 +119,21 @@ Definition at line \hyperlink{UserInterface_8java_source_l00161}{161} of file \h
 \end{DoxyParamCaption}
 )}}\label{classUserInterface_ab9e499c6c847d52c8753f08d62f1adfc}
 Enable or disable the input field. 
+\begin{DoxyParams}{Parameters}
+{\em on} & True to activate, False to deactivate \\
+\hline
+\end{DoxyParams}
 
-Definition at line \hyperlink{UserInterface_8java_source_l00083}{83} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+
+Definition at line \hyperlink{UserInterface_8java_source_l00097}{97} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 \begin{DoxyCode}
-00083                                    \{
-00084         entryField.setEditable(on);
-00085         \textcolor{keywordflow}{if}(!on)
-00086             entryField.getCaret().setBlinkRate(0);
-00087     \}
+00097                                    \{
+00098         entryField.setEditable(on);
+00099         \textcolor{keywordflow}{if}(!on)
+00100             entryField.getCaret().setBlinkRate(0);
+00101     \}
 \end{DoxyCode}
 \hypertarget{classUserInterface_a7a0de5ce2b0e0d25ba6573e87c63c1de}{\index{User\-Interface@{User\-Interface}!print@{print}}
 \index{print@{print}!UserInterface@{User\-Interface}}
@@ -137,19 +144,19 @@ Definition at line \hyperlink{UserInterface_8java_source_l00083}{83} of file \hy
 )}}\label{classUserInterface_a7a0de5ce2b0e0d25ba6573e87c63c1de}
 Print the given text in the text area. 
 \begin{DoxyParams}{Parameters}
-{\em text} & Text to display. \\
+{\em text} & Text to display \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{UserInterface_8java_source_l00051}{51} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+Definition at line \hyperlink{UserInterface_8java_source_l00064}{64} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 \begin{DoxyCode}
-00051                                    \{
-00052         log.append(text);
-00053         log.setCaretPosition(log.getDocument().getLength());
-00054     \}
+00064                                    \{
+00065         log.append(text);
+00066         log.setCaretPosition(log.getDocument().getLength());
+00067     \}
 \end{DoxyCode}
 \hypertarget{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}{\index{User\-Interface@{User\-Interface}!println@{println}}
 \index{println@{println}!UserInterface@{User\-Interface}}
@@ -160,23 +167,23 @@ Definition at line \hyperlink{UserInterface_8java_source_l00051}{51} of file \hy
 )}}\label{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}
 Print the given text plus a newline in the text area. 
 \begin{DoxyParams}{Parameters}
-{\em text} & Text to display. \\
+{\em text} & Text to display \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{UserInterface_8java_source_l00060}{60} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+Definition at line \hyperlink{UserInterface_8java_source_l00073}{73} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 
-Referenced by \hyperlink{GameEngine_8java_source_l00143}{Game\-Engine.\-process\-Command()}.
+Referenced by \hyperlink{GameEngine_8java_source_l00167}{Game\-Engine.\-process\-Command()}.
 
 
 \begin{DoxyCode}
-00060                                      \{
-00061         log.append(text + \textcolor{stringliteral}{"\(\backslash\)n"});
-00062         log.setCaretPosition(log.getDocument().getLength());
-00063     \}
+00073                                      \{
+00074         log.append(text + \textcolor{stringliteral}{"\(\backslash\)n"});
+00075         log.setCaretPosition(log.getDocument().getLength());
+00076     \}
 \end{DoxyCode}
 
 
@@ -190,6 +197,28 @@ Here is the caller graph for this function\-:
 \end{figure}
 
 
+\hypertarget{classUserInterface_ad12f31e49e7ed0904bc51ad330e55147}{\index{User\-Interface@{User\-Interface}!set\-Commands\-Left@{set\-Commands\-Left}}
+\index{set\-Commands\-Left@{set\-Commands\-Left}!UserInterface@{User\-Interface}}
+\subsubsection[{set\-Commands\-Left}]{\setlength{\rightskip}{0pt plus 5cm}void User\-Interface.\-set\-Commands\-Left (
+\begin{DoxyParamCaption}
+\item[{int}]{commands\-Left}
+\end{DoxyParamCaption}
+)}}\label{classUserInterface_ad12f31e49e7ed0904bc51ad330e55147}
+Change the text for the commands left J\-Label 
+\begin{DoxyParams}{Parameters}
+{\em commands\-Left} & The number of commands left \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{UserInterface_8java_source_l00056}{56} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+
+
+\begin{DoxyCode}
+00056                                                   \{
+00057         commandsLeftLabel.setText(\textcolor{stringliteral}{" Commands left: "} + commandsLeft + \textcolor{stringliteral}{"  "});
+00058     \}
+\end{DoxyCode}
 \hypertarget{classUserInterface_ab793a0f12878c698ba3e1720a9f86f3b}{\index{User\-Interface@{User\-Interface}!show\-Image@{show\-Image}}
 \index{show\-Image@{show\-Image}!UserInterface@{User\-Interface}}
 \subsubsection[{show\-Image}]{\setlength{\rightskip}{0pt plus 5cm}void User\-Interface.\-show\-Image (
@@ -199,25 +228,25 @@ Here is the caller graph for this function\-:
 )}}\label{classUserInterface_ab793a0f12878c698ba3e1720a9f86f3b}
 Show the image corresponding to the path of the image. 
 \begin{DoxyParams}{Parameters}
-{\em image\-Name} & The path of the image. \\
+{\em image\-Name} & The path of the image \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{UserInterface_8java_source_l00069}{69} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+Definition at line \hyperlink{UserInterface_8java_source_l00082}{82} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
 
 
 \begin{DoxyCode}
-00069                                             \{
-00070         URL imageURL = this.getClass().getClassLoader().getResource(imageName);
-00071         \textcolor{keywordflow}{if}(imageURL == null)
-00072             System.out.println(\textcolor{stringliteral}{"image not found"});
-00073         \textcolor{keywordflow}{else} \{
-00074             ImageIcon icon = \textcolor{keyword}{new} ImageIcon(imageURL);
-00075             image.setIcon(icon);
-00076             myFrame.pack();
-00077         \}
-00078     \}
+00082                                             \{
+00083         URL imageURL = this.getClass().getClassLoader().getResource(imageName);
+00084         \textcolor{keywordflow}{if}(imageURL == null)
+00085             System.out.println(\textcolor{stringliteral}{"image not found"});
+00086         \textcolor{keywordflow}{else} \{
+00087             ImageIcon icon = \textcolor{keyword}{new} ImageIcon(imageURL);
+00088             image.setIcon(icon);
+00089             myFrame.pack();
+00090         \}
+00091     \}
 \end{DoxyCode}
 
 

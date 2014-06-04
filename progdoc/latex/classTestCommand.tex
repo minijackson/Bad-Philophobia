@@ -1,0 +1,169 @@
+\hypertarget{classTestCommand}{\section{Test\-Command Class Reference}
+\label{classTestCommand}\index{Test\-Command@{Test\-Command}}
+}
+
+
+class \hyperlink{classTestCommand}{Test\-Command} used to test series of commands  
+
+
+
+
+Inheritance diagram for Test\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classTestCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Test\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classTestCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTestCommand_a562eaa3c455e0be709b1caa02c9044e6}{Test\-Command} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classTestCommand}{Test\-Command}. \end{DoxyCompactList}\item 
+boolean \hyperlink{classTestCommand_a2c5d98451d5cedb9297caae17378de63}{execute} (\hyperlink{classPlayer}{Player} player)  throws No\-Argument\-Exception,\-Illegal\-Argument\-Exception 
+\begin{DoxyCompactList}\small\item\em Test series of Commands stored in a .test file and store the messages in the message field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+class \hyperlink{classTestCommand}{Test\-Command} used to test series of commands 
+
+\begin{DoxyAuthor}{Author}
+Rémi Nicole 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{TestCommand_8java_source_l00009}{9} of file \hyperlink{TestCommand_8java_source}{Test\-Command.\-java}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTestCommand_a562eaa3c455e0be709b1caa02c9044e6}{\index{Test\-Command@{Test\-Command}!Test\-Command@{Test\-Command}}
+\index{Test\-Command@{Test\-Command}!TestCommand@{Test\-Command}}
+\subsubsection[{Test\-Command}]{\setlength{\rightskip}{0pt plus 5cm}Test\-Command.\-Test\-Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classTestCommand_a562eaa3c455e0be709b1caa02c9044e6}
+
+
+Constructor for \hyperlink{classTestCommand}{Test\-Command}. 
+
+
+
+Definition at line \hyperlink{TestCommand_8java_source_l00014}{14} of file \hyperlink{TestCommand_8java_source}{Test\-Command.\-java}.
+
+
+\begin{DoxyCode}
+00014                         \{
+00015 
+00016     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classTestCommand_a2c5d98451d5cedb9297caae17378de63}{\index{Test\-Command@{Test\-Command}!execute@{execute}}
+\index{execute@{execute}!TestCommand@{Test\-Command}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}boolean Test\-Command.\-execute (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{player}
+\end{DoxyParamCaption}
+) throws {\bf No\-Argument\-Exception},{\bf Illegal\-Argument\-Exception}}}\label{classTestCommand_a2c5d98451d5cedb9297caae17378de63}
+
+
+Test series of Commands stored in a .test file and store the messages in the message field. 
+
+Each command in the test file must be separated by an end-\/of-\/line character 
+\begin{DoxyParams}{Parameters}
+{\em player} & The player that called this command \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classNoArgumentException}{No\-Argument\-Exception}} & When the user typed the command without parameter \\
+\hline
+{\em \hyperlink{classIllegalArgumentException}{Illegal\-Argument\-Exception}} & When the user typed a name other than any of the .test files in the directory \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+False because it is not the quit command 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{TestCommand_8java_source_l00026}{26} of file \hyperlink{TestCommand_8java_source}{Test\-Command.\-java}.
+
+
+
+References \hyperlink{Command_8java_source_l00057}{Command.\-get\-Message()}, \hyperlink{Command_8java_source_l00025}{Command.\-get\-Parameter()}, \hyperlink{Command_8java_source_l00041}{Command.\-has\-Parameter()}, and \hyperlink{Command_8java_source_l00049}{Command.\-set\-Message()}.
+
+
+\begin{DoxyCode}
+00026                                                                                               \{
+00027         \hyperlink{classCommand_a715709d8f0ab65879d79ad1725c96f17}{setMessage}(\textcolor{stringliteral}{""});
+00028         \textcolor{keywordflow}{if}(\hyperlink{classCommand_a9b042558156d6749566e0fd9d48d3bfe}{hasParameter}()) \{
+00029             \textcolor{keywordflow}{try} \{
+00030                 Scanner s = \textcolor{keyword}{new} Scanner(\textcolor{keyword}{new} File(\hyperlink{classCommand_a1ced3739d546770ba1389e6ce228255e}{getParameter}() + \textcolor{stringliteral}{".test"}));
+00031                 \textcolor{keywordflow}{while} (s.hasNextLine()) \{
+00032 
+00033                     String commandLine = s.nextLine();
+00034                     \hyperlink{classCommand}{Command} testedCommand = Parser.getCommand(commandLine);
+00035 
+00036                     \textcolor{keywordflow}{try} \{
+00037 
+00038                         testedCommand.execute(player);
+00039                         \textcolor{keywordflow}{if}(testedCommand.hasMessage())
+00040                             \hyperlink{classCommand_a715709d8f0ab65879d79ad1725c96f17}{setMessage}(\hyperlink{classCommand_ac3d4abebefb2aea0ce9757bf9c356882}{getMessage}() + \textcolor{stringliteral}{"\(\backslash\)n"} + \textcolor{stringliteral}{"Command: "} + commandLine 
+      + \textcolor{stringliteral}{"\(\backslash\)n"}
+00041                                     + testedCommand.getMessage());
+00042 
+00043                     \} \textcolor{keywordflow}{catch} (\hyperlink{classNoArgumentException}{NoArgumentException} e) \{
+00044                         \hyperlink{classCommand_a715709d8f0ab65879d79ad1725c96f17}{setMessage}(\hyperlink{classCommand_ac3d4abebefb2aea0ce9757bf9c356882}{getMessage}() + \textcolor{stringliteral}{"\(\backslash\)n"} + \textcolor{stringliteral}{"Command: "} + commandLine + \textcolor{stringliteral}{"
+      \(\backslash\)n"}
+00045                                 + e.getMessage());
+00046                     \} \textcolor{keywordflow}{catch} (\hyperlink{classIllegalArgumentException}{IllegalArgumentException} e) \{
+00047                         \hyperlink{classCommand_a715709d8f0ab65879d79ad1725c96f17}{setMessage}(\hyperlink{classCommand_ac3d4abebefb2aea0ce9757bf9c356882}{getMessage}() + \textcolor{stringliteral}{"\(\backslash\)n"} + \textcolor{stringliteral}{"Command: "} + commandLine + \textcolor{stringliteral}{"
+      \(\backslash\)n"}
+00048                                 + e.getMessage());
+00049                     \} \textcolor{keywordflow}{catch}(\hyperlink{classUnauthorizedException}{UnauthorizedException} e)  \{
+00050                         \hyperlink{classCommand_a715709d8f0ab65879d79ad1725c96f17}{setMessage}(\hyperlink{classCommand_ac3d4abebefb2aea0ce9757bf9c356882}{getMessage}() + \textcolor{stringliteral}{"\(\backslash\)n"} + \textcolor{stringliteral}{"Command: "} + commandLine + \textcolor{stringliteral}{"
+      \(\backslash\)n"}
+00051                                 + e.getMessage());
+00052                     \}
+00053                 \}
+00054                 s.close();
+00055             \} \textcolor{keywordflow}{catch}(FileNotFoundException e) \{
+00056                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classIllegalArgumentException}{IllegalArgumentException}(\textcolor{stringliteral}{"No such test"});
+00057             \}
+00058         \} \textcolor{keywordflow}{else}
+00059             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classNoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"What do you want to test?"});
+00060         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00061     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTestCommand_a2c5d98451d5cedb9297caae17378de63_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{TestCommand_8java}{Test\-Command.\-java}\end{DoxyCompactItemize}

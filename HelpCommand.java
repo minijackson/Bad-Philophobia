@@ -1,9 +1,15 @@
 /**
- * class HelpCommand
+ * class HelpCommand used to print the help
  * @author Rémi Nicole
  */
 public class HelpCommand extends Command {
 
+	/**
+	 * Help query counter.
+	 * It is equal to 0 if the user did not ask for help,
+	 * 1 if the user asked once the help and
+	 * 2 if the user asked twice or more for the help
+	 */
 	private int helpCount;
 
 	/**
@@ -13,6 +19,12 @@ public class HelpCommand extends Command {
 		helpCount = 0;
 	}
 
+	/**
+	 * Saves user's help in the parameter field.
+	 * It really shows help if the user asked for more than once the help.
+	 * @param player The player that called this command
+	 * @return False because it is not the quit command
+	 */
 	public boolean execute(Player player) {
 		setMessage("");
 		if(helpCount == 0) {

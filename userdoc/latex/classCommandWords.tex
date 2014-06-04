@@ -16,21 +16,21 @@ Collaboration diagram for Command\-Words\-:
 \item 
 \hyperlink{classCommandWords_a2d8c096723adb3f822cc001bccd92ed7}{Command\-Words} ()
 \item 
-boolean \hyperlink{classCommandWords_a98619d278b3fa23fed18b5834f9d20a8}{is\-Command} (String a\-String)
+boolean \hyperlink{classCommandWords_a646ed94a6d8d190b7cc445378ee2306e}{is\-Command} (String command)
 \item 
 String \hyperlink{classCommandWords_aa26f54985e39543739e0ae291dcdb8f1}{get\-Command\-List} ()
+\item 
+Command \hyperlink{classCommandWords_af89bc564e4cf32021721ca44f46de6cb}{get\-Command} (String command\-Word)
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Class used to verify the commands given by the user. It contains all known commands and can verify if a String is a known command.
-
-\begin{DoxyAuthor}{Author}
+Class used to verify the commands given by the user. It contains all known commands and can verify if a String is a known command. \begin{DoxyAuthor}{Author}
 Rémi N\-I\-C\-O\-L\-E 
 \end{DoxyAuthor}
 
 
-Definition at line \hyperlink{CommandWords_8java_source_l00009}{9} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
+Definition at line \hyperlink{CommandWords_8java_source_l00011}{11} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
 
 
 
@@ -44,17 +44,54 @@ Definition at line \hyperlink{CommandWords_8java_source_l00009}{9} of file \hype
 )}}\label{classCommandWords_a2d8c096723adb3f822cc001bccd92ed7}
 \hyperlink{classCommandWords}{Command\-Words} class constructor. 
 
-Definition at line \hyperlink{CommandWords_8java_source_l00021}{21} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
+Definition at line \hyperlink{CommandWords_8java_source_l00018}{18} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
 
 
 \begin{DoxyCode}
-00021                           \{
-00022 
-00023     \}
+00018                           \{
+00019         commands = \textcolor{keyword}{new} HashMap<String, Command>();
+00020         commands.put(\textcolor{stringliteral}{"go"}, \textcolor{keyword}{new} \hyperlink{classGoCommand}{GoCommand}());
+00021         commands.put(\textcolor{stringliteral}{"back"}, \textcolor{keyword}{new} \hyperlink{classBackCommand}{BackCommand}());
+00022         commands.put(\textcolor{stringliteral}{"beamer"}, \textcolor{keyword}{new} \hyperlink{classBeamerCommand}{BeamerCommand}());
+00023         commands.put(\textcolor{stringliteral}{"look"}, \textcolor{keyword}{new} \hyperlink{classLookCommand}{LookCommand}());
+00024         commands.put(\textcolor{stringliteral}{"take"}, \textcolor{keyword}{new} \hyperlink{classTakeCommand}{TakeCommand}());
+00025         commands.put(\textcolor{stringliteral}{"drop"}, \textcolor{keyword}{new} \hyperlink{classDropCommand}{DropCommand}());
+00026         commands.put(\textcolor{stringliteral}{"inventory"}, \textcolor{keyword}{new} \hyperlink{classInventoryCommand}{InventoryCommand}());
+00027         commands.put(\textcolor{stringliteral}{"eat"}, \textcolor{keyword}{new} \hyperlink{classEatCommand}{EatCommand}());
+00028         commands.put(\textcolor{stringliteral}{"test"}, \textcolor{keyword}{new} \hyperlink{classTestCommand}{TestCommand}());
+00029         commands.put(\textcolor{stringliteral}{"quit"}, \textcolor{keyword}{new} \hyperlink{classQuitCommand}{QuitCommand}());
+00030         commands.put(\textcolor{stringliteral}{"help"}, \textcolor{keyword}{new} \hyperlink{classHelpCommand}{HelpCommand}());
+00031         commands.put(\textcolor{stringliteral}{"credits"}, \textcolor{keyword}{new} \hyperlink{classCreditsCommand}{CreditsCommand}());
+00032     \}
 \end{DoxyCode}
 
 
 \subsection{Member Function Documentation}
+\hypertarget{classCommandWords_af89bc564e4cf32021721ca44f46de6cb}{\index{Command\-Words@{Command\-Words}!get\-Command@{get\-Command}}
+\index{get\-Command@{get\-Command}!CommandWords@{Command\-Words}}
+\subsubsection[{get\-Command}]{\setlength{\rightskip}{0pt plus 5cm}Command Command\-Words.\-get\-Command (
+\begin{DoxyParamCaption}
+\item[{String}]{command\-Word}
+\end{DoxyParamCaption}
+)}}\label{classCommandWords_af89bc564e4cf32021721ca44f46de6cb}
+Find the \hyperlink{enumCommandWord}{Command\-Word} associated with a command word. 
+\begin{DoxyParams}{Parameters}
+{\em command\-Word} & The word to look up. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Command correspondng to command\-Word, or null if it is not a valid command word. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{CommandWords_8java_source_l00062}{62} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
+
+
+\begin{DoxyCode}
+00063     \{
+00064         \textcolor{keywordflow}{return} commands.get(commandWord);
+00065     \}
+\end{DoxyCode}
 \hypertarget{classCommandWords_aa26f54985e39543739e0ae291dcdb8f1}{\index{Command\-Words@{Command\-Words}!get\-Command\-List@{get\-Command\-List}}
 \index{get\-Command\-List@{get\-Command\-List}!CommandWords@{Command\-Words}}
 \subsubsection[{get\-Command\-List}]{\setlength{\rightskip}{0pt plus 5cm}String Command\-Words.\-get\-Command\-List (
@@ -62,57 +99,50 @@ Definition at line \hyperlink{CommandWords_8java_source_l00021}{21} of file \hyp
 {}
 \end{DoxyParamCaption}
 )}}\label{classCommandWords_aa26f54985e39543739e0ae291dcdb8f1}
-Getter for the known\-Commands field. 
+Getter for the known\-Commands field. \begin{DoxyReturn}{Returns}
+The list of available commands 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{CommandWords_8java_source_l00047}{47} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
+
+
+\begin{DoxyCode}
+00047                                    \{
+00048         String commandsString = \textcolor{stringliteral}{""};
+00049         Iterator<String> it = commands.keySet().iterator();
+00050         \textcolor{keywordflow}{while}(it.hasNext()) \{
+00051             String command = it.next();
+00052             commandsString += command + ((it.hasNext())? \textcolor{stringliteral}{", "} : \textcolor{stringliteral}{"."});
+00053         \}
+00054         \textcolor{keywordflow}{return} commandsString;
+00055     \}
+\end{DoxyCode}
+\hypertarget{classCommandWords_a646ed94a6d8d190b7cc445378ee2306e}{\index{Command\-Words@{Command\-Words}!is\-Command@{is\-Command}}
+\index{is\-Command@{is\-Command}!CommandWords@{Command\-Words}}
+\subsubsection[{is\-Command}]{\setlength{\rightskip}{0pt plus 5cm}boolean Command\-Words.\-is\-Command (
+\begin{DoxyParamCaption}
+\item[{String}]{command}
+\end{DoxyParamCaption}
+)}}\label{classCommandWords_a646ed94a6d8d190b7cc445378ee2306e}
+Check if the command is known. 
+\begin{DoxyParams}{Parameters}
+{\em command} & The command to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if and only if the command is known. 
+\end{DoxyReturn}
+
 
 Definition at line \hyperlink{CommandWords_8java_source_l00039}{39} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
 
 
 \begin{DoxyCode}
-00039                                    \{
-00040         StringBuilder commands = \textcolor{keyword}{new} StringBuilder();
-00041         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < knownCommands.length; i++) \{
-00042             commands.append( knownCommands[i] + \textcolor{stringliteral}{"  "} );
-00043         \}
-00044         \textcolor{keywordflow}{return} commands.toString();
-00045     \}
+00039                                              \{
+00040         \textcolor{keywordflow}{return} commands.containsKey(command);
+00041     \}
 \end{DoxyCode}
-\hypertarget{classCommandWords_a98619d278b3fa23fed18b5834f9d20a8}{\index{Command\-Words@{Command\-Words}!is\-Command@{is\-Command}}
-\index{is\-Command@{is\-Command}!CommandWords@{Command\-Words}}
-\subsubsection[{is\-Command}]{\setlength{\rightskip}{0pt plus 5cm}boolean Command\-Words.\-is\-Command (
-\begin{DoxyParamCaption}
-\item[{String}]{a\-String}
-\end{DoxyParamCaption}
-)}}\label{classCommandWords_a98619d278b3fa23fed18b5834f9d20a8}
-Return true if and only if the command is known. 
-
-Definition at line \hyperlink{CommandWords_8java_source_l00028}{28} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
-
-
-
-Referenced by \hyperlink{Parser_8java_source_l00026}{Parser.\-get\-Command()}.
-
-
-\begin{DoxyCode}
-00028                                              \{
-00029         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < knownCommands.length; i++) \{
-00030             \textcolor{keywordflow}{if}(knownCommands[i].equals(aString))
-00031                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-00032         \}
-00033         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-00034     \}
-\end{DoxyCode}
-
-
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classCommandWords_a98619d278b3fa23fed18b5834f9d20a8_icgraph}
-\end{center}
-\end{figure}
-
-
 
 
 The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}

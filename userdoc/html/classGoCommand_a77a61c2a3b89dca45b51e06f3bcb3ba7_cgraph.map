@@ -1,0 +1,4 @@
+<map id="GoCommand.execute" name="GoCommand.execute">
+<area shape="rect" id="node2" href="$classGoCommand.html#a1fce2ad8ed1faf41fa300064585b3616" title="GoCommand.goRoomCheck" alt="" coords="203,5,394,32"/>
+<area shape="rect" id="node3" href="$classGoCommand.html#a3149bf695c19b78c39cfc4dadece7846" title="GoCommand.goRoomNoCheck" alt="" coords="443,5,650,32"/>
+</map>

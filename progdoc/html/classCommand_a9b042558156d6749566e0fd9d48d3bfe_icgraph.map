@@ -1,0 +1,9 @@
+<map id="Command.hasParameter" name="Command.hasParameter">
+<area shape="rect" id="node2" href="$classLookCommand.html#a3b67eafb4956b1369904b273303ee7df" title="Saves the information about the current Room or a given Item in the message field. " alt="" coords="231,5,391,32"/>
+<area shape="rect" id="node3" href="$classDropCommand.html#a52432de0841ff8eb85d4f115965aecd1" title="Drop the Item through it&#39;s name in the parameter field. " alt="" coords="231,56,391,83"/>
+<area shape="rect" id="node4" href="$classGoCommand.html#a77a61c2a3b89dca45b51e06f3bcb3ba7" title="Make the player go to the Room through it&#39;s direction in the parameter field. " alt="" coords="236,107,385,133"/>
+<area shape="rect" id="node5" href="$classTakeCommand.html#af316002e14bb3253d24bcb03282213ee" title="Make the player take an Item. " alt="" coords="230,157,391,184"/>
+<area shape="rect" id="node6" href="$classEatCommand.html#ab78ece6b005359a83696998a37f0ae71" title="Make the player eat an object. " alt="" coords="235,208,387,235"/>
+<area shape="rect" id="node7" href="$classBeamerCommand.html#ab28a7d743569841e463b2c0c65cf6eb1" title="Teleport to the remembered room or remember a room. " alt="" coords="222,259,399,285"/>
+<area shape="rect" id="node8" href="$classTestCommand.html#a2c5d98451d5cedb9297caae17378de63" title="Test series of Commands stored in a .test file and store the messages in the message field..." alt="" coords="231,309,390,336"/>
+</map>

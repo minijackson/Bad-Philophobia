@@ -43,6 +43,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -74,7 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,242 +90,196 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="GameEngine_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">import</span> java.util.Scanner;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">import</span> java.util.Stack;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classGameEngine.html">   11</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classGameEngine.html">GameEngine</a></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">private</span> <a class="code" href="classParser.html">Parser</a> parser;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">private</span> <a class="code" href="classRoom.html">Room</a> currentRoom;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">private</span> Stack&lt;Room&gt; previousRooms;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">private</span> <a class="code" href="classUserInterface.html">UserInterface</a> gui;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span> helpCount;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classGameEngine.html#a9e8a92f5021a34293060f9aaff4005de">   44</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classGameEngine.html#a9e8a92f5021a34293060f9aaff4005de">GameEngine</a>() {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        parser = <span class="keyword">new</span> <a class="code" href="classParser.html">Parser</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        createRooms();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        previousRooms = <span class="keyword">new</span> Stack&lt;Room&gt;();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        helpCount = 0;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classGameEngine.html#aec901a5b590b3cd204f196165da5dfb6">   55</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classGameEngine.html#aec901a5b590b3cd204f196165da5dfb6">setGUI</a>(<a class="code" href="classUserInterface.html">UserInterface</a> userInterface) {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        gui = userInterface;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        printWelcome();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> printWelcome() {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        gui.println(<span class="stringliteral">&quot;Greetings human.&quot;</span>);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        gui.println(<span class="stringliteral">&quot;I see the assassins have failed. Too bad...&quot;</span>);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        gui.println(<span class="stringliteral">&quot;You know what they say: if you want something done, do it yourself.&quot;</span>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        gui.println(<span class="stringliteral">&quot;At least I can see that you don&#39;t remember anything. At last something that I can take advantage of.&quot;</span>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        gui.println(<span class="stringliteral">&quot;That was predictable, human minds are weak.&quot;</span>);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        gui.println(<span class="stringliteral">&quot;\nBecause you&#39;re stupid, I will describe you everything that will be around us.&quot;</span>);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        gui.println(<span class="stringliteral">&quot;Who knows ? Maybe you can turn into something useful. One day. Maybe.&quot;</span>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        gui.println(currentRoom.getLongDescription());</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        gui.showImage(currentRoom.getImageName());</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> createRooms() {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">// create the rooms</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="classRoom.html">Room</a> temperateBroadleaf = <span class="keyword">new</span> <a class="code" href="classRoom.html">Room</a>(<span class="stringliteral">&quot;in temperate forest&quot;</span>, <span class="stringliteral">&quot;temperatebroadleaf.jpg&quot;</span>);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        temperateBroadleaf.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;wand&quot;</span>, 3, <span class="stringliteral">&quot;just an ordinary wand&quot;</span>));</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="classRoom.html">Room</a> taiga = <span class="keyword">new</span> <a class="code" href="classRoom.html">Room</a>(<span class="stringliteral">&quot;in a boreal forest&quot;</span>, <span class="stringliteral">&quot;taiga.jpg&quot;</span>);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        taiga.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;snowball&quot;</span>, 1, <span class="stringliteral">&quot;some weirdly yellowy snowball&quot;</span>));</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        taiga.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;bird&quot;</span>, 6, <span class="stringliteral">&quot;a frozen inert black bird&quot;</span>));</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="classRoom.html">Room</a> alpineTundra = <span class="keyword">new</span> <a class="code" href="classRoom.html">Room</a>(<span class="stringliteral">&quot;on an alpine mountain&quot;</span>, <span class="stringliteral">&quot;alpinetundra.jpg&quot;</span>);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        alpineTundra.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;rock&quot;</span>, 15, <span class="stringliteral">&quot;a surprisingly solid magnificent rock&quot;</span>));</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        alpineTundra.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;plank&quot;</span>, 10, <span class="stringliteral">&quot;a plank of wood, maybe from a chalet&quot;</span>));</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        alpineTundra.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;snowball&quot;</span>, 1, <span class="stringliteral">&quot;a snowball. Yes, there is still snow in an alpine biome.&quot;</span>));</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="classRoom.html">Room</a> steppe = <span class="keyword">new</span> <a class="code" href="classRoom.html">Room</a>(<span class="stringliteral">&quot;on a vast grass plain&quot;</span>, <span class="stringliteral">&quot;steppe.jpg&quot;</span>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        steppe.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;grass&quot;</span>, 1, <span class="stringliteral">&quot;a tuft of yellowish grass. Looking at the grass made you look like stupid&quot;</span>));</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="classRoom.html">Room</a> cave = <span class="keyword">new</span> <a class="code" href="classRoom.html">Room</a>(<span class="stringliteral">&quot;inside a dark cave&quot;</span>, <span class="stringliteral">&quot;cave.jpg&quot;</span>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="classRoom.html">Room</a> polarDesert = <span class="keyword">new</span> <a class="code" href="classRoom.html">Room</a>(<span class="stringliteral">&quot;in a cold polar desert&quot;</span>, <span class="stringliteral">&quot;polardesert.jpg&quot;</span>);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        polarDesert.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;ice&quot;</span>, 5, <span class="stringliteral">&quot;a little block of ice. But you don&#39;t have any drink&quot;</span>));</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="classRoom.html">Room</a> xericShrublands = <span class="keyword">new</span> <a class="code" href="classRoom.html">Room</a>(<span class="stringliteral">&quot;in a sand desert&quot;</span>, <span class="stringliteral">&quot;xericshrublands.jpg&quot;</span>);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        xericShrublands.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;shrub&quot;</span>, 10, <span class="stringliteral">&quot;a spicky shrub. Useful if you want to make a shruberry&quot;</span>));</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="classRoom.html">Room</a> savanna = <span class="keyword">new</span> <a class="code" href="classRoom.html">Room</a>(<span class="stringliteral">&quot;in a savanna&quot;</span>, <span class="stringliteral">&quot;savanna.jpg&quot;</span>);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        savanna.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;elephant&quot;</span>, 1000, <span class="stringliteral">&quot;a huge elephant looking at you, dazed. I bet he&#39;s smarter than you&quot;</span>));</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        savanna.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;grass&quot;</span>, 1, <span class="stringliteral">&quot;a tuft of yellowish grass. You may have other things to do instead of looking at that&quot;</span>));</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="comment">// initialise room exits</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        temperateBroadleaf.setExit(<span class="stringliteral">&quot;east&quot;</span>, taiga);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        temperateBroadleaf.setExit(<span class="stringliteral">&quot;south&quot;</span>, steppe);</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> java.util.Random;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> java.io.File;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> java.io.FileNotFoundException;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classGameEngine.html">   13</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classGameEngine.html">GameEngine</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">private</span> <a class="code" href="classPlayer.html">Player</a> player;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    ArrayList&lt;Room&gt; gameRooms;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">private</span> <a class="code" href="classUserInterface.html">UserInterface</a> gui;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span> helpCount;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span> commandCountDown;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classGameEngine.html#a9e8a92f5021a34293060f9aaff4005de">   47</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classGameEngine.html#a9e8a92f5021a34293060f9aaff4005de">GameEngine</a>() {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        gameRooms = <span class="keyword">new</span> ArrayList&lt;Room&gt;();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        player = <span class="keyword">new</span> <a class="code" href="classPlayer.html">Player</a>((javax.swing.JOptionPane.showInputDialog(<span class="stringliteral">&quot;What is your name&quot;</span>).toLowerCase().equals(<span class="stringliteral">&quot;retard&quot;</span>))? <span class="stringliteral">&quot;moron&quot;</span> : <span class="stringliteral">&quot;retard&quot;</span>, createRooms());</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        javax.swing.JOptionPane.showMessageDialog(null, <span class="stringliteral">&quot;Whatever, I&#39;ll call you &quot;</span> + player.getName() + <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        helpCount = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        commandCountDown = 42;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classGameEngine.html#aec901a5b590b3cd204f196165da5dfb6">   59</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classGameEngine.html#aec901a5b590b3cd204f196165da5dfb6">setGUI</a>(<a class="code" href="classUserInterface.html">UserInterface</a> userInterface) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        gui = userInterface;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        gui.setCommandsLeft(commandCountDown);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        printWelcome();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> printWelcome() {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        gui.println(<span class="stringliteral">&quot;Greetings human.&quot;</span>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        gui.println(<span class="stringliteral">&quot;I see the assassins have failed. Too bad...&quot;</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        gui.println(<span class="stringliteral">&quot;You know what they say: if you want something done, do it yourself.&quot;</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        gui.println(<span class="stringliteral">&quot;At least I can see that you don&#39;t remember anything. At last something that I can take advantage of.&quot;</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        gui.println(<span class="stringliteral">&quot;That was predictable, human minds are weak.&quot;</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        gui.println(<span class="stringliteral">&quot;\nBecause you&#39;re stupid, I will describe you everything that will be around us.&quot;</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        gui.println(<span class="stringliteral">&quot;Who knows ? Maybe you can turn into something useful. One day. Maybe.&quot;</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        gui.println(<span class="stringliteral">&quot;\nBeware: Death is coming!\n&quot;</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        gui.println(player.getCurrentRoom().getLongDescription());</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        gui.showImage(player.getCurrentRoom().getImageName());</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">private</span> <a class="code" href="classRoom.html">Room</a> createRooms() {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">// create the rooms</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="classRoom.html">Room</a> temperateBroadleaf = <span class="keyword">new</span> <a class="code" href="classRoom.html">Room</a>(<span class="stringliteral">&quot;in temperate forest&quot;</span>, <span class="stringliteral">&quot;temperatebroadleaf.jpg&quot;</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        temperateBroadleaf.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;wand&quot;</span>, 3, <span class="stringliteral">&quot;just an ordinary wand&quot;</span>));</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="classRoom.html">Room</a> taiga = <span class="keyword">new</span> <a class="code" href="classRoom.html">Room</a>(<span class="stringliteral">&quot;in a boreal forest&quot;</span>, <span class="stringliteral">&quot;taiga.jpg&quot;</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        taiga.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;snowball&quot;</span>, 1, <span class="stringliteral">&quot;some weirdly yellowy snowball&quot;</span>));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        taiga.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;bird&quot;</span>, 6, <span class="stringliteral">&quot;a frozen inert black bird&quot;</span>));</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <a class="code" href="classRoom.html">Room</a> alpineTundra = <span class="keyword">new</span> <a class="code" href="classRoom.html">Room</a>(<span class="stringliteral">&quot;on an alpine mountain&quot;</span>, <span class="stringliteral">&quot;alpinetundra.jpg&quot;</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        alpineTundra.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;rock&quot;</span>, 15, <span class="stringliteral">&quot;a surprisingly solid magnificent rock&quot;</span>));</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        alpineTundra.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;plank&quot;</span>, 10, <span class="stringliteral">&quot;a plank of wood, maybe from a chalet&quot;</span>));</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        alpineTundra.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;snowball&quot;</span>, 1, <span class="stringliteral">&quot;a snowball. Yes, there is still snow in an alpine biome.&quot;</span>));</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="classRoom.html">Room</a> steppe = <span class="keyword">new</span> <a class="code" href="classRoom.html">Room</a>(<span class="stringliteral">&quot;on a vast grass plain&quot;</span>, <span class="stringliteral">&quot;steppe.jpg&quot;</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        steppe.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;grass&quot;</span>, 1, <span class="stringliteral">&quot;a tuft of yellowish grass. Looking at the grass made you look like stupid&quot;</span>));</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="classRoom.html">Room</a> cave = <span class="keyword">new</span> <a class="code" href="classRoom.html">Room</a>(<span class="stringliteral">&quot;inside a dark cave&quot;</span>, <span class="stringliteral">&quot;cave.jpg&quot;</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        cave.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;magiccookie&quot;</span>, 3, <span class="stringliteral">&quot;a pretend magic cookie with mould on it, probably left there for many years. The use-by date has faded out. Why not eat it?&quot;</span>));</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="classRoom.html">Room</a> polarDesert = <span class="keyword">new</span> <a class="code" href="classRoom.html">Room</a>(<span class="stringliteral">&quot;in a cold polar desert&quot;</span>, <span class="stringliteral">&quot;polardesert.jpg&quot;</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        polarDesert.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;ice&quot;</span>, 5, <span class="stringliteral">&quot;a little block of ice. But you don&#39;t have any drink&quot;</span>));</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="classRoom.html">Room</a> xericShrublands = <span class="keyword">new</span> <a class="code" href="classRoom.html">Room</a>(<span class="stringliteral">&quot;in a sand desert&quot;</span>, <span class="stringliteral">&quot;xericshrublands.jpg&quot;</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        xericShrublands.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;shrub&quot;</span>, 10, <span class="stringliteral">&quot;a spicky shrub. Useful if you want to make a shruberry&quot;</span>));</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        taiga.setExit(<span class="stringliteral">&quot;west&quot;</span>, temperateBroadleaf);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        taiga.setExit(<span class="stringliteral">&quot;east&quot;</span>, alpineTundra);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        taiga.setExit(<span class="stringliteral">&quot;south&quot;</span>, cave);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="classRoom.html">Room</a> savanna = <span class="keyword">new</span> <a class="code" href="classRoom.html">Room</a>(<span class="stringliteral">&quot;in a savanna&quot;</span>, <span class="stringliteral">&quot;savanna.jpg&quot;</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        savanna.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;elephant&quot;</span>, 1000, <span class="stringliteral">&quot;a huge elephant looking at you, dazed. I bet he&#39;s smarter than you&quot;</span>));</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        savanna.addItem(<span class="keyword">new</span> <a class="code" href="classItem.html">Item</a>(<span class="stringliteral">&quot;grass&quot;</span>, 1, <span class="stringliteral">&quot;a tuft of yellowish grass. You may have other things to do instead of looking at that&quot;</span>));</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        alpineTundra.setExit(<span class="stringliteral">&quot;west&quot;</span>, taiga);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        alpineTundra.setExit(<span class="stringliteral">&quot;south&quot;</span>, polarDesert);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        steppe.setExit(<span class="stringliteral">&quot;north&quot;</span>, temperateBroadleaf);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        steppe.setExit(<span class="stringliteral">&quot;east&quot;</span>, cave);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        steppe.setExit(<span class="stringliteral">&quot;south&quot;</span>, xericShrublands);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        cave.setExit(<span class="stringliteral">&quot;north&quot;</span>, taiga);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        cave.setExit(<span class="stringliteral">&quot;south&quot;</span>, savanna);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        cave.setExit(<span class="stringliteral">&quot;east&quot;</span>, polarDesert);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        cave.setExit(<span class="stringliteral">&quot;west&quot;</span>, steppe);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        polarDesert.setExit(<span class="stringliteral">&quot;north&quot;</span>, alpineTundra);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        polarDesert.setExit(<span class="stringliteral">&quot;west&quot;</span>, cave);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="comment">// initialise room exits</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        temperateBroadleaf.setExit(<span class="stringliteral">&quot;east&quot;</span>, taiga);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        temperateBroadleaf.setExit(<span class="stringliteral">&quot;south&quot;</span>, steppe);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        taiga.setExit(<span class="stringliteral">&quot;west&quot;</span>, temperateBroadleaf);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        taiga.setExit(<span class="stringliteral">&quot;east&quot;</span>, alpineTundra);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        taiga.setExit(<span class="stringliteral">&quot;south&quot;</span>, cave);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        alpineTundra.setExit(<span class="stringliteral">&quot;west&quot;</span>, taiga);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        alpineTundra.setExit(<span class="stringliteral">&quot;south&quot;</span>, polarDesert);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        steppe.setExit(<span class="stringliteral">&quot;north&quot;</span>, temperateBroadleaf);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        steppe.setExit(<span class="stringliteral">&quot;east&quot;</span>, cave);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        steppe.setExit(<span class="stringliteral">&quot;south&quot;</span>, xericShrublands);</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        xericShrublands.setExit(<span class="stringliteral">&quot;north&quot;</span>, steppe);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        xericShrublands.setExit(<span class="stringliteral">&quot;east&quot;</span>, savanna);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        savanna.setExit(<span class="stringliteral">&quot;north&quot;</span>, cave);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        savanna.setExit(<span class="stringliteral">&quot;west&quot;</span>, xericShrublands);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        currentRoom = temperateBroadleaf;  <span class="comment">// start game outside</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        cave.setExit(<span class="stringliteral">&quot;north&quot;</span>, taiga);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        cave.setExit(<span class="stringliteral">&quot;south&quot;</span>, savanna);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        cave.setExit(<span class="stringliteral">&quot;east&quot;</span>, polarDesert);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        cave.setExit(<span class="stringliteral">&quot;west&quot;</span>, steppe);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="comment">// Trap Door</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="comment">// polarDesert.setExit(&quot;north&quot;, alpineTundra);</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        polarDesert.setExit(<span class="stringliteral">&quot;west&quot;</span>, cave);</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classGameEngine.html#ad7133885f313fa99bca3bb7cb8272f64">  143</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classGameEngine.html#ad7133885f313fa99bca3bb7cb8272f64">processCommand</a>(String commandLine) {</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        gui.println(commandLine);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        Command command = parser.getCommand(commandLine);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        xericShrublands.setExit(<span class="stringliteral">&quot;north&quot;</span>, steppe);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        xericShrublands.setExit(<span class="stringliteral">&quot;east&quot;</span>, savanna);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        savanna.setExit(<span class="stringliteral">&quot;north&quot;</span>, cave);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        savanna.setExit(<span class="stringliteral">&quot;west&quot;</span>, xericShrublands);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <a class="code" href="classRoom.html">Room</a> randomRoom = <span class="keyword">new</span> <a class="code" href="classRoom.html">Room</a>(<span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">if</span>(command.isUnknown()) {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            gui.println(<span class="stringliteral">&quot;I don&#39;t know what you mean...&quot;</span>);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        }</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        String commandWord = command.getCommandWord();</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">if</span> (commandWord.equals(<span class="stringliteral">&quot;help&quot;</span>))</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            printHelp();</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (commandWord.equals(<span class="stringliteral">&quot;credits&quot;</span>))</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            printCredits();</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (commandWord.equals(<span class="stringliteral">&quot;go&quot;</span>))</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            goRoom(command);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (commandWord.equals(<span class="stringliteral">&quot;back&quot;</span>))</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            goBack();</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (commandWord.equals(<span class="stringliteral">&quot;look&quot;</span>))</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            lookAround(command);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (commandWord.equals(<span class="stringliteral">&quot;quit&quot;</span>)) {</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordflow">if</span>(command.hasParameter())</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                gui.<a class="code" href="classUserInterface.html#a79f606b4b1f5d1523e50eea00039ed94">println</a>(<span class="stringliteral">&quot;Quit what?&quot;</span>);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                endGame();</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        }</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        polarDesert.setExit(<span class="stringliteral">&quot;south&quot;</span>, randomRoom);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        savanna.setExit(<span class="stringliteral">&quot;east&quot;</span>, randomRoom);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        gameRooms.add(randomRoom);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        gameRooms.add(temperateBroadleaf);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        gameRooms.add(taiga);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        gameRooms.add(alpineTundra);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        gameRooms.add(steppe);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        gameRooms.add(cave);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        gameRooms.add(polarDesert);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        gameRooms.add(xericShrublands);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        gameRooms.add(savanna);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">return</span> temperateBroadleaf;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classGameEngine.html#ad7133885f313fa99bca3bb7cb8272f64">  167</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classGameEngine.html#ad7133885f313fa99bca3bb7cb8272f64">processCommand</a>(String commandLine) {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        gui.println(<span class="stringliteral">&quot;\n&quot;</span> + commandLine + <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        Command command = Parser.getCommand(commandLine);</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> printHelp() {</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">if</span>(helpCount == 0) {</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            gui.println(<span class="stringliteral">&quot;Help ? Who needs help ? Only the weak ones.&quot;</span>);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            helpCount++;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordflow">if</span>(helpCount == 1) {</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                gui.println(<span class="stringliteral">&quot;All right, all right! If you insist...&quot;</span>);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                helpCount++;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            }</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            gui.println(<span class="stringliteral">&quot;Your command words are: &quot;</span> + parser.showCommands());</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            gui.println(<span class="stringliteral">&quot;That will be all.&quot;</span>);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        }</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> printCredits() {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        gui.println(<span class="stringliteral">&quot;Temperate rainforest photo (cc-by-nc-nd) : myheimu (http://www.fotopedia.com/wiki/Temperate_rainforest#!/items/flickr-7995237868)&quot;</span>);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        gui.println(<span class="stringliteral">&quot;Taiga photo (public domain) : Becker0804 (https://commons.wikimedia.org/wiki/File:Talkessel_von_Werchojansk.JPG)&quot;</span>);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        gui.println(<span class="stringliteral">&quot;Alpine tundra photo (public domain) : Zewu (https://en.wikipedia.org/wiki/File:Tarfala_Valley_-_Sweden.jpg)&quot;</span>);</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        gui.println(<span class="stringliteral">&quot;Steppe photo (cc-by-sa) : Matt Lavin (http://www.fotopedia.com/wiki/Steppe#!/items/flickr-7495949260)&quot;</span>);</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        gui.println(<span class="stringliteral">&quot;Lava tube photo : Tim Laman (http://science.nationalgeographic.com/science/photos/caves-gallery/#/lava-tube-cave_1036_600x450.jpg)&quot;</span>);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        gui.println(<span class="stringliteral">&quot;Polar desert photo (cc-by) : Stephen Hudson (https://commons.wikimedia.org/wiki/File:AntarcticaDomeCSnow.jpg)&quot;</span>);</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        gui.println(<span class="stringliteral">&quot;Thar desert photo (cc-by-sa) : Gégard JANOT (https://commons.wikimedia.org/wiki/File:D%C3%A9sert_du_Rajasthan.jpg)&quot;</span>);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        gui.println(<span class="stringliteral">&quot;Savanna photo (public domain) : United States Geological Survey (https://commons.wikimedia.org/wiki/File:Oldoinyolengai.jpg)&quot;</span>);</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> goRoom(Command command) {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">if</span>(!command.hasParameter()) {</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="comment">// If there is no second word, we don&#39;t know where to go...</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            gui.println(<span class="stringliteral">&quot;Go where?&quot;</span>);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        }</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        String direction = command.getParameter();</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="comment">// Try to leave current room.</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <a class="code" href="classRoom.html">Room</a> nextRoom = currentRoom.getExit(direction);</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        goRoom(nextRoom);</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    }</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> goRoom(<a class="code" href="classRoom.html">Room</a> room) {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        goRoom(room, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    }</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> goRoom(<a class="code" href="classRoom.html">Room</a> room, <span class="keywordtype">boolean</span> back) {</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordflow">if</span> (room == null)</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            gui.println(<span class="stringliteral">&quot;There is no door!&quot;</span>);</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <span class="keywordflow">if</span>(!back)</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                previousRooms.push(currentRoom);</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                previousRooms.pop();</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            currentRoom = room;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            gui.println(currentRoom.getLongDescription());</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="keywordflow">if</span>(currentRoom.<a class="code" href="classRoom.html#a8177668df4d8be718812934673c42649">getImageName</a>() != null)</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                gui.<a class="code" href="classUserInterface.html#ab793a0f12878c698ba3e1720a9f86f3b">showImage</a>(currentRoom.<a class="code" href="classRoom.html#a8177668df4d8be718812934673c42649">getImageName</a>());</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        }</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    }</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> goBack() { </div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">if</span>(!previousRooms.empty()) {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            goRoom(previousRooms.peek(), <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            gui.println(<span class="stringliteral">&quot;No previous room&quot;</span>);</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        }</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> lookAround(Command command) {</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordflow">if</span>(!command.hasParameter())</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            gui.<a class="code" href="classUserInterface.html#a79f606b4b1f5d1523e50eea00039ed94">println</a>(currentRoom.<a class="code" href="classRoom.html#a23a25854d7544fb0b41190a4d6bd1322">getLongDescription</a>());</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(currentRoom.<a class="code" href="classRoom.html#ad779b367b26018c9f343ca3044c4b54f">hasItem</a>(command.getParameter()))</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            gui.println(<span class="stringliteral">&quot;This is &quot;</span> + currentRoom.getItem(command.getParameter()).getDescription() + <span class="stringliteral">&quot;.&quot;</span>);</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            gui.println(<span class="stringliteral">&quot;I&#39;m not sure you want to look at that.&quot;</span>);</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    }</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> endGame() {</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        gui.println(<span class="stringliteral">&quot;Thank you for playing.  Good bye.&quot;</span>);</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        gui.enable(<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> test(<span class="keyword">final</span> Command command) {</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">if</span>(!command.hasParameter()) {</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            gui.println(<span class="stringliteral">&quot;Please specify a file&quot;</span>);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            Scanner scan = <span class="keyword">new</span> Scanner(command.getParameter());</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            <span class="keywordflow">while</span>(scan.hasNext()) {</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                <a class="code" href="classGameEngine.html#ad7133885f313fa99bca3bb7cb8272f64">processCommand</a>(scan.nextLine());</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            }</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;}</div>
-<div class="ttc" id="classGameEngine_html_a9e8a92f5021a34293060f9aaff4005de"><div class="ttname"><a href="classGameEngine.html#a9e8a92f5021a34293060f9aaff4005de">GameEngine.GameEngine</a></div><div class="ttdeci">GameEngine()</div><div class="ttdef"><b>Definition:</b> <a href="GameEngine_8java_source.html#l00044">GameEngine.java:44</a></div></div>
-<div class="ttc" id="classRoom_html_a8177668df4d8be718812934673c42649"><div class="ttname"><a href="classRoom.html#a8177668df4d8be718812934673c42649">Room.getImageName</a></div><div class="ttdeci">String getImageName()</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00155">Room.java:155</a></div></div>
-<div class="ttc" id="classRoom_html_a23a25854d7544fb0b41190a4d6bd1322"><div class="ttname"><a href="classRoom.html#a23a25854d7544fb0b41190a4d6bd1322">Room.getLongDescription</a></div><div class="ttdeci">String getLongDescription()</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00100">Room.java:100</a></div></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">if</span>(command == null) {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            gui.println(<span class="stringliteral">&quot;I don&#39;t know what you mean...&quot;</span>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        gui.setCommandsLeft(--commandCountDown);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordtype">boolean</span> quit = command.execute(player);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">if</span>(command.hasMessage())</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                gui.<a class="code" href="classUserInterface.html#a79f606b4b1f5d1523e50eea00039ed94">println</a>(command.getMessage());</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="comment">// If we can cast the command into a GoCommand</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="comment">// Or if it is the test command</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="classGoCommand.html">GoCommand</a>.class.isInstance(command) || command.getClass().equals(<a class="code" href="classTestCommand.html">TestCommand</a>.class)) {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                <span class="comment">// The game image is reloaded</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <span class="keywordflow">if</span>(player.<a class="code" href="classPlayer.html#a3a3107df50fc4e35e8c0f46c3f776ce6">getCurrentRoom</a>().getImageName() != null) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                    gui.showImage(player.getCurrentRoom().getImageName());</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordflow">if</span>(quit) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                endGame(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        } <span class="keywordflow">catch</span>(<a class="code" href="classNoArgumentException.html">NoArgumentException</a> e) {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            gui.println(e.getMessage());</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        } <span class="keywordflow">catch</span>(<a class="code" href="classIllegalArgumentException.html">IllegalArgumentException</a> e) {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            gui.println(e.getMessage());</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        } <span class="keywordflow">catch</span>(<a class="code" href="classUnauthorizedException.html">UnauthorizedException</a> e) {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            gui.println(e.getMessage());</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordflow">if</span>(commandCountDown == 0) {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            endGame(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> endGame(<span class="keywordtype">boolean</span> winning) {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        gui.println(<span class="stringliteral">&quot;Thank you for playing. Good bye. By the way, you &quot;</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                + ((winning)? <span class="stringliteral">&quot;won&quot;</span> : <span class="stringliteral">&quot;lost&quot;</span>) + <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        gui.enable(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;}</div>
+<div class="ttc" id="classGameEngine_html_a9e8a92f5021a34293060f9aaff4005de"><div class="ttname"><a href="classGameEngine.html#a9e8a92f5021a34293060f9aaff4005de">GameEngine.GameEngine</a></div><div class="ttdeci">GameEngine()</div><div class="ttdef"><b>Definition:</b> <a href="GameEngine_8java_source.html#l00047">GameEngine.java:47</a></div></div>
+<div class="ttc" id="classTestCommand_html"><div class="ttname"><a href="classTestCommand.html">TestCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="TestCommand_8java_source.html#l00009">TestCommand.java:9</a></div></div>
 <div class="ttc" id="classUserInterface_html"><div class="ttname"><a href="classUserInterface.html">UserInterface</a></div><div class="ttdef"><b>Definition:</b> <a href="UserInterface_8java_source.html#l00011">UserInterface.java:11</a></div></div>
-<div class="ttc" id="classGameEngine_html"><div class="ttname"><a href="classGameEngine.html">GameEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="GameEngine_8java_source.html#l00011">GameEngine.java:11</a></div></div>
-<div class="ttc" id="classUserInterface_html_ab793a0f12878c698ba3e1720a9f86f3b"><div class="ttname"><a href="classUserInterface.html#ab793a0f12878c698ba3e1720a9f86f3b">UserInterface.showImage</a></div><div class="ttdeci">void showImage(String imageName)</div><div class="ttdef"><b>Definition:</b> <a href="UserInterface_8java_source.html#l00069">UserInterface.java:69</a></div></div>
-<div class="ttc" id="classGameEngine_html_aec901a5b590b3cd204f196165da5dfb6"><div class="ttname"><a href="classGameEngine.html#aec901a5b590b3cd204f196165da5dfb6">GameEngine.setGUI</a></div><div class="ttdeci">void setGUI(UserInterface userInterface)</div><div class="ttdef"><b>Definition:</b> <a href="GameEngine_8java_source.html#l00055">GameEngine.java:55</a></div></div>
-<div class="ttc" id="classItem_html"><div class="ttname"><a href="classItem.html">Item</a></div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00005">Item.java:5</a></div></div>
-<div class="ttc" id="classUserInterface_html_a79f606b4b1f5d1523e50eea00039ed94"><div class="ttname"><a href="classUserInterface.html#a79f606b4b1f5d1523e50eea00039ed94">UserInterface.println</a></div><div class="ttdeci">void println(String text)</div><div class="ttdef"><b>Definition:</b> <a href="UserInterface_8java_source.html#l00060">UserInterface.java:60</a></div></div>
-<div class="ttc" id="classGameEngine_html_ad7133885f313fa99bca3bb7cb8272f64"><div class="ttname"><a href="classGameEngine.html#ad7133885f313fa99bca3bb7cb8272f64">GameEngine.processCommand</a></div><div class="ttdeci">void processCommand(String commandLine)</div><div class="ttdef"><b>Definition:</b> <a href="GameEngine_8java_source.html#l00143">GameEngine.java:143</a></div></div>
-<div class="ttc" id="classRoom_html_ad779b367b26018c9f343ca3044c4b54f"><div class="ttname"><a href="classRoom.html#ad779b367b26018c9f343ca3044c4b54f">Room.hasItem</a></div><div class="ttdeci">boolean hasItem(String name)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00083">Room.java:83</a></div></div>
-<div class="ttc" id="classParser_html"><div class="ttname"><a href="classParser.html">Parser</a></div><div class="ttdef"><b>Definition:</b> <a href="Parser_8java_source.html#l00009">Parser.java:9</a></div></div>
+<div class="ttc" id="classNoArgumentException_html"><div class="ttname"><a href="classNoArgumentException.html">NoArgumentException</a></div><div class="ttdef"><b>Definition:</b> <a href="NoArgumentException_8java_source.html#l00005">NoArgumentException.java:5</a></div></div>
+<div class="ttc" id="classGameEngine_html"><div class="ttname"><a href="classGameEngine.html">GameEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="GameEngine_8java_source.html#l00013">GameEngine.java:13</a></div></div>
+<div class="ttc" id="classGoCommand_html"><div class="ttname"><a href="classGoCommand.html">GoCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="GoCommand_8java_source.html#l00005">GoCommand.java:5</a></div></div>
+<div class="ttc" id="classUnauthorizedException_html"><div class="ttname"><a href="classUnauthorizedException.html">UnauthorizedException</a></div><div class="ttdef"><b>Definition:</b> <a href="UnauthorizedException_8java_source.html#l00005">UnauthorizedException.java:5</a></div></div>
+<div class="ttc" id="classGameEngine_html_aec901a5b590b3cd204f196165da5dfb6"><div class="ttname"><a href="classGameEngine.html#aec901a5b590b3cd204f196165da5dfb6">GameEngine.setGUI</a></div><div class="ttdeci">void setGUI(UserInterface userInterface)</div><div class="ttdef"><b>Definition:</b> <a href="GameEngine_8java_source.html#l00059">GameEngine.java:59</a></div></div>
+<div class="ttc" id="classItem_html"><div class="ttname"><a href="classItem.html">Item</a></div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00006">Item.java:6</a></div></div>
+<div class="ttc" id="classPlayer_html_a3a3107df50fc4e35e8c0f46c3f776ce6"><div class="ttname"><a href="classPlayer.html#a3a3107df50fc4e35e8c0f46c3f776ce6">Player.getCurrentRoom</a></div><div class="ttdeci">Room getCurrentRoom()</div><div class="ttdef"><b>Definition:</b> <a href="Player_8java_source.html#l00089">Player.java:89</a></div></div>
+<div class="ttc" id="classUserInterface_html_a79f606b4b1f5d1523e50eea00039ed94"><div class="ttname"><a href="classUserInterface.html#a79f606b4b1f5d1523e50eea00039ed94">UserInterface.println</a></div><div class="ttdeci">void println(String text)</div><div class="ttdef"><b>Definition:</b> <a href="UserInterface_8java_source.html#l00073">UserInterface.java:73</a></div></div>
+<div class="ttc" id="classIllegalArgumentException_html"><div class="ttname"><a href="classIllegalArgumentException.html">IllegalArgumentException</a></div><div class="ttdef"><b>Definition:</b> <a href="IllegalArgumentException_8java_source.html#l00005">IllegalArgumentException.java:5</a></div></div>
+<div class="ttc" id="classPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdef"><b>Definition:</b> <a href="Player_8java_source.html#l00010">Player.java:10</a></div></div>
+<div class="ttc" id="classGameEngine_html_ad7133885f313fa99bca3bb7cb8272f64"><div class="ttname"><a href="classGameEngine.html#ad7133885f313fa99bca3bb7cb8272f64">GameEngine.processCommand</a></div><div class="ttdeci">void processCommand(String commandLine)</div><div class="ttdef"><b>Definition:</b> <a href="GameEngine_8java_source.html#l00167">GameEngine.java:167</a></div></div>
 <div class="ttc" id="classRoom_html"><div class="ttname"><a href="classRoom.html">Room</a></div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00011">Room.java:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 3 2014 20:23:25 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 5 2014 01:29:56 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

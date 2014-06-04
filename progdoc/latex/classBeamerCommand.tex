@@ -1,0 +1,290 @@
+\hypertarget{classBeamerCommand}{\section{Beamer\-Command Class Reference}
+\label{classBeamerCommand}\index{Beamer\-Command@{Beamer\-Command}}
+}
+
+
+class \hyperlink{classBeamerCommand}{Beamer\-Command} used to teleport into a remembered room  
+
+
+
+
+Inheritance diagram for Beamer\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classBeamerCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Beamer\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classBeamerCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBeamerCommand_accb1d84a69588f1b42fba96bf1b32de5}{Beamer\-Command} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classBeamerCommand}{Beamer\-Command}. \end{DoxyCompactList}\item 
+boolean \hyperlink{classBeamerCommand_ab28a7d743569841e463b2c0c65cf6eb1}{execute} (\hyperlink{classPlayer}{Player} player)  throws No\-Argument\-Exception,\-Illegal\-Argument\-Exception,\-Unauthorized\-Exception 
+\begin{DoxyCompactList}\small\item\em Teleport to the remembered room or remember a room. \end{DoxyCompactList}\item 
+void \hyperlink{classBeamerCommand_a130a572b2ec0532c92ea5033a098b1ac}{charge} (\hyperlink{classPlayer}{Player} player)
+\begin{DoxyCompactList}\small\item\em Remember the current room. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBeamerCommand_a1f19366fb8b873959f72f38d49d5b178}{teleport} (\hyperlink{classPlayer}{Player} player)  throws Unauthorized\-Exception 
+\begin{DoxyCompactList}\small\item\em Teleport the player to the remembered room. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+class \hyperlink{classBeamerCommand}{Beamer\-Command} used to teleport into a remembered room 
+
+\begin{DoxyAuthor}{Author}
+Rémi N\-I\-C\-O\-L\-E 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{BeamerCommand_8java_source_l00005}{5} of file \hyperlink{BeamerCommand_8java_source}{Beamer\-Command.\-java}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBeamerCommand_accb1d84a69588f1b42fba96bf1b32de5}{\index{Beamer\-Command@{Beamer\-Command}!Beamer\-Command@{Beamer\-Command}}
+\index{Beamer\-Command@{Beamer\-Command}!BeamerCommand@{Beamer\-Command}}
+\subsubsection[{Beamer\-Command}]{\setlength{\rightskip}{0pt plus 5cm}Beamer\-Command.\-Beamer\-Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBeamerCommand_accb1d84a69588f1b42fba96bf1b32de5}
+
+
+Constructor for \hyperlink{classBeamerCommand}{Beamer\-Command}. 
+
+
+
+Definition at line \hyperlink{BeamerCommand_8java_source_l00010}{10} of file \hyperlink{BeamerCommand_8java_source}{Beamer\-Command.\-java}.
+
+
+\begin{DoxyCode}
+00010                           \{
+00011 
+00012     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBeamerCommand_a130a572b2ec0532c92ea5033a098b1ac}{\index{Beamer\-Command@{Beamer\-Command}!charge@{charge}}
+\index{charge@{charge}!BeamerCommand@{Beamer\-Command}}
+\subsubsection[{charge}]{\setlength{\rightskip}{0pt plus 5cm}void Beamer\-Command.\-charge (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{player}
+\end{DoxyParamCaption}
+)}}\label{classBeamerCommand_a130a572b2ec0532c92ea5033a098b1ac}
+
+
+Remember the current room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player that called this command \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{BeamerCommand_8java_source_l00062}{62} of file \hyperlink{BeamerCommand_8java_source}{Beamer\-Command.\-java}.
+
+
+
+References \hyperlink{Player_8java_source_l00151}{Player.\-get\-Beamer\-Room()}, and \hyperlink{Command_8java_source_l00049}{Command.\-set\-Message()}.
+
+
+
+Referenced by \hyperlink{BeamerCommand_8java_source_l00025}{execute()}.
+
+
+\begin{DoxyCode}
+00062                                       \{
+00063         \textcolor{keywordflow}{if}(player.\hyperlink{classPlayer_a9114998742351bf793e093cb198993ca}{getBeamerRoom}() == null)
+00064             \hyperlink{classCommand_a715709d8f0ab65879d79ad1725c96f17}{setMessage}(\textcolor{stringliteral}{"Useless room remembered."});
+00065         \textcolor{keywordflow}{else}
+00066             \hyperlink{classCommand_a715709d8f0ab65879d79ad1725c96f17}{setMessage}(\textcolor{stringliteral}{"Useful room overridden by a useless room."});
+00067         player.setBeamerRoom(player.getCurrentRoom());
+00068     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBeamerCommand_a130a572b2ec0532c92ea5033a098b1ac_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBeamerCommand_a130a572b2ec0532c92ea5033a098b1ac_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classBeamerCommand_ab28a7d743569841e463b2c0c65cf6eb1}{\index{Beamer\-Command@{Beamer\-Command}!execute@{execute}}
+\index{execute@{execute}!BeamerCommand@{Beamer\-Command}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}boolean Beamer\-Command.\-execute (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{player}
+\end{DoxyParamCaption}
+) throws {\bf No\-Argument\-Exception},{\bf Illegal\-Argument\-Exception},{\bf Unauthorized\-Exception}}}\label{classBeamerCommand_ab28a7d743569841e463b2c0c65cf6eb1}
+
+
+Teleport to the remembered room or remember a room. 
+
+It teleports to the remembered room if the command parameter was \char`\"{}teleport\char`\"{}, and it remembers the room if the command parameter was \char`\"{}charge\char`\"{} 
+\begin{DoxyParams}{Parameters}
+{\em player} & The player that called this command \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classNoArgumentException}{No\-Argument\-Exception}} & When the user typed the command without parameter \\
+\hline
+{\em \hyperlink{classIllegalArgumentException}{Illegal\-Argument\-Exception}} & When the user typed a parameter other than \char`\"{}teleport\char`\"{} or \char`\"{}charge\char`\"{} \\
+\hline
+{\em \hyperlink{classUnauthorizedException}{Unauthorized\-Exception}} & When the user tries to teleport to null \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+False because it is not the quit command 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{BeamerCommand_8java_source_l00025}{25} of file \hyperlink{BeamerCommand_8java_source}{Beamer\-Command.\-java}.
+
+
+
+References \hyperlink{BeamerCommand_8java_source_l00062}{charge()}, \hyperlink{Command_8java_source_l00025}{Command.\-get\-Parameter()}, \hyperlink{Command_8java_source_l00041}{Command.\-has\-Parameter()}, and \hyperlink{BeamerCommand_8java_source_l00045}{teleport()}.
+
+
+\begin{DoxyCode}
+00025                                                                                                            
+               \{
+00026         \textcolor{keywordflow}{if}(\hyperlink{classCommand_a9b042558156d6749566e0fd9d48d3bfe}{hasParameter}()) \{
+00027             \textcolor{keywordflow}{if}(\hyperlink{classCommand_a1ced3739d546770ba1389e6ce228255e}{getParameter}().equals(\textcolor{stringliteral}{"charge"})) \{
+00028                 \hyperlink{classBeamerCommand_a130a572b2ec0532c92ea5033a098b1ac}{charge}(player);
+00029                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00030             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classCommand_a1ced3739d546770ba1389e6ce228255e}{getParameter}().equals(\textcolor{stringliteral}{"teleport"})) \{
+00031                 \hyperlink{classBeamerCommand_a1f19366fb8b873959f72f38d49d5b178}{teleport}(player);
+00032                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00033             \} \textcolor{keywordflow}{else} \{
+00034                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classIllegalArgumentException}{IllegalArgumentException}(\textcolor{stringliteral}{"In order to do that, I may need
+       to upgrade. But I don't want to."});
+00035             \}
+00036         \} \textcolor{keywordflow}{else} 
+00037             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classNoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"You can either charge or teleport with the
+       beamer.\(\backslash\)nBut that may be too much complicated for you, isn't it?"});
+00038     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBeamerCommand_ab28a7d743569841e463b2c0c65cf6eb1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classBeamerCommand_a1f19366fb8b873959f72f38d49d5b178}{\index{Beamer\-Command@{Beamer\-Command}!teleport@{teleport}}
+\index{teleport@{teleport}!BeamerCommand@{Beamer\-Command}}
+\subsubsection[{teleport}]{\setlength{\rightskip}{0pt plus 5cm}void Beamer\-Command.\-teleport (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{player}
+\end{DoxyParamCaption}
+) throws {\bf Unauthorized\-Exception}\hspace{0.3cm}{\ttfamily [private]}}}\label{classBeamerCommand_a1f19366fb8b873959f72f38d49d5b178}
+
+
+Teleport the player to the remembered room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player that called this command \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classUnauthorizedException}{Unauthorized\-Exception}} & When the user tries to teleport to null \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \hyperlink{BeamerCommand_8java_source_l00045}{45} of file \hyperlink{BeamerCommand_8java_source}{Beamer\-Command.\-java}.
+
+
+
+References \hyperlink{GoCommand_8java_source_l00055}{Go\-Command.\-go\-Room\-No\-Check()}, and \hyperlink{Command_8java_source_l00049}{Command.\-set\-Message()}.
+
+
+
+Referenced by \hyperlink{BeamerCommand_8java_source_l00025}{execute()}.
+
+
+\begin{DoxyCode}
+00045                                                                       \{
+00046         \textcolor{keywordflow}{try} \{
+00047             \textcolor{keywordflow}{if}(player.\hyperlink{classPlayer_a9114998742351bf793e093cb198993ca}{getBeamerRoom}() == player.getCurrentRoom())
+00048                 \hyperlink{classCommand_a715709d8f0ab65879d79ad1725c96f17}{setMessage}(\textcolor{stringliteral}{"Teleporting you right were you are."});
+00049             \textcolor{keywordflow}{else}
+00050                 \hyperlink{classCommand_a715709d8f0ab65879d79ad1725c96f17}{setMessage}(\textcolor{stringliteral}{"Teleporting you to useless room..."});
+00051             \hyperlink{classGoCommand_a3149bf695c19b78c39cfc4dadece7846}{goRoomNoCheck}(player.\hyperlink{classPlayer_a9114998742351bf793e093cb198993ca}{getBeamerRoom}(), player, \textcolor{keyword}{false});
+00052         \} \textcolor{keywordflow}{catch}(\hyperlink{classIllegalArgumentException}{IllegalArgumentException} e) \{
+00053             \textcolor{comment}{// Tried to teleport to null}
+00054             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classUnauthorizedException}{UnauthorizedException}(\textcolor{stringliteral}{"I'm sorry but I can't teleport you
+       nowhere."});
+00055         \}
+00056     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBeamerCommand_a1f19366fb8b873959f72f38d49d5b178_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBeamerCommand_a1f19366fb8b873959f72f38d49d5b178_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{BeamerCommand_8java}{Beamer\-Command.\-java}\end{DoxyCompactItemize}

@@ -1,11 +1,14 @@
 /**
- *  Main class used to instantiate other objects.
- *
+ * Main class used to instantiate other objects.
  * @author Rémi NICOLE
  */
 
 public class Game
 {
+	/**
+	 * Main function.
+	 * @param args Command line arguments
+	 */
 	public static void main(String[] args) {
 		Game game = new Game();
 	}

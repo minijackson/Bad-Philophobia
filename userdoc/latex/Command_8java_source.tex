@@ -3,31 +3,39 @@
 
 \begin{DoxyCode}
 00001 
-00012 \textcolor{keyword}{class }Command \{
-00018     \textcolor{keyword}{private} String command;
-00019 
-00025     \textcolor{keyword}{private} String parameter;
-00026 
-00032     \textcolor{keyword}{public} Command(String firstWord, String parameter) \{
-00033         command = firstWord;
+00005 \textcolor{keyword}{abstract} \textcolor{keyword}{class }Command \{
+00006 
+00012     \textcolor{keyword}{private} String parameter;
+00013 
+00019     \textcolor{keyword}{private} String message;
+00020 
+00025     \textcolor{keyword}{public} String getParameter() \{
+00026         \textcolor{keywordflow}{return} parameter;
+00027     \}
+00028 
+00033     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setParameter(String parameter) \{
 00034         this.parameter = parameter;
 00035     \}
 00036 
-00041     \textcolor{keyword}{public} String getCommandWord() \{
-00042         \textcolor{keywordflow}{return} command;
+00041     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} hasParameter() \{
+00042         \textcolor{keywordflow}{return} (parameter != null);
 00043     \}
 00044 
-00049     \textcolor{keyword}{public} String getParameter() \{
-00050         \textcolor{keywordflow}{return} parameter;
+00049     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} setMessage(String message) \{
+00050         this.message = message;
 00051     \}
 00052 
-00056     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} isUnknown() \{
-00057         \textcolor{keywordflow}{return} (command == null);
-00058     \}
-00059 
-00063     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} hasParameter() \{
-00064         \textcolor{keywordflow}{return} (parameter != null);
-00065     \}
-00066 \}
-00067 
+00057     \textcolor{keyword}{public} String getMessage() \{
+00058         \textcolor{keywordflow}{return} (message == null)? \textcolor{stringliteral}{""} : message;
+00059     \}
+00060 
+00065     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} hasMessage() \{
+00066         \textcolor{keywordflow}{return} (message == null) ? \textcolor{keyword}{false} : !message.equals(\textcolor{stringliteral}{""});
+00067     \}
+00068 
+00076     \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keywordtype}{boolean} execute(\hyperlink{classPlayer}{Player} player) \textcolor{keywordflow}{throws} 
+      \hyperlink{classNoArgumentException}{NoArgumentException},\hyperlink{classIllegalArgumentException}{IllegalArgumentException},
+      \hyperlink{classUnauthorizedException}{UnauthorizedException};
+00077 \}
+00078 
 \end{DoxyCode}

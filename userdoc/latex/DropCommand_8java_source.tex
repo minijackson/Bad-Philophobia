@@ -1,0 +1,28 @@
+\hypertarget{DropCommand_8java_source}{\section{Drop\-Command.\-java}
+}
+
+\begin{DoxyCode}
+00001 
+\hypertarget{DropCommand_8java_source_l00005}{}\hyperlink{classDropCommand}{00005} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classDropCommand}{DropCommand} \textcolor{keyword}{extends} Command \{
+00006 
+\hypertarget{DropCommand_8java_source_l00010}{}\hyperlink{classDropCommand_a98a8cc14e98c04bed31cd1580e5e3048}{00010}     \textcolor{keyword}{public} \hyperlink{classDropCommand_a98a8cc14e98c04bed31cd1580e5e3048}{DropCommand}()\{
+00011 
+00012     \}
+00013 
+\hypertarget{DropCommand_8java_source_l00021}{}\hyperlink{classDropCommand_a52432de0841ff8eb85d4f115965aecd1}{00021}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classDropCommand_a52432de0841ff8eb85d4f115965aecd1}{execute}(\hyperlink{classPlayer}{Player} player) \textcolor{keywordflow}{throws} 
+      \hyperlink{classNoArgumentException}{NoArgumentException},\hyperlink{classIllegalArgumentException}{IllegalArgumentException} \{
+00022         \textcolor{keywordflow}{if}(hasParameter()) \{
+00023             \textcolor{keywordflow}{if}(player.hasItem(getParameter()))\{
+00024                 player.dropObject(getParameter());
+00025                 setMessage(\textcolor{stringliteral}{"Oh, dear. He took a"} + (((\textcolor{keyword}{new} String(\textcolor{stringliteral}{"aeiouy"})).contains(getParameter().
+      substring(0,1)))? \textcolor{stringliteral}{"n "} : \textcolor{stringliteral}{" "}) + getParameter() + \textcolor{stringliteral}{"."});
+00026             \} \textcolor{keywordflow}{else}
+00027                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classIllegalArgumentException}{IllegalArgumentException}(\textcolor{stringliteral}{"If you want to drop that, you
+       may have a mental disorder. As expected."});
+00028         \} \textcolor{keywordflow}{else}
+00029             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classNoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"I agree. We both want you to drop dead."});
+00030         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00031     \}
+00032 
+00033 \}
+\end{DoxyCode}

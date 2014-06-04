@@ -1,0 +1,136 @@
+\hypertarget{Player_8java_source}{\section{Player.\-java}
+}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{import} java.util.HashMap;
+00002 \textcolor{keyword}{import} java.util.Set;
+00003 \textcolor{keyword}{import} java.util.Iterator;
+00004 \textcolor{keyword}{import} java.util.Stack;
+00005 
+\hypertarget{Player_8java_source_l00010}{}\hyperlink{classPlayer}{00010} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classPlayer}{Player} \{
+00011 
+00016     \textcolor{keyword}{private} String name;
+00017 
+00021     \textcolor{keyword}{private} \hyperlink{classItemList}{ItemList} backpack;
+00022 
+00026     \textcolor{keyword}{private} \textcolor{keywordtype}{int} backpackWeight;
+00027 
+00031     \textcolor{keyword}{private} \textcolor{keywordtype}{int} maxWeight = 100;
+00032 
+00036     \textcolor{keyword}{private} \hyperlink{classRoom}{Room} currentRoom;
+00037 
+00041     \textcolor{keyword}{private} Stack<Room> previousRooms;
+00042 
+00046     \textcolor{keyword}{private} \hyperlink{classRoom}{Room} beamerRoom;
+00047 
+\hypertarget{Player_8java_source_l00053}{}\hyperlink{classPlayer_aa0b4d27c6fa66ab36c3d870eb5f4709a}{00053}     \textcolor{keyword}{public} \hyperlink{classPlayer_aa0b4d27c6fa66ab36c3d870eb5f4709a}{Player}(String name, \hyperlink{classRoom}{Room} firstRoom) \{
+00054         this.name = name;
+00055         backpack = \textcolor{keyword}{new} \hyperlink{classItemList}{ItemList}();
+00056         backpackWeight = 0;
+00057         currentRoom = firstRoom;
+00058         previousRooms = \textcolor{keyword}{new} Stack<Room>();
+00059     \}
+00060 
+\hypertarget{Player_8java_source_l00065}{}\hyperlink{classPlayer_a7b17595bbe9876d4aa469ad9bee644dd}{00065}     \textcolor{keyword}{public} String \hyperlink{classPlayer_a7b17595bbe9876d4aa469ad9bee644dd}{getName}() \{
+00066         \textcolor{keywordflow}{return} name;
+00067     \}
+00068 
+\hypertarget{Player_8java_source_l00073}{}\hyperlink{classPlayer_a29c09bad98b48579fec4321698e082d1}{00073}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \hyperlink{classPlayer_a29c09bad98b48579fec4321698e082d1}{getMaxWeight}() \{
+00074         \textcolor{keywordflow}{return} maxWeight;
+00075     \}
+00076 
+\hypertarget{Player_8java_source_l00081}{}\hyperlink{classPlayer_a000b1e49bc833a5cffc2a14441c01498}{00081}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classPlayer_a000b1e49bc833a5cffc2a14441c01498}{setMaxWeight}(\textcolor{keywordtype}{int} maxWeight) \{
+00082         this.maxWeight = maxWeight;
+00083     \}
+00084 
+\hypertarget{Player_8java_source_l00089}{}\hyperlink{classPlayer_a3a3107df50fc4e35e8c0f46c3f776ce6}{00089}     \textcolor{keyword}{public} \hyperlink{classRoom}{Room} \hyperlink{classPlayer_a3a3107df50fc4e35e8c0f46c3f776ce6}{getCurrentRoom}() \{
+00090         \textcolor{keywordflow}{return} currentRoom;
+00091     \}
+00092 
+\hypertarget{Player_8java_source_l00097}{}\hyperlink{classPlayer_a1f5329b83e67a4829a2a775bbb39b6fe}{00097}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classPlayer_a1f5329b83e67a4829a2a775bbb39b6fe}{goRoom}(\hyperlink{classRoom}{Room} room) \{
+00098         currentRoom = room;
+00099     \}
+00100 
+\hypertarget{Player_8java_source_l00105}{}\hyperlink{classPlayer_aae81c20b32496c3bc14882828fed4f1b}{00105}     \textcolor{keyword}{public} \hyperlink{classRoom}{Room} \hyperlink{classPlayer_aae81c20b32496c3bc14882828fed4f1b}{getPreviousRoom}() \{
+00106         \textcolor{keywordflow}{return} (previousRooms.empty())? null : previousRooms.peek();
+00107     \}
+00108 
+\hypertarget{Player_8java_source_l00113}{}\hyperlink{classPlayer_a9876b243ed81c12d529efb966c7493bd}{00113}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classPlayer_a9876b243ed81c12d529efb966c7493bd}{pushPreviousRooms}(\hyperlink{classRoom}{Room} room) \{
+00114         previousRooms.push(room);
+00115     \}
+00116 
+\hypertarget{Player_8java_source_l00120}{}\hyperlink{classPlayer_aa48b1a95af18f177f07791a4bbc79c11}{00120}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classPlayer_aa48b1a95af18f177f07791a4bbc79c11}{pushForward}() \{
+00121         previousRooms.push(currentRoom);
+00122     \}
+00123 
+\hypertarget{Player_8java_source_l00127}{}\hyperlink{classPlayer_a41ac808d0a06379c58c8f543f0c723a8}{00127}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classPlayer_a41ac808d0a06379c58c8f543f0c723a8}{popPreviousRooms}() \{
+00128         previousRooms.pop();
+00129     \}
+00130 
+\hypertarget{Player_8java_source_l00135}{}\hyperlink{classPlayer_a145212a16497c374921567ea9a88f546}{00135}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classPlayer_a145212a16497c374921567ea9a88f546}{noPreviousRooms}() \{
+00136         \textcolor{keywordflow}{return} previousRooms.empty();
+00137     \}
+00138 
+\hypertarget{Player_8java_source_l00143}{}\hyperlink{classPlayer_a0a7c3edcdd438c8f6fb628b9926da207}{00143}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classPlayer_a0a7c3edcdd438c8f6fb628b9926da207}{setBeamerRoom}(\hyperlink{classRoom}{Room} beamerRoom) \{
+00144         this.beamerRoom = beamerRoom;
+00145     \}
+00146 
+\hypertarget{Player_8java_source_l00151}{}\hyperlink{classPlayer_a9114998742351bf793e093cb198993ca}{00151}     \textcolor{keyword}{public} \hyperlink{classRoom}{Room} \hyperlink{classPlayer_a9114998742351bf793e093cb198993ca}{getBeamerRoom}() \{
+00152         \textcolor{keywordflow}{return} beamerRoom;
+00153     \}
+00154 
+\hypertarget{Player_8java_source_l00160}{}\hyperlink{classPlayer_a8c183303976b4ea5d0c10fdbff14e4a1}{00160}     \textcolor{keyword}{public} \hyperlink{classItem}{Item} \hyperlink{classPlayer_a8c183303976b4ea5d0c10fdbff14e4a1}{getItem}(String item) \{
+00161         \textcolor{keywordflow}{return} backpack.get(item);
+00162     \}
+00163 
+\hypertarget{Player_8java_source_l00168}{}\hyperlink{classPlayer_a90cb3f05b491eaed668fe54b9258b755}{00168}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classPlayer_a90cb3f05b491eaed668fe54b9258b755}{hasItem}(String item) \{
+00169         \textcolor{keywordflow}{return} backpack.containsKey(item);
+00170     \}
+00171 
+\hypertarget{Player_8java_source_l00178}{}\hyperlink{classPlayer_ad84aab6c7b6ed8d58608adf0484f0268}{00178}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classPlayer_ad84aab6c7b6ed8d58608adf0484f0268}{canCarry}(\hyperlink{classItem}{Item} item) \{
+00179         \textcolor{keywordflow}{return} backpackWeight + item.getWeight() < maxWeight;
+00180     \}
+00181 
+\hypertarget{Player_8java_source_l00186}{}\hyperlink{classPlayer_a256305370cf457a32791d68c73e0b236}{00186}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classPlayer_a256305370cf457a32791d68c73e0b236}{takeObject}(\hyperlink{classItem}{Item} item) \{
+00187         currentRoom.getContainedItems().transfer(item.\hyperlink{classItem_a78dd5a8370c5267c3f1f992167ab84ac}{getName}(), backpack);
+00188         backpackWeight += item.getWeight();
+00189     \}
+00190 
+\hypertarget{Player_8java_source_l00195}{}\hyperlink{classPlayer_a4fbdbd407197f43f4f7beca517182765}{00195}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classPlayer_a4fbdbd407197f43f4f7beca517182765}{dropObject}(String item) \{
+00196         backpackWeight -= backpack.get(item).getWeight();
+00197         backpack.transfer(item, currentRoom.getContainedItems());
+00198     \}
+00199 
+\hypertarget{Player_8java_source_l00204}{}\hyperlink{classPlayer_a83141dd7c002b30a6e19b884daf26e8c}{00204}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classPlayer_a83141dd7c002b30a6e19b884daf26e8c}{eatObject}(String itemName) \{
+00205         backpack.remove(itemName);
+00206     \}
+00207 
+\hypertarget{Player_8java_source_l00213}{}\hyperlink{classPlayer_a5c4667e6eca93d1bba69f7db022f2feb}{00213}     \textcolor{keyword}{public} String \hyperlink{classPlayer_a5c4667e6eca93d1bba69f7db022f2feb}{getInventory}() \{
+00214         String returnString = \textcolor{stringliteral}{""};
+00215         Set<String> itemsNames = backpack.keySet();
+00216         Iterator<String> it = itemsNames.iterator();
+00217         \textcolor{keywordflow}{while}(it.hasNext()) \{
+00218             String itemName = it.next();
+00219             \textcolor{comment}{// If the item's name begins with a vowel, the prefix is ' an '}
+00220             \textcolor{comment}{// if not, the prefix is ' a '}
+00221             String prefix = \textcolor{stringliteral}{" a"} + (((\textcolor{keyword}{new} String(\textcolor{stringliteral}{"aeiouy"})).contains(itemName.substring(0,1)))? \textcolor{stringliteral}{"n"} : \textcolor{stringliteral}{""}) +
+       \textcolor{stringliteral}{" "};
+00222 
+00223             \textcolor{keywordflow}{if}(returnString.equals(\textcolor{stringliteral}{""}))
+00224                 returnString += prefix + itemName;
+00225             \textcolor{keywordflow}{else} \{
+00226                 \textcolor{comment}{// Check if it is the last item}
+00227                 \textcolor{keywordflow}{if}(it.hasNext())
+00228                     returnString += \textcolor{stringliteral}{","} + prefix + itemName;
+00229                 \textcolor{keywordflow}{else}
+00230                     returnString += \textcolor{stringliteral}{" and"} + prefix + itemName;
+00231             \}
+00232         \}
+00233         \textcolor{keywordflow}{return} (returnString.equals(\textcolor{stringliteral}{""}))?
+00234             \textcolor{stringliteral}{"You have nothing. This may be a metaphor for your life.\(\backslash\)nBut as always you didn't understand a
+       word I said, don't you?"}
+00235             : \textcolor{stringliteral}{"You have"} + returnString + \textcolor{stringliteral}{".\(\backslash\)nCan't you remember that?"};
+00236     \}
+00237 
+00238 \}
+\end{DoxyCode}

@@ -1,0 +1,11 @@
+<map id="BeamerCommand.execute" name="BeamerCommand.execute">
+<area shape="rect" id="node2" href="$classBeamerCommand.html#a130a572b2ec0532c92ea5033a098b1ac" title="Remember the current room. " alt="" coords="235,5,405,32"/>
+<area shape="rect" id="node5" href="$classCommand.html#a1ced3739d546770ba1389e6ce228255e" title="Parameter field getter. " alt="" coords="238,56,402,83"/>
+<area shape="rect" id="node6" href="$classCommand.html#a9b042558156d6749566e0fd9d48d3bfe" title="Return true if the parameter is null. " alt="" coords="237,107,403,133"/>
+<area shape="rect" id="node7" href="$classBeamerCommand.html#a1f19366fb8b873959f72f38d49d5b178" title="Teleport the player to the remembered room. " alt="" coords="233,157,407,184"/>
+<area shape="rect" id="node3" href="$classPlayer.html#a9114998742351bf793e093cb198993ca" title="beamerRoom field getter. " alt="" coords="479,5,641,32"/>
+<area shape="rect" id="node4" href="$classCommand.html#a715709d8f0ab65879d79ad1725c96f17" title="Message field setter. " alt="" coords="713,107,871,133"/>
+<area shape="rect" id="node8" href="$classGoCommand.html#a3149bf695c19b78c39cfc4dadece7846" title="Go to the Room without checking. " alt="" coords="457,157,663,184"/>
+<area shape="rect" id="node9" href="$classCommand.html#a3d232d33894a20dc81b7627d84f14183" title="Return true if the message is equal to null or &quot;&quot;. " alt="" coords="712,157,872,184"/>
+<area shape="rect" id="node10" href="$classCommand.html#ac3d4abebefb2aea0ce9757bf9c356882" title="Message field getter. " alt="" coords="713,208,871,235"/>
+</map>
