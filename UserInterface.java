@@ -4,6 +4,8 @@ import java.awt.event.*;
 import java.net.URL;
 import java.awt.image.*;
 
+import java.util.ArrayList;
+
 /**
  * Class handling the game's user interface.
  * @author Rémi NICOLE
@@ -41,11 +43,17 @@ public class UserInterface implements ActionListener {
 	private JLabel commandsLeftLabel;
 
 	/**
+	 * The list of buttons in the user interface.
+	 */
+	private ArrayList<JButton> buttons;
+
+	/**
 	 * UserInterface class constructor.
 	 * @param gameEngine  The gameplay GameEngine object.
 	 */
 	public UserInterface(GameEngine gameEngine) {
 		engine = gameEngine;
+		buttons = new ArrayList<JButton>();
 		createGUI();
 	}
 
@@ -96,8 +104,15 @@ public class UserInterface implements ActionListener {
 	 */
 	public void enable(boolean on) {
 		entryField.setEditable(on);
+		entryField.setEnabled(on);
 		if(!on)
 			entryField.getCaret().setBlinkRate(0);
+
+		for (JButton button : buttons) {
+			button.setEnabled(on);
+		}
+
+		commandsLeftLabel.setEnabled(on);
 	}
 
 	/**
@@ -120,21 +135,27 @@ public class UserInterface implements ActionListener {
 
 		JButton buttonNorth = new JButton("↑");
 		buttonNorth.addActionListener(this);
+		buttons.add(buttonNorth);
 
 		JButton buttonSouth = new JButton("↓");
 		buttonSouth.addActionListener(this);
+		buttons.add(buttonSouth);
 
 		JButton buttonEast = new JButton("→");
 		buttonEast.addActionListener(this);
+		buttons.add(buttonEast);
 
 		JButton buttonWest = new JButton("←");
 		buttonWest.addActionListener(this);
+		buttons.add(buttonWest);
 
 		JButton buttonHelp = new JButton("?");
 		buttonHelp.addActionListener(this);
+		buttons.add(buttonHelp);
 
 		JButton buttonReturn = new JButton("⏎");
 		buttonReturn.addActionListener(this);
+		buttons.add(buttonReturn);
 
 		buttonsPanel.setLayout(new GridLayout(3,3));
 		buttonsPanel.add(new JButton(""));
