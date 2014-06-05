@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['maxweight',['maxWeight',['../classPlayer.html#ad1f36de0de5e6258b92ea5b8eda28edc',1,'Player']]],
-  ['message',['message',['../classCommand.html#a623fd9ca1e1b03cc35a667bc3e67bc78',1,'Command']]],
+  ['maxweight',['maxWeight',['../classpkg__world_1_1Player.html#a780685c88ad92ca6b280cf841ab33728',1,'pkg_world::Player']]],
+  ['message',['message',['../classpkg__commands_1_1Command.html#ab4bc9d76fd948fcf253400793fbfde3f',1,'pkg_commands::Command']]],
   ['myframe',['myFrame',['../classUserInterface.html#a1bb844238b260f6d4ae1852b6b1e0b97',1,'UserInterface']]]
 ];

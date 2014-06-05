@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['cancarry',['canCarry',['../classPlayer.html#ad84aab6c7b6ed8d58608adf0484f0268',1,'Player']]],
-  ['charge',['charge',['../classBeamerCommand.html#a130a572b2ec0532c92ea5033a098b1ac',1,'BeamerCommand']]],
-  ['commandword',['CommandWord',['../enumCommandWord.html#a7542ac054c8ee2abf183e01d4e5d2d1f',1,'CommandWord']]],
-  ['commandwords',['CommandWords',['../classCommandWords.html#a2d8c096723adb3f822cc001bccd92ed7',1,'CommandWords']]],
-  ['creditscommand',['CreditsCommand',['../classCreditsCommand.html#a3f6edda8e844c13a21a09fc56711b7cd',1,'CreditsCommand']]]
+  ['cancarry',['canCarry',['../classpkg__world_1_1Player.html#acca13cc67931809c8067aaca1b8c8459',1,'pkg_world::Player']]],
+  ['charge',['charge',['../classpkg__commands_1_1BeamerCommand.html#ae71665296a18d581ad1f714c1078e37b',1,'pkg_commands::BeamerCommand']]],
+  ['commandword',['CommandWord',['../enumpkg__parsing_1_1CommandWord.html#a7ff71159ae2c26835f5336580152d088',1,'pkg_parsing::CommandWord']]],
+  ['commandwords',['CommandWords',['../classpkg__parsing_1_1CommandWords.html#ac01e3b4727e741eb8add2eef27c8f7b7',1,'pkg_parsing::CommandWords']]],
+  ['creditscommand',['CreditsCommand',['../classpkg__commands_1_1CreditsCommand.html#aa4338bdebb23612f95fa151ecd6f3bd2',1,'pkg_commands::CreditsCommand']]]
 ];

@@ -1,5 +1,0 @@
-<map id="GoCommand.goRoomNoCheck" name="GoCommand.goRoomNoCheck">
-<area shape="rect" id="node2" href="$classCommand.html#ac3d4abebefb2aea0ce9757bf9c356882" title="Message field getter. " alt="" coords="263,5,420,32"/>
-<area shape="rect" id="node3" href="$classCommand.html#a3d232d33894a20dc81b7627d84f14183" title="Return true if the message is equal to null or &quot;&quot;. " alt="" coords="261,56,421,83"/>
-<area shape="rect" id="node4" href="$classCommand.html#a715709d8f0ab65879d79ad1725c96f17" title="Message field setter. " alt="" coords="263,107,420,133"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="GoCommand" name="GoCommand">
-<area shape="rect" id="node3" href="$classBackCommand.html" title="class BackCommand used to go back in a previous Room. " alt="" coords="5,421,136,513"/>
-<area shape="rect" id="node4" href="$classBeamerCommand.html" title="class BeamerCommand used to teleport into a remembered room " alt="" coords="161,406,308,527"/>
-<area shape="rect" id="node2" href="$classCommand.html" title="Class used to handle a command of one or two words. " alt="" coords="91,6,213,186"/>
-</map>

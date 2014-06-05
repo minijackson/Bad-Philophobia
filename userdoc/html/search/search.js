@@ -9,20 +9,22 @@ var indexSectionsWithContent =
 {
   0: "abcdeghilmnpqrstu",
   1: "bcdeghilnpqrtu",
-  2: "bcdeghilnpqrtu",
-  3: "abcdeghilmnpqrstu",
-  4: "bcdeghilqtu",
-  5: "b"
+  2: "p",
+  3: "bcdeghilnpqrtu",
+  4: "abcdeghilmnpqrstu",
+  5: "bcdeghilqtu",
+  6: "b"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "files",
-  3: "functions",
-  4: "variables",
-  5: "pages"
+  2: "namespaces",
+  3: "files",
+  4: "functions",
+  5: "variables",
+  6: "pages"
 };
 
 function convertToId(search)

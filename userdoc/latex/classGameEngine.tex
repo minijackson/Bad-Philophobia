@@ -3,8 +3,7 @@
 }
 
 
-Collaboration diagram for Game\-Engine\-:
-\nopagebreak
+Collaboration diagram for Game\-Engine\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,7 +27,7 @@ Rémi N\-I\-C\-O\-L\-E
 \end{DoxyAuthor}
 
 
-Definition at line \hyperlink{GameEngine_8java_source_l00013}{13} of file \hyperlink{GameEngine_8java_source}{Game\-Engine.\-java}.
+Definition at line \hyperlink{GameEngine_8java_source_l00025}{25} of file \hyperlink{GameEngine_8java_source}{Game\-Engine.\-java}.
 
 
 
@@ -42,19 +41,19 @@ Definition at line \hyperlink{GameEngine_8java_source_l00013}{13} of file \hyper
 )}}\label{classGameEngine_a9e8a92f5021a34293060f9aaff4005de}
 \hyperlink{classGameEngine}{Game\-Engine} class constructor. 
 
-Definition at line \hyperlink{GameEngine_8java_source_l00047}{47} of file \hyperlink{GameEngine_8java_source}{Game\-Engine.\-java}.
+Definition at line \hyperlink{GameEngine_8java_source_l00059}{59} of file \hyperlink{GameEngine_8java_source}{Game\-Engine.\-java}.
 
 
 \begin{DoxyCode}
-00047                         \{
-00048         gameRooms = \textcolor{keyword}{new} ArrayList<Room>();
-00049         player = \textcolor{keyword}{new} \hyperlink{classPlayer}{Player}((javax.swing.JOptionPane.showInputDialog(\textcolor{stringliteral}{"What is your name"}).toLowerCase
+00059                         \{
+00060         gameRooms = \textcolor{keyword}{new} ArrayList<Room>();
+00061         player = \textcolor{keyword}{new} \hyperlink{classpkg__world_1_1Player}{Player}((javax.swing.JOptionPane.showInputDialog(\textcolor{stringliteral}{"What is your name"}).toLowerCase
       ().equals(\textcolor{stringliteral}{"retard"}))? \textcolor{stringliteral}{"moron"} : \textcolor{stringliteral}{"retard"}, createRooms());
-00050         javax.swing.JOptionPane.showMessageDialog(null, \textcolor{stringliteral}{"Whatever, I'll call you "} + player.getName() + \textcolor{stringliteral}{"."}
+00062         javax.swing.JOptionPane.showMessageDialog(null, \textcolor{stringliteral}{"Whatever, I'll call you "} + player.getName() + \textcolor{stringliteral}{"."}
       );
-00051         helpCount = 0;
-00052         commandCountDown = 42;
-00053     \}
+00063         helpCount = 0;
+00064         commandCountDown = 42;
+00065     \}
 \end{DoxyCode}
 
 
@@ -73,56 +72,56 @@ Process the command.
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{GameEngine_8java_source_l00167}{167} of file \hyperlink{GameEngine_8java_source}{Game\-Engine.\-java}.
+Definition at line \hyperlink{GameEngine_8java_source_l00179}{179} of file \hyperlink{GameEngine_8java_source}{Game\-Engine.\-java}.
 
 
 
-References \hyperlink{Player_8java_source_l00089}{Player.\-get\-Current\-Room()}, and \hyperlink{UserInterface_8java_source_l00073}{User\-Interface.\-println()}.
+References \hyperlink{Player_8java_source_l00095}{pkg\-\_\-world.\-Player.\-get\-Current\-Room()}, and \hyperlink{UserInterface_8java_source_l00073}{User\-Interface.\-println()}.
 
 
 \begin{DoxyCode}
-00167                                                    \{
-00168         gui.println(\textcolor{stringliteral}{"\(\backslash\)n"} + commandLine + \textcolor{stringliteral}{"\(\backslash\)n"});
-00169         Command command = Parser.getCommand(commandLine);
-00170 
-00171         \textcolor{keywordflow}{if}(command == null) \{
-00172             gui.println(\textcolor{stringliteral}{"I don't know what you mean..."});
-00173             \textcolor{keywordflow}{return};
-00174         \}
-00175 
-00176         gui.setCommandsLeft(--commandCountDown);
-00177 
-00178         \textcolor{keywordflow}{try} \{
-00179             \textcolor{keywordtype}{boolean} quit = command.execute(player);
-00180 
-00181             \textcolor{keywordflow}{if}(command.hasMessage())
-00182                 gui.\hyperlink{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}{println}(command.getMessage());
-00183             \textcolor{comment}{// If we can cast the command into a GoCommand}
-00184             \textcolor{comment}{// Or if it is the test command}
-00185             \textcolor{keywordflow}{if}(\hyperlink{classGoCommand}{GoCommand}.class.isInstance(command) || command.getClass().equals(
-      \hyperlink{classTestCommand}{TestCommand}.class)) \{
-00186                 \textcolor{comment}{// The game image is reloaded}
-00187                 \textcolor{keywordflow}{if}(player.\hyperlink{classPlayer_a3a3107df50fc4e35e8c0f46c3f776ce6}{getCurrentRoom}().getImageName() != null) \{
-00188                     gui.showImage(player.getCurrentRoom().getImageName());
-00189                 \}
-00190             \}
-00191 
-00192             \textcolor{keywordflow}{if}(quit) \{
-00193                 endGame(\textcolor{keyword}{false});
-00194             \}
-00195         \} \textcolor{keywordflow}{catch}(\hyperlink{classNoArgumentException}{NoArgumentException} e) \{
-00196             gui.println(e.getMessage());
-00197         \} \textcolor{keywordflow}{catch}(\hyperlink{classIllegalArgumentException}{IllegalArgumentException} e) \{
-00198             gui.println(e.getMessage());
-00199         \} \textcolor{keywordflow}{catch}(\hyperlink{classUnauthorizedException}{UnauthorizedException} e) \{
-00200             gui.println(e.getMessage());
-00201         \}
-00202 
-00203         \textcolor{keywordflow}{if}(commandCountDown == 0) \{
-00204             endGame(\textcolor{keyword}{false});
-00205         \}
-00206 
-00207     \}
+00179                                                    \{
+00180         gui.println(\textcolor{stringliteral}{"\(\backslash\)n"} + commandLine + \textcolor{stringliteral}{"\(\backslash\)n"});
+00181         \hyperlink{classpkg__commands_1_1Command}{Command} command = Parser.getCommand(commandLine);
+00182 
+00183         \textcolor{keywordflow}{if}(command == null) \{
+00184             gui.println(\textcolor{stringliteral}{"I don't know what you mean..."});
+00185             \textcolor{keywordflow}{return};
+00186         \}
+00187 
+00188         gui.setCommandsLeft(--commandCountDown);
+00189 
+00190         \textcolor{keywordflow}{try} \{
+00191             \textcolor{keywordtype}{boolean} quit = command.execute(player);
+00192 
+00193             \textcolor{keywordflow}{if}(command.hasMessage())
+00194                 gui.\hyperlink{classUserInterface_a79f606b4b1f5d1523e50eea00039ed94}{println}(command.getMessage());
+00195             \textcolor{comment}{// If we can cast the command into a GoCommand}
+00196             \textcolor{comment}{// Or if it is the test command}
+00197             \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1GoCommand}{GoCommand}.class.isInstance(command) || command.getClass().equals(
+      \hyperlink{classpkg__commands_1_1TestCommand}{TestCommand}.class)) \{
+00198                 \textcolor{comment}{// The game image is reloaded}
+00199                 \textcolor{keywordflow}{if}(player.\hyperlink{classpkg__world_1_1Player_a5ff0ede152d97c0c9cf6603c9a422a77}{getCurrentRoom}().getImageName() != null) \{
+00200                     gui.showImage(player.getCurrentRoom().getImageName());
+00201                 \}
+00202             \}
+00203 
+00204             \textcolor{keywordflow}{if}(quit) \{
+00205                 endGame(\textcolor{keyword}{false});
+00206             \}
+00207         \} \textcolor{keywordflow}{catch}(\hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException} e) \{
+00208             gui.println(e.getMessage());
+00209         \} \textcolor{keywordflow}{catch}(pkg\_exceptions.IllegalArgumentException e) \{
+00210             gui.println(e.getMessage());
+00211         \} \textcolor{keywordflow}{catch}(\hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException} e) \{
+00212             gui.println(e.getMessage());
+00213         \}
+00214 
+00215         \textcolor{keywordflow}{if}(commandCountDown == 0) \{
+00216             endGame(\textcolor{keyword}{false});
+00217         \}
+00218 
+00219     \}
 \end{DoxyCode}
 
 
@@ -150,15 +149,15 @@ Setter for the gui field.
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{GameEngine_8java_source_l00059}{59} of file \hyperlink{GameEngine_8java_source}{Game\-Engine.\-java}.
+Definition at line \hyperlink{GameEngine_8java_source_l00071}{71} of file \hyperlink{GameEngine_8java_source}{Game\-Engine.\-java}.
 
 
 \begin{DoxyCode}
-00059                                                     \{
-00060         gui = userInterface;
-00061         gui.setCommandsLeft(commandCountDown);
-00062         printWelcome();
-00063     \}
+00071                                                     \{
+00072         gui = userInterface;
+00073         gui.setCommandsLeft(commandCountDown);
+00074         printWelcome();
+00075     \}
 \end{DoxyCode}
 
 

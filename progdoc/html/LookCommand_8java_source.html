@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Bad Philophobia: LookCommand.java Source File</title>
+<title>Bad Philophobia: pkg_commands/LookCommand.java Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,6 +43,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,13 +69,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="files.html"><span>File&#160;List</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,55 +83,65 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_9f3bec8ebf0895cd007343f717e0f6bc.html">pkg_commands</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">LookCommand.java</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="LookCommand_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classLookCommand.html">    5</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classLookCommand.html">LookCommand</a> <span class="keyword">extends</span> <a class="code" href="classCommand.html">Command</a> {</div>
+<a href="LookCommand_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>pkg_commands;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> <a class="code" href="classpkg__world_1_1Player.html">pkg_world.Player</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> <a class="code" href="classpkg__world_1_1Item.html">pkg_world.Item</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> <a class="code" href="classpkg__exceptions_1_1IllegalArgumentException.html">pkg_exceptions.IllegalArgumentException</a>;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classLookCommand.html#a45ae975cf9e99310d630cfe440d5ce75">   10</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classLookCommand.html#a45ae975cf9e99310d630cfe440d5ce75">LookCommand</a>(){</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classLookCommand.html#a3b67eafb4956b1369904b273303ee7df">   20</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classLookCommand.html#a3b67eafb4956b1369904b273303ee7df">execute</a>(<a class="code" href="classPlayer.html">Player</a> player) <span class="keywordflow">throws</span> <a class="code" href="classIllegalArgumentException.html">IllegalArgumentException</a> {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classCommand.html#a9b042558156d6749566e0fd9d48d3bfe">hasParameter</a>()) {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">if</span>(player.getCurrentRoom().hasItem(<a class="code" href="classCommand.html#a1ced3739d546770ba1389e6ce228255e">getParameter</a>())) {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                <a class="code" href="classCommand.html#a715709d8f0ab65879d79ad1725c96f17">setMessage</a>(</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                        <a class="code" href="classLookCommand.html#ad96c354dee73acf189f99e988a796bc7">showItem</a>(player.getCurrentRoom().getItem(<a class="code" href="classCommand.html#a1ced3739d546770ba1389e6ce228255e">getParameter</a>()))</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                        );</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (player.hasItem(<a class="code" href="classCommand.html#a1ced3739d546770ba1389e6ce228255e">getParameter</a>()) ) {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <a class="code" href="classCommand.html#a715709d8f0ab65879d79ad1725c96f17">setMessage</a>(</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                        <a class="code" href="classLookCommand.html#ad96c354dee73acf189f99e988a796bc7">showItem</a>(player.getItem(<a class="code" href="classCommand.html#a1ced3739d546770ba1389e6ce228255e">getParameter</a>()))</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                        );</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            } <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classIllegalArgumentException.html">IllegalArgumentException</a>( <span class="stringliteral">&quot;I&#39;m not sure you want to look at that.&quot;</span>);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        } <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <a class="code" href="classCommand.html#a715709d8f0ab65879d79ad1725c96f17">setMessage</a>(player.getCurrentRoom().getLongDescription());</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classLookCommand.html#ad96c354dee73acf189f99e988a796bc7">   42</a></span>&#160;    <span class="keyword">private</span> String <a class="code" href="classLookCommand.html#ad96c354dee73acf189f99e988a796bc7">showItem</a>(<a class="code" href="classItem.html">Item</a> item) {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;This is &quot;</span> + item.getDescription() + <span class="stringliteral">&quot;.&quot;</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="ttc" id="classCommand_html_a9b042558156d6749566e0fd9d48d3bfe"><div class="ttname"><a href="classCommand.html#a9b042558156d6749566e0fd9d48d3bfe">Command.hasParameter</a></div><div class="ttdeci">boolean hasParameter()</div><div class="ttdoc">Return true if the parameter is null. </div><div class="ttdef"><b>Definition:</b> <a href="Command_8java_source.html#l00041">Command.java:41</a></div></div>
-<div class="ttc" id="classCommand_html_a715709d8f0ab65879d79ad1725c96f17"><div class="ttname"><a href="classCommand.html#a715709d8f0ab65879d79ad1725c96f17">Command.setMessage</a></div><div class="ttdeci">void setMessage(String message)</div><div class="ttdoc">Message field setter. </div><div class="ttdef"><b>Definition:</b> <a href="Command_8java_source.html#l00049">Command.java:49</a></div></div>
-<div class="ttc" id="classLookCommand_html_ad96c354dee73acf189f99e988a796bc7"><div class="ttname"><a href="classLookCommand.html#ad96c354dee73acf189f99e988a796bc7">LookCommand.showItem</a></div><div class="ttdeci">String showItem(Item item)</div><div class="ttdoc">Return a given Item&#39;s description. </div><div class="ttdef"><b>Definition:</b> <a href="LookCommand_8java_source.html#l00042">LookCommand.java:42</a></div></div>
-<div class="ttc" id="classItem_html"><div class="ttname"><a href="classItem.html">Item</a></div><div class="ttdoc">Class used to handle an item contained in a Room. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00006">Item.java:6</a></div></div>
-<div class="ttc" id="classLookCommand_html"><div class="ttname"><a href="classLookCommand.html">LookCommand</a></div><div class="ttdoc">class LookCommand used to show information about the current Room or a given Item ...</div><div class="ttdef"><b>Definition:</b> <a href="LookCommand_8java_source.html#l00005">LookCommand.java:5</a></div></div>
-<div class="ttc" id="classLookCommand_html_a3b67eafb4956b1369904b273303ee7df"><div class="ttname"><a href="classLookCommand.html#a3b67eafb4956b1369904b273303ee7df">LookCommand.execute</a></div><div class="ttdeci">boolean execute(Player player)</div><div class="ttdoc">Saves the information about the current Room or a given Item in the message field. </div><div class="ttdef"><b>Definition:</b> <a href="LookCommand_8java_source.html#l00020">LookCommand.java:20</a></div></div>
-<div class="ttc" id="classCommand_html_a1ced3739d546770ba1389e6ce228255e"><div class="ttname"><a href="classCommand.html#a1ced3739d546770ba1389e6ce228255e">Command.getParameter</a></div><div class="ttdeci">String getParameter()</div><div class="ttdoc">Parameter field getter. </div><div class="ttdef"><b>Definition:</b> <a href="Command_8java_source.html#l00025">Command.java:25</a></div></div>
-<div class="ttc" id="classCommand_html"><div class="ttname"><a href="classCommand.html">Command</a></div><div class="ttdoc">Class used to handle a command of one or two words. </div><div class="ttdef"><b>Definition:</b> <a href="Command_8java_source.html#l00005">Command.java:5</a></div></div>
-<div class="ttc" id="classIllegalArgumentException_html"><div class="ttname"><a href="classIllegalArgumentException.html">IllegalArgumentException</a></div><div class="ttdoc">class IllegalArgumentException used to tell that a command parameter is invalid. </div><div class="ttdef"><b>Definition:</b> <a href="IllegalArgumentException_8java_source.html#l00005">IllegalArgumentException.java:5</a></div></div>
-<div class="ttc" id="classPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdoc">class Player used to handle the user&#39;s player. </div><div class="ttdef"><b>Definition:</b> <a href="Player_8java_source.html#l00010">Player.java:10</a></div></div>
-<div class="ttc" id="classLookCommand_html_a45ae975cf9e99310d630cfe440d5ce75"><div class="ttname"><a href="classLookCommand.html#a45ae975cf9e99310d630cfe440d5ce75">LookCommand.LookCommand</a></div><div class="ttdeci">LookCommand()</div><div class="ttdoc">Constructor for LookCommand. </div><div class="ttdef"><b>Definition:</b> <a href="LookCommand_8java_source.html#l00010">LookCommand.java:10</a></div></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classpkg__commands_1_1LookCommand.html">   11</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classpkg__commands_1_1LookCommand.html">LookCommand</a> <span class="keyword">extends</span> <a class="code" href="classpkg__commands_1_1Command.html">Command</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classpkg__commands_1_1LookCommand.html#ab689f51a18ea2d40ab995099e076112c">   16</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classpkg__commands_1_1LookCommand.html#ab689f51a18ea2d40ab995099e076112c">LookCommand</a>(){</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classpkg__commands_1_1LookCommand.html#af336146fae1e14bf434d85a5acbcdcd7">   26</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classpkg__commands_1_1LookCommand.html#af336146fae1e14bf434d85a5acbcdcd7">execute</a>(<a class="code" href="classpkg__world_1_1Player.html">Player</a> player) <span class="keywordflow">throws</span> <a class="code" href="classpkg__exceptions_1_1IllegalArgumentException.html">IllegalArgumentException</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classpkg__commands_1_1Command.html#a02af95ab3f1898a66259ab7c177b6998">hasParameter</a>()) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span>(player.getCurrentRoom().hasItem(<a class="code" href="classpkg__commands_1_1Command.html#a41c92d445be73ea9d62320c65efb8434">getParameter</a>())) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <a class="code" href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13">setMessage</a>(</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                        <a class="code" href="classpkg__commands_1_1LookCommand.html#a17808882dffb0a9edce192235c029ddf">showItem</a>(player.getCurrentRoom().getItem(<a class="code" href="classpkg__commands_1_1Command.html#a41c92d445be73ea9d62320c65efb8434">getParameter</a>()))</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                        );</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (player.hasItem(<a class="code" href="classpkg__commands_1_1Command.html#a41c92d445be73ea9d62320c65efb8434">getParameter</a>()) ) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <a class="code" href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13">setMessage</a>(</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                        <a class="code" href="classpkg__commands_1_1LookCommand.html#a17808882dffb0a9edce192235c029ddf">showItem</a>(player.getItem(<a class="code" href="classpkg__commands_1_1Command.html#a41c92d445be73ea9d62320c65efb8434">getParameter</a>()))</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                        );</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            } <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classpkg__exceptions_1_1IllegalArgumentException.html">IllegalArgumentException</a>( <span class="stringliteral">&quot;I&#39;m not sure you want to look at that.&quot;</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        } <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <a class="code" href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13">setMessage</a>(player.getCurrentRoom().getLongDescription());</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classpkg__commands_1_1LookCommand.html#a17808882dffb0a9edce192235c029ddf">   48</a></span>&#160;    <span class="keyword">private</span> String <a class="code" href="classpkg__commands_1_1LookCommand.html#a17808882dffb0a9edce192235c029ddf">showItem</a>(<a class="code" href="classpkg__world_1_1Item.html">Item</a> item) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;This is &quot;</span> + item.getDescription() + <span class="stringliteral">&quot;.&quot;</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="ttc" id="classpkg__world_1_1Player_html"><div class="ttname"><a href="classpkg__world_1_1Player.html">pkg_world.Player</a></div><div class="ttdoc">class Player used to handle the user&#39;s player. </div><div class="ttdef"><b>Definition:</b> <a href="Player_8java_source.html#l00016">Player.java:16</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1LookCommand_html_af336146fae1e14bf434d85a5acbcdcd7"><div class="ttname"><a href="classpkg__commands_1_1LookCommand.html#af336146fae1e14bf434d85a5acbcdcd7">pkg_commands.LookCommand.execute</a></div><div class="ttdeci">boolean execute(Player player)</div><div class="ttdoc">Saves the information about the current Room or a given Item in the message field. </div><div class="ttdef"><b>Definition:</b> <a href="LookCommand_8java_source.html#l00026">LookCommand.java:26</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1Command_html_a41c92d445be73ea9d62320c65efb8434"><div class="ttname"><a href="classpkg__commands_1_1Command.html#a41c92d445be73ea9d62320c65efb8434">pkg_commands.Command.getParameter</a></div><div class="ttdeci">String getParameter()</div><div class="ttdoc">Parameter field getter. </div><div class="ttdef"><b>Definition:</b> <a href="Command_8java_source.html#l00034">Command.java:34</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1LookCommand_html"><div class="ttname"><a href="classpkg__commands_1_1LookCommand.html">pkg_commands.LookCommand</a></div><div class="ttdoc">class LookCommand used to show information about the current Room or a given Item ...</div><div class="ttdef"><b>Definition:</b> <a href="LookCommand_8java_source.html#l00011">LookCommand.java:11</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1Command_html_ae210ff216fe908b111ba1c988a963d13"><div class="ttname"><a href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13">pkg_commands.Command.setMessage</a></div><div class="ttdeci">void setMessage(String message)</div><div class="ttdoc">Message field setter. </div><div class="ttdef"><b>Definition:</b> <a href="Command_8java_source.html#l00058">Command.java:58</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1LookCommand_html_a17808882dffb0a9edce192235c029ddf"><div class="ttname"><a href="classpkg__commands_1_1LookCommand.html#a17808882dffb0a9edce192235c029ddf">pkg_commands.LookCommand.showItem</a></div><div class="ttdeci">String showItem(Item item)</div><div class="ttdoc">Return a given Item&#39;s description. </div><div class="ttdef"><b>Definition:</b> <a href="LookCommand_8java_source.html#l00048">LookCommand.java:48</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1LookCommand_html_ab689f51a18ea2d40ab995099e076112c"><div class="ttname"><a href="classpkg__commands_1_1LookCommand.html#ab689f51a18ea2d40ab995099e076112c">pkg_commands.LookCommand.LookCommand</a></div><div class="ttdeci">LookCommand()</div><div class="ttdoc">Constructor for LookCommand. </div><div class="ttdef"><b>Definition:</b> <a href="LookCommand_8java_source.html#l00016">LookCommand.java:16</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1Command_html"><div class="ttname"><a href="classpkg__commands_1_1Command.html">pkg_commands.Command</a></div><div class="ttdoc">Class used to handle a command of one or two words. </div><div class="ttdef"><b>Definition:</b> <a href="Command_8java_source.html#l00014">Command.java:14</a></div></div>
+<div class="ttc" id="classpkg__exceptions_1_1IllegalArgumentException_html"><div class="ttname"><a href="classpkg__exceptions_1_1IllegalArgumentException.html">pkg_exceptions.IllegalArgumentException</a></div><div class="ttdoc">class IllegalArgumentException used to tell that a command parameter is invalid. </div><div class="ttdef"><b>Definition:</b> <a href="IllegalArgumentException_8java_source.html#l00007">IllegalArgumentException.java:7</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Item_html"><div class="ttname"><a href="classpkg__world_1_1Item.html">pkg_world.Item</a></div><div class="ttdoc">Class used to handle an item contained in a Room. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00007">Item.java:7</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1Command_html_a02af95ab3f1898a66259ab7c177b6998"><div class="ttname"><a href="classpkg__commands_1_1Command.html#a02af95ab3f1898a66259ab7c177b6998">pkg_commands.Command.hasParameter</a></div><div class="ttdeci">boolean hasParameter()</div><div class="ttdoc">Return true if the parameter is null. </div><div class="ttdef"><b>Definition:</b> <a href="Command_8java_source.html#l00050">Command.java:50</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 5 2014 01:25:10 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 5 2014 02:12:02 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

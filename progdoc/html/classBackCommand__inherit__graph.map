@@ -1,4 +1,0 @@
-<map id="BackCommand" name="BackCommand">
-<area shape="rect" id="node2" href="$classGoCommand.html" title="class GoCommand used to make the player go to a given Room. " alt="" coords="5,235,149,357"/>
-<area shape="rect" id="node3" href="$classCommand.html" title="Class used to handle a command of one or two words. " alt="" coords="16,6,139,186"/>
-</map>

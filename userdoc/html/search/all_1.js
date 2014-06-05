@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['back',['BACK',['../enumCommandWord.html#a3309e549607eb8de673c296db55f7517',1,'CommandWord']]],
-  ['backcommand',['BackCommand',['../classBackCommand.html',1,'BackCommand'],['../classBackCommand.html#a779456e24dfb281e5917e936da5fd901',1,'BackCommand.BackCommand()']]],
+  ['back',['BACK',['../enumpkg__parsing_1_1CommandWord.html#a7c6d90e3ff897725acfab8f68b28a1b1',1,'pkg_parsing::CommandWord']]],
+  ['backcommand',['BackCommand',['../classpkg__commands_1_1BackCommand.html',1,'pkg_commands']]],
+  ['backcommand',['BackCommand',['../classpkg__commands_1_1BackCommand.html#a81518eb89a9e9126e51f2f7ba6ff1ed9',1,'pkg_commands::BackCommand']]],
   ['backcommand_2ejava',['BackCommand.java',['../BackCommand_8java.html',1,'']]],
-  ['beamer',['BEAMER',['../enumCommandWord.html#ab916560f94837341b38c83aa3cf5497f',1,'CommandWord']]],
-  ['beamercommand',['BeamerCommand',['../classBeamerCommand.html',1,'BeamerCommand'],['../classBeamerCommand.html#accb1d84a69588f1b42fba96bf1b32de5',1,'BeamerCommand.BeamerCommand()']]],
+  ['beamer',['BEAMER',['../enumpkg__parsing_1_1CommandWord.html#a4d1c3647eaf81664624ed5effc590be4',1,'pkg_parsing::CommandWord']]],
+  ['beamercommand',['BeamerCommand',['../classpkg__commands_1_1BeamerCommand.html',1,'pkg_commands']]],
+  ['beamercommand',['BeamerCommand',['../classpkg__commands_1_1BeamerCommand.html#a541cd046e7680452f451322c1730e675',1,'pkg_commands::BeamerCommand']]],
   ['beamercommand_2ejava',['BeamerCommand.java',['../BeamerCommand_8java.html',1,'']]],
   ['bad_2dphilophobia',['Bad-Philophobia',['../md_README.html',1,'']]]
 ];

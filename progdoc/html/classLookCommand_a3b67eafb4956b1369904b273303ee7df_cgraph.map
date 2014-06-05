@@ -1,6 +1,0 @@
-<map id="LookCommand.execute" name="LookCommand.execute">
-<area shape="rect" id="node2" href="$classCommand.html#a1ced3739d546770ba1389e6ce228255e" title="Parameter field getter. " alt="" coords="217,5,381,32"/>
-<area shape="rect" id="node3" href="$classCommand.html#a9b042558156d6749566e0fd9d48d3bfe" title="Return true if the parameter is null. " alt="" coords="215,56,382,83"/>
-<area shape="rect" id="node4" href="$classCommand.html#a715709d8f0ab65879d79ad1725c96f17" title="Message field setter. " alt="" coords="220,107,377,133"/>
-<area shape="rect" id="node5" href="$classLookCommand.html#ad96c354dee73acf189f99e988a796bc7" title="Return a given Item&#39;s description. " alt="" coords="213,157,384,184"/>
-</map>

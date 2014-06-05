@@ -1,0 +1,71 @@
+\hypertarget{classpkg__world_1_1ItemList}{\section{pkg\-\_\-world.\-Item\-List Class Reference}
+\label{classpkg__world_1_1ItemList}\index{pkg\-\_\-world.\-Item\-List@{pkg\-\_\-world.\-Item\-List}}
+}
+
+
+Inheritance diagram for pkg\-\_\-world.\-Item\-List\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classpkg__world_1_1ItemList__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pkg\-\_\-world.\-Item\-List\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classpkg__world_1_1ItemList__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classpkg__world_1_1ItemList_a0428375741d0442813d88131a5962a10}{transfer} (String item, Hash\-Map$<$ String, \hyperlink{classpkg__world_1_1Item}{Item} $>$ item\-Map)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{classpkg__world_1_1ItemList}{Item\-List} used to handle a list of \hyperlink{classpkg__world_1_1Item}{Item} (inventory). \begin{DoxyAuthor}{Author}
+Rémi N\-I\-C\-O\-L\-E 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{ItemList_8java_source_l00009}{9} of file \hyperlink{ItemList_8java_source}{Item\-List.\-java}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpkg__world_1_1ItemList_a0428375741d0442813d88131a5962a10}{\index{pkg\-\_\-world\-::\-Item\-List@{pkg\-\_\-world\-::\-Item\-List}!transfer@{transfer}}
+\index{transfer@{transfer}!pkg_world::ItemList@{pkg\-\_\-world\-::\-Item\-List}}
+\subsubsection[{transfer}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-world.\-Item\-List.\-transfer (
+\begin{DoxyParamCaption}
+\item[{String}]{item, }
+\item[{Hash\-Map$<$ String, {\bf Item} $>$}]{item\-Map}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1ItemList_a0428375741d0442813d88131a5962a10}
+Transfer a given item to another \hyperlink{classpkg__world_1_1ItemList}{Item\-List} or Hash\-Map 
+\begin{DoxyParams}{Parameters}
+{\em item} & \hyperlink{classpkg__world_1_1Item}{Item} to be transferred \\
+\hline
+{\em item\-Map} & Map of items in which the item is transferred \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{ItemList_8java_source_l00016}{16} of file \hyperlink{ItemList_8java_source}{Item\-List.\-java}.
+
+
+\begin{DoxyCode}
+00016                                                                      \{
+00017         itemMap.put(item, this.remove(item));
+00018     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pkg\-\_\-world/\hyperlink{ItemList_8java}{Item\-List.\-java}\end{DoxyCompactItemize}

@@ -1,14 +1,17 @@
-\hypertarget{ItemList_8java_source}{\section{Item\-List.\-java}
+\hypertarget{ItemList_8java}{\section{Item\-List.\-java}
+\label{ItemList_8java}\index{pkg\-\_\-world/\-Item\-List.\-java@{pkg\-\_\-world/\-Item\-List.\-java}}
 }
 
 \begin{DoxyCode}
-00001 \textcolor{keyword}{import} java.util.HashMap;
+00001 \textcolor{keyword}{package }pkg\_world;
 00002 
-\hypertarget{ItemList_8java_source_l00007}{}\hyperlink{classItemList}{00007} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classItemList}{ItemList} \textcolor{keyword}{extends} HashMap<String, Item> \{
-00008 
-\hypertarget{ItemList_8java_source_l00014}{}\hyperlink{classItemList_ae4e9a32c40b828af911c754db9fca614}{00014}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classItemList_ae4e9a32c40b828af911c754db9fca614}{transfer}(String item, HashMap<String, Item> itemMap) \{
-00015         itemMap.put(item, this.remove(item));
-00016     \}
-00017 
-00018 \}
+00003 \textcolor{keyword}{import} java.util.HashMap;
+00004 
+\hypertarget{ItemList_8java_source_l00009}{}\hyperlink{classpkg__world_1_1ItemList}{00009} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__world_1_1ItemList}{ItemList} \textcolor{keyword}{extends} HashMap<String, Item> \{
+00010 
+\hypertarget{ItemList_8java_source_l00016}{}\hyperlink{classpkg__world_1_1ItemList_a0428375741d0442813d88131a5962a10}{00016}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1ItemList_a0428375741d0442813d88131a5962a10}{transfer}(String item, HashMap<String, Item> itemMap) \{
+00017         itemMap.put(item, this.remove(item));
+00018     \}
+00019 
+00020 \}
 \end{DoxyCode}

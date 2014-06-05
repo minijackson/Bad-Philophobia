@@ -1,18 +1,22 @@
-\hypertarget{InventoryCommand_8java_source}{\section{Inventory\-Command.\-java}
+\hypertarget{InventoryCommand_8java}{\section{Inventory\-Command.\-java}
+\label{InventoryCommand_8java}\index{pkg\-\_\-commands/\-Inventory\-Command.\-java@{pkg\-\_\-commands/\-Inventory\-Command.\-java}}
 }
 
 \begin{DoxyCode}
-00001 
-\hypertarget{InventoryCommand_8java_source_l00005}{}\hyperlink{classInventoryCommand}{00005} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classInventoryCommand}{InventoryCommand} \textcolor{keyword}{extends} Command \{
-00006 
-\hypertarget{InventoryCommand_8java_source_l00010}{}\hyperlink{classInventoryCommand_a8734205a1ed7afa3705737a03f234f34}{00010}     \textcolor{keyword}{public} \hyperlink{classInventoryCommand_a8734205a1ed7afa3705737a03f234f34}{InventoryCommand}()\{
-00011 
-00012     \}
-00013 
-\hypertarget{InventoryCommand_8java_source_l00019}{}\hyperlink{classInventoryCommand_a103714a9704895e9d8ddd5bcd758e5f8}{00019}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classInventoryCommand_a103714a9704895e9d8ddd5bcd758e5f8}{execute}(\hyperlink{classPlayer}{Player} player) \{
-00020         setMessage(player.\hyperlink{classPlayer_a5c4667e6eca93d1bba69f7db022f2feb}{getInventory}());
-00021         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-00022     \}
-00023 
-00024 \}
+00001 \textcolor{keyword}{package }pkg\_commands;
+00002 
+00003 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Player}{pkg\_world.Player};
+00004 
+\hypertarget{InventoryCommand_8java_source_l00009}{}\hyperlink{classpkg__commands_1_1InventoryCommand}{00009} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__commands_1_1InventoryCommand}{InventoryCommand} \textcolor{keyword}{extends} \hyperlink{classpkg__commands_1_1Command}{Command} \{
+00010 
+\hypertarget{InventoryCommand_8java_source_l00014}{}\hyperlink{classpkg__commands_1_1InventoryCommand_a4ca959fe6979e5ca2a79a0596803533d}{00014}     \textcolor{keyword}{public} \hyperlink{classpkg__commands_1_1InventoryCommand_a4ca959fe6979e5ca2a79a0596803533d}{InventoryCommand}()\{
+00015 
+00016     \}
+00017 
+\hypertarget{InventoryCommand_8java_source_l00023}{}\hyperlink{classpkg__commands_1_1InventoryCommand_a16ce9e3db461ecb7c4a50d2bdef65022}{00023}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__commands_1_1InventoryCommand_a16ce9e3db461ecb7c4a50d2bdef65022}{execute}(\hyperlink{classpkg__world_1_1Player}{Player} player) \{
+00024         \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(player.\hyperlink{classpkg__world_1_1Player_a2a6e491f41e159bbac42022e55df2d52}{getInventory}());
+00025         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00026     \}
+00027 
+00028 \}
 \end{DoxyCode}

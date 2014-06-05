@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['hasitem',['hasItem',['../classPlayer.html#a90cb3f05b491eaed668fe54b9258b755',1,'Player.hasItem()'],['../classRoom.html#ad779b367b26018c9f343ca3044c4b54f',1,'Room.hasItem()']]],
-  ['hasmessage',['hasMessage',['../classCommand.html#a3d232d33894a20dc81b7627d84f14183',1,'Command']]],
-  ['hasparameter',['hasParameter',['../classCommand.html#a9b042558156d6749566e0fd9d48d3bfe',1,'Command']]],
-  ['help',['HELP',['../enumCommandWord.html#a8689456b5990b4dfa2c69427a862784d',1,'CommandWord']]],
-  ['helpcommand',['HelpCommand',['../classHelpCommand.html',1,'HelpCommand'],['../classHelpCommand.html#aad2ff84710aafcbf325b91129d9827df',1,'HelpCommand.HelpCommand()']]],
+  ['hasitem',['hasItem',['../classpkg__world_1_1Player.html#a23b53a36fdac45868ee1ea6dcdeca7ce',1,'pkg_world.Player.hasItem()'],['../classpkg__world_1_1Room.html#aefa26e1bc5088dd199dde2e9d471c490',1,'pkg_world.Room.hasItem()']]],
+  ['hasmessage',['hasMessage',['../classpkg__commands_1_1Command.html#ae46bb048d0fa705a5037a5204b530da2',1,'pkg_commands::Command']]],
+  ['hasparameter',['hasParameter',['../classpkg__commands_1_1Command.html#a02af95ab3f1898a66259ab7c177b6998',1,'pkg_commands::Command']]],
+  ['help',['HELP',['../enumpkg__parsing_1_1CommandWord.html#ace035a3a624f4247b9f38c24eabe3f91',1,'pkg_parsing::CommandWord']]],
+  ['helpcommand',['HelpCommand',['../classpkg__commands_1_1HelpCommand.html#a5f12eadc1835cd0c7cdb77811b5fb756',1,'pkg_commands::HelpCommand']]],
+  ['helpcommand',['HelpCommand',['../classpkg__commands_1_1HelpCommand.html',1,'pkg_commands']]],
   ['helpcommand_2ejava',['HelpCommand.java',['../HelpCommand_8java.html',1,'']]],
-  ['helpcount',['helpCount',['../classGameEngine.html#a308a9926d553d53cb4c56c28588f6c62',1,'GameEngine.helpCount()'],['../classHelpCommand.html#a43be62a6791ea374e55433d33447124d',1,'HelpCommand.helpCount()']]]
+  ['helpcount',['helpCount',['../classGameEngine.html#a308a9926d553d53cb4c56c28588f6c62',1,'GameEngine.helpCount()'],['../classpkg__commands_1_1HelpCommand.html#a1f83dd0f92e63803f29ce29485903526',1,'pkg_commands.HelpCommand.helpCount()']]]
 ];

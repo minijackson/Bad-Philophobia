@@ -1,7 +1,8 @@
 var searchData=
 [
   ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
-  ['removeitem',['removeItem',['../classRoom.html#a591912d92553130f8f90a5bebd236a5c',1,'Room']]],
-  ['room',['Room',['../classRoom.html',1,'Room'],['../classRoom.html#a2cdcbb3d86746330a5a01c7fae4de02c',1,'Room.Room(String description, String image)'],['../classRoom.html#ad8cb507b670aec86cf14baa25fadb0f2',1,'Room.Room(String description, String image, ItemList itemList)']]],
+  ['removeitem',['removeItem',['../classpkg__world_1_1Room.html#ab84c99b33e69d4a3e0700cab4b9efeaa',1,'pkg_world::Room']]],
+  ['room',['Room',['../classpkg__world_1_1Room.html#ae48ca6830c8c9368ab1cb7e9b006d157',1,'pkg_world.Room.Room(String description, String image)'],['../classpkg__world_1_1Room.html#a0f95ea70b403217118bf7d5c1f0aebaf',1,'pkg_world.Room.Room(String description, String image, ItemList itemList)']]],
+  ['room',['Room',['../classpkg__world_1_1Room.html',1,'pkg_world']]],
   ['room_2ejava',['Room.java',['../Room_8java.html',1,'']]]
 ];

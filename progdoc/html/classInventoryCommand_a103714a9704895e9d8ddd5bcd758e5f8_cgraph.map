@@ -1,4 +1,0 @@
-<map id="InventoryCommand.execute" name="InventoryCommand.execute">
-<area shape="rect" id="node2" href="$classPlayer.html#a5c4667e6eca93d1bba69f7db022f2feb" title="Return a String containing information about the items carried by the player. " alt="" coords="251,5,386,32"/>
-<area shape="rect" id="node3" href="$classCommand.html#a715709d8f0ab65879d79ad1725c96f17" title="Message field setter. " alt="" coords="240,56,397,83"/>
-</map>

@@ -1,41 +1,47 @@
-\hypertarget{Command_8java_source}{\section{Command.\-java}
+\hypertarget{Command_8java}{\section{Command.\-java}
+\label{Command_8java}\index{pkg\-\_\-commands/\-Command.\-java@{pkg\-\_\-commands/\-Command.\-java}}
 }
 
 \begin{DoxyCode}
 00001 
-00005 \textcolor{keyword}{abstract} \textcolor{keyword}{class }Command \{
+00005 \textcolor{keyword}{package }pkg\_commands;
 00006 
-00012     \textcolor{keyword}{private} String parameter;
-00013 
-00019     \textcolor{keyword}{private} String message;
-00020 
-00025     \textcolor{keyword}{public} String getParameter() \{
-00026         \textcolor{keywordflow}{return} parameter;
-00027     \}
-00028 
-00033     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setParameter(String parameter) \{
-00034         this.parameter = parameter;
-00035     \}
-00036 
-00041     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} hasParameter() \{
-00042         \textcolor{keywordflow}{return} (parameter != null);
-00043     \}
-00044 
-00049     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} setMessage(String message) \{
-00050         this.message = message;
-00051     \}
-00052 
-00057     \textcolor{keyword}{public} String getMessage() \{
-00058         \textcolor{keywordflow}{return} (message == null)? \textcolor{stringliteral}{""} : message;
-00059     \}
-00060 
-00065     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} hasMessage() \{
-00066         \textcolor{keywordflow}{return} (message == null) ? \textcolor{keyword}{false} : !message.equals(\textcolor{stringliteral}{""});
-00067     \}
-00068 
-00076     \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keywordtype}{boolean} execute(\hyperlink{classPlayer}{Player} player) \textcolor{keywordflow}{throws} 
-      \hyperlink{classNoArgumentException}{NoArgumentException},\hyperlink{classIllegalArgumentException}{IllegalArgumentException},
-      \hyperlink{classUnauthorizedException}{UnauthorizedException};
-00077 \}
-00078 
+00007 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Player}{pkg\_world.Player};
+00008 \textcolor{keyword}{import} pkg\_exceptions.*;
+00009 
+\hypertarget{Command_8java_source_l00014}{}\hyperlink{classpkg__commands_1_1Command}{00014} \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keyword}{class }\hyperlink{classpkg__commands_1_1Command}{Command} \{
+00015 
+00021     \textcolor{keyword}{private} String parameter;
+00022 
+00028     \textcolor{keyword}{private} String message;
+00029 
+\hypertarget{Command_8java_source_l00034}{}\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{00034}     \textcolor{keyword}{public} String \hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}() \{
+00035         \textcolor{keywordflow}{return} parameter;
+00036     \}
+00037 
+\hypertarget{Command_8java_source_l00042}{}\hyperlink{classpkg__commands_1_1Command_a18446243a5fd360e9341b4b141c0cccc}{00042}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__commands_1_1Command_a18446243a5fd360e9341b4b141c0cccc}{setParameter}(String parameter) \{
+00043         this.parameter = parameter;
+00044     \}
+00045 
+\hypertarget{Command_8java_source_l00050}{}\hyperlink{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998}{00050}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998}{hasParameter}() \{
+00051         \textcolor{keywordflow}{return} (parameter != null);
+00052     \}
+00053 
+\hypertarget{Command_8java_source_l00058}{}\hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{00058}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(String message) \{
+00059         this.message = message;
+00060     \}
+00061 
+\hypertarget{Command_8java_source_l00066}{}\hyperlink{classpkg__commands_1_1Command_ac2a42e2bab264821892daefaf9a18b6c}{00066}     \textcolor{keyword}{public} String \hyperlink{classpkg__commands_1_1Command_ac2a42e2bab264821892daefaf9a18b6c}{getMessage}() \{
+00067         \textcolor{keywordflow}{return} (message == null)? \textcolor{stringliteral}{""} : message;
+00068     \}
+00069 
+\hypertarget{Command_8java_source_l00074}{}\hyperlink{classpkg__commands_1_1Command_ae46bb048d0fa705a5037a5204b530da2}{00074}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__commands_1_1Command_ae46bb048d0fa705a5037a5204b530da2}{hasMessage}() \{
+00075         \textcolor{keywordflow}{return} (message == null) ? \textcolor{keyword}{false} : !message.equals(\textcolor{stringliteral}{""});
+00076     \}
+00077 
+00085     \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__commands_1_1Command_a19008923c75a87c87d1f3ba8bf8be43f}{execute}(\hyperlink{classpkg__world_1_1Player}{Player} player) \textcolor{keywordflow}{throws} 
+      \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException},\hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}
+      ,\hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException};
+00086 \}
+00087 
 \end{DoxyCode}

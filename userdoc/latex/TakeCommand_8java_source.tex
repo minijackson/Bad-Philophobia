@@ -1,34 +1,40 @@
-\hypertarget{TakeCommand_8java_source}{\section{Take\-Command.\-java}
+\hypertarget{TakeCommand_8java}{\section{Take\-Command.\-java}
+\label{TakeCommand_8java}\index{pkg\-\_\-commands/\-Take\-Command.\-java@{pkg\-\_\-commands/\-Take\-Command.\-java}}
 }
 
 \begin{DoxyCode}
-00001 
-\hypertarget{TakeCommand_8java_source_l00005}{}\hyperlink{classTakeCommand}{00005} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classTakeCommand}{TakeCommand} \textcolor{keyword}{extends} Command \{
-00006 
-\hypertarget{TakeCommand_8java_source_l00010}{}\hyperlink{classTakeCommand_a99adf41b921a59fe81700461cbba59a8}{00010}     \textcolor{keyword}{public} \hyperlink{classTakeCommand_a99adf41b921a59fe81700461cbba59a8}{TakeCommand}()\{
+00001 \textcolor{keyword}{package }pkg\_commands;
+00002 
+00003 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Player}{pkg\_world.Player};
+00004 \textcolor{keyword}{import} pkg\_exceptions.*;
+00005 
+\hypertarget{TakeCommand_8java_source_l00010}{}\hyperlink{classpkg__commands_1_1TakeCommand}{00010} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__commands_1_1TakeCommand}{TakeCommand} \textcolor{keyword}{extends} \hyperlink{classpkg__commands_1_1Command}{Command} \{
 00011 
-00012     \}
-00013 
-\hypertarget{TakeCommand_8java_source_l00022}{}\hyperlink{classTakeCommand_af316002e14bb3253d24bcb03282213ee}{00022}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classTakeCommand_af316002e14bb3253d24bcb03282213ee}{execute}(\hyperlink{classPlayer}{Player} player) \textcolor{keywordflow}{throws} 
-      \hyperlink{classNoArgumentException}{NoArgumentException},\hyperlink{classIllegalArgumentException}{IllegalArgumentException},
-      \hyperlink{classUnauthorizedException}{UnauthorizedException} \{
-00023         \textcolor{keywordflow}{if}(hasParameter()) \{
-00024             \textcolor{keywordflow}{if}(player.getCurrentRoom().hasItem(getParameter())) \{
-00025                 \textcolor{keywordflow}{if}(player.canCarry(player.getCurrentRoom().getItem(getParameter()))) \{
-00026                     player.takeObject(player.getCurrentRoom().getItem(getParameter()));
-00027                     setMessage(\textcolor{stringliteral}{"Oh, dear. He took a"} + (((\textcolor{keyword}{new} String(\textcolor{stringliteral}{"aeiouy"})).contains(getParameter().
-      substring(0,1)))? \textcolor{stringliteral}{"n "} : \textcolor{stringliteral}{" "}) + getParameter() + \textcolor{stringliteral}{"."});
-00028                 \} \textcolor{keywordflow}{else}
-00029                     \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classUnauthorizedException}{UnauthorizedException}(\textcolor{stringliteral}{"That's way too much items for
+\hypertarget{TakeCommand_8java_source_l00015}{}\hyperlink{classpkg__commands_1_1TakeCommand_a1f6989e8d9dce087d5f70cf748c53119}{00015}     \textcolor{keyword}{public} \hyperlink{classpkg__commands_1_1TakeCommand_a1f6989e8d9dce087d5f70cf748c53119}{TakeCommand}()\{
+00016 
+00017     \}
+00018 
+\hypertarget{TakeCommand_8java_source_l00027}{}\hyperlink{classpkg__commands_1_1TakeCommand_a17789062aaf2ab5747c7eeac118875cd}{00027}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__commands_1_1TakeCommand_a17789062aaf2ab5747c7eeac118875cd}{execute}(\hyperlink{classpkg__world_1_1Player}{Player} player) \textcolor{keywordflow}{throws} 
+      \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException},\hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}
+      ,\hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException} \{
+00028         \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998}{hasParameter}()) \{
+00029             \textcolor{keywordflow}{if}(player.getCurrentRoom().hasItem(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}())) \{
+00030                 \textcolor{keywordflow}{if}(player.canCarry(player.getCurrentRoom().getItem(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}()))) \{
+00031                     player.takeObject(player.getCurrentRoom().getItem(
+      \hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}()));
+00032                     \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\textcolor{stringliteral}{"Oh, dear. He took a"} + (((\textcolor{keyword}{new} String(\textcolor{stringliteral}{"aeiouy"})).contains(
+      \hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}().substring(0,1)))? \textcolor{stringliteral}{"n "} : \textcolor{stringliteral}{" "}) + \hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}() + \textcolor{stringliteral}{"."});
+00033                 \} \textcolor{keywordflow}{else}
+00034                     \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException}(\textcolor{stringliteral}{"That's way too much items for
        you. I know, humans are weak."});
-00030             \} \textcolor{keywordflow}{else}
-00031                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classIllegalArgumentException}{IllegalArgumentException}(\textcolor{stringliteral}{"I'm not sure you want to take
-       that."});
-00032         \} \textcolor{keywordflow}{else}
-00033             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classNoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"Wanna take a photo?"});
-00034 
-00035         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-00036     \}
-00037 
-00038 \}
+00035             \} \textcolor{keywordflow}{else}
+00036                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}(\textcolor{stringliteral}{"
+      I'm not sure you want to take that."});
+00037         \} \textcolor{keywordflow}{else}
+00038             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"Wanna take a photo?"});
+00039 
+00040         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00041     \}
+00042 
+00043 \}
 \end{DoxyCode}

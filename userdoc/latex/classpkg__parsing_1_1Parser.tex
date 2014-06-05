@@ -1,0 +1,118 @@
+\hypertarget{classpkg__parsing_1_1Parser}{\section{pkg\-\_\-parsing.\-Parser Class Reference}
+\label{classpkg__parsing_1_1Parser}\index{pkg\-\_\-parsing.\-Parser@{pkg\-\_\-parsing.\-Parser}}
+}
+
+
+Collaboration diagram for pkg\-\_\-parsing.\-Parser\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classpkg__parsing_1_1Parser__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classpkg__commands_1_1Command}{Command} \hyperlink{classpkg__parsing_1_1Parser_a3baac59980671aeb689ca25fba64e9cc}{get\-Command} (String input\-Line)
+\item 
+static String \hyperlink{classpkg__parsing_1_1Parser_a31545cdbdb409aaeb727289c0ea7be1b}{show\-Commands} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used to parse the commands with or without parameters given by the user. \begin{DoxyAuthor}{Author}
+Rémi N\-I\-C\-O\-L\-E 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{Parser_8java_source_l00016}{16} of file \hyperlink{Parser_8java_source}{Parser.\-java}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpkg__parsing_1_1Parser_a3baac59980671aeb689ca25fba64e9cc}{\index{pkg\-\_\-parsing\-::\-Parser@{pkg\-\_\-parsing\-::\-Parser}!get\-Command@{get\-Command}}
+\index{get\-Command@{get\-Command}!pkg_parsing::Parser@{pkg\-\_\-parsing\-::\-Parser}}
+\subsubsection[{get\-Command}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Command} pkg\-\_\-parsing.\-Parser.\-get\-Command (
+\begin{DoxyParamCaption}
+\item[{String}]{input\-Line}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpkg__parsing_1_1Parser_a3baac59980671aeb689ca25fba64e9cc}
+Return the Command corresponding to the given user's input. 
+\begin{DoxyParams}{Parameters}
+{\em input\-Line} & The user's input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding Command 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Parser_8java_source_l00028}{28} of file \hyperlink{Parser_8java_source}{Parser.\-java}.
+
+
+\begin{DoxyCode}
+00028                                                        \{
+00029 
+00030         String word1;
+00031         String word2;
+00032 
+00033         StringTokenizer tokenizer = \textcolor{keyword}{new} StringTokenizer(inputLine);
+00034 
+00035         \textcolor{keywordflow}{if}(tokenizer.hasMoreTokens())
+00036             word1 = tokenizer.nextToken();  \textcolor{comment}{// First word}
+00037         \textcolor{keywordflow}{else}
+00038             word1 = null;
+00039         \textcolor{keywordflow}{if}(tokenizer.hasMoreTokens())
+00040             word2 = tokenizer.nextToken();  \textcolor{comment}{// Second word}
+00041         \textcolor{keywordflow}{else}
+00042             word2 = null;
+00043 
+00044         Command command = commands.getCommand(word1);
+00045         \textcolor{keywordflow}{if}(command != null) \{
+00046             command.setParameter(word2);
+00047         \}
+00048         \textcolor{keywordflow}{return} command;
+00049     \}
+\end{DoxyCode}
+\hypertarget{classpkg__parsing_1_1Parser_a31545cdbdb409aaeb727289c0ea7be1b}{\index{pkg\-\_\-parsing\-::\-Parser@{pkg\-\_\-parsing\-::\-Parser}!show\-Commands@{show\-Commands}}
+\index{show\-Commands@{show\-Commands}!pkg_parsing::Parser@{pkg\-\_\-parsing\-::\-Parser}}
+\subsubsection[{show\-Commands}]{\setlength{\rightskip}{0pt plus 5cm}static String pkg\-\_\-parsing.\-Parser.\-show\-Commands (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpkg__parsing_1_1Parser_a31545cdbdb409aaeb727289c0ea7be1b}
+Getter for the known\-Commands field of the commands field. \begin{DoxyReturn}{Returns}
+The list of available commands 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Parser_8java_source_l00055}{55} of file \hyperlink{Parser_8java_source}{Parser.\-java}.
+
+
+
+Referenced by \hyperlink{HelpCommand_8java_source_l00033}{pkg\-\_\-commands.\-Help\-Command.\-execute()}.
+
+
+\begin{DoxyCode}
+00055                                         \{
+00056         \textcolor{keywordflow}{return} commands.getCommandList();
+00057     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__parsing_1_1Parser_a31545cdbdb409aaeb727289c0ea7be1b_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pkg\-\_\-parsing/\hyperlink{Parser_8java}{Parser.\-java}\end{DoxyCompactItemize}

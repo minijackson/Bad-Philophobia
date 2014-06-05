@@ -1,0 +1,123 @@
+\hypertarget{classpkg__commands_1_1HelpCommand}{\section{pkg\-\_\-commands.\-Help\-Command Class Reference}
+\label{classpkg__commands_1_1HelpCommand}\index{pkg\-\_\-commands.\-Help\-Command@{pkg\-\_\-commands.\-Help\-Command}}
+}
+
+
+Inheritance diagram for pkg\-\_\-commands.\-Help\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classpkg__commands_1_1HelpCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pkg\-\_\-commands.\-Help\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classpkg__commands_1_1HelpCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpkg__commands_1_1HelpCommand_a5f12eadc1835cd0c7cdb77811b5fb756}{Help\-Command} ()
+\item 
+boolean \hyperlink{classpkg__commands_1_1HelpCommand_a332d3e57539dfc82f8c539f8b3e24dd6}{execute} (\hyperlink{classpkg__world_1_1Player}{Player} player)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+class \hyperlink{classpkg__commands_1_1HelpCommand}{Help\-Command} used to print the help \begin{DoxyAuthor}{Author}
+Rémi Nicole 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{HelpCommand_8java_source_l00010}{10} of file \hyperlink{HelpCommand_8java_source}{Help\-Command.\-java}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpkg__commands_1_1HelpCommand_a5f12eadc1835cd0c7cdb77811b5fb756}{\index{pkg\-\_\-commands\-::\-Help\-Command@{pkg\-\_\-commands\-::\-Help\-Command}!Help\-Command@{Help\-Command}}
+\index{Help\-Command@{Help\-Command}!pkg_commands::HelpCommand@{pkg\-\_\-commands\-::\-Help\-Command}}
+\subsubsection[{Help\-Command}]{\setlength{\rightskip}{0pt plus 5cm}pkg\-\_\-commands.\-Help\-Command.\-Help\-Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__commands_1_1HelpCommand_a5f12eadc1835cd0c7cdb77811b5fb756}
+Constructor for \hyperlink{classpkg__commands_1_1HelpCommand}{Help\-Command} 
+
+Definition at line \hyperlink{HelpCommand_8java_source_l00023}{23} of file \hyperlink{HelpCommand_8java_source}{Help\-Command.\-java}.
+
+
+\begin{DoxyCode}
+00023                         \{
+00024         helpCount = 0;
+00025     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpkg__commands_1_1HelpCommand_a332d3e57539dfc82f8c539f8b3e24dd6}{\index{pkg\-\_\-commands\-::\-Help\-Command@{pkg\-\_\-commands\-::\-Help\-Command}!execute@{execute}}
+\index{execute@{execute}!pkg_commands::HelpCommand@{pkg\-\_\-commands\-::\-Help\-Command}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}boolean pkg\-\_\-commands.\-Help\-Command.\-execute (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{player}
+\end{DoxyParamCaption}
+)}}\label{classpkg__commands_1_1HelpCommand_a332d3e57539dfc82f8c539f8b3e24dd6}
+Saves user's help in the parameter field. It really shows help if the user asked for more than once the help. 
+\begin{DoxyParams}{Parameters}
+{\em player} & The player that called this command \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False because it is not the quit command 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{HelpCommand_8java_source_l00033}{33} of file \hyperlink{HelpCommand_8java_source}{Help\-Command.\-java}.
+
+
+
+References \hyperlink{Command_8java_source_l00066}{pkg\-\_\-commands.\-Command.\-get\-Message()}, \hyperlink{Command_8java_source_l00058}{pkg\-\_\-commands.\-Command.\-set\-Message()}, and \hyperlink{Parser_8java_source_l00055}{pkg\-\_\-parsing.\-Parser.\-show\-Commands()}.
+
+
+\begin{DoxyCode}
+00033                                           \{
+00034         \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\textcolor{stringliteral}{""});
+00035         \textcolor{keywordflow}{if}(helpCount == 0) \{
+00036             \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\textcolor{stringliteral}{"Help ? Who needs help ? Only the weak ones."});
+00037             ++helpCount;
+00038         \} \textcolor{keywordflow}{else} \{
+00039             \textcolor{keywordflow}{if}(helpCount == 1)\{
+00040                 \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\textcolor{stringliteral}{"All right, all right! If you insist...\(\backslash\)n"});
+00041                 ++helpCount;
+00042             \}
+00043             \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\hyperlink{classpkg__commands_1_1Command_ac2a42e2bab264821892daefaf9a18b6c}{getMessage}() + \textcolor{stringliteral}{"What you can do is: "} + Parser.showCommands() + \textcolor{stringliteral}{
+      "\(\backslash\)n"}
+00044                     + \textcolor{stringliteral}{"That will be all."});
+00045         \}
+00046         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00047     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__commands_1_1HelpCommand_a332d3e57539dfc82f8c539f8b3e24dd6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pkg\-\_\-commands/\hyperlink{HelpCommand_8java}{Help\-Command.\-java}\end{DoxyCompactItemize}

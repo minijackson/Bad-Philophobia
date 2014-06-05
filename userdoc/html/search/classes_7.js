@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lookcommand',['LookCommand',['../classLookCommand.html',1,'']]]
+  ['lookcommand',['LookCommand',['../classpkg__commands_1_1LookCommand.html',1,'pkg_commands']]]
 ];

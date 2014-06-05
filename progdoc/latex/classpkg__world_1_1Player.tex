@@ -1,0 +1,850 @@
+\hypertarget{classpkg__world_1_1Player}{\section{pkg\-\_\-world.\-Player Class Reference}
+\label{classpkg__world_1_1Player}\index{pkg\-\_\-world.\-Player@{pkg\-\_\-world.\-Player}}
+}
+
+
+class \hyperlink{classpkg__world_1_1Player}{Player} used to handle the user's player.  
+
+
+
+
+Collaboration diagram for pkg\-\_\-world.\-Player\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classpkg__world_1_1Player__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpkg__world_1_1Player_a8a48bf28cae733a412a0114802a1e4fb}{Player} (String \hyperlink{classpkg__world_1_1Player_ab4c41ebebb7fcc55fa253e48af0c4267}{name}, \hyperlink{classpkg__world_1_1Room}{Room} first\-Room)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpkg__world_1_1Player}{Player} class constructor. \end{DoxyCompactList}\item 
+String \hyperlink{classpkg__world_1_1Player_afb52f93ed1c1ee43462f0c33ca3abcf0}{get\-Name} ()
+\begin{DoxyCompactList}\small\item\em name field getter. \end{DoxyCompactList}\item 
+int \hyperlink{classpkg__world_1_1Player_a700bc1762736bd44d91e40ad9ae2ff76}{get\-Max\-Weight} ()
+\begin{DoxyCompactList}\small\item\em max\-Weight field getter. \end{DoxyCompactList}\item 
+void \hyperlink{classpkg__world_1_1Player_a6218134478709a2e1c4438f2c9f94b8a}{set\-Max\-Weight} (int \hyperlink{classpkg__world_1_1Player_a780685c88ad92ca6b280cf841ab33728}{max\-Weight})
+\begin{DoxyCompactList}\small\item\em max\-Weight field setter. \end{DoxyCompactList}\item 
+\hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Player_a5ff0ede152d97c0c9cf6603c9a422a77}{get\-Current\-Room} ()
+\begin{DoxyCompactList}\small\item\em current\-Room field getter. \end{DoxyCompactList}\item 
+void \hyperlink{classpkg__world_1_1Player_af694ca81b712f2ba0e18c3ae73c03bd4}{go\-Room} (\hyperlink{classpkg__world_1_1Room}{Room} room)
+\begin{DoxyCompactList}\small\item\em Go to the given room. \end{DoxyCompactList}\item 
+\hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Player_adcff90c8c1b6fd5dcb3c4516d7e3a277}{get\-Previous\-Room} ()
+\begin{DoxyCompactList}\small\item\em Return the last \hyperlink{classpkg__world_1_1Room}{Room}. \end{DoxyCompactList}\item 
+void \hyperlink{classpkg__world_1_1Player_a6b419da985921727891cee03e4a7e755}{push\-Previous\-Rooms} (\hyperlink{classpkg__world_1_1Room}{Room} room)
+\begin{DoxyCompactList}\small\item\em Push a room in the previous\-Rooms stack. \end{DoxyCompactList}\item 
+void \hyperlink{classpkg__world_1_1Player_af97dc9ce2806115a09ab6a3ba08ed673}{push\-Forward} ()
+\begin{DoxyCompactList}\small\item\em Push the current\-Room in the previous\-Rooms stack. \end{DoxyCompactList}\item 
+void \hyperlink{classpkg__world_1_1Player_a4ef9377c34206c64ef1086de669ca5f1}{pop\-Previous\-Rooms} ()
+\begin{DoxyCompactList}\small\item\em Pop the last room in the previous\-Rooms stack. \end{DoxyCompactList}\item 
+boolean \hyperlink{classpkg__world_1_1Player_abe1633071742e8825d40317150f66835}{no\-Previous\-Rooms} ()
+\begin{DoxyCompactList}\small\item\em Return true if there is no previous rooms. \end{DoxyCompactList}\item 
+void \hyperlink{classpkg__world_1_1Player_a6dc6248fa7cbe281e9a7c5d6b86f242c}{set\-Beamer\-Room} (\hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Player_aadfcdea19eefea1137932f9329c08209}{beamer\-Room})
+\begin{DoxyCompactList}\small\item\em beamer\-Room field setter. \end{DoxyCompactList}\item 
+\hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Player_a81893b37cd26426863087f353f8be3ab}{get\-Beamer\-Room} ()
+\begin{DoxyCompactList}\small\item\em beamer\-Room field getter. \end{DoxyCompactList}\item 
+\hyperlink{classpkg__world_1_1Item}{Item} \hyperlink{classpkg__world_1_1Player_a913aab92cf289f5278e6e995e7a4d118}{get\-Item} (String item)
+\begin{DoxyCompactList}\small\item\em Return the \hyperlink{classpkg__world_1_1Item}{Item} in the player's inventory through it's name. \end{DoxyCompactList}\item 
+boolean \hyperlink{classpkg__world_1_1Player_a23b53a36fdac45868ee1ea6dcdeca7ce}{has\-Item} (String item)
+\begin{DoxyCompactList}\small\item\em Check if the player has a given \hyperlink{classpkg__world_1_1Item}{Item}. \end{DoxyCompactList}\item 
+boolean \hyperlink{classpkg__world_1_1Player_acca13cc67931809c8067aaca1b8c8459}{can\-Carry} (\hyperlink{classpkg__world_1_1Item}{Item} item)
+\begin{DoxyCompactList}\small\item\em Check if the player can carry the given \hyperlink{classpkg__world_1_1Item}{Item}. \end{DoxyCompactList}\item 
+void \hyperlink{classpkg__world_1_1Player_ac5bdaa8f2149e480e57398be03efa96f}{take\-Object} (\hyperlink{classpkg__world_1_1Item}{Item} item)
+\begin{DoxyCompactList}\small\item\em Take the given object. \end{DoxyCompactList}\item 
+void \hyperlink{classpkg__world_1_1Player_a202b660b747a977911af058554888387}{drop\-Object} (String item)
+\begin{DoxyCompactList}\small\item\em Drop the given object. \end{DoxyCompactList}\item 
+void \hyperlink{classpkg__world_1_1Player_ab18847eb6503ad2ac400cc7cd5a7c9a0}{eat\-Object} (String item\-Name)
+\begin{DoxyCompactList}\small\item\em Destroy an object. \end{DoxyCompactList}\item 
+String \hyperlink{classpkg__world_1_1Player_a2a6e491f41e159bbac42022e55df2d52}{get\-Inventory} ()
+\begin{DoxyCompactList}\small\item\em Return a String containing information about the items carried by the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classpkg__world_1_1Player_ab4c41ebebb7fcc55fa253e48af0c4267}{name}
+\begin{DoxyCompactList}\small\item\em Name of the player. \end{DoxyCompactList}\item 
+\hyperlink{classpkg__world_1_1ItemList}{Item\-List} \hyperlink{classpkg__world_1_1Player_adea3925e7f823a9602e5f9ee58683e3b}{backpack}
+\begin{DoxyCompactList}\small\item\em Items carried by the player. \end{DoxyCompactList}\item 
+int \hyperlink{classpkg__world_1_1Player_a19ed9d4d1b17f409f106142ec2fd68a3}{backpack\-Weight}
+\begin{DoxyCompactList}\small\item\em Weight of the carried items. \end{DoxyCompactList}\item 
+int \hyperlink{classpkg__world_1_1Player_a780685c88ad92ca6b280cf841ab33728}{max\-Weight} = 100
+\begin{DoxyCompactList}\small\item\em The maximum weight of Items the player can carry. \end{DoxyCompactList}\item 
+\hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Player_a2b0217339fe7077674b0e0a1ad33cc1e}{current\-Room}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpkg__world_1_1Room}{Room} where the player is currently in. \end{DoxyCompactList}\item 
+Stack$<$ \hyperlink{classpkg__world_1_1Room}{Room} $>$ \hyperlink{classpkg__world_1_1Player_a28f9bc6a3c1d829996e8a38935b77fd1}{previous\-Rooms}
+\begin{DoxyCompactList}\small\item\em Rooms where the player was before now. \end{DoxyCompactList}\item 
+\hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Player_aadfcdea19eefea1137932f9329c08209}{beamer\-Room}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpkg__world_1_1Room}{Room} remembered by the beamer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{classpkg__world_1_1Player}{Player} used to handle the user's player. 
+
+\begin{DoxyAuthor}{Author}
+Rémi Nicole 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{Player_8java_source_l00016}{16} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpkg__world_1_1Player_a8a48bf28cae733a412a0114802a1e4fb}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!Player@{Player}}
+\index{Player@{Player}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{Player}]{\setlength{\rightskip}{0pt plus 5cm}pkg\-\_\-world.\-Player.\-Player (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{{\bf Room}}]{first\-Room}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_a8a48bf28cae733a412a0114802a1e4fb}
+
+
+\hyperlink{classpkg__world_1_1Player}{Player} class constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the player \\
+\hline
+{\em first\-Room} & \hyperlink{classpkg__world_1_1Room}{Room} where the player start \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Player_8java_source_l00059}{59} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+References \hyperlink{Player_8java_source_l00027}{pkg\-\_\-world.\-Player.\-backpack}, \hyperlink{Player_8java_source_l00032}{pkg\-\_\-world.\-Player.\-backpack\-Weight}, \hyperlink{Player_8java_source_l00042}{pkg\-\_\-world.\-Player.\-current\-Room}, \hyperlink{Player_8java_source_l00022}{pkg\-\_\-world.\-Player.\-name}, and \hyperlink{Player_8java_source_l00047}{pkg\-\_\-world.\-Player.\-previous\-Rooms}.
+
+
+\begin{DoxyCode}
+00059                                                \{
+00060         this.name = \hyperlink{classpkg__world_1_1Player_ab4c41ebebb7fcc55fa253e48af0c4267}{name};
+00061         \hyperlink{classpkg__world_1_1Player_adea3925e7f823a9602e5f9ee58683e3b}{backpack} = \textcolor{keyword}{new} ItemList();
+00062         \hyperlink{classpkg__world_1_1Player_a19ed9d4d1b17f409f106142ec2fd68a3}{backpackWeight} = 0;
+00063         \hyperlink{classpkg__world_1_1Player_a2b0217339fe7077674b0e0a1ad33cc1e}{currentRoom} = firstRoom;
+00064         \hyperlink{classpkg__world_1_1Player_a28f9bc6a3c1d829996e8a38935b77fd1}{previousRooms} = \textcolor{keyword}{new} Stack<Room>();
+00065     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpkg__world_1_1Player_acca13cc67931809c8067aaca1b8c8459}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!can\-Carry@{can\-Carry}}
+\index{can\-Carry@{can\-Carry}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{can\-Carry}]{\setlength{\rightskip}{0pt plus 5cm}boolean pkg\-\_\-world.\-Player.\-can\-Carry (
+\begin{DoxyParamCaption}
+\item[{{\bf Item}}]{item}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_acca13cc67931809c8067aaca1b8c8459}
+
+
+Check if the player can carry the given \hyperlink{classpkg__world_1_1Item}{Item}. 
+
+This methods simply checks the \hyperlink{classpkg__world_1_1Item}{Item} with it's weight 
+\begin{DoxyParams}{Parameters}
+{\em item} & The \hyperlink{classpkg__world_1_1Item}{Item} to be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the \hyperlink{classpkg__world_1_1Item}{Item} can be carried 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Player_8java_source_l00184}{184} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+References \hyperlink{Player_8java_source_l00032}{pkg\-\_\-world.\-Player.\-backpack\-Weight}, and \hyperlink{Player_8java_source_l00037}{pkg\-\_\-world.\-Player.\-max\-Weight}.
+
+
+\begin{DoxyCode}
+00184                                        \{
+00185         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Player_a19ed9d4d1b17f409f106142ec2fd68a3}{backpackWeight} + item.getWeight() < \hyperlink{classpkg__world_1_1Player_a780685c88ad92ca6b280cf841ab33728}{maxWeight};
+00186     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Player_a202b660b747a977911af058554888387}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!drop\-Object@{drop\-Object}}
+\index{drop\-Object@{drop\-Object}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{drop\-Object}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-world.\-Player.\-drop\-Object (
+\begin{DoxyParamCaption}
+\item[{String}]{item}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_a202b660b747a977911af058554888387}
+
+
+Drop the given object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \hyperlink{classpkg__world_1_1Item}{Item} to be dropped \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Player_8java_source_l00201}{201} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+References \hyperlink{Player_8java_source_l00032}{pkg\-\_\-world.\-Player.\-backpack\-Weight}.
+
+
+\begin{DoxyCode}
+00201                                         \{
+00202         \hyperlink{classpkg__world_1_1Player_a19ed9d4d1b17f409f106142ec2fd68a3}{backpackWeight} -= backpack.get(item).getWeight();
+00203         backpack.transfer(item, currentRoom.getContainedItems());
+00204     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Player_ab18847eb6503ad2ac400cc7cd5a7c9a0}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!eat\-Object@{eat\-Object}}
+\index{eat\-Object@{eat\-Object}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{eat\-Object}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-world.\-Player.\-eat\-Object (
+\begin{DoxyParamCaption}
+\item[{String}]{item\-Name}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_ab18847eb6503ad2ac400cc7cd5a7c9a0}
+
+
+Destroy an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item\-Name} & \hyperlink{classpkg__world_1_1Item}{Item} to be destroyed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Player_8java_source_l00210}{210} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+\begin{DoxyCode}
+00210                                            \{
+00211         backpack.remove(itemName);
+00212     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Player_a81893b37cd26426863087f353f8be3ab}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!get\-Beamer\-Room@{get\-Beamer\-Room}}
+\index{get\-Beamer\-Room@{get\-Beamer\-Room}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{get\-Beamer\-Room}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Room} pkg\-\_\-world.\-Player.\-get\-Beamer\-Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_a81893b37cd26426863087f353f8be3ab}
+
+
+beamer\-Room field getter. 
+
+\begin{DoxyReturn}{Returns}
+The saved \hyperlink{classpkg__world_1_1Room}{Room} by the beamer 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Player_8java_source_l00157}{157} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+References \hyperlink{Player_8java_source_l00052}{pkg\-\_\-world.\-Player.\-beamer\-Room}.
+
+
+
+Referenced by \hyperlink{BeamerCommand_8java_source_l00067}{pkg\-\_\-commands.\-Beamer\-Command.\-charge()}.
+
+
+\begin{DoxyCode}
+00157                                 \{
+00158         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Player_aadfcdea19eefea1137932f9329c08209}{beamerRoom};
+00159     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1Player_a81893b37cd26426863087f353f8be3ab_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classpkg__world_1_1Player_a5ff0ede152d97c0c9cf6603c9a422a77}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!get\-Current\-Room@{get\-Current\-Room}}
+\index{get\-Current\-Room@{get\-Current\-Room}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{get\-Current\-Room}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Room} pkg\-\_\-world.\-Player.\-get\-Current\-Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_a5ff0ede152d97c0c9cf6603c9a422a77}
+
+
+current\-Room field getter. 
+
+\begin{DoxyReturn}{Returns}
+The \hyperlink{classpkg__world_1_1Room}{Room} where the player is currently in 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Player_8java_source_l00095}{95} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+References \hyperlink{Player_8java_source_l00042}{pkg\-\_\-world.\-Player.\-current\-Room}.
+
+
+
+Referenced by \hyperlink{GameEngine_8java_source_l00179}{Game\-Engine.\-process\-Command()}.
+
+
+\begin{DoxyCode}
+00095                                  \{
+00096         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Player_a2b0217339fe7077674b0e0a1ad33cc1e}{currentRoom};
+00097     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1Player_a5ff0ede152d97c0c9cf6603c9a422a77_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classpkg__world_1_1Player_a2a6e491f41e159bbac42022e55df2d52}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!get\-Inventory@{get\-Inventory}}
+\index{get\-Inventory@{get\-Inventory}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{get\-Inventory}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-world.\-Player.\-get\-Inventory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_a2a6e491f41e159bbac42022e55df2d52}
+
+
+Return a String containing information about the items carried by the player. 
+
+\begin{DoxyReturn}{Returns}
+String The inventory 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Player_8java_source_l00219}{219} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+Referenced by \hyperlink{InventoryCommand_8java_source_l00023}{pkg\-\_\-commands.\-Inventory\-Command.\-execute()}.
+
+
+\begin{DoxyCode}
+00219                                  \{
+00220         String returnString = \textcolor{stringliteral}{""};
+00221         Set<String> itemsNames = backpack.keySet();
+00222         Iterator<String> it = itemsNames.iterator();
+00223         \textcolor{keywordflow}{while}(it.hasNext()) \{
+00224             String itemName = it.next();
+00225             \textcolor{comment}{// If the item's name begins with a vowel, the prefix is ' an '}
+00226             \textcolor{comment}{// if not, the prefix is ' a '}
+00227             String prefix = \textcolor{stringliteral}{" a"} + (((\textcolor{keyword}{new} String(\textcolor{stringliteral}{"aeiouy"})).contains(itemName.substring(0,1)))? \textcolor{stringliteral}{"n"} : \textcolor{stringliteral}{""}) +
+       \textcolor{stringliteral}{" "};
+00228 
+00229             \textcolor{keywordflow}{if}(returnString.equals(\textcolor{stringliteral}{""}))
+00230                 returnString += prefix + itemName;
+00231             \textcolor{keywordflow}{else} \{
+00232                 \textcolor{comment}{// Check if it is the last item}
+00233                 \textcolor{keywordflow}{if}(it.hasNext())
+00234                     returnString += \textcolor{stringliteral}{","} + prefix + itemName;
+00235                 \textcolor{keywordflow}{else}
+00236                     returnString += \textcolor{stringliteral}{" and"} + prefix + itemName;
+00237             \}
+00238         \}
+00239         \textcolor{keywordflow}{return} (returnString.equals(\textcolor{stringliteral}{""}))?
+00240             \textcolor{stringliteral}{"You have nothing. This may be a metaphor for your life.\(\backslash\)nBut as always you didn't understand a
+       word I said, don't you?"}
+00241             : \textcolor{stringliteral}{"You have"} + returnString + \textcolor{stringliteral}{".\(\backslash\)nCan't you remember that?"};
+00242     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1Player_a2a6e491f41e159bbac42022e55df2d52_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classpkg__world_1_1Player_a913aab92cf289f5278e6e995e7a4d118}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!get\-Item@{get\-Item}}
+\index{get\-Item@{get\-Item}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{get\-Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Item} pkg\-\_\-world.\-Player.\-get\-Item (
+\begin{DoxyParamCaption}
+\item[{String}]{item}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_a913aab92cf289f5278e6e995e7a4d118}
+
+
+Return the \hyperlink{classpkg__world_1_1Item}{Item} in the player's inventory through it's name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The name of the \hyperlink{classpkg__world_1_1Item}{Item} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The asked \hyperlink{classpkg__world_1_1Item}{Item} 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Player_8java_source_l00166}{166} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+\begin{DoxyCode}
+00166                                      \{
+00167         \textcolor{keywordflow}{return} backpack.get(item);
+00168     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Player_a700bc1762736bd44d91e40ad9ae2ff76}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!get\-Max\-Weight@{get\-Max\-Weight}}
+\index{get\-Max\-Weight@{get\-Max\-Weight}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{get\-Max\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}int pkg\-\_\-world.\-Player.\-get\-Max\-Weight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_a700bc1762736bd44d91e40ad9ae2ff76}
+
+
+max\-Weight field getter. 
+
+\begin{DoxyReturn}{Returns}
+The maximum weight the player can carry 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Player_8java_source_l00079}{79} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+References \hyperlink{Player_8java_source_l00037}{pkg\-\_\-world.\-Player.\-max\-Weight}.
+
+
+\begin{DoxyCode}
+00079                               \{
+00080         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Player_a780685c88ad92ca6b280cf841ab33728}{maxWeight};
+00081     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Player_afb52f93ed1c1ee43462f0c33ca3abcf0}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-world.\-Player.\-get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_afb52f93ed1c1ee43462f0c33ca3abcf0}
+
+
+name field getter. 
+
+\begin{DoxyReturn}{Returns}
+The name of the player 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Player_8java_source_l00071}{71} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+References \hyperlink{Player_8java_source_l00022}{pkg\-\_\-world.\-Player.\-name}.
+
+
+\begin{DoxyCode}
+00071                             \{
+00072         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Player_ab4c41ebebb7fcc55fa253e48af0c4267}{name};
+00073     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Player_adcff90c8c1b6fd5dcb3c4516d7e3a277}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!get\-Previous\-Room@{get\-Previous\-Room}}
+\index{get\-Previous\-Room@{get\-Previous\-Room}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{get\-Previous\-Room}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Room} pkg\-\_\-world.\-Player.\-get\-Previous\-Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_adcff90c8c1b6fd5dcb3c4516d7e3a277}
+
+
+Return the last \hyperlink{classpkg__world_1_1Room}{Room}. 
+
+\begin{DoxyReturn}{Returns}
+The last \hyperlink{classpkg__world_1_1Room}{Room} were the \hyperlink{classpkg__world_1_1Player}{Player} was 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Player_8java_source_l00111}{111} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+References \hyperlink{Player_8java_source_l00047}{pkg\-\_\-world.\-Player.\-previous\-Rooms}.
+
+
+\begin{DoxyCode}
+00111                                   \{
+00112         \textcolor{keywordflow}{return} (\hyperlink{classpkg__world_1_1Player_a28f9bc6a3c1d829996e8a38935b77fd1}{previousRooms}.empty())? null : \hyperlink{classpkg__world_1_1Player_a28f9bc6a3c1d829996e8a38935b77fd1}{previousRooms}.peek();
+00113     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Player_af694ca81b712f2ba0e18c3ae73c03bd4}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!go\-Room@{go\-Room}}
+\index{go\-Room@{go\-Room}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{go\-Room}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-world.\-Player.\-go\-Room (
+\begin{DoxyParamCaption}
+\item[{{\bf Room}}]{room}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_af694ca81b712f2ba0e18c3ae73c03bd4}
+
+
+Go to the given room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & \hyperlink{classpkg__world_1_1Room}{Room} to go to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Player_8java_source_l00103}{103} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+References \hyperlink{Player_8java_source_l00042}{pkg\-\_\-world.\-Player.\-current\-Room}.
+
+
+\begin{DoxyCode}
+00103                                   \{
+00104         \hyperlink{classpkg__world_1_1Player_a2b0217339fe7077674b0e0a1ad33cc1e}{currentRoom} = room;
+00105     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Player_a23b53a36fdac45868ee1ea6dcdeca7ce}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!has\-Item@{has\-Item}}
+\index{has\-Item@{has\-Item}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{has\-Item}]{\setlength{\rightskip}{0pt plus 5cm}boolean pkg\-\_\-world.\-Player.\-has\-Item (
+\begin{DoxyParamCaption}
+\item[{String}]{item}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_a23b53a36fdac45868ee1ea6dcdeca7ce}
+
+
+Check if the player has a given \hyperlink{classpkg__world_1_1Item}{Item}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \hyperlink{classpkg__world_1_1Item}{Item} name to be checked \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Player_8java_source_l00174}{174} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+\begin{DoxyCode}
+00174                                         \{
+00175         \textcolor{keywordflow}{return} backpack.containsKey(item);
+00176     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Player_abe1633071742e8825d40317150f66835}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!no\-Previous\-Rooms@{no\-Previous\-Rooms}}
+\index{no\-Previous\-Rooms@{no\-Previous\-Rooms}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{no\-Previous\-Rooms}]{\setlength{\rightskip}{0pt plus 5cm}boolean pkg\-\_\-world.\-Player.\-no\-Previous\-Rooms (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_abe1633071742e8825d40317150f66835}
+
+
+Return true if there is no previous rooms. 
+
+\begin{DoxyReturn}{Returns}
+True if there is no previous rooms 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Player_8java_source_l00141}{141} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+\begin{DoxyCode}
+00141                                      \{
+00142         \textcolor{keywordflow}{return} previousRooms.empty();
+00143     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Player_a4ef9377c34206c64ef1086de669ca5f1}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!pop\-Previous\-Rooms@{pop\-Previous\-Rooms}}
+\index{pop\-Previous\-Rooms@{pop\-Previous\-Rooms}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{pop\-Previous\-Rooms}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-world.\-Player.\-pop\-Previous\-Rooms (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_a4ef9377c34206c64ef1086de669ca5f1}
+
+
+Pop the last room in the previous\-Rooms stack. 
+
+
+
+Definition at line \hyperlink{Player_8java_source_l00133}{133} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+\begin{DoxyCode}
+00133                                    \{
+00134         previousRooms.pop();
+00135     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Player_af97dc9ce2806115a09ab6a3ba08ed673}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!push\-Forward@{push\-Forward}}
+\index{push\-Forward@{push\-Forward}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{push\-Forward}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-world.\-Player.\-push\-Forward (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_af97dc9ce2806115a09ab6a3ba08ed673}
+
+
+Push the current\-Room in the previous\-Rooms stack. 
+
+
+
+Definition at line \hyperlink{Player_8java_source_l00126}{126} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+References \hyperlink{Player_8java_source_l00042}{pkg\-\_\-world.\-Player.\-current\-Room}.
+
+
+\begin{DoxyCode}
+00126                               \{
+00127         previousRooms.push(\hyperlink{classpkg__world_1_1Player_a2b0217339fe7077674b0e0a1ad33cc1e}{currentRoom});
+00128     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Player_a6b419da985921727891cee03e4a7e755}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!push\-Previous\-Rooms@{push\-Previous\-Rooms}}
+\index{push\-Previous\-Rooms@{push\-Previous\-Rooms}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{push\-Previous\-Rooms}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-world.\-Player.\-push\-Previous\-Rooms (
+\begin{DoxyParamCaption}
+\item[{{\bf Room}}]{room}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_a6b419da985921727891cee03e4a7e755}
+
+
+Push a room in the previous\-Rooms stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & \hyperlink{classpkg__world_1_1Room}{Room} to be pushed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Player_8java_source_l00119}{119} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+\begin{DoxyCode}
+00119                                              \{
+00120         previousRooms.push(room);
+00121     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Player_a6dc6248fa7cbe281e9a7c5d6b86f242c}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!set\-Beamer\-Room@{set\-Beamer\-Room}}
+\index{set\-Beamer\-Room@{set\-Beamer\-Room}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{set\-Beamer\-Room}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-world.\-Player.\-set\-Beamer\-Room (
+\begin{DoxyParamCaption}
+\item[{{\bf Room}}]{beamer\-Room}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_a6dc6248fa7cbe281e9a7c5d6b86f242c}
+
+
+beamer\-Room field setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em beamer\-Room} & The beamer \hyperlink{classpkg__world_1_1Room}{Room} to be saved \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Player_8java_source_l00149}{149} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+References \hyperlink{Player_8java_source_l00052}{pkg\-\_\-world.\-Player.\-beamer\-Room}.
+
+
+\begin{DoxyCode}
+00149                                                \{
+00150         this.beamerRoom = \hyperlink{classpkg__world_1_1Player_aadfcdea19eefea1137932f9329c08209}{beamerRoom};
+00151     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Player_a6218134478709a2e1c4438f2c9f94b8a}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!set\-Max\-Weight@{set\-Max\-Weight}}
+\index{set\-Max\-Weight@{set\-Max\-Weight}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{set\-Max\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-world.\-Player.\-set\-Max\-Weight (
+\begin{DoxyParamCaption}
+\item[{int}]{max\-Weight}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_a6218134478709a2e1c4438f2c9f94b8a}
+
+
+max\-Weight field setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\-Weight} & The value for the max\-Weight field \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Player_8java_source_l00087}{87} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+References \hyperlink{Player_8java_source_l00037}{pkg\-\_\-world.\-Player.\-max\-Weight}.
+
+
+\begin{DoxyCode}
+00087                                             \{
+00088         this.maxWeight = \hyperlink{classpkg__world_1_1Player_a780685c88ad92ca6b280cf841ab33728}{maxWeight};
+00089     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Player_ac5bdaa8f2149e480e57398be03efa96f}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!take\-Object@{take\-Object}}
+\index{take\-Object@{take\-Object}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{take\-Object}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-world.\-Player.\-take\-Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Item}}]{item}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Player_ac5bdaa8f2149e480e57398be03efa96f}
+
+
+Take the given object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \hyperlink{classpkg__world_1_1Item}{Item} to be taken. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Player_8java_source_l00192}{192} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+References \hyperlink{Player_8java_source_l00027}{pkg\-\_\-world.\-Player.\-backpack}, \hyperlink{Player_8java_source_l00032}{pkg\-\_\-world.\-Player.\-backpack\-Weight}, and \hyperlink{Item_8java_source_l00040}{pkg\-\_\-world.\-Item.\-get\-Name()}.
+
+
+\begin{DoxyCode}
+00192                                       \{
+00193         currentRoom.getContainedItems().transfer(item.getName(), \hyperlink{classpkg__world_1_1Player_adea3925e7f823a9602e5f9ee58683e3b}{backpack});
+00194         \hyperlink{classpkg__world_1_1Player_a19ed9d4d1b17f409f106142ec2fd68a3}{backpackWeight} += item.getWeight();
+00195     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1Player_ac5bdaa8f2149e480e57398be03efa96f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classpkg__world_1_1Player_adea3925e7f823a9602e5f9ee58683e3b}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!backpack@{backpack}}
+\index{backpack@{backpack}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{backpack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Item\-List} pkg\-\_\-world.\-Player.\-backpack\hspace{0.3cm}{\ttfamily [private]}}}\label{classpkg__world_1_1Player_adea3925e7f823a9602e5f9ee58683e3b}
+
+
+Items carried by the player. 
+
+
+
+Definition at line \hyperlink{Player_8java_source_l00027}{27} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+Referenced by \hyperlink{Player_8java_source_l00059}{pkg\-\_\-world.\-Player.\-Player()}, and \hyperlink{Player_8java_source_l00192}{pkg\-\_\-world.\-Player.\-take\-Object()}.
+
+\hypertarget{classpkg__world_1_1Player_a19ed9d4d1b17f409f106142ec2fd68a3}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!backpack\-Weight@{backpack\-Weight}}
+\index{backpack\-Weight@{backpack\-Weight}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{backpack\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}int pkg\-\_\-world.\-Player.\-backpack\-Weight\hspace{0.3cm}{\ttfamily [private]}}}\label{classpkg__world_1_1Player_a19ed9d4d1b17f409f106142ec2fd68a3}
+
+
+Weight of the carried items. 
+
+
+
+Definition at line \hyperlink{Player_8java_source_l00032}{32} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+Referenced by \hyperlink{Player_8java_source_l00184}{pkg\-\_\-world.\-Player.\-can\-Carry()}, \hyperlink{Player_8java_source_l00201}{pkg\-\_\-world.\-Player.\-drop\-Object()}, \hyperlink{Player_8java_source_l00059}{pkg\-\_\-world.\-Player.\-Player()}, and \hyperlink{Player_8java_source_l00192}{pkg\-\_\-world.\-Player.\-take\-Object()}.
+
+\hypertarget{classpkg__world_1_1Player_aadfcdea19eefea1137932f9329c08209}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!beamer\-Room@{beamer\-Room}}
+\index{beamer\-Room@{beamer\-Room}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{beamer\-Room}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Room} pkg\-\_\-world.\-Player.\-beamer\-Room\hspace{0.3cm}{\ttfamily [private]}}}\label{classpkg__world_1_1Player_aadfcdea19eefea1137932f9329c08209}
+
+
+\hyperlink{classpkg__world_1_1Room}{Room} remembered by the beamer. 
+
+
+
+Definition at line \hyperlink{Player_8java_source_l00052}{52} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+Referenced by \hyperlink{Player_8java_source_l00157}{pkg\-\_\-world.\-Player.\-get\-Beamer\-Room()}, and \hyperlink{Player_8java_source_l00149}{pkg\-\_\-world.\-Player.\-set\-Beamer\-Room()}.
+
+\hypertarget{classpkg__world_1_1Player_a2b0217339fe7077674b0e0a1ad33cc1e}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!current\-Room@{current\-Room}}
+\index{current\-Room@{current\-Room}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{current\-Room}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Room} pkg\-\_\-world.\-Player.\-current\-Room\hspace{0.3cm}{\ttfamily [private]}}}\label{classpkg__world_1_1Player_a2b0217339fe7077674b0e0a1ad33cc1e}
+
+
+\hyperlink{classpkg__world_1_1Room}{Room} where the player is currently in. 
+
+
+
+Definition at line \hyperlink{Player_8java_source_l00042}{42} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+Referenced by \hyperlink{Player_8java_source_l00095}{pkg\-\_\-world.\-Player.\-get\-Current\-Room()}, \hyperlink{Player_8java_source_l00103}{pkg\-\_\-world.\-Player.\-go\-Room()}, \hyperlink{Player_8java_source_l00059}{pkg\-\_\-world.\-Player.\-Player()}, and \hyperlink{Player_8java_source_l00126}{pkg\-\_\-world.\-Player.\-push\-Forward()}.
+
+\hypertarget{classpkg__world_1_1Player_a780685c88ad92ca6b280cf841ab33728}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!max\-Weight@{max\-Weight}}
+\index{max\-Weight@{max\-Weight}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{max\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}int pkg\-\_\-world.\-Player.\-max\-Weight = 100\hspace{0.3cm}{\ttfamily [private]}}}\label{classpkg__world_1_1Player_a780685c88ad92ca6b280cf841ab33728}
+
+
+The maximum weight of Items the player can carry. 
+
+
+
+Definition at line \hyperlink{Player_8java_source_l00037}{37} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+Referenced by \hyperlink{Player_8java_source_l00184}{pkg\-\_\-world.\-Player.\-can\-Carry()}, \hyperlink{Player_8java_source_l00079}{pkg\-\_\-world.\-Player.\-get\-Max\-Weight()}, and \hyperlink{Player_8java_source_l00087}{pkg\-\_\-world.\-Player.\-set\-Max\-Weight()}.
+
+\hypertarget{classpkg__world_1_1Player_ab4c41ebebb7fcc55fa253e48af0c4267}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!name@{name}}
+\index{name@{name}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-world.\-Player.\-name\hspace{0.3cm}{\ttfamily [private]}}}\label{classpkg__world_1_1Player_ab4c41ebebb7fcc55fa253e48af0c4267}
+
+
+Name of the player. 
+
+Either 'retard' or 'moron' 
+
+Definition at line \hyperlink{Player_8java_source_l00022}{22} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+Referenced by \hyperlink{Player_8java_source_l00071}{pkg\-\_\-world.\-Player.\-get\-Name()}, and \hyperlink{Player_8java_source_l00059}{pkg\-\_\-world.\-Player.\-Player()}.
+
+\hypertarget{classpkg__world_1_1Player_a28f9bc6a3c1d829996e8a38935b77fd1}{\index{pkg\-\_\-world\-::\-Player@{pkg\-\_\-world\-::\-Player}!previous\-Rooms@{previous\-Rooms}}
+\index{previous\-Rooms@{previous\-Rooms}!pkg_world::Player@{pkg\-\_\-world\-::\-Player}}
+\subsubsection[{previous\-Rooms}]{\setlength{\rightskip}{0pt plus 5cm}Stack$<${\bf Room}$>$ pkg\-\_\-world.\-Player.\-previous\-Rooms\hspace{0.3cm}{\ttfamily [private]}}}\label{classpkg__world_1_1Player_a28f9bc6a3c1d829996e8a38935b77fd1}
+
+
+Rooms where the player was before now. 
+
+
+
+Definition at line \hyperlink{Player_8java_source_l00047}{47} of file \hyperlink{Player_8java_source}{Player.\-java}.
+
+
+
+Referenced by \hyperlink{Player_8java_source_l00111}{pkg\-\_\-world.\-Player.\-get\-Previous\-Room()}, and \hyperlink{Player_8java_source_l00059}{pkg\-\_\-world.\-Player.\-Player()}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pkg\-\_\-world/\hyperlink{Player_8java}{Player.\-java}\end{DoxyCompactItemize}

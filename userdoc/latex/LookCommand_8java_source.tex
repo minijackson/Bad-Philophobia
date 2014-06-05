@@ -1,36 +1,42 @@
-\hypertarget{LookCommand_8java_source}{\section{Look\-Command.\-java}
+\hypertarget{LookCommand_8java}{\section{Look\-Command.\-java}
+\label{LookCommand_8java}\index{pkg\-\_\-commands/\-Look\-Command.\-java@{pkg\-\_\-commands/\-Look\-Command.\-java}}
 }
 
 \begin{DoxyCode}
-00001 
-\hypertarget{LookCommand_8java_source_l00005}{}\hyperlink{classLookCommand}{00005} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classLookCommand}{LookCommand} \textcolor{keyword}{extends} Command \{
+00001 \textcolor{keyword}{package }pkg\_commands;
+00002 
+00003 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Player}{pkg\_world.Player};
+00004 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Item}{pkg\_world.Item};
+00005 \textcolor{keyword}{import} \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException};
 00006 
-\hypertarget{LookCommand_8java_source_l00010}{}\hyperlink{classLookCommand_a45ae975cf9e99310d630cfe440d5ce75}{00010}     \textcolor{keyword}{public} \hyperlink{classLookCommand_a45ae975cf9e99310d630cfe440d5ce75}{LookCommand}()\{
-00011 
-00012     \}
-00013 
-\hypertarget{LookCommand_8java_source_l00020}{}\hyperlink{classLookCommand_a3b67eafb4956b1369904b273303ee7df}{00020}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classLookCommand_a3b67eafb4956b1369904b273303ee7df}{execute}(\hyperlink{classPlayer}{Player} player) \textcolor{keywordflow}{throws} 
-      \hyperlink{classIllegalArgumentException}{IllegalArgumentException} \{
-00021         \textcolor{keywordflow}{if}(hasParameter()) \{
-00022             \textcolor{keywordflow}{if}(player.getCurrentRoom().hasItem(getParameter())) \{
-00023                 setMessage(
-00024                         showItem(player.getCurrentRoom().getItem(getParameter()))
-00025                         );
-00026             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (player.hasItem(getParameter()) ) \{
-00027                 setMessage(
-00028                         showItem(player.getItem(getParameter()))
-00029                         );
-00030             \} \textcolor{keywordflow}{else}
-00031                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classIllegalArgumentException}{IllegalArgumentException}( \textcolor{stringliteral}{"I'm not sure you want to look
+\hypertarget{LookCommand_8java_source_l00011}{}\hyperlink{classpkg__commands_1_1LookCommand}{00011} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__commands_1_1LookCommand}{LookCommand} \textcolor{keyword}{extends} \hyperlink{classpkg__commands_1_1Command}{Command} \{
+00012 
+\hypertarget{LookCommand_8java_source_l00016}{}\hyperlink{classpkg__commands_1_1LookCommand_ab689f51a18ea2d40ab995099e076112c}{00016}     \textcolor{keyword}{public} \hyperlink{classpkg__commands_1_1LookCommand_ab689f51a18ea2d40ab995099e076112c}{LookCommand}()\{
+00017 
+00018     \}
+00019 
+\hypertarget{LookCommand_8java_source_l00026}{}\hyperlink{classpkg__commands_1_1LookCommand_af336146fae1e14bf434d85a5acbcdcd7}{00026}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__commands_1_1LookCommand_af336146fae1e14bf434d85a5acbcdcd7}{execute}(\hyperlink{classpkg__world_1_1Player}{Player} player) \textcolor{keywordflow}{throws} 
+      \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{IllegalArgumentException} \{
+00027         \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998}{hasParameter}()) \{
+00028             \textcolor{keywordflow}{if}(player.getCurrentRoom().hasItem(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}())) \{
+00029                 \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(
+00030                         showItem(player.getCurrentRoom().getItem(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}()))
+00031                         );
+00032             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (player.hasItem(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}()) ) \{
+00033                 \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(
+00034                         showItem(player.getItem(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}()))
+00035                         );
+00036             \} \textcolor{keywordflow}{else}
+00037                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{IllegalArgumentException}( \textcolor{stringliteral}{"I'm not sure you want to look
        at that."});
-00032         \} \textcolor{keywordflow}{else}
-00033             setMessage(player.getCurrentRoom().getLongDescription());
-00034         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-00035     \}
-00036 
-00042     \textcolor{keyword}{private} String showItem(\hyperlink{classItem}{Item} item) \{
-00043         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"This is "} + item.getDescription() + \textcolor{stringliteral}{"."};
-00044     \}
-00045 
-00046 \}
+00038         \} \textcolor{keywordflow}{else}
+00039             \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(player.getCurrentRoom().getLongDescription());
+00040         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00041     \}
+00042 
+00048     \textcolor{keyword}{private} String showItem(\hyperlink{classpkg__world_1_1Item}{Item} item) \{
+00049         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"This is "} + item.getDescription() + \textcolor{stringliteral}{"."};
+00050     \}
+00051 
+00052 \}
 \end{DoxyCode}

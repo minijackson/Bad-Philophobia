@@ -1,0 +1,9 @@
+<map id="pkg_commands.GoCommand.execute" name="pkg_commands.GoCommand.execute">
+<area shape="rect" id="node2" href="$classpkg__commands_1_1Command.html#a41c92d445be73ea9d62320c65efb8434" title="Parameter field getter. " alt="" coords="305,5,505,46"/>
+<area shape="rect" id="node3" href="$classpkg__commands_1_1GoCommand.html#acbf1aa81fa5b1aef7cafb8b4e3ace3a9" title="Check if the wanted Room is connected to the current Room and go to this room. " alt="" coords="299,122,512,163"/>
+<area shape="rect" id="node5" href="$classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" title="Message field setter. " alt="" coords="823,61,1023,102"/>
+<area shape="rect" id="node8" href="$classpkg__commands_1_1Command.html#a02af95ab3f1898a66259ab7c177b6998" title="Return true if the parameter is null. " alt="" coords="304,187,507,229"/>
+<area shape="rect" id="node4" href="$classpkg__commands_1_1GoCommand.html#a210afbc5f3ef34d3ad5759d853c8f8c2" title="Go to the Room without checking. " alt="" coords="560,125,773,166"/>
+<area shape="rect" id="node6" href="$classpkg__commands_1_1Command.html#ae46bb048d0fa705a5037a5204b530da2" title="Return true if the message is equal to null or &quot;&quot;. " alt="" coords="821,126,1024,167"/>
+<area shape="rect" id="node7" href="$classpkg__commands_1_1Command.html#ac2a42e2bab264821892daefaf9a18b6c" title="Message field getter. " alt="" coords="823,191,1023,233"/>
+</map>

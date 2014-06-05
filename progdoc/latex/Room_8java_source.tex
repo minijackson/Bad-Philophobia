@@ -1,110 +1,113 @@
-\hypertarget{Room_8java_source}{\section{Room.\-java}
+\hypertarget{Room_8java}{\section{Room.\-java}
+\label{Room_8java}\index{pkg\-\_\-world/\-Room.\-java@{pkg\-\_\-world/\-Room.\-java}}
 }
 
 \begin{DoxyCode}
-00001 \textcolor{keyword}{import} java.util.Set;
-00002 \textcolor{keyword}{import} java.util.HashMap;
-00003 \textcolor{keyword}{import} java.util.Enumeration;
-00004 \textcolor{keyword}{import} java.util.Iterator;
-00005 
-\hypertarget{Room_8java_source_l00011}{}\hyperlink{classRoom}{00011} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classRoom}{Room} \{
-00012 
-\hypertarget{Room_8java_source_l00016}{}\hyperlink{classRoom_a2d7ecf802690a6b13750ca6fa6882d77}{00016}     \textcolor{keyword}{private} String \hyperlink{classRoom_a2d7ecf802690a6b13750ca6fa6882d77}{description};
-00017 
-\hypertarget{Room_8java_source_l00022}{}\hyperlink{classRoom_a29620da10d44de49ee8557e037f014af}{00022}     \textcolor{keyword}{private} HashMap<String, Room> \hyperlink{classRoom_a29620da10d44de49ee8557e037f014af}{exits};
-00023 
-\hypertarget{Room_8java_source_l00027}{}\hyperlink{classRoom_a3ddf7c120b54509c43d803d2409158fc}{00027}     \textcolor{keyword}{private} String \hyperlink{classRoom_a3ddf7c120b54509c43d803d2409158fc}{imageName};
-00028 
-\hypertarget{Room_8java_source_l00032}{}\hyperlink{classRoom_a02eea1285ab8d50a2e25cc98d50b185d}{00032}     \textcolor{keyword}{private} \hyperlink{classItemList}{ItemList} \hyperlink{classRoom_a02eea1285ab8d50a2e25cc98d50b185d}{containedItems};
-00033 
-\hypertarget{Room_8java_source_l00039}{}\hyperlink{classRoom_a2cdcbb3d86746330a5a01c7fae4de02c}{00039}     \textcolor{keyword}{public} \hyperlink{classRoom_a2cdcbb3d86746330a5a01c7fae4de02c}{Room}(String \hyperlink{classRoom_a2d7ecf802690a6b13750ca6fa6882d77}{description}, String image) \{
-00040         \textcolor{keyword}{this}(\hyperlink{classRoom_a2d7ecf802690a6b13750ca6fa6882d77}{description}, image, \textcolor{keyword}{new} \hyperlink{classItemList}{ItemList}());
-00041     \}
-00042 
-\hypertarget{Room_8java_source_l00049}{}\hyperlink{classRoom_ad8cb507b670aec86cf14baa25fadb0f2}{00049}     \textcolor{keyword}{public} \hyperlink{classRoom_ad8cb507b670aec86cf14baa25fadb0f2}{Room}(String \hyperlink{classRoom_a2d7ecf802690a6b13750ca6fa6882d77}{description}, String image, \hyperlink{classItemList}{ItemList} itemList) \{
-00050         this.description = \hyperlink{classRoom_a2d7ecf802690a6b13750ca6fa6882d77}{description};
-00051         \hyperlink{classRoom_a29620da10d44de49ee8557e037f014af}{exits} = \textcolor{keyword}{new} HashMap < String, Room > ();
-00052         \hyperlink{classRoom_a3ddf7c120b54509c43d803d2409158fc}{imageName} = image;
-00053         \hyperlink{classRoom_a02eea1285ab8d50a2e25cc98d50b185d}{containedItems} = itemList;
-00054     \}
-00055 
-\hypertarget{Room_8java_source_l00061}{}\hyperlink{classRoom_ae4bc6837f331b5249beb0651fc277018}{00061}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classRoom_ae4bc6837f331b5249beb0651fc277018}{setExit}(String direction, \hyperlink{classRoom}{Room} neighbor) \{
-00062         exits.put(direction, neighbor);
-00063     \}   
-00064 
-\hypertarget{Room_8java_source_l00069}{}\hyperlink{classRoom_ab9ebd5a52d437f7724bf8474fffae81f}{00069}     \textcolor{keyword}{public} \hyperlink{classItemList}{ItemList} \hyperlink{classRoom_ab9ebd5a52d437f7724bf8474fffae81f}{getContainedItems}() \{
-00070         \textcolor{keywordflow}{return} \hyperlink{classRoom_a02eea1285ab8d50a2e25cc98d50b185d}{containedItems};
-00071     \}
-00072 
-\hypertarget{Room_8java_source_l00077}{}\hyperlink{classRoom_a9b53c8d9f87f4a6d9cc954aeb744d1a2}{00077}     \textcolor{keyword}{public} \hyperlink{classItem}{Item} \hyperlink{classRoom_a9b53c8d9f87f4a6d9cc954aeb744d1a2}{getItem}(String name) \{
-00078         \textcolor{keywordflow}{return} containedItems.get(name);
-00079     \}
-00080 
-\hypertarget{Room_8java_source_l00085}{}\hyperlink{classRoom_ad779b367b26018c9f343ca3044c4b54f}{00085}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classRoom_ad779b367b26018c9f343ca3044c4b54f}{hasItem}(String name) \{
-00086         \textcolor{keywordflow}{return} containedItems.get(name) != null;
-00087     \}
-00088 
-\hypertarget{Room_8java_source_l00093}{}\hyperlink{classRoom_a0b4fcc1c1c04e60efa7ae5f82ea37157}{00093}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classRoom_a0b4fcc1c1c04e60efa7ae5f82ea37157}{addItem}(\hyperlink{classItem}{Item} item) \{
-00094         containedItems.put(item.getName(), item);
-00095     \}
-00096 
-\hypertarget{Room_8java_source_l00101}{}\hyperlink{classRoom_a591912d92553130f8f90a5bebd236a5c}{00101}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classRoom_a591912d92553130f8f90a5bebd236a5c}{removeItem}(String itemName) \{
-00102         containedItems.remove(itemName);
-00103     \}
-00104 
-\hypertarget{Room_8java_source_l00109}{}\hyperlink{classRoom_a85e561bc5fa9d9c965300e9ad264b02a}{00109}     \textcolor{keyword}{public} String \hyperlink{classRoom_a85e561bc5fa9d9c965300e9ad264b02a}{getShortDescription}() \{
-00110         \textcolor{keywordflow}{return} \hyperlink{classRoom_a2d7ecf802690a6b13750ca6fa6882d77}{description};
-00111     \}
-00112 
-\hypertarget{Room_8java_source_l00118}{}\hyperlink{classRoom_a23a25854d7544fb0b41190a4d6bd1322}{00118}     \textcolor{keyword}{public} String \hyperlink{classRoom_a23a25854d7544fb0b41190a4d6bd1322}{getLongDescription}() \{
-00119         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"You are "} + \hyperlink{classRoom_a2d7ecf802690a6b13750ca6fa6882d77}{description} + \textcolor{stringliteral}{".\(\backslash\)n"}
-00120                 + ((!containedItems.isEmpty())? \textcolor{stringliteral}{"You can see"} + 
-      \hyperlink{classRoom_ab8a87ad306f77a936873094b479bcde8}{getHumanItemsList}() + \textcolor{stringliteral}{" near you.\(\backslash\)n"} : \textcolor{stringliteral}{""})
-00121                 + \hyperlink{classRoom_a2ccc382c07890a9827be232767eb98a0}{getExitString}();
-00122     \}
-00123 
-\hypertarget{Room_8java_source_l00128}{}\hyperlink{classRoom_ab8a87ad306f77a936873094b479bcde8}{00128}     \textcolor{keyword}{public} String \hyperlink{classRoom_ab8a87ad306f77a936873094b479bcde8}{getHumanItemsList}() \{
-00129         String itemsList = \textcolor{stringliteral}{""};
-00130         Set<String> names = containedItems.keySet();
-00131         Iterator<String> it = names.iterator();
-00132         \textcolor{keywordflow}{while}(it.hasNext()) \{
-00133 
-00134             String itemName = it.next();
-00135             \textcolor{comment}{// If the item's name begins with a vowel, the prefix is ' an '}
-00136             \textcolor{comment}{// if not, the prefix is ' a '}
-00137             String prefix = \textcolor{stringliteral}{" a"} + (((\textcolor{keyword}{new} String(\textcolor{stringliteral}{"aeiouy"})).contains(itemName.substring(0,1)))? \textcolor{stringliteral}{"n"} : \textcolor{stringliteral}{""}) +
+00001 \textcolor{keyword}{package }pkg\_world;
+00002 
+00003 \textcolor{keyword}{import} java.util.Set;
+00004 \textcolor{keyword}{import} java.util.HashMap;
+00005 \textcolor{keyword}{import} java.util.Enumeration;
+00006 \textcolor{keyword}{import} java.util.Iterator;
+00007 
+\hypertarget{Room_8java_source_l00013}{}\hyperlink{classpkg__world_1_1Room}{00013} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__world_1_1Room}{Room} \{
+00014 
+\hypertarget{Room_8java_source_l00018}{}\hyperlink{classpkg__world_1_1Room_a029ab15b9217139d350f3a6980e49a93}{00018}     \textcolor{keyword}{private} String \hyperlink{classpkg__world_1_1Room_a029ab15b9217139d350f3a6980e49a93}{description};
+00019 
+\hypertarget{Room_8java_source_l00024}{}\hyperlink{classpkg__world_1_1Room_a7ddc883b0f176f4e8a866dfb4af66167}{00024}     \textcolor{keyword}{private} HashMap<String, Room> \hyperlink{classpkg__world_1_1Room_a7ddc883b0f176f4e8a866dfb4af66167}{exits};
+00025 
+\hypertarget{Room_8java_source_l00029}{}\hyperlink{classpkg__world_1_1Room_a5d803cae18b95d7a4fc5243fd13ae236}{00029}     \textcolor{keyword}{private} String \hyperlink{classpkg__world_1_1Room_a5d803cae18b95d7a4fc5243fd13ae236}{imageName};
+00030 
+\hypertarget{Room_8java_source_l00034}{}\hyperlink{classpkg__world_1_1Room_a3a9b7b85c95e41654c017e1adb74a49b}{00034}     \textcolor{keyword}{private} \hyperlink{classpkg__world_1_1ItemList}{ItemList} \hyperlink{classpkg__world_1_1Room_a3a9b7b85c95e41654c017e1adb74a49b}{containedItems};
+00035 
+\hypertarget{Room_8java_source_l00041}{}\hyperlink{classpkg__world_1_1Room_ae48ca6830c8c9368ab1cb7e9b006d157}{00041}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1Room_ae48ca6830c8c9368ab1cb7e9b006d157}{Room}(String \hyperlink{classpkg__world_1_1Room_a029ab15b9217139d350f3a6980e49a93}{description}, String image) \{
+00042         \textcolor{keyword}{this}(\hyperlink{classpkg__world_1_1Room_a029ab15b9217139d350f3a6980e49a93}{description}, image, \textcolor{keyword}{new} \hyperlink{classpkg__world_1_1ItemList}{ItemList}());
+00043     \}
+00044 
+\hypertarget{Room_8java_source_l00051}{}\hyperlink{classpkg__world_1_1Room_a0f95ea70b403217118bf7d5c1f0aebaf}{00051}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1Room_a0f95ea70b403217118bf7d5c1f0aebaf}{Room}(String \hyperlink{classpkg__world_1_1Room_a029ab15b9217139d350f3a6980e49a93}{description}, String image, \hyperlink{classpkg__world_1_1ItemList}{ItemList} itemList) \{
+00052         this.description = \hyperlink{classpkg__world_1_1Room_a029ab15b9217139d350f3a6980e49a93}{description};
+00053         \hyperlink{classpkg__world_1_1Room_a7ddc883b0f176f4e8a866dfb4af66167}{exits} = \textcolor{keyword}{new} HashMap < String, Room > ();
+00054         \hyperlink{classpkg__world_1_1Room_a5d803cae18b95d7a4fc5243fd13ae236}{imageName} = image;
+00055         \hyperlink{classpkg__world_1_1Room_a3a9b7b85c95e41654c017e1adb74a49b}{containedItems} = itemList;
+00056     \}
+00057 
+\hypertarget{Room_8java_source_l00063}{}\hyperlink{classpkg__world_1_1Room_a4a97591f3b574b3d0086843a919a0214}{00063}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Room_a4a97591f3b574b3d0086843a919a0214}{setExit}(String direction, \hyperlink{classpkg__world_1_1Room}{Room} neighbor) \{
+00064         exits.put(direction, neighbor);
+00065     \}   
+00066 
+\hypertarget{Room_8java_source_l00071}{}\hyperlink{classpkg__world_1_1Room_a969205a4d2d2d9e30d1e1db9fc3f0b43}{00071}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1ItemList}{ItemList} \hyperlink{classpkg__world_1_1Room_a969205a4d2d2d9e30d1e1db9fc3f0b43}{getContainedItems}() \{
+00072         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Room_a3a9b7b85c95e41654c017e1adb74a49b}{containedItems};
+00073     \}
+00074 
+\hypertarget{Room_8java_source_l00079}{}\hyperlink{classpkg__world_1_1Room_a8624c98bd006830d4484dae2dcd8c8e7}{00079}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1Item}{Item} \hyperlink{classpkg__world_1_1Room_a8624c98bd006830d4484dae2dcd8c8e7}{getItem}(String name) \{
+00080         \textcolor{keywordflow}{return} containedItems.get(name);
+00081     \}
+00082 
+\hypertarget{Room_8java_source_l00087}{}\hyperlink{classpkg__world_1_1Room_aefa26e1bc5088dd199dde2e9d471c490}{00087}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__world_1_1Room_aefa26e1bc5088dd199dde2e9d471c490}{hasItem}(String name) \{
+00088         \textcolor{keywordflow}{return} containedItems.get(name) != null;
+00089     \}
+00090 
+\hypertarget{Room_8java_source_l00095}{}\hyperlink{classpkg__world_1_1Room_a118585101b274edfdd43b724382de89c}{00095}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Room_a118585101b274edfdd43b724382de89c}{addItem}(\hyperlink{classpkg__world_1_1Item}{Item} item) \{
+00096         containedItems.put(item.getName(), item);
+00097     \}
+00098 
+\hypertarget{Room_8java_source_l00103}{}\hyperlink{classpkg__world_1_1Room_ab84c99b33e69d4a3e0700cab4b9efeaa}{00103}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Room_ab84c99b33e69d4a3e0700cab4b9efeaa}{removeItem}(String itemName) \{
+00104         containedItems.remove(itemName);
+00105     \}
+00106 
+\hypertarget{Room_8java_source_l00111}{}\hyperlink{classpkg__world_1_1Room_adb98ed16e34549faabed35f90673d266}{00111}     \textcolor{keyword}{public} String \hyperlink{classpkg__world_1_1Room_adb98ed16e34549faabed35f90673d266}{getShortDescription}() \{
+00112         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Room_a029ab15b9217139d350f3a6980e49a93}{description};
+00113     \}
+00114 
+\hypertarget{Room_8java_source_l00120}{}\hyperlink{classpkg__world_1_1Room_acc8ee9123c9a77428c1e66fbba34aeac}{00120}     \textcolor{keyword}{public} String \hyperlink{classpkg__world_1_1Room_acc8ee9123c9a77428c1e66fbba34aeac}{getLongDescription}() \{
+00121         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"You are "} + \hyperlink{classpkg__world_1_1Room_a029ab15b9217139d350f3a6980e49a93}{description} + \textcolor{stringliteral}{".\(\backslash\)n"}
+00122                 + ((!containedItems.isEmpty())? \textcolor{stringliteral}{"You can see"} + 
+      \hyperlink{classpkg__world_1_1Room_a3ea436ad00d00484b429992ef94535ac}{getHumanItemsList}() + \textcolor{stringliteral}{" near you.\(\backslash\)n"} : \textcolor{stringliteral}{""})
+00123                 + \hyperlink{classpkg__world_1_1Room_ac712fe83b1f0d11c82ebea83f893d0f2}{getExitString}();
+00124     \}
+00125 
+\hypertarget{Room_8java_source_l00130}{}\hyperlink{classpkg__world_1_1Room_a3ea436ad00d00484b429992ef94535ac}{00130}     \textcolor{keyword}{public} String \hyperlink{classpkg__world_1_1Room_a3ea436ad00d00484b429992ef94535ac}{getHumanItemsList}() \{
+00131         String itemsList = \textcolor{stringliteral}{""};
+00132         Set<String> names = containedItems.keySet();
+00133         Iterator<String> it = names.iterator();
+00134         \textcolor{keywordflow}{while}(it.hasNext()) \{
+00135 
+00136             String itemName = it.next();
+00137             \textcolor{comment}{// If the item's name begins with a vowel, the prefix is ' an '}
+00138             \textcolor{comment}{// if not, the prefix is ' a '}
+00139             String prefix = \textcolor{stringliteral}{" a"} + (((\textcolor{keyword}{new} String(\textcolor{stringliteral}{"aeiouy"})).contains(itemName.substring(0,1)))? \textcolor{stringliteral}{"n"} : \textcolor{stringliteral}{""}) +
        \textcolor{stringliteral}{" "};
-00138 
-00139             \textcolor{keywordflow}{if}(itemsList.equals(\textcolor{stringliteral}{""}))
-00140                 itemsList += prefix + itemName;
-00141             \textcolor{keywordflow}{else} \{
-00142                 \textcolor{comment}{// Check if it is the last item}
-00143                 \textcolor{keywordflow}{if}(it.hasNext())
-00144                     itemsList += \textcolor{stringliteral}{","} + prefix + itemName;
-00145                 \textcolor{keywordflow}{else}
-00146                     itemsList += \textcolor{stringliteral}{" and"} + prefix + itemName;
-00147             \}
-00148         \}
-00149         \textcolor{keywordflow}{return} itemsList;
-00150     \}
-00151 
-\hypertarget{Room_8java_source_l00156}{}\hyperlink{classRoom_a2ccc382c07890a9827be232767eb98a0}{00156}     \textcolor{keyword}{private} String \hyperlink{classRoom_a2ccc382c07890a9827be232767eb98a0}{getExitString}() \{
-00157         StringBuilder returnString = \textcolor{keyword}{new} StringBuilder(\textcolor{stringliteral}{"Exits:"});
-00158         \textcolor{keywordflow}{for}(String vS:\hyperlink{classRoom_a29620da10d44de49ee8557e037f014af}{exits}.keySet())
-00159             returnString.append(\textcolor{stringliteral}{" "} + vS);
-00160         \textcolor{keywordflow}{return} returnString.toString();
-00161     \}
-00162 
-\hypertarget{Room_8java_source_l00168}{}\hyperlink{classRoom_a384ab8c844e5775f87de24d6c470637e}{00168}     \textcolor{keyword}{public} \hyperlink{classRoom}{Room} \hyperlink{classRoom_a384ab8c844e5775f87de24d6c470637e}{getExit}(String direction) \{
-00169         \textcolor{keywordflow}{return} exits.get(direction);
-00170     \}
-00171 
-\hypertarget{Room_8java_source_l00177}{}\hyperlink{classRoom_a844b42638a0d2ce68df9adf1674f713b}{00177}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classRoom_a844b42638a0d2ce68df9adf1674f713b}{isExit}(\hyperlink{classRoom}{Room} exit) \{
-00178         \textcolor{keywordflow}{return} exits.containsValue(exit);
-00179     \}
-00180 
-\hypertarget{Room_8java_source_l00185}{}\hyperlink{classRoom_a8177668df4d8be718812934673c42649}{00185}     \textcolor{keyword}{public} String \hyperlink{classRoom_a8177668df4d8be718812934673c42649}{getImageName}() \{
-00186         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Images/"}  + \hyperlink{classRoom_a3ddf7c120b54509c43d803d2409158fc}{imageName};
-00187     \}
-00188 \}
+00140 
+00141             \textcolor{keywordflow}{if}(itemsList.equals(\textcolor{stringliteral}{""}))
+00142                 itemsList += prefix + itemName;
+00143             \textcolor{keywordflow}{else} \{
+00144                 \textcolor{comment}{// Check if it is the last item}
+00145                 \textcolor{keywordflow}{if}(it.hasNext())
+00146                     itemsList += \textcolor{stringliteral}{","} + prefix + itemName;
+00147                 \textcolor{keywordflow}{else}
+00148                     itemsList += \textcolor{stringliteral}{" and"} + prefix + itemName;
+00149             \}
+00150         \}
+00151         \textcolor{keywordflow}{return} itemsList;
+00152     \}
+00153 
+\hypertarget{Room_8java_source_l00158}{}\hyperlink{classpkg__world_1_1Room_ac712fe83b1f0d11c82ebea83f893d0f2}{00158}     \textcolor{keyword}{private} String \hyperlink{classpkg__world_1_1Room_ac712fe83b1f0d11c82ebea83f893d0f2}{getExitString}() \{
+00159         StringBuilder returnString = \textcolor{keyword}{new} StringBuilder(\textcolor{stringliteral}{"Exits:"});
+00160         \textcolor{keywordflow}{for}(String vS:\hyperlink{classpkg__world_1_1Room_a7ddc883b0f176f4e8a866dfb4af66167}{exits}.keySet())
+00161             returnString.append(\textcolor{stringliteral}{" "} + vS);
+00162         \textcolor{keywordflow}{return} returnString.toString();
+00163     \}
+00164 
+\hypertarget{Room_8java_source_l00170}{}\hyperlink{classpkg__world_1_1Room_ae05ae991a1692ffb29e8aef632d18b95}{00170}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Room_ae05ae991a1692ffb29e8aef632d18b95}{getExit}(String direction) \{
+00171         \textcolor{keywordflow}{return} exits.get(direction);
+00172     \}
+00173 
+\hypertarget{Room_8java_source_l00179}{}\hyperlink{classpkg__world_1_1Room_a305aab25719c2b75a0c28c9a53a3c9d3}{00179}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__world_1_1Room_a305aab25719c2b75a0c28c9a53a3c9d3}{isExit}(\hyperlink{classpkg__world_1_1Room}{Room} exit) \{
+00180         \textcolor{keywordflow}{return} exits.containsValue(exit);
+00181     \}
+00182 
+\hypertarget{Room_8java_source_l00187}{}\hyperlink{classpkg__world_1_1Room_a5d1a496c1fd2e4ba73177e1182c9f4f1}{00187}     \textcolor{keyword}{public} String \hyperlink{classpkg__world_1_1Room_a5d1a496c1fd2e4ba73177e1182c9f4f1}{getImageName}() \{
+00188         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Images/"}  + \hyperlink{classpkg__world_1_1Room_a5d803cae18b95d7a4fc5243fd13ae236}{imageName};
+00189     \}
+00190 \}
 \end{DoxyCode}

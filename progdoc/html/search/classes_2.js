@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dropcommand',['DropCommand',['../classDropCommand.html',1,'']]]
+  ['dropcommand',['DropCommand',['../classpkg__commands_1_1DropCommand.html',1,'pkg_commands']]]
 ];

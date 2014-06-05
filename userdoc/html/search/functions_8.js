@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lookcommand',['LookCommand',['../classLookCommand.html#a45ae975cf9e99310d630cfe440d5ce75',1,'LookCommand']]]
+  ['lookcommand',['LookCommand',['../classpkg__commands_1_1LookCommand.html#ab689f51a18ea2d40ab995099e076112c',1,'pkg_commands::LookCommand']]]
 ];

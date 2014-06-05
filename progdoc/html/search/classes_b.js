@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['room',['Room',['../classRoom.html',1,'']]]
+  ['room',['Room',['../classpkg__world_1_1Room.html',1,'pkg_world']]]
 ];

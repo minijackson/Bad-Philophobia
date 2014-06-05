@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quitcommand',['QuitCommand',['../classQuitCommand.html',1,'']]]
+  ['quitcommand',['QuitCommand',['../classpkg__commands_1_1QuitCommand.html',1,'pkg_commands']]]
 ];

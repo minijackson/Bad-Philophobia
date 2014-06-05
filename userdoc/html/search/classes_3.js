@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['eatcommand',['EatCommand',['../classEatCommand.html',1,'']]]
+  ['eatcommand',['EatCommand',['../classpkg__commands_1_1EatCommand.html',1,'pkg_commands']]]
 ];

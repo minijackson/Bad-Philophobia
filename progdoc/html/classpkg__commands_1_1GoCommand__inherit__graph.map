@@ -1,0 +1,5 @@
+<map id="pkg_commands.GoCommand" name="pkg_commands.GoCommand">
+<area shape="rect" id="node3" href="$classpkg__commands_1_1BackCommand.html" title="class BackCommand used to go back in a previous Room. " alt="" coords="5,421,213,513"/>
+<area shape="rect" id="node4" href="$classpkg__commands_1_1BeamerCommand.html" title="class BeamerCommand used to teleport into a remembered room " alt="" coords="238,406,460,527"/>
+<area shape="rect" id="node2" href="$classpkg__commands_1_1Command.html" title="Class used to handle a command of one or two words. " alt="" coords="140,6,319,186"/>
+</map>

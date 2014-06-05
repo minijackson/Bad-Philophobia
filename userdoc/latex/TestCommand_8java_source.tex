@@ -1,54 +1,67 @@
-\hypertarget{TestCommand_8java_source}{\section{Test\-Command.\-java}
+\hypertarget{TestCommand_8java}{\section{Test\-Command.\-java}
+\label{TestCommand_8java}\index{pkg\-\_\-commands/\-Test\-Command.\-java@{pkg\-\_\-commands/\-Test\-Command.\-java}}
 }
 
 \begin{DoxyCode}
-00001 \textcolor{keyword}{import} java.util.Scanner;
-00002 \textcolor{keyword}{import} java.io.File;
-00003 \textcolor{keyword}{import} java.io.FileNotFoundException;
-00004 
-\hypertarget{TestCommand_8java_source_l00009}{}\hyperlink{classTestCommand}{00009} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classTestCommand}{TestCommand} \textcolor{keyword}{extends} Command \{
+00001 \textcolor{keyword}{package }pkg\_commands;
+00002 
+00003 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Player}{pkg\_world.Player};
+00004 \textcolor{keyword}{import} \hyperlink{classpkg__parsing_1_1Parser}{pkg\_parsing.Parser};
+00005 \textcolor{keyword}{import} pkg\_exceptions.*;
+00006 
+00007 \textcolor{keyword}{import} java.util.Scanner;
+00008 \textcolor{keyword}{import} java.io.File;
+00009 \textcolor{keyword}{import} java.io.FileNotFoundException;
 00010 
-\hypertarget{TestCommand_8java_source_l00014}{}\hyperlink{classTestCommand_a562eaa3c455e0be709b1caa02c9044e6}{00014}     \textcolor{keyword}{public} \hyperlink{classTestCommand_a562eaa3c455e0be709b1caa02c9044e6}{TestCommand}()\{
-00015 
-00016     \}
-00017 
-\hypertarget{TestCommand_8java_source_l00026}{}\hyperlink{classTestCommand_a2c5d98451d5cedb9297caae17378de63}{00026}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classTestCommand_a2c5d98451d5cedb9297caae17378de63}{execute}(\hyperlink{classPlayer}{Player} player) \textcolor{keywordflow}{throws} 
-      \hyperlink{classNoArgumentException}{NoArgumentException},\hyperlink{classIllegalArgumentException}{IllegalArgumentException} \{
-00027         setMessage(\textcolor{stringliteral}{""});
-00028         \textcolor{keywordflow}{if}(hasParameter()) \{
-00029             \textcolor{keywordflow}{try} \{
-00030                 Scanner s = \textcolor{keyword}{new} Scanner(\textcolor{keyword}{new} File(getParameter() + \textcolor{stringliteral}{".test"}));
-00031                 \textcolor{keywordflow}{while} (s.hasNextLine()) \{
-00032 
-00033                     String commandLine = s.nextLine();
-00034                     Command testedCommand = Parser.getCommand(commandLine);
-00035 
-00036                     \textcolor{keywordflow}{try} \{
-00037 
-00038                         testedCommand.execute(player);
-00039                         \textcolor{keywordflow}{if}(testedCommand.hasMessage())
-00040                             setMessage(getMessage() + \textcolor{stringliteral}{"\(\backslash\)n"} + \textcolor{stringliteral}{"Command: "} + commandLine + \textcolor{stringliteral}{"\(\backslash\)n"}
-00041                                     + testedCommand.getMessage());
-00042 
-00043                     \} \textcolor{keywordflow}{catch} (\hyperlink{classNoArgumentException}{NoArgumentException} e) \{
-00044                         setMessage(getMessage() + \textcolor{stringliteral}{"\(\backslash\)n"} + \textcolor{stringliteral}{"Command: "} + commandLine + \textcolor{stringliteral}{"\(\backslash\)n"}
-00045                                 + e.getMessage());
-00046                     \} \textcolor{keywordflow}{catch} (\hyperlink{classIllegalArgumentException}{IllegalArgumentException} e) \{
-00047                         setMessage(getMessage() + \textcolor{stringliteral}{"\(\backslash\)n"} + \textcolor{stringliteral}{"Command: "} + commandLine + \textcolor{stringliteral}{"\(\backslash\)n"}
-00048                                 + e.getMessage());
-00049                     \} \textcolor{keywordflow}{catch}(\hyperlink{classUnauthorizedException}{UnauthorizedException} e)  \{
-00050                         setMessage(getMessage() + \textcolor{stringliteral}{"\(\backslash\)n"} + \textcolor{stringliteral}{"Command: "} + commandLine + \textcolor{stringliteral}{"\(\backslash\)n"}
+\hypertarget{TestCommand_8java_source_l00015}{}\hyperlink{classpkg__commands_1_1TestCommand}{00015} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__commands_1_1TestCommand}{TestCommand} \textcolor{keyword}{extends} \hyperlink{classpkg__commands_1_1Command}{Command} \{
+00016 
+\hypertarget{TestCommand_8java_source_l00020}{}\hyperlink{classpkg__commands_1_1TestCommand_a116f412bc5f67f0c344e436d33126f25}{00020}     \textcolor{keyword}{public} \hyperlink{classpkg__commands_1_1TestCommand_a116f412bc5f67f0c344e436d33126f25}{TestCommand}()\{
+00021 
+00022     \}
+00023 
+\hypertarget{TestCommand_8java_source_l00032}{}\hyperlink{classpkg__commands_1_1TestCommand_a1ff07c27a46910d20c2e4569888892ca}{00032}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__commands_1_1TestCommand_a1ff07c27a46910d20c2e4569888892ca}{execute}(\hyperlink{classpkg__world_1_1Player}{Player} player) \textcolor{keywordflow}{throws} 
+      \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException},\hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}
+       \{
+00033         \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\textcolor{stringliteral}{""});
+00034         \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998}{hasParameter}()) \{
+00035             \textcolor{keywordflow}{try} \{
+00036                 Scanner s = \textcolor{keyword}{new} Scanner(\textcolor{keyword}{new} File(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}() + \textcolor{stringliteral}{".test"}));
+00037                 \textcolor{keywordflow}{while} (s.hasNextLine()) \{
+00038 
+00039                     String commandLine = s.nextLine();
+00040                     \hyperlink{classpkg__commands_1_1Command}{Command} testedCommand = Parser.getCommand(commandLine);
+00041 
+00042                     \textcolor{keywordflow}{try} \{
+00043 
+00044                         testedCommand.execute(player);
+00045                         \textcolor{keywordflow}{if}(testedCommand.hasMessage())
+00046                             \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\hyperlink{classpkg__commands_1_1Command_ac2a42e2bab264821892daefaf9a18b6c}{getMessage}() + \textcolor{stringliteral}{"\(\backslash\)n"} + \textcolor{stringliteral}{"Command: "} + commandLine 
+      + \textcolor{stringliteral}{"\(\backslash\)n"}
+00047                                     + testedCommand.getMessage());
+00048 
+00049                     \} \textcolor{keywordflow}{catch} (\hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException} e) \{
+00050                         \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\hyperlink{classpkg__commands_1_1Command_ac2a42e2bab264821892daefaf9a18b6c}{getMessage}() + \textcolor{stringliteral}{"\(\backslash\)n"} + \textcolor{stringliteral}{"Command: "} + commandLine + \textcolor{stringliteral}{"
+      \(\backslash\)n"}
 00051                                 + e.getMessage());
-00052                     \}
-00053                 \}
-00054                 s.close();
-00055             \} \textcolor{keywordflow}{catch}(FileNotFoundException e) \{
-00056                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classIllegalArgumentException}{IllegalArgumentException}(\textcolor{stringliteral}{"No such test"});
-00057             \}
-00058         \} \textcolor{keywordflow}{else}
-00059             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classNoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"What do you want to test?"});
-00060         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-00061     \}
-00062 
-00063 \}
+00052                     \} \textcolor{keywordflow}{catch} (pkg\_exceptions.IllegalArgumentException e) \{
+00053                         \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\hyperlink{classpkg__commands_1_1Command_ac2a42e2bab264821892daefaf9a18b6c}{getMessage}() + \textcolor{stringliteral}{"\(\backslash\)n"} + \textcolor{stringliteral}{"Command: "} + commandLine + \textcolor{stringliteral}{"
+      \(\backslash\)n"}
+00054                                 + e.getMessage());
+00055                     \} \textcolor{keywordflow}{catch}(\hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException} e)  \{
+00056                         \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\hyperlink{classpkg__commands_1_1Command_ac2a42e2bab264821892daefaf9a18b6c}{getMessage}() + \textcolor{stringliteral}{"\(\backslash\)n"} + \textcolor{stringliteral}{"Command: "} + commandLine + \textcolor{stringliteral}{"
+      \(\backslash\)n"}
+00057                                 + e.getMessage());
+00058                     \}
+00059                 \}
+00060                 s.close();
+00061             \} \textcolor{keywordflow}{catch}(FileNotFoundException e) \{
+00062                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}(\textcolor{stringliteral}{"
+      No such test"});
+00063             \}
+00064         \} \textcolor{keywordflow}{else}
+00065             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"What do you want to test?"});
+00066         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00067     \}
+00068 
+00069 \}
 \end{DoxyCode}

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Bad Philophobia: Room.java Source File</title>
+<title>Bad Philophobia: pkg_world/Room.java Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -69,13 +70,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="files.html"><span>File&#160;List</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -84,135 +84,142 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_22137d4b8d7cf54005973ad52b141213.html">pkg_world</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Room.java</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="Room_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">import</span> java.util.Set;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">import</span> java.util.HashMap;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> java.util.Enumeration;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> java.util.Iterator;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classRoom.html">   11</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classRoom.html">Room</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">private</span> String description;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">private</span> HashMap&lt;String, Room&gt; exits;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">private</span> String imageName;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">private</span> <a class="code" href="classItemList.html">ItemList</a> containedItems;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classRoom.html#a2cdcbb3d86746330a5a01c7fae4de02c">   39</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classRoom.html#a2cdcbb3d86746330a5a01c7fae4de02c">Room</a>(String description, String image) {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">this</span>(description, image, <span class="keyword">new</span> <a class="code" href="classItemList.html">ItemList</a>());</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classRoom.html#ad8cb507b670aec86cf14baa25fadb0f2">   49</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classRoom.html#ad8cb507b670aec86cf14baa25fadb0f2">Room</a>(String description, String image, <a class="code" href="classItemList.html">ItemList</a> itemList) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        this.description = description;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        exits = <span class="keyword">new</span> HashMap &lt; String, Room &gt; ();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        imageName = image;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        containedItems = itemList;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classRoom.html#ae4bc6837f331b5249beb0651fc277018">   61</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classRoom.html#ae4bc6837f331b5249beb0651fc277018">setExit</a>(String direction, <a class="code" href="classRoom.html">Room</a> neighbor) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        exits.put(direction, neighbor);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }   </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classRoom.html#ab9ebd5a52d437f7724bf8474fffae81f">   69</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classItemList.html">ItemList</a> <a class="code" href="classRoom.html#ab9ebd5a52d437f7724bf8474fffae81f">getContainedItems</a>() {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> containedItems;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classRoom.html#a9b53c8d9f87f4a6d9cc954aeb744d1a2">   77</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classItem.html">Item</a> <a class="code" href="classRoom.html#a9b53c8d9f87f4a6d9cc954aeb744d1a2">getItem</a>(String name) {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> containedItems.get(name);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classRoom.html#ad779b367b26018c9f343ca3044c4b54f">   85</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classRoom.html#ad779b367b26018c9f343ca3044c4b54f">hasItem</a>(String name) {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> containedItems.get(name) != null;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classRoom.html#a0b4fcc1c1c04e60efa7ae5f82ea37157">   93</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classRoom.html#a0b4fcc1c1c04e60efa7ae5f82ea37157">addItem</a>(<a class="code" href="classItem.html">Item</a> item) {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        containedItems.put(item.getName(), item);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classRoom.html#a591912d92553130f8f90a5bebd236a5c">  101</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classRoom.html#a591912d92553130f8f90a5bebd236a5c">removeItem</a>(String itemName) {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        containedItems.remove(itemName);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classRoom.html#a85e561bc5fa9d9c965300e9ad264b02a">  109</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classRoom.html#a85e561bc5fa9d9c965300e9ad264b02a">getShortDescription</a>() {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">return</span> description;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classRoom.html#a23a25854d7544fb0b41190a4d6bd1322">  118</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classRoom.html#a23a25854d7544fb0b41190a4d6bd1322">getLongDescription</a>() {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;You are &quot;</span> + description + <span class="stringliteral">&quot;.\n&quot;</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                + ((!containedItems.isEmpty())? <span class="stringliteral">&quot;You can see&quot;</span> + <a class="code" href="classRoom.html#ab8a87ad306f77a936873094b479bcde8">getHumanItemsList</a>() + <span class="stringliteral">&quot; near you.\n&quot;</span> : <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                + getExitString();</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="classRoom.html#ab8a87ad306f77a936873094b479bcde8">  128</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classRoom.html#ab8a87ad306f77a936873094b479bcde8">getHumanItemsList</a>() {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        String itemsList = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        Set&lt;String&gt; names = containedItems.keySet();</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        Iterator&lt;String&gt; it = names.iterator();</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">while</span>(it.hasNext()) {</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            String itemName = it.next();</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="comment">// If the item&#39;s name begins with a vowel, the prefix is &#39; an &#39;</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="comment">// if not, the prefix is &#39; a &#39;</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            String prefix = <span class="stringliteral">&quot; a&quot;</span> + (((<span class="keyword">new</span> String(<span class="stringliteral">&quot;aeiouy&quot;</span>)).contains(itemName.substring(0,1)))? <span class="stringliteral">&quot;n&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">if</span>(itemsList.equals(<span class="stringliteral">&quot;&quot;</span>))</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                itemsList += prefix + itemName;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                <span class="comment">// Check if it is the last item</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                <span class="keywordflow">if</span>(it.hasNext())</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                    itemsList += <span class="stringliteral">&quot;,&quot;</span> + prefix + itemName;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                    itemsList += <span class="stringliteral">&quot; and&quot;</span> + prefix + itemName;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            }</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        }</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">return</span> itemsList;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">private</span> String getExitString() {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        StringBuilder returnString = <span class="keyword">new</span> StringBuilder(<span class="stringliteral">&quot;Exits:&quot;</span>);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">for</span>(String vS:exits.keySet())</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            returnString.append(<span class="stringliteral">&quot; &quot;</span> + vS);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">return</span> returnString.toString();</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="classRoom.html#a384ab8c844e5775f87de24d6c470637e">  168</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classRoom.html">Room</a> <a class="code" href="classRoom.html#a384ab8c844e5775f87de24d6c470637e">getExit</a>(String direction) {</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">return</span> exits.get(direction);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="classRoom.html#a844b42638a0d2ce68df9adf1674f713b">  177</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classRoom.html#a844b42638a0d2ce68df9adf1674f713b">isExit</a>(<a class="code" href="classRoom.html">Room</a> exit) {</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">return</span> exits.containsValue(exit);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="classRoom.html#a8177668df4d8be718812934673c42649">  185</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classRoom.html#a8177668df4d8be718812934673c42649">getImageName</a>() {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Images/&quot;</span>  + imageName;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    }</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;}</div>
-<div class="ttc" id="classRoom_html_a2cdcbb3d86746330a5a01c7fae4de02c"><div class="ttname"><a href="classRoom.html#a2cdcbb3d86746330a5a01c7fae4de02c">Room.Room</a></div><div class="ttdeci">Room(String description, String image)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00039">Room.java:39</a></div></div>
-<div class="ttc" id="classRoom_html_ab9ebd5a52d437f7724bf8474fffae81f"><div class="ttname"><a href="classRoom.html#ab9ebd5a52d437f7724bf8474fffae81f">Room.getContainedItems</a></div><div class="ttdeci">ItemList getContainedItems()</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00069">Room.java:69</a></div></div>
-<div class="ttc" id="classRoom_html_a8177668df4d8be718812934673c42649"><div class="ttname"><a href="classRoom.html#a8177668df4d8be718812934673c42649">Room.getImageName</a></div><div class="ttdeci">String getImageName()</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00185">Room.java:185</a></div></div>
-<div class="ttc" id="classRoom_html_a23a25854d7544fb0b41190a4d6bd1322"><div class="ttname"><a href="classRoom.html#a23a25854d7544fb0b41190a4d6bd1322">Room.getLongDescription</a></div><div class="ttdeci">String getLongDescription()</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00118">Room.java:118</a></div></div>
-<div class="ttc" id="classRoom_html_ae4bc6837f331b5249beb0651fc277018"><div class="ttname"><a href="classRoom.html#ae4bc6837f331b5249beb0651fc277018">Room.setExit</a></div><div class="ttdeci">void setExit(String direction, Room neighbor)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00061">Room.java:61</a></div></div>
-<div class="ttc" id="classRoom_html_a384ab8c844e5775f87de24d6c470637e"><div class="ttname"><a href="classRoom.html#a384ab8c844e5775f87de24d6c470637e">Room.getExit</a></div><div class="ttdeci">Room getExit(String direction)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00168">Room.java:168</a></div></div>
-<div class="ttc" id="classItem_html"><div class="ttname"><a href="classItem.html">Item</a></div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00006">Item.java:6</a></div></div>
-<div class="ttc" id="classRoom_html_a0b4fcc1c1c04e60efa7ae5f82ea37157"><div class="ttname"><a href="classRoom.html#a0b4fcc1c1c04e60efa7ae5f82ea37157">Room.addItem</a></div><div class="ttdeci">void addItem(Item item)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00093">Room.java:93</a></div></div>
-<div class="ttc" id="classRoom_html_a85e561bc5fa9d9c965300e9ad264b02a"><div class="ttname"><a href="classRoom.html#a85e561bc5fa9d9c965300e9ad264b02a">Room.getShortDescription</a></div><div class="ttdeci">String getShortDescription()</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00109">Room.java:109</a></div></div>
-<div class="ttc" id="classRoom_html_ad8cb507b670aec86cf14baa25fadb0f2"><div class="ttname"><a href="classRoom.html#ad8cb507b670aec86cf14baa25fadb0f2">Room.Room</a></div><div class="ttdeci">Room(String description, String image, ItemList itemList)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00049">Room.java:49</a></div></div>
-<div class="ttc" id="classRoom_html_ab8a87ad306f77a936873094b479bcde8"><div class="ttname"><a href="classRoom.html#ab8a87ad306f77a936873094b479bcde8">Room.getHumanItemsList</a></div><div class="ttdeci">String getHumanItemsList()</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00128">Room.java:128</a></div></div>
-<div class="ttc" id="classRoom_html_a844b42638a0d2ce68df9adf1674f713b"><div class="ttname"><a href="classRoom.html#a844b42638a0d2ce68df9adf1674f713b">Room.isExit</a></div><div class="ttdeci">boolean isExit(Room exit)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00177">Room.java:177</a></div></div>
-<div class="ttc" id="classItemList_html"><div class="ttname"><a href="classItemList.html">ItemList</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemList_8java_source.html#l00007">ItemList.java:7</a></div></div>
-<div class="ttc" id="classRoom_html_a9b53c8d9f87f4a6d9cc954aeb744d1a2"><div class="ttname"><a href="classRoom.html#a9b53c8d9f87f4a6d9cc954aeb744d1a2">Room.getItem</a></div><div class="ttdeci">Item getItem(String name)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00077">Room.java:77</a></div></div>
-<div class="ttc" id="classRoom_html_ad779b367b26018c9f343ca3044c4b54f"><div class="ttname"><a href="classRoom.html#ad779b367b26018c9f343ca3044c4b54f">Room.hasItem</a></div><div class="ttdeci">boolean hasItem(String name)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00085">Room.java:85</a></div></div>
-<div class="ttc" id="classRoom_html"><div class="ttname"><a href="classRoom.html">Room</a></div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00011">Room.java:11</a></div></div>
-<div class="ttc" id="classRoom_html_a591912d92553130f8f90a5bebd236a5c"><div class="ttname"><a href="classRoom.html#a591912d92553130f8f90a5bebd236a5c">Room.removeItem</a></div><div class="ttdeci">void removeItem(String itemName)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00101">Room.java:101</a></div></div>
+<a href="Room_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>pkg_world;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> java.util.Set;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> java.util.HashMap;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> java.util.Enumeration;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> java.util.Iterator;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Room.html">   13</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classpkg__world_1_1Room.html">Room</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">private</span> String description;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">private</span> HashMap&lt;String, Room&gt; exits;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">private</span> String imageName;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">private</span> <a class="code" href="classpkg__world_1_1ItemList.html">ItemList</a> containedItems;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Room.html#ae48ca6830c8c9368ab1cb7e9b006d157">   41</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classpkg__world_1_1Room.html#ae48ca6830c8c9368ab1cb7e9b006d157">Room</a>(String description, String image) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">this</span>(description, image, <span class="keyword">new</span> <a class="code" href="classpkg__world_1_1ItemList.html">ItemList</a>());</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Room.html#a0f95ea70b403217118bf7d5c1f0aebaf">   51</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classpkg__world_1_1Room.html#a0f95ea70b403217118bf7d5c1f0aebaf">Room</a>(String description, String image, <a class="code" href="classpkg__world_1_1ItemList.html">ItemList</a> itemList) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        this.description = description;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        exits = <span class="keyword">new</span> HashMap &lt; String, Room &gt; ();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        imageName = image;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        containedItems = itemList;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Room.html#a4a97591f3b574b3d0086843a919a0214">   63</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classpkg__world_1_1Room.html#a4a97591f3b574b3d0086843a919a0214">setExit</a>(String direction, <a class="code" href="classpkg__world_1_1Room.html">Room</a> neighbor) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        exits.put(direction, neighbor);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }   </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Room.html#a969205a4d2d2d9e30d1e1db9fc3f0b43">   71</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classpkg__world_1_1ItemList.html">ItemList</a> <a class="code" href="classpkg__world_1_1Room.html#a969205a4d2d2d9e30d1e1db9fc3f0b43">getContainedItems</a>() {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> containedItems;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Room.html#a8624c98bd006830d4484dae2dcd8c8e7">   79</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classpkg__world_1_1Item.html">Item</a> <a class="code" href="classpkg__world_1_1Room.html#a8624c98bd006830d4484dae2dcd8c8e7">getItem</a>(String name) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> containedItems.get(name);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Room.html#aefa26e1bc5088dd199dde2e9d471c490">   87</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classpkg__world_1_1Room.html#aefa26e1bc5088dd199dde2e9d471c490">hasItem</a>(String name) {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> containedItems.get(name) != null;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Room.html#a118585101b274edfdd43b724382de89c">   95</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classpkg__world_1_1Room.html#a118585101b274edfdd43b724382de89c">addItem</a>(<a class="code" href="classpkg__world_1_1Item.html">Item</a> item) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        containedItems.put(item.getName(), item);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Room.html#ab84c99b33e69d4a3e0700cab4b9efeaa">  103</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classpkg__world_1_1Room.html#ab84c99b33e69d4a3e0700cab4b9efeaa">removeItem</a>(String itemName) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        containedItems.remove(itemName);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Room.html#adb98ed16e34549faabed35f90673d266">  111</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classpkg__world_1_1Room.html#adb98ed16e34549faabed35f90673d266">getShortDescription</a>() {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> description;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Room.html#acc8ee9123c9a77428c1e66fbba34aeac">  120</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classpkg__world_1_1Room.html#acc8ee9123c9a77428c1e66fbba34aeac">getLongDescription</a>() {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;You are &quot;</span> + description + <span class="stringliteral">&quot;.\n&quot;</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                + ((!containedItems.isEmpty())? <span class="stringliteral">&quot;You can see&quot;</span> + <a class="code" href="classpkg__world_1_1Room.html#a3ea436ad00d00484b429992ef94535ac">getHumanItemsList</a>() + <span class="stringliteral">&quot; near you.\n&quot;</span> : <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                + getExitString();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Room.html#a3ea436ad00d00484b429992ef94535ac">  130</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classpkg__world_1_1Room.html#a3ea436ad00d00484b429992ef94535ac">getHumanItemsList</a>() {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        String itemsList = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        Set&lt;String&gt; names = containedItems.keySet();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        Iterator&lt;String&gt; it = names.iterator();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">while</span>(it.hasNext()) {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            String itemName = it.next();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="comment">// If the item&#39;s name begins with a vowel, the prefix is &#39; an &#39;</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="comment">// if not, the prefix is &#39; a &#39;</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            String prefix = <span class="stringliteral">&quot; a&quot;</span> + (((<span class="keyword">new</span> String(<span class="stringliteral">&quot;aeiouy&quot;</span>)).contains(itemName.substring(0,1)))? <span class="stringliteral">&quot;n&quot;</span> : <span class="stringliteral">&quot;&quot;</span>) + <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keywordflow">if</span>(itemsList.equals(<span class="stringliteral">&quot;&quot;</span>))</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                itemsList += prefix + itemName;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                <span class="comment">// Check if it is the last item</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                <span class="keywordflow">if</span>(it.hasNext())</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                    itemsList += <span class="stringliteral">&quot;,&quot;</span> + prefix + itemName;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                    itemsList += <span class="stringliteral">&quot; and&quot;</span> + prefix + itemName;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">return</span> itemsList;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">private</span> String getExitString() {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        StringBuilder returnString = <span class="keyword">new</span> StringBuilder(<span class="stringliteral">&quot;Exits:&quot;</span>);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">for</span>(String vS:exits.keySet())</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            returnString.append(<span class="stringliteral">&quot; &quot;</span> + vS);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">return</span> returnString.toString();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Room.html#ae05ae991a1692ffb29e8aef632d18b95">  170</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classpkg__world_1_1Room.html">Room</a> <a class="code" href="classpkg__world_1_1Room.html#ae05ae991a1692ffb29e8aef632d18b95">getExit</a>(String direction) {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">return</span> exits.get(direction);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Room.html#a305aab25719c2b75a0c28c9a53a3c9d3">  179</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classpkg__world_1_1Room.html#a305aab25719c2b75a0c28c9a53a3c9d3">isExit</a>(<a class="code" href="classpkg__world_1_1Room.html">Room</a> exit) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">return</span> exits.containsValue(exit);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Room.html#a5d1a496c1fd2e4ba73177e1182c9f4f1">  187</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classpkg__world_1_1Room.html#a5d1a496c1fd2e4ba73177e1182c9f4f1">getImageName</a>() {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Images/&quot;</span>  + imageName;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
+<div class="ttc" id="classpkg__world_1_1ItemList_html"><div class="ttname"><a href="classpkg__world_1_1ItemList.html">pkg_world.ItemList</a></div><div class="ttdef"><b>Definition:</b> <a href="ItemList_8java_source.html#l00009">ItemList.java:9</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Room_html_a5d1a496c1fd2e4ba73177e1182c9f4f1"><div class="ttname"><a href="classpkg__world_1_1Room.html#a5d1a496c1fd2e4ba73177e1182c9f4f1">pkg_world.Room.getImageName</a></div><div class="ttdeci">String getImageName()</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00187">Room.java:187</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Room_html"><div class="ttname"><a href="classpkg__world_1_1Room.html">pkg_world.Room</a></div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00013">Room.java:13</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Room_html_a0f95ea70b403217118bf7d5c1f0aebaf"><div class="ttname"><a href="classpkg__world_1_1Room.html#a0f95ea70b403217118bf7d5c1f0aebaf">pkg_world.Room.Room</a></div><div class="ttdeci">Room(String description, String image, ItemList itemList)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00051">Room.java:51</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Room_html_a118585101b274edfdd43b724382de89c"><div class="ttname"><a href="classpkg__world_1_1Room.html#a118585101b274edfdd43b724382de89c">pkg_world.Room.addItem</a></div><div class="ttdeci">void addItem(Item item)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00095">Room.java:95</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Room_html_ab84c99b33e69d4a3e0700cab4b9efeaa"><div class="ttname"><a href="classpkg__world_1_1Room.html#ab84c99b33e69d4a3e0700cab4b9efeaa">pkg_world.Room.removeItem</a></div><div class="ttdeci">void removeItem(String itemName)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00103">Room.java:103</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Room_html_a4a97591f3b574b3d0086843a919a0214"><div class="ttname"><a href="classpkg__world_1_1Room.html#a4a97591f3b574b3d0086843a919a0214">pkg_world.Room.setExit</a></div><div class="ttdeci">void setExit(String direction, Room neighbor)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00063">Room.java:63</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Room_html_a8624c98bd006830d4484dae2dcd8c8e7"><div class="ttname"><a href="classpkg__world_1_1Room.html#a8624c98bd006830d4484dae2dcd8c8e7">pkg_world.Room.getItem</a></div><div class="ttdeci">Item getItem(String name)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00079">Room.java:79</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Room_html_ae48ca6830c8c9368ab1cb7e9b006d157"><div class="ttname"><a href="classpkg__world_1_1Room.html#ae48ca6830c8c9368ab1cb7e9b006d157">pkg_world.Room.Room</a></div><div class="ttdeci">Room(String description, String image)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00041">Room.java:41</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Room_html_a3ea436ad00d00484b429992ef94535ac"><div class="ttname"><a href="classpkg__world_1_1Room.html#a3ea436ad00d00484b429992ef94535ac">pkg_world.Room.getHumanItemsList</a></div><div class="ttdeci">String getHumanItemsList()</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00130">Room.java:130</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Room_html_acc8ee9123c9a77428c1e66fbba34aeac"><div class="ttname"><a href="classpkg__world_1_1Room.html#acc8ee9123c9a77428c1e66fbba34aeac">pkg_world.Room.getLongDescription</a></div><div class="ttdeci">String getLongDescription()</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00120">Room.java:120</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Room_html_a305aab25719c2b75a0c28c9a53a3c9d3"><div class="ttname"><a href="classpkg__world_1_1Room.html#a305aab25719c2b75a0c28c9a53a3c9d3">pkg_world.Room.isExit</a></div><div class="ttdeci">boolean isExit(Room exit)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00179">Room.java:179</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Room_html_aefa26e1bc5088dd199dde2e9d471c490"><div class="ttname"><a href="classpkg__world_1_1Room.html#aefa26e1bc5088dd199dde2e9d471c490">pkg_world.Room.hasItem</a></div><div class="ttdeci">boolean hasItem(String name)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00087">Room.java:87</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Item_html"><div class="ttname"><a href="classpkg__world_1_1Item.html">pkg_world.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00007">Item.java:7</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Room_html_adb98ed16e34549faabed35f90673d266"><div class="ttname"><a href="classpkg__world_1_1Room.html#adb98ed16e34549faabed35f90673d266">pkg_world.Room.getShortDescription</a></div><div class="ttdeci">String getShortDescription()</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00111">Room.java:111</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Room_html_a969205a4d2d2d9e30d1e1db9fc3f0b43"><div class="ttname"><a href="classpkg__world_1_1Room.html#a969205a4d2d2d9e30d1e1db9fc3f0b43">pkg_world.Room.getContainedItems</a></div><div class="ttdeci">ItemList getContainedItems()</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00071">Room.java:71</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Room_html_ae05ae991a1692ffb29e8aef632d18b95"><div class="ttname"><a href="classpkg__world_1_1Room.html#ae05ae991a1692ffb29e8aef632d18b95">pkg_world.Room.getExit</a></div><div class="ttdeci">Room getExit(String direction)</div><div class="ttdef"><b>Definition:</b> <a href="Room_8java_source.html#l00170">Room.java:170</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 5 2014 01:29:56 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 5 2014 02:12:07 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['quit',['QUIT',['../enumCommandWord.html#aa606b7593e9ff8c395e091a0f726e348',1,'CommandWord']]],
-  ['quitcommand',['QuitCommand',['../classQuitCommand.html',1,'QuitCommand'],['../classQuitCommand.html#a3081011e681aabc33b470734f3a2d8f2',1,'QuitCommand.QuitCommand()']]],
+  ['quit',['QUIT',['../enumpkg__parsing_1_1CommandWord.html#a2f645cd1791d5576f42e1fe14d202c17',1,'pkg_parsing::CommandWord']]],
+  ['quitcommand',['QuitCommand',['../classpkg__commands_1_1QuitCommand.html#a92a35342caaa08998e70242e3e9997ae',1,'pkg_commands::QuitCommand']]],
+  ['quitcommand',['QuitCommand',['../classpkg__commands_1_1QuitCommand.html',1,'pkg_commands']]],
   ['quitcommand_2ejava',['QuitCommand.java',['../QuitCommand_8java.html',1,'']]]
 ];

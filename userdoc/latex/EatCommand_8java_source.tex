@@ -1,34 +1,39 @@
-\hypertarget{EatCommand_8java_source}{\section{Eat\-Command.\-java}
+\hypertarget{EatCommand_8java}{\section{Eat\-Command.\-java}
+\label{EatCommand_8java}\index{pkg\-\_\-commands/\-Eat\-Command.\-java@{pkg\-\_\-commands/\-Eat\-Command.\-java}}
 }
 
 \begin{DoxyCode}
-00001 
-\hypertarget{EatCommand_8java_source_l00005}{}\hyperlink{classEatCommand}{00005} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classEatCommand}{EatCommand} \textcolor{keyword}{extends} Command \{
-00006 
-\hypertarget{EatCommand_8java_source_l00010}{}\hyperlink{classEatCommand_ab142bb810d8beeb46c478148143182e7}{00010}     \textcolor{keyword}{public} \hyperlink{classEatCommand_ab142bb810d8beeb46c478148143182e7}{EatCommand}()\{
+00001 \textcolor{keyword}{package }pkg\_commands;
+00002 
+00003 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Player}{pkg\_world.Player};
+00004 \textcolor{keyword}{import} pkg\_exceptions.*;
+00005 
+\hypertarget{EatCommand_8java_source_l00010}{}\hyperlink{classpkg__commands_1_1EatCommand}{00010} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__commands_1_1EatCommand}{EatCommand} \textcolor{keyword}{extends} \hyperlink{classpkg__commands_1_1Command}{Command} \{
 00011 
-00012     \}
-00013 
-\hypertarget{EatCommand_8java_source_l00023}{}\hyperlink{classEatCommand_ab78ece6b005359a83696998a37f0ae71}{00023}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classEatCommand_ab78ece6b005359a83696998a37f0ae71}{execute}(\hyperlink{classPlayer}{Player} player) \textcolor{keywordflow}{throws} 
-      \hyperlink{classNoArgumentException}{NoArgumentException},\hyperlink{classIllegalArgumentException}{IllegalArgumentException},
-      \hyperlink{classUnauthorizedException}{UnauthorizedException} \{
-00024         \textcolor{keywordflow}{if}(hasParameter()) \{
-00025             \textcolor{keywordflow}{if}(player.hasItem(getParameter()))\{
-00026                 \textcolor{keywordflow}{if}(getParameter().equals(\textcolor{stringliteral}{"magiccookie"})) \{
-00027                     player.eatObject(getParameter());
-00028                     player.setMaxWeight(player.getMaxWeight() + 100);
-00029                     setMessage(\textcolor{stringliteral}{"You found an out of date \(\backslash\)"magic\(\backslash\)" cookie inside a cave and you just ate
-       it.\(\backslash\)nNow you can carry more items. That's logic!"});
-00030                 \} \textcolor{keywordflow}{else}
-00031                     \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classUnauthorizedException}{UnauthorizedException}(\textcolor{stringliteral}{"If that's what you eat, I don't
+\hypertarget{EatCommand_8java_source_l00015}{}\hyperlink{classpkg__commands_1_1EatCommand_ad83dfae54a7d24140beff2b00201e065}{00015}     \textcolor{keyword}{public} \hyperlink{classpkg__commands_1_1EatCommand_ad83dfae54a7d24140beff2b00201e065}{EatCommand}()\{
+00016 
+00017     \}
+00018 
+\hypertarget{EatCommand_8java_source_l00028}{}\hyperlink{classpkg__commands_1_1EatCommand_a2a600f09891aa076b3f630293de965f4}{00028}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__commands_1_1EatCommand_a2a600f09891aa076b3f630293de965f4}{execute}(\hyperlink{classpkg__world_1_1Player}{Player} player) \textcolor{keywordflow}{throws} 
+      \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException},\hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}
+      ,\hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException} \{
+00029         \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998}{hasParameter}()) \{
+00030             \textcolor{keywordflow}{if}(player.hasItem(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}()))\{
+00031                 \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}().equals(\textcolor{stringliteral}{"magiccookie"})) \{
+00032                     player.eatObject(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}());
+00033                     player.setMaxWeight(player.getMaxWeight() + 100);
+00034                     \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\textcolor{stringliteral}{"You found an out of date \(\backslash\)"magic\(\backslash\)" cookie inside a cave and you
+       just ate it.\(\backslash\)nNow you can carry more items. That's logic!"});
+00035                 \} \textcolor{keywordflow}{else}
+00036                     \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException}(\textcolor{stringliteral}{"If that's what you eat, I don't
        want to be invited to any of your meals.\(\backslash\)nI'm afraid I can't allow you to do that."});
-00032             \} \textcolor{keywordflow}{else} 
-00033                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classIllegalArgumentException}{IllegalArgumentException}(\textcolor{stringliteral}{"You don't have that. And I'm
-       sure that if you did, it wouldn't be smart to eat that."});
-00034         \} \textcolor{keywordflow}{else} 
-00035             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classNoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"Eat my shorts?"});
-00036         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-00037     \}
-00038 
-00039 \}
+00037             \} \textcolor{keywordflow}{else} 
+00038                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}(\textcolor{stringliteral}{"
+      You don't have that. And I'm sure that if you did, it wouldn't be smart to eat that."});
+00039         \} \textcolor{keywordflow}{else} 
+00040             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"Eat my shorts?"});
+00041         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00042     \}
+00043 
+00044 \}
 \end{DoxyCode}

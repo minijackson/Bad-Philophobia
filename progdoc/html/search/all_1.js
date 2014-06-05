@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['back',['BACK',['../enumCommandWord.html#a3309e549607eb8de673c296db55f7517',1,'CommandWord']]],
-  ['backcommand',['BackCommand',['../classBackCommand.html',1,'BackCommand'],['../classBackCommand.html#a779456e24dfb281e5917e936da5fd901',1,'BackCommand.BackCommand()']]],
+  ['back',['BACK',['../enumpkg__parsing_1_1CommandWord.html#a7c6d90e3ff897725acfab8f68b28a1b1',1,'pkg_parsing::CommandWord']]],
+  ['backcommand',['BackCommand',['../classpkg__commands_1_1BackCommand.html',1,'pkg_commands']]],
+  ['backcommand',['BackCommand',['../classpkg__commands_1_1BackCommand.html#a81518eb89a9e9126e51f2f7ba6ff1ed9',1,'pkg_commands::BackCommand']]],
   ['backcommand_2ejava',['BackCommand.java',['../BackCommand_8java.html',1,'']]],
-  ['backpack',['backpack',['../classPlayer.html#a33955abef833055b380ec4e9e6ac2e6e',1,'Player']]],
-  ['backpackweight',['backpackWeight',['../classPlayer.html#a54523ae912bf972491ace05d3bbcdc79',1,'Player']]],
-  ['beamer',['BEAMER',['../enumCommandWord.html#ab916560f94837341b38c83aa3cf5497f',1,'CommandWord']]],
-  ['beamercommand',['BeamerCommand',['../classBeamerCommand.html',1,'BeamerCommand'],['../classBeamerCommand.html#accb1d84a69588f1b42fba96bf1b32de5',1,'BeamerCommand.BeamerCommand()']]],
+  ['backpack',['backpack',['../classpkg__world_1_1Player.html#adea3925e7f823a9602e5f9ee58683e3b',1,'pkg_world::Player']]],
+  ['backpackweight',['backpackWeight',['../classpkg__world_1_1Player.html#a19ed9d4d1b17f409f106142ec2fd68a3',1,'pkg_world::Player']]],
+  ['beamer',['BEAMER',['../enumpkg__parsing_1_1CommandWord.html#a4d1c3647eaf81664624ed5effc590be4',1,'pkg_parsing::CommandWord']]],
+  ['beamercommand',['BeamerCommand',['../classpkg__commands_1_1BeamerCommand.html',1,'pkg_commands']]],
+  ['beamercommand',['BeamerCommand',['../classpkg__commands_1_1BeamerCommand.html#a541cd046e7680452f451322c1730e675',1,'pkg_commands::BeamerCommand']]],
   ['beamercommand_2ejava',['BeamerCommand.java',['../BeamerCommand_8java.html',1,'']]],
-  ['beamerroom',['beamerRoom',['../classPlayer.html#a0d4ea9ed469b7daae679913aea85ea4b',1,'Player']]]
+  ['beamerroom',['beamerRoom',['../classpkg__world_1_1Player.html#aadfcdea19eefea1137932f9329c08209',1,'pkg_world::Player']]]
 ];

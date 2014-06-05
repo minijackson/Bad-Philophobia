@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['noargumentexception',['NoArgumentException',['../classNoArgumentException.html',1,'']]]
+  ['noargumentexception',['NoArgumentException',['../classpkg__exceptions_1_1NoArgumentException.html',1,'pkg_exceptions']]]
 ];

@@ -1,3 +1,15 @@
+import pkg_world.Player;
+import pkg_world.Room;
+import pkg_world.Item;
+
+import pkg_commands.Command;
+import pkg_commands.GoCommand;
+import pkg_commands.TestCommand;
+
+import pkg_parsing.Parser;
+
+import pkg_exceptions.*;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Random;
@@ -194,7 +206,7 @@ public class GameEngine
 			}
 		} catch(NoArgumentException e) {
 			gui.println(e.getMessage());
-		} catch(IllegalArgumentException e) {
+		} catch(pkg_exceptions.IllegalArgumentException e) {
 			gui.println(e.getMessage());
 		} catch(UnauthorizedException e) {
 			gui.println(e.getMessage());

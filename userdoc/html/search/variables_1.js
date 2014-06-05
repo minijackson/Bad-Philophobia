@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['credits',['CREDITS',['../enumCommandWord.html#aff84c19093cea7bf97301062fe61e0a4',1,'CommandWord']]]
+  ['credits',['CREDITS',['../enumpkg__parsing_1_1CommandWord.html#a4267a564de4d81cec28764b1eeb3ce22',1,'pkg_parsing::CommandWord']]]
 ];

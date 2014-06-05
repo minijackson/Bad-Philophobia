@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Bad Philophobia: Item.java Source File</title>
+<title>Bad Philophobia: pkg_world/Item.java Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,6 +43,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,13 +69,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="files.html"><span>File&#160;List</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,51 +83,57 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_22137d4b8d7cf54005973ad52b141213.html">pkg_world</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Item.java</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="Item_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classItem.html">    6</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classItem.html">Item</a> {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classItem.html#a42fd6d4796fcf652806278f65ce93a3b">   11</a></span>&#160;    <span class="keyword">private</span> String <a class="code" href="classItem.html#a42fd6d4796fcf652806278f65ce93a3b">name</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classItem.html#ade554833393860faaece5e514637b5d0">   16</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="classItem.html#ade554833393860faaece5e514637b5d0">weight</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classItem.html#a663fa7220137071baee5c660b01a82df">   21</a></span>&#160;    <span class="keyword">private</span> String <a class="code" href="classItem.html#a663fa7220137071baee5c660b01a82df">description</a>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classItem.html#acf7048ce82d4f6f047d926b1f6260f7c">   29</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classItem.html#acf7048ce82d4f6f047d926b1f6260f7c">Item</a>(String <a class="code" href="classItem.html#a42fd6d4796fcf652806278f65ce93a3b">name</a>, <span class="keywordtype">int</span> <a class="code" href="classItem.html#ade554833393860faaece5e514637b5d0">weight</a>, String <a class="code" href="classItem.html#a663fa7220137071baee5c660b01a82df">description</a>) {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        this.name = <a class="code" href="classItem.html#a42fd6d4796fcf652806278f65ce93a3b">name</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        this.weight = <a class="code" href="classItem.html#ade554833393860faaece5e514637b5d0">weight</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        this.description = <a class="code" href="classItem.html#a663fa7220137071baee5c660b01a82df">description</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classItem.html#a78dd5a8370c5267c3f1f992167ab84ac">   39</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classItem.html#a78dd5a8370c5267c3f1f992167ab84ac">getName</a>() {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classItem.html#a42fd6d4796fcf652806278f65ce93a3b">name</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classItem.html#a2ff9daec3cf9585fb5741062447a779d">   47</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="classItem.html#a2ff9daec3cf9585fb5741062447a779d">getWeight</a>() {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classItem.html#ade554833393860faaece5e514637b5d0">weight</a>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classItem.html#abfe361bd046f5acdf4946bda076a8c8f">   55</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classItem.html#abfe361bd046f5acdf4946bda076a8c8f">getDescription</a>() {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classItem.html#a663fa7220137071baee5c660b01a82df">description</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="ttc" id="classItem_html_acf7048ce82d4f6f047d926b1f6260f7c"><div class="ttname"><a href="classItem.html#acf7048ce82d4f6f047d926b1f6260f7c">Item.Item</a></div><div class="ttdeci">Item(String name, int weight, String description)</div><div class="ttdoc">Item class constructor. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00029">Item.java:29</a></div></div>
-<div class="ttc" id="classItem_html_a663fa7220137071baee5c660b01a82df"><div class="ttname"><a href="classItem.html#a663fa7220137071baee5c660b01a82df">Item.description</a></div><div class="ttdeci">String description</div><div class="ttdoc">Description of the item. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00021">Item.java:21</a></div></div>
-<div class="ttc" id="classItem_html_a2ff9daec3cf9585fb5741062447a779d"><div class="ttname"><a href="classItem.html#a2ff9daec3cf9585fb5741062447a779d">Item.getWeight</a></div><div class="ttdeci">int getWeight()</div><div class="ttdoc">weight field getter. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00047">Item.java:47</a></div></div>
-<div class="ttc" id="classItem_html"><div class="ttname"><a href="classItem.html">Item</a></div><div class="ttdoc">Class used to handle an item contained in a Room. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00006">Item.java:6</a></div></div>
-<div class="ttc" id="classItem_html_ade554833393860faaece5e514637b5d0"><div class="ttname"><a href="classItem.html#ade554833393860faaece5e514637b5d0">Item.weight</a></div><div class="ttdeci">int weight</div><div class="ttdoc">Weight of the item. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00016">Item.java:16</a></div></div>
-<div class="ttc" id="classItem_html_a78dd5a8370c5267c3f1f992167ab84ac"><div class="ttname"><a href="classItem.html#a78dd5a8370c5267c3f1f992167ab84ac">Item.getName</a></div><div class="ttdeci">String getName()</div><div class="ttdoc">name field getter. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00039">Item.java:39</a></div></div>
-<div class="ttc" id="classItem_html_a42fd6d4796fcf652806278f65ce93a3b"><div class="ttname"><a href="classItem.html#a42fd6d4796fcf652806278f65ce93a3b">Item.name</a></div><div class="ttdeci">String name</div><div class="ttdoc">Name of the item. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00011">Item.java:11</a></div></div>
-<div class="ttc" id="classItem_html_abfe361bd046f5acdf4946bda076a8c8f"><div class="ttname"><a href="classItem.html#abfe361bd046f5acdf4946bda076a8c8f">Item.getDescription</a></div><div class="ttdeci">String getDescription()</div><div class="ttdoc">description field getter. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00055">Item.java:55</a></div></div>
+<a href="Item_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacepkg__world.html">    1</a></span>&#160;<span class="keyword">package </span>pkg_world;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Item.html">    7</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classpkg__world_1_1Item.html">Item</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Item.html#a69341bebf4daf5856e2bc03f9530bfc8">   12</a></span>&#160;    <span class="keyword">private</span> String <a class="code" href="classpkg__world_1_1Item.html#a69341bebf4daf5856e2bc03f9530bfc8">name</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Item.html#aa5dd085ecf4205cb6e2b316ab5509731">   17</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="classpkg__world_1_1Item.html#aa5dd085ecf4205cb6e2b316ab5509731">weight</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Item.html#a4fc495152cec2a97508ed5c1749b887f">   22</a></span>&#160;    <span class="keyword">private</span> String <a class="code" href="classpkg__world_1_1Item.html#a4fc495152cec2a97508ed5c1749b887f">description</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Item.html#a57474f01fd9f40be8d01edc1ad79171c">   30</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classpkg__world_1_1Item.html#a57474f01fd9f40be8d01edc1ad79171c">Item</a>(String <a class="code" href="classpkg__world_1_1Item.html#a69341bebf4daf5856e2bc03f9530bfc8">name</a>, <span class="keywordtype">int</span> <a class="code" href="classpkg__world_1_1Item.html#aa5dd085ecf4205cb6e2b316ab5509731">weight</a>, String <a class="code" href="classpkg__world_1_1Item.html#a4fc495152cec2a97508ed5c1749b887f">description</a>) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        this.name = <a class="code" href="classpkg__world_1_1Item.html#a69341bebf4daf5856e2bc03f9530bfc8">name</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        this.weight = <a class="code" href="classpkg__world_1_1Item.html#aa5dd085ecf4205cb6e2b316ab5509731">weight</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        this.description = <a class="code" href="classpkg__world_1_1Item.html#a4fc495152cec2a97508ed5c1749b887f">description</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Item.html#a2ac9495ef1a08f01df7f66a46ca895c2">   40</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classpkg__world_1_1Item.html#a2ac9495ef1a08f01df7f66a46ca895c2">getName</a>() {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpkg__world_1_1Item.html#a69341bebf4daf5856e2bc03f9530bfc8">name</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Item.html#a4e4d16b3d657683d482e4e131f8d0571">   48</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="classpkg__world_1_1Item.html#a4e4d16b3d657683d482e4e131f8d0571">getWeight</a>() {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpkg__world_1_1Item.html#aa5dd085ecf4205cb6e2b316ab5509731">weight</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classpkg__world_1_1Item.html#a2fb9a737f363fe6c0a50280c8630fcd0">   56</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classpkg__world_1_1Item.html#a2fb9a737f363fe6c0a50280c8630fcd0">getDescription</a>() {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpkg__world_1_1Item.html#a4fc495152cec2a97508ed5c1749b887f">description</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="ttc" id="classpkg__world_1_1Item_html_a69341bebf4daf5856e2bc03f9530bfc8"><div class="ttname"><a href="classpkg__world_1_1Item.html#a69341bebf4daf5856e2bc03f9530bfc8">pkg_world.Item.name</a></div><div class="ttdeci">String name</div><div class="ttdoc">Name of the item. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00012">Item.java:12</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Item_html_aa5dd085ecf4205cb6e2b316ab5509731"><div class="ttname"><a href="classpkg__world_1_1Item.html#aa5dd085ecf4205cb6e2b316ab5509731">pkg_world.Item.weight</a></div><div class="ttdeci">int weight</div><div class="ttdoc">Weight of the item. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00017">Item.java:17</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Item_html_a4e4d16b3d657683d482e4e131f8d0571"><div class="ttname"><a href="classpkg__world_1_1Item.html#a4e4d16b3d657683d482e4e131f8d0571">pkg_world.Item.getWeight</a></div><div class="ttdeci">int getWeight()</div><div class="ttdoc">weight field getter. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00048">Item.java:48</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Item_html_a4fc495152cec2a97508ed5c1749b887f"><div class="ttname"><a href="classpkg__world_1_1Item.html#a4fc495152cec2a97508ed5c1749b887f">pkg_world.Item.description</a></div><div class="ttdeci">String description</div><div class="ttdoc">Description of the item. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00022">Item.java:22</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Item_html_a57474f01fd9f40be8d01edc1ad79171c"><div class="ttname"><a href="classpkg__world_1_1Item.html#a57474f01fd9f40be8d01edc1ad79171c">pkg_world.Item.Item</a></div><div class="ttdeci">Item(String name, int weight, String description)</div><div class="ttdoc">Item class constructor. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00030">Item.java:30</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Item_html_a2ac9495ef1a08f01df7f66a46ca895c2"><div class="ttname"><a href="classpkg__world_1_1Item.html#a2ac9495ef1a08f01df7f66a46ca895c2">pkg_world.Item.getName</a></div><div class="ttdeci">String getName()</div><div class="ttdoc">name field getter. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00040">Item.java:40</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Item_html"><div class="ttname"><a href="classpkg__world_1_1Item.html">pkg_world.Item</a></div><div class="ttdoc">Class used to handle an item contained in a Room. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00007">Item.java:7</a></div></div>
+<div class="ttc" id="classpkg__world_1_1Item_html_a2fb9a737f363fe6c0a50280c8630fcd0"><div class="ttname"><a href="classpkg__world_1_1Item.html#a2fb9a737f363fe6c0a50280c8630fcd0">pkg_world.Item.getDescription</a></div><div class="ttdeci">String getDescription()</div><div class="ttdoc">description field getter. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00056">Item.java:56</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 5 2014 01:25:10 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 5 2014 02:12:02 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

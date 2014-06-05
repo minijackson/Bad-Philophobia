@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['help',['HELP',['../enumCommandWord.html#a8689456b5990b4dfa2c69427a862784d',1,'CommandWord']]],
-  ['helpcount',['helpCount',['../classGameEngine.html#a308a9926d553d53cb4c56c28588f6c62',1,'GameEngine.helpCount()'],['../classHelpCommand.html#a43be62a6791ea374e55433d33447124d',1,'HelpCommand.helpCount()']]]
+  ['help',['HELP',['../enumpkg__parsing_1_1CommandWord.html#ace035a3a624f4247b9f38c24eabe3f91',1,'pkg_parsing::CommandWord']]],
+  ['helpcount',['helpCount',['../classGameEngine.html#a308a9926d553d53cb4c56c28588f6c62',1,'GameEngine.helpCount()'],['../classpkg__commands_1_1HelpCommand.html#a1f83dd0f92e63803f29ce29485903526',1,'pkg_commands.HelpCommand.helpCount()']]]
 ];

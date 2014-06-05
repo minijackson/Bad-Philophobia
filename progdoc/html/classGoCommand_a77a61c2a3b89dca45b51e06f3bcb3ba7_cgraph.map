@@ -1,9 +1,0 @@
-<map id="GoCommand.execute" name="GoCommand.execute">
-<area shape="rect" id="node2" href="$classCommand.html#a1ced3739d546770ba1389e6ce228255e" title="Parameter field getter. " alt="" coords="217,5,381,32"/>
-<area shape="rect" id="node3" href="$classGoCommand.html#a1fce2ad8ed1faf41fa300064585b3616" title="Check if the wanted Room is connected to the current Room and go to this room. " alt="" coords="203,107,394,133"/>
-<area shape="rect" id="node5" href="$classCommand.html#a715709d8f0ab65879d79ad1725c96f17" title="Message field setter. " alt="" coords="700,56,857,83"/>
-<area shape="rect" id="node8" href="$classCommand.html#a9b042558156d6749566e0fd9d48d3bfe" title="Return true if the parameter is null. " alt="" coords="215,157,382,184"/>
-<area shape="rect" id="node4" href="$classGoCommand.html#a3149bf695c19b78c39cfc4dadece7846" title="Go to the Room without checking. " alt="" coords="443,107,650,133"/>
-<area shape="rect" id="node6" href="$classCommand.html#a3d232d33894a20dc81b7627d84f14183" title="Return true if the message is equal to null or &quot;&quot;. " alt="" coords="699,107,859,133"/>
-<area shape="rect" id="node7" href="$classCommand.html#ac3d4abebefb2aea0ce9757bf9c356882" title="Message field getter. " alt="" coords="700,157,857,184"/>
-</map>
