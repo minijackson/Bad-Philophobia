@@ -133,40 +133,50 @@ public class UserInterface implements ActionListener {
 		buttonsPanel.setPreferredSize(new Dimension(200,200));
 		image = new JLabel();
 
+		Font buttonsFont = new Font(Font.SANS_SERIF, Font.PLAIN, 30);
+
 		JButton buttonNorth = new JButton("↑");
-		buttonNorth.addActionListener(this);
 		buttons.add(buttonNorth);
 
 		JButton buttonSouth = new JButton("↓");
-		buttonSouth.addActionListener(this);
 		buttons.add(buttonSouth);
 
 		JButton buttonEast = new JButton("→");
-		buttonEast.addActionListener(this);
 		buttons.add(buttonEast);
 
 		JButton buttonWest = new JButton("←");
-		buttonWest.addActionListener(this);
 		buttons.add(buttonWest);
 
 		JButton buttonHelp = new JButton("?");
-		buttonHelp.addActionListener(this);
 		buttons.add(buttonHelp);
 
 		JButton buttonReturn = new JButton("⏎");
-		buttonReturn.addActionListener(this);
 		buttons.add(buttonReturn);
 
+		JButton buttonCharge = new JButton("⚛");
+		buttons.add(buttonCharge);
+
+		JButton buttonTeleport = new JButton("⇣");
+		buttons.add(buttonTeleport);
+
+		JButton buttonBack = new JButton("↺");
+		buttons.add(buttonBack);
+
+		for (JButton button : buttons) {
+			button.addActionListener(this);
+			button.setFont(buttonsFont);
+		}
+
 		buttonsPanel.setLayout(new GridLayout(3,3));
-		buttonsPanel.add(new JButton(""));
+		buttonsPanel.add(buttonBack);
 		buttonsPanel.add(buttonNorth);
-		buttonsPanel.add(new JButton(""));
+		buttonsPanel.add(buttonCharge);
 		buttonsPanel.add(buttonWest);
 		buttonsPanel.add(buttonHelp);
 		buttonsPanel.add(buttonEast);
 		buttonsPanel.add(buttonReturn);
 		buttonsPanel.add(buttonSouth);
-		buttonsPanel.add(new JButton(""));
+		buttonsPanel.add(buttonTeleport);
 
 		panel.setLayout(new BorderLayout());
 		panel.add(image, BorderLayout.NORTH);
@@ -211,6 +221,12 @@ public class UserInterface implements ActionListener {
 			engine.processCommand("go east");
 		} else if(e.getActionCommand().equals("?")) {
 			engine.processCommand("help");
+		} else if(e.getActionCommand().equals("⚛")) {
+			engine.processCommand("beamer charge");
+		} else if(e.getActionCommand().equals("⇣")) {
+			engine.processCommand("beamer teleport");
+		} else if(e.getActionCommand().equals("↺")) {
+			engine.processCommand("back");
 		} else {
 			processCommand();
 		}
