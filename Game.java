@@ -1,3 +1,6 @@
+import pkg_game.GameEngine;
+import pkg_game.UserInterface;
+
 /**
  * Main class used to instantiate other objects.
  * @author Rémi NICOLE

@@ -1,3 +1,5 @@
+package pkg_game;
+
 import pkg_world.Player;
 import pkg_world.Room;
 import pkg_world.Item;
@@ -32,7 +34,7 @@ public class GameEngine
 	/**
 	 * A list of all the rooms in the game.
 	 */
-	ArrayList<Room> gameRooms;
+	private static ArrayList<Room> gameRooms;
 
 	/**
 	 * User interface for the game.
@@ -226,6 +228,10 @@ public class GameEngine
 		gui.println("Thank you for playing. Good bye. By the way, you "
 				+ ((winning)? "won" : "lost") + ".");
 		gui.enable(false);
+	}
+
+	public static ArrayList<Room> getRooms() {
+		return gameRooms;
 	}
 
 }

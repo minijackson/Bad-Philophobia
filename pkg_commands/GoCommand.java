@@ -1,8 +1,12 @@
 package pkg_commands;
 
+import pkg_game.GameEngine;
 import pkg_world.Player;
 import pkg_world.Room;
 import pkg_exceptions.*;
+
+import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * class GoCommand used to make the player go to a given Room.
@@ -13,7 +17,7 @@ public class GoCommand extends Command {
 	/**
 	 * Constructor for GoCommand.
 	 */
-	public GoCommand(){
+	public GoCommand() {
 
 	}
 
@@ -27,10 +31,16 @@ public class GoCommand extends Command {
 	 */
 	public boolean execute(Player player) throws NoArgumentException,pkg_exceptions.IllegalArgumentException,UnauthorizedException {
 		setMessage("");
-		if(hasParameter()) {
-			goRoomCheck(player.getCurrentRoom().getExit(getParameter()), player, false);
+		// Check if it is the random Room (which is the first room in the gamesRoom GameEngine ArrayList)
+		if(player.getCurrentRoom() != GameEngine.getRooms().get(0)) {
+			if(hasParameter()) {
+				goRoomCheck(player.getCurrentRoom().getExit(getParameter()), player, false);
+			} else {
+				throw new NoArgumentException("If you were clever, I would have thought that it was a existential question.\nBut that is not the case and I cannot allow you to go nowhere");
+			}
 		} else {
-			throw new NoArgumentException("If you were clever, I would have thought that it was a existential question.\nBut that is not the case and I cannot allow you to go nowhere");
+			setMessage("Geronimoooo !\n");
+			goRoomNoCheck(getRandomRoom(), player, false);
 		}
 		return false;
 	}
@@ -68,6 +78,14 @@ public class GoCommand extends Command {
 			setMessage(((hasMessage()) ? getMessage() + "\n" : "") + room.getLongDescription());
 		} else
 			throw new pkg_exceptions.IllegalArgumentException("This is a wall, not a door!");
+	}
+
+	/**
+	 * Get a random room from the GameEngin list or Room.
+	 * @return A random room
+	 */
+	protected Room getRandomRoom() {
+		return GameEngine.getRooms().get((new Random()).nextInt(GameEngine.getRooms().size() - 1) + 1);
 	}
 
 }
