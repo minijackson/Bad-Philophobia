@@ -32,6 +32,7 @@ public class CommandWords
 		commands.put("inventory", new InventoryCommand());
 		commands.put("eat", new EatCommand());
 		commands.put("test", new TestCommand());
+		commands.put("talk", new TalkCommand());
 		commands.put("quit", new QuitCommand());
 		commands.put("help", new HelpCommand());
 		commands.put("credits", new CreditsCommand());

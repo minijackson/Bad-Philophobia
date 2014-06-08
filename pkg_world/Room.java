@@ -2,6 +2,7 @@ package pkg_world;
 
 import pkg_world.pkg_items.Item;
 import pkg_world.pkg_items.ItemList;
+import pkg_world.pkg_characters.Character;
 
 import java.util.Set;
 import java.util.HashMap;
@@ -37,12 +38,17 @@ public class Room {
 	private ItemList containedItems;
 
 	/**
+	 * Characters currently bing in the room.
+	 */
+	private HashMap<String, Character> containedCharacters;
+
+	/**
 	 * Room class constructor.
 	 * @param description Description for the room
 	 * @param image Image path to display
 	 */
 	public Room(String description, String image) {
-		this(description, image, new ItemList());
+		this(description, image, new ItemList(), new HashMap<String, Character>());
 	}
 
 	/**
@@ -51,11 +57,12 @@ public class Room {
 	 * @param image Image path to display
 	 * @param itemList The items currently in the room
 	 */
-	public Room(String description, String image, ItemList itemList) {
+	public Room(String description, String image, ItemList itemList, HashMap<String, Character> characters) {
 		this.description = description;
 		exits = new HashMap < String, Room > ();
 		imageName = image;
 		containedItems = itemList;
+		containedCharacters = characters;
 	}
 
 	/**
@@ -65,7 +72,7 @@ public class Room {
 	 */
 	public void setExit(String direction, Room neighbor) {
 		exits.put(direction, neighbor);
-	}	
+	}
 
 	/**
 	 * containedItem field getter.
@@ -84,11 +91,27 @@ public class Room {
 	}
 
 	/**
+	 * Return an Character through it's name.
+	 * @return The wanted Character
+	 */
+	public Character getCharacter(String name) {
+		return containedCharacters.get(name);
+	}
+
+	/**
 	 * Check if the room has the given Item through it's name.
 	 * @return True if this Room has the Item
 	 */
 	public boolean hasItem(String name) {
-		return containedItems.get(name) != null;
+		return containedItems.containsValue(name);
+	}
+
+	/**
+	 * Check if the room has the given Character through it's name.
+	 * @return True if this Room has the Character
+	 */
+	public boolean hasCharacter(String name) {
+		return containedCharacters.containsValue(name);
 	}
 
 	/**
@@ -97,6 +120,10 @@ public class Room {
 	 */
 	public void addItem(Item item) {
 		containedItems.put(item.getName(), item);
+	}
+
+	public void addCharacter(Character character) {
+		containedCharacters.put(character.getName(), character);
 	}
 
 	/**

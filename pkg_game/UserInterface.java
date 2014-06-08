@@ -213,12 +213,19 @@ public class UserInterface implements ActionListener {
 	 */
 	public void actionPerformed(ActionEvent e) {
 
-		String command = buttons.get(((JButton)e.getSource()));
-		if(command.equals("")) {
+		if(e.getSource() == entryField) {
 			processCommand();
-		} else {
-			engine.processCommand(command);
+			return;
 		}
+
+		String command = buttons.get(((JButton)e.getSource()));
+
+		if(command == null)
+			processCommand();
+		else if(command.equals(""))
+			processCommand();
+		else
+			engine.processCommand(command);
 	}
 
 	/**
