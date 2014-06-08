@@ -35,10 +35,10 @@ public class GiveCommand extends Command {
 					if(player.hasItem(getSecondParameter())) {
 						Item item = player.getItem(getSecondParameter());
 
-						if(!player.getCurrentRoom().getCharacter(getParameter()).isSatisfied()) {
+						if(!character.isSatisfied()) {
 							if(character.wantsItem(item)) {
 								setMessage(character.takeItem(item));
-								player.eatObject(getParameter());
+								player.eatObject(getSecondParameter());
 							} else {
 								String failureMessage = character.takeItem(item);
 								throw new UnauthorizedException((failureMessage == null)? "He doesn't want anything from you. He's smart." : failureMessage);

@@ -102,10 +102,15 @@ public class GameEngine
 		// create the rooms
 		Room temperateBroadleaf = new Room("in temperate forest", "temperatebroadleaf.jpg");
 		temperateBroadleaf.addItem(new Item("wand", 3, "just an ordinary wand"));
+		Item nut = new Item("nut", 2, "a black and brown oak nut. Too hard for you");
+		temperateBroadleaf.addItem(nut);
 
 		Room taiga = new Room("in a boreal forest", "taiga.jpg");
 		taiga.addItem(new Item("snowball", 1, "some weirdly yellowy snowball"));
 		taiga.addItem(new Item("bird", 6, "a frozen inert black bird"));
+		taiga.addCharacter(new Character("squirrel", "Squeekee squeeki squiki kwiki kwik.",
+				nut, "The squirrel says \"Squeekeeee!\". He looks like happy and run away from you.",
+				"He looks disapointed and refuses your offer."));
 
 		Room alpineTundra = new Room("on an alpine mountain", "alpinetundra.jpg");
 		alpineTundra.addItem(new Item("rock", 15, "a surprisingly solid magnificent rock"));
@@ -114,6 +119,33 @@ public class GameEngine
 
 		Room steppe = new Room("on a vast grass plain", "steppe.jpg");
 		steppe.addItem(new Item("grass", 1, "a tuft of yellowish grass. Looking at the grass made you look like stupid"));
+		Character fox = new Character("fox", "Ring-ding-ding-ding-dingeringeding!");
+		fox.addDialog("Gering-ding-ding-ding-dingeringeding!");
+		fox.addDialog("Gering-ding-ding-ding-dingeringeding!");
+		fox.addDialog("Wa-pa-pa-pa-pa-pa-pow!");
+		fox.addDialog("Wa-pa-pa-pa-pa-pa-pow!");
+		fox.addDialog("Wa-pa-pa-pa-pa-pa-pow!");
+		fox.addDialog("Hatee-hatee-hatee-ho!");
+		fox.addDialog("Hatee-hatee-hatee-ho!");
+		fox.addDialog("Hatee-hatee-hatee-ho!");
+		fox.addDialog("Joff-tchoff-tchoffo-tchoffo-tchoff!");
+		fox.addDialog("Tchoff-tchoff-tchoffo-tchoffo-tchoff!");
+		fox.addDialog("Joff-tchoff-tchoffo-tchoffo-tchoff!");
+		fox.addDialog("Jacha-chacha-chacha-chow!");
+		fox.addDialog("Cacha-chacha-chacha-chow!");
+		fox.addDialog("Cacha-chacha-chacha-chow!");
+		fox.addDialog("Fraka-kaka-kaka-kaka-kow!");
+		fox.addDialog("Fraka-kaka-kaka-kaka-kow!");
+		fox.addDialog("Fraka-kaka-kaka-kaka-kow!");
+		fox.addDialog("A-hee-ahee ha-hee!");
+		fox.addDialog("A-hee-ahee ha-hee!");
+		fox.addDialog("A-hee-ahee ha-hee!");
+		fox.addDialog("A-oo-oo-oo-ooo!");
+		fox.addDialog("Woo-oo-oo-ooo!");
+		fox.addDialog("Wa-wa-way-do Wub-wid-bid-dum-way-do Wa-wa-way-do");
+		fox.addDialog("Bay-budabud-dum-bam");
+		fox.addDialog("Mama-dum-day-do");
+		steppe.addCharacter(fox);
 
 		Room cave = new Room("inside a dark cave", "cave.jpg");
 		cave.addItem(new Item("magiccookie", 3, "a pretend magic cookie with mould on it, probably left there for many years. The use-by date has faded out. Why not eat it?"));
