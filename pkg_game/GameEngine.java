@@ -156,7 +156,7 @@ public class GameEngine
 		savanna.setExit("north", cave);
 		savanna.setExit("west", xericShrublands);
 
-		Room randomRoom = new Room("", "");
+		Room randomRoom = new Room("in a randomly random room. If you try to escape it, you will be teleported.\nAs you don't understand, try it.", "random.png");
 
 		polarDesert.setExit("south", randomRoom);
 		savanna.setExit("east", randomRoom);

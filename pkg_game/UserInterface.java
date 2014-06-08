@@ -6,7 +6,7 @@ import java.awt.event.*;
 import java.net.URL;
 import java.awt.image.*;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Class handling the game's user interface.
@@ -47,7 +47,7 @@ public class UserInterface implements ActionListener {
 	/**
 	 * The list of buttons in the user interface.
 	 */
-	private ArrayList<JButton> buttons;
+	private HashMap<JButton, String> buttons;
 
 	/**
 	 * UserInterface class constructor.
@@ -55,7 +55,7 @@ public class UserInterface implements ActionListener {
 	 */
 	public UserInterface(GameEngine gameEngine) {
 		engine = gameEngine;
-		buttons = new ArrayList<JButton>();
+		buttons = new HashMap<JButton, String>();
 		createGUI();
 	}
 
@@ -110,7 +110,7 @@ public class UserInterface implements ActionListener {
 		if(!on)
 			entryField.getCaret().setBlinkRate(0);
 
-		for (JButton button : buttons) {
+		for (JButton button : buttons.keySet()) {
 			button.setEnabled(on);
 		}
 
@@ -137,36 +137,35 @@ public class UserInterface implements ActionListener {
 
 		Font buttonsFont = new Font(Font.SANS_SERIF, Font.PLAIN, 30);
 
-		JButton buttonNorth = new JButton("↑");
-		buttons.add(buttonNorth);
+		JButton buttonNorth = new JButton(new ImageIcon("Images/sprites/gonorth.png"));
+		buttons.put(buttonNorth, "go north");
 
-		JButton buttonSouth = new JButton("↓");
-		buttons.add(buttonSouth);
+		JButton buttonSouth = new JButton(new ImageIcon("Images/sprites/gosouth.png"));
+		buttons.put(buttonSouth, "go south");
 
-		JButton buttonEast = new JButton("→");
-		buttons.add(buttonEast);
+		JButton buttonEast = new JButton(new ImageIcon("Images/sprites/goeast.png"));
+		buttons.put(buttonEast, "go east");
 
-		JButton buttonWest = new JButton("←");
-		buttons.add(buttonWest);
+		JButton buttonWest = new JButton(new ImageIcon("Images/sprites/gowest.png"));
+		buttons.put(buttonWest, "go west");
 
-		JButton buttonHelp = new JButton("?");
-		buttons.add(buttonHelp);
+		JButton buttonHelp = new JButton(new ImageIcon("Images/sprites/help.png"));
+		buttons.put(buttonHelp, "help");
 
-		JButton buttonReturn = new JButton("⏎");
-		buttons.add(buttonReturn);
+		JButton buttonReturn = new JButton(new ImageIcon("Images/sprites/enter.png"));
+		buttons.put(buttonReturn, "");
 
-		JButton buttonCharge = new JButton("⚛");
-		buttons.add(buttonCharge);
+		JButton buttonCharge = new JButton(new ImageIcon("Images/sprites/charge.png"));
+		buttons.put(buttonCharge, "beamer charge");
 
-		JButton buttonTeleport = new JButton("⇣");
-		buttons.add(buttonTeleport);
+		JButton buttonTeleport = new JButton(new ImageIcon("Images/sprites/teleport.png"));
+		buttons.put(buttonTeleport, "beamer teleport");
 
-		JButton buttonBack = new JButton("↺");
-		buttons.add(buttonBack);
+		JButton buttonBack = new JButton(new ImageIcon("Images/sprites/back.png"));
+		buttons.put(buttonBack, "back");
 
-		for (JButton button : buttons) {
+		for (JButton button : buttons.keySet()) {
 			button.addActionListener(this);
-			button.setFont(buttonsFont);
 		}
 
 		buttonsPanel.setLayout(new GridLayout(3,3));
@@ -213,24 +212,12 @@ public class UserInterface implements ActionListener {
 	 * @param e Event
 	 */
 	public void actionPerformed(ActionEvent e) {
-		if(e.getActionCommand().equals("↑")) {
-			engine.processCommand("go north");
-		} else if(e.getActionCommand().equals("↓")) {
-			engine.processCommand("go south");
-		} else if(e.getActionCommand().equals("←")) {
-			engine.processCommand("go west");
-		} else if(e.getActionCommand().equals("→")) {
-			engine.processCommand("go east");
-		} else if(e.getActionCommand().equals("?")) {
-			engine.processCommand("help");
-		} else if(e.getActionCommand().equals("⚛")) {
-			engine.processCommand("beamer charge");
-		} else if(e.getActionCommand().equals("⇣")) {
-			engine.processCommand("beamer teleport");
-		} else if(e.getActionCommand().equals("↺")) {
-			engine.processCommand("back");
-		} else {
+
+		String command = buttons.get(((JButton)e.getSource()));
+		if(command.equals("")) {
 			processCommand();
+		} else {
+			engine.processCommand(command);
 		}
 	}
 
