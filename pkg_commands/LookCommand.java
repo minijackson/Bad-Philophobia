@@ -1,7 +1,7 @@
 package pkg_commands;
 
 import pkg_world.Player;
-import pkg_world.Item;
+import pkg_world.pkg_items.Item;
 import pkg_exceptions.IllegalArgumentException;
 
 /**

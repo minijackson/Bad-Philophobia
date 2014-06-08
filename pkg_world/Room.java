@@ -1,5 +1,8 @@
 package pkg_world;
 
+import pkg_world.pkg_items.Item;
+import pkg_world.pkg_items.ItemList;
+
 import java.util.Set;
 import java.util.HashMap;
 import java.util.Enumeration;

@@ -2,7 +2,7 @@ package pkg_game;
 
 import pkg_world.Player;
 import pkg_world.Room;
-import pkg_world.Item;
+import pkg_world.pkg_items.Item;
 
 import pkg_commands.Command;
 import pkg_commands.GoCommand;

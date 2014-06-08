@@ -1,4 +1,4 @@
-package pkg_world;
+package pkg_world.pkg_items;
 
 /**
  * Class used to handle an item contained in a Room.
