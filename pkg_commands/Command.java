@@ -21,6 +21,13 @@ public abstract class Command {
 	private String parameter;
 
 	/**
+	 * Second parameter for the command.
+	 * Equals to null if there is no
+	 * second parameter
+	 */
+	private String secondParameter;
+
+	/**
 	 * Message to be printed.
 	 * This message is printed if and only if the command
 	 * was successfully processed
@@ -36,6 +43,14 @@ public abstract class Command {
 	}
 
 	/**
+	 * Second Parameter field getter.
+	 * @return The second parameter given by the user
+	 */
+	public String getSecondParameter() {
+		return secondParameter;
+	}
+
+	/**
 	 * Parameter field setter.
 	 * @param parameter The parameter to set
 	 */
@@ -44,11 +59,27 @@ public abstract class Command {
 	}
 
 	/**
+	 * Second Parameter field setter.
+	 * @param parameter The second parameter to set
+	 */
+	public void setSecondParameter(String parameter) {
+		secondParameter = parameter;
+	}
+
+	/**
 	 * Return true if the parameter is null.
 	 * @return True if the parameter is null
 	 */
 	public boolean hasParameter() {
 		return (parameter != null);
+	}
+
+	/**
+	 * Return true if the second parameter is null.
+	 * @return True if the second parameter is null
+	 */
+	public boolean hasSecondParameter() {
+		return (secondParameter != null);
 	}
 
 	/**

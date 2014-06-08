@@ -106,7 +106,18 @@ public class Character {
 	 * @return An action to be displayed in case of success or failure
 	 */
 	public String takeItem(Item item) {
+		if(wantedItem == item)
+			satisfied = true;
 		return (wantedItem == item) ? successAction : failureAction;
+	}
+
+	/**
+	 * Returns true if the given Item is wanted by the creature/character.
+	 * @param item The Item to check
+	 * @return true if item is equal to the wantedItem field
+	 */
+	public boolean wantsItem(Item item) {
+		return wantedItem == item;
 	}
 
 	/**

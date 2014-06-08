@@ -27,8 +27,7 @@ public class Parser {
 	 */
 	public static Command getCommand(String inputLine) {
 
-		String word1;
-		String word2;
+		String word1, word2, word3;
 
 		StringTokenizer tokenizer = new StringTokenizer(inputLine);
 
@@ -40,10 +39,15 @@ public class Parser {
 			word2 = tokenizer.nextToken();	// Second word
 		else
 			word2 = null;
+		if(tokenizer.hasMoreTokens())
+			word3 = tokenizer.nextToken();	// Third word
+		else
+			word3 = null;
 
         Command command = commands.getCommand(word1);
         if(command != null) {
             command.setParameter(word2);
+			command.setSecondParameter(word3);
         }
         return command;
 	}
