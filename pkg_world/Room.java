@@ -103,7 +103,7 @@ public class Room {
 	 * @return True if this Room has the Item
 	 */
 	public boolean hasItem(String name) {
-		return containedItems.containsValue(name);
+		return containedItems.containsKey(name);
 	}
 
 	/**
@@ -111,7 +111,7 @@ public class Room {
 	 * @return True if this Room has the Character
 	 */
 	public boolean hasCharacter(String name) {
-		return containedCharacters.containsValue(name);
+		return containedCharacters.containsKey(name);
 	}
 
 	/**
@@ -150,6 +150,7 @@ public class Room {
 	public String getLongDescription() {
 		return "You are " + description + ".\n"
 				+ ((!containedItems.isEmpty())? "You can see" + getHumanItemsList() + " near you.\n" : "")
+				+ ((!containedCharacters.isEmpty())? "You can hear" + getHumanCharactersList() + " moving near you\n" : "")
 				+ getExitString();
 	}
 
@@ -158,8 +159,24 @@ public class Room {
 	 * @return The list of the items
 	 */
 	public String getHumanItemsList() {
-		String itemsList = "";
-		Set<String> names = containedItems.keySet();
+		return getHumanList(containedItems.keySet());
+	}
+
+	/**
+	 * Return a human readable list of the characters in the room.
+	 * @return The list of the items
+	 */
+	public String getHumanCharactersList() {
+		return getHumanList(containedCharacters.keySet());
+	}
+
+	/**
+	 * Return a human readable list of the given Set.
+	 * @param names Set to display.
+	 * @return The list of the items
+	 */
+	private String getHumanList(Set<String> names) {
+		String returnString = "";
 		Iterator<String> it = names.iterator();
 		while(it.hasNext()) {
 
@@ -168,17 +185,17 @@ public class Room {
 			// if not, the prefix is ' a '
 			String prefix = " a" + (((new String("aeiouy")).contains(itemName.substring(0,1)))? "n" : "") + " ";
 
-			if(itemsList.equals(""))
-				itemsList += prefix + itemName;
+			if(returnString.equals(""))
+				returnString += prefix + itemName;
 			else {
 				// Check if it is the last item
 				if(it.hasNext())
-					itemsList += "," + prefix + itemName;
+					returnString += "," + prefix + itemName;
 				else
-					itemsList += " and" + prefix + itemName;
+					returnString += " and" + prefix + itemName;
 			}
 		}
-		return itemsList;
+		return returnString;
 	}
 
 	/**

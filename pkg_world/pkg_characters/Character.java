@@ -57,6 +57,7 @@ public class Character {
 	public Character(final String name){
 		this.name = name;
 		satisfied = false;
+		dialogs = new ArrayList<String>();
 	}
 
 	/**
@@ -68,7 +69,6 @@ public class Character {
 	 */
 	public Character(final String name, final String dialog) {
 		this(name);
-		dialogs = new ArrayList<String>();
 		dialogs.add(dialog);
 	}
 
@@ -98,7 +98,7 @@ public class Character {
 	 * @return A random dialog from the dialogs field
 	 */
 	public String talk() {
-		return dialogs.get((new Random()).nextInt(dialogs.size()));
+		return (dialogs.isEmpty())? "He doesn't want to talk to you. I understand him." : dialogs.get((new Random()).nextInt(dialogs.size()));
 	}
 
 	/**

@@ -4,6 +4,8 @@ import pkg_world.Player;
 import pkg_world.Room;
 import pkg_world.pkg_items.Item;
 
+import pkg_world.pkg_characters.Character;
+
 import pkg_commands.Command;
 import pkg_commands.GoCommand;
 import pkg_commands.TestCommand;
@@ -123,7 +125,7 @@ public class GameEngine
 		xericShrublands.addItem(new Item("shrub", 10, "a spicky shrub. Useful if you want to make a shruberry"));
 
 		Room savanna = new Room("in a savanna", "savanna.jpg");
-		savanna.addItem(new Item("elephant", 1000, "a huge elephant looking at you, dazed. I bet he's smarter than you"));
+		savanna.addCharacter(new Character("elephant"));
 		savanna.addItem(new Item("grass", 1, "a tuft of yellowish grass. You may have other things to do instead of looking at that"));
 
 		// initialise room exits
