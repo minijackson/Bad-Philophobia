@@ -71,8 +71,14 @@ public class GameEngine
 	public GameEngine() {
 		gameRooms = new ArrayList<Room>();
 		movingCharacters = new HashSet<MovingCharacter>();
-		player = new Player((javax.swing.JOptionPane.showInputDialog("What is your name").toLowerCase().equals("retard"))? "moron" : "retard", createRooms());
-		javax.swing.JOptionPane.showMessageDialog(null, "Whatever, I'll call you " + player.getName() + ".");
+		String response = javax.swing.JOptionPane.showInputDialog("What is your name");
+		if(response != null) {
+			player = new Player((response.equalsIgnoreCase("retard"))? "moron" : "retard", createRooms());
+			javax.swing.JOptionPane.showMessageDialog(null, "Whatever, I'll call you " + player.getName() + ".");
+		} else {
+			player = new Player("dumbass", createRooms());
+			javax.swing.JOptionPane.showMessageDialog(null, "Alright. if you take it like this, I'll call you dumbass.");
+		}
 		helpCount = 0;
 		commandCountDown = 42;
 	}
