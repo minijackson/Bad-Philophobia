@@ -56,11 +56,17 @@ public class Player {
 	private Room beamerRoom;
 
 	/**
+	 * True if the player already threw a snowball.
+	 */
+	private boolean threwSnowball;
+
+	/**
 	 * Player class constructor.
 	 * @param name The name of the player
 	 * @param firstRoom Room where the player start
 	 */
 	public Player(String name, Room firstRoom) {
+		threwSnowball = false;
 		this.name = name;
 		backpack = new ItemList();
 		backpackWeight = 0;
@@ -243,6 +249,21 @@ public class Player {
 		return (returnString.equals(""))?
 			"You have nothing. This may be a metaphor for your life.\nBut as always you didn't understand a word I said, don't you?"
 			: "You have" + returnString + ".\nCan't you remember that?";
+	}
+
+	/**
+	 * Return true if the player already threw a snowball.
+	 * @return The threwSnowball field
+	 */
+	public boolean threwSnowball() {
+		return threwSnowball;
+	}
+
+	/**
+	 * Set the threwSnowball field to true.
+	 */
+	public void throwSnowball() {
+		threwSnowball = true;
 	}
 
 }

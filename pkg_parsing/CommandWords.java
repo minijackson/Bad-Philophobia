@@ -29,6 +29,7 @@ public class CommandWords
 		commands.put("look", new LookCommand());
 		commands.put("take", new TakeCommand());
 		commands.put("drop", new DropCommand());
+		commands.put("throw", new ThrowCommand());
 		commands.put("inventory", new InventoryCommand());
 		commands.put("eat", new EatCommand());
 		commands.put("test", new TestCommand());

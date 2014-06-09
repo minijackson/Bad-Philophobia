@@ -10,6 +10,7 @@ import pkg_world.pkg_characters.MovingCharacter;
 import pkg_commands.Command;
 import pkg_commands.GoCommand;
 import pkg_commands.TestCommand;
+import pkg_commands.ThrowCommand;
 
 import pkg_parsing.Parser;
 
@@ -260,7 +261,12 @@ public class GameEngine
 				gui.println(command.getMessage());
 
 			if(quit) {
-				endGame(false);
+				// If the player quitted through the "throw" command, it's a win
+				if(command.getClass().equals(ThrowCommand.class)) {
+					endGame(true);
+				} else {
+					endGame(false);
+				}
 			}
 		} catch(NoArgumentException e) {
 			gui.println(e.getMessage());
@@ -282,7 +288,7 @@ public class GameEngine
 	 */
 	private void endGame(boolean winning) {
 		gui.println("Thank you for playing. Good bye. By the way, you "
-				+ ((winning)? "won" : "lost") + ".");
+				+ ((winning)? "won by luck" : "lost") + ".");
 		gui.enable(false);
 	}
 
