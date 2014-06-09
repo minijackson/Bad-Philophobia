@@ -21,7 +21,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__commands_1_1Command.html" target="_top" xlink:title="{pkg_commands.Command\n||+ getParameter()\l+ getSecondParameter()\l+ setParameter()\l+ setSecondParameter()\l+ hasParameter()\l+ hasSecondParameter()\l+ getMessage()\l+ hasMessage()\l+ execute()\l# setMessage()\l}">
+<g id="a_node2"><a xlink:href="classpkg__commands_1_1Command.html" target="_top" xlink:title="Class used to handle a command of one or two words. ">
 <polygon fill="white" stroke="black" points="7,-107 7,-263 141,-263 141,-107 7,-107"/>
 <text text-anchor="middle" x="74" y="-251" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command</text>
 <polyline fill="none" stroke="black" points="7,-244 141,-244 "/>

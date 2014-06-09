@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__exceptions_1_1IllegalArgumentException.html" target="_top" xlink:title="pkg_exceptions.IllegalArgument\lException">
+<g id="a_node2"><a xlink:href="classpkg__exceptions_1_1IllegalArgumentException.html" target="_top" xlink:title="class IllegalArgumentException used to tell that a command parameter is invalid. ">
 <polygon fill="white" stroke="black" points="96.5,-98 96.5,-128 251.5,-128 251.5,-98 96.5,-98"/>
 <text text-anchor="start" x="104.5" y="-116" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_exceptions.IllegalArgument</text>
 <text text-anchor="middle" x="174" y="-105" font-family="Helvetica,sans-Serif" font-size="10.00">Exception</text>
@@ -30,7 +30,7 @@
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="classpkg__exceptions_1_1NoArgumentException.html" target="_top" xlink:title="pkg_exceptions.NoArgument\lException">
+<g id="a_node3"><a xlink:href="classpkg__exceptions_1_1NoArgumentException.html" target="_top" xlink:title="class NoArgumentException used to tell that a given command must have a parameter. ">
 <polygon fill="white" stroke="black" points="102.5,-49 102.5,-79 245.5,-79 245.5,-49 102.5,-49"/>
 <text text-anchor="start" x="110.5" y="-67" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_exceptions.NoArgument</text>
 <text text-anchor="middle" x="174" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00">Exception</text>
@@ -44,7 +44,7 @@
 </g>
 <!-- Node4 -->
 <g id="node4" class="node"><title>Node4</title>
-<g id="a_node4"><a xlink:href="classpkg__exceptions_1_1UnauthorizedException.html" target="_top" xlink:title="pkg_exceptions.Unauthorized\lException">
+<g id="a_node4"><a xlink:href="classpkg__exceptions_1_1UnauthorizedException.html" target="_top" xlink:title="class UnauthorizedException used to tell that the user cannot execute a given command. ">
 <polygon fill="white" stroke="black" points="101,-0 101,-30 247,-30 247,-0 101,-0"/>
 <text text-anchor="start" x="109" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_exceptions.Unauthorized</text>
 <text text-anchor="middle" x="174" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">Exception</text>

@@ -17,7 +17,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__commands_1_1GoCommand.html#a82e9a64a0fac612f788060a90c83f9b1" target="_top" xlink:title="pkg_commands.GoCommand.execute">
+<g id="a_node2"><a xlink:href="classpkg__commands_1_1GoCommand.html#a82e9a64a0fac612f788060a90c83f9b1" target="_top" xlink:title="Make the player go to the Room through it&#39;s direction in the parameter field. ">
 <polygon fill="white" stroke="black" points="200,-5.5 200,-24.5 384,-24.5 384,-5.5 200,-5.5"/>
 <text text-anchor="middle" x="292" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.GoCommand.execute</text>
 </a>

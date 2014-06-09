@@ -3,6 +3,11 @@
 }
 
 
+class \hyperlink{classpkg__commands_1_1BeamerCommand}{Beamer\-Command} used to teleport into a remembered room  
+
+
+
+
 Inheritance diagram for pkg\-\_\-commands.\-Beamer\-Command\-:
 \nopagebreak
 \begin{figure}[H]
@@ -25,16 +30,18 @@ Collaboration diagram for pkg\-\_\-commands.\-Beamer\-Command\-:
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classpkg__commands_1_1BeamerCommand_a541cd046e7680452f451322c1730e675}{Beamer\-Command} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classpkg__commands_1_1BeamerCommand}{Beamer\-Command}. \end{DoxyCompactList}\item 
 boolean \hyperlink{classpkg__commands_1_1BeamerCommand_a139dc852e180cabd8af15cfed37dcf0e}{execute} (\hyperlink{classpkg__world_1_1Player}{Player} player)  throws No\-Argument\-Exception,pkg\-\_\-exceptions.\-Illegal\-Argument\-Exception,\-Unauthorized\-Exception 
-\item 
+\begin{DoxyCompactList}\small\item\em Teleport to the remembered room or remember a room. \end{DoxyCompactList}\item 
 void \hyperlink{classpkg__commands_1_1BeamerCommand_ae71665296a18d581ad1f714c1078e37b}{charge} (\hyperlink{classpkg__world_1_1Player}{Player} player)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Remember the current room. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-class \hyperlink{classpkg__commands_1_1BeamerCommand}{Beamer\-Command} used to teleport into a remembered room \begin{DoxyAuthor}{Author}
+class \hyperlink{classpkg__commands_1_1BeamerCommand}{Beamer\-Command} used to teleport into a remembered room 
+
+\begin{DoxyAuthor}{Author}
 Rémi N\-I\-C\-O\-L\-E 
 \end{DoxyAuthor}
 
@@ -51,7 +58,11 @@ Definition at line \hyperlink{BeamerCommand_8java_source_l00010}{10} of file \hy
 {}
 \end{DoxyParamCaption}
 )}}\label{classpkg__commands_1_1BeamerCommand_a541cd046e7680452f451322c1730e675}
-Constructor for \hyperlink{classpkg__commands_1_1BeamerCommand}{Beamer\-Command} 
+
+
+Constructor for \hyperlink{classpkg__commands_1_1BeamerCommand}{Beamer\-Command}. 
+
+
 
 Definition at line \hyperlink{BeamerCommand_8java_source_l00015}{15} of file \hyperlink{BeamerCommand_8java_source}{Beamer\-Command.\-java}.
 
@@ -71,7 +82,11 @@ Definition at line \hyperlink{BeamerCommand_8java_source_l00015}{15} of file \hy
 \item[{{\bf Player}}]{player}
 \end{DoxyParamCaption}
 )}}\label{classpkg__commands_1_1BeamerCommand_ae71665296a18d581ad1f714c1078e37b}
+
+
 Remember the current room. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em player} & The player that called this command \\
 \hline
@@ -82,7 +97,7 @@ Definition at line \hyperlink{BeamerCommand_8java_source_l00067}{67} of file \hy
 
 
 
-References \hyperlink{Player_8java_source_l00161}{pkg\-\_\-world.\-Player.\-get\-Beamer\-Room()}, and \hyperlink{Command_8java_source_l00089}{pkg\-\_\-commands.\-Command.\-set\-Message()}.
+References \hyperlink{Player_8java_source_l00167}{pkg\-\_\-world.\-Player.\-get\-Beamer\-Room()}, and \hyperlink{Command_8java_source_l00089}{pkg\-\_\-commands.\-Command.\-set\-Message()}.
 
 
 
@@ -129,7 +144,11 @@ Here is the caller graph for this function\-:
 \item[{{\bf Player}}]{player}
 \end{DoxyParamCaption}
 ) throws {\bf No\-Argument\-Exception},{\bf pkg\-\_\-exceptions.\-Illegal\-Argument\-Exception},{\bf Unauthorized\-Exception}}}\label{classpkg__commands_1_1BeamerCommand_a139dc852e180cabd8af15cfed37dcf0e}
-Teleport to the remembered room or remember a room. It teleports to the remembered room if the command parameter was \char`\"{}teleport\char`\"{}, and it remembers the room if the command parameter was \char`\"{}charge\char`\"{} 
+
+
+Teleport to the remembered room or remember a room. 
+
+It teleports to the remembered room if the command parameter was \char`\"{}teleport\char`\"{}, and it remembers the room if the command parameter was \char`\"{}charge\char`\"{} 
 \begin{DoxyParams}{Parameters}
 {\em player} & The player that called this command \\
 \hline

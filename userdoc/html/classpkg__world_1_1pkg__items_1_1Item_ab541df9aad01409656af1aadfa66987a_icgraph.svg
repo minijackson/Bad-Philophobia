@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__world_1_1Player.html#ac5bdaa8f2149e480e57398be03efa96f" target="_top" xlink:title="pkg_world.Player.takeObject">
+<g id="a_node2"><a xlink:href="classpkg__world_1_1Player.html#ac5bdaa8f2149e480e57398be03efa96f" target="_top" xlink:title="Take the given object. ">
 <polygon fill="white" stroke="black" points="210,-0.5 210,-19.5 352,-19.5 352,-0.5 210,-0.5"/>
 <text text-anchor="middle" x="281" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_world.Player.takeObject</text>
 </a>

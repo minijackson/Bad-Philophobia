@@ -76,15 +76,16 @@ References \hyperlink{CommandWords_8java_source_l00019}{pkg\-\_\-parsing.\-Comma
 00029         commands.put(\textcolor{stringliteral}{"look"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1LookCommand}{LookCommand}());
 00030         commands.put(\textcolor{stringliteral}{"take"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1TakeCommand}{TakeCommand}());
 00031         commands.put(\textcolor{stringliteral}{"drop"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1DropCommand}{DropCommand}());
-00032         commands.put(\textcolor{stringliteral}{"inventory"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1InventoryCommand}{InventoryCommand}());
-00033         commands.put(\textcolor{stringliteral}{"eat"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1EatCommand}{EatCommand}());
-00034         commands.put(\textcolor{stringliteral}{"test"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1TestCommand}{TestCommand}());
-00035         commands.put(\textcolor{stringliteral}{"talk"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1TalkCommand}{TalkCommand}());
-00036         commands.put(\textcolor{stringliteral}{"give"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1GiveCommand}{GiveCommand}());
-00037         commands.put(\textcolor{stringliteral}{"quit"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1QuitCommand}{QuitCommand}());
-00038         commands.put(\textcolor{stringliteral}{"help"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1HelpCommand}{HelpCommand}());
-00039         commands.put(\textcolor{stringliteral}{"credits"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1CreditsCommand}{CreditsCommand}());
-00040     \}
+00032         commands.put(\textcolor{stringliteral}{"throw"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1ThrowCommand}{ThrowCommand}());
+00033         commands.put(\textcolor{stringliteral}{"inventory"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1InventoryCommand}{InventoryCommand}());
+00034         commands.put(\textcolor{stringliteral}{"eat"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1EatCommand}{EatCommand}());
+00035         commands.put(\textcolor{stringliteral}{"test"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1TestCommand}{TestCommand}());
+00036         commands.put(\textcolor{stringliteral}{"talk"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1TalkCommand}{TalkCommand}());
+00037         commands.put(\textcolor{stringliteral}{"give"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1GiveCommand}{GiveCommand}());
+00038         commands.put(\textcolor{stringliteral}{"quit"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1QuitCommand}{QuitCommand}());
+00039         commands.put(\textcolor{stringliteral}{"help"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1HelpCommand}{HelpCommand}());
+00040         commands.put(\textcolor{stringliteral}{"credits"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1CreditsCommand}{CreditsCommand}());
+00041     \}
 \end{DoxyCode}
 
 
@@ -110,13 +111,13 @@ The Command correspondng to command\-Word, or null if it is not a valid command 
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{CommandWords_8java_source_l00070}{70} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
+Definition at line \hyperlink{CommandWords_8java_source_l00071}{71} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
 
 
 \begin{DoxyCode}
-00071     \{
-00072         \textcolor{keywordflow}{return} commands.get(commandWord);
-00073     \}
+00072     \{
+00073         \textcolor{keywordflow}{return} commands.get(commandWord);
+00074     \}
 \end{DoxyCode}
 \hypertarget{classpkg__parsing_1_1CommandWords_a55f01013b1d051547ee3fa6605ea4c14}{\index{pkg\-\_\-parsing\-::\-Command\-Words@{pkg\-\_\-parsing\-::\-Command\-Words}!get\-Command\-List@{get\-Command\-List}}
 \index{get\-Command\-List@{get\-Command\-List}!pkg_parsing::CommandWords@{pkg\-\_\-parsing\-::\-Command\-Words}}
@@ -134,19 +135,19 @@ The list of available commands
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{CommandWords_8java_source_l00055}{55} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
+Definition at line \hyperlink{CommandWords_8java_source_l00056}{56} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
 
 
 \begin{DoxyCode}
-00055                                    \{
-00056         String commandsString = \textcolor{stringliteral}{""};
-00057         Iterator<String> it = commands.keySet().iterator();
-00058         \textcolor{keywordflow}{while}(it.hasNext()) \{
-00059             String command = it.next();
-00060             commandsString += command + ((it.hasNext())? \textcolor{stringliteral}{", "} : \textcolor{stringliteral}{"."});
-00061         \}
-00062         \textcolor{keywordflow}{return} commandsString;
-00063     \}
+00056                                    \{
+00057         String commandsString = \textcolor{stringliteral}{""};
+00058         Iterator<String> it = commands.keySet().iterator();
+00059         \textcolor{keywordflow}{while}(it.hasNext()) \{
+00060             String command = it.next();
+00061             commandsString += command + ((it.hasNext())? \textcolor{stringliteral}{", "} : \textcolor{stringliteral}{"."});
+00062         \}
+00063         \textcolor{keywordflow}{return} commandsString;
+00064     \}
 \end{DoxyCode}
 \hypertarget{classpkg__parsing_1_1CommandWords_ab02b508bb42cbda758afe6cee5794216}{\index{pkg\-\_\-parsing\-::\-Command\-Words@{pkg\-\_\-parsing\-::\-Command\-Words}!is\-Command@{is\-Command}}
 \index{is\-Command@{is\-Command}!pkg_parsing::CommandWords@{pkg\-\_\-parsing\-::\-Command\-Words}}
@@ -169,13 +170,13 @@ True if and only if the command is known.
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{CommandWords_8java_source_l00047}{47} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
+Definition at line \hyperlink{CommandWords_8java_source_l00048}{48} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
 
 
 \begin{DoxyCode}
-00047                                              \{
-00048         \textcolor{keywordflow}{return} commands.containsKey(command);
-00049     \}
+00048                                              \{
+00049         \textcolor{keywordflow}{return} commands.containsKey(command);
+00050     \}
 \end{DoxyCode}
 
 

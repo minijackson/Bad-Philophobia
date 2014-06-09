@@ -17,7 +17,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__world_1_1pkg__characters_1_1MovingCharacter.html#aaf4df04191a12b44ecf4d5e127c3a969" target="_top" xlink:title="pkg_world.pkg_characters.\lMovingCharacter.move">
+<g id="a_node2"><a xlink:href="classpkg__world_1_1pkg__characters_1_1MovingCharacter.html#aaf4df04191a12b44ecf4d5e127c3a969" target="_top" xlink:title="Move to a random adjacent Room to the current one. ">
 <polygon fill="white" stroke="black" points="170,-0 170,-30 304,-30 304,-0 170,-0"/>
 <text text-anchor="start" x="178" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_world.pkg_characters.</text>
 <text text-anchor="middle" x="237" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">MovingCharacter.move</text>

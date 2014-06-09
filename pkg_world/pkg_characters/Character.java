@@ -1,3 +1,8 @@
+/**
+ * \package pkg_characters
+ * Package containing all the classes handling a Character
+ */
+
 package pkg_world.pkg_characters;
 
 import pkg_world.pkg_items.Item;

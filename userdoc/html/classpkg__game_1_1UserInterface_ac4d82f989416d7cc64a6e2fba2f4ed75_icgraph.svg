@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__game_1_1GameEngine.html#a37887ae202eadba82495da82ac4e1908" target="_top" xlink:title="pkg_game.GameEngine.process\lCommand">
+<g id="a_node2"><a xlink:href="classpkg__game_1_1GameEngine.html#a37887ae202eadba82495da82ac4e1908" target="_top" xlink:title="Process the command. ">
 <polygon fill="white" stroke="black" points="190,-0 190,-30 348,-30 348,-0 190,-0"/>
 <text text-anchor="start" x="198" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_game.GameEngine.process</text>
 <text text-anchor="middle" x="269" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">Command</text>

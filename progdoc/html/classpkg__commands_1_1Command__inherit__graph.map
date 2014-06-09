@@ -11,6 +11,7 @@
 <area shape="rect" id="node13" href="$classpkg__commands_1_1TakeCommand.html" title="class TakeCommand used to make the Player take an Item " alt="" coords="2095,315,2301,407"/>
 <area shape="rect" id="node14" href="$classpkg__commands_1_1TalkCommand.html" title="class TalkCommand used to talk to a Character " alt="" coords="2327,315,2529,407"/>
 <area shape="rect" id="node15" href="$classpkg__commands_1_1TestCommand.html" title="class TestCommand used to test series of commands " alt="" coords="2554,315,2757,407"/>
+<area shape="rect" id="node16" href="$classpkg__commands_1_1ThrowCommand.html" title="class ThrowCommand used to make the player throw an Item " alt="" coords="2782,315,2996,407"/>
 <area shape="rect" id="node7" href="$classpkg__commands_1_1BackCommand.html" title="class BackCommand used to go back in a previous Room. " alt="" coords="805,493,1013,585"/>
 <area shape="rect" id="node8" href="$classpkg__commands_1_1BeamerCommand.html" title="class BeamerCommand used to teleport into a remembered room " alt="" coords="1038,478,1260,599"/>
 </map>

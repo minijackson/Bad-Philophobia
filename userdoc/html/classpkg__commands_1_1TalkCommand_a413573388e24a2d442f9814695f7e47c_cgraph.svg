@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__commands_1_1Command.html#a41c92d445be73ea9d62320c65efb8434" target="_top" xlink:title="pkg_commands.Command.get\lParameter">
+<g id="a_node2"><a xlink:href="classpkg__commands_1_1Command.html#a41c92d445be73ea9d62320c65efb8434" target="_top" xlink:title="Parameter field getter. ">
 <polygon fill="white" stroke="black" points="227,-98 227,-128 377,-128 377,-98 227,-98"/>
 <text text-anchor="start" x="235" y="-116" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.get</text>
 <text text-anchor="middle" x="302" y="-105" font-family="Helvetica,sans-Serif" font-size="10.00">Parameter</text>
@@ -30,7 +30,7 @@
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="classpkg__commands_1_1Command.html#a02af95ab3f1898a66259ab7c177b6998" target="_top" xlink:title="pkg_commands.Command.has\lParameter">
+<g id="a_node3"><a xlink:href="classpkg__commands_1_1Command.html#a02af95ab3f1898a66259ab7c177b6998" target="_top" xlink:title="Return true if the parameter is null. ">
 <polygon fill="white" stroke="black" points="226,-49 226,-79 378,-79 378,-49 226,-49"/>
 <text text-anchor="start" x="234" y="-67" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.has</text>
 <text text-anchor="middle" x="302" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00">Parameter</text>
@@ -44,7 +44,7 @@
 </g>
 <!-- Node4 -->
 <g id="node4" class="node"><title>Node4</title>
-<g id="a_node4"><a xlink:href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" target="_top" xlink:title="pkg_commands.Command.set\lMessage">
+<g id="a_node4"><a xlink:href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" target="_top" xlink:title="Message field setter. ">
 <polygon fill="white" stroke="black" points="227,-0 227,-30 377,-30 377,-0 227,-0"/>
 <text text-anchor="start" x="235" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.set</text>
 <text text-anchor="middle" x="302" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">Message</text>

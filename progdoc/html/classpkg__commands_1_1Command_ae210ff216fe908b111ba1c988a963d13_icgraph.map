@@ -1,18 +1,19 @@
 <map id="pkg_commands.Command.setMessage" name="pkg_commands.Command.setMessage">
-<area shape="rect" id="node2" href="$classpkg__commands_1_1BeamerCommand.html#ae71665296a18d581ad1f714c1078e37b" title="Remember the current room. " alt="" coords="587,213,853,239"/>
-<area shape="rect" id="node4" href="$classpkg__commands_1_1InventoryCommand.html#a16ce9e3db461ecb7c4a50d2bdef65022" title="Save the inventory into the message field. " alt="" coords="253,61,536,87"/>
-<area shape="rect" id="node5" href="$classpkg__commands_1_1CreditsCommand.html#aad2b955c6c8a4c3536e6b937165b7790" title="Save the credits into the message field. " alt="" coords="259,111,530,138"/>
-<area shape="rect" id="node6" href="$classpkg__commands_1_1LookCommand.html#af336146fae1e14bf434d85a5acbcdcd7" title="Saves the information about the current Room or a given Item in the message field. " alt="" coords="267,162,523,189"/>
-<area shape="rect" id="node7" href="$classpkg__commands_1_1DropCommand.html#a742e37b2d2dd4e111130811ee2f4dd0b" title="Drop the Item through it&#39;s name in the parameter field. " alt="" coords="267,213,523,239"/>
-<area shape="rect" id="node8" href="$classpkg__commands_1_1TalkCommand.html#a413573388e24a2d442f9814695f7e47c" title="Make the player talk to a Character. " alt="" coords="268,263,521,290"/>
-<area shape="rect" id="node9" href="$classpkg__commands_1_1TakeCommand.html#a17789062aaf2ab5747c7eeac118875cd" title="Make the player take an Item. " alt="" coords="266,314,523,341"/>
-<area shape="rect" id="node10" href="$classpkg__commands_1_1EatCommand.html#a2a600f09891aa076b3f630293de965f4" title="Make the player eat an object. " alt="" coords="271,365,519,391"/>
-<area shape="rect" id="node11" href="$classpkg__commands_1_1GiveCommand.html#a3a3cca7fae9b86d8ff85cc166564843d" title="Make the player give an Item to a Character. " alt="" coords="267,415,522,442"/>
-<area shape="rect" id="node12" href="$classpkg__commands_1_1GoCommand.html#a82e9a64a0fac612f788060a90c83f9b1" title="Make the player go to the Room through it&#39;s direction in the parameter field. " alt="" coords="919,626,1164,653"/>
-<area shape="rect" id="node13" href="$classpkg__commands_1_1TestCommand.html#a1ff07c27a46910d20c2e4569888892ca" title="Test series of Commands stored in a .test file and store the messages in the message field..." alt="" coords="267,517,522,543"/>
-<area shape="rect" id="node14" href="$classpkg__commands_1_1HelpCommand.html#a332d3e57539dfc82f8c539f8b3e24dd6" title="Saves user&#39;s help in the parameter field. " alt="" coords="267,567,522,594"/>
-<area shape="rect" id="node15" href="$classpkg__commands_1_1GoCommand.html#a210afbc5f3ef34d3ad5759d853c8f8c2" title="Go to the Room without checking. " alt="" coords="288,619,501,660"/>
-<area shape="rect" id="node16" href="$classpkg__commands_1_1BeamerCommand.html#a2b6c04242d443d4ff36f255b06ce14be" title="Teleport the player to the remembered room. " alt="" coords="585,466,855,493"/>
-<area shape="rect" id="node3" href="$classpkg__commands_1_1BeamerCommand.html#a139dc852e180cabd8af15cfed37dcf0e" title="Teleport to the remembered room or remember a room. " alt="" coords="905,441,1178,467"/>
-<area shape="rect" id="node17" href="$classpkg__commands_1_1GoCommand.html#acbf1aa81fa5b1aef7cafb8b4e3ace3a9" title="Check if the wanted Room is connected to the current Room and go to this room. " alt="" coords="613,619,827,660"/>
+<area shape="rect" id="node2" href="$classpkg__commands_1_1BeamerCommand.html#ae71665296a18d581ad1f714c1078e37b" title="Remember the current room. " alt="" coords="587,266,853,293"/>
+<area shape="rect" id="node4" href="$classpkg__commands_1_1InventoryCommand.html#a16ce9e3db461ecb7c4a50d2bdef65022" title="Save the inventory into the message field. " alt="" coords="253,64,536,90"/>
+<area shape="rect" id="node5" href="$classpkg__commands_1_1CreditsCommand.html#aad2b955c6c8a4c3536e6b937165b7790" title="Save the credits into the message field. " alt="" coords="259,114,530,141"/>
+<area shape="rect" id="node6" href="$classpkg__commands_1_1LookCommand.html#af336146fae1e14bf434d85a5acbcdcd7" title="Saves the information about the current Room or a given Item in the message field. " alt="" coords="267,165,523,192"/>
+<area shape="rect" id="node7" href="$classpkg__commands_1_1DropCommand.html#a742e37b2d2dd4e111130811ee2f4dd0b" title="Drop the Item through it&#39;s name in the parameter field. " alt="" coords="267,216,523,242"/>
+<area shape="rect" id="node8" href="$classpkg__commands_1_1TakeCommand.html#a17789062aaf2ab5747c7eeac118875cd" title="Make the player take an Item. " alt="" coords="266,266,523,293"/>
+<area shape="rect" id="node9" href="$classpkg__commands_1_1TalkCommand.html#a413573388e24a2d442f9814695f7e47c" title="Make the player talk to a Character. " alt="" coords="268,317,521,344"/>
+<area shape="rect" id="node10" href="$classpkg__commands_1_1EatCommand.html#a2a600f09891aa076b3f630293de965f4" title="Make the player eat an object. " alt="" coords="271,368,519,394"/>
+<area shape="rect" id="node11" href="$classpkg__commands_1_1ThrowCommand.html#a38d936bcebcf45936324caf0f417b012" title="Throw the Item through it&#39;s name in the parameter field. " alt="" coords="263,418,527,445"/>
+<area shape="rect" id="node12" href="$classpkg__commands_1_1GiveCommand.html#a3a3cca7fae9b86d8ff85cc166564843d" title="Make the player give an Item to a Character. " alt="" coords="267,469,522,496"/>
+<area shape="rect" id="node13" href="$classpkg__commands_1_1TestCommand.html#a1ff07c27a46910d20c2e4569888892ca" title="Test series of Commands stored in a .test file and store the messages in the message field..." alt="" coords="267,520,522,546"/>
+<area shape="rect" id="node14" href="$classpkg__commands_1_1GoCommand.html#a82e9a64a0fac612f788060a90c83f9b1" title="Make the player go to the Room through it&#39;s direction in the parameter field. " alt="" coords="919,680,1164,706"/>
+<area shape="rect" id="node15" href="$classpkg__commands_1_1HelpCommand.html#a332d3e57539dfc82f8c539f8b3e24dd6" title="Saves user&#39;s help in the parameter field. " alt="" coords="267,621,522,648"/>
+<area shape="rect" id="node16" href="$classpkg__commands_1_1GoCommand.html#a210afbc5f3ef34d3ad5759d853c8f8c2" title="Go to the Room without checking. " alt="" coords="288,672,501,714"/>
+<area shape="rect" id="node17" href="$classpkg__commands_1_1BeamerCommand.html#a2b6c04242d443d4ff36f255b06ce14be" title="Teleport the player to the remembered room. " alt="" coords="585,570,855,597"/>
+<area shape="rect" id="node3" href="$classpkg__commands_1_1BeamerCommand.html#a139dc852e180cabd8af15cfed37dcf0e" title="Teleport to the remembered room or remember a room. " alt="" coords="905,545,1178,572"/>
+<area shape="rect" id="node18" href="$classpkg__commands_1_1GoCommand.html#acbf1aa81fa5b1aef7cafb8b4e3ace3a9" title="Check if the wanted Room is connected to the current Room and go to this room. " alt="" coords="613,672,827,714"/>
 </map>

@@ -3,6 +3,11 @@
 }
 
 
+Class used to verify the commands given by the user.  
+
+
+
+
 Collaboration diagram for pkg\-\_\-parsing.\-Command\-Words\-:
 \nopagebreak
 \begin{figure}[H]
@@ -15,17 +20,19 @@ Collaboration diagram for pkg\-\_\-parsing.\-Command\-Words\-:
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classpkg__parsing_1_1CommandWords_ac01e3b4727e741eb8add2eef27c8f7b7}{Command\-Words} ()
-\item 
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpkg__parsing_1_1CommandWords}{Command\-Words} class constructor. \end{DoxyCompactList}\item 
 boolean \hyperlink{classpkg__parsing_1_1CommandWords_ab02b508bb42cbda758afe6cee5794216}{is\-Command} (String command)
-\item 
+\begin{DoxyCompactList}\small\item\em Check if the command is known. \end{DoxyCompactList}\item 
 String \hyperlink{classpkg__parsing_1_1CommandWords_a55f01013b1d051547ee3fa6605ea4c14}{get\-Command\-List} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Getter for the known\-Commands field. \end{DoxyCompactList}\item 
 \hyperlink{classpkg__commands_1_1Command}{Command} \hyperlink{classpkg__parsing_1_1CommandWords_a244829164976aa9444b3b1e84462ac5c}{get\-Command} (String command\-Word)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Find the \hyperlink{enumpkg__parsing_1_1CommandWord}{Command\-Word} associated with a command word. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Class used to verify the commands given by the user. It contains all known commands and can verify if a String is a known command. \begin{DoxyAuthor}{Author}
+Class used to verify the commands given by the user. 
+
+It contains all known commands and can verify if a String is a known command. \begin{DoxyAuthor}{Author}
 Rémi N\-I\-C\-O\-L\-E 
 \end{DoxyAuthor}
 
@@ -42,7 +49,11 @@ Definition at line \hyperlink{CommandWords_8java_source_l00017}{17} of file \hyp
 {}
 \end{DoxyParamCaption}
 )}}\label{classpkg__parsing_1_1CommandWords_ac01e3b4727e741eb8add2eef27c8f7b7}
+
+
 \hyperlink{classpkg__parsing_1_1CommandWords}{Command\-Words} class constructor. 
+
+
 
 Definition at line \hyperlink{CommandWords_8java_source_l00024}{24} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
 
@@ -56,15 +67,16 @@ Definition at line \hyperlink{CommandWords_8java_source_l00024}{24} of file \hyp
 00029         commands.put(\textcolor{stringliteral}{"look"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1LookCommand}{LookCommand}());
 00030         commands.put(\textcolor{stringliteral}{"take"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1TakeCommand}{TakeCommand}());
 00031         commands.put(\textcolor{stringliteral}{"drop"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1DropCommand}{DropCommand}());
-00032         commands.put(\textcolor{stringliteral}{"inventory"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1InventoryCommand}{InventoryCommand}());
-00033         commands.put(\textcolor{stringliteral}{"eat"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1EatCommand}{EatCommand}());
-00034         commands.put(\textcolor{stringliteral}{"test"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1TestCommand}{TestCommand}());
-00035         commands.put(\textcolor{stringliteral}{"talk"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1TalkCommand}{TalkCommand}());
-00036         commands.put(\textcolor{stringliteral}{"give"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1GiveCommand}{GiveCommand}());
-00037         commands.put(\textcolor{stringliteral}{"quit"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1QuitCommand}{QuitCommand}());
-00038         commands.put(\textcolor{stringliteral}{"help"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1HelpCommand}{HelpCommand}());
-00039         commands.put(\textcolor{stringliteral}{"credits"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1CreditsCommand}{CreditsCommand}());
-00040     \}
+00032         commands.put(\textcolor{stringliteral}{"throw"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1ThrowCommand}{ThrowCommand}());
+00033         commands.put(\textcolor{stringliteral}{"inventory"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1InventoryCommand}{InventoryCommand}());
+00034         commands.put(\textcolor{stringliteral}{"eat"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1EatCommand}{EatCommand}());
+00035         commands.put(\textcolor{stringliteral}{"test"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1TestCommand}{TestCommand}());
+00036         commands.put(\textcolor{stringliteral}{"talk"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1TalkCommand}{TalkCommand}());
+00037         commands.put(\textcolor{stringliteral}{"give"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1GiveCommand}{GiveCommand}());
+00038         commands.put(\textcolor{stringliteral}{"quit"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1QuitCommand}{QuitCommand}());
+00039         commands.put(\textcolor{stringliteral}{"help"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1HelpCommand}{HelpCommand}());
+00040         commands.put(\textcolor{stringliteral}{"credits"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1CreditsCommand}{CreditsCommand}());
+00041     \}
 \end{DoxyCode}
 
 
@@ -76,7 +88,11 @@ Definition at line \hyperlink{CommandWords_8java_source_l00024}{24} of file \hyp
 \item[{String}]{command\-Word}
 \end{DoxyParamCaption}
 )}}\label{classpkg__parsing_1_1CommandWords_a244829164976aa9444b3b1e84462ac5c}
+
+
 Find the \hyperlink{enumpkg__parsing_1_1CommandWord}{Command\-Word} associated with a command word. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em command\-Word} & The word to look up. \\
 \hline
@@ -86,13 +102,13 @@ The Command correspondng to command\-Word, or null if it is not a valid command 
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{CommandWords_8java_source_l00070}{70} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
+Definition at line \hyperlink{CommandWords_8java_source_l00071}{71} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
 
 
 \begin{DoxyCode}
-00071     \{
-00072         \textcolor{keywordflow}{return} commands.get(commandWord);
-00073     \}
+00072     \{
+00073         \textcolor{keywordflow}{return} commands.get(commandWord);
+00074     \}
 \end{DoxyCode}
 \hypertarget{classpkg__parsing_1_1CommandWords_a55f01013b1d051547ee3fa6605ea4c14}{\index{pkg\-\_\-parsing\-::\-Command\-Words@{pkg\-\_\-parsing\-::\-Command\-Words}!get\-Command\-List@{get\-Command\-List}}
 \index{get\-Command\-List@{get\-Command\-List}!pkg_parsing::CommandWords@{pkg\-\_\-parsing\-::\-Command\-Words}}
@@ -101,24 +117,28 @@ Definition at line \hyperlink{CommandWords_8java_source_l00070}{70} of file \hyp
 {}
 \end{DoxyParamCaption}
 )}}\label{classpkg__parsing_1_1CommandWords_a55f01013b1d051547ee3fa6605ea4c14}
-Getter for the known\-Commands field. \begin{DoxyReturn}{Returns}
+
+
+Getter for the known\-Commands field. 
+
+\begin{DoxyReturn}{Returns}
 The list of available commands 
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{CommandWords_8java_source_l00055}{55} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
+Definition at line \hyperlink{CommandWords_8java_source_l00056}{56} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
 
 
 \begin{DoxyCode}
-00055                                    \{
-00056         String commandsString = \textcolor{stringliteral}{""};
-00057         Iterator<String> it = commands.keySet().iterator();
-00058         \textcolor{keywordflow}{while}(it.hasNext()) \{
-00059             String command = it.next();
-00060             commandsString += command + ((it.hasNext())? \textcolor{stringliteral}{", "} : \textcolor{stringliteral}{"."});
-00061         \}
-00062         \textcolor{keywordflow}{return} commandsString;
-00063     \}
+00056                                    \{
+00057         String commandsString = \textcolor{stringliteral}{""};
+00058         Iterator<String> it = commands.keySet().iterator();
+00059         \textcolor{keywordflow}{while}(it.hasNext()) \{
+00060             String command = it.next();
+00061             commandsString += command + ((it.hasNext())? \textcolor{stringliteral}{", "} : \textcolor{stringliteral}{"."});
+00062         \}
+00063         \textcolor{keywordflow}{return} commandsString;
+00064     \}
 \end{DoxyCode}
 \hypertarget{classpkg__parsing_1_1CommandWords_ab02b508bb42cbda758afe6cee5794216}{\index{pkg\-\_\-parsing\-::\-Command\-Words@{pkg\-\_\-parsing\-::\-Command\-Words}!is\-Command@{is\-Command}}
 \index{is\-Command@{is\-Command}!pkg_parsing::CommandWords@{pkg\-\_\-parsing\-::\-Command\-Words}}
@@ -127,7 +147,11 @@ Definition at line \hyperlink{CommandWords_8java_source_l00055}{55} of file \hyp
 \item[{String}]{command}
 \end{DoxyParamCaption}
 )}}\label{classpkg__parsing_1_1CommandWords_ab02b508bb42cbda758afe6cee5794216}
+
+
 Check if the command is known. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em command} & The command to check \\
 \hline
@@ -137,13 +161,13 @@ True if and only if the command is known.
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{CommandWords_8java_source_l00047}{47} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
+Definition at line \hyperlink{CommandWords_8java_source_l00048}{48} of file \hyperlink{CommandWords_8java_source}{Command\-Words.\-java}.
 
 
 \begin{DoxyCode}
-00047                                              \{
-00048         \textcolor{keywordflow}{return} commands.containsKey(command);
-00049     \}
+00048                                              \{
+00049         \textcolor{keywordflow}{return} commands.containsKey(command);
+00050     \}
 \end{DoxyCode}
 
 

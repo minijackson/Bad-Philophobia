@@ -17,7 +17,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__commands_1_1GiveCommand.html#a3a3cca7fae9b86d8ff85cc166564843d" target="_top" xlink:title="pkg_commands.GiveCommand.execute">
+<g id="a_node2"><a xlink:href="classpkg__commands_1_1GiveCommand.html#a3a3cca7fae9b86d8ff85cc166564843d" target="_top" xlink:title="Make the player give an Item to a Character. ">
 <polygon fill="white" stroke="black" points="170.5,-5.5 170.5,-24.5 361.5,-24.5 361.5,-5.5 170.5,-5.5"/>
 <text text-anchor="middle" x="266" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.GiveCommand.execute</text>
 </a>

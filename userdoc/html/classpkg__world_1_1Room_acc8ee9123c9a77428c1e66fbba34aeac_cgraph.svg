@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__world_1_1Room.html#a1ddbdc5022f7f494ac6250ca3f42672c" target="_top" xlink:title="pkg_world.Room.getHumanCharactersList">
+<g id="a_node2"><a xlink:href="classpkg__world_1_1Room.html#a1ddbdc5022f7f494ac6250ca3f42672c" target="_top" xlink:title="Return a human readable list of the characters in the room. ">
 <polygon fill="white" stroke="black" points="214,-38.5 214,-57.5 416,-57.5 416,-38.5 214,-38.5"/>
 <text text-anchor="middle" x="315" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_world.Room.getHumanCharactersList</text>
 </a>
@@ -29,7 +29,7 @@
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="classpkg__world_1_1Room.html#a3ea436ad00d00484b429992ef94535ac" target="_top" xlink:title="pkg_world.Room.getHumanItemsList">
+<g id="a_node3"><a xlink:href="classpkg__world_1_1Room.html#a3ea436ad00d00484b429992ef94535ac" target="_top" xlink:title="Return a human readable list of the items in the room. ">
 <polygon fill="white" stroke="black" points="225.5,-0.5 225.5,-19.5 404.5,-19.5 404.5,-0.5 225.5,-0.5"/>
 <text text-anchor="middle" x="315" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_world.Room.getHumanItemsList</text>
 </a>

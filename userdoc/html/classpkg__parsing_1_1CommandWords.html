@@ -43,7 +43,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -78,7 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -100,6 +99,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">pkg_parsing.CommandWords Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class used to verify the commands given by the user.  
+ <a href="classpkg__parsing_1_1CommandWords.html#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for pkg_parsing.CommandWords:</div>
 <div class="dyncontent">
@@ -110,16 +112,21 @@ Collaboration diagram for pkg_parsing.CommandWords:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac01e3b4727e741eb8add2eef27c8f7b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpkg__parsing_1_1CommandWords.html#ac01e3b4727e741eb8add2eef27c8f7b7">CommandWords</a> ()</td></tr>
+<tr class="memdesc:ac01e3b4727e741eb8add2eef27c8f7b7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classpkg__parsing_1_1CommandWords.html" title="Class used to verify the commands given by the user. ">CommandWords</a> class constructor.  <a href="#ac01e3b4727e741eb8add2eef27c8f7b7">More...</a><br/></td></tr>
 <tr class="separator:ac01e3b4727e741eb8add2eef27c8f7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab02b508bb42cbda758afe6cee5794216"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpkg__parsing_1_1CommandWords.html#ab02b508bb42cbda758afe6cee5794216">isCommand</a> (String command)</td></tr>
+<tr class="memdesc:ab02b508bb42cbda758afe6cee5794216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the command is known.  <a href="#ab02b508bb42cbda758afe6cee5794216">More...</a><br/></td></tr>
 <tr class="separator:ab02b508bb42cbda758afe6cee5794216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55f01013b1d051547ee3fa6605ea4c14"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpkg__parsing_1_1CommandWords.html#a55f01013b1d051547ee3fa6605ea4c14">getCommandList</a> ()</td></tr>
+<tr class="memdesc:a55f01013b1d051547ee3fa6605ea4c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the knownCommands field.  <a href="#a55f01013b1d051547ee3fa6605ea4c14">More...</a><br/></td></tr>
 <tr class="separator:a55f01013b1d051547ee3fa6605ea4c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a244829164976aa9444b3b1e84462ac5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpkg__commands_1_1Command.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpkg__parsing_1_1CommandWords.html#a244829164976aa9444b3b1e84462ac5c">getCommand</a> (String commandWord)</td></tr>
+<tr class="memdesc:a244829164976aa9444b3b1e84462ac5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the <a class="el" href="enumpkg__parsing_1_1CommandWord.html" title="Representations for all the valid command words for the game. ">CommandWord</a> associated with a command word.  <a href="#a244829164976aa9444b3b1e84462ac5c">More...</a><br/></td></tr>
 <tr class="separator:a244829164976aa9444b3b1e84462ac5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class used to verify the commands given by the user. It contains all known commands and can verify if a String is a known command. </p>
+<div class="textblock"><p>Class used to verify the commands given by the user. </p>
+<p>It contains all known commands and can verify if a String is a known command. </p>
 <dl class="section author"><dt>Author</dt><dd>Rémi NICOLE </dd></dl>
 
 <p>Definition at line <a class="el" href="CommandWords_8java_source.html#l00017">17</a> of file <a class="el" href="CommandWords_8java_source.html">CommandWords.java</a>.</p>
@@ -136,7 +143,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="classpkg__parsing_1_1CommandWords.html">CommandWords</a> class constructor. </p>
+
+<p><a class="el" href="classpkg__parsing_1_1CommandWords.html" title="Class used to verify the commands given by the user. ">CommandWords</a> class constructor. </p>
 
 <p>Definition at line <a class="el" href="CommandWords_8java_source.html#l00024">24</a> of file <a class="el" href="CommandWords_8java_source.html">CommandWords.java</a>.</p>
 <div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                          {</div>
@@ -147,29 +155,31 @@ Public Member Functions</h2></td></tr>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        commands.put(<span class="stringliteral">&quot;look&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1LookCommand.html">LookCommand</a>());</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        commands.put(<span class="stringliteral">&quot;take&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1TakeCommand.html">TakeCommand</a>());</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        commands.put(<span class="stringliteral">&quot;drop&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1DropCommand.html">DropCommand</a>());</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        commands.put(<span class="stringliteral">&quot;inventory&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1InventoryCommand.html">InventoryCommand</a>());</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        commands.put(<span class="stringliteral">&quot;eat&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1EatCommand.html">EatCommand</a>());</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        commands.put(<span class="stringliteral">&quot;test&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1TestCommand.html">TestCommand</a>());</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        commands.put(<span class="stringliteral">&quot;talk&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1TalkCommand.html">TalkCommand</a>());</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        commands.put(<span class="stringliteral">&quot;give&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1GiveCommand.html">GiveCommand</a>());</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        commands.put(<span class="stringliteral">&quot;quit&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1QuitCommand.html">QuitCommand</a>());</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        commands.put(<span class="stringliteral">&quot;help&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1HelpCommand.html">HelpCommand</a>());</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        commands.put(<span class="stringliteral">&quot;credits&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1CreditsCommand.html">CreditsCommand</a>());</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="ttc" id="classpkg__commands_1_1QuitCommand_html"><div class="ttname"><a href="classpkg__commands_1_1QuitCommand.html">pkg_commands.QuitCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="QuitCommand_8java_source.html#l00009">QuitCommand.java:9</a></div></div>
-<div class="ttc" id="classpkg__commands_1_1TalkCommand_html"><div class="ttname"><a href="classpkg__commands_1_1TalkCommand.html">pkg_commands.TalkCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="TalkCommand_8java_source.html#l00011">TalkCommand.java:11</a></div></div>
-<div class="ttc" id="classpkg__commands_1_1TestCommand_html"><div class="ttname"><a href="classpkg__commands_1_1TestCommand.html">pkg_commands.TestCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="TestCommand_8java_source.html#l00015">TestCommand.java:15</a></div></div>
-<div class="ttc" id="classpkg__commands_1_1BackCommand_html"><div class="ttname"><a href="classpkg__commands_1_1BackCommand.html">pkg_commands.BackCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="BackCommand_8java_source.html#l00010">BackCommand.java:10</a></div></div>
-<div class="ttc" id="classpkg__commands_1_1GiveCommand_html"><div class="ttname"><a href="classpkg__commands_1_1GiveCommand.html">pkg_commands.GiveCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="GiveCommand_8java_source.html#l00012">GiveCommand.java:12</a></div></div>
-<div class="ttc" id="classpkg__commands_1_1HelpCommand_html"><div class="ttname"><a href="classpkg__commands_1_1HelpCommand.html">pkg_commands.HelpCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="HelpCommand_8java_source.html#l00010">HelpCommand.java:10</a></div></div>
-<div class="ttc" id="classpkg__commands_1_1DropCommand_html"><div class="ttname"><a href="classpkg__commands_1_1DropCommand.html">pkg_commands.DropCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="DropCommand_8java_source.html#l00011">DropCommand.java:11</a></div></div>
-<div class="ttc" id="classpkg__commands_1_1BeamerCommand_html"><div class="ttname"><a href="classpkg__commands_1_1BeamerCommand.html">pkg_commands.BeamerCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="BeamerCommand_8java_source.html#l00010">BeamerCommand.java:10</a></div></div>
-<div class="ttc" id="classpkg__commands_1_1LookCommand_html"><div class="ttname"><a href="classpkg__commands_1_1LookCommand.html">pkg_commands.LookCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="LookCommand_8java_source.html#l00011">LookCommand.java:11</a></div></div>
-<div class="ttc" id="classpkg__commands_1_1TakeCommand_html"><div class="ttname"><a href="classpkg__commands_1_1TakeCommand.html">pkg_commands.TakeCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="TakeCommand_8java_source.html#l00010">TakeCommand.java:10</a></div></div>
-<div class="ttc" id="classpkg__commands_1_1InventoryCommand_html"><div class="ttname"><a href="classpkg__commands_1_1InventoryCommand.html">pkg_commands.InventoryCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="InventoryCommand_8java_source.html#l00009">InventoryCommand.java:9</a></div></div>
-<div class="ttc" id="classpkg__commands_1_1EatCommand_html"><div class="ttname"><a href="classpkg__commands_1_1EatCommand.html">pkg_commands.EatCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="EatCommand_8java_source.html#l00010">EatCommand.java:10</a></div></div>
-<div class="ttc" id="classpkg__commands_1_1CreditsCommand_html"><div class="ttname"><a href="classpkg__commands_1_1CreditsCommand.html">pkg_commands.CreditsCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="CreditsCommand_8java_source.html#l00009">CreditsCommand.java:9</a></div></div>
-<div class="ttc" id="classpkg__commands_1_1GoCommand_html"><div class="ttname"><a href="classpkg__commands_1_1GoCommand.html">pkg_commands.GoCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="GoCommand_8java_source.html#l00015">GoCommand.java:15</a></div></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        commands.put(<span class="stringliteral">&quot;throw&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1ThrowCommand.html">ThrowCommand</a>());</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        commands.put(<span class="stringliteral">&quot;inventory&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1InventoryCommand.html">InventoryCommand</a>());</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        commands.put(<span class="stringliteral">&quot;eat&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1EatCommand.html">EatCommand</a>());</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        commands.put(<span class="stringliteral">&quot;test&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1TestCommand.html">TestCommand</a>());</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        commands.put(<span class="stringliteral">&quot;talk&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1TalkCommand.html">TalkCommand</a>());</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        commands.put(<span class="stringliteral">&quot;give&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1GiveCommand.html">GiveCommand</a>());</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        commands.put(<span class="stringliteral">&quot;quit&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1QuitCommand.html">QuitCommand</a>());</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        commands.put(<span class="stringliteral">&quot;help&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1HelpCommand.html">HelpCommand</a>());</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        commands.put(<span class="stringliteral">&quot;credits&quot;</span>, <span class="keyword">new</span> <a class="code" href="classpkg__commands_1_1CreditsCommand.html">CreditsCommand</a>());</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="ttc" id="classpkg__commands_1_1QuitCommand_html"><div class="ttname"><a href="classpkg__commands_1_1QuitCommand.html">pkg_commands.QuitCommand</a></div><div class="ttdoc">class QuitCommand used to quit the game </div><div class="ttdef"><b>Definition:</b> <a href="QuitCommand_8java_source.html#l00009">QuitCommand.java:9</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1TalkCommand_html"><div class="ttname"><a href="classpkg__commands_1_1TalkCommand.html">pkg_commands.TalkCommand</a></div><div class="ttdoc">class TalkCommand used to talk to a Character </div><div class="ttdef"><b>Definition:</b> <a href="TalkCommand_8java_source.html#l00011">TalkCommand.java:11</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1TestCommand_html"><div class="ttname"><a href="classpkg__commands_1_1TestCommand.html">pkg_commands.TestCommand</a></div><div class="ttdoc">class TestCommand used to test series of commands </div><div class="ttdef"><b>Definition:</b> <a href="TestCommand_8java_source.html#l00015">TestCommand.java:15</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1BackCommand_html"><div class="ttname"><a href="classpkg__commands_1_1BackCommand.html">pkg_commands.BackCommand</a></div><div class="ttdoc">class BackCommand used to go back in a previous Room. </div><div class="ttdef"><b>Definition:</b> <a href="BackCommand_8java_source.html#l00010">BackCommand.java:10</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1GiveCommand_html"><div class="ttname"><a href="classpkg__commands_1_1GiveCommand.html">pkg_commands.GiveCommand</a></div><div class="ttdoc">class GiveCommand used to make the Player give an Item </div><div class="ttdef"><b>Definition:</b> <a href="GiveCommand_8java_source.html#l00012">GiveCommand.java:12</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1HelpCommand_html"><div class="ttname"><a href="classpkg__commands_1_1HelpCommand.html">pkg_commands.HelpCommand</a></div><div class="ttdoc">class HelpCommand used to print the help </div><div class="ttdef"><b>Definition:</b> <a href="HelpCommand_8java_source.html#l00010">HelpCommand.java:10</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1DropCommand_html"><div class="ttname"><a href="classpkg__commands_1_1DropCommand.html">pkg_commands.DropCommand</a></div><div class="ttdoc">class DropCommand used to make the player drop an Item </div><div class="ttdef"><b>Definition:</b> <a href="DropCommand_8java_source.html#l00011">DropCommand.java:11</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1BeamerCommand_html"><div class="ttname"><a href="classpkg__commands_1_1BeamerCommand.html">pkg_commands.BeamerCommand</a></div><div class="ttdoc">class BeamerCommand used to teleport into a remembered room </div><div class="ttdef"><b>Definition:</b> <a href="BeamerCommand_8java_source.html#l00010">BeamerCommand.java:10</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1LookCommand_html"><div class="ttname"><a href="classpkg__commands_1_1LookCommand.html">pkg_commands.LookCommand</a></div><div class="ttdoc">class LookCommand used to show information about the current Room or a given Item ...</div><div class="ttdef"><b>Definition:</b> <a href="LookCommand_8java_source.html#l00011">LookCommand.java:11</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1TakeCommand_html"><div class="ttname"><a href="classpkg__commands_1_1TakeCommand.html">pkg_commands.TakeCommand</a></div><div class="ttdoc">class TakeCommand used to make the Player take an Item </div><div class="ttdef"><b>Definition:</b> <a href="TakeCommand_8java_source.html#l00010">TakeCommand.java:10</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1InventoryCommand_html"><div class="ttname"><a href="classpkg__commands_1_1InventoryCommand.html">pkg_commands.InventoryCommand</a></div><div class="ttdoc">class InventoryCommand used to print the player&#39;s inventory </div><div class="ttdef"><b>Definition:</b> <a href="InventoryCommand_8java_source.html#l00009">InventoryCommand.java:9</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1EatCommand_html"><div class="ttname"><a href="classpkg__commands_1_1EatCommand.html">pkg_commands.EatCommand</a></div><div class="ttdoc">class EatCommand used to make the player eat an object. </div><div class="ttdef"><b>Definition:</b> <a href="EatCommand_8java_source.html#l00010">EatCommand.java:10</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1CreditsCommand_html"><div class="ttname"><a href="classpkg__commands_1_1CreditsCommand.html">pkg_commands.CreditsCommand</a></div><div class="ttdoc">class CreditsCommand used to print the credits of the game </div><div class="ttdef"><b>Definition:</b> <a href="CreditsCommand_8java_source.html#l00009">CreditsCommand.java:9</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1GoCommand_html"><div class="ttname"><a href="classpkg__commands_1_1GoCommand.html">pkg_commands.GoCommand</a></div><div class="ttdoc">class GoCommand used to make the player go to a given Room. </div><div class="ttdef"><b>Definition:</b> <a href="GoCommand_8java_source.html#l00015">GoCommand.java:15</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1ThrowCommand_html"><div class="ttname"><a href="classpkg__commands_1_1ThrowCommand.html">pkg_commands.ThrowCommand</a></div><div class="ttdoc">class ThrowCommand used to make the player throw an Item </div><div class="ttdef"><b>Definition:</b> <a href="ThrowCommand_8java_source.html#l00012">ThrowCommand.java:12</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -187,7 +197,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Find the <a class="el" href="enumpkg__parsing_1_1CommandWord.html">CommandWord</a> associated with a command word. </p>
+
+<p>Find the <a class="el" href="enumpkg__parsing_1_1CommandWord.html" title="Representations for all the valid command words for the game. ">CommandWord</a> associated with a command word. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">commandWord</td><td>The word to look up. </td></tr>
@@ -196,10 +207,10 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The Command correspondng to commandWord, or null if it is not a valid command word. </dd></dl>
 
-<p>Definition at line <a class="el" href="CommandWords_8java_source.html#l00070">70</a> of file <a class="el" href="CommandWords_8java_source.html">CommandWords.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> commands.get(commandWord);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<p>Definition at line <a class="el" href="CommandWords_8java_source.html#l00071">71</a> of file <a class="el" href="CommandWords_8java_source.html">CommandWords.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> commands.get(commandWord);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -215,19 +226,20 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Getter for the knownCommands field. </p>
 <dl class="section return"><dt>Returns</dt><dd>The list of available commands </dd></dl>
 
-<p>Definition at line <a class="el" href="CommandWords_8java_source.html#l00055">55</a> of file <a class="el" href="CommandWords_8java_source.html">CommandWords.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                   {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        String commandsString = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        Iterator&lt;String&gt; it = commands.keySet().iterator();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">while</span>(it.hasNext()) {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            String command = it.next();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            commandsString += command + ((it.hasNext())? <span class="stringliteral">&quot;, &quot;</span> : <span class="stringliteral">&quot;.&quot;</span>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> commandsString;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<p>Definition at line <a class="el" href="CommandWords_8java_source.html#l00056">56</a> of file <a class="el" href="CommandWords_8java_source.html">CommandWords.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                   {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        String commandsString = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        Iterator&lt;String&gt; it = commands.keySet().iterator();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">while</span>(it.hasNext()) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            String command = it.next();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            commandsString += command + ((it.hasNext())? <span class="stringliteral">&quot;, &quot;</span> : <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> commandsString;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -244,6 +256,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Check if the command is known. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -253,10 +266,10 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if and only if the command is known. </dd></dl>
 
-<p>Definition at line <a class="el" href="CommandWords_8java_source.html#l00047">47</a> of file <a class="el" href="CommandWords_8java_source.html">CommandWords.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                             {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> commands.containsKey(command);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<p>Definition at line <a class="el" href="CommandWords_8java_source.html#l00048">48</a> of file <a class="el" href="CommandWords_8java_source.html">CommandWords.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                                             {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> commands.containsKey(command);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -266,7 +279,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 9 2014 13:50:56 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 9 2014 21:23:55 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__commands_1_1InventoryCommand.html#a16ce9e3db461ecb7c4a50d2bdef65022" target="_top" xlink:title="pkg_commands.InventoryCommand.execute">
+<g id="a_node2"><a xlink:href="classpkg__commands_1_1InventoryCommand.html#a16ce9e3db461ecb7c4a50d2bdef65022" target="_top" xlink:title="Save the inventory into the message field. ">
 <polygon fill="white" stroke="black" points="186,-0.5 186,-19.5 398,-19.5 398,-0.5 186,-0.5"/>
 <text text-anchor="middle" x="292" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.InventoryCommand.execute</text>
 </a>

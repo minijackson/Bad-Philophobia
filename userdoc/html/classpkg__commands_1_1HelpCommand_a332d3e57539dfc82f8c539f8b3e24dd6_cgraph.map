@@ -1,5 +1,5 @@
 <map id="pkg_commands.HelpCommand.execute" name="pkg_commands.HelpCommand.execute">
-<area shape="rect" id="node2" href="$classpkg__commands_1_1Command.html#ac2a42e2bab264821892daefaf9a18b6c" title="pkg_commands.Command.get\lMessage" alt="" coords="328,5,528,46"/>
-<area shape="rect" id="node3" href="$classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" title="pkg_commands.Command.set\lMessage" alt="" coords="328,70,528,111"/>
-<area shape="rect" id="node4" href="$classpkg__parsing_1_1Parser.html#a31545cdbdb409aaeb727289c0ea7be1b" title="pkg_parsing.Parser.showCommands" alt="" coords="310,136,546,163"/>
+<area shape="rect" id="node2" href="$classpkg__commands_1_1Command.html#ac2a42e2bab264821892daefaf9a18b6c" title="Message field getter. " alt="" coords="328,5,528,46"/>
+<area shape="rect" id="node3" href="$classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" title="Message field setter. " alt="" coords="328,70,528,111"/>
+<area shape="rect" id="node4" href="$classpkg__parsing_1_1Parser.html#a31545cdbdb409aaeb727289c0ea7be1b" title="Getter for the knownCommands field of the commands field. " alt="" coords="310,136,546,163"/>
 </map>

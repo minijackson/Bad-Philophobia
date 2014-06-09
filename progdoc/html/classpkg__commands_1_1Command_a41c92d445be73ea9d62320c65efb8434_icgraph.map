@@ -3,9 +3,10 @@
 <area shape="rect" id="node3" href="$classpkg__commands_1_1TalkCommand.html#a413573388e24a2d442f9814695f7e47c" title="Make the player talk to a Character. " alt="" coords="264,56,517,83"/>
 <area shape="rect" id="node4" href="$classpkg__commands_1_1DropCommand.html#a742e37b2d2dd4e111130811ee2f4dd0b" title="Drop the Item through it&#39;s name in the parameter field. " alt="" coords="263,107,519,133"/>
 <area shape="rect" id="node5" href="$classpkg__commands_1_1TakeCommand.html#a17789062aaf2ab5747c7eeac118875cd" title="Make the player take an Item. " alt="" coords="262,157,519,184"/>
-<area shape="rect" id="node6" href="$classpkg__commands_1_1EatCommand.html#a2a600f09891aa076b3f630293de965f4" title="Make the player eat an object. " alt="" coords="267,208,515,235"/>
-<area shape="rect" id="node7" href="$classpkg__commands_1_1GiveCommand.html#a3a3cca7fae9b86d8ff85cc166564843d" title="Make the player give an Item to a Character. " alt="" coords="263,259,518,285"/>
-<area shape="rect" id="node8" href="$classpkg__commands_1_1BeamerCommand.html#a139dc852e180cabd8af15cfed37dcf0e" title="Teleport to the remembered room or remember a room. " alt="" coords="254,309,527,336"/>
-<area shape="rect" id="node9" href="$classpkg__commands_1_1TestCommand.html#a1ff07c27a46910d20c2e4569888892ca" title="Test series of Commands stored in a .test file and store the messages in the message field..." alt="" coords="263,360,518,387"/>
-<area shape="rect" id="node10" href="$classpkg__commands_1_1GoCommand.html#a82e9a64a0fac612f788060a90c83f9b1" title="Make the player go to the Room through it&#39;s direction in the parameter field. " alt="" coords="268,411,513,437"/>
+<area shape="rect" id="node6" href="$classpkg__commands_1_1ThrowCommand.html#a38d936bcebcf45936324caf0f417b012" title="Throw the Item through it&#39;s name in the parameter field. " alt="" coords="259,208,523,235"/>
+<area shape="rect" id="node7" href="$classpkg__commands_1_1EatCommand.html#a2a600f09891aa076b3f630293de965f4" title="Make the player eat an object. " alt="" coords="267,259,515,285"/>
+<area shape="rect" id="node8" href="$classpkg__commands_1_1GiveCommand.html#a3a3cca7fae9b86d8ff85cc166564843d" title="Make the player give an Item to a Character. " alt="" coords="263,309,518,336"/>
+<area shape="rect" id="node9" href="$classpkg__commands_1_1BeamerCommand.html#a139dc852e180cabd8af15cfed37dcf0e" title="Teleport to the remembered room or remember a room. " alt="" coords="254,360,527,387"/>
+<area shape="rect" id="node10" href="$classpkg__commands_1_1TestCommand.html#a1ff07c27a46910d20c2e4569888892ca" title="Test series of Commands stored in a .test file and store the messages in the message field..." alt="" coords="263,411,518,437"/>
+<area shape="rect" id="node11" href="$classpkg__commands_1_1GoCommand.html#a82e9a64a0fac612f788060a90c83f9b1" title="Make the player go to the Room through it&#39;s direction in the parameter field. " alt="" coords="268,461,513,488"/>
 </map>

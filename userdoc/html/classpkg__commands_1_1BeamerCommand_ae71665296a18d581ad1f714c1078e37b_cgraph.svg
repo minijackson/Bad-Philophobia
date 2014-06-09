@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__world_1_1Player.html#a81893b37cd26426863087f353f8be3ab" target="_top" xlink:title="pkg_world.Player.getBeamerRoom">
+<g id="a_node2"><a xlink:href="classpkg__world_1_1Player.html#a81893b37cd26426863087f353f8be3ab" target="_top" xlink:title="beamerRoom field getter. ">
 <polygon fill="white" stroke="black" points="236,-49.5 236,-68.5 404,-68.5 404,-49.5 236,-49.5"/>
 <text text-anchor="middle" x="320" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_world.Player.getBeamerRoom</text>
 </a>
@@ -29,7 +29,7 @@
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" target="_top" xlink:title="pkg_commands.Command.set\lMessage">
+<g id="a_node3"><a xlink:href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" target="_top" xlink:title="Message field setter. ">
 <polygon fill="white" stroke="black" points="245,-0 245,-30 395,-30 395,-0 245,-0"/>
 <text text-anchor="start" x="253" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.set</text>
 <text text-anchor="middle" x="320" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">Message</text>

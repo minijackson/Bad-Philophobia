@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__commands_1_1Command.html#a41c92d445be73ea9d62320c65efb8434" target="_top" xlink:title="pkg_commands.Command.get\lParameter">
+<g id="a_node2"><a xlink:href="classpkg__commands_1_1Command.html#a41c92d445be73ea9d62320c65efb8434" target="_top" xlink:title="Parameter field getter. ">
 <polygon fill="white" stroke="black" points="229,-343 229,-373 379,-373 379,-343 229,-343"/>
 <text text-anchor="start" x="237" y="-361" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.get</text>
 <text text-anchor="middle" x="304" y="-350" font-family="Helvetica,sans-Serif" font-size="10.00">Parameter</text>
@@ -30,7 +30,7 @@
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="classpkg__commands_1_1Command.html#a20d3ebdc0683a87b43be2a92a1cad111" target="_top" xlink:title="pkg_commands.Command.get\lSecondParameter">
+<g id="a_node3"><a xlink:href="classpkg__commands_1_1Command.html#a20d3ebdc0683a87b43be2a92a1cad111" target="_top" xlink:title="Second Parameter field getter. ">
 <polygon fill="white" stroke="black" points="229,-294 229,-324 379,-324 379,-294 229,-294"/>
 <text text-anchor="start" x="237" y="-312" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.get</text>
 <text text-anchor="middle" x="304" y="-301" font-family="Helvetica,sans-Serif" font-size="10.00">SecondParameter</text>
@@ -44,7 +44,7 @@
 </g>
 <!-- Node4 -->
 <g id="node4" class="node"><title>Node4</title>
-<g id="a_node4"><a xlink:href="classpkg__commands_1_1Command.html#a02af95ab3f1898a66259ab7c177b6998" target="_top" xlink:title="pkg_commands.Command.has\lParameter">
+<g id="a_node4"><a xlink:href="classpkg__commands_1_1Command.html#a02af95ab3f1898a66259ab7c177b6998" target="_top" xlink:title="Return true if the parameter is null. ">
 <polygon fill="white" stroke="black" points="228,-245 228,-275 380,-275 380,-245 228,-245"/>
 <text text-anchor="start" x="236" y="-263" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.has</text>
 <text text-anchor="middle" x="304" y="-252" font-family="Helvetica,sans-Serif" font-size="10.00">Parameter</text>
@@ -58,7 +58,7 @@
 </g>
 <!-- Node5 -->
 <g id="node5" class="node"><title>Node5</title>
-<g id="a_node5"><a xlink:href="classpkg__commands_1_1Command.html#add688a76d80576c34f23927da19b9e2d" target="_top" xlink:title="pkg_commands.Command.has\lSecondParameter">
+<g id="a_node5"><a xlink:href="classpkg__commands_1_1Command.html#add688a76d80576c34f23927da19b9e2d" target="_top" xlink:title="Return true if the second parameter is null. ">
 <polygon fill="white" stroke="black" points="228,-196 228,-226 380,-226 380,-196 228,-196"/>
 <text text-anchor="start" x="236" y="-214" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.has</text>
 <text text-anchor="middle" x="304" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00">SecondParameter</text>
@@ -86,7 +86,7 @@
 </g>
 <!-- Node7 -->
 <g id="node7" class="node"><title>Node7</title>
-<g id="a_node7"><a xlink:href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" target="_top" xlink:title="pkg_commands.Command.set\lMessage">
+<g id="a_node7"><a xlink:href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" target="_top" xlink:title="Message field setter. ">
 <polygon fill="white" stroke="black" points="229,-98 229,-128 379,-128 379,-98 229,-98"/>
 <text text-anchor="start" x="237" y="-116" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.set</text>
 <text text-anchor="middle" x="304" y="-105" font-family="Helvetica,sans-Serif" font-size="10.00">Message</text>
@@ -100,7 +100,7 @@
 </g>
 <!-- Node8 -->
 <g id="node8" class="node"><title>Node8</title>
-<g id="a_node8"><a xlink:href="classpkg__world_1_1pkg__characters_1_1Character.html#a0fb83fcff9b37c94eac3fb35868bebb2" target="_top" xlink:title="pkg_world.pkg_characters.\lCharacter.takeItem">
+<g id="a_node8"><a xlink:href="classpkg__world_1_1pkg__characters_1_1Character.html#a0fb83fcff9b37c94eac3fb35868bebb2" target="_top" xlink:title="Try to give him an Item. ">
 <polygon fill="white" stroke="black" points="237,-49 237,-79 371,-79 371,-49 237,-49"/>
 <text text-anchor="start" x="245" y="-67" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_world.pkg_characters.</text>
 <text text-anchor="middle" x="304" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00">Character.takeItem</text>
@@ -114,7 +114,7 @@
 </g>
 <!-- Node9 -->
 <g id="node9" class="node"><title>Node9</title>
-<g id="a_node9"><a xlink:href="classpkg__world_1_1pkg__characters_1_1Character.html#a816f8f79ef1e8c9635f0cdeb180b9f3f" target="_top" xlink:title="pkg_world.pkg_characters.\lCharacter.wantsItem">
+<g id="a_node9"><a xlink:href="classpkg__world_1_1pkg__characters_1_1Character.html#a816f8f79ef1e8c9635f0cdeb180b9f3f" target="_top" xlink:title="Returns true if the given Item is wanted by the creature/character. ">
 <polygon fill="white" stroke="black" points="237,-0 237,-30 371,-30 371,-0 237,-0"/>
 <text text-anchor="start" x="245" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_world.pkg_characters.</text>
 <text text-anchor="middle" x="304" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">Character.wantsItem</text>

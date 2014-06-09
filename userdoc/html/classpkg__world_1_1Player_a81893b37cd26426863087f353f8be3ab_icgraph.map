@@ -1,4 +1,4 @@
 <map id="pkg_world.Player.getBeamerRoom" name="pkg_world.Player.getBeamerRoom">
-<area shape="rect" id="node2" href="$classpkg__commands_1_1BeamerCommand.html#ae71665296a18d581ad1f714c1078e37b" title="pkg_commands.BeamerCommand.charge" alt="" coords="277,5,544,32"/>
-<area shape="rect" id="node3" href="$classpkg__commands_1_1BeamerCommand.html#a139dc852e180cabd8af15cfed37dcf0e" title="pkg_commands.BeamerCommand.execute" alt="" coords="593,5,866,32"/>
+<area shape="rect" id="node2" href="$classpkg__commands_1_1BeamerCommand.html#ae71665296a18d581ad1f714c1078e37b" title="Remember the current room. " alt="" coords="277,5,544,32"/>
+<area shape="rect" id="node3" href="$classpkg__commands_1_1BeamerCommand.html#a139dc852e180cabd8af15cfed37dcf0e" title="Teleport to the remembered room or remember a room. " alt="" coords="593,5,866,32"/>
 </map>

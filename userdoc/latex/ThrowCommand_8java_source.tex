@@ -1,0 +1,51 @@
+\hypertarget{ThrowCommand_8java}{\section{Throw\-Command.\-java}
+\label{ThrowCommand_8java}\index{pkg\-\_\-commands/\-Throw\-Command.\-java@{pkg\-\_\-commands/\-Throw\-Command.\-java}}
+}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }pkg\_commands;
+00002 
+00003 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Player}{pkg\_world.Player};
+00004 \textcolor{keyword}{import} \hyperlink{classpkg__game_1_1GameEngine}{pkg\_game.GameEngine};
+00005 \textcolor{keyword}{import} \hyperlink{classpkg__exceptions_1_1NoArgumentException}{pkg\_exceptions.NoArgumentException};
+00006 \textcolor{keyword}{import} \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException};
+00007 
+\hypertarget{ThrowCommand_8java_source_l00012}{}\hyperlink{classpkg__commands_1_1ThrowCommand}{00012} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__commands_1_1ThrowCommand}{ThrowCommand} \textcolor{keyword}{extends} \hyperlink{classpkg__commands_1_1Command}{Command} \{
+00013 
+\hypertarget{ThrowCommand_8java_source_l00017}{}\hyperlink{classpkg__commands_1_1ThrowCommand_a3332c8c15bf1a0a4ce85814406dbbfa6}{00017}     \textcolor{keyword}{public} \hyperlink{classpkg__commands_1_1ThrowCommand_a3332c8c15bf1a0a4ce85814406dbbfa6}{ThrowCommand}()\{
+00018 
+00019     \}
+00020 
+\hypertarget{ThrowCommand_8java_source_l00028}{}\hyperlink{classpkg__commands_1_1ThrowCommand_a38d936bcebcf45936324caf0f417b012}{00028}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__commands_1_1ThrowCommand_a38d936bcebcf45936324caf0f417b012}{execute}(\hyperlink{classpkg__world_1_1Player}{Player} player) \textcolor{keywordflow}{throws} 
+      \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException},\hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{IllegalArgumentException} \{
+00029         \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998}{hasParameter}()) \{
+00030             \textcolor{keywordflow}{if}(player.hasItem(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}()))\{
+00031                 \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}().equals(\textcolor{stringliteral}{"snowball"})) \{
+00032 
+00033                     \textcolor{comment}{// Has thrown the snowball and is in the alpine tundra Room}
+00034                     \textcolor{keywordflow}{if}(player.getCurrentRoom() == GameEngine.getRooms().\textcolor{keyword}{get}(3) && player.threwSnowball()) \{
+00035                         \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\textcolor{stringliteral}{"Snowball!!! A snowball!!! (The robot tries to fetch the
+       snowball but falls into the water and \(\backslash\)"dies\(\backslash\)".)"});
+00036                         \textcolor{comment}{// Won}
+00037                         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00038                     \} \textcolor{keywordflow}{else} \{
+00039                         \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\textcolor{stringliteral}{"Snowball!!! A snowball!!! (The robot fetches the snowball but
+       melts it because of it's circuits)\(\backslash\)n*Sob*, my snowball..."});
+00040                         player.eatObject(\textcolor{stringliteral}{"snowball"});
+00041                         player.throwSnowball();
+00042                     \}
+00043 
+00044                 \} \textcolor{keywordflow}{else} \{
+00045                     player.eatObject(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}());
+00046                     \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\textcolor{stringliteral}{"Stop throwing everything away! I hope it's the last time."});
+00047                 \}
+00048             \} \textcolor{keywordflow}{else}
+00049                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{IllegalArgumentException}(\textcolor{stringliteral}{"If you want to throw that, you
+       may have a mental disorder. As expected."});
+00050         \} \textcolor{keywordflow}{else}
+00051             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"Yes, I'm gonna throw a fit."});
+00052         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00053     \}
+00054 
+00055 \}
+\end{DoxyCode}

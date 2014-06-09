@@ -1,3 +1,8 @@
+/**
+ * \package pkg_items
+ * Package containing all the classes in relation with the items
+ */
+
 package pkg_world.pkg_items;
 
 /**

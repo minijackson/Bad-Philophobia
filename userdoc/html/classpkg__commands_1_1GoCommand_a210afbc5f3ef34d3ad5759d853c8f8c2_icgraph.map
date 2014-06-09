@@ -1,4 +1,4 @@
 <map id="pkg_commands.GoCommand.goRoomNoCheck" name="pkg_commands.GoCommand.goRoomNoCheck">
-<area shape="rect" id="node2" href="$classpkg__commands_1_1GoCommand.html#a82e9a64a0fac612f788060a90c83f9b1" title="pkg_commands.GoCommand.execute" alt="" coords="528,12,773,39"/>
-<area shape="rect" id="node3" href="$classpkg__commands_1_1GoCommand.html#acbf1aa81fa5b1aef7cafb8b4e3ace3a9" title="pkg_commands.GoCommand.go\lRoomCheck" alt="" coords="267,34,480,75"/>
+<area shape="rect" id="node2" href="$classpkg__commands_1_1GoCommand.html#a82e9a64a0fac612f788060a90c83f9b1" title="Make the player go to the Room through it&#39;s direction in the parameter field. " alt="" coords="528,12,773,39"/>
+<area shape="rect" id="node3" href="$classpkg__commands_1_1GoCommand.html#acbf1aa81fa5b1aef7cafb8b4e3ace3a9" title="Check if the wanted Room is connected to the current Room and go to this room. " alt="" coords="267,34,480,75"/>
 </map>

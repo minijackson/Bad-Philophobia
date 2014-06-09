@@ -1,3 +1,8 @@
+/**
+ * \package pkg_game
+ * Package containing all the classes in relation with the game processing
+ */
+
 package pkg_game;
 
 import pkg_world.Player;

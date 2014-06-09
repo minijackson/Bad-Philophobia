@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__commands_1_1HelpCommand.html#a332d3e57539dfc82f8c539f8b3e24dd6" target="_top" xlink:title="pkg_commands.HelpCommand.execute">
+<g id="a_node2"><a xlink:href="classpkg__commands_1_1HelpCommand.html#a332d3e57539dfc82f8c539f8b3e24dd6" target="_top" xlink:title="Saves user&#39;s help in the parameter field. ">
 <polygon fill="white" stroke="black" points="214.5,-0.5 214.5,-19.5 405.5,-19.5 405.5,-0.5 214.5,-0.5"/>
 <text text-anchor="middle" x="310" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.HelpCommand.execute</text>
 </a>
