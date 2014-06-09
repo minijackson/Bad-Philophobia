@@ -1,5 +1,6 @@
 package pkg_world;
 
+import pkg_game.GameEngine;
 import pkg_world.pkg_items.Item;
 import pkg_world.pkg_items.ItemList;
 import pkg_world.pkg_characters.Character;
@@ -8,6 +9,7 @@ import java.util.Set;
 import java.util.HashMap;
 import java.util.Enumeration;
 import java.util.Iterator;
+import java.util.Random;
 
 /**
  * Class used to handle a game's room.
@@ -135,6 +137,14 @@ public class Room {
 	}
 
 	/**
+	 * Remove the given Character to the Room.
+	 * @param characterName Character to be removed
+	 */
+	public void removeCharacter(String characterName) {
+		containedCharacters.remove(characterName);
+	}
+
+	/**
 	 * Getter for the description field.
 	 * @return The description field
 	 */
@@ -216,6 +226,25 @@ public class Room {
 	 */
 	public Room getExit(String direction) {
 		return exits.get(direction);
+	}
+
+	/**
+	 * Return a random adjacent Room
+	 * @return The wanted Room
+	 */
+	public Room getRandomAdjacentRoom() {
+		Room nextRoom;
+		do {
+			// Convertit les valeurs en tableau primitif de Room
+			// cf. http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html#toArray-T:A-
+			nextRoom = exits.values().toArray(new Room[0])[
+				// Valeur aléatoire entre 0 et la taille du tableau (exclus)
+				(new Random()).nextInt(exits.values().size())
+				];
+
+			// prevent the character from going to the random room
+		} while (nextRoom == GameEngine.getRooms().get(0));
+		return nextRoom;
 	}
 
 	/**

@@ -5,6 +5,7 @@ import pkg_world.Room;
 import pkg_world.pkg_items.Item;
 
 import pkg_world.pkg_characters.Character;
+import pkg_world.pkg_characters.MovingCharacter;
 
 import pkg_commands.Command;
 import pkg_commands.GoCommand;
@@ -16,6 +17,7 @@ import pkg_exceptions.*;
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Random;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -37,6 +39,11 @@ public class GameEngine
 	 * A list of all the rooms in the game.
 	 */
 	private static ArrayList<Room> gameRooms;
+
+	/**
+	 * Set of all the moving characters in the game.
+	 */
+	private HashSet<MovingCharacter> movingCharacters;
 
 	/**
 	 * User interface for the game.
@@ -62,6 +69,7 @@ public class GameEngine
 	 */
 	public GameEngine() {
 		gameRooms = new ArrayList<Room>();
+		movingCharacters = new HashSet<MovingCharacter>();
 		player = new Player((javax.swing.JOptionPane.showInputDialog("What is your name").toLowerCase().equals("retard"))? "moron" : "retard", createRooms());
 		javax.swing.JOptionPane.showMessageDialog(null, "Whatever, I'll call you " + player.getName() + ".");
 		helpCount = 0;
@@ -163,6 +171,9 @@ public class GameEngine
 		// initialise room exits
 		temperateBroadleaf.setExit("east", taiga);
 		temperateBroadleaf.setExit("south", steppe);
+		MovingCharacter mouse = new MovingCharacter(temperateBroadleaf, "mouse", "*very annoying high pitched noise (like a baby)*");
+		temperateBroadleaf.addCharacter(mouse);
+		movingCharacters.add(mouse);
 
 		taiga.setExit("west", temperateBroadleaf);
 		taiga.setExit("east", alpineTundra);
@@ -223,11 +234,19 @@ public class GameEngine
 
 		gui.setCommandsLeft(--commandCountDown);
 
+		// If we can cast the command into a GoCommand
+		// Or if it is the test command
+		if(GoCommand.class.isInstance(command) || command.getClass().equals(TestCommand.class)) {
+			// The MovingCharacters move
+			// Needed before the execute method
+			for(MovingCharacter character : movingCharacters) {
+				character.move();
+			}
+		}
+
 		try {
 			boolean quit = command.execute(player);
 
-			if(command.hasMessage())
-				gui.println(command.getMessage());
 			// If we can cast the command into a GoCommand
 			// Or if it is the test command
 			if(GoCommand.class.isInstance(command) || command.getClass().equals(TestCommand.class)) {
@@ -236,6 +255,9 @@ public class GameEngine
 					gui.showImage(player.getCurrentRoom().getImageName());
 				}
 			}
+
+			if(command.hasMessage())
+				gui.println(command.getMessage());
 
 			if(quit) {
 				endGame(false);
