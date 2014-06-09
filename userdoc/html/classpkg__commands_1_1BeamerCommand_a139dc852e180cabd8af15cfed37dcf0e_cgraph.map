@@ -1,7 +1,7 @@
 <map id="pkg_commands.BeamerCommand.execute" name="pkg_commands.BeamerCommand.execute">
-<area shape="rect" id="node2" href="$classpkg__commands_1_1BeamerCommand.html#ae71665296a18d581ad1f714c1078e37b" title="pkg_commands.BeamerCommand.charge" alt="" coords="328,35,595,61"/>
-<area shape="rect" id="node5" href="$classpkg__commands_1_1Command.html#a41c92d445be73ea9d62320c65efb8434" title="pkg_commands.Command.get\lParameter" alt="" coords="361,86,561,127"/>
-<area shape="rect" id="node6" href="$classpkg__commands_1_1Command.html#a02af95ab3f1898a66259ab7c177b6998" title="pkg_commands.Command.has\lParameter" alt="" coords="360,151,563,193"/>
-<area shape="rect" id="node3" href="$classpkg__world_1_1Player.html#a81893b37cd26426863087f353f8be3ab" title="pkg_world.Player.getBeamerRoom" alt="" coords="643,5,867,32"/>
-<area shape="rect" id="node4" href="$classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" title="pkg_commands.Command.set\lMessage" alt="" coords="655,57,855,98"/>
+<area shape="rect" id="node2" href="$classpkg__commands_1_1BeamerCommand.html#ae71665296a18d581ad1f714c1078e37b" title="Remember the current room. " alt="" coords="328,35,595,61"/>
+<area shape="rect" id="node5" href="$classpkg__commands_1_1Command.html#a41c92d445be73ea9d62320c65efb8434" title="Parameter field getter. " alt="" coords="361,86,561,127"/>
+<area shape="rect" id="node6" href="$classpkg__commands_1_1Command.html#a02af95ab3f1898a66259ab7c177b6998" title="Return true if the parameter is null. " alt="" coords="360,151,563,193"/>
+<area shape="rect" id="node3" href="$classpkg__world_1_1Player.html#a81893b37cd26426863087f353f8be3ab" title="beamerRoom field getter. " alt="" coords="643,5,867,32"/>
+<area shape="rect" id="node4" href="$classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" title="Message field setter. " alt="" coords="655,57,855,98"/>
 </map>

@@ -43,7 +43,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -75,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -94,87 +93,88 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Character.java</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="Character_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacepkg__world_1_1pkg__characters.html">    1</a></span>&#160;<span class="keyword">package </span>pkg_world.pkg_characters;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> <a class="code" href="classpkg__world_1_1pkg__items_1_1Item.html">pkg_world.pkg_items.Item</a>;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> java.util.ArrayList;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> java.util.Random;</div>
+<a href="Character_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="namespacepkg__world_1_1pkg__characters.html">    6</a></span>&#160;<span class="keyword">package </span>pkg_world.pkg_characters;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html">   12</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html">Character</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span> <span class="keyword">final</span> String name;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> <a class="code" href="classpkg__world_1_1pkg__items_1_1Item.html">pkg_world.pkg_items.Item</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">import</span> java.util.Random;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html">   17</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html">Character</a> {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">private</span> ArrayList&lt;String&gt; dialogs;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">private</span> <a class="code" href="classpkg__world_1_1pkg__items_1_1Item.html">Item</a> wantedItem;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">private</span> String successAction;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">private</span> String failureAction;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">boolean</span> satisfied;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#a50bcfb95d983b94d0335bd457d575872">   57</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#a50bcfb95d983b94d0335bd457d575872">Character</a>(<span class="keyword">final</span> String name){</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        this.name = name;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        satisfied = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        dialogs = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#a1dcca115f6536e7d4d99ab3880291376">   70</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#a1dcca115f6536e7d4d99ab3880291376">Character</a>(<span class="keyword">final</span> String name, <span class="keyword">final</span> String dialog) {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">this</span>(name);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        dialogs.add(dialog);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#a3944beae4c725dac40c288715af8061c">   81</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#a3944beae4c725dac40c288715af8061c">Character</a>(<span class="keyword">final</span> String name, <span class="keyword">final</span> String dialog, <a class="code" href="classpkg__world_1_1pkg__items_1_1Item.html">Item</a> wantedItem, <span class="keyword">final</span> String successAction, <span class="keyword">final</span> String failureAction) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">this</span>(name, dialog);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        this.wantedItem = wantedItem;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        this.successAction = successAction;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        this.failureAction = failureAction;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#a926da3833d26f4800fcd62917be5abcc">   92</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#a926da3833d26f4800fcd62917be5abcc">addDialog</a>(<span class="keyword">final</span> String dialog) {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        dialogs.add(dialog);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#a8b6d62bb87460e19dc0e4561beb1ece1">  100</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#a8b6d62bb87460e19dc0e4561beb1ece1">talk</a>() {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> (dialogs.isEmpty())? <span class="stringliteral">&quot;He doesn&#39;t want to talk to you. I understand him.&quot;</span> : dialogs.get((<span class="keyword">new</span> Random()).nextInt(dialogs.size()));</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#a0fb83fcff9b37c94eac3fb35868bebb2">  108</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#a0fb83fcff9b37c94eac3fb35868bebb2">takeItem</a>(<a class="code" href="classpkg__world_1_1pkg__items_1_1Item.html">Item</a> item) {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">if</span>(wantedItem == item)</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            satisfied = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">return</span> (wantedItem == item) ? successAction : failureAction;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#a816f8f79ef1e8c9635f0cdeb180b9f3f">  119</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#a816f8f79ef1e8c9635f0cdeb180b9f3f">wantsItem</a>(<a class="code" href="classpkg__world_1_1pkg__items_1_1Item.html">Item</a> item) {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">return</span> wantedItem == item;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#a660097e198e2e62f83d83a8872eb55d1">  127</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#a660097e198e2e62f83d83a8872eb55d1">getName</a>() {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">return</span> name;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#ae18c62b235802dd5bfacf662f0a1d17d">  131</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#ae18c62b235802dd5bfacf662f0a1d17d">isSatisfied</a>() {</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">return</span> satisfied;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
-<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_a8b6d62bb87460e19dc0e4561beb1ece1"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#a8b6d62bb87460e19dc0e4561beb1ece1">pkg_world.pkg_characters.Character.talk</a></div><div class="ttdeci">String talk()</div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00100">Character.java:100</a></div></div>
-<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_a1dcca115f6536e7d4d99ab3880291376"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#a1dcca115f6536e7d4d99ab3880291376">pkg_world.pkg_characters.Character.Character</a></div><div class="ttdeci">Character(final String name, final String dialog)</div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00070">Character.java:70</a></div></div>
-<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html">pkg_world.pkg_characters.Character</a></div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00012">Character.java:12</a></div></div>
-<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_a0fb83fcff9b37c94eac3fb35868bebb2"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#a0fb83fcff9b37c94eac3fb35868bebb2">pkg_world.pkg_characters.Character.takeItem</a></div><div class="ttdeci">String takeItem(Item item)</div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00108">Character.java:108</a></div></div>
-<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_a926da3833d26f4800fcd62917be5abcc"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#a926da3833d26f4800fcd62917be5abcc">pkg_world.pkg_characters.Character.addDialog</a></div><div class="ttdeci">void addDialog(final String dialog)</div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00092">Character.java:92</a></div></div>
-<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_a660097e198e2e62f83d83a8872eb55d1"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#a660097e198e2e62f83d83a8872eb55d1">pkg_world.pkg_characters.Character.getName</a></div><div class="ttdeci">String getName()</div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00127">Character.java:127</a></div></div>
-<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_a816f8f79ef1e8c9635f0cdeb180b9f3f"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#a816f8f79ef1e8c9635f0cdeb180b9f3f">pkg_world.pkg_characters.Character.wantsItem</a></div><div class="ttdeci">boolean wantsItem(Item item)</div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00119">Character.java:119</a></div></div>
-<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_a50bcfb95d983b94d0335bd457d575872"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#a50bcfb95d983b94d0335bd457d575872">pkg_world.pkg_characters.Character.Character</a></div><div class="ttdeci">Character(final String name)</div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00057">Character.java:57</a></div></div>
-<div class="ttc" id="classpkg__world_1_1pkg__items_1_1Item_html"><div class="ttname"><a href="classpkg__world_1_1pkg__items_1_1Item.html">pkg_world.pkg_items.Item</a></div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00007">Item.java:7</a></div></div>
-<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_a3944beae4c725dac40c288715af8061c"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#a3944beae4c725dac40c288715af8061c">pkg_world.pkg_characters.Character.Character</a></div><div class="ttdeci">Character(final String name, final String dialog, Item wantedItem, final String successAction, final String failureAction)</div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00081">Character.java:81</a></div></div>
-<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_ae18c62b235802dd5bfacf662f0a1d17d"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#ae18c62b235802dd5bfacf662f0a1d17d">pkg_world.pkg_characters.Character.isSatisfied</a></div><div class="ttdeci">boolean isSatisfied()</div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00131">Character.java:131</a></div></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">private</span> <span class="keyword">final</span> String name;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">private</span> ArrayList&lt;String&gt; dialogs;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">private</span> <a class="code" href="classpkg__world_1_1pkg__items_1_1Item.html">Item</a> wantedItem;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">private</span> String successAction;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">private</span> String failureAction;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">boolean</span> satisfied;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#a50bcfb95d983b94d0335bd457d575872">   62</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#a50bcfb95d983b94d0335bd457d575872">Character</a>(<span class="keyword">final</span> String name){</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        this.name = name;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        satisfied = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        dialogs = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#a1dcca115f6536e7d4d99ab3880291376">   75</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#a1dcca115f6536e7d4d99ab3880291376">Character</a>(<span class="keyword">final</span> String name, <span class="keyword">final</span> String dialog) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">this</span>(name);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        dialogs.add(dialog);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#a3944beae4c725dac40c288715af8061c">   86</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#a3944beae4c725dac40c288715af8061c">Character</a>(<span class="keyword">final</span> String name, <span class="keyword">final</span> String dialog, <a class="code" href="classpkg__world_1_1pkg__items_1_1Item.html">Item</a> wantedItem, <span class="keyword">final</span> String successAction, <span class="keyword">final</span> String failureAction) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keyword">this</span>(name, dialog);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        this.wantedItem = wantedItem;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        this.successAction = successAction;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        this.failureAction = failureAction;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#a926da3833d26f4800fcd62917be5abcc">   97</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#a926da3833d26f4800fcd62917be5abcc">addDialog</a>(<span class="keyword">final</span> String dialog) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        dialogs.add(dialog);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#a8b6d62bb87460e19dc0e4561beb1ece1">  105</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#a8b6d62bb87460e19dc0e4561beb1ece1">talk</a>() {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> (dialogs.isEmpty())? <span class="stringliteral">&quot;He doesn&#39;t want to talk to you. I understand him.&quot;</span> : dialogs.get((<span class="keyword">new</span> Random()).nextInt(dialogs.size()));</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#a0fb83fcff9b37c94eac3fb35868bebb2">  113</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#a0fb83fcff9b37c94eac3fb35868bebb2">takeItem</a>(<a class="code" href="classpkg__world_1_1pkg__items_1_1Item.html">Item</a> item) {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">if</span>(wantedItem == item)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            satisfied = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">return</span> (wantedItem == item) ? successAction : failureAction;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#a816f8f79ef1e8c9635f0cdeb180b9f3f">  124</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#a816f8f79ef1e8c9635f0cdeb180b9f3f">wantsItem</a>(<a class="code" href="classpkg__world_1_1pkg__items_1_1Item.html">Item</a> item) {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">return</span> wantedItem == item;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#a660097e198e2e62f83d83a8872eb55d1">  132</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#a660097e198e2e62f83d83a8872eb55d1">getName</a>() {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">return</span> name;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="classpkg__world_1_1pkg__characters_1_1Character.html#ae18c62b235802dd5bfacf662f0a1d17d">  136</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classpkg__world_1_1pkg__characters_1_1Character.html#ae18c62b235802dd5bfacf662f0a1d17d">isSatisfied</a>() {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">return</span> satisfied;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
+<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_a8b6d62bb87460e19dc0e4561beb1ece1"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#a8b6d62bb87460e19dc0e4561beb1ece1">pkg_world.pkg_characters.Character.talk</a></div><div class="ttdeci">String talk()</div><div class="ttdoc">A dialog to be displayed. </div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00105">Character.java:105</a></div></div>
+<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_a1dcca115f6536e7d4d99ab3880291376"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#a1dcca115f6536e7d4d99ab3880291376">pkg_world.pkg_characters.Character.Character</a></div><div class="ttdeci">Character(final String name, final String dialog)</div><div class="ttdoc">Constructor for Character with name and dialog only. </div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00075">Character.java:75</a></div></div>
+<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html">pkg_world.pkg_characters.Character</a></div><div class="ttdoc">class Character </div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00017">Character.java:17</a></div></div>
+<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_a0fb83fcff9b37c94eac3fb35868bebb2"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#a0fb83fcff9b37c94eac3fb35868bebb2">pkg_world.pkg_characters.Character.takeItem</a></div><div class="ttdeci">String takeItem(Item item)</div><div class="ttdoc">Try to give him an Item. </div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00113">Character.java:113</a></div></div>
+<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_a926da3833d26f4800fcd62917be5abcc"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#a926da3833d26f4800fcd62917be5abcc">pkg_world.pkg_characters.Character.addDialog</a></div><div class="ttdeci">void addDialog(final String dialog)</div><div class="ttdoc">Add a possible dialog. </div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00097">Character.java:97</a></div></div>
+<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_a660097e198e2e62f83d83a8872eb55d1"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#a660097e198e2e62f83d83a8872eb55d1">pkg_world.pkg_characters.Character.getName</a></div><div class="ttdeci">String getName()</div><div class="ttdoc">Name field getter. </div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00132">Character.java:132</a></div></div>
+<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_a816f8f79ef1e8c9635f0cdeb180b9f3f"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#a816f8f79ef1e8c9635f0cdeb180b9f3f">pkg_world.pkg_characters.Character.wantsItem</a></div><div class="ttdeci">boolean wantsItem(Item item)</div><div class="ttdoc">Returns true if the given Item is wanted by the creature/character. </div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00124">Character.java:124</a></div></div>
+<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_a50bcfb95d983b94d0335bd457d575872"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#a50bcfb95d983b94d0335bd457d575872">pkg_world.pkg_characters.Character.Character</a></div><div class="ttdeci">Character(final String name)</div><div class="ttdoc">Constructor for Character with name only. </div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00062">Character.java:62</a></div></div>
+<div class="ttc" id="classpkg__world_1_1pkg__items_1_1Item_html"><div class="ttname"><a href="classpkg__world_1_1pkg__items_1_1Item.html">pkg_world.pkg_items.Item</a></div><div class="ttdoc">Class used to handle an item contained in a Room. </div><div class="ttdef"><b>Definition:</b> <a href="Item_8java_source.html#l00012">Item.java:12</a></div></div>
+<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_a3944beae4c725dac40c288715af8061c"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#a3944beae4c725dac40c288715af8061c">pkg_world.pkg_characters.Character.Character</a></div><div class="ttdeci">Character(final String name, final String dialog, Item wantedItem, final String successAction, final String failureAction)</div><div class="ttdoc">Constructor for Character. </div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00086">Character.java:86</a></div></div>
+<div class="ttc" id="classpkg__world_1_1pkg__characters_1_1Character_html_ae18c62b235802dd5bfacf662f0a1d17d"><div class="ttname"><a href="classpkg__world_1_1pkg__characters_1_1Character.html#ae18c62b235802dd5bfacf662f0a1d17d">pkg_world.pkg_characters.Character.isSatisfied</a></div><div class="ttdeci">boolean isSatisfied()</div><div class="ttdef"><b>Definition:</b> <a href="Character_8java_source.html#l00136">Character.java:136</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 9 2014 13:50:56 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 9 2014 21:23:55 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

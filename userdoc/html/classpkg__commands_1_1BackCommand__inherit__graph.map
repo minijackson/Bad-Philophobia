@@ -1,4 +1,4 @@
 <map id="pkg_commands.BackCommand" name="pkg_commands.BackCommand">
-<area shape="rect" id="node2" href="$classpkg__commands_1_1GoCommand.html" title="{pkg_commands.GoCommand\n||+ GoCommand()\l+ execute()\l# goRoomCheck()\l# goRoomNoCheck()\l# getRandomRoom()\l}" alt="" coords="12,264,207,400"/>
-<area shape="rect" id="node3" href="$classpkg__commands_1_1Command.html" title="{pkg_commands.Command\n||+ getParameter()\l+ getSecondParameter()\l+ setParameter()\l+ setSecondParameter()\l+ hasParameter()\l+ hasSecondParameter()\l+ getMessage()\l+ hasMessage()\l+ execute()\l# setMessage()\l}" alt="" coords="20,6,199,215"/>
+<area shape="rect" id="node2" href="$classpkg__commands_1_1GoCommand.html" title="class GoCommand used to make the player go to a given Room. " alt="" coords="12,264,207,400"/>
+<area shape="rect" id="node3" href="$classpkg__commands_1_1Command.html" title="Class used to handle a command of one or two words. " alt="" coords="20,6,199,215"/>
 </map>

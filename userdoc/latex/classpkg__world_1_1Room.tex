@@ -3,6 +3,11 @@
 }
 
 
+Class used to handle a game's room.  
+
+
+
+
 Collaboration diagram for pkg\-\_\-world.\-Room\-:
 \nopagebreak
 \begin{figure}[H]
@@ -15,49 +20,51 @@ Collaboration diagram for pkg\-\_\-world.\-Room\-:
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classpkg__world_1_1Room_ae48ca6830c8c9368ab1cb7e9b006d157}{Room} (String description, String image)
-\item 
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpkg__world_1_1Room}{Room} class constructor. \end{DoxyCompactList}\item 
 \hyperlink{classpkg__world_1_1Room_abd6108f1f6d320be8d4fc1418f09d2eb}{Room} (String description, String image, \hyperlink{classpkg__world_1_1pkg__items_1_1ItemList}{Item\-List} item\-List, Hash\-Map$<$ String, \hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character} $>$ characters)
-\item 
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpkg__world_1_1Room}{Room} class constructor with the items. \end{DoxyCompactList}\item 
 void \hyperlink{classpkg__world_1_1Room_a4a97591f3b574b3d0086843a919a0214}{set\-Exit} (String direction, \hyperlink{classpkg__world_1_1Room}{Room} neighbor)
-\item 
+\begin{DoxyCompactList}\small\item\em Define a room in a relative direction to the current room. \end{DoxyCompactList}\item 
 \hyperlink{classpkg__world_1_1pkg__items_1_1ItemList}{Item\-List} \hyperlink{classpkg__world_1_1Room_a969205a4d2d2d9e30d1e1db9fc3f0b43}{get\-Contained\-Items} ()
-\item 
+\begin{DoxyCompactList}\small\item\em contained\-Item field getter. \end{DoxyCompactList}\item 
 \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} \hyperlink{classpkg__world_1_1Room_a8624c98bd006830d4484dae2dcd8c8e7}{get\-Item} (String name)
-\item 
+\begin{DoxyCompactList}\small\item\em Return an Item through it's name. \end{DoxyCompactList}\item 
 \hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character} \hyperlink{classpkg__world_1_1Room_afe89d01c098acd297e91d313cb65aff1}{get\-Character} (String name)
-\item 
+\begin{DoxyCompactList}\small\item\em Return an Character through it's name. \end{DoxyCompactList}\item 
 boolean \hyperlink{classpkg__world_1_1Room_aefa26e1bc5088dd199dde2e9d471c490}{has\-Item} (String name)
-\item 
+\begin{DoxyCompactList}\small\item\em Check if the room has the given Item through it's name. \end{DoxyCompactList}\item 
 boolean \hyperlink{classpkg__world_1_1Room_a96612764dfeea7855090e586f02da188}{has\-Character} (String name)
-\item 
+\begin{DoxyCompactList}\small\item\em Check if the room has the given Character through it's name. \end{DoxyCompactList}\item 
 void \hyperlink{classpkg__world_1_1Room_a118585101b274edfdd43b724382de89c}{add\-Item} (\hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} item)
-\item 
+\begin{DoxyCompactList}\small\item\em Add the given Item in the \hyperlink{classpkg__world_1_1Room}{Room}. \end{DoxyCompactList}\item 
 void \hyperlink{classpkg__world_1_1Room_a8446601b93b79b1e0ab0c8be500f40b1}{add\-Character} (\hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character} character)
 \item 
 void \hyperlink{classpkg__world_1_1Room_ab84c99b33e69d4a3e0700cab4b9efeaa}{remove\-Item} (String item\-Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Remove the given Item to the \hyperlink{classpkg__world_1_1Room}{Room}. \end{DoxyCompactList}\item 
 void \hyperlink{classpkg__world_1_1Room_adca74901eed0132c7bb9ba15b993ac0b}{remove\-Character} (String character\-Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Remove the given Character to the \hyperlink{classpkg__world_1_1Room}{Room}. \end{DoxyCompactList}\item 
 String \hyperlink{classpkg__world_1_1Room_adb98ed16e34549faabed35f90673d266}{get\-Short\-Description} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Getter for the description field. \end{DoxyCompactList}\item 
 String \hyperlink{classpkg__world_1_1Room_acc8ee9123c9a77428c1e66fbba34aeac}{get\-Long\-Description} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Return the description of the room, the available exits plus the items in the room if any. \end{DoxyCompactList}\item 
 String \hyperlink{classpkg__world_1_1Room_a3ea436ad00d00484b429992ef94535ac}{get\-Human\-Items\-List} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Return a human readable list of the items in the room. \end{DoxyCompactList}\item 
 String \hyperlink{classpkg__world_1_1Room_a1ddbdc5022f7f494ac6250ca3f42672c}{get\-Human\-Characters\-List} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Return a human readable list of the characters in the room. \end{DoxyCompactList}\item 
 \hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Room_ae05ae991a1692ffb29e8aef632d18b95}{get\-Exit} (String direction)
-\item 
+\begin{DoxyCompactList}\small\item\em Return the room in a specific direction. \end{DoxyCompactList}\item 
 \hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Room_a00952ff3743ec6cd8d238dada7506f63}{get\-Random\-Adjacent\-Room} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Return a random adjacent \hyperlink{classpkg__world_1_1Room}{Room}. \end{DoxyCompactList}\item 
 boolean \hyperlink{classpkg__world_1_1Room_a305aab25719c2b75a0c28c9a53a3c9d3}{is\-Exit} (\hyperlink{classpkg__world_1_1Room}{Room} exit)
-\item 
+\begin{DoxyCompactList}\small\item\em Check if the given \hyperlink{classpkg__world_1_1Room}{Room} is an exit of this \hyperlink{classpkg__world_1_1Room}{Room}. \end{DoxyCompactList}\item 
 String \hyperlink{classpkg__world_1_1Room_a5d1a496c1fd2e4ba73177e1182c9f4f1}{get\-Image\-Name} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter for the image\-Name field. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Class used to handle a game's room. \begin{DoxyAuthor}{Author}
+Class used to handle a game's room. 
+
+\begin{DoxyAuthor}{Author}
 Rémi N\-I\-C\-O\-L\-E 
 \end{DoxyAuthor}
 
@@ -75,7 +82,11 @@ Definition at line \hyperlink{Room_8java_source_l00019}{19} of file \hyperlink{R
 \item[{String}]{image}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_ae48ca6830c8c9368ab1cb7e9b006d157}
+
+
 \hyperlink{classpkg__world_1_1Room}{Room} class constructor. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em description} & Description for the room \\
 \hline
@@ -102,7 +113,11 @@ Definition at line \hyperlink{Room_8java_source_l00052}{52} of file \hyperlink{R
 \item[{Hash\-Map$<$ String, {\bf Character} $>$}]{characters}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_abd6108f1f6d320be8d4fc1418f09d2eb}
+
+
 \hyperlink{classpkg__world_1_1Room}{Room} class constructor with the items. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em description} & Description for the room \\
 \hline
@@ -153,7 +168,11 @@ Definition at line \hyperlink{Room_8java_source_l00127}{127} of file \hyperlink{
 \item[{{\bf Item}}]{item}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_a118585101b274edfdd43b724382de89c}
+
+
 Add the given Item in the \hyperlink{classpkg__world_1_1Room}{Room}. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em item} & Item to be added \\
 \hline
@@ -175,7 +194,11 @@ Definition at line \hyperlink{Room_8java_source_l00123}{123} of file \hyperlink{
 \item[{String}]{name}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_afe89d01c098acd297e91d313cb65aff1}
-Return an Character through it's name. \begin{DoxyReturn}{Returns}
+
+
+Return an Character through it's name. 
+
+\begin{DoxyReturn}{Returns}
 The wanted Character 
 \end{DoxyReturn}
 
@@ -195,7 +218,11 @@ Definition at line \hyperlink{Room_8java_source_l00099}{99} of file \hyperlink{R
 {}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_a969205a4d2d2d9e30d1e1db9fc3f0b43}
-contained\-Item field getter. \begin{DoxyReturn}{Returns}
+
+
+contained\-Item field getter. 
+
+\begin{DoxyReturn}{Returns}
 The \hyperlink{classpkg__world_1_1Room}{Room}'s inventory 
 \end{DoxyReturn}
 
@@ -215,7 +242,11 @@ Definition at line \hyperlink{Room_8java_source_l00083}{83} of file \hyperlink{R
 \item[{String}]{direction}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_ae05ae991a1692ffb29e8aef632d18b95}
+
+
 Return the room in a specific direction. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em direction} & The direction of the wanted room \\
 \hline
@@ -240,7 +271,11 @@ Definition at line \hyperlink{Room_8java_source_l00227}{227} of file \hyperlink{
 {}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_a1ddbdc5022f7f494ac6250ca3f42672c}
-Return a human readable list of the characters in the room. \begin{DoxyReturn}{Returns}
+
+
+Return a human readable list of the characters in the room. 
+
+\begin{DoxyReturn}{Returns}
 The list of the items 
 \end{DoxyReturn}
 
@@ -276,7 +311,11 @@ Here is the caller graph for this function\-:
 {}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_a3ea436ad00d00484b429992ef94535ac}
-Return a human readable list of the items in the room. \begin{DoxyReturn}{Returns}
+
+
+Return a human readable list of the items in the room. 
+
+\begin{DoxyReturn}{Returns}
 The list of the items 
 \end{DoxyReturn}
 
@@ -312,7 +351,11 @@ Here is the caller graph for this function\-:
 {}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_a5d1a496c1fd2e4ba73177e1182c9f4f1}
-Getter for the image\-Name field. \begin{DoxyReturn}{Returns}
+
+
+Getter for the image\-Name field. 
+
+\begin{DoxyReturn}{Returns}
 The name of the \hyperlink{classpkg__world_1_1Room}{Room}'s image representation 
 \end{DoxyReturn}
 
@@ -332,7 +375,11 @@ Definition at line \hyperlink{Room_8java_source_l00263}{263} of file \hyperlink{
 \item[{String}]{name}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_a8624c98bd006830d4484dae2dcd8c8e7}
-Return an Item through it's name. \begin{DoxyReturn}{Returns}
+
+
+Return an Item through it's name. 
+
+\begin{DoxyReturn}{Returns}
 The wanted Item 
 \end{DoxyReturn}
 
@@ -352,7 +399,11 @@ Definition at line \hyperlink{Room_8java_source_l00091}{91} of file \hyperlink{R
 {}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_acc8ee9123c9a77428c1e66fbba34aeac}
-Return the description of the room, the available exits plus the items in the room if any. \begin{DoxyReturn}{Returns}
+
+
+Return the description of the room, the available exits plus the items in the room if any. 
+
+\begin{DoxyReturn}{Returns}
 The description. 
 \end{DoxyReturn}
 
@@ -393,7 +444,11 @@ Here is the call graph for this function\-:
 {}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_a00952ff3743ec6cd8d238dada7506f63}
-Return a random adjacent \hyperlink{classpkg__world_1_1Room}{Room} \begin{DoxyReturn}{Returns}
+
+
+Return a random adjacent \hyperlink{classpkg__world_1_1Room}{Room}. 
+
+\begin{DoxyReturn}{Returns}
 The wanted \hyperlink{classpkg__world_1_1Room}{Room} 
 \end{DoxyReturn}
 
@@ -402,7 +457,7 @@ Definition at line \hyperlink{Room_8java_source_l00235}{235} of file \hyperlink{
 
 
 
-References \hyperlink{GameEngine_8java_source_l00289}{pkg\-\_\-game.\-Game\-Engine.\-get\-Rooms()}.
+References \hyperlink{GameEngine_8java_source_l00306}{pkg\-\_\-game.\-Game\-Engine.\-get\-Rooms()}.
 
 
 \begin{DoxyCode}
@@ -440,7 +495,11 @@ Here is the call graph for this function\-:
 {}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_adb98ed16e34549faabed35f90673d266}
-Getter for the description field. \begin{DoxyReturn}{Returns}
+
+
+Getter for the description field. 
+
+\begin{DoxyReturn}{Returns}
 The description field 
 \end{DoxyReturn}
 
@@ -460,7 +519,11 @@ Definition at line \hyperlink{Room_8java_source_l00151}{151} of file \hyperlink{
 \item[{String}]{name}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_a96612764dfeea7855090e586f02da188}
-Check if the room has the given Character through it's name. \begin{DoxyReturn}{Returns}
+
+
+Check if the room has the given Character through it's name. 
+
+\begin{DoxyReturn}{Returns}
 True if this \hyperlink{classpkg__world_1_1Room}{Room} has the Character 
 \end{DoxyReturn}
 
@@ -480,7 +543,11 @@ Definition at line \hyperlink{Room_8java_source_l00115}{115} of file \hyperlink{
 \item[{String}]{name}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_aefa26e1bc5088dd199dde2e9d471c490}
-Check if the room has the given Item through it's name. \begin{DoxyReturn}{Returns}
+
+
+Check if the room has the given Item through it's name. 
+
+\begin{DoxyReturn}{Returns}
 True if this \hyperlink{classpkg__world_1_1Room}{Room} has the Item 
 \end{DoxyReturn}
 
@@ -500,7 +567,11 @@ Definition at line \hyperlink{Room_8java_source_l00107}{107} of file \hyperlink{
 \item[{{\bf Room}}]{exit}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_a305aab25719c2b75a0c28c9a53a3c9d3}
+
+
 Check if the given \hyperlink{classpkg__world_1_1Room}{Room} is an exit of this \hyperlink{classpkg__world_1_1Room}{Room}. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em exit} & The \hyperlink{classpkg__world_1_1Room}{Room} to check \\
 \hline
@@ -525,7 +596,11 @@ Definition at line \hyperlink{Room_8java_source_l00255}{255} of file \hyperlink{
 \item[{String}]{character\-Name}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_adca74901eed0132c7bb9ba15b993ac0b}
+
+
 Remove the given Character to the \hyperlink{classpkg__world_1_1Room}{Room}. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em character\-Name} & Character to be removed \\
 \hline
@@ -547,7 +622,11 @@ Definition at line \hyperlink{Room_8java_source_l00143}{143} of file \hyperlink{
 \item[{String}]{item\-Name}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_ab84c99b33e69d4a3e0700cab4b9efeaa}
+
+
 Remove the given Item to the \hyperlink{classpkg__world_1_1Room}{Room}. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em item\-Name} & Item to be removed \\
 \hline
@@ -570,7 +649,11 @@ Definition at line \hyperlink{Room_8java_source_l00135}{135} of file \hyperlink{
 \item[{{\bf Room}}]{neighbor}
 \end{DoxyParamCaption}
 )}}\label{classpkg__world_1_1Room_a4a97591f3b574b3d0086843a919a0214}
+
+
 Define a room in a relative direction to the current room. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em direction} & Direction in which the room is. \\
 \hline

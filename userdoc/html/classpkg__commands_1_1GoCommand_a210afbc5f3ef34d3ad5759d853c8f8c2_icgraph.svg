@@ -63,7 +63,7 @@ var sectionId = 'dynsection-7';
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__commands_1_1GoCommand.html#a82e9a64a0fac612f788060a90c83f9b1" target="_top" xlink:title="pkg_commands.GoCommand.execute">
+<g id="a_node2"><a xlink:href="classpkg__commands_1_1GoCommand.html#a82e9a64a0fac612f788060a90c83f9b1" target="_top" xlink:title="Make the player go to the Room through it&#39;s direction in the parameter field. ">
 <polygon fill="white" stroke="black" points="392,-27.5 392,-46.5 576,-46.5 576,-27.5 392,-27.5"/>
 <text text-anchor="middle" x="484" y="-34.5" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.GoCommand.execute</text>
 </a>
@@ -76,7 +76,7 @@ var sectionId = 'dynsection-7';
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="classpkg__commands_1_1GoCommand.html#acbf1aa81fa5b1aef7cafb8b4e3ace3a9" target="_top" xlink:title="pkg_commands.GoCommand.go\lRoomCheck">
+<g id="a_node3"><a xlink:href="classpkg__commands_1_1GoCommand.html#acbf1aa81fa5b1aef7cafb8b4e3ace3a9" target="_top" xlink:title="Check if the wanted Room is connected to the current Room and go to this room. ">
 <polygon fill="white" stroke="black" points="196,-0 196,-30 356,-30 356,-0 196,-0"/>
 <text text-anchor="start" x="204" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.GoCommand.go</text>
 <text text-anchor="middle" x="276" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">RoomCheck</text>

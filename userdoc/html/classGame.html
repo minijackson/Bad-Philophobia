@@ -43,7 +43,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -78,7 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -97,6 +96,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Game Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Main class used to instantiate other objects.  
+ <a href="classGame.html#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for Game:</div>
 <div class="dyncontent">
@@ -107,11 +109,13 @@ Collaboration diagram for Game:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2e034e53e9c032964ecd2a831b29a616"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a2e034e53e9c032964ecd2a831b29a616">Game</a> ()</td></tr>
+<tr class="memdesc:a2e034e53e9c032964ecd2a831b29a616"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classGame.html" title="Main class used to instantiate other objects. ">Game</a> class constructor.  <a href="#a2e034e53e9c032964ecd2a831b29a616">More...</a><br/></td></tr>
 <tr class="separator:a2e034e53e9c032964ecd2a831b29a616"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae52595a27ac1b327b05db2129ad81fca"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#ae52595a27ac1b327b05db2129ad81fca">main</a> (String[] args)</td></tr>
+<tr class="memdesc:ae52595a27ac1b327b05db2129ad81fca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function.  <a href="#ae52595a27ac1b327b05db2129ad81fca">More...</a><br/></td></tr>
 <tr class="separator:ae52595a27ac1b327b05db2129ad81fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -132,7 +136,8 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="classGame.html">Game</a> class constructor </p>
+
+<p><a class="el" href="classGame.html" title="Main class used to instantiate other objects. ">Game</a> class constructor. </p>
 
 <p>Definition at line <a class="el" href="Game_8java_source.html#l00032">32</a> of file <a class="el" href="Game_8java_source.html">Game.java</a>.</p>
 
@@ -142,8 +147,8 @@ Static Public Member Functions</h2></td></tr>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        gui = <span class="keyword">new</span> <a class="code" href="classpkg__game_1_1UserInterface.html">UserInterface</a>(engine);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        engine.setGUI(gui);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
-<div class="ttc" id="classpkg__game_1_1UserInterface_html"><div class="ttname"><a href="classpkg__game_1_1UserInterface.html">pkg_game.UserInterface</a></div><div class="ttdef"><b>Definition:</b> <a href="UserInterface_8java_source.html#l00015">UserInterface.java:15</a></div></div>
-<div class="ttc" id="classpkg__game_1_1GameEngine_html"><div class="ttname"><a href="classpkg__game_1_1GameEngine.html">pkg_game.GameEngine</a></div><div class="ttdef"><b>Definition:</b> <a href="GameEngine_8java_source.html#l00031">GameEngine.java:31</a></div></div>
+<div class="ttc" id="classpkg__game_1_1UserInterface_html"><div class="ttname"><a href="classpkg__game_1_1UserInterface.html">pkg_game.UserInterface</a></div><div class="ttdoc">Class handling the game&#39;s user interface. </div><div class="ttdef"><b>Definition:</b> <a href="UserInterface_8java_source.html#l00015">UserInterface.java:15</a></div></div>
+<div class="ttc" id="classpkg__game_1_1GameEngine_html"><div class="ttname"><a href="classpkg__game_1_1GameEngine.html">pkg_game.GameEngine</a></div><div class="ttdoc">Class handling the gameplay for the game. </div><div class="ttdef"><b>Definition:</b> <a href="GameEngine_8java_source.html#l00037">GameEngine.java:37</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -177,6 +182,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Main function. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -191,8 +197,8 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                                           {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="classGame.html">Game</a> game = <span class="keyword">new</span> <a class="code" href="classGame.html#a2e034e53e9c032964ecd2a831b29a616">Game</a>();</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
-<div class="ttc" id="classGame_html_a2e034e53e9c032964ecd2a831b29a616"><div class="ttname"><a href="classGame.html#a2e034e53e9c032964ecd2a831b29a616">Game.Game</a></div><div class="ttdeci">Game()</div><div class="ttdef"><b>Definition:</b> <a href="Game_8java_source.html#l00032">Game.java:32</a></div></div>
-<div class="ttc" id="classGame_html"><div class="ttname"><a href="classGame.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="Game_8java_source.html#l00009">Game.java:9</a></div></div>
+<div class="ttc" id="classGame_html_a2e034e53e9c032964ecd2a831b29a616"><div class="ttname"><a href="classGame.html#a2e034e53e9c032964ecd2a831b29a616">Game.Game</a></div><div class="ttdeci">Game()</div><div class="ttdoc">Game class constructor. </div><div class="ttdef"><b>Definition:</b> <a href="Game_8java_source.html#l00032">Game.java:32</a></div></div>
+<div class="ttc" id="classGame_html"><div class="ttname"><a href="classGame.html">Game</a></div><div class="ttdoc">Main class used to instantiate other objects. </div><div class="ttdef"><b>Definition:</b> <a href="Game_8java_source.html#l00009">Game.java:9</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -210,7 +216,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 9 2014 13:50:56 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 9 2014 21:23:55 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

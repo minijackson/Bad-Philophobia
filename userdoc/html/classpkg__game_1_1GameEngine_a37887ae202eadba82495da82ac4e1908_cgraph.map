@@ -1,4 +1,4 @@
 <map id="pkg_game.GameEngine.processCommand" name="pkg_game.GameEngine.processCommand">
-<area shape="rect" id="node2" href="$classpkg__world_1_1Player.html#a5ff0ede152d97c0c9cf6603c9a422a77" title="pkg_world.Player.getCurrentRoom" alt="" coords="265,5,487,32"/>
-<area shape="rect" id="node3" href="$classpkg__game_1_1UserInterface.html#ac4d82f989416d7cc64a6e2fba2f4ed75" title="pkg_game.UserInterface.println" alt="" coords="274,56,478,83"/>
+<area shape="rect" id="node2" href="$classpkg__world_1_1Player.html#a5ff0ede152d97c0c9cf6603c9a422a77" title="currentRoom field getter. " alt="" coords="265,5,487,32"/>
+<area shape="rect" id="node3" href="$classpkg__game_1_1UserInterface.html#ac4d82f989416d7cc64a6e2fba2f4ed75" title="Print the given text plus a newline in the text area. " alt="" coords="274,56,478,83"/>
 </map>

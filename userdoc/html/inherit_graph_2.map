@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$classpkg__exceptions_1_1IllegalArgumentException.html" title="pkg_exceptions.IllegalArgument\lException" alt="" coords="134,5,341,46"/>
-<area shape="rect" id="node3" href="$classpkg__exceptions_1_1NoArgumentException.html" title="pkg_exceptions.NoArgument\lException" alt="" coords="142,70,333,111"/>
-<area shape="rect" id="node4" href="$classpkg__exceptions_1_1UnauthorizedException.html" title="pkg_exceptions.Unauthorized\lException" alt="" coords="140,135,335,177"/>
+<area shape="rect" id="node2" href="$classpkg__exceptions_1_1IllegalArgumentException.html" title="class IllegalArgumentException used to tell that a command parameter is invalid. " alt="" coords="134,5,341,46"/>
+<area shape="rect" id="node3" href="$classpkg__exceptions_1_1NoArgumentException.html" title="class NoArgumentException used to tell that a given command must have a parameter. " alt="" coords="142,70,333,111"/>
+<area shape="rect" id="node4" href="$classpkg__exceptions_1_1UnauthorizedException.html" title="class UnauthorizedException used to tell that the user cannot execute a given command. " alt="" coords="140,135,335,177"/>
 </map>

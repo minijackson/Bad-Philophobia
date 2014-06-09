@@ -1,3 +1,3 @@
 <map id="pkg_commands.GoCommand" name="pkg_commands.GoCommand">
-<area shape="rect" id="node2" href="$classpkg__commands_1_1Command.html" title="{pkg_commands.Command\n||+ getParameter()\l+ getSecondParameter()\l+ setParameter()\l+ setSecondParameter()\l+ hasParameter()\l+ hasSecondParameter()\l+ getMessage()\l+ hasMessage()\l+ execute()\l# setMessage()\l}" alt="" coords="13,6,192,215"/>
+<area shape="rect" id="node2" href="$classpkg__commands_1_1Command.html" title="Class used to handle a command of one or two words. " alt="" coords="13,6,192,215"/>
 </map>

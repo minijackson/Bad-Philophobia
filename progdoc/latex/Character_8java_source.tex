@@ -3,74 +3,75 @@
 }
 
 \begin{DoxyCode}
-\hypertarget{Character_8java_source_l00001}{}\hyperlink{namespacepkg__world_1_1pkg__characters}{00001} \textcolor{keyword}{package }pkg\_world.pkg\_characters;
-00002 
-00003 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{pkg\_world.pkg\_items.Item};
-00004 
-00005 \textcolor{keyword}{import} java.util.ArrayList;
-00006 \textcolor{keyword}{import} java.util.Random;
+00001 
+\hypertarget{Character_8java_source_l00006}{}\hyperlink{namespacepkg__world_1_1pkg__characters}{00006} \textcolor{keyword}{package }pkg\_world.pkg\_characters;
 00007 
-\hypertarget{Character_8java_source_l00012}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{00012} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character} \{
-00013 
-\hypertarget{Character_8java_source_l00017}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{00017}     \textcolor{keyword}{private} \textcolor{keyword}{final} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name};
+00008 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{pkg\_world.pkg\_items.Item};
+00009 
+00010 \textcolor{keyword}{import} java.util.ArrayList;
+00011 \textcolor{keyword}{import} java.util.Random;
+00012 
+\hypertarget{Character_8java_source_l00017}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{00017} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character} \{
 00018 
-\hypertarget{Character_8java_source_l00023}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a4747943f9a5d0f11605230df4d2559d2}{00023}     \textcolor{keyword}{private} ArrayList<String> \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a4747943f9a5d0f11605230df4d2559d2}{dialogs};
-00024 
-\hypertarget{Character_8java_source_l00030}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3e5abf14759d18446163db9597d10a44}{00030}     \textcolor{keyword}{private} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3e5abf14759d18446163db9597d10a44}{wantedItem};
-00031 
-\hypertarget{Character_8java_source_l00036}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3f1c0fc80b859a8625f334782b1bb74a}{00036}     \textcolor{keyword}{private} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3f1c0fc80b859a8625f334782b1bb74a}{successAction};
-00037 
-\hypertarget{Character_8java_source_l00042}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_add959e452ec866785ef0d48f054b13ab}{00042}     \textcolor{keyword}{private} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_add959e452ec866785ef0d48f054b13ab}{failureAction};
-00043 
-\hypertarget{Character_8java_source_l00048}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a63a989f34f7ec28cf9e8c6c2a19c7daa}{00048}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a63a989f34f7ec28cf9e8c6c2a19c7daa}{satisfied};
-00049 
-\hypertarget{Character_8java_source_l00057}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a50bcfb95d983b94d0335bd457d575872}{00057}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a50bcfb95d983b94d0335bd457d575872}{Character}(\textcolor{keyword}{final} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name})\{
-00058         this.name = \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name};
-00059         \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a63a989f34f7ec28cf9e8c6c2a19c7daa}{satisfied} = \textcolor{keyword}{false};
-00060         \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a4747943f9a5d0f11605230df4d2559d2}{dialogs} = \textcolor{keyword}{new} ArrayList<String>();
-00061     \}
-00062 
-\hypertarget{Character_8java_source_l00070}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a1dcca115f6536e7d4d99ab3880291376}{00070}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a1dcca115f6536e7d4d99ab3880291376}{Character}(\textcolor{keyword}{final} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name}, \textcolor{keyword}{final} String dialog) \{
-00071         \textcolor{keyword}{this}(\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name});
-00072         dialogs.add(dialog);
-00073     \}
-00074 
-\hypertarget{Character_8java_source_l00081}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3944beae4c725dac40c288715af8061c}{00081}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3944beae4c725dac40c288715af8061c}{Character}(\textcolor{keyword}{final} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name}, \textcolor{keyword}{final} String dialog, \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} 
+\hypertarget{Character_8java_source_l00022}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{00022}     \textcolor{keyword}{private} \textcolor{keyword}{final} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name};
+00023 
+\hypertarget{Character_8java_source_l00028}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a4747943f9a5d0f11605230df4d2559d2}{00028}     \textcolor{keyword}{private} ArrayList<String> \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a4747943f9a5d0f11605230df4d2559d2}{dialogs};
+00029 
+\hypertarget{Character_8java_source_l00035}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3e5abf14759d18446163db9597d10a44}{00035}     \textcolor{keyword}{private} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3e5abf14759d18446163db9597d10a44}{wantedItem};
+00036 
+\hypertarget{Character_8java_source_l00041}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3f1c0fc80b859a8625f334782b1bb74a}{00041}     \textcolor{keyword}{private} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3f1c0fc80b859a8625f334782b1bb74a}{successAction};
+00042 
+\hypertarget{Character_8java_source_l00047}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_add959e452ec866785ef0d48f054b13ab}{00047}     \textcolor{keyword}{private} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_add959e452ec866785ef0d48f054b13ab}{failureAction};
+00048 
+\hypertarget{Character_8java_source_l00053}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a63a989f34f7ec28cf9e8c6c2a19c7daa}{00053}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a63a989f34f7ec28cf9e8c6c2a19c7daa}{satisfied};
+00054 
+\hypertarget{Character_8java_source_l00062}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a50bcfb95d983b94d0335bd457d575872}{00062}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a50bcfb95d983b94d0335bd457d575872}{Character}(\textcolor{keyword}{final} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name})\{
+00063         this.name = \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name};
+00064         \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a63a989f34f7ec28cf9e8c6c2a19c7daa}{satisfied} = \textcolor{keyword}{false};
+00065         \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a4747943f9a5d0f11605230df4d2559d2}{dialogs} = \textcolor{keyword}{new} ArrayList<String>();
+00066     \}
+00067 
+\hypertarget{Character_8java_source_l00075}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a1dcca115f6536e7d4d99ab3880291376}{00075}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a1dcca115f6536e7d4d99ab3880291376}{Character}(\textcolor{keyword}{final} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name}, \textcolor{keyword}{final} String dialog) \{
+00076         \textcolor{keyword}{this}(\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name});
+00077         dialogs.add(dialog);
+00078     \}
+00079 
+\hypertarget{Character_8java_source_l00086}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3944beae4c725dac40c288715af8061c}{00086}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3944beae4c725dac40c288715af8061c}{Character}(\textcolor{keyword}{final} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name}, \textcolor{keyword}{final} String dialog, \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} 
       \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3e5abf14759d18446163db9597d10a44}{wantedItem}, \textcolor{keyword}{final} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3f1c0fc80b859a8625f334782b1bb74a}{successAction}, \textcolor{keyword}{final} String 
       \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_add959e452ec866785ef0d48f054b13ab}{failureAction}) \{
-00082         \textcolor{keyword}{this}(\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name}, dialog);
-00083         this.wantedItem = \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3e5abf14759d18446163db9597d10a44}{wantedItem};
-00084         this.successAction = \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3f1c0fc80b859a8625f334782b1bb74a}{successAction};
-00085         this.failureAction = \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_add959e452ec866785ef0d48f054b13ab}{failureAction};
-00086     \}
-00087 
-\hypertarget{Character_8java_source_l00092}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a926da3833d26f4800fcd62917be5abcc}{00092}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a926da3833d26f4800fcd62917be5abcc}{addDialog}(\textcolor{keyword}{final} String dialog) \{
-00093         dialogs.add(dialog);
-00094     \}
-00095 
-\hypertarget{Character_8java_source_l00100}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a8b6d62bb87460e19dc0e4561beb1ece1}{00100}     \textcolor{keyword}{public} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a8b6d62bb87460e19dc0e4561beb1ece1}{talk}() \{
-00101         \textcolor{keywordflow}{return} (\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a4747943f9a5d0f11605230df4d2559d2}{dialogs}.isEmpty())? \textcolor{stringliteral}{"He doesn't want to talk to you. I understand him."} : 
+00087         \textcolor{keyword}{this}(\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name}, dialog);
+00088         this.wantedItem = \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3e5abf14759d18446163db9597d10a44}{wantedItem};
+00089         this.successAction = \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3f1c0fc80b859a8625f334782b1bb74a}{successAction};
+00090         this.failureAction = \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_add959e452ec866785ef0d48f054b13ab}{failureAction};
+00091     \}
+00092 
+\hypertarget{Character_8java_source_l00097}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a926da3833d26f4800fcd62917be5abcc}{00097}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a926da3833d26f4800fcd62917be5abcc}{addDialog}(\textcolor{keyword}{final} String dialog) \{
+00098         dialogs.add(dialog);
+00099     \}
+00100 
+\hypertarget{Character_8java_source_l00105}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a8b6d62bb87460e19dc0e4561beb1ece1}{00105}     \textcolor{keyword}{public} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a8b6d62bb87460e19dc0e4561beb1ece1}{talk}() \{
+00106         \textcolor{keywordflow}{return} (\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a4747943f9a5d0f11605230df4d2559d2}{dialogs}.isEmpty())? \textcolor{stringliteral}{"He doesn't want to talk to you. I understand him."} : 
       \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a4747943f9a5d0f11605230df4d2559d2}{dialogs}.get((\textcolor{keyword}{new} Random()).nextInt(\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a4747943f9a5d0f11605230df4d2559d2}{dialogs}.size()));
-00102     \}
-00103 
-\hypertarget{Character_8java_source_l00108}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a0fb83fcff9b37c94eac3fb35868bebb2}{00108}     \textcolor{keyword}{public} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a0fb83fcff9b37c94eac3fb35868bebb2}{takeItem}(\hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} item) \{
-00109         \textcolor{keywordflow}{if}(\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3e5abf14759d18446163db9597d10a44}{wantedItem} == item)
-00110             \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a63a989f34f7ec28cf9e8c6c2a19c7daa}{satisfied} = \textcolor{keyword}{true};
-00111         \textcolor{keywordflow}{return} (\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3e5abf14759d18446163db9597d10a44}{wantedItem} == item) ? \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3f1c0fc80b859a8625f334782b1bb74a}{successAction} : 
+00107     \}
+00108 
+\hypertarget{Character_8java_source_l00113}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a0fb83fcff9b37c94eac3fb35868bebb2}{00113}     \textcolor{keyword}{public} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a0fb83fcff9b37c94eac3fb35868bebb2}{takeItem}(\hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} item) \{
+00114         \textcolor{keywordflow}{if}(\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3e5abf14759d18446163db9597d10a44}{wantedItem} == item)
+00115             \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a63a989f34f7ec28cf9e8c6c2a19c7daa}{satisfied} = \textcolor{keyword}{true};
+00116         \textcolor{keywordflow}{return} (\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3e5abf14759d18446163db9597d10a44}{wantedItem} == item) ? \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3f1c0fc80b859a8625f334782b1bb74a}{successAction} : 
       \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_add959e452ec866785ef0d48f054b13ab}{failureAction};
-00112     \}
-00113 
-\hypertarget{Character_8java_source_l00119}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a816f8f79ef1e8c9635f0cdeb180b9f3f}{00119}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a816f8f79ef1e8c9635f0cdeb180b9f3f}{wantsItem}(\hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} item) \{
-00120         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3e5abf14759d18446163db9597d10a44}{wantedItem} == item;
-00121     \}
-00122 
-\hypertarget{Character_8java_source_l00127}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a660097e198e2e62f83d83a8872eb55d1}{00127}     \textcolor{keyword}{public} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a660097e198e2e62f83d83a8872eb55d1}{getName}() \{
-00128         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name};
-00129     \}
-00130 
-\hypertarget{Character_8java_source_l00131}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_ae18c62b235802dd5bfacf662f0a1d17d}{00131}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_ae18c62b235802dd5bfacf662f0a1d17d}{isSatisfied}() \{
-00132         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a63a989f34f7ec28cf9e8c6c2a19c7daa}{satisfied};
-00133     \}
-00134 
-00135 \}
+00117     \}
+00118 
+\hypertarget{Character_8java_source_l00124}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a816f8f79ef1e8c9635f0cdeb180b9f3f}{00124}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a816f8f79ef1e8c9635f0cdeb180b9f3f}{wantsItem}(\hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} item) \{
+00125         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3e5abf14759d18446163db9597d10a44}{wantedItem} == item;
+00126     \}
+00127 
+\hypertarget{Character_8java_source_l00132}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a660097e198e2e62f83d83a8872eb55d1}{00132}     \textcolor{keyword}{public} String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a660097e198e2e62f83d83a8872eb55d1}{getName}() \{
+00133         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name};
+00134     \}
+00135 
+\hypertarget{Character_8java_source_l00136}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_ae18c62b235802dd5bfacf662f0a1d17d}{00136}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_ae18c62b235802dd5bfacf662f0a1d17d}{isSatisfied}() \{
+00137         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a63a989f34f7ec28cf9e8c6c2a19c7daa}{satisfied};
+00138     \}
+00139 
+00140 \}
 \end{DoxyCode}

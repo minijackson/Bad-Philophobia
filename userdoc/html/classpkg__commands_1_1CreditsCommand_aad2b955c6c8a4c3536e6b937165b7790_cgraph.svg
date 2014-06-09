@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" target="_top" xlink:title="pkg_commands.Command.set\lMessage">
+<g id="a_node2"><a xlink:href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" target="_top" xlink:title="Message field setter. ">
 <polygon fill="white" stroke="black" points="240,-0 240,-30 390,-30 390,-0 240,-0"/>
 <text text-anchor="start" x="248" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.set</text>
 <text text-anchor="middle" x="315" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">Message</text>

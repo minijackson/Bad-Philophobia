@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__game_1_1UserInterface.html" target="_top" xlink:title="pkg_game.UserInterface">
+<g id="a_node2"><a xlink:href="classpkg__game_1_1UserInterface.html" target="_top" xlink:title="Class handling the game&#39;s user interface. ">
 <polygon fill="white" stroke="black" points="116,-0.5 116,-19.5 240,-19.5 240,-0.5 116,-0.5"/>
 <text text-anchor="middle" x="178" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_game.UserInterface</text>
 </a>

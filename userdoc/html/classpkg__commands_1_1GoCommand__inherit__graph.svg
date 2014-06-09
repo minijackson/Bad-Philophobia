@@ -24,7 +24,7 @@
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="classpkg__commands_1_1BackCommand.html" target="_top" xlink:title="{pkg_commands.BackCommand\n||+ BackCommand()\l+ execute()\l}">
+<g id="a_node3"><a xlink:href="classpkg__commands_1_1BackCommand.html" target="_top" xlink:title="class BackCommand used to go back in a previous Room. ">
 <polygon fill="white" stroke="black" points="0,-6 0,-74 156,-74 156,-6 0,-6"/>
 <text text-anchor="middle" x="78" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.BackCommand</text>
 <polyline fill="none" stroke="black" points="0,-55 156,-55 "/>
@@ -42,7 +42,7 @@
 </g>
 <!-- Node4 -->
 <g id="node4" class="node"><title>Node4</title>
-<g id="a_node4"><a xlink:href="classpkg__commands_1_1BeamerCommand.html" target="_top" xlink:title="{pkg_commands.BeamerCommand\n||+ BeamerCommand()\l+ execute()\l+ charge()\l}">
+<g id="a_node4"><a xlink:href="classpkg__commands_1_1BeamerCommand.html" target="_top" xlink:title="class BeamerCommand used to teleport into a remembered room ">
 <polygon fill="white" stroke="black" points="174.5,-0.5 174.5,-79.5 341.5,-79.5 341.5,-0.5 174.5,-0.5"/>
 <text text-anchor="middle" x="258" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.BeamerCommand</text>
 <polyline fill="none" stroke="black" points="174.5,-60.5 341.5,-60.5 "/>
@@ -61,7 +61,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__commands_1_1Command.html" target="_top" xlink:title="{pkg_commands.Command\n||+ getParameter()\l+ getSecondParameter()\l+ setParameter()\l+ setSecondParameter()\l+ hasParameter()\l+ hasSecondParameter()\l+ getMessage()\l+ hasMessage()\l+ execute()\l# setMessage()\l}">
+<g id="a_node2"><a xlink:href="classpkg__commands_1_1Command.html" target="_top" xlink:title="Class used to handle a command of one or two words. ">
 <polygon fill="white" stroke="black" points="101,-255 101,-411 235,-411 235,-255 101,-255"/>
 <text text-anchor="middle" x="168" y="-399" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command</text>
 <polyline fill="none" stroke="black" points="101,-392 235,-392 "/>

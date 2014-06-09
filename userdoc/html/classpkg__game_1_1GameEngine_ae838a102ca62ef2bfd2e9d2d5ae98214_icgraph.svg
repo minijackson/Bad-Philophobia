@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__world_1_1Room.html#a00952ff3743ec6cd8d238dada7506f63" target="_top" xlink:title="pkg_world.Room.getRandom\lAdjacentRoom">
+<g id="a_node2"><a xlink:href="classpkg__world_1_1Room.html#a00952ff3743ec6cd8d238dada7506f63" target="_top" xlink:title="Return a random adjacent Room. ">
 <polygon fill="white" stroke="black" points="206.5,-0 206.5,-30 349.5,-30 349.5,-0 206.5,-0"/>
 <text text-anchor="start" x="214.5" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_world.Room.getRandom</text>
 <text text-anchor="middle" x="278" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">AdjacentRoom</text>

@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__commands_1_1Command.html#ac2a42e2bab264821892daefaf9a18b6c" target="_top" xlink:title="pkg_commands.Command.get\lMessage">
+<g id="a_node2"><a xlink:href="classpkg__commands_1_1Command.html#ac2a42e2bab264821892daefaf9a18b6c" target="_top" xlink:title="Message field getter. ">
 <polygon fill="white" stroke="black" points="229,-147 229,-177 379,-177 379,-147 229,-147"/>
 <text text-anchor="start" x="237" y="-165" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.get</text>
 <text text-anchor="middle" x="304" y="-154" font-family="Helvetica,sans-Serif" font-size="10.00">Message</text>
@@ -30,7 +30,7 @@
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="classpkg__commands_1_1Command.html#a41c92d445be73ea9d62320c65efb8434" target="_top" xlink:title="pkg_commands.Command.get\lParameter">
+<g id="a_node3"><a xlink:href="classpkg__commands_1_1Command.html#a41c92d445be73ea9d62320c65efb8434" target="_top" xlink:title="Parameter field getter. ">
 <polygon fill="white" stroke="black" points="229,-98 229,-128 379,-128 379,-98 229,-98"/>
 <text text-anchor="start" x="237" y="-116" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.get</text>
 <text text-anchor="middle" x="304" y="-105" font-family="Helvetica,sans-Serif" font-size="10.00">Parameter</text>
@@ -44,7 +44,7 @@
 </g>
 <!-- Node4 -->
 <g id="node4" class="node"><title>Node4</title>
-<g id="a_node4"><a xlink:href="classpkg__commands_1_1Command.html#a02af95ab3f1898a66259ab7c177b6998" target="_top" xlink:title="pkg_commands.Command.has\lParameter">
+<g id="a_node4"><a xlink:href="classpkg__commands_1_1Command.html#a02af95ab3f1898a66259ab7c177b6998" target="_top" xlink:title="Return true if the parameter is null. ">
 <polygon fill="white" stroke="black" points="228,-49 228,-79 380,-79 380,-49 228,-49"/>
 <text text-anchor="start" x="236" y="-67" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.has</text>
 <text text-anchor="middle" x="304" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00">Parameter</text>
@@ -58,7 +58,7 @@
 </g>
 <!-- Node5 -->
 <g id="node5" class="node"><title>Node5</title>
-<g id="a_node5"><a xlink:href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" target="_top" xlink:title="pkg_commands.Command.set\lMessage">
+<g id="a_node5"><a xlink:href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" target="_top" xlink:title="Message field setter. ">
 <polygon fill="white" stroke="black" points="229,-0 229,-30 379,-30 379,-0 229,-0"/>
 <text text-anchor="start" x="237" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.set</text>
 <text text-anchor="middle" x="304" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">Message</text>

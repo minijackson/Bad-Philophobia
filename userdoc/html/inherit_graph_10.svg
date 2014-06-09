@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__world_1_1pkg__items_1_1ItemList.html" target="_top" xlink:title="pkg_world.pkg_items.ItemList">
+<g id="a_node2"><a xlink:href="classpkg__world_1_1pkg__items_1_1ItemList.html" target="_top" xlink:title="class ItemList used to handle a list of Item (inventory). ">
 <polygon fill="white" stroke="black" points="96.5,-0.5 96.5,-19.5 243.5,-19.5 243.5,-0.5 96.5,-0.5"/>
 <text text-anchor="middle" x="170" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_world.pkg_items.ItemList</text>
 </a>

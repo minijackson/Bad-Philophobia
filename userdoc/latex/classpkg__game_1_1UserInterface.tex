@@ -3,6 +3,11 @@
 }
 
 
+Class handling the game's user interface.  
+
+
+
+
 Inheritance diagram for pkg\-\_\-game.\-User\-Interface\-:
 \nopagebreak
 \begin{figure}[H]
@@ -25,23 +30,25 @@ Collaboration diagram for pkg\-\_\-game.\-User\-Interface\-:
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classpkg__game_1_1UserInterface_abfbaf9bbfd3fd0bb80c8183793739f81}{User\-Interface} (\hyperlink{classpkg__game_1_1GameEngine}{Game\-Engine} game\-Engine)
-\item 
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpkg__game_1_1UserInterface}{User\-Interface} class constructor. \end{DoxyCompactList}\item 
 void \hyperlink{classpkg__game_1_1UserInterface_a84ff8e11b23631bd6c5a34f718360a1f}{set\-Commands\-Left} (int commands\-Left)
-\item 
+\begin{DoxyCompactList}\small\item\em Change the text for the commands left J\-Label. \end{DoxyCompactList}\item 
 void \hyperlink{classpkg__game_1_1UserInterface_a524492922d9f29b45f4687441017e322}{print} (String text)
-\item 
+\begin{DoxyCompactList}\small\item\em Print the given text in the text area. \end{DoxyCompactList}\item 
 void \hyperlink{classpkg__game_1_1UserInterface_ac4d82f989416d7cc64a6e2fba2f4ed75}{println} (String text)
-\item 
+\begin{DoxyCompactList}\small\item\em Print the given text plus a newline in the text area. \end{DoxyCompactList}\item 
 void \hyperlink{classpkg__game_1_1UserInterface_af87fdba109655a1538da16b55b61dbff}{show\-Image} (String image\-Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Show the image corresponding to the path of the image. \end{DoxyCompactList}\item 
 void \hyperlink{classpkg__game_1_1UserInterface_a36a5a68f8ceca41d7f48cf31ca5f2f0e}{enable} (boolean on)
-\item 
+\begin{DoxyCompactList}\small\item\em Enable or disable the input field. \end{DoxyCompactList}\item 
 void \hyperlink{classpkg__game_1_1UserInterface_a55cb092ba130a286917cbd6c064136b2}{action\-Performed} (Action\-Event e)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Actionlistener for the textfield. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Class handling the game's user interface. \begin{DoxyAuthor}{Author}
+Class handling the game's user interface. 
+
+\begin{DoxyAuthor}{Author}
 Rémi N\-I\-C\-O\-L\-E 
 \end{DoxyAuthor}
 
@@ -58,7 +65,11 @@ Definition at line \hyperlink{UserInterface_8java_source_l00015}{15} of file \hy
 \item[{{\bf Game\-Engine}}]{game\-Engine}
 \end{DoxyParamCaption}
 )}}\label{classpkg__game_1_1UserInterface_abfbaf9bbfd3fd0bb80c8183793739f81}
+
+
 \hyperlink{classpkg__game_1_1UserInterface}{User\-Interface} class constructor. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em game\-Engine} & The gameplay \hyperlink{classpkg__game_1_1GameEngine}{Game\-Engine} object. \\
 \hline
@@ -85,7 +96,11 @@ Definition at line \hyperlink{UserInterface_8java_source_l00056}{56} of file \hy
 \item[{Action\-Event}]{e}
 \end{DoxyParamCaption}
 )}}\label{classpkg__game_1_1UserInterface_a55cb092ba130a286917cbd6c064136b2}
+
+
 Actionlistener for the textfield. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em e} & Event \\
 \hline
@@ -120,7 +135,11 @@ Definition at line \hyperlink{UserInterface_8java_source_l00214}{214} of file \h
 \item[{boolean}]{on}
 \end{DoxyParamCaption}
 )}}\label{classpkg__game_1_1UserInterface_a36a5a68f8ceca41d7f48cf31ca5f2f0e}
+
+
 Enable or disable the input field. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em on} & True to activate, False to deactivate \\
 \hline
@@ -151,7 +170,11 @@ Definition at line \hyperlink{UserInterface_8java_source_l00107}{107} of file \h
 \item[{String}]{text}
 \end{DoxyParamCaption}
 )}}\label{classpkg__game_1_1UserInterface_a524492922d9f29b45f4687441017e322}
+
+
 Print the given text in the text area. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em text} & Text to display \\
 \hline
@@ -174,7 +197,11 @@ Definition at line \hyperlink{UserInterface_8java_source_l00074}{74} of file \hy
 \item[{String}]{text}
 \end{DoxyParamCaption}
 )}}\label{classpkg__game_1_1UserInterface_ac4d82f989416d7cc64a6e2fba2f4ed75}
+
+
 Print the given text plus a newline in the text area. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em text} & Text to display \\
 \hline
@@ -185,7 +212,7 @@ Definition at line \hyperlink{UserInterface_8java_source_l00083}{83} of file \hy
 
 
 
-Referenced by \hyperlink{GameEngine_8java_source_l00226}{pkg\-\_\-game.\-Game\-Engine.\-process\-Command()}.
+Referenced by \hyperlink{GameEngine_8java_source_l00238}{pkg\-\_\-game.\-Game\-Engine.\-process\-Command()}.
 
 
 \begin{DoxyCode}
@@ -213,7 +240,11 @@ Here is the caller graph for this function\-:
 \item[{int}]{commands\-Left}
 \end{DoxyParamCaption}
 )}}\label{classpkg__game_1_1UserInterface_a84ff8e11b23631bd6c5a34f718360a1f}
-Change the text for the commands left J\-Label 
+
+
+Change the text for the commands left J\-Label. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em commands\-Left} & The number of commands left \\
 \hline
@@ -235,7 +266,11 @@ Definition at line \hyperlink{UserInterface_8java_source_l00066}{66} of file \hy
 \item[{String}]{image\-Name}
 \end{DoxyParamCaption}
 )}}\label{classpkg__game_1_1UserInterface_af87fdba109655a1538da16b55b61dbff}
+
+
 Show the image corresponding to the path of the image. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em image\-Name} & The path of the image \\
 \hline

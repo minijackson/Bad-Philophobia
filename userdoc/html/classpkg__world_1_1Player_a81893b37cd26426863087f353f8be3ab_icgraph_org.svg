@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__commands_1_1BeamerCommand.html#ae71665296a18d581ad1f714c1078e37b" target="_top" xlink:title="pkg_commands.BeamerCommand.charge">
+<g id="a_node2"><a xlink:href="classpkg__commands_1_1BeamerCommand.html#ae71665296a18d581ad1f714c1078e37b" target="_top" xlink:title="Remember the current room. ">
 <polygon fill="white" stroke="black" points="204,-0.5 204,-19.5 404,-19.5 404,-0.5 204,-0.5"/>
 <text text-anchor="middle" x="304" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.BeamerCommand.charge</text>
 </a>
@@ -29,7 +29,7 @@
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="classpkg__commands_1_1BeamerCommand.html#a139dc852e180cabd8af15cfed37dcf0e" target="_top" xlink:title="pkg_commands.BeamerCommand.execute">
+<g id="a_node3"><a xlink:href="classpkg__commands_1_1BeamerCommand.html#a139dc852e180cabd8af15cfed37dcf0e" target="_top" xlink:title="Teleport to the remembered room or remember a room. ">
 <polygon fill="white" stroke="black" points="440.5,-0.5 440.5,-19.5 645.5,-19.5 645.5,-0.5 440.5,-0.5"/>
 <text text-anchor="middle" x="543" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.BeamerCommand.execute</text>
 </a>

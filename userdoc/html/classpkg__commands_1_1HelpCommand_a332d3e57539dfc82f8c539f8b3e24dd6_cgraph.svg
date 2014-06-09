@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__commands_1_1Command.html#ac2a42e2bab264821892daefaf9a18b6c" target="_top" xlink:title="pkg_commands.Command.get\lMessage">
+<g id="a_node2"><a xlink:href="classpkg__commands_1_1Command.html#ac2a42e2bab264821892daefaf9a18b6c" target="_top" xlink:title="Message field getter. ">
 <polygon fill="white" stroke="black" points="242,-88 242,-118 392,-118 392,-88 242,-88"/>
 <text text-anchor="start" x="250" y="-106" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.get</text>
 <text text-anchor="middle" x="317" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00">Message</text>
@@ -30,7 +30,7 @@
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" target="_top" xlink:title="pkg_commands.Command.set\lMessage">
+<g id="a_node3"><a xlink:href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" target="_top" xlink:title="Message field setter. ">
 <polygon fill="white" stroke="black" points="242,-39 242,-69 392,-69 392,-39 242,-39"/>
 <text text-anchor="start" x="250" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.set</text>
 <text text-anchor="middle" x="317" y="-46" font-family="Helvetica,sans-Serif" font-size="10.00">Message</text>
@@ -44,7 +44,7 @@
 </g>
 <!-- Node4 -->
 <g id="node4" class="node"><title>Node4</title>
-<g id="a_node4"><a xlink:href="classpkg__parsing_1_1Parser.html#a31545cdbdb409aaeb727289c0ea7be1b" target="_top" xlink:title="pkg_parsing.Parser.showCommands">
+<g id="a_node4"><a xlink:href="classpkg__parsing_1_1Parser.html#a31545cdbdb409aaeb727289c0ea7be1b" target="_top" xlink:title="Getter for the knownCommands field of the commands field. ">
 <polygon fill="white" stroke="black" points="228.5,-0.5 228.5,-19.5 405.5,-19.5 405.5,-0.5 228.5,-0.5"/>
 <text text-anchor="middle" x="317" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_parsing.Parser.showCommands</text>
 </a>

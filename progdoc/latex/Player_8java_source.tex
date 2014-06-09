@@ -31,114 +31,125 @@
 00052 
 \hypertarget{Player_8java_source_l00056}{}\hyperlink{classpkg__world_1_1Player_aadfcdea19eefea1137932f9329c08209}{00056}     \textcolor{keyword}{private} \hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Player_aadfcdea19eefea1137932f9329c08209}{beamerRoom};
 00057 
-\hypertarget{Player_8java_source_l00063}{}\hyperlink{classpkg__world_1_1Player_a8a48bf28cae733a412a0114802a1e4fb}{00063}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1Player_a8a48bf28cae733a412a0114802a1e4fb}{Player}(String \hyperlink{classpkg__world_1_1Player_ab4c41ebebb7fcc55fa253e48af0c4267}{name}, \hyperlink{classpkg__world_1_1Room}{Room} firstRoom) \{
-00064         this.name = \hyperlink{classpkg__world_1_1Player_ab4c41ebebb7fcc55fa253e48af0c4267}{name};
-00065         \hyperlink{classpkg__world_1_1Player_adea3925e7f823a9602e5f9ee58683e3b}{backpack} = \textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__items_1_1ItemList}{ItemList}();
-00066         \hyperlink{classpkg__world_1_1Player_a19ed9d4d1b17f409f106142ec2fd68a3}{backpackWeight} = 0;
-00067         \hyperlink{classpkg__world_1_1Player_a2b0217339fe7077674b0e0a1ad33cc1e}{currentRoom} = firstRoom;
-00068         \hyperlink{classpkg__world_1_1Player_a28f9bc6a3c1d829996e8a38935b77fd1}{previousRooms} = \textcolor{keyword}{new} Stack<Room>();
-00069     \}
-00070 
-\hypertarget{Player_8java_source_l00075}{}\hyperlink{classpkg__world_1_1Player_afb52f93ed1c1ee43462f0c33ca3abcf0}{00075}     \textcolor{keyword}{public} String \hyperlink{classpkg__world_1_1Player_afb52f93ed1c1ee43462f0c33ca3abcf0}{getName}() \{
-00076         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Player_ab4c41ebebb7fcc55fa253e48af0c4267}{name};
-00077     \}
-00078 
-\hypertarget{Player_8java_source_l00083}{}\hyperlink{classpkg__world_1_1Player_a700bc1762736bd44d91e40ad9ae2ff76}{00083}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \hyperlink{classpkg__world_1_1Player_a700bc1762736bd44d91e40ad9ae2ff76}{getMaxWeight}() \{
-00084         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Player_a780685c88ad92ca6b280cf841ab33728}{maxWeight};
-00085     \}
-00086 
-\hypertarget{Player_8java_source_l00091}{}\hyperlink{classpkg__world_1_1Player_a6218134478709a2e1c4438f2c9f94b8a}{00091}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_a6218134478709a2e1c4438f2c9f94b8a}{setMaxWeight}(\textcolor{keywordtype}{int} \hyperlink{classpkg__world_1_1Player_a780685c88ad92ca6b280cf841ab33728}{maxWeight}) \{
-00092         this.maxWeight = \hyperlink{classpkg__world_1_1Player_a780685c88ad92ca6b280cf841ab33728}{maxWeight};
-00093     \}
-00094 
-\hypertarget{Player_8java_source_l00099}{}\hyperlink{classpkg__world_1_1Player_a5ff0ede152d97c0c9cf6603c9a422a77}{00099}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Player_a5ff0ede152d97c0c9cf6603c9a422a77}{getCurrentRoom}() \{
-00100         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Player_a2b0217339fe7077674b0e0a1ad33cc1e}{currentRoom};
-00101     \}
-00102 
-\hypertarget{Player_8java_source_l00107}{}\hyperlink{classpkg__world_1_1Player_af694ca81b712f2ba0e18c3ae73c03bd4}{00107}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_af694ca81b712f2ba0e18c3ae73c03bd4}{goRoom}(\hyperlink{classpkg__world_1_1Room}{Room} room) \{
-00108         \hyperlink{classpkg__world_1_1Player_a2b0217339fe7077674b0e0a1ad33cc1e}{currentRoom} = room;
-00109     \}
-00110 
-\hypertarget{Player_8java_source_l00115}{}\hyperlink{classpkg__world_1_1Player_adcff90c8c1b6fd5dcb3c4516d7e3a277}{00115}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Player_adcff90c8c1b6fd5dcb3c4516d7e3a277}{getPreviousRoom}() \{
-00116         \textcolor{keywordflow}{return} (\hyperlink{classpkg__world_1_1Player_a28f9bc6a3c1d829996e8a38935b77fd1}{previousRooms}.empty())? null : \hyperlink{classpkg__world_1_1Player_a28f9bc6a3c1d829996e8a38935b77fd1}{previousRooms}.peek();
-00117     \}
-00118 
-\hypertarget{Player_8java_source_l00123}{}\hyperlink{classpkg__world_1_1Player_a6b419da985921727891cee03e4a7e755}{00123}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_a6b419da985921727891cee03e4a7e755}{pushPreviousRooms}(\hyperlink{classpkg__world_1_1Room}{Room} room) \{
-00124         previousRooms.push(room);
-00125     \}
-00126 
-\hypertarget{Player_8java_source_l00130}{}\hyperlink{classpkg__world_1_1Player_af97dc9ce2806115a09ab6a3ba08ed673}{00130}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_af97dc9ce2806115a09ab6a3ba08ed673}{pushForward}() \{
-00131         previousRooms.push(\hyperlink{classpkg__world_1_1Player_a2b0217339fe7077674b0e0a1ad33cc1e}{currentRoom});
-00132     \}
-00133 
-\hypertarget{Player_8java_source_l00137}{}\hyperlink{classpkg__world_1_1Player_a4ef9377c34206c64ef1086de669ca5f1}{00137}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_a4ef9377c34206c64ef1086de669ca5f1}{popPreviousRooms}() \{
-00138         previousRooms.pop();
-00139     \}
-00140 
-\hypertarget{Player_8java_source_l00145}{}\hyperlink{classpkg__world_1_1Player_abe1633071742e8825d40317150f66835}{00145}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__world_1_1Player_abe1633071742e8825d40317150f66835}{noPreviousRooms}() \{
-00146         \textcolor{keywordflow}{return} previousRooms.empty();
-00147     \}
-00148 
-\hypertarget{Player_8java_source_l00153}{}\hyperlink{classpkg__world_1_1Player_a6dc6248fa7cbe281e9a7c5d6b86f242c}{00153}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_a6dc6248fa7cbe281e9a7c5d6b86f242c}{setBeamerRoom}(\hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Player_aadfcdea19eefea1137932f9329c08209}{beamerRoom}) \{
-00154         this.beamerRoom = \hyperlink{classpkg__world_1_1Player_aadfcdea19eefea1137932f9329c08209}{beamerRoom};
-00155     \}
-00156 
-\hypertarget{Player_8java_source_l00161}{}\hyperlink{classpkg__world_1_1Player_a81893b37cd26426863087f353f8be3ab}{00161}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Player_a81893b37cd26426863087f353f8be3ab}{getBeamerRoom}() \{
-00162         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Player_aadfcdea19eefea1137932f9329c08209}{beamerRoom};
-00163     \}
-00164 
-\hypertarget{Player_8java_source_l00170}{}\hyperlink{classpkg__world_1_1Player_a913aab92cf289f5278e6e995e7a4d118}{00170}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} \hyperlink{classpkg__world_1_1Player_a913aab92cf289f5278e6e995e7a4d118}{getItem}(String item) \{
-00171         \textcolor{keywordflow}{return} backpack.get(item);
-00172     \}
-00173 
-\hypertarget{Player_8java_source_l00178}{}\hyperlink{classpkg__world_1_1Player_a23b53a36fdac45868ee1ea6dcdeca7ce}{00178}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__world_1_1Player_a23b53a36fdac45868ee1ea6dcdeca7ce}{hasItem}(String item) \{
-00179         \textcolor{keywordflow}{return} backpack.containsKey(item);
-00180     \}
-00181 
-\hypertarget{Player_8java_source_l00188}{}\hyperlink{classpkg__world_1_1Player_acca13cc67931809c8067aaca1b8c8459}{00188}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__world_1_1Player_acca13cc67931809c8067aaca1b8c8459}{canCarry}(\hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} item) \{
-00189         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Player_a19ed9d4d1b17f409f106142ec2fd68a3}{backpackWeight} + item.getWeight() < \hyperlink{classpkg__world_1_1Player_a780685c88ad92ca6b280cf841ab33728}{maxWeight};
-00190     \}
-00191 
-\hypertarget{Player_8java_source_l00196}{}\hyperlink{classpkg__world_1_1Player_ac5bdaa8f2149e480e57398be03efa96f}{00196}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_ac5bdaa8f2149e480e57398be03efa96f}{takeObject}(\hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} item) \{
-00197         currentRoom.getContainedItems().transfer(item.\hyperlink{classpkg__world_1_1pkg__items_1_1Item_ab541df9aad01409656af1aadfa66987a}{getName}(), \hyperlink{classpkg__world_1_1Player_adea3925e7f823a9602e5f9ee58683e3b}{backpack});
-00198         \hyperlink{classpkg__world_1_1Player_a19ed9d4d1b17f409f106142ec2fd68a3}{backpackWeight} += item.getWeight();
-00199     \}
-00200 
-\hypertarget{Player_8java_source_l00205}{}\hyperlink{classpkg__world_1_1Player_a202b660b747a977911af058554888387}{00205}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_a202b660b747a977911af058554888387}{dropObject}(String item) \{
-00206         \hyperlink{classpkg__world_1_1Player_a19ed9d4d1b17f409f106142ec2fd68a3}{backpackWeight} -= backpack.get(item).getWeight();
-00207         backpack.transfer(item, currentRoom.getContainedItems());
-00208     \}
-00209 
-\hypertarget{Player_8java_source_l00214}{}\hyperlink{classpkg__world_1_1Player_ab18847eb6503ad2ac400cc7cd5a7c9a0}{00214}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_ab18847eb6503ad2ac400cc7cd5a7c9a0}{eatObject}(String itemName) \{
-00215         backpack.remove(itemName);
-00216     \}
-00217 
-\hypertarget{Player_8java_source_l00223}{}\hyperlink{classpkg__world_1_1Player_a2a6e491f41e159bbac42022e55df2d52}{00223}     \textcolor{keyword}{public} String \hyperlink{classpkg__world_1_1Player_a2a6e491f41e159bbac42022e55df2d52}{getInventory}() \{
-00224         String returnString = \textcolor{stringliteral}{""};
-00225         Set<String> itemsNames = backpack.keySet();
-00226         Iterator<String> it = itemsNames.iterator();
-00227         \textcolor{keywordflow}{while}(it.hasNext()) \{
-00228             String itemName = it.next();
-00229             \textcolor{comment}{// If the item's name begins with a vowel, the prefix is ' an '}
-00230             \textcolor{comment}{// if not, the prefix is ' a '}
-00231             String prefix = \textcolor{stringliteral}{" a"} + (((\textcolor{keyword}{new} String(\textcolor{stringliteral}{"aeiouy"})).contains(itemName.substring(0,1)))? \textcolor{stringliteral}{"n"} : \textcolor{stringliteral}{""}) +
+\hypertarget{Player_8java_source_l00061}{}\hyperlink{classpkg__world_1_1Player_ab49e508229cc7834ec48d18c6b61df1a}{00061}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__world_1_1Player_ab49e508229cc7834ec48d18c6b61df1a}{threwSnowball};
+00062 
+\hypertarget{Player_8java_source_l00068}{}\hyperlink{classpkg__world_1_1Player_a8a48bf28cae733a412a0114802a1e4fb}{00068}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1Player_a8a48bf28cae733a412a0114802a1e4fb}{Player}(String \hyperlink{classpkg__world_1_1Player_ab4c41ebebb7fcc55fa253e48af0c4267}{name}, \hyperlink{classpkg__world_1_1Room}{Room} firstRoom) \{
+00069         \hyperlink{classpkg__world_1_1Player_aec9bad13ead588d970cf28b6d2b5e4a2}{threwSnowball} = \textcolor{keyword}{false};
+00070         this.name = \hyperlink{classpkg__world_1_1Player_ab4c41ebebb7fcc55fa253e48af0c4267}{name};
+00071         \hyperlink{classpkg__world_1_1Player_adea3925e7f823a9602e5f9ee58683e3b}{backpack} = \textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__items_1_1ItemList}{ItemList}();
+00072         \hyperlink{classpkg__world_1_1Player_a19ed9d4d1b17f409f106142ec2fd68a3}{backpackWeight} = 0;
+00073         \hyperlink{classpkg__world_1_1Player_a2b0217339fe7077674b0e0a1ad33cc1e}{currentRoom} = firstRoom;
+00074         \hyperlink{classpkg__world_1_1Player_a28f9bc6a3c1d829996e8a38935b77fd1}{previousRooms} = \textcolor{keyword}{new} Stack<Room>();
+00075     \}
+00076 
+\hypertarget{Player_8java_source_l00081}{}\hyperlink{classpkg__world_1_1Player_afb52f93ed1c1ee43462f0c33ca3abcf0}{00081}     \textcolor{keyword}{public} String \hyperlink{classpkg__world_1_1Player_afb52f93ed1c1ee43462f0c33ca3abcf0}{getName}() \{
+00082         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Player_ab4c41ebebb7fcc55fa253e48af0c4267}{name};
+00083     \}
+00084 
+\hypertarget{Player_8java_source_l00089}{}\hyperlink{classpkg__world_1_1Player_a700bc1762736bd44d91e40ad9ae2ff76}{00089}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \hyperlink{classpkg__world_1_1Player_a700bc1762736bd44d91e40ad9ae2ff76}{getMaxWeight}() \{
+00090         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Player_a780685c88ad92ca6b280cf841ab33728}{maxWeight};
+00091     \}
+00092 
+\hypertarget{Player_8java_source_l00097}{}\hyperlink{classpkg__world_1_1Player_a6218134478709a2e1c4438f2c9f94b8a}{00097}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_a6218134478709a2e1c4438f2c9f94b8a}{setMaxWeight}(\textcolor{keywordtype}{int} \hyperlink{classpkg__world_1_1Player_a780685c88ad92ca6b280cf841ab33728}{maxWeight}) \{
+00098         this.maxWeight = \hyperlink{classpkg__world_1_1Player_a780685c88ad92ca6b280cf841ab33728}{maxWeight};
+00099     \}
+00100 
+\hypertarget{Player_8java_source_l00105}{}\hyperlink{classpkg__world_1_1Player_a5ff0ede152d97c0c9cf6603c9a422a77}{00105}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Player_a5ff0ede152d97c0c9cf6603c9a422a77}{getCurrentRoom}() \{
+00106         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Player_a2b0217339fe7077674b0e0a1ad33cc1e}{currentRoom};
+00107     \}
+00108 
+\hypertarget{Player_8java_source_l00113}{}\hyperlink{classpkg__world_1_1Player_af694ca81b712f2ba0e18c3ae73c03bd4}{00113}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_af694ca81b712f2ba0e18c3ae73c03bd4}{goRoom}(\hyperlink{classpkg__world_1_1Room}{Room} room) \{
+00114         \hyperlink{classpkg__world_1_1Player_a2b0217339fe7077674b0e0a1ad33cc1e}{currentRoom} = room;
+00115     \}
+00116 
+\hypertarget{Player_8java_source_l00121}{}\hyperlink{classpkg__world_1_1Player_adcff90c8c1b6fd5dcb3c4516d7e3a277}{00121}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Player_adcff90c8c1b6fd5dcb3c4516d7e3a277}{getPreviousRoom}() \{
+00122         \textcolor{keywordflow}{return} (\hyperlink{classpkg__world_1_1Player_a28f9bc6a3c1d829996e8a38935b77fd1}{previousRooms}.empty())? null : \hyperlink{classpkg__world_1_1Player_a28f9bc6a3c1d829996e8a38935b77fd1}{previousRooms}.peek();
+00123     \}
+00124 
+\hypertarget{Player_8java_source_l00129}{}\hyperlink{classpkg__world_1_1Player_a6b419da985921727891cee03e4a7e755}{00129}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_a6b419da985921727891cee03e4a7e755}{pushPreviousRooms}(\hyperlink{classpkg__world_1_1Room}{Room} room) \{
+00130         previousRooms.push(room);
+00131     \}
+00132 
+\hypertarget{Player_8java_source_l00136}{}\hyperlink{classpkg__world_1_1Player_af97dc9ce2806115a09ab6a3ba08ed673}{00136}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_af97dc9ce2806115a09ab6a3ba08ed673}{pushForward}() \{
+00137         previousRooms.push(\hyperlink{classpkg__world_1_1Player_a2b0217339fe7077674b0e0a1ad33cc1e}{currentRoom});
+00138     \}
+00139 
+\hypertarget{Player_8java_source_l00143}{}\hyperlink{classpkg__world_1_1Player_a4ef9377c34206c64ef1086de669ca5f1}{00143}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_a4ef9377c34206c64ef1086de669ca5f1}{popPreviousRooms}() \{
+00144         previousRooms.pop();
+00145     \}
+00146 
+\hypertarget{Player_8java_source_l00151}{}\hyperlink{classpkg__world_1_1Player_abe1633071742e8825d40317150f66835}{00151}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__world_1_1Player_abe1633071742e8825d40317150f66835}{noPreviousRooms}() \{
+00152         \textcolor{keywordflow}{return} previousRooms.empty();
+00153     \}
+00154 
+\hypertarget{Player_8java_source_l00159}{}\hyperlink{classpkg__world_1_1Player_a6dc6248fa7cbe281e9a7c5d6b86f242c}{00159}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_a6dc6248fa7cbe281e9a7c5d6b86f242c}{setBeamerRoom}(\hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Player_aadfcdea19eefea1137932f9329c08209}{beamerRoom}) \{
+00160         this.beamerRoom = \hyperlink{classpkg__world_1_1Player_aadfcdea19eefea1137932f9329c08209}{beamerRoom};
+00161     \}
+00162 
+\hypertarget{Player_8java_source_l00167}{}\hyperlink{classpkg__world_1_1Player_a81893b37cd26426863087f353f8be3ab}{00167}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Player_a81893b37cd26426863087f353f8be3ab}{getBeamerRoom}() \{
+00168         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Player_aadfcdea19eefea1137932f9329c08209}{beamerRoom};
+00169     \}
+00170 
+\hypertarget{Player_8java_source_l00176}{}\hyperlink{classpkg__world_1_1Player_a913aab92cf289f5278e6e995e7a4d118}{00176}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} \hyperlink{classpkg__world_1_1Player_a913aab92cf289f5278e6e995e7a4d118}{getItem}(String item) \{
+00177         \textcolor{keywordflow}{return} backpack.get(item);
+00178     \}
+00179 
+\hypertarget{Player_8java_source_l00184}{}\hyperlink{classpkg__world_1_1Player_a23b53a36fdac45868ee1ea6dcdeca7ce}{00184}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__world_1_1Player_a23b53a36fdac45868ee1ea6dcdeca7ce}{hasItem}(String item) \{
+00185         \textcolor{keywordflow}{return} backpack.containsKey(item);
+00186     \}
+00187 
+\hypertarget{Player_8java_source_l00194}{}\hyperlink{classpkg__world_1_1Player_acca13cc67931809c8067aaca1b8c8459}{00194}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__world_1_1Player_acca13cc67931809c8067aaca1b8c8459}{canCarry}(\hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} item) \{
+00195         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Player_a19ed9d4d1b17f409f106142ec2fd68a3}{backpackWeight} + item.getWeight() < \hyperlink{classpkg__world_1_1Player_a780685c88ad92ca6b280cf841ab33728}{maxWeight};
+00196     \}
+00197 
+\hypertarget{Player_8java_source_l00202}{}\hyperlink{classpkg__world_1_1Player_ac5bdaa8f2149e480e57398be03efa96f}{00202}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_ac5bdaa8f2149e480e57398be03efa96f}{takeObject}(\hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} item) \{
+00203         currentRoom.getContainedItems().transfer(item.\hyperlink{classpkg__world_1_1pkg__items_1_1Item_ab541df9aad01409656af1aadfa66987a}{getName}(), \hyperlink{classpkg__world_1_1Player_adea3925e7f823a9602e5f9ee58683e3b}{backpack});
+00204         \hyperlink{classpkg__world_1_1Player_a19ed9d4d1b17f409f106142ec2fd68a3}{backpackWeight} += item.getWeight();
+00205     \}
+00206 
+\hypertarget{Player_8java_source_l00211}{}\hyperlink{classpkg__world_1_1Player_a202b660b747a977911af058554888387}{00211}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_a202b660b747a977911af058554888387}{dropObject}(String item) \{
+00212         \hyperlink{classpkg__world_1_1Player_a19ed9d4d1b17f409f106142ec2fd68a3}{backpackWeight} -= backpack.get(item).getWeight();
+00213         backpack.transfer(item, currentRoom.getContainedItems());
+00214     \}
+00215 
+\hypertarget{Player_8java_source_l00220}{}\hyperlink{classpkg__world_1_1Player_ab18847eb6503ad2ac400cc7cd5a7c9a0}{00220}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_ab18847eb6503ad2ac400cc7cd5a7c9a0}{eatObject}(String itemName) \{
+00221         backpack.remove(itemName);
+00222     \}
+00223 
+\hypertarget{Player_8java_source_l00229}{}\hyperlink{classpkg__world_1_1Player_a2a6e491f41e159bbac42022e55df2d52}{00229}     \textcolor{keyword}{public} String \hyperlink{classpkg__world_1_1Player_a2a6e491f41e159bbac42022e55df2d52}{getInventory}() \{
+00230         String returnString = \textcolor{stringliteral}{""};
+00231         Set<String> itemsNames = backpack.keySet();
+00232         Iterator<String> it = itemsNames.iterator();
+00233         \textcolor{keywordflow}{while}(it.hasNext()) \{
+00234             String itemName = it.next();
+00235             \textcolor{comment}{// If the item's name begins with a vowel, the prefix is ' an '}
+00236             \textcolor{comment}{// if not, the prefix is ' a '}
+00237             String prefix = \textcolor{stringliteral}{" a"} + (((\textcolor{keyword}{new} String(\textcolor{stringliteral}{"aeiouy"})).contains(itemName.substring(0,1)))? \textcolor{stringliteral}{"n"} : \textcolor{stringliteral}{""}) +
        \textcolor{stringliteral}{" "};
-00232 
-00233             \textcolor{keywordflow}{if}(returnString.equals(\textcolor{stringliteral}{""}))
-00234                 returnString += prefix + itemName;
-00235             \textcolor{keywordflow}{else} \{
-00236                 \textcolor{comment}{// Check if it is the last item}
-00237                 \textcolor{keywordflow}{if}(it.hasNext())
-00238                     returnString += \textcolor{stringliteral}{","} + prefix + itemName;
-00239                 \textcolor{keywordflow}{else}
-00240                     returnString += \textcolor{stringliteral}{" and"} + prefix + itemName;
-00241             \}
-00242         \}
-00243         \textcolor{keywordflow}{return} (returnString.equals(\textcolor{stringliteral}{""}))?
-00244             \textcolor{stringliteral}{"You have nothing. This may be a metaphor for your life.\(\backslash\)nBut as always you didn't understand a
+00238 
+00239             \textcolor{keywordflow}{if}(returnString.equals(\textcolor{stringliteral}{""}))
+00240                 returnString += prefix + itemName;
+00241             \textcolor{keywordflow}{else} \{
+00242                 \textcolor{comment}{// Check if it is the last item}
+00243                 \textcolor{keywordflow}{if}(it.hasNext())
+00244                     returnString += \textcolor{stringliteral}{","} + prefix + itemName;
+00245                 \textcolor{keywordflow}{else}
+00246                     returnString += \textcolor{stringliteral}{" and"} + prefix + itemName;
+00247             \}
+00248         \}
+00249         \textcolor{keywordflow}{return} (returnString.equals(\textcolor{stringliteral}{""}))?
+00250             \textcolor{stringliteral}{"You have nothing. This may be a metaphor for your life.\(\backslash\)nBut as always you didn't understand a
        word I said, don't you?"}
-00245             : \textcolor{stringliteral}{"You have"} + returnString + \textcolor{stringliteral}{".\(\backslash\)nCan't you remember that?"};
-00246     \}
-00247 
-00248 \}
+00251             : \textcolor{stringliteral}{"You have"} + returnString + \textcolor{stringliteral}{".\(\backslash\)nCan't you remember that?"};
+00252     \}
+00253 
+\hypertarget{Player_8java_source_l00258}{}\hyperlink{classpkg__world_1_1Player_aec9bad13ead588d970cf28b6d2b5e4a2}{00258}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__world_1_1Player_aec9bad13ead588d970cf28b6d2b5e4a2}{threwSnowball}() \{
+00259         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Player_aec9bad13ead588d970cf28b6d2b5e4a2}{threwSnowball};
+00260     \}
+00261 
+\hypertarget{Player_8java_source_l00265}{}\hyperlink{classpkg__world_1_1Player_af27044cbbd51c6a1e7658e797563ca22}{00265}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1Player_af27044cbbd51c6a1e7658e797563ca22}{throwSnowball}() \{
+00266         \hyperlink{classpkg__world_1_1Player_aec9bad13ead588d970cf28b6d2b5e4a2}{threwSnowball} = \textcolor{keyword}{true};
+00267     \}
+00268 
+00269 \}
 \end{DoxyCode}

@@ -63,7 +63,7 @@ var sectionId = 'dynsection-4';
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__commands_1_1GoCommand.html#a210afbc5f3ef34d3ad5759d853c8f8c2" target="_top" xlink:title="pkg_commands.GoCommand.go\lRoomNoCheck">
+<g id="a_node2"><a xlink:href="classpkg__commands_1_1GoCommand.html#a210afbc5f3ef34d3ad5759d853c8f8c2" target="_top" xlink:title="Go to the Room without checking. ">
 <polygon fill="white" stroke="black" points="196,-49 196,-79 356,-79 356,-49 196,-49"/>
 <text text-anchor="start" x="204" y="-67" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.GoCommand.go</text>
 <text text-anchor="middle" x="276" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00">RoomNoCheck</text>
@@ -77,7 +77,7 @@ var sectionId = 'dynsection-4';
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" target="_top" xlink:title="pkg_commands.Command.set\lMessage">
+<g id="a_node3"><a xlink:href="classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" target="_top" xlink:title="Message field setter. ">
 <polygon fill="white" stroke="black" points="393,-98 393,-128 543,-128 543,-98 393,-98"/>
 <text text-anchor="start" x="401" y="-116" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.set</text>
 <text text-anchor="middle" x="468" y="-105" font-family="Helvetica,sans-Serif" font-size="10.00">Message</text>
@@ -91,7 +91,7 @@ var sectionId = 'dynsection-4';
 </g>
 <!-- Node4 -->
 <g id="node4" class="node"><title>Node4</title>
-<g id="a_node4"><a xlink:href="classpkg__commands_1_1Command.html#ae46bb048d0fa705a5037a5204b530da2" target="_top" xlink:title="pkg_commands.Command.has\lMessage">
+<g id="a_node4"><a xlink:href="classpkg__commands_1_1Command.html#ae46bb048d0fa705a5037a5204b530da2" target="_top" xlink:title="Return true if the message is equal to null or &quot;&quot;. ">
 <polygon fill="white" stroke="black" points="392,-49 392,-79 544,-79 544,-49 392,-49"/>
 <text text-anchor="start" x="400" y="-67" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.has</text>
 <text text-anchor="middle" x="468" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00">Message</text>
@@ -105,7 +105,7 @@ var sectionId = 'dynsection-4';
 </g>
 <!-- Node5 -->
 <g id="node5" class="node"><title>Node5</title>
-<g id="a_node5"><a xlink:href="classpkg__commands_1_1Command.html#ac2a42e2bab264821892daefaf9a18b6c" target="_top" xlink:title="pkg_commands.Command.get\lMessage">
+<g id="a_node5"><a xlink:href="classpkg__commands_1_1Command.html#ac2a42e2bab264821892daefaf9a18b6c" target="_top" xlink:title="Message field getter. ">
 <polygon fill="white" stroke="black" points="393,-0 393,-30 543,-30 543,-0 393,-0"/>
 <text text-anchor="start" x="401" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command.get</text>
 <text text-anchor="middle" x="468" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">Message</text>

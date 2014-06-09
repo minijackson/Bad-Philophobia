@@ -24,34 +24,35 @@
 00029         commands.put(\textcolor{stringliteral}{"look"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1LookCommand}{LookCommand}());
 00030         commands.put(\textcolor{stringliteral}{"take"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1TakeCommand}{TakeCommand}());
 00031         commands.put(\textcolor{stringliteral}{"drop"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1DropCommand}{DropCommand}());
-00032         commands.put(\textcolor{stringliteral}{"inventory"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1InventoryCommand}{InventoryCommand}());
-00033         commands.put(\textcolor{stringliteral}{"eat"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1EatCommand}{EatCommand}());
-00034         commands.put(\textcolor{stringliteral}{"test"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1TestCommand}{TestCommand}());
-00035         commands.put(\textcolor{stringliteral}{"talk"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1TalkCommand}{TalkCommand}());
-00036         commands.put(\textcolor{stringliteral}{"give"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1GiveCommand}{GiveCommand}());
-00037         commands.put(\textcolor{stringliteral}{"quit"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1QuitCommand}{QuitCommand}());
-00038         commands.put(\textcolor{stringliteral}{"help"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1HelpCommand}{HelpCommand}());
-00039         commands.put(\textcolor{stringliteral}{"credits"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1CreditsCommand}{CreditsCommand}());
-00040     \}
-00041 
-\hypertarget{CommandWords_8java_source_l00047}{}\hyperlink{classpkg__parsing_1_1CommandWords_ab02b508bb42cbda758afe6cee5794216}{00047}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__parsing_1_1CommandWords_ab02b508bb42cbda758afe6cee5794216}{isCommand}(String command) \{
-00048         \textcolor{keywordflow}{return} commands.containsKey(command);
-00049     \}
-00050 
-\hypertarget{CommandWords_8java_source_l00055}{}\hyperlink{classpkg__parsing_1_1CommandWords_a55f01013b1d051547ee3fa6605ea4c14}{00055}     \textcolor{keyword}{public} String \hyperlink{classpkg__parsing_1_1CommandWords_a55f01013b1d051547ee3fa6605ea4c14}{getCommandList}() \{
-00056         String commandsString = \textcolor{stringliteral}{""};
-00057         Iterator<String> it = commands.keySet().iterator();
-00058         \textcolor{keywordflow}{while}(it.hasNext()) \{
-00059             String command = it.next();
-00060             commandsString += command + ((it.hasNext())? \textcolor{stringliteral}{", "} : \textcolor{stringliteral}{"."});
-00061         \}
-00062         \textcolor{keywordflow}{return} commandsString;
-00063     \}
-00064 
-\hypertarget{CommandWords_8java_source_l00070}{}\hyperlink{classpkg__parsing_1_1CommandWords_a244829164976aa9444b3b1e84462ac5c}{00070}     \textcolor{keyword}{public} \hyperlink{classpkg__commands_1_1Command}{Command} \hyperlink{classpkg__parsing_1_1CommandWords_a244829164976aa9444b3b1e84462ac5c}{getCommand}(String commandWord)
-00071     \{
-00072         \textcolor{keywordflow}{return} commands.get(commandWord);
-00073     \}
-00074 \}
-00075 
+00032         commands.put(\textcolor{stringliteral}{"throw"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1ThrowCommand}{ThrowCommand}());
+00033         commands.put(\textcolor{stringliteral}{"inventory"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1InventoryCommand}{InventoryCommand}());
+00034         commands.put(\textcolor{stringliteral}{"eat"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1EatCommand}{EatCommand}());
+00035         commands.put(\textcolor{stringliteral}{"test"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1TestCommand}{TestCommand}());
+00036         commands.put(\textcolor{stringliteral}{"talk"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1TalkCommand}{TalkCommand}());
+00037         commands.put(\textcolor{stringliteral}{"give"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1GiveCommand}{GiveCommand}());
+00038         commands.put(\textcolor{stringliteral}{"quit"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1QuitCommand}{QuitCommand}());
+00039         commands.put(\textcolor{stringliteral}{"help"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1HelpCommand}{HelpCommand}());
+00040         commands.put(\textcolor{stringliteral}{"credits"}, \textcolor{keyword}{new} \hyperlink{classpkg__commands_1_1CreditsCommand}{CreditsCommand}());
+00041     \}
+00042 
+\hypertarget{CommandWords_8java_source_l00048}{}\hyperlink{classpkg__parsing_1_1CommandWords_ab02b508bb42cbda758afe6cee5794216}{00048}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__parsing_1_1CommandWords_ab02b508bb42cbda758afe6cee5794216}{isCommand}(String command) \{
+00049         \textcolor{keywordflow}{return} commands.containsKey(command);
+00050     \}
+00051 
+\hypertarget{CommandWords_8java_source_l00056}{}\hyperlink{classpkg__parsing_1_1CommandWords_a55f01013b1d051547ee3fa6605ea4c14}{00056}     \textcolor{keyword}{public} String \hyperlink{classpkg__parsing_1_1CommandWords_a55f01013b1d051547ee3fa6605ea4c14}{getCommandList}() \{
+00057         String commandsString = \textcolor{stringliteral}{""};
+00058         Iterator<String> it = commands.keySet().iterator();
+00059         \textcolor{keywordflow}{while}(it.hasNext()) \{
+00060             String command = it.next();
+00061             commandsString += command + ((it.hasNext())? \textcolor{stringliteral}{", "} : \textcolor{stringliteral}{"."});
+00062         \}
+00063         \textcolor{keywordflow}{return} commandsString;
+00064     \}
+00065 
+\hypertarget{CommandWords_8java_source_l00071}{}\hyperlink{classpkg__parsing_1_1CommandWords_a244829164976aa9444b3b1e84462ac5c}{00071}     \textcolor{keyword}{public} \hyperlink{classpkg__commands_1_1Command}{Command} \hyperlink{classpkg__parsing_1_1CommandWords_a244829164976aa9444b3b1e84462ac5c}{getCommand}(String commandWord)
+00072     \{
+00073         \textcolor{keywordflow}{return} commands.get(commandWord);
+00074     \}
+00075 \}
+00076 
 \end{DoxyCode}

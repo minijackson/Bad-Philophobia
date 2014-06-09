@@ -43,7 +43,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -75,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -136,15 +135,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> commands.getCommandList();</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="ttc" id="classpkg__parsing_1_1CommandWords_html"><div class="ttname"><a href="classpkg__parsing_1_1CommandWords.html">pkg_parsing.CommandWords</a></div><div class="ttdef"><b>Definition:</b> <a href="CommandWords_8java_source.html#l00017">CommandWords.java:17</a></div></div>
-<div class="ttc" id="classpkg__parsing_1_1Parser_html_a31545cdbdb409aaeb727289c0ea7be1b"><div class="ttname"><a href="classpkg__parsing_1_1Parser.html#a31545cdbdb409aaeb727289c0ea7be1b">pkg_parsing.Parser.showCommands</a></div><div class="ttdeci">static String showCommands()</div><div class="ttdef"><b>Definition:</b> <a href="Parser_8java_source.html#l00059">Parser.java:59</a></div></div>
-<div class="ttc" id="classpkg__parsing_1_1Parser_html"><div class="ttname"><a href="classpkg__parsing_1_1Parser.html">pkg_parsing.Parser</a></div><div class="ttdef"><b>Definition:</b> <a href="Parser_8java_source.html#l00016">Parser.java:16</a></div></div>
-<div class="ttc" id="classpkg__parsing_1_1Parser_html_a3baac59980671aeb689ca25fba64e9cc"><div class="ttname"><a href="classpkg__parsing_1_1Parser.html#a3baac59980671aeb689ca25fba64e9cc">pkg_parsing.Parser.getCommand</a></div><div class="ttdeci">static Command getCommand(String inputLine)</div><div class="ttdef"><b>Definition:</b> <a href="Parser_8java_source.html#l00028">Parser.java:28</a></div></div>
-<div class="ttc" id="classpkg__commands_1_1Command_html"><div class="ttname"><a href="classpkg__commands_1_1Command.html">pkg_commands.Command</a></div><div class="ttdef"><b>Definition:</b> <a href="Command_8java_source.html#l00014">Command.java:14</a></div></div>
+<div class="ttc" id="classpkg__parsing_1_1CommandWords_html"><div class="ttname"><a href="classpkg__parsing_1_1CommandWords.html">pkg_parsing.CommandWords</a></div><div class="ttdoc">Class used to verify the commands given by the user. </div><div class="ttdef"><b>Definition:</b> <a href="CommandWords_8java_source.html#l00017">CommandWords.java:17</a></div></div>
+<div class="ttc" id="classpkg__parsing_1_1Parser_html_a31545cdbdb409aaeb727289c0ea7be1b"><div class="ttname"><a href="classpkg__parsing_1_1Parser.html#a31545cdbdb409aaeb727289c0ea7be1b">pkg_parsing.Parser.showCommands</a></div><div class="ttdeci">static String showCommands()</div><div class="ttdoc">Getter for the knownCommands field of the commands field. </div><div class="ttdef"><b>Definition:</b> <a href="Parser_8java_source.html#l00059">Parser.java:59</a></div></div>
+<div class="ttc" id="classpkg__parsing_1_1Parser_html"><div class="ttname"><a href="classpkg__parsing_1_1Parser.html">pkg_parsing.Parser</a></div><div class="ttdoc">Class used to parse the commands with or without parameters given by the user. </div><div class="ttdef"><b>Definition:</b> <a href="Parser_8java_source.html#l00016">Parser.java:16</a></div></div>
+<div class="ttc" id="classpkg__parsing_1_1Parser_html_a3baac59980671aeb689ca25fba64e9cc"><div class="ttname"><a href="classpkg__parsing_1_1Parser.html#a3baac59980671aeb689ca25fba64e9cc">pkg_parsing.Parser.getCommand</a></div><div class="ttdeci">static Command getCommand(String inputLine)</div><div class="ttdoc">Return the Command corresponding to the given user&#39;s input. </div><div class="ttdef"><b>Definition:</b> <a href="Parser_8java_source.html#l00028">Parser.java:28</a></div></div>
+<div class="ttc" id="classpkg__commands_1_1Command_html"><div class="ttname"><a href="classpkg__commands_1_1Command.html">pkg_commands.Command</a></div><div class="ttdoc">Class used to handle a command of one or two words. </div><div class="ttdef"><b>Definition:</b> <a href="Command_8java_source.html#l00014">Command.java:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 9 2014 13:50:56 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 9 2014 21:23:55 for Bad Philophobia by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

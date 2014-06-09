@@ -21,7 +21,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__commands_1_1GoCommand.html" target="_top" xlink:title="{pkg_commands.GoCommand\n||+ GoCommand()\l+ execute()\l# goRoomCheck()\l# goRoomNoCheck()\l# getRandomRoom()\l}">
+<g id="a_node2"><a xlink:href="classpkg__commands_1_1GoCommand.html" target="_top" xlink:title="class GoCommand used to make the player go to a given Room. ">
 <polygon fill="white" stroke="black" points="5,-106.5 5,-207.5 151,-207.5 151,-106.5 5,-106.5"/>
 <text text-anchor="middle" x="78" y="-195.5" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.GoCommand</text>
 <polyline fill="none" stroke="black" points="5,-188.5 151,-188.5 "/>
@@ -42,7 +42,7 @@
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="classpkg__commands_1_1Command.html" target="_top" xlink:title="{pkg_commands.Command\n||+ getParameter()\l+ getSecondParameter()\l+ setParameter()\l+ setSecondParameter()\l+ hasParameter()\l+ hasSecondParameter()\l+ getMessage()\l+ hasMessage()\l+ execute()\l# setMessage()\l}">
+<g id="a_node3"><a xlink:href="classpkg__commands_1_1Command.html" target="_top" xlink:title="Class used to handle a command of one or two words. ">
 <polygon fill="white" stroke="black" points="11,-245 11,-401 145,-401 145,-245 11,-245"/>
 <text text-anchor="middle" x="78" y="-389" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_commands.Command</text>
 <polyline fill="none" stroke="black" points="11,-382 145,-382 "/>

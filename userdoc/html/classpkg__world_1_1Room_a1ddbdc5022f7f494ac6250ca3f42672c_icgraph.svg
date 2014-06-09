@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classpkg__world_1_1Room.html#acc8ee9123c9a77428c1e66fbba34aeac" target="_top" xlink:title="pkg_world.Room.getLongDescription">
+<g id="a_node2"><a xlink:href="classpkg__world_1_1Room.html#acc8ee9123c9a77428c1e66fbba34aeac" target="_top" xlink:title="Return the description of the room, the available exits plus the items in the room if any...">
 <polygon fill="white" stroke="black" points="238.5,-0.5 238.5,-19.5 415.5,-19.5 415.5,-0.5 238.5,-0.5"/>
 <text text-anchor="middle" x="327" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">pkg_world.Room.getLongDescription</text>
 </a>
