@@ -1,5 +1,5 @@
 /**
- * \package pkg_characters
+ * \package pkg_world.pkg_characters
  * Package containing all the classes handling a Character
  */
 
