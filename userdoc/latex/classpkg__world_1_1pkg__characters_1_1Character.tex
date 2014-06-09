@@ -1,0 +1,340 @@
+\hypertarget{classpkg__world_1_1pkg__characters_1_1Character}{\section{pkg\-\_\-world.\-pkg\-\_\-characters.\-Character Class Reference}
+\label{classpkg__world_1_1pkg__characters_1_1Character}\index{pkg\-\_\-world.\-pkg\-\_\-characters.\-Character@{pkg\-\_\-world.\-pkg\-\_\-characters.\-Character}}
+}
+
+
+Inheritance diagram for pkg\-\_\-world.\-pkg\-\_\-characters.\-Character\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classpkg__world_1_1pkg__characters_1_1Character__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pkg\-\_\-world.\-pkg\-\_\-characters.\-Character\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classpkg__world_1_1pkg__characters_1_1Character__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a50bcfb95d983b94d0335bd457d575872}{Character} (final String name)
+\item 
+\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a1dcca115f6536e7d4d99ab3880291376}{Character} (final String name, final String dialog)
+\item 
+\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3944beae4c725dac40c288715af8061c}{Character} (final String name, final String dialog, \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} wanted\-Item, final String success\-Action, final String failure\-Action)
+\item 
+void \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a926da3833d26f4800fcd62917be5abcc}{add\-Dialog} (final String dialog)
+\item 
+String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a8b6d62bb87460e19dc0e4561beb1ece1}{talk} ()
+\item 
+String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a0fb83fcff9b37c94eac3fb35868bebb2}{take\-Item} (\hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} item)
+\item 
+boolean \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a816f8f79ef1e8c9635f0cdeb180b9f3f}{wants\-Item} (\hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} item)
+\item 
+String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a660097e198e2e62f83d83a8872eb55d1}{get\-Name} ()
+\item 
+boolean \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_ae18c62b235802dd5bfacf662f0a1d17d}{is\-Satisfied} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character} \begin{DoxyAuthor}{Author}
+Rémi Nicole 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{Character_8java_source_l00012}{12} of file \hyperlink{Character_8java_source}{Character.\-java}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpkg__world_1_1pkg__characters_1_1Character_a50bcfb95d983b94d0335bd457d575872}{\index{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}!Character@{Character}}
+\index{Character@{Character}!pkg_world::pkg_characters::Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}}
+\subsubsection[{Character}]{\setlength{\rightskip}{0pt plus 5cm}pkg\-\_\-world.\-pkg\-\_\-characters.\-Character.\-Character (
+\begin{DoxyParamCaption}
+\item[{final String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1pkg__characters_1_1Character_a50bcfb95d983b94d0335bd457d575872}
+Constructor for \hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character} with name only. When using this constructor only, the creature/character says nothing and wants nothing. 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the creature/character \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Character_8java_source_l00057}{57} of file \hyperlink{Character_8java_source}{Character.\-java}.
+
+
+\begin{DoxyCode}
+00057                                        \{
+00058         this.name = name;
+00059         satisfied = \textcolor{keyword}{false};
+00060         dialogs = \textcolor{keyword}{new} ArrayList<String>();
+00061     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1pkg__characters_1_1Character_a1dcca115f6536e7d4d99ab3880291376}{\index{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}!Character@{Character}}
+\index{Character@{Character}!pkg_world::pkg_characters::Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}}
+\subsubsection[{Character}]{\setlength{\rightskip}{0pt plus 5cm}pkg\-\_\-world.\-pkg\-\_\-characters.\-Character.\-Character (
+\begin{DoxyParamCaption}
+\item[{final String}]{name, }
+\item[{final String}]{dialog}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1pkg__characters_1_1Character_a1dcca115f6536e7d4d99ab3880291376}
+Constructor for \hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character} with name and dialog only. When using this constructor only, the creature/character wants nothing. 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the creature/character \\
+\hline
+{\em dialog} & The dialog displayed when talking to it/him/her \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Character_8java_source_l00070}{70} of file \hyperlink{Character_8java_source}{Character.\-java}.
+
+
+\begin{DoxyCode}
+00070                                                              \{
+00071         \textcolor{keyword}{this}(name);
+00072         dialogs.add(dialog);
+00073     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1pkg__characters_1_1Character_a3944beae4c725dac40c288715af8061c}{\index{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}!Character@{Character}}
+\index{Character@{Character}!pkg_world::pkg_characters::Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}}
+\subsubsection[{Character}]{\setlength{\rightskip}{0pt plus 5cm}pkg\-\_\-world.\-pkg\-\_\-characters.\-Character.\-Character (
+\begin{DoxyParamCaption}
+\item[{final String}]{name, }
+\item[{final String}]{dialog, }
+\item[{{\bf Item}}]{wanted\-Item, }
+\item[{final String}]{success\-Action, }
+\item[{final String}]{failure\-Action}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1pkg__characters_1_1Character_a3944beae4c725dac40c288715af8061c}
+Constructor for \hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character}. 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the creature/character \\
+\hline
+{\em dialog} & The dialog displayed when talking to it/him/her \\
+\hline
+{\em wanted\-Item} & Item wanted by the creature/character \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Character_8java_source_l00081}{81} of file \hyperlink{Character_8java_source}{Character.\-java}.
+
+
+\begin{DoxyCode}
+00081                                                                                                            
+                                 \{
+00082         \textcolor{keyword}{this}(name, dialog);
+00083         this.wantedItem = wantedItem;
+00084         this.successAction = successAction;
+00085         this.failureAction = failureAction;
+00086     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpkg__world_1_1pkg__characters_1_1Character_a926da3833d26f4800fcd62917be5abcc}{\index{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}!add\-Dialog@{add\-Dialog}}
+\index{add\-Dialog@{add\-Dialog}!pkg_world::pkg_characters::Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}}
+\subsubsection[{add\-Dialog}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-world.\-pkg\-\_\-characters.\-Character.\-add\-Dialog (
+\begin{DoxyParamCaption}
+\item[{final String}]{dialog}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1pkg__characters_1_1Character_a926da3833d26f4800fcd62917be5abcc}
+Add a possible dialog 
+\begin{DoxyParams}{Parameters}
+{\em dialog} & The dialog to add \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Character_8java_source_l00092}{92} of file \hyperlink{Character_8java_source}{Character.\-java}.
+
+
+\begin{DoxyCode}
+00092                                                \{
+00093         dialogs.add(dialog);
+00094     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1pkg__characters_1_1Character_a660097e198e2e62f83d83a8872eb55d1}{\index{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!pkg_world::pkg_characters::Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-world.\-pkg\-\_\-characters.\-Character.\-get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1pkg__characters_1_1Character_a660097e198e2e62f83d83a8872eb55d1}
+Name field getter \begin{DoxyReturn}{Returns}
+The name of the creature/character 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Character_8java_source_l00127}{127} of file \hyperlink{Character_8java_source}{Character.\-java}.
+
+
+
+Referenced by \hyperlink{MovingCharacter_8java_source_l00059}{pkg\-\_\-world.\-pkg\-\_\-characters.\-Moving\-Character.\-move()}.
+
+
+\begin{DoxyCode}
+00127                             \{
+00128         \textcolor{keywordflow}{return} name;
+00129     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1pkg__characters_1_1Character_a660097e198e2e62f83d83a8872eb55d1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classpkg__world_1_1pkg__characters_1_1Character_ae18c62b235802dd5bfacf662f0a1d17d}{\index{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}!is\-Satisfied@{is\-Satisfied}}
+\index{is\-Satisfied@{is\-Satisfied}!pkg_world::pkg_characters::Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}}
+\subsubsection[{is\-Satisfied}]{\setlength{\rightskip}{0pt plus 5cm}boolean pkg\-\_\-world.\-pkg\-\_\-characters.\-Character.\-is\-Satisfied (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1pkg__characters_1_1Character_ae18c62b235802dd5bfacf662f0a1d17d}
+
+
+Definition at line \hyperlink{Character_8java_source_l00131}{131} of file \hyperlink{Character_8java_source}{Character.\-java}.
+
+
+
+Referenced by \hyperlink{GiveCommand_8java_source_l00029}{pkg\-\_\-commands.\-Give\-Command.\-execute()}.
+
+
+\begin{DoxyCode}
+00131                                  \{
+00132         \textcolor{keywordflow}{return} satisfied;
+00133     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1pkg__characters_1_1Character_ae18c62b235802dd5bfacf662f0a1d17d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classpkg__world_1_1pkg__characters_1_1Character_a0fb83fcff9b37c94eac3fb35868bebb2}{\index{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}!take\-Item@{take\-Item}}
+\index{take\-Item@{take\-Item}!pkg_world::pkg_characters::Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}}
+\subsubsection[{take\-Item}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-world.\-pkg\-\_\-characters.\-Character.\-take\-Item (
+\begin{DoxyParamCaption}
+\item[{{\bf Item}}]{item}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1pkg__characters_1_1Character_a0fb83fcff9b37c94eac3fb35868bebb2}
+Try to give him an Item. \begin{DoxyReturn}{Returns}
+An action to be displayed in case of success or failure 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Character_8java_source_l00108}{108} of file \hyperlink{Character_8java_source}{Character.\-java}.
+
+
+
+Referenced by \hyperlink{GiveCommand_8java_source_l00029}{pkg\-\_\-commands.\-Give\-Command.\-execute()}.
+
+
+\begin{DoxyCode}
+00108                                       \{
+00109         \textcolor{keywordflow}{if}(wantedItem == item)
+00110             satisfied = \textcolor{keyword}{true};
+00111         \textcolor{keywordflow}{return} (wantedItem == item) ? successAction : failureAction;
+00112     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1pkg__characters_1_1Character_a0fb83fcff9b37c94eac3fb35868bebb2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classpkg__world_1_1pkg__characters_1_1Character_a8b6d62bb87460e19dc0e4561beb1ece1}{\index{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}!talk@{talk}}
+\index{talk@{talk}!pkg_world::pkg_characters::Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}}
+\subsubsection[{talk}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-world.\-pkg\-\_\-characters.\-Character.\-talk (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1pkg__characters_1_1Character_a8b6d62bb87460e19dc0e4561beb1ece1}
+A dialog to be displayed. \begin{DoxyReturn}{Returns}
+A random dialog from the dialogs field 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Character_8java_source_l00100}{100} of file \hyperlink{Character_8java_source}{Character.\-java}.
+
+
+\begin{DoxyCode}
+00100                          \{
+00101         \textcolor{keywordflow}{return} (dialogs.isEmpty())? \textcolor{stringliteral}{"He doesn't want to talk to you. I understand him."} : dialogs.get((\textcolor{keyword}{new} 
+      Random()).nextInt(dialogs.size()));
+00102     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1pkg__characters_1_1Character_a816f8f79ef1e8c9635f0cdeb180b9f3f}{\index{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}!wants\-Item@{wants\-Item}}
+\index{wants\-Item@{wants\-Item}!pkg_world::pkg_characters::Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Character}}
+\subsubsection[{wants\-Item}]{\setlength{\rightskip}{0pt plus 5cm}boolean pkg\-\_\-world.\-pkg\-\_\-characters.\-Character.\-wants\-Item (
+\begin{DoxyParamCaption}
+\item[{{\bf Item}}]{item}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1pkg__characters_1_1Character_a816f8f79ef1e8c9635f0cdeb180b9f3f}
+Returns true if the given Item is wanted by the creature/character. 
+\begin{DoxyParams}{Parameters}
+{\em item} & The Item to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if item is equal to the wanted\-Item field 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Character_8java_source_l00119}{119} of file \hyperlink{Character_8java_source}{Character.\-java}.
+
+
+
+Referenced by \hyperlink{GiveCommand_8java_source_l00029}{pkg\-\_\-commands.\-Give\-Command.\-execute()}.
+
+
+\begin{DoxyCode}
+00119                                         \{
+00120         \textcolor{keywordflow}{return} wantedItem == item;
+00121     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1pkg__characters_1_1Character_a816f8f79ef1e8c9635f0cdeb180b9f3f_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pkg\-\_\-world/pkg\-\_\-characters/\hyperlink{Character_8java}{Character.\-java}\end{DoxyCompactItemize}

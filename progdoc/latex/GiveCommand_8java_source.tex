@@ -1,0 +1,62 @@
+\hypertarget{GiveCommand_8java}{\section{Give\-Command.\-java}
+\label{GiveCommand_8java}\index{pkg\-\_\-commands/\-Give\-Command.\-java@{pkg\-\_\-commands/\-Give\-Command.\-java}}
+}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }pkg\_commands;
+00002 
+00003 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Player}{pkg\_world.Player};
+00004 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{pkg\_world.pkg\_characters.Character};
+00005 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{pkg\_world.pkg\_items.Item};
+00006 \textcolor{keyword}{import} pkg\_exceptions.*;
+00007 
+\hypertarget{GiveCommand_8java_source_l00012}{}\hyperlink{classpkg__commands_1_1GiveCommand}{00012} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__commands_1_1GiveCommand}{GiveCommand} \textcolor{keyword}{extends} \hyperlink{classpkg__commands_1_1Command}{Command} \{
+00013 
+\hypertarget{GiveCommand_8java_source_l00017}{}\hyperlink{classpkg__commands_1_1GiveCommand_a04e020a1f124119a2e7df19fac983953}{00017}     \textcolor{keyword}{public} \hyperlink{classpkg__commands_1_1GiveCommand_a04e020a1f124119a2e7df19fac983953}{GiveCommand}()\{
+00018 
+00019     \}
+00020 
+\hypertarget{GiveCommand_8java_source_l00029}{}\hyperlink{classpkg__commands_1_1GiveCommand_a3a3cca7fae9b86d8ff85cc166564843d}{00029}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__commands_1_1GiveCommand_a3a3cca7fae9b86d8ff85cc166564843d}{execute}(\hyperlink{classpkg__world_1_1Player}{Player} player) \textcolor{keywordflow}{throws} 
+      \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException},\hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}
+      ,\hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException} \{
+00030         \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998}{hasParameter}()) \{
+00031             \textcolor{keywordflow}{if}(player.getCurrentRoom().hasCharacter(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}())) \{
+00032                 \hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character} character = player.getCurrentRoom().getCharacter(
+      \hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}());
+00033 
+00034                 \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1Command_add688a76d80576c34f23927da19b9e2d}{hasSecondParameter}()) \{
+00035                     \textcolor{keywordflow}{if}(player.hasItem(\hyperlink{classpkg__commands_1_1Command_a20d3ebdc0683a87b43be2a92a1cad111}{getSecondParameter}())) \{
+00036                         \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} item = player.getItem(\hyperlink{classpkg__commands_1_1Command_a20d3ebdc0683a87b43be2a92a1cad111}{getSecondParameter}());
+00037 
+00038                         \textcolor{keywordflow}{if}(!character.\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_ae18c62b235802dd5bfacf662f0a1d17d}{isSatisfied}()) \{
+00039                             \textcolor{keywordflow}{if}(character.\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a816f8f79ef1e8c9635f0cdeb180b9f3f}{wantsItem}(item)) \{
+00040                                 \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(character.\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a0fb83fcff9b37c94eac3fb35868bebb2}{takeItem}(item));
+00041                                 player.eatObject(\hyperlink{classpkg__commands_1_1Command_a20d3ebdc0683a87b43be2a92a1cad111}{getSecondParameter}());
+00042                             \} \textcolor{keywordflow}{else} \{
+00043                                 String failureMessage = character.takeItem(item);
+00044                                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException}((failureMessage == 
+      null)? \textcolor{stringliteral}{"He doesn't want anything from you. He's smart."} : failureMessage);
+00045                             \}
+00046 
+00047                         \} \textcolor{keywordflow}{else}
+00048                             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException}(\textcolor{stringliteral}{"He already used you,
+       remember? No, of course not."});
+00049                     \} \textcolor{keywordflow}{else}
+00050                         \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}
+      (\textcolor{stringliteral}{"I'm not sure you want to give that."});
+00051                 \} \textcolor{keywordflow}{else}
+00052                     \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"I'm afraid giving yourself to this
+       one won't be enough. Again."});
+00053 
+00054             \} \textcolor{keywordflow}{else}
+00055                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}(\textcolor{stringliteral}{"
+      Still trying to give something to your imaginary friend?"});
+00056         \} \textcolor{keywordflow}{else}
+00057             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"Would you give a try to instead give
+       something to someone?"});
+00058 
+00059         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00060     \}
+00061 
+00062 \}
+\end{DoxyCode}

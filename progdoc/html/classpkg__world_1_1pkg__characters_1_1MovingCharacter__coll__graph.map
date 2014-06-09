@@ -1,0 +1,6 @@
+<map id="pkg_world.pkg_characters.MovingCharacter" name="pkg_world.pkg_characters.MovingCharacter">
+<area shape="rect" id="node2" href="$classpkg__world_1_1pkg__characters_1_1Character.html" title="class Character " alt="" coords="159,373,337,627"/>
+<area shape="rect" id="node4" href="$classpkg__world_1_1pkg__items_1_1Item.html" title="Class used to handle an item contained in a Room. " alt="" coords="161,150,335,301"/>
+<area shape="rect" id="node5" href="$classpkg__world_1_1Room.html" title="Class used to handle a game&#39;s room. " alt="" coords="427,366,579,634"/>
+<area shape="rect" id="node7" href="$classpkg__world_1_1pkg__items_1_1ItemList.html" title="class ItemList used to handle a list of Item (inventory). " alt="" coords="537,187,732,264"/>
+</map>

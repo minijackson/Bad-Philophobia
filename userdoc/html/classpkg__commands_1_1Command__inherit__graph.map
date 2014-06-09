@@ -1,14 +1,16 @@
 <map id="pkg_commands.Command" name="pkg_commands.Command">
-<area shape="rect" id="node2" href="$classpkg__commands_1_1CreditsCommand.html" title="{pkg_commands.CreditsCommand\n||+ CreditsCommand()\l+ execute()\l}" alt="" coords="5,234,224,326"/>
-<area shape="rect" id="node3" href="$classpkg__commands_1_1DropCommand.html" title="{pkg_commands.DropCommand\n||+ DropCommand()\l+ execute()\l}" alt="" coords="249,234,455,326"/>
-<area shape="rect" id="node4" href="$classpkg__commands_1_1EatCommand.html" title="{pkg_commands.EatCommand\n||+ EatCommand()\l+ execute()\l}" alt="" coords="479,234,677,326"/>
-<area shape="rect" id="node5" href="$classpkg__commands_1_1GoCommand.html" title="{pkg_commands.GoCommand\n||+ GoCommand()\l+ execute()\l# goRoomCheck()\l# goRoomNoCheck()\l}" alt="" coords="703,219,897,341"/>
-<area shape="rect" id="node8" href="$classpkg__commands_1_1HelpCommand.html" title="{pkg_commands.HelpCommand\n||+ HelpCommand()\l+ execute()\l}" alt="" coords="921,234,1127,326"/>
-<area shape="rect" id="node9" href="$classpkg__commands_1_1InventoryCommand.html" title="{pkg_commands.InventoryCommand\n||+ InventoryCommand()\l+ execute()\l}" alt="" coords="1151,234,1383,326"/>
-<area shape="rect" id="node10" href="$classpkg__commands_1_1LookCommand.html" title="{pkg_commands.LookCommand\n||+ LookCommand()\l+ execute()\l}" alt="" coords="1407,234,1613,326"/>
-<area shape="rect" id="node11" href="$classpkg__commands_1_1QuitCommand.html" title="{pkg_commands.QuitCommand\n||+ QuitCommand()\l+ execute()\l}" alt="" coords="1639,234,1841,326"/>
-<area shape="rect" id="node12" href="$classpkg__commands_1_1TakeCommand.html" title="{pkg_commands.TakeCommand\n||+ TakeCommand()\l+ execute()\l}" alt="" coords="1866,234,2072,326"/>
-<area shape="rect" id="node13" href="$classpkg__commands_1_1TestCommand.html" title="{pkg_commands.TestCommand\n||+ TestCommand()\l+ execute()\l}" alt="" coords="2097,234,2300,326"/>
-<area shape="rect" id="node6" href="$classpkg__commands_1_1BackCommand.html" title="{pkg_commands.BackCommand\n||+ BackCommand()\l+ execute()\l}" alt="" coords="576,397,784,489"/>
-<area shape="rect" id="node7" href="$classpkg__commands_1_1BeamerCommand.html" title="{pkg_commands.BeamerCommand\n||+ BeamerCommand()\l+ execute()\l+ charge()\l}" alt="" coords="809,389,1031,496"/>
+<area shape="rect" id="node2" href="$classpkg__commands_1_1CreditsCommand.html" title="{pkg_commands.CreditsCommand\n||+ CreditsCommand()\l+ execute()\l}" alt="" coords="5,286,224,378"/>
+<area shape="rect" id="node3" href="$classpkg__commands_1_1DropCommand.html" title="{pkg_commands.DropCommand\n||+ DropCommand()\l+ execute()\l}" alt="" coords="249,286,455,378"/>
+<area shape="rect" id="node4" href="$classpkg__commands_1_1EatCommand.html" title="{pkg_commands.EatCommand\n||+ EatCommand()\l+ execute()\l}" alt="" coords="479,286,677,378"/>
+<area shape="rect" id="node5" href="$classpkg__commands_1_1GiveCommand.html" title="{pkg_commands.GiveCommand\n||+ GiveCommand()\l+ execute()\l}" alt="" coords="703,286,908,378"/>
+<area shape="rect" id="node6" href="$classpkg__commands_1_1GoCommand.html" title="{pkg_commands.GoCommand\n||+ GoCommand()\l+ execute()\l# goRoomCheck()\l# goRoomNoCheck()\l# getRandomRoom()\l}" alt="" coords="932,264,1127,400"/>
+<area shape="rect" id="node9" href="$classpkg__commands_1_1HelpCommand.html" title="{pkg_commands.HelpCommand\n||+ HelpCommand()\l+ execute()\l}" alt="" coords="1151,286,1356,378"/>
+<area shape="rect" id="node10" href="$classpkg__commands_1_1InventoryCommand.html" title="{pkg_commands.InventoryCommand\n||+ InventoryCommand()\l+ execute()\l}" alt="" coords="1380,286,1612,378"/>
+<area shape="rect" id="node11" href="$classpkg__commands_1_1LookCommand.html" title="{pkg_commands.LookCommand\n||+ LookCommand()\l+ execute()\l}" alt="" coords="1637,286,1843,378"/>
+<area shape="rect" id="node12" href="$classpkg__commands_1_1QuitCommand.html" title="{pkg_commands.QuitCommand\n||+ QuitCommand()\l+ execute()\l}" alt="" coords="1868,286,2071,378"/>
+<area shape="rect" id="node13" href="$classpkg__commands_1_1TakeCommand.html" title="{pkg_commands.TakeCommand\n||+ TakeCommand()\l+ execute()\l}" alt="" coords="2095,286,2301,378"/>
+<area shape="rect" id="node14" href="$classpkg__commands_1_1TalkCommand.html" title="{pkg_commands.TalkCommand\n||+ TalkCommand()\l+ execute()\l}" alt="" coords="2327,286,2529,378"/>
+<area shape="rect" id="node15" href="$classpkg__commands_1_1TestCommand.html" title="{pkg_commands.TestCommand\n||+ TestCommand()\l+ execute()\l}" alt="" coords="2554,286,2757,378"/>
+<area shape="rect" id="node7" href="$classpkg__commands_1_1BackCommand.html" title="{pkg_commands.BackCommand\n||+ BackCommand()\l+ execute()\l}" alt="" coords="805,455,1013,547"/>
+<area shape="rect" id="node8" href="$classpkg__commands_1_1BeamerCommand.html" title="{pkg_commands.BeamerCommand\n||+ BeamerCommand()\l+ execute()\l+ charge()\l}" alt="" coords="1038,448,1260,555"/>
 </map>

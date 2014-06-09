@@ -8,7 +8,8 @@ Class used to handle a command of one or two words.
 
 
 
-Inheritance diagram for pkg\-\_\-commands.\-Command\-:\nopagebreak
+Inheritance diagram for pkg\-\_\-commands.\-Command\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,7 +18,8 @@ Inheritance diagram for pkg\-\_\-commands.\-Command\-:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for pkg\-\_\-commands.\-Command\-:\nopagebreak
+Collaboration diagram for pkg\-\_\-commands.\-Command\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,10 +31,16 @@ Collaboration diagram for pkg\-\_\-commands.\-Command\-:\nopagebreak
 \item 
 String \hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{get\-Parameter} ()
 \begin{DoxyCompactList}\small\item\em Parameter field getter. \end{DoxyCompactList}\item 
+String \hyperlink{classpkg__commands_1_1Command_a20d3ebdc0683a87b43be2a92a1cad111}{get\-Second\-Parameter} ()
+\begin{DoxyCompactList}\small\item\em Second Parameter field getter. \end{DoxyCompactList}\item 
 void \hyperlink{classpkg__commands_1_1Command_a18446243a5fd360e9341b4b141c0cccc}{set\-Parameter} (String \hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{parameter})
 \begin{DoxyCompactList}\small\item\em Parameter field setter. \end{DoxyCompactList}\item 
+void \hyperlink{classpkg__commands_1_1Command_af6de3828c27cd491ad24c4a97d69e856}{set\-Second\-Parameter} (String \hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{parameter})
+\begin{DoxyCompactList}\small\item\em Second Parameter field setter. \end{DoxyCompactList}\item 
 boolean \hyperlink{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998}{has\-Parameter} ()
 \begin{DoxyCompactList}\small\item\em Return true if the parameter is null. \end{DoxyCompactList}\item 
+boolean \hyperlink{classpkg__commands_1_1Command_add688a76d80576c34f23927da19b9e2d}{has\-Second\-Parameter} ()
+\begin{DoxyCompactList}\small\item\em Return true if the second parameter is null. \end{DoxyCompactList}\item 
 String \hyperlink{classpkg__commands_1_1Command_ac2a42e2bab264821892daefaf9a18b6c}{get\-Message} ()
 \begin{DoxyCompactList}\small\item\em Message field getter. \end{DoxyCompactList}\item 
 boolean \hyperlink{classpkg__commands_1_1Command_ae46bb048d0fa705a5037a5204b530da2}{has\-Message} ()
@@ -49,6 +57,8 @@ void \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}
 \item 
 String \hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{parameter}
 \begin{DoxyCompactList}\small\item\em Parameter for the command. \end{DoxyCompactList}\item 
+String \hyperlink{classpkg__commands_1_1Command_a5f0b6df5ba798c9ee4446f01a0352210}{second\-Parameter}
+\begin{DoxyCompactList}\small\item\em Second parameter for the command. \end{DoxyCompactList}\item 
 String \hyperlink{classpkg__commands_1_1Command_ab4bc9d76fd948fcf253400793fbfde3f}{message}
 \begin{DoxyCompactList}\small\item\em Message to be printed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -107,25 +117,26 @@ The message to print to the user
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{Command_8java_source_l00066}{66} of file \hyperlink{Command_8java_source}{Command.\-java}.
+Definition at line \hyperlink{Command_8java_source_l00097}{97} of file \hyperlink{Command_8java_source}{Command.\-java}.
 
 
 
-References \hyperlink{Command_8java_source_l00028}{pkg\-\_\-commands.\-Command.\-message}.
+References \hyperlink{Command_8java_source_l00035}{pkg\-\_\-commands.\-Command.\-message}.
 
 
 
-Referenced by \hyperlink{TestCommand_8java_source_l00032}{pkg\-\_\-commands.\-Test\-Command.\-execute()}, \hyperlink{HelpCommand_8java_source_l00033}{pkg\-\_\-commands.\-Help\-Command.\-execute()}, and \hyperlink{GoCommand_8java_source_l00061}{pkg\-\_\-commands.\-Go\-Command.\-go\-Room\-No\-Check()}.
+Referenced by \hyperlink{TestCommand_8java_source_l00032}{pkg\-\_\-commands.\-Test\-Command.\-execute()}, \hyperlink{HelpCommand_8java_source_l00033}{pkg\-\_\-commands.\-Help\-Command.\-execute()}, and \hyperlink{GoCommand_8java_source_l00071}{pkg\-\_\-commands.\-Go\-Command.\-go\-Room\-No\-Check()}.
 
 
 \begin{DoxyCode}
-00066                                \{
-00067         \textcolor{keywordflow}{return} (\hyperlink{classpkg__commands_1_1Command_ab4bc9d76fd948fcf253400793fbfde3f}{message} == null)? \textcolor{stringliteral}{""} : \hyperlink{classpkg__commands_1_1Command_ab4bc9d76fd948fcf253400793fbfde3f}{message};
-00068     \}
+00097                                \{
+00098         \textcolor{keywordflow}{return} (\hyperlink{classpkg__commands_1_1Command_ab4bc9d76fd948fcf253400793fbfde3f}{message} == null)? \textcolor{stringliteral}{""} : \hyperlink{classpkg__commands_1_1Command_ab4bc9d76fd948fcf253400793fbfde3f}{message};
+00099     \}
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:\nopagebreak
+Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -150,7 +161,7 @@ The parameter given by the user
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{Command_8java_source_l00034}{34} of file \hyperlink{Command_8java_source}{Command.\-java}.
+Definition at line \hyperlink{Command_8java_source_l00041}{41} of file \hyperlink{Command_8java_source}{Command.\-java}.
 
 
 
@@ -158,21 +169,66 @@ References \hyperlink{Command_8java_source_l00021}{pkg\-\_\-commands.\-Command.\
 
 
 
-Referenced by \hyperlink{LookCommand_8java_source_l00026}{pkg\-\_\-commands.\-Look\-Command.\-execute()}, \hyperlink{DropCommand_8java_source_l00027}{pkg\-\_\-commands.\-Drop\-Command.\-execute()}, \hyperlink{TakeCommand_8java_source_l00027}{pkg\-\_\-commands.\-Take\-Command.\-execute()}, \hyperlink{GoCommand_8java_source_l00028}{pkg\-\_\-commands.\-Go\-Command.\-execute()}, \hyperlink{EatCommand_8java_source_l00028}{pkg\-\_\-commands.\-Eat\-Command.\-execute()}, \hyperlink{BeamerCommand_8java_source_l00030}{pkg\-\_\-commands.\-Beamer\-Command.\-execute()}, and \hyperlink{TestCommand_8java_source_l00032}{pkg\-\_\-commands.\-Test\-Command.\-execute()}.
+Referenced by \hyperlink{LookCommand_8java_source_l00026}{pkg\-\_\-commands.\-Look\-Command.\-execute()}, \hyperlink{TalkCommand_8java_source_l00027}{pkg\-\_\-commands.\-Talk\-Command.\-execute()}, \hyperlink{DropCommand_8java_source_l00027}{pkg\-\_\-commands.\-Drop\-Command.\-execute()}, \hyperlink{TakeCommand_8java_source_l00027}{pkg\-\_\-commands.\-Take\-Command.\-execute()}, \hyperlink{EatCommand_8java_source_l00028}{pkg\-\_\-commands.\-Eat\-Command.\-execute()}, \hyperlink{GiveCommand_8java_source_l00029}{pkg\-\_\-commands.\-Give\-Command.\-execute()}, \hyperlink{BeamerCommand_8java_source_l00030}{pkg\-\_\-commands.\-Beamer\-Command.\-execute()}, \hyperlink{TestCommand_8java_source_l00032}{pkg\-\_\-commands.\-Test\-Command.\-execute()}, and \hyperlink{GoCommand_8java_source_l00032}{pkg\-\_\-commands.\-Go\-Command.\-execute()}.
 
 
 \begin{DoxyCode}
-00034                                  \{
-00035         \textcolor{keywordflow}{return} \hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{parameter};
-00036     \}
+00041                                  \{
+00042         \textcolor{keywordflow}{return} \hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{parameter};
+00043     \}
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:\nopagebreak
+Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classpkg__commands_1_1Command_a20d3ebdc0683a87b43be2a92a1cad111}{\index{pkg\-\_\-commands\-::\-Command@{pkg\-\_\-commands\-::\-Command}!get\-Second\-Parameter@{get\-Second\-Parameter}}
+\index{get\-Second\-Parameter@{get\-Second\-Parameter}!pkg_commands::Command@{pkg\-\_\-commands\-::\-Command}}
+\subsubsection[{get\-Second\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-commands.\-Command.\-get\-Second\-Parameter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__commands_1_1Command_a20d3ebdc0683a87b43be2a92a1cad111}
+
+
+Second Parameter field getter. 
+
+\begin{DoxyReturn}{Returns}
+The second parameter given by the user 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Command_8java_source_l00049}{49} of file \hyperlink{Command_8java_source}{Command.\-java}.
+
+
+
+References \hyperlink{Command_8java_source_l00028}{pkg\-\_\-commands.\-Command.\-second\-Parameter}.
+
+
+
+Referenced by \hyperlink{GiveCommand_8java_source_l00029}{pkg\-\_\-commands.\-Give\-Command.\-execute()}.
+
+
+\begin{DoxyCode}
+00049                                        \{
+00050         \textcolor{keywordflow}{return} \hyperlink{classpkg__commands_1_1Command_a5f0b6df5ba798c9ee4446f01a0352210}{secondParameter};
+00051     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__commands_1_1Command_a20d3ebdc0683a87b43be2a92a1cad111_icgraph}
 \end{center}
 \end{figure}
 
@@ -193,25 +249,26 @@ True if the message is equal to null or \char`\"{}\char`\"{}
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{Command_8java_source_l00074}{74} of file \hyperlink{Command_8java_source}{Command.\-java}.
+Definition at line \hyperlink{Command_8java_source_l00105}{105} of file \hyperlink{Command_8java_source}{Command.\-java}.
 
 
 
-References \hyperlink{Command_8java_source_l00028}{pkg\-\_\-commands.\-Command.\-message}.
+References \hyperlink{Command_8java_source_l00035}{pkg\-\_\-commands.\-Command.\-message}.
 
 
 
-Referenced by \hyperlink{GoCommand_8java_source_l00061}{pkg\-\_\-commands.\-Go\-Command.\-go\-Room\-No\-Check()}.
+Referenced by \hyperlink{GoCommand_8java_source_l00071}{pkg\-\_\-commands.\-Go\-Command.\-go\-Room\-No\-Check()}.
 
 
 \begin{DoxyCode}
-00074                                 \{
-00075         \textcolor{keywordflow}{return} (\hyperlink{classpkg__commands_1_1Command_ab4bc9d76fd948fcf253400793fbfde3f}{message} == null) ? \textcolor{keyword}{false} : !message.equals(\textcolor{stringliteral}{""});
-00076     \}
+00105                                 \{
+00106         \textcolor{keywordflow}{return} (\hyperlink{classpkg__commands_1_1Command_ab4bc9d76fd948fcf253400793fbfde3f}{message} == null) ? \textcolor{keyword}{false} : !message.equals(\textcolor{stringliteral}{""});
+00107     \}
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:\nopagebreak
+Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -236,7 +293,7 @@ True if the parameter is null
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{Command_8java_source_l00050}{50} of file \hyperlink{Command_8java_source}{Command.\-java}.
+Definition at line \hyperlink{Command_8java_source_l00073}{73} of file \hyperlink{Command_8java_source}{Command.\-java}.
 
 
 
@@ -244,21 +301,66 @@ References \hyperlink{Command_8java_source_l00021}{pkg\-\_\-commands.\-Command.\
 
 
 
-Referenced by \hyperlink{LookCommand_8java_source_l00026}{pkg\-\_\-commands.\-Look\-Command.\-execute()}, \hyperlink{DropCommand_8java_source_l00027}{pkg\-\_\-commands.\-Drop\-Command.\-execute()}, \hyperlink{TakeCommand_8java_source_l00027}{pkg\-\_\-commands.\-Take\-Command.\-execute()}, \hyperlink{GoCommand_8java_source_l00028}{pkg\-\_\-commands.\-Go\-Command.\-execute()}, \hyperlink{EatCommand_8java_source_l00028}{pkg\-\_\-commands.\-Eat\-Command.\-execute()}, \hyperlink{BeamerCommand_8java_source_l00030}{pkg\-\_\-commands.\-Beamer\-Command.\-execute()}, and \hyperlink{TestCommand_8java_source_l00032}{pkg\-\_\-commands.\-Test\-Command.\-execute()}.
+Referenced by \hyperlink{LookCommand_8java_source_l00026}{pkg\-\_\-commands.\-Look\-Command.\-execute()}, \hyperlink{TalkCommand_8java_source_l00027}{pkg\-\_\-commands.\-Talk\-Command.\-execute()}, \hyperlink{DropCommand_8java_source_l00027}{pkg\-\_\-commands.\-Drop\-Command.\-execute()}, \hyperlink{TakeCommand_8java_source_l00027}{pkg\-\_\-commands.\-Take\-Command.\-execute()}, \hyperlink{EatCommand_8java_source_l00028}{pkg\-\_\-commands.\-Eat\-Command.\-execute()}, \hyperlink{GiveCommand_8java_source_l00029}{pkg\-\_\-commands.\-Give\-Command.\-execute()}, \hyperlink{BeamerCommand_8java_source_l00030}{pkg\-\_\-commands.\-Beamer\-Command.\-execute()}, \hyperlink{TestCommand_8java_source_l00032}{pkg\-\_\-commands.\-Test\-Command.\-execute()}, and \hyperlink{GoCommand_8java_source_l00032}{pkg\-\_\-commands.\-Go\-Command.\-execute()}.
 
 
 \begin{DoxyCode}
-00050                                   \{
-00051         \textcolor{keywordflow}{return} (\hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{parameter} != null);
-00052     \}
+00073                                   \{
+00074         \textcolor{keywordflow}{return} (\hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{parameter} != null);
+00075     \}
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:\nopagebreak
+Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classpkg__commands_1_1Command_add688a76d80576c34f23927da19b9e2d}{\index{pkg\-\_\-commands\-::\-Command@{pkg\-\_\-commands\-::\-Command}!has\-Second\-Parameter@{has\-Second\-Parameter}}
+\index{has\-Second\-Parameter@{has\-Second\-Parameter}!pkg_commands::Command@{pkg\-\_\-commands\-::\-Command}}
+\subsubsection[{has\-Second\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}boolean pkg\-\_\-commands.\-Command.\-has\-Second\-Parameter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__commands_1_1Command_add688a76d80576c34f23927da19b9e2d}
+
+
+Return true if the second parameter is null. 
+
+\begin{DoxyReturn}{Returns}
+True if the second parameter is null 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Command_8java_source_l00081}{81} of file \hyperlink{Command_8java_source}{Command.\-java}.
+
+
+
+References \hyperlink{Command_8java_source_l00028}{pkg\-\_\-commands.\-Command.\-second\-Parameter}.
+
+
+
+Referenced by \hyperlink{GiveCommand_8java_source_l00029}{pkg\-\_\-commands.\-Give\-Command.\-execute()}.
+
+
+\begin{DoxyCode}
+00081                                         \{
+00082         \textcolor{keywordflow}{return} (\hyperlink{classpkg__commands_1_1Command_a5f0b6df5ba798c9ee4446f01a0352210}{secondParameter} != null);
+00083     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__commands_1_1Command_add688a76d80576c34f23927da19b9e2d_icgraph}
 \end{center}
 \end{figure}
 
@@ -281,25 +383,26 @@ Message field setter.
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{Command_8java_source_l00058}{58} of file \hyperlink{Command_8java_source}{Command.\-java}.
+Definition at line \hyperlink{Command_8java_source_l00089}{89} of file \hyperlink{Command_8java_source}{Command.\-java}.
 
 
 
-References \hyperlink{Command_8java_source_l00028}{pkg\-\_\-commands.\-Command.\-message}.
+References \hyperlink{Command_8java_source_l00035}{pkg\-\_\-commands.\-Command.\-message}.
 
 
 
-Referenced by \hyperlink{BeamerCommand_8java_source_l00067}{pkg\-\_\-commands.\-Beamer\-Command.\-charge()}, \hyperlink{InventoryCommand_8java_source_l00023}{pkg\-\_\-commands.\-Inventory\-Command.\-execute()}, \hyperlink{CreditsCommand_8java_source_l00023}{pkg\-\_\-commands.\-Credits\-Command.\-execute()}, \hyperlink{LookCommand_8java_source_l00026}{pkg\-\_\-commands.\-Look\-Command.\-execute()}, \hyperlink{DropCommand_8java_source_l00027}{pkg\-\_\-commands.\-Drop\-Command.\-execute()}, \hyperlink{TakeCommand_8java_source_l00027}{pkg\-\_\-commands.\-Take\-Command.\-execute()}, \hyperlink{EatCommand_8java_source_l00028}{pkg\-\_\-commands.\-Eat\-Command.\-execute()}, \hyperlink{GoCommand_8java_source_l00028}{pkg\-\_\-commands.\-Go\-Command.\-execute()}, \hyperlink{TestCommand_8java_source_l00032}{pkg\-\_\-commands.\-Test\-Command.\-execute()}, \hyperlink{HelpCommand_8java_source_l00033}{pkg\-\_\-commands.\-Help\-Command.\-execute()}, \hyperlink{GoCommand_8java_source_l00061}{pkg\-\_\-commands.\-Go\-Command.\-go\-Room\-No\-Check()}, and \hyperlink{BeamerCommand_8java_source_l00050}{pkg\-\_\-commands.\-Beamer\-Command.\-teleport()}.
+Referenced by \hyperlink{BeamerCommand_8java_source_l00067}{pkg\-\_\-commands.\-Beamer\-Command.\-charge()}, \hyperlink{InventoryCommand_8java_source_l00023}{pkg\-\_\-commands.\-Inventory\-Command.\-execute()}, \hyperlink{CreditsCommand_8java_source_l00023}{pkg\-\_\-commands.\-Credits\-Command.\-execute()}, \hyperlink{LookCommand_8java_source_l00026}{pkg\-\_\-commands.\-Look\-Command.\-execute()}, \hyperlink{DropCommand_8java_source_l00027}{pkg\-\_\-commands.\-Drop\-Command.\-execute()}, \hyperlink{TalkCommand_8java_source_l00027}{pkg\-\_\-commands.\-Talk\-Command.\-execute()}, \hyperlink{TakeCommand_8java_source_l00027}{pkg\-\_\-commands.\-Take\-Command.\-execute()}, \hyperlink{EatCommand_8java_source_l00028}{pkg\-\_\-commands.\-Eat\-Command.\-execute()}, \hyperlink{GiveCommand_8java_source_l00029}{pkg\-\_\-commands.\-Give\-Command.\-execute()}, \hyperlink{GoCommand_8java_source_l00032}{pkg\-\_\-commands.\-Go\-Command.\-execute()}, \hyperlink{TestCommand_8java_source_l00032}{pkg\-\_\-commands.\-Test\-Command.\-execute()}, \hyperlink{HelpCommand_8java_source_l00033}{pkg\-\_\-commands.\-Help\-Command.\-execute()}, \hyperlink{GoCommand_8java_source_l00071}{pkg\-\_\-commands.\-Go\-Command.\-go\-Room\-No\-Check()}, and \hyperlink{BeamerCommand_8java_source_l00050}{pkg\-\_\-commands.\-Beamer\-Command.\-teleport()}.
 
 
 \begin{DoxyCode}
-00058                                               \{
-00059         this.message = \hyperlink{classpkg__commands_1_1Command_ab4bc9d76fd948fcf253400793fbfde3f}{message};
-00060     \}
+00089                                               \{
+00090         this.message = \hyperlink{classpkg__commands_1_1Command_ab4bc9d76fd948fcf253400793fbfde3f}{message};
+00091     \}
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:\nopagebreak
+Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -326,7 +429,7 @@ Parameter field setter.
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{Command_8java_source_l00042}{42} of file \hyperlink{Command_8java_source}{Command.\-java}.
+Definition at line \hyperlink{Command_8java_source_l00057}{57} of file \hyperlink{Command_8java_source}{Command.\-java}.
 
 
 
@@ -334,9 +437,39 @@ References \hyperlink{Command_8java_source_l00021}{pkg\-\_\-commands.\-Command.\
 
 
 \begin{DoxyCode}
-00042                                                \{
-00043         this.parameter = \hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{parameter};
-00044     \}
+00057                                                \{
+00058         this.parameter = \hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{parameter};
+00059     \}
+\end{DoxyCode}
+\hypertarget{classpkg__commands_1_1Command_af6de3828c27cd491ad24c4a97d69e856}{\index{pkg\-\_\-commands\-::\-Command@{pkg\-\_\-commands\-::\-Command}!set\-Second\-Parameter@{set\-Second\-Parameter}}
+\index{set\-Second\-Parameter@{set\-Second\-Parameter}!pkg_commands::Command@{pkg\-\_\-commands\-::\-Command}}
+\subsubsection[{set\-Second\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-commands.\-Command.\-set\-Second\-Parameter (
+\begin{DoxyParamCaption}
+\item[{String}]{parameter}
+\end{DoxyParamCaption}
+)}}\label{classpkg__commands_1_1Command_af6de3828c27cd491ad24c4a97d69e856}
+
+
+Second Parameter field setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & The second parameter to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Command_8java_source_l00065}{65} of file \hyperlink{Command_8java_source}{Command.\-java}.
+
+
+
+References \hyperlink{Command_8java_source_l00021}{pkg\-\_\-commands.\-Command.\-parameter}, and \hyperlink{Command_8java_source_l00028}{pkg\-\_\-commands.\-Command.\-second\-Parameter}.
+
+
+\begin{DoxyCode}
+00065                                                      \{
+00066         \hyperlink{classpkg__commands_1_1Command_a5f0b6df5ba798c9ee4446f01a0352210}{secondParameter} = \hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{parameter};
+00067     \}
 \end{DoxyCode}
 
 
@@ -350,11 +483,11 @@ Message to be printed.
 
 This message is printed if and only if the command was successfully processed 
 
-Definition at line \hyperlink{Command_8java_source_l00028}{28} of file \hyperlink{Command_8java_source}{Command.\-java}.
+Definition at line \hyperlink{Command_8java_source_l00035}{35} of file \hyperlink{Command_8java_source}{Command.\-java}.
 
 
 
-Referenced by \hyperlink{Command_8java_source_l00066}{pkg\-\_\-commands.\-Command.\-get\-Message()}, \hyperlink{Command_8java_source_l00074}{pkg\-\_\-commands.\-Command.\-has\-Message()}, and \hyperlink{Command_8java_source_l00058}{pkg\-\_\-commands.\-Command.\-set\-Message()}.
+Referenced by \hyperlink{Command_8java_source_l00097}{pkg\-\_\-commands.\-Command.\-get\-Message()}, \hyperlink{Command_8java_source_l00105}{pkg\-\_\-commands.\-Command.\-has\-Message()}, and \hyperlink{Command_8java_source_l00089}{pkg\-\_\-commands.\-Command.\-set\-Message()}.
 
 \hypertarget{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{\index{pkg\-\_\-commands\-::\-Command@{pkg\-\_\-commands\-::\-Command}!parameter@{parameter}}
 \index{parameter@{parameter}!pkg_commands::Command@{pkg\-\_\-commands\-::\-Command}}
@@ -369,7 +502,22 @@ Definition at line \hyperlink{Command_8java_source_l00021}{21} of file \hyperlin
 
 
 
-Referenced by \hyperlink{Command_8java_source_l00034}{pkg\-\_\-commands.\-Command.\-get\-Parameter()}, \hyperlink{Command_8java_source_l00050}{pkg\-\_\-commands.\-Command.\-has\-Parameter()}, and \hyperlink{Command_8java_source_l00042}{pkg\-\_\-commands.\-Command.\-set\-Parameter()}.
+Referenced by \hyperlink{Command_8java_source_l00041}{pkg\-\_\-commands.\-Command.\-get\-Parameter()}, \hyperlink{Command_8java_source_l00073}{pkg\-\_\-commands.\-Command.\-has\-Parameter()}, \hyperlink{Command_8java_source_l00057}{pkg\-\_\-commands.\-Command.\-set\-Parameter()}, and \hyperlink{Command_8java_source_l00065}{pkg\-\_\-commands.\-Command.\-set\-Second\-Parameter()}.
+
+\hypertarget{classpkg__commands_1_1Command_a5f0b6df5ba798c9ee4446f01a0352210}{\index{pkg\-\_\-commands\-::\-Command@{pkg\-\_\-commands\-::\-Command}!second\-Parameter@{second\-Parameter}}
+\index{second\-Parameter@{second\-Parameter}!pkg_commands::Command@{pkg\-\_\-commands\-::\-Command}}
+\subsubsection[{second\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-commands.\-Command.\-second\-Parameter\hspace{0.3cm}{\ttfamily [private]}}}\label{classpkg__commands_1_1Command_a5f0b6df5ba798c9ee4446f01a0352210}
+
+
+Second parameter for the command. 
+
+Equals to null if there is no second parameter 
+
+Definition at line \hyperlink{Command_8java_source_l00028}{28} of file \hyperlink{Command_8java_source}{Command.\-java}.
+
+
+
+Referenced by \hyperlink{Command_8java_source_l00049}{pkg\-\_\-commands.\-Command.\-get\-Second\-Parameter()}, \hyperlink{Command_8java_source_l00081}{pkg\-\_\-commands.\-Command.\-has\-Second\-Parameter()}, and \hyperlink{Command_8java_source_l00065}{pkg\-\_\-commands.\-Command.\-set\-Second\-Parameter()}.
 
 
 

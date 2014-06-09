@@ -2,21 +2,23 @@
 }
 
 \begin{DoxyCode}
-00001 
-\hypertarget{Game_8java_source_l00006}{}\hyperlink{classGame}{00006} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classGame}{Game}
-00007 \{
-\hypertarget{Game_8java_source_l00012}{}\hyperlink{classGame_ae52595a27ac1b327b05db2129ad81fca}{00012}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \hyperlink{classGame_ae52595a27ac1b327b05db2129ad81fca}{main}(String[] args) \{
-00013         \hyperlink{classGame}{Game} game = \textcolor{keyword}{new} \hyperlink{classGame_a2e034e53e9c032964ecd2a831b29a616}{Game}();
-00014     \}
-00015 
-00019     \textcolor{keyword}{private} \hyperlink{classUserInterface}{UserInterface} gui;
-00020 
-00024     \textcolor{keyword}{private} \hyperlink{classGameEngine}{GameEngine} engine;
-00025 
-\hypertarget{Game_8java_source_l00029}{}\hyperlink{classGame_a2e034e53e9c032964ecd2a831b29a616}{00029}     \textcolor{keyword}{public} \hyperlink{classGame_a2e034e53e9c032964ecd2a831b29a616}{Game} () \{
-00030         engine = \textcolor{keyword}{new} \hyperlink{classGameEngine}{GameEngine}();
-00031         gui = \textcolor{keyword}{new} \hyperlink{classUserInterface}{UserInterface}(engine);
-00032         engine.setGUI(gui);
-00033     \}
-00034 \}
+00001 \textcolor{keyword}{import} \hyperlink{classpkg__game_1_1GameEngine}{pkg\_game.GameEngine};
+00002 \textcolor{keyword}{import} \hyperlink{classpkg__game_1_1UserInterface}{pkg\_game.UserInterface};
+00003 
+\hypertarget{Game_8java_source_l00009}{}\hyperlink{classGame}{00009} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classGame}{Game}
+00010 \{
+\hypertarget{Game_8java_source_l00015}{}\hyperlink{classGame_ae52595a27ac1b327b05db2129ad81fca}{00015}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \hyperlink{classGame_ae52595a27ac1b327b05db2129ad81fca}{main}(String[] args) \{
+00016         \hyperlink{classGame}{Game} game = \textcolor{keyword}{new} \hyperlink{classGame_a2e034e53e9c032964ecd2a831b29a616}{Game}();
+00017     \}
+00018 
+00022     \textcolor{keyword}{private} \hyperlink{classpkg__game_1_1UserInterface}{UserInterface} gui;
+00023 
+00027     \textcolor{keyword}{private} \hyperlink{classpkg__game_1_1GameEngine}{GameEngine} engine;
+00028 
+\hypertarget{Game_8java_source_l00032}{}\hyperlink{classGame_a2e034e53e9c032964ecd2a831b29a616}{00032}     \textcolor{keyword}{public} \hyperlink{classGame_a2e034e53e9c032964ecd2a831b29a616}{Game} () \{
+00033         engine = \textcolor{keyword}{new} \hyperlink{classpkg__game_1_1GameEngine}{GameEngine}();
+00034         gui = \textcolor{keyword}{new} \hyperlink{classpkg__game_1_1UserInterface}{UserInterface}(engine);
+00035         engine.setGUI(gui);
+00036     \}
+00037 \}
 \end{DoxyCode}

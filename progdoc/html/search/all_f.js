@@ -1,15 +1,17 @@
 var searchData=
 [
-  ['take',['TAKE',['../enumpkg__parsing_1_1CommandWord.html#ae5353500b91f141ae399403b5e87cc28',1,'pkg_parsing::CommandWord']]],
-  ['takecommand',['TakeCommand',['../classpkg__commands_1_1TakeCommand.html',1,'pkg_commands']]],
-  ['takecommand',['TakeCommand',['../classpkg__commands_1_1TakeCommand.html#a1f6989e8d9dce087d5f70cf748c53119',1,'pkg_commands::TakeCommand']]],
-  ['takecommand_2ejava',['TakeCommand.java',['../TakeCommand_8java.html',1,'']]],
-  ['takeobject',['takeObject',['../classpkg__world_1_1Player.html#ac5bdaa8f2149e480e57398be03efa96f',1,'pkg_world::Player']]],
-  ['teleport',['teleport',['../classpkg__commands_1_1BeamerCommand.html#a2b6c04242d443d4ff36f255b06ce14be',1,'pkg_commands::BeamerCommand']]],
-  ['test',['TEST',['../enumpkg__parsing_1_1CommandWord.html#acf61cb32b4d651f87b2cd342761f9a79',1,'pkg_parsing::CommandWord']]],
-  ['testcommand',['TestCommand',['../classpkg__commands_1_1TestCommand.html',1,'pkg_commands']]],
-  ['testcommand',['TestCommand',['../classpkg__commands_1_1TestCommand.html#a116f412bc5f67f0c344e436d33126f25',1,'pkg_commands::TestCommand']]],
-  ['testcommand_2ejava',['TestCommand.java',['../TestCommand_8java.html',1,'']]],
-  ['tostring',['toString',['../enumpkg__parsing_1_1CommandWord.html#ab6d70b61b7418ce7dfa930bda64132c5',1,'pkg_parsing::CommandWord']]],
-  ['transfer',['transfer',['../classpkg__world_1_1ItemList.html#a0428375741d0442813d88131a5962a10',1,'pkg_world::ItemList']]]
+  ['satisfied',['satisfied',['../classpkg__world_1_1pkg__characters_1_1Character.html#a63a989f34f7ec28cf9e8c6c2a19c7daa',1,'pkg_world::pkg_characters::Character']]],
+  ['secondparameter',['secondParameter',['../classpkg__commands_1_1Command.html#a5f0b6df5ba798c9ee4446f01a0352210',1,'pkg_commands::Command']]],
+  ['setbeamerroom',['setBeamerRoom',['../classpkg__world_1_1Player.html#a6dc6248fa7cbe281e9a7c5d6b86f242c',1,'pkg_world::Player']]],
+  ['setcommandsleft',['setCommandsLeft',['../classpkg__game_1_1UserInterface.html#a84ff8e11b23631bd6c5a34f718360a1f',1,'pkg_game::UserInterface']]],
+  ['setexit',['setExit',['../classpkg__world_1_1Room.html#a4a97591f3b574b3d0086843a919a0214',1,'pkg_world::Room']]],
+  ['setgui',['setGUI',['../classpkg__game_1_1GameEngine.html#a0156eb9ee85fc086aef4da8594fb2891',1,'pkg_game::GameEngine']]],
+  ['setmaxweight',['setMaxWeight',['../classpkg__world_1_1Player.html#a6218134478709a2e1c4438f2c9f94b8a',1,'pkg_world::Player']]],
+  ['setmessage',['setMessage',['../classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13',1,'pkg_commands::Command']]],
+  ['setparameter',['setParameter',['../classpkg__commands_1_1Command.html#a18446243a5fd360e9341b4b141c0cccc',1,'pkg_commands::Command']]],
+  ['setsecondparameter',['setSecondParameter',['../classpkg__commands_1_1Command.html#af6de3828c27cd491ad24c4a97d69e856',1,'pkg_commands::Command']]],
+  ['showcommands',['showCommands',['../classpkg__parsing_1_1Parser.html#a31545cdbdb409aaeb727289c0ea7be1b',1,'pkg_parsing::Parser']]],
+  ['showimage',['showImage',['../classpkg__game_1_1UserInterface.html#af87fdba109655a1538da16b55b61dbff',1,'pkg_game::UserInterface']]],
+  ['showitem',['showItem',['../classpkg__commands_1_1LookCommand.html#a17808882dffb0a9edce192235c029ddf',1,'pkg_commands::LookCommand']]],
+  ['successaction',['successAction',['../classpkg__world_1_1pkg__characters_1_1Character.html#a3f1c0fc80b859a8625f334782b1bb74a',1,'pkg_world::pkg_characters::Character']]]
 ];

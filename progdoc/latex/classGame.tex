@@ -8,7 +8,8 @@ Main class used to instantiate other objects.
 
 
 
-Collaboration diagram for Game\-:\nopagebreak
+Collaboration diagram for Game\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,9 +29,9 @@ static void \hyperlink{classGame_ae52595a27ac1b327b05db2129ad81fca}{main} (Strin
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classUserInterface}{User\-Interface} \hyperlink{classGame_a9003da90b15756c7975d03db874632a4}{gui}
+\hyperlink{classpkg__game_1_1UserInterface}{User\-Interface} \hyperlink{classGame_a9003da90b15756c7975d03db874632a4}{gui}
 \begin{DoxyCompactList}\small\item\em The game's user interface. \end{DoxyCompactList}\item 
-\hyperlink{classGameEngine}{Game\-Engine} \hyperlink{classGame_a899fc9c2339c51abd4594b6a5e44284f}{engine}
+\hyperlink{classpkg__game_1_1GameEngine}{Game\-Engine} \hyperlink{classGame_a899fc9c2339c51abd4594b6a5e44284f}{engine}
 \begin{DoxyCompactList}\small\item\em The gameplay manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -42,7 +43,7 @@ Rémi N\-I\-C\-O\-L\-E
 \end{DoxyAuthor}
 
 
-Definition at line \hyperlink{Game_8java_source_l00006}{6} of file \hyperlink{Game_8java_source}{Game.\-java}.
+Definition at line \hyperlink{Game_8java_source_l00009}{9} of file \hyperlink{Game_8java_source}{Game.\-java}.
 
 
 
@@ -60,27 +61,28 @@ Definition at line \hyperlink{Game_8java_source_l00006}{6} of file \hyperlink{Ga
 
 
 
-Definition at line \hyperlink{Game_8java_source_l00029}{29} of file \hyperlink{Game_8java_source}{Game.\-java}.
+Definition at line \hyperlink{Game_8java_source_l00032}{32} of file \hyperlink{Game_8java_source}{Game.\-java}.
 
 
 
-References \hyperlink{Game_8java_source_l00024}{engine}, and \hyperlink{Game_8java_source_l00019}{gui}.
+References \hyperlink{Game_8java_source_l00027}{engine}, and \hyperlink{Game_8java_source_l00022}{gui}.
 
 
 
-Referenced by \hyperlink{Game_8java_source_l00012}{main()}.
+Referenced by \hyperlink{Game_8java_source_l00015}{main()}.
 
 
 \begin{DoxyCode}
-00029                    \{
-00030         \hyperlink{classGame_a899fc9c2339c51abd4594b6a5e44284f}{engine} = \textcolor{keyword}{new} \hyperlink{classGameEngine}{GameEngine}();
-00031         \hyperlink{classGame_a9003da90b15756c7975d03db874632a4}{gui} = \textcolor{keyword}{new} \hyperlink{classUserInterface}{UserInterface}(\hyperlink{classGame_a899fc9c2339c51abd4594b6a5e44284f}{engine});
-00032         engine.setGUI(\hyperlink{classGame_a9003da90b15756c7975d03db874632a4}{gui});
-00033     \}
+00032                    \{
+00033         \hyperlink{classGame_a899fc9c2339c51abd4594b6a5e44284f}{engine} = \textcolor{keyword}{new} \hyperlink{classpkg__game_1_1GameEngine}{GameEngine}();
+00034         \hyperlink{classGame_a9003da90b15756c7975d03db874632a4}{gui} = \textcolor{keyword}{new} \hyperlink{classpkg__game_1_1UserInterface}{UserInterface}(\hyperlink{classGame_a899fc9c2339c51abd4594b6a5e44284f}{engine});
+00035         engine.setGUI(\hyperlink{classGame_a9003da90b15756c7975d03db874632a4}{gui});
+00036     \}
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:\nopagebreak
+Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -110,21 +112,22 @@ Main function.
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{Game_8java_source_l00012}{12} of file \hyperlink{Game_8java_source}{Game.\-java}.
+Definition at line \hyperlink{Game_8java_source_l00015}{15} of file \hyperlink{Game_8java_source}{Game.\-java}.
 
 
 
-References \hyperlink{Game_8java_source_l00029}{Game()}.
+References \hyperlink{Game_8java_source_l00032}{Game()}.
 
 
 \begin{DoxyCode}
-00012                                            \{
-00013         \hyperlink{classGame}{Game} game = \textcolor{keyword}{new} \hyperlink{classGame_a2e034e53e9c032964ecd2a831b29a616}{Game}();
-00014     \}
+00015                                            \{
+00016         \hyperlink{classGame}{Game} game = \textcolor{keyword}{new} \hyperlink{classGame_a2e034e53e9c032964ecd2a831b29a616}{Game}();
+00017     \}
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
+Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -145,11 +148,11 @@ The gameplay manager.
 
 
 
-Definition at line \hyperlink{Game_8java_source_l00024}{24} of file \hyperlink{Game_8java_source}{Game.\-java}.
+Definition at line \hyperlink{Game_8java_source_l00027}{27} of file \hyperlink{Game_8java_source}{Game.\-java}.
 
 
 
-Referenced by \hyperlink{Game_8java_source_l00029}{Game()}.
+Referenced by \hyperlink{Game_8java_source_l00032}{Game()}.
 
 \hypertarget{classGame_a9003da90b15756c7975d03db874632a4}{\index{Game@{Game}!gui@{gui}}
 \index{gui@{gui}!Game@{Game}}
@@ -160,11 +163,11 @@ The game's user interface.
 
 
 
-Definition at line \hyperlink{Game_8java_source_l00019}{19} of file \hyperlink{Game_8java_source}{Game.\-java}.
+Definition at line \hyperlink{Game_8java_source_l00022}{22} of file \hyperlink{Game_8java_source}{Game.\-java}.
 
 
 
-Referenced by \hyperlink{Game_8java_source_l00029}{Game()}.
+Referenced by \hyperlink{Game_8java_source_l00032}{Game()}.
 
 
 

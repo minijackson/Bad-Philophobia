@@ -8,7 +8,8 @@ Class used to parse the commands with or without parameters given by the user.
 
 
 
-Collaboration diagram for pkg\-\_\-parsing.\-Parser\-:\nopagebreak
+Collaboration diagram for pkg\-\_\-parsing.\-Parser\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -69,26 +70,30 @@ Definition at line \hyperlink{Parser_8java_source_l00028}{28} of file \hyperlink
 \begin{DoxyCode}
 00028                                                        \{
 00029 
-00030         String word1;
-00031         String word2;
-00032 
-00033         StringTokenizer tokenizer = \textcolor{keyword}{new} StringTokenizer(inputLine);
-00034 
-00035         \textcolor{keywordflow}{if}(tokenizer.hasMoreTokens())
-00036             word1 = tokenizer.nextToken();  \textcolor{comment}{// First word}
-00037         \textcolor{keywordflow}{else}
-00038             word1 = null;
-00039         \textcolor{keywordflow}{if}(tokenizer.hasMoreTokens())
-00040             word2 = tokenizer.nextToken();  \textcolor{comment}{// Second word}
-00041         \textcolor{keywordflow}{else}
-00042             word2 = null;
-00043 
-00044         Command command = commands.getCommand(word1);
-00045         \textcolor{keywordflow}{if}(command != null) \{
-00046             command.setParameter(word2);
-00047         \}
-00048         \textcolor{keywordflow}{return} command;
-00049     \}
+00030         String word1, word2, word3;
+00031 
+00032         StringTokenizer tokenizer = \textcolor{keyword}{new} StringTokenizer(inputLine);
+00033 
+00034         \textcolor{keywordflow}{if}(tokenizer.hasMoreTokens())
+00035             word1 = tokenizer.nextToken();  \textcolor{comment}{// First word}
+00036         \textcolor{keywordflow}{else}
+00037             word1 = null;
+00038         \textcolor{keywordflow}{if}(tokenizer.hasMoreTokens())
+00039             word2 = tokenizer.nextToken();  \textcolor{comment}{// Second word}
+00040         \textcolor{keywordflow}{else}
+00041             word2 = null;
+00042         \textcolor{keywordflow}{if}(tokenizer.hasMoreTokens())
+00043             word3 = tokenizer.nextToken();  \textcolor{comment}{// Third word}
+00044         \textcolor{keywordflow}{else}
+00045             word3 = null;
+00046 
+00047         Command command = commands.getCommand(word1);
+00048         \textcolor{keywordflow}{if}(command != null) \{
+00049             command.setParameter(word2);
+00050             command.setSecondParameter(word3);
+00051         \}
+00052         \textcolor{keywordflow}{return} command;
+00053     \}
 \end{DoxyCode}
 \hypertarget{classpkg__parsing_1_1Parser_a31545cdbdb409aaeb727289c0ea7be1b}{\index{pkg\-\_\-parsing\-::\-Parser@{pkg\-\_\-parsing\-::\-Parser}!show\-Commands@{show\-Commands}}
 \index{show\-Commands@{show\-Commands}!pkg_parsing::Parser@{pkg\-\_\-parsing\-::\-Parser}}
@@ -106,7 +111,7 @@ The list of available commands
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{Parser_8java_source_l00055}{55} of file \hyperlink{Parser_8java_source}{Parser.\-java}.
+Definition at line \hyperlink{Parser_8java_source_l00059}{59} of file \hyperlink{Parser_8java_source}{Parser.\-java}.
 
 
 
@@ -114,13 +119,14 @@ Referenced by \hyperlink{HelpCommand_8java_source_l00033}{pkg\-\_\-commands.\-He
 
 
 \begin{DoxyCode}
-00055                                         \{
-00056         \textcolor{keywordflow}{return} commands.getCommandList();
-00057     \}
+00059                                         \{
+00060         \textcolor{keywordflow}{return} commands.getCommandList();
+00061     \}
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:\nopagebreak
+Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

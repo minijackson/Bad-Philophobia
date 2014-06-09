@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['quitcommand_2ejava',['QuitCommand.java',['../QuitCommand_8java.html',1,'']]]
+  ['parser_2ejava',['Parser.java',['../Parser_8java.html',1,'']]],
+  ['player_2ejava',['Player.java',['../Player_8java.html',1,'']]]
 ];

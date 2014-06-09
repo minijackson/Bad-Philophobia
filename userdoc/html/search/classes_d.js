@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['unauthorizedexception',['UnauthorizedException',['../classpkg__exceptions_1_1UnauthorizedException.html',1,'pkg_exceptions']]],
-  ['userinterface',['UserInterface',['../classUserInterface.html',1,'']]]
+  ['takecommand',['TakeCommand',['../classpkg__commands_1_1TakeCommand.html',1,'pkg_commands']]],
+  ['talkcommand',['TalkCommand',['../classpkg__commands_1_1TalkCommand.html',1,'pkg_commands']]],
+  ['testcommand',['TestCommand',['../classpkg__commands_1_1TestCommand.html',1,'pkg_commands']]]
 ];

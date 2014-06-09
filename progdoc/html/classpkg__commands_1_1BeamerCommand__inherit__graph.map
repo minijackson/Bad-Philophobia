@@ -1,4 +1,4 @@
 <map id="pkg_commands.BeamerCommand" name="pkg_commands.BeamerCommand">
-<area shape="rect" id="node2" href="$classpkg__commands_1_1GoCommand.html" title="class GoCommand used to make the player go to a given Room. " alt="" coords="19,235,213,357"/>
-<area shape="rect" id="node3" href="$classpkg__commands_1_1Command.html" title="Class used to handle a command of one or two words. " alt="" coords="27,6,205,186"/>
+<area shape="rect" id="node2" href="$classpkg__commands_1_1GoCommand.html" title="class GoCommand used to make the player go to a given Room. " alt="" coords="19,293,213,429"/>
+<area shape="rect" id="node3" href="$classpkg__commands_1_1Command.html" title="Class used to handle a command of one or two words. " alt="" coords="27,6,205,245"/>
 </map>

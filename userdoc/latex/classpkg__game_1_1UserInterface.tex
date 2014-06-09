@@ -1,0 +1,264 @@
+\hypertarget{classpkg__game_1_1UserInterface}{\section{pkg\-\_\-game.\-User\-Interface Class Reference}
+\label{classpkg__game_1_1UserInterface}\index{pkg\-\_\-game.\-User\-Interface@{pkg\-\_\-game.\-User\-Interface}}
+}
+
+
+Inheritance diagram for pkg\-\_\-game.\-User\-Interface\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classpkg__game_1_1UserInterface__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pkg\-\_\-game.\-User\-Interface\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classpkg__game_1_1UserInterface__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpkg__game_1_1UserInterface_abfbaf9bbfd3fd0bb80c8183793739f81}{User\-Interface} (\hyperlink{classpkg__game_1_1GameEngine}{Game\-Engine} game\-Engine)
+\item 
+void \hyperlink{classpkg__game_1_1UserInterface_a84ff8e11b23631bd6c5a34f718360a1f}{set\-Commands\-Left} (int commands\-Left)
+\item 
+void \hyperlink{classpkg__game_1_1UserInterface_a524492922d9f29b45f4687441017e322}{print} (String text)
+\item 
+void \hyperlink{classpkg__game_1_1UserInterface_ac4d82f989416d7cc64a6e2fba2f4ed75}{println} (String text)
+\item 
+void \hyperlink{classpkg__game_1_1UserInterface_af87fdba109655a1538da16b55b61dbff}{show\-Image} (String image\-Name)
+\item 
+void \hyperlink{classpkg__game_1_1UserInterface_a36a5a68f8ceca41d7f48cf31ca5f2f0e}{enable} (boolean on)
+\item 
+void \hyperlink{classpkg__game_1_1UserInterface_a55cb092ba130a286917cbd6c064136b2}{action\-Performed} (Action\-Event e)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class handling the game's user interface. \begin{DoxyAuthor}{Author}
+Rémi N\-I\-C\-O\-L\-E 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{UserInterface_8java_source_l00015}{15} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpkg__game_1_1UserInterface_abfbaf9bbfd3fd0bb80c8183793739f81}{\index{pkg\-\_\-game\-::\-User\-Interface@{pkg\-\_\-game\-::\-User\-Interface}!User\-Interface@{User\-Interface}}
+\index{User\-Interface@{User\-Interface}!pkg_game::UserInterface@{pkg\-\_\-game\-::\-User\-Interface}}
+\subsubsection[{User\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}pkg\-\_\-game.\-User\-Interface.\-User\-Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\-Engine}}]{game\-Engine}
+\end{DoxyParamCaption}
+)}}\label{classpkg__game_1_1UserInterface_abfbaf9bbfd3fd0bb80c8183793739f81}
+\hyperlink{classpkg__game_1_1UserInterface}{User\-Interface} class constructor. 
+\begin{DoxyParams}{Parameters}
+{\em game\-Engine} & The gameplay \hyperlink{classpkg__game_1_1GameEngine}{Game\-Engine} object. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{UserInterface_8java_source_l00056}{56} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+
+
+\begin{DoxyCode}
+00056                                                 \{
+00057         engine = gameEngine;
+00058         buttons = \textcolor{keyword}{new} HashMap<JButton, String>();
+00059         createGUI();
+00060     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpkg__game_1_1UserInterface_a55cb092ba130a286917cbd6c064136b2}{\index{pkg\-\_\-game\-::\-User\-Interface@{pkg\-\_\-game\-::\-User\-Interface}!action\-Performed@{action\-Performed}}
+\index{action\-Performed@{action\-Performed}!pkg_game::UserInterface@{pkg\-\_\-game\-::\-User\-Interface}}
+\subsubsection[{action\-Performed}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-game.\-User\-Interface.\-action\-Performed (
+\begin{DoxyParamCaption}
+\item[{Action\-Event}]{e}
+\end{DoxyParamCaption}
+)}}\label{classpkg__game_1_1UserInterface_a55cb092ba130a286917cbd6c064136b2}
+Actionlistener for the textfield. 
+\begin{DoxyParams}{Parameters}
+{\em e} & Event \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{UserInterface_8java_source_l00214}{214} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+
+
+\begin{DoxyCode}
+00214                                                \{
+00215 
+00216         \textcolor{keywordflow}{if}(e.getSource() == entryField) \{
+00217             processCommand();
+00218             \textcolor{keywordflow}{return};
+00219         \}
+00220 
+00221         String command = buttons.get(((JButton)e.getSource()));
+00222 
+00223         \textcolor{keywordflow}{if}(command == null)
+00224             processCommand();
+00225         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(command.equals(\textcolor{stringliteral}{""}))
+00226             processCommand();
+00227         \textcolor{keywordflow}{else}
+00228             engine.processCommand(command);
+00229     \}
+\end{DoxyCode}
+\hypertarget{classpkg__game_1_1UserInterface_a36a5a68f8ceca41d7f48cf31ca5f2f0e}{\index{pkg\-\_\-game\-::\-User\-Interface@{pkg\-\_\-game\-::\-User\-Interface}!enable@{enable}}
+\index{enable@{enable}!pkg_game::UserInterface@{pkg\-\_\-game\-::\-User\-Interface}}
+\subsubsection[{enable}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-game.\-User\-Interface.\-enable (
+\begin{DoxyParamCaption}
+\item[{boolean}]{on}
+\end{DoxyParamCaption}
+)}}\label{classpkg__game_1_1UserInterface_a36a5a68f8ceca41d7f48cf31ca5f2f0e}
+Enable or disable the input field. 
+\begin{DoxyParams}{Parameters}
+{\em on} & True to activate, False to deactivate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{UserInterface_8java_source_l00107}{107} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+
+
+\begin{DoxyCode}
+00107                                    \{
+00108         entryField.setEditable(on);
+00109         entryField.setEnabled(on);
+00110         \textcolor{keywordflow}{if}(!on)
+00111             entryField.getCaret().setBlinkRate(0);
+00112 
+00113         \textcolor{keywordflow}{for} (JButton button : buttons.keySet()) \{
+00114             button.setEnabled(on);
+00115         \}
+00116 
+00117         commandsLeftLabel.setEnabled(on);
+00118     \}
+\end{DoxyCode}
+\hypertarget{classpkg__game_1_1UserInterface_a524492922d9f29b45f4687441017e322}{\index{pkg\-\_\-game\-::\-User\-Interface@{pkg\-\_\-game\-::\-User\-Interface}!print@{print}}
+\index{print@{print}!pkg_game::UserInterface@{pkg\-\_\-game\-::\-User\-Interface}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-game.\-User\-Interface.\-print (
+\begin{DoxyParamCaption}
+\item[{String}]{text}
+\end{DoxyParamCaption}
+)}}\label{classpkg__game_1_1UserInterface_a524492922d9f29b45f4687441017e322}
+Print the given text in the text area. 
+\begin{DoxyParams}{Parameters}
+{\em text} & Text to display \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{UserInterface_8java_source_l00074}{74} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+
+
+\begin{DoxyCode}
+00074                                    \{
+00075         log.append(text);
+00076         log.setCaretPosition(log.getDocument().getLength());
+00077     \}
+\end{DoxyCode}
+\hypertarget{classpkg__game_1_1UserInterface_ac4d82f989416d7cc64a6e2fba2f4ed75}{\index{pkg\-\_\-game\-::\-User\-Interface@{pkg\-\_\-game\-::\-User\-Interface}!println@{println}}
+\index{println@{println}!pkg_game::UserInterface@{pkg\-\_\-game\-::\-User\-Interface}}
+\subsubsection[{println}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-game.\-User\-Interface.\-println (
+\begin{DoxyParamCaption}
+\item[{String}]{text}
+\end{DoxyParamCaption}
+)}}\label{classpkg__game_1_1UserInterface_ac4d82f989416d7cc64a6e2fba2f4ed75}
+Print the given text plus a newline in the text area. 
+\begin{DoxyParams}{Parameters}
+{\em text} & Text to display \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{UserInterface_8java_source_l00083}{83} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+
+
+
+Referenced by \hyperlink{GameEngine_8java_source_l00226}{pkg\-\_\-game.\-Game\-Engine.\-process\-Command()}.
+
+
+\begin{DoxyCode}
+00083                                      \{
+00084         log.append(text + \textcolor{stringliteral}{"\(\backslash\)n"});
+00085         log.setCaretPosition(log.getDocument().getLength());
+00086     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__game_1_1UserInterface_ac4d82f989416d7cc64a6e2fba2f4ed75_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classpkg__game_1_1UserInterface_a84ff8e11b23631bd6c5a34f718360a1f}{\index{pkg\-\_\-game\-::\-User\-Interface@{pkg\-\_\-game\-::\-User\-Interface}!set\-Commands\-Left@{set\-Commands\-Left}}
+\index{set\-Commands\-Left@{set\-Commands\-Left}!pkg_game::UserInterface@{pkg\-\_\-game\-::\-User\-Interface}}
+\subsubsection[{set\-Commands\-Left}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-game.\-User\-Interface.\-set\-Commands\-Left (
+\begin{DoxyParamCaption}
+\item[{int}]{commands\-Left}
+\end{DoxyParamCaption}
+)}}\label{classpkg__game_1_1UserInterface_a84ff8e11b23631bd6c5a34f718360a1f}
+Change the text for the commands left J\-Label 
+\begin{DoxyParams}{Parameters}
+{\em commands\-Left} & The number of commands left \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{UserInterface_8java_source_l00066}{66} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+
+
+\begin{DoxyCode}
+00066                                                   \{
+00067         commandsLeftLabel.setText(\textcolor{stringliteral}{" Commands left: "} + commandsLeft + \textcolor{stringliteral}{"  "});
+00068     \}
+\end{DoxyCode}
+\hypertarget{classpkg__game_1_1UserInterface_af87fdba109655a1538da16b55b61dbff}{\index{pkg\-\_\-game\-::\-User\-Interface@{pkg\-\_\-game\-::\-User\-Interface}!show\-Image@{show\-Image}}
+\index{show\-Image@{show\-Image}!pkg_game::UserInterface@{pkg\-\_\-game\-::\-User\-Interface}}
+\subsubsection[{show\-Image}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-game.\-User\-Interface.\-show\-Image (
+\begin{DoxyParamCaption}
+\item[{String}]{image\-Name}
+\end{DoxyParamCaption}
+)}}\label{classpkg__game_1_1UserInterface_af87fdba109655a1538da16b55b61dbff}
+Show the image corresponding to the path of the image. 
+\begin{DoxyParams}{Parameters}
+{\em image\-Name} & The path of the image \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{UserInterface_8java_source_l00092}{92} of file \hyperlink{UserInterface_8java_source}{User\-Interface.\-java}.
+
+
+\begin{DoxyCode}
+00092                                             \{
+00093         URL imageURL = this.getClass().getClassLoader().getResource(imageName);
+00094         \textcolor{keywordflow}{if}(imageURL == null)
+00095             System.out.println(\textcolor{stringliteral}{"image not found"});
+00096         \textcolor{keywordflow}{else} \{
+00097             ImageIcon icon = \textcolor{keyword}{new} ImageIcon(imageURL);
+00098             image.setIcon(icon);
+00099             myFrame.pack();
+00100         \}
+00101     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pkg\-\_\-game/\hyperlink{UserInterface_8java}{User\-Interface.\-java}\end{DoxyCompactItemize}

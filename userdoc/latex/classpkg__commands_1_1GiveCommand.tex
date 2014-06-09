@@ -1,0 +1,156 @@
+\hypertarget{classpkg__commands_1_1GiveCommand}{\section{pkg\-\_\-commands.\-Give\-Command Class Reference}
+\label{classpkg__commands_1_1GiveCommand}\index{pkg\-\_\-commands.\-Give\-Command@{pkg\-\_\-commands.\-Give\-Command}}
+}
+
+
+Inheritance diagram for pkg\-\_\-commands.\-Give\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classpkg__commands_1_1GiveCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pkg\-\_\-commands.\-Give\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classpkg__commands_1_1GiveCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpkg__commands_1_1GiveCommand_a04e020a1f124119a2e7df19fac983953}{Give\-Command} ()
+\item 
+boolean \hyperlink{classpkg__commands_1_1GiveCommand_a3a3cca7fae9b86d8ff85cc166564843d}{execute} (\hyperlink{classpkg__world_1_1Player}{Player} player)  throws No\-Argument\-Exception,pkg\-\_\-exceptions.\-Illegal\-Argument\-Exception,\-Unauthorized\-Exception 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+class \hyperlink{classpkg__commands_1_1GiveCommand}{Give\-Command} used to make the Player give an Item \begin{DoxyAuthor}{Author}
+Rémi Nicole 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{GiveCommand_8java_source_l00012}{12} of file \hyperlink{GiveCommand_8java_source}{Give\-Command.\-java}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpkg__commands_1_1GiveCommand_a04e020a1f124119a2e7df19fac983953}{\index{pkg\-\_\-commands\-::\-Give\-Command@{pkg\-\_\-commands\-::\-Give\-Command}!Give\-Command@{Give\-Command}}
+\index{Give\-Command@{Give\-Command}!pkg_commands::GiveCommand@{pkg\-\_\-commands\-::\-Give\-Command}}
+\subsubsection[{Give\-Command}]{\setlength{\rightskip}{0pt plus 5cm}pkg\-\_\-commands.\-Give\-Command.\-Give\-Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__commands_1_1GiveCommand_a04e020a1f124119a2e7df19fac983953}
+Constructor for \hyperlink{classpkg__commands_1_1GiveCommand}{Give\-Command} 
+
+Definition at line \hyperlink{GiveCommand_8java_source_l00017}{17} of file \hyperlink{GiveCommand_8java_source}{Give\-Command.\-java}.
+
+
+\begin{DoxyCode}
+00017                         \{
+00018 
+00019     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpkg__commands_1_1GiveCommand_a3a3cca7fae9b86d8ff85cc166564843d}{\index{pkg\-\_\-commands\-::\-Give\-Command@{pkg\-\_\-commands\-::\-Give\-Command}!execute@{execute}}
+\index{execute@{execute}!pkg_commands::GiveCommand@{pkg\-\_\-commands\-::\-Give\-Command}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}boolean pkg\-\_\-commands.\-Give\-Command.\-execute (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{player}
+\end{DoxyParamCaption}
+) throws {\bf No\-Argument\-Exception},{\bf pkg\-\_\-exceptions.\-Illegal\-Argument\-Exception},{\bf Unauthorized\-Exception}}}\label{classpkg__commands_1_1GiveCommand_a3a3cca7fae9b86d8ff85cc166564843d}
+Make the player give an Item to a Character. 
+\begin{DoxyParams}{Parameters}
+{\em player} & The player that called this command \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em No\-Argument\-Exception} & When the user typed the command without parameter or with only one parameter \\
+\hline
+{\em Illegal\-Argument\-Exception} & When the user typed an Item or Character name other than any of the items or characters in the Room \\
+\hline
+{\em Unauthorized\-Exception} & When the Character doesn't want the Item or any Item \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+False because it is not the quit command 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{GiveCommand_8java_source_l00029}{29} of file \hyperlink{GiveCommand_8java_source}{Give\-Command.\-java}.
+
+
+
+References \hyperlink{Command_8java_source_l00041}{pkg\-\_\-commands.\-Command.\-get\-Parameter()}, \hyperlink{Command_8java_source_l00049}{pkg\-\_\-commands.\-Command.\-get\-Second\-Parameter()}, \hyperlink{Command_8java_source_l00073}{pkg\-\_\-commands.\-Command.\-has\-Parameter()}, \hyperlink{Command_8java_source_l00081}{pkg\-\_\-commands.\-Command.\-has\-Second\-Parameter()}, \hyperlink{Character_8java_source_l00131}{pkg\-\_\-world.\-pkg\-\_\-characters.\-Character.\-is\-Satisfied()}, \hyperlink{Command_8java_source_l00089}{pkg\-\_\-commands.\-Command.\-set\-Message()}, \hyperlink{Character_8java_source_l00108}{pkg\-\_\-world.\-pkg\-\_\-characters.\-Character.\-take\-Item()}, and \hyperlink{Character_8java_source_l00119}{pkg\-\_\-world.\-pkg\-\_\-characters.\-Character.\-wants\-Item()}.
+
+
+\begin{DoxyCode}
+00029                                                                                                            
+                              \{
+00030         \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998}{hasParameter}()) \{
+00031             \textcolor{keywordflow}{if}(player.getCurrentRoom().hasCharacter(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}())) \{
+00032                 Character character = player.getCurrentRoom().getCharacter(
+      \hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}());
+00033 
+00034                 \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1Command_add688a76d80576c34f23927da19b9e2d}{hasSecondParameter}()) \{
+00035                     \textcolor{keywordflow}{if}(player.hasItem(\hyperlink{classpkg__commands_1_1Command_a20d3ebdc0683a87b43be2a92a1cad111}{getSecondParameter}())) \{
+00036                         Item item = player.getItem(\hyperlink{classpkg__commands_1_1Command_a20d3ebdc0683a87b43be2a92a1cad111}{getSecondParameter}());
+00037 
+00038                         \textcolor{keywordflow}{if}(!character.isSatisfied()) \{
+00039                             \textcolor{keywordflow}{if}(character.wantsItem(item)) \{
+00040                                 \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(character.takeItem(item));
+00041                                 player.eatObject(\hyperlink{classpkg__commands_1_1Command_a20d3ebdc0683a87b43be2a92a1cad111}{getSecondParameter}());
+00042                             \} \textcolor{keywordflow}{else} \{
+00043                                 String failureMessage = character.takeItem(item);
+00044                                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException}((failureMessage == 
+      null)? \textcolor{stringliteral}{"He doesn't want anything from you. He's smart."} : failureMessage);
+00045                             \}
+00046 
+00047                         \} \textcolor{keywordflow}{else}
+00048                             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException}(\textcolor{stringliteral}{"He already used you,
+       remember? No, of course not."});
+00049                     \} \textcolor{keywordflow}{else}
+00050                         \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}
+      (\textcolor{stringliteral}{"I'm not sure you want to give that."});
+00051                 \} \textcolor{keywordflow}{else}
+00052                     \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"I'm afraid giving yourself to this
+       one won't be enough. Again."});
+00053 
+00054             \} \textcolor{keywordflow}{else}
+00055                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}(\textcolor{stringliteral}{"
+      Still trying to give something to your imaginary friend?"});
+00056         \} \textcolor{keywordflow}{else}
+00057             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"Would you give a try to instead give
+       something to someone?"});
+00058 
+00059         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00060     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__commands_1_1GiveCommand_a3a3cca7fae9b86d8ff85cc166564843d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pkg\-\_\-commands/\hyperlink{GiveCommand_8java}{Give\-Command.\-java}\end{DoxyCompactItemize}

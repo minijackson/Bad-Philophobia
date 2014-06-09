@@ -1,19 +1,13 @@
 var searchData=
 [
-  ['illegalargumentexception',['IllegalArgumentException',['../classpkg__exceptions_1_1IllegalArgumentException.html',1,'pkg_exceptions']]],
-  ['illegalargumentexception',['IllegalArgumentException',['../classpkg__exceptions_1_1IllegalArgumentException.html#a1f9824d1b85743770fd7bd36535ab501',1,'pkg_exceptions::IllegalArgumentException']]],
-  ['illegalargumentexception_2ejava',['IllegalArgumentException.java',['../IllegalArgumentException_8java.html',1,'']]],
-  ['image',['image',['../classUserInterface.html#a0d115eb19b54f3e002ec6aa0fcfb1db4',1,'UserInterface']]],
-  ['imagename',['imageName',['../classpkg__world_1_1Room.html#a5d803cae18b95d7a4fc5243fd13ae236',1,'pkg_world::Room']]],
-  ['inventory',['INVENTORY',['../enumpkg__parsing_1_1CommandWord.html#a3dace936c35682fe74dad6714af270e4',1,'pkg_parsing::CommandWord']]],
-  ['inventorycommand',['InventoryCommand',['../classpkg__commands_1_1InventoryCommand.html',1,'pkg_commands']]],
-  ['inventorycommand',['InventoryCommand',['../classpkg__commands_1_1InventoryCommand.html#a4ca959fe6979e5ca2a79a0596803533d',1,'pkg_commands::InventoryCommand']]],
-  ['inventorycommand_2ejava',['InventoryCommand.java',['../InventoryCommand_8java.html',1,'']]],
-  ['iscommand',['isCommand',['../classpkg__parsing_1_1CommandWords.html#ab02b508bb42cbda758afe6cee5794216',1,'pkg_parsing::CommandWords']]],
-  ['isexit',['isExit',['../classpkg__world_1_1Room.html#a305aab25719c2b75a0c28c9a53a3c9d3',1,'pkg_world::Room']]],
-  ['item',['Item',['../classpkg__world_1_1Item.html#a57474f01fd9f40be8d01edc1ad79171c',1,'pkg_world::Item']]],
-  ['item',['Item',['../classpkg__world_1_1Item.html',1,'pkg_world']]],
-  ['item_2ejava',['Item.java',['../Item_8java.html',1,'']]],
-  ['itemlist',['ItemList',['../classpkg__world_1_1ItemList.html',1,'pkg_world']]],
-  ['itemlist_2ejava',['ItemList.java',['../ItemList_8java.html',1,'']]]
+  ['hascharacter',['hasCharacter',['../classpkg__world_1_1Room.html#a96612764dfeea7855090e586f02da188',1,'pkg_world::Room']]],
+  ['hasitem',['hasItem',['../classpkg__world_1_1Player.html#a23b53a36fdac45868ee1ea6dcdeca7ce',1,'pkg_world.Player.hasItem()'],['../classpkg__world_1_1Room.html#aefa26e1bc5088dd199dde2e9d471c490',1,'pkg_world.Room.hasItem()']]],
+  ['hasmessage',['hasMessage',['../classpkg__commands_1_1Command.html#ae46bb048d0fa705a5037a5204b530da2',1,'pkg_commands::Command']]],
+  ['hasparameter',['hasParameter',['../classpkg__commands_1_1Command.html#a02af95ab3f1898a66259ab7c177b6998',1,'pkg_commands::Command']]],
+  ['hassecondparameter',['hasSecondParameter',['../classpkg__commands_1_1Command.html#add688a76d80576c34f23927da19b9e2d',1,'pkg_commands::Command']]],
+  ['help',['HELP',['../enumpkg__parsing_1_1CommandWord.html#ace035a3a624f4247b9f38c24eabe3f91',1,'pkg_parsing::CommandWord']]],
+  ['helpcommand',['HelpCommand',['../classpkg__commands_1_1HelpCommand.html#a5f12eadc1835cd0c7cdb77811b5fb756',1,'pkg_commands::HelpCommand']]],
+  ['helpcommand',['HelpCommand',['../classpkg__commands_1_1HelpCommand.html',1,'pkg_commands']]],
+  ['helpcommand_2ejava',['HelpCommand.java',['../HelpCommand_8java.html',1,'']]],
+  ['helpcount',['helpCount',['../classpkg__commands_1_1HelpCommand.html#a1f83dd0f92e63803f29ce29485903526',1,'pkg_commands.HelpCommand.helpCount()'],['../classpkg__game_1_1GameEngine.html#a3229e823376625b5d9102d24d628a0fb',1,'pkg_game.GameEngine.helpCount()']]]
 ];

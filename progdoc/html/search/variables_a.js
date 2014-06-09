@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['parameter',['parameter',['../classpkg__commands_1_1Command.html#a089fe1b30b43b2ad5f0dcb2f0ffc2fdd',1,'pkg_commands::Command']]],
-  ['player',['player',['../classGameEngine.html#a4666c6719428cc43014b30b305eeef5d',1,'GameEngine']]],
-  ['previousrooms',['previousRooms',['../classpkg__world_1_1Player.html#a28f9bc6a3c1d829996e8a38935b77fd1',1,'pkg_world::Player']]]
+  ['name',['name',['../classpkg__world_1_1pkg__characters_1_1Character.html#a54831aae75fcaacb68cb500a12ffe457',1,'pkg_world.pkg_characters.Character.name()'],['../classpkg__world_1_1pkg__items_1_1Item.html#ad4d60e860c8a6eb753f24a84cda24c60',1,'pkg_world.pkg_items.Item.name()'],['../classpkg__world_1_1Player.html#ab4c41ebebb7fcc55fa253e48af0c4267',1,'pkg_world.Player.name()']]]
 ];

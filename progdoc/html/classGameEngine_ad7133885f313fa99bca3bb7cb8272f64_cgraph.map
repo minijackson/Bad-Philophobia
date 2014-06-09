@@ -1,5 +1,0 @@
-<map id="GameEngine.processCommand" name="GameEngine.processCommand">
-<area shape="rect" id="node2" href="$classGameEngine.html#a1f5fa36c5dfc36c9a963fe439afc057b" title="Print goodbye message and disable gui. " alt="" coords="295,5,452,32"/>
-<area shape="rect" id="node3" href="$classpkg__world_1_1Player.html#a5ff0ede152d97c0c9cf6603c9a422a77" title="currentRoom field getter. " alt="" coords="262,56,485,83"/>
-<area shape="rect" id="node4" href="$classUserInterface.html#a79f606b4b1f5d1523e50eea00039ed94" title="Print the given text plus a newline in the text area. " alt="" coords="303,107,443,133"/>
-</map>

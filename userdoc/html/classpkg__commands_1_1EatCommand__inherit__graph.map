@@ -1,3 +1,3 @@
 <map id="pkg_commands.EatCommand" name="pkg_commands.EatCommand">
-<area shape="rect" id="node2" href="$classpkg__commands_1_1Command.html" title="{pkg_commands.Command\n||+ getParameter()\l+ setParameter()\l+ hasParameter()\l+ getMessage()\l+ hasMessage()\l+ execute()\l# setMessage()\l}" alt="" coords="15,5,193,171"/>
+<area shape="rect" id="node2" href="$classpkg__commands_1_1Command.html" title="{pkg_commands.Command\n||+ getParameter()\l+ getSecondParameter()\l+ setParameter()\l+ setSecondParameter()\l+ hasParameter()\l+ hasSecondParameter()\l+ getMessage()\l+ hasMessage()\l+ execute()\l# setMessage()\l}" alt="" coords="15,6,193,215"/>
 </map>

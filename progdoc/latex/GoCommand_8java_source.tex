@@ -5,55 +5,69 @@
 \begin{DoxyCode}
 00001 \textcolor{keyword}{package }pkg\_commands;
 00002 
-00003 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Player}{pkg\_world.Player};
-00004 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Room}{pkg\_world.Room};
-00005 \textcolor{keyword}{import} pkg\_exceptions.*;
-00006 
-\hypertarget{GoCommand_8java_source_l00011}{}\hyperlink{classpkg__commands_1_1GoCommand}{00011} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__commands_1_1GoCommand}{GoCommand} \textcolor{keyword}{extends} \hyperlink{classpkg__commands_1_1Command}{Command} \{
-00012 
-\hypertarget{GoCommand_8java_source_l00016}{}\hyperlink{classpkg__commands_1_1GoCommand_af87b7ac858440df2c3d850c89441f4c7}{00016}     \textcolor{keyword}{public} \hyperlink{classpkg__commands_1_1GoCommand_af87b7ac858440df2c3d850c89441f4c7}{GoCommand}()\{
-00017 
-00018     \}
-00019 
-\hypertarget{GoCommand_8java_source_l00028}{}\hyperlink{classpkg__commands_1_1GoCommand_a82e9a64a0fac612f788060a90c83f9b1}{00028}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__commands_1_1GoCommand_a82e9a64a0fac612f788060a90c83f9b1}{execute}(\hyperlink{classpkg__world_1_1Player}{Player} player) \textcolor{keywordflow}{throws} 
+00003 \textcolor{keyword}{import} \hyperlink{classpkg__game_1_1GameEngine}{pkg\_game.GameEngine};
+00004 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Player}{pkg\_world.Player};
+00005 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Room}{pkg\_world.Room};
+00006 \textcolor{keyword}{import} pkg\_exceptions.*;
+00007 
+00008 \textcolor{keyword}{import} java.util.ArrayList;
+00009 \textcolor{keyword}{import} java.util.Random;
+00010 
+\hypertarget{GoCommand_8java_source_l00015}{}\hyperlink{classpkg__commands_1_1GoCommand}{00015} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__commands_1_1GoCommand}{GoCommand} \textcolor{keyword}{extends} \hyperlink{classpkg__commands_1_1Command}{Command} \{
+00016 
+\hypertarget{GoCommand_8java_source_l00020}{}\hyperlink{classpkg__commands_1_1GoCommand_af87b7ac858440df2c3d850c89441f4c7}{00020}     \textcolor{keyword}{public} \hyperlink{classpkg__commands_1_1GoCommand_af87b7ac858440df2c3d850c89441f4c7}{GoCommand}() \{
+00021 
+00022     \}
+00023 
+\hypertarget{GoCommand_8java_source_l00032}{}\hyperlink{classpkg__commands_1_1GoCommand_a82e9a64a0fac612f788060a90c83f9b1}{00032}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__commands_1_1GoCommand_a82e9a64a0fac612f788060a90c83f9b1}{execute}(\hyperlink{classpkg__world_1_1Player}{Player} player) \textcolor{keywordflow}{throws} 
       \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException},\hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}
       ,\hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException} \{
-00029         \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\textcolor{stringliteral}{""});
-00030         \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998}{hasParameter}()) \{
-00031             \hyperlink{classpkg__commands_1_1GoCommand_acbf1aa81fa5b1aef7cafb8b4e3ace3a9}{goRoomCheck}(player.getCurrentRoom().getExit(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}()), player, \textcolor{keyword}{
-      false});
-00032         \} \textcolor{keywordflow}{else} \{
-00033             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"If you were clever, I would have thought that
-       it was a existential question.\(\backslash\)nBut that is not the case and I cannot allow you to go nowhere"});
-00034         \}
-00035         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-00036     \}
-00037 
-\hypertarget{GoCommand_8java_source_l00046}{}\hyperlink{classpkg__commands_1_1GoCommand_acbf1aa81fa5b1aef7cafb8b4e3ace3a9}{00046}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \hyperlink{classpkg__commands_1_1GoCommand_acbf1aa81fa5b1aef7cafb8b4e3ace3a9}{goRoomCheck}(\hyperlink{classpkg__world_1_1Room}{Room} room, \hyperlink{classpkg__world_1_1Player}{Player} player, \textcolor{keywordtype}{boolean} back) \textcolor{keywordflow}{throws} 
+00033         \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\textcolor{stringliteral}{""});
+00034         \textcolor{comment}{// Check if it is the random Room (which is the first room in the gamesRoom GameEngine ArrayList)}
+00035         \textcolor{keywordflow}{if}(player.getCurrentRoom() != GameEngine.getRooms().\textcolor{keyword}{get}(0)) \{
+00036             \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998}{hasParameter}()) \{
+00037                 \hyperlink{classpkg__commands_1_1GoCommand_acbf1aa81fa5b1aef7cafb8b4e3ace3a9}{goRoomCheck}(player.getCurrentRoom().getExit(
+      \hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}()), player, \textcolor{keyword}{false});
+00038             \} \textcolor{keywordflow}{else} \{
+00039                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"If you were clever, I would have thought
+       that it was a existential question.\(\backslash\)nBut that is not the case and I cannot allow you to go nowhere"});
+00040             \}
+00041         \} \textcolor{keywordflow}{else} \{
+00042             \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\textcolor{stringliteral}{"Geronimoooo !\(\backslash\)n"});
+00043             \hyperlink{classpkg__commands_1_1GoCommand_a210afbc5f3ef34d3ad5759d853c8f8c2}{goRoomNoCheck}(\hyperlink{classpkg__commands_1_1GoCommand_ae9ef6c18b0cbd0e0104261bdedf9a9d7}{getRandomRoom}(), player, \textcolor{keyword}{false});
+00044         \}
+00045         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00046     \}
+00047 
+\hypertarget{GoCommand_8java_source_l00056}{}\hyperlink{classpkg__commands_1_1GoCommand_acbf1aa81fa5b1aef7cafb8b4e3ace3a9}{00056}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \hyperlink{classpkg__commands_1_1GoCommand_acbf1aa81fa5b1aef7cafb8b4e3ace3a9}{goRoomCheck}(\hyperlink{classpkg__world_1_1Room}{Room} room, \hyperlink{classpkg__world_1_1Player}{Player} player, \textcolor{keywordtype}{boolean} back) \textcolor{keywordflow}{throws} 
       \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException},
       \hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException} \{
-00047         \textcolor{keywordflow}{if}(player.getCurrentRoom().isExit(room)) \{
-00048             \hyperlink{classpkg__commands_1_1GoCommand_a210afbc5f3ef34d3ad5759d853c8f8c2}{goRoomNoCheck}(room, player, back);
-00049         \} \textcolor{keywordflow}{else} \{
-00050             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException}(\textcolor{stringliteral}{"I'm sorry but you can't pass through
+00057         \textcolor{keywordflow}{if}(player.getCurrentRoom().isExit(room)) \{
+00058             \hyperlink{classpkg__commands_1_1GoCommand_a210afbc5f3ef34d3ad5759d853c8f8c2}{goRoomNoCheck}(room, player, back);
+00059         \} \textcolor{keywordflow}{else} \{
+00060             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException}(\textcolor{stringliteral}{"I'm sorry but you can't pass through
        walls."});
-00051         \}
-00052     \}
-00053 
-\hypertarget{GoCommand_8java_source_l00061}{}\hyperlink{classpkg__commands_1_1GoCommand_a210afbc5f3ef34d3ad5759d853c8f8c2}{00061}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \hyperlink{classpkg__commands_1_1GoCommand_a210afbc5f3ef34d3ad5759d853c8f8c2}{goRoomNoCheck}(\hyperlink{classpkg__world_1_1Room}{Room} room, \hyperlink{classpkg__world_1_1Player}{Player} player, \textcolor{keywordtype}{boolean} back) \textcolor{keywordflow}{throws} 
+00061         \}
+00062     \}
+00063 
+\hypertarget{GoCommand_8java_source_l00071}{}\hyperlink{classpkg__commands_1_1GoCommand_a210afbc5f3ef34d3ad5759d853c8f8c2}{00071}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \hyperlink{classpkg__commands_1_1GoCommand_a210afbc5f3ef34d3ad5759d853c8f8c2}{goRoomNoCheck}(\hyperlink{classpkg__world_1_1Room}{Room} room, \hyperlink{classpkg__world_1_1Player}{Player} player, \textcolor{keywordtype}{boolean} back) \textcolor{keywordflow}{throws} 
       \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException} \{
-00062         \textcolor{keywordflow}{if}(room != null) \{
-00063             \textcolor{keywordflow}{if}(!back)
-00064                 player.pushForward();
-00065             \textcolor{keywordflow}{else}
-00066                 player.popPreviousRooms();
-00067             player.goRoom(room);
-00068             \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(((\hyperlink{classpkg__commands_1_1Command_ae46bb048d0fa705a5037a5204b530da2}{hasMessage}()) ? \hyperlink{classpkg__commands_1_1Command_ac2a42e2bab264821892daefaf9a18b6c}{getMessage}() + \textcolor{stringliteral}{"\(\backslash\)n"} : \textcolor{stringliteral}{""}) + room.
+00072         \textcolor{keywordflow}{if}(room != null) \{
+00073             \textcolor{keywordflow}{if}(!back)
+00074                 player.pushForward();
+00075             \textcolor{keywordflow}{else}
+00076                 player.popPreviousRooms();
+00077             player.goRoom(room);
+00078             \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(((\hyperlink{classpkg__commands_1_1Command_ae46bb048d0fa705a5037a5204b530da2}{hasMessage}()) ? \hyperlink{classpkg__commands_1_1Command_ac2a42e2bab264821892daefaf9a18b6c}{getMessage}() + \textcolor{stringliteral}{"\(\backslash\)n"} : \textcolor{stringliteral}{""}) + room.
       getLongDescription());
-00069         \} \textcolor{keywordflow}{else}
-00070             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}(\textcolor{stringliteral}{"This
+00079         \} \textcolor{keywordflow}{else}
+00080             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}(\textcolor{stringliteral}{"This
        is a wall, not a door!"});
-00071     \}
-00072 
-00073 \}
+00081     \}
+00082 
+\hypertarget{GoCommand_8java_source_l00087}{}\hyperlink{classpkg__commands_1_1GoCommand_ae9ef6c18b0cbd0e0104261bdedf9a9d7}{00087}     \textcolor{keyword}{protected} \hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__commands_1_1GoCommand_ae9ef6c18b0cbd0e0104261bdedf9a9d7}{getRandomRoom}() \{
+00088         \textcolor{keywordflow}{return} GameEngine.getRooms().\textcolor{keyword}{get}((\textcolor{keyword}{new} Random()).nextInt(GameEngine.getRooms().size() - 1) + 1);
+00089     \}
+00090 
+00091 \}
 \end{DoxyCode}

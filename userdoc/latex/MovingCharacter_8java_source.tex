@@ -1,0 +1,38 @@
+\hypertarget{MovingCharacter_8java}{\section{Moving\-Character.\-java}
+\label{MovingCharacter_8java}\index{pkg\-\_\-world/pkg\-\_\-characters/\-Moving\-Character.\-java@{pkg\-\_\-world/pkg\-\_\-characters/\-Moving\-Character.\-java}}
+}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }pkg\_world.pkg\_characters;
+00002 
+00003 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{pkg\_world.pkg\_characters.Character};
+00004 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Room}{pkg\_world.Room};
+00005 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{pkg\_world.pkg\_items.Item};
+00006 
+\hypertarget{MovingCharacter_8java_source_l00011}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter}{00011} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter}{MovingCharacter} \textcolor{keyword}{extends} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character} \{
+00012 
+00016     \textcolor{keyword}{private} \hyperlink{classpkg__world_1_1Room}{Room} currentRoom;
+00017 
+\hypertarget{MovingCharacter_8java_source_l00026}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter_aa8e7cc0d5fc072ea1bb2545cda28d7ee}{00026}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter_aa8e7cc0d5fc072ea1bb2545cda28d7ee}{MovingCharacter}(\hyperlink{classpkg__world_1_1Room}{Room} startRoom, \textcolor{keyword}{final} String name)\{
+00027         super(name);
+00028         currentRoom = startRoom;
+00029     \}
+00030 
+\hypertarget{MovingCharacter_8java_source_l00039}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter_a3ff1fb87a50e7370aea5e9da6ef8abe4}{00039}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter_a3ff1fb87a50e7370aea5e9da6ef8abe4}{MovingCharacter}(\hyperlink{classpkg__world_1_1Room}{Room} startRoom, \textcolor{keyword}{final} String name, \textcolor{keyword}{final} String dialog) \{
+00040         super(name, dialog);
+00041         currentRoom = startRoom;
+00042     \}
+00043 
+\hypertarget{MovingCharacter_8java_source_l00051}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter_aa1857c9134647d712611944bfd9d793a}{00051}     \textcolor{keyword}{public} \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter_aa1857c9134647d712611944bfd9d793a}{MovingCharacter}(\hyperlink{classpkg__world_1_1Room}{Room} startRoom, \textcolor{keyword}{final} String name, \textcolor{keyword}{final} String dialog, 
+      \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} wantedItem, \textcolor{keyword}{final} String successAction, \textcolor{keyword}{final} String failureAction) \{
+00052         super(name, dialog, wantedItem, successAction, failureAction);
+00053         currentRoom = startRoom;
+00054     \}
+00055 
+\hypertarget{MovingCharacter_8java_source_l00059}{}\hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter_aaf4df04191a12b44ecf4d5e127c3a969}{00059}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter_aaf4df04191a12b44ecf4d5e127c3a969}{move}() \{
+00060         currentRoom.removeCharacter(\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a660097e198e2e62f83d83a8872eb55d1}{getName}());
+00061         currentRoom = currentRoom.getRandomAdjacentRoom();
+00062         currentRoom.addCharacter(\textcolor{keyword}{this});
+00063     \}
+00064 \}
+\end{DoxyCode}

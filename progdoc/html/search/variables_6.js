@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['image',['image',['../classUserInterface.html#a0d115eb19b54f3e002ec6aa0fcfb1db4',1,'UserInterface']]],
-  ['imagename',['imageName',['../classpkg__world_1_1Room.html#a5d803cae18b95d7a4fc5243fd13ae236',1,'pkg_world::Room']]],
-  ['inventory',['INVENTORY',['../enumpkg__parsing_1_1CommandWord.html#a3dace936c35682fe74dad6714af270e4',1,'pkg_parsing::CommandWord']]]
+  ['help',['HELP',['../enumpkg__parsing_1_1CommandWord.html#ace035a3a624f4247b9f38c24eabe3f91',1,'pkg_parsing::CommandWord']]],
+  ['helpcount',['helpCount',['../classpkg__commands_1_1HelpCommand.html#a1f83dd0f92e63803f29ce29485903526',1,'pkg_commands.HelpCommand.helpCount()'],['../classpkg__game_1_1GameEngine.html#a3229e823376625b5d9102d24d628a0fb',1,'pkg_game.GameEngine.helpCount()']]]
 ];

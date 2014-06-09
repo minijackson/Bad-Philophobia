@@ -2,17 +2,20 @@ var searchData=
 [
   ['parser',['Parser',['../classpkg__parsing_1_1Parser.html',1,'pkg_parsing']]],
   ['parser_2ejava',['Parser.java',['../Parser_8java.html',1,'']]],
+  ['pkg_5fcharacters',['pkg_characters',['../namespacepkg__world_1_1pkg__characters.html',1,'pkg_world']]],
   ['pkg_5fcommands',['pkg_commands',['../namespacepkg__commands.html',1,'']]],
   ['pkg_5fexceptions',['pkg_exceptions',['../namespacepkg__exceptions.html',1,'']]],
+  ['pkg_5fgame',['pkg_game',['../namespacepkg__game.html',1,'']]],
+  ['pkg_5fitems',['pkg_items',['../namespacepkg__world_1_1pkg__items.html',1,'pkg_world']]],
   ['pkg_5fparsing',['pkg_parsing',['../namespacepkg__parsing.html',1,'']]],
   ['pkg_5fworld',['pkg_world',['../namespacepkg__world.html',1,'']]],
   ['player',['Player',['../classpkg__world_1_1Player.html',1,'pkg_world']]],
   ['player',['Player',['../classpkg__world_1_1Player.html#a8a48bf28cae733a412a0114802a1e4fb',1,'pkg_world::Player']]],
   ['player_2ejava',['Player.java',['../Player_8java.html',1,'']]],
   ['poppreviousrooms',['popPreviousRooms',['../classpkg__world_1_1Player.html#a4ef9377c34206c64ef1086de669ca5f1',1,'pkg_world::Player']]],
-  ['print',['print',['../classUserInterface.html#a7a0de5ce2b0e0d25ba6573e87c63c1de',1,'UserInterface']]],
-  ['println',['println',['../classUserInterface.html#a79f606b4b1f5d1523e50eea00039ed94',1,'UserInterface']]],
-  ['processcommand',['processCommand',['../classGameEngine.html#ad7133885f313fa99bca3bb7cb8272f64',1,'GameEngine']]],
+  ['print',['print',['../classpkg__game_1_1UserInterface.html#a524492922d9f29b45f4687441017e322',1,'pkg_game::UserInterface']]],
+  ['println',['println',['../classpkg__game_1_1UserInterface.html#ac4d82f989416d7cc64a6e2fba2f4ed75',1,'pkg_game::UserInterface']]],
+  ['processcommand',['processCommand',['../classpkg__game_1_1GameEngine.html#a37887ae202eadba82495da82ac4e1908',1,'pkg_game::GameEngine']]],
   ['pushforward',['pushForward',['../classpkg__world_1_1Player.html#af97dc9ce2806115a09ab6a3ba08ed673',1,'pkg_world::Player']]],
   ['pushpreviousrooms',['pushPreviousRooms',['../classpkg__world_1_1Player.html#a6b419da985921727891cee03e4a7e755',1,'pkg_world::Player']]]
 ];

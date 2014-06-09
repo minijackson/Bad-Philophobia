@@ -1,6 +1,0 @@
-<map id="GameEngine" name="GameEngine">
-<area shape="rect" id="node9" href="$classUserInterface.html" title="Class handling the game&#39;s user interface. " alt="" coords="225,1229,373,1483"/>
-<area shape="rect" id="node2" href="$classpkg__world_1_1Player.html" title="class Player used to handle the user&#39;s player. " alt="" coords="185,683,348,936"/>
-<area shape="rect" id="node3" href="$classpkg__world_1_1ItemList.html" title="class ItemList used to handle a list of Item (inventory). " alt="" coords="191,157,323,235"/>
-<area shape="rect" id="node5" href="$classpkg__world_1_1Room.html" title="Class used to handle a game&#39;s room. " alt="" coords="61,307,219,605"/>
-</map>

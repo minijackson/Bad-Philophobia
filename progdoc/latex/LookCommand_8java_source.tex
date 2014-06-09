@@ -6,7 +6,7 @@
 00001 \textcolor{keyword}{package }pkg\_commands;
 00002 
 00003 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Player}{pkg\_world.Player};
-00004 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Item}{pkg\_world.Item};
+00004 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{pkg\_world.pkg\_items.Item};
 00005 \textcolor{keyword}{import} \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException};
 00006 
 \hypertarget{LookCommand_8java_source_l00011}{}\hyperlink{classpkg__commands_1_1LookCommand}{00011} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__commands_1_1LookCommand}{LookCommand} \textcolor{keyword}{extends} \hyperlink{classpkg__commands_1_1Command}{Command} \{
@@ -35,7 +35,7 @@
 00040         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
 00041     \}
 00042 
-\hypertarget{LookCommand_8java_source_l00048}{}\hyperlink{classpkg__commands_1_1LookCommand_a17808882dffb0a9edce192235c029ddf}{00048}     \textcolor{keyword}{private} String \hyperlink{classpkg__commands_1_1LookCommand_a17808882dffb0a9edce192235c029ddf}{showItem}(\hyperlink{classpkg__world_1_1Item}{Item} item) \{
+\hypertarget{LookCommand_8java_source_l00048}{}\hyperlink{classpkg__commands_1_1LookCommand_a17808882dffb0a9edce192235c029ddf}{00048}     \textcolor{keyword}{private} String \hyperlink{classpkg__commands_1_1LookCommand_a17808882dffb0a9edce192235c029ddf}{showItem}(\hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} item) \{
 00049         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"This is "} + item.getDescription() + \textcolor{stringliteral}{"."};
 00050     \}
 00051 

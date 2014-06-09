@@ -8,7 +8,8 @@ class \hyperlink{classpkg__commands_1_1GoCommand}{Go\-Command} used to make the 
 
 
 
-Inheritance diagram for pkg\-\_\-commands.\-Go\-Command\-:\nopagebreak
+Inheritance diagram for pkg\-\_\-commands.\-Go\-Command\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,7 +18,8 @@ Inheritance diagram for pkg\-\_\-commands.\-Go\-Command\-:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for pkg\-\_\-commands.\-Go\-Command\-:\nopagebreak
+Collaboration diagram for pkg\-\_\-commands.\-Go\-Command\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -37,7 +39,9 @@ boolean \hyperlink{classpkg__commands_1_1GoCommand_a82e9a64a0fac612f788060a90c83
 void \hyperlink{classpkg__commands_1_1GoCommand_acbf1aa81fa5b1aef7cafb8b4e3ace3a9}{go\-Room\-Check} (\hyperlink{classpkg__world_1_1Room}{Room} room, \hyperlink{classpkg__world_1_1Player}{Player} player, boolean back)  throws pkg\-\_\-exceptions.\-Illegal\-Argument\-Exception,\-Unauthorized\-Exception 
 \begin{DoxyCompactList}\small\item\em Check if the wanted Room is connected to the current Room and go to this room. \end{DoxyCompactList}\item 
 void \hyperlink{classpkg__commands_1_1GoCommand_a210afbc5f3ef34d3ad5759d853c8f8c2}{go\-Room\-No\-Check} (\hyperlink{classpkg__world_1_1Room}{Room} room, \hyperlink{classpkg__world_1_1Player}{Player} player, boolean back)  throws pkg\-\_\-exceptions.\-Illegal\-Argument\-Exception 
-\begin{DoxyCompactList}\small\item\em Go to the Room without checking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Go to the Room without checking. \end{DoxyCompactList}\item 
+\hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__commands_1_1GoCommand_ae9ef6c18b0cbd0e0104261bdedf9a9d7}{get\-Random\-Room} ()
+\begin{DoxyCompactList}\small\item\em Get a random room from the Game\-Engin list or Room. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -48,7 +52,7 @@ Rémi Nicole
 \end{DoxyAuthor}
 
 
-Definition at line \hyperlink{GoCommand_8java_source_l00011}{11} of file \hyperlink{GoCommand_8java_source}{Go\-Command.\-java}.
+Definition at line \hyperlink{GoCommand_8java_source_l00015}{15} of file \hyperlink{GoCommand_8java_source}{Go\-Command.\-java}.
 
 
 
@@ -66,13 +70,13 @@ Constructor for \hyperlink{classpkg__commands_1_1GoCommand}{Go\-Command}.
 
 
 
-Definition at line \hyperlink{GoCommand_8java_source_l00016}{16} of file \hyperlink{GoCommand_8java_source}{Go\-Command.\-java}.
+Definition at line \hyperlink{GoCommand_8java_source_l00020}{20} of file \hyperlink{GoCommand_8java_source}{Go\-Command.\-java}.
 
 
 \begin{DoxyCode}
-00016                       \{
-00017 
-00018     \}
+00020                        \{
+00021 
+00022     \}
 \end{DoxyCode}
 
 
@@ -107,34 +111,81 @@ False because it is not the quit command
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{GoCommand_8java_source_l00028}{28} of file \hyperlink{GoCommand_8java_source}{Go\-Command.\-java}.
+Definition at line \hyperlink{GoCommand_8java_source_l00032}{32} of file \hyperlink{GoCommand_8java_source}{Go\-Command.\-java}.
 
 
 
-References \hyperlink{Command_8java_source_l00034}{pkg\-\_\-commands.\-Command.\-get\-Parameter()}, \hyperlink{GoCommand_8java_source_l00046}{pkg\-\_\-commands.\-Go\-Command.\-go\-Room\-Check()}, \hyperlink{Command_8java_source_l00050}{pkg\-\_\-commands.\-Command.\-has\-Parameter()}, and \hyperlink{Command_8java_source_l00058}{pkg\-\_\-commands.\-Command.\-set\-Message()}.
+References \hyperlink{Command_8java_source_l00041}{pkg\-\_\-commands.\-Command.\-get\-Parameter()}, \hyperlink{GoCommand_8java_source_l00087}{pkg\-\_\-commands.\-Go\-Command.\-get\-Random\-Room()}, \hyperlink{GoCommand_8java_source_l00056}{pkg\-\_\-commands.\-Go\-Command.\-go\-Room\-Check()}, \hyperlink{GoCommand_8java_source_l00071}{pkg\-\_\-commands.\-Go\-Command.\-go\-Room\-No\-Check()}, \hyperlink{Command_8java_source_l00073}{pkg\-\_\-commands.\-Command.\-has\-Parameter()}, and \hyperlink{Command_8java_source_l00089}{pkg\-\_\-commands.\-Command.\-set\-Message()}.
 
 
 \begin{DoxyCode}
-00028                                                                                                            
+00032                                                                                                            
                               \{
-00029         \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\textcolor{stringliteral}{""});
-00030         \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998}{hasParameter}()) \{
-00031             \hyperlink{classpkg__commands_1_1GoCommand_acbf1aa81fa5b1aef7cafb8b4e3ace3a9}{goRoomCheck}(player.getCurrentRoom().getExit(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}()), player, \textcolor{keyword}{
-      false});
-00032         \} \textcolor{keywordflow}{else} \{
-00033             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"If you were clever, I would have thought that
-       it was a existential question.\(\backslash\)nBut that is not the case and I cannot allow you to go nowhere"});
-00034         \}
-00035         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-00036     \}
+00033         \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\textcolor{stringliteral}{""});
+00034         \textcolor{comment}{// Check if it is the random Room (which is the first room in the gamesRoom GameEngine ArrayList)}
+00035         \textcolor{keywordflow}{if}(player.getCurrentRoom() != GameEngine.getRooms().\textcolor{keyword}{get}(0)) \{
+00036             \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998}{hasParameter}()) \{
+00037                 \hyperlink{classpkg__commands_1_1GoCommand_acbf1aa81fa5b1aef7cafb8b4e3ace3a9}{goRoomCheck}(player.getCurrentRoom().getExit(
+      \hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}()), player, \textcolor{keyword}{false});
+00038             \} \textcolor{keywordflow}{else} \{
+00039                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException}(\textcolor{stringliteral}{"If you were clever, I would have thought
+       that it was a existential question.\(\backslash\)nBut that is not the case and I cannot allow you to go nowhere"});
+00040             \}
+00041         \} \textcolor{keywordflow}{else} \{
+00042             \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\textcolor{stringliteral}{"Geronimoooo !\(\backslash\)n"});
+00043             \hyperlink{classpkg__commands_1_1GoCommand_a210afbc5f3ef34d3ad5759d853c8f8c2}{goRoomNoCheck}(\hyperlink{classpkg__commands_1_1GoCommand_ae9ef6c18b0cbd0e0104261bdedf9a9d7}{getRandomRoom}(), player, \textcolor{keyword}{false});
+00044         \}
+00045         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00046     \}
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
+Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classpkg__commands_1_1GoCommand_a82e9a64a0fac612f788060a90c83f9b1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classpkg__commands_1_1GoCommand_ae9ef6c18b0cbd0e0104261bdedf9a9d7}{\index{pkg\-\_\-commands\-::\-Go\-Command@{pkg\-\_\-commands\-::\-Go\-Command}!get\-Random\-Room@{get\-Random\-Room}}
+\index{get\-Random\-Room@{get\-Random\-Room}!pkg_commands::GoCommand@{pkg\-\_\-commands\-::\-Go\-Command}}
+\subsubsection[{get\-Random\-Room}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Room} pkg\-\_\-commands.\-Go\-Command.\-get\-Random\-Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpkg__commands_1_1GoCommand_ae9ef6c18b0cbd0e0104261bdedf9a9d7}
+
+
+Get a random room from the Game\-Engin list or Room. 
+
+\begin{DoxyReturn}{Returns}
+A random room 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{GoCommand_8java_source_l00087}{87} of file \hyperlink{GoCommand_8java_source}{Go\-Command.\-java}.
+
+
+
+Referenced by \hyperlink{GoCommand_8java_source_l00032}{pkg\-\_\-commands.\-Go\-Command.\-execute()}.
+
+
+\begin{DoxyCode}
+00087                                    \{
+00088         \textcolor{keywordflow}{return} GameEngine.getRooms().\textcolor{keyword}{get}((\textcolor{keyword}{new} Random()).nextInt(GameEngine.getRooms().size() - 1) + 1);
+00089     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__commands_1_1GoCommand_ae9ef6c18b0cbd0e0104261bdedf9a9d7_icgraph}
 \end{center}
 \end{figure}
 
@@ -170,31 +221,32 @@ Check if the wanted Room is connected to the current Room and go to this room.
 \end{DoxyExceptions}
 
 
-Definition at line \hyperlink{GoCommand_8java_source_l00046}{46} of file \hyperlink{GoCommand_8java_source}{Go\-Command.\-java}.
+Definition at line \hyperlink{GoCommand_8java_source_l00056}{56} of file \hyperlink{GoCommand_8java_source}{Go\-Command.\-java}.
 
 
 
-References \hyperlink{GoCommand_8java_source_l00061}{pkg\-\_\-commands.\-Go\-Command.\-go\-Room\-No\-Check()}.
+References \hyperlink{GoCommand_8java_source_l00071}{pkg\-\_\-commands.\-Go\-Command.\-go\-Room\-No\-Check()}.
 
 
 
-Referenced by \hyperlink{GoCommand_8java_source_l00028}{pkg\-\_\-commands.\-Go\-Command.\-execute()}.
+Referenced by \hyperlink{GoCommand_8java_source_l00032}{pkg\-\_\-commands.\-Go\-Command.\-execute()}.
 
 
 \begin{DoxyCode}
-00046                                                                                                            
+00056                                                                                                            
                                        \{
-00047         \textcolor{keywordflow}{if}(player.getCurrentRoom().isExit(room)) \{
-00048             \hyperlink{classpkg__commands_1_1GoCommand_a210afbc5f3ef34d3ad5759d853c8f8c2}{goRoomNoCheck}(room, player, back);
-00049         \} \textcolor{keywordflow}{else} \{
-00050             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException}(\textcolor{stringliteral}{"I'm sorry but you can't pass through
+00057         \textcolor{keywordflow}{if}(player.getCurrentRoom().isExit(room)) \{
+00058             \hyperlink{classpkg__commands_1_1GoCommand_a210afbc5f3ef34d3ad5759d853c8f8c2}{goRoomNoCheck}(room, player, back);
+00059         \} \textcolor{keywordflow}{else} \{
+00060             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException}(\textcolor{stringliteral}{"I'm sorry but you can't pass through
        walls."});
-00051         \}
-00052     \}
+00061         \}
+00062     \}
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
+Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -205,7 +257,8 @@ Here is the call graph for this function\-:\nopagebreak
 
 
 
-Here is the caller graph for this function\-:\nopagebreak
+Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -243,36 +296,37 @@ Go to the Room without checking.
 \end{DoxyExceptions}
 
 
-Definition at line \hyperlink{GoCommand_8java_source_l00061}{61} of file \hyperlink{GoCommand_8java_source}{Go\-Command.\-java}.
+Definition at line \hyperlink{GoCommand_8java_source_l00071}{71} of file \hyperlink{GoCommand_8java_source}{Go\-Command.\-java}.
 
 
 
-References \hyperlink{Command_8java_source_l00066}{pkg\-\_\-commands.\-Command.\-get\-Message()}, \hyperlink{Command_8java_source_l00074}{pkg\-\_\-commands.\-Command.\-has\-Message()}, and \hyperlink{Command_8java_source_l00058}{pkg\-\_\-commands.\-Command.\-set\-Message()}.
+References \hyperlink{Command_8java_source_l00097}{pkg\-\_\-commands.\-Command.\-get\-Message()}, \hyperlink{Command_8java_source_l00105}{pkg\-\_\-commands.\-Command.\-has\-Message()}, and \hyperlink{Command_8java_source_l00089}{pkg\-\_\-commands.\-Command.\-set\-Message()}.
 
 
 
-Referenced by \hyperlink{GoCommand_8java_source_l00046}{pkg\-\_\-commands.\-Go\-Command.\-go\-Room\-Check()}, and \hyperlink{BeamerCommand_8java_source_l00050}{pkg\-\_\-commands.\-Beamer\-Command.\-teleport()}.
+Referenced by \hyperlink{GoCommand_8java_source_l00032}{pkg\-\_\-commands.\-Go\-Command.\-execute()}, \hyperlink{GoCommand_8java_source_l00056}{pkg\-\_\-commands.\-Go\-Command.\-go\-Room\-Check()}, and \hyperlink{BeamerCommand_8java_source_l00050}{pkg\-\_\-commands.\-Beamer\-Command.\-teleport()}.
 
 
 \begin{DoxyCode}
-00061                                                                                                            
+00071                                                                                                            
                    \{
-00062         \textcolor{keywordflow}{if}(room != null) \{
-00063             \textcolor{keywordflow}{if}(!back)
-00064                 player.pushForward();
-00065             \textcolor{keywordflow}{else}
-00066                 player.popPreviousRooms();
-00067             player.goRoom(room);
-00068             \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(((\hyperlink{classpkg__commands_1_1Command_ae46bb048d0fa705a5037a5204b530da2}{hasMessage}()) ? \hyperlink{classpkg__commands_1_1Command_ac2a42e2bab264821892daefaf9a18b6c}{getMessage}() + \textcolor{stringliteral}{"\(\backslash\)n"} : \textcolor{stringliteral}{""}) + room.
+00072         \textcolor{keywordflow}{if}(room != null) \{
+00073             \textcolor{keywordflow}{if}(!back)
+00074                 player.pushForward();
+00075             \textcolor{keywordflow}{else}
+00076                 player.popPreviousRooms();
+00077             player.goRoom(room);
+00078             \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(((\hyperlink{classpkg__commands_1_1Command_ae46bb048d0fa705a5037a5204b530da2}{hasMessage}()) ? \hyperlink{classpkg__commands_1_1Command_ac2a42e2bab264821892daefaf9a18b6c}{getMessage}() + \textcolor{stringliteral}{"\(\backslash\)n"} : \textcolor{stringliteral}{""}) + room.
       getLongDescription());
-00069         \} \textcolor{keywordflow}{else}
-00070             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}(\textcolor{stringliteral}{"This
+00079         \} \textcolor{keywordflow}{else}
+00080             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}(\textcolor{stringliteral}{"This
        is a wall, not a door!"});
-00071     \}
+00081     \}
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
+Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -283,7 +337,8 @@ Here is the call graph for this function\-:\nopagebreak
 
 
 
-Here is the caller graph for this function\-:\nopagebreak
+Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -1,4 +1,4 @@
 <map id="pkg_world.Player" name="pkg_world.Player">
-<area shape="rect" id="node2" href="$classpkg__world_1_1ItemList.html" title="class ItemList used to handle a list of Item (inventory). " alt="" coords="191,157,323,235"/>
-<area shape="rect" id="node4" href="$classpkg__world_1_1Room.html" title="Class used to handle a game&#39;s room. " alt="" coords="61,307,219,605"/>
+<area shape="rect" id="node2" href="$classpkg__world_1_1Room.html" title="Class used to handle a game&#39;s room. " alt="" coords="263,307,415,575"/>
+<area shape="rect" id="node4" href="$classpkg__world_1_1pkg__items_1_1ItemList.html" title="class ItemList used to handle a list of Item (inventory). " alt="" coords="454,157,649,235"/>
 </map>
