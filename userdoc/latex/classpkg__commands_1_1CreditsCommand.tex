@@ -1,0 +1,126 @@
+\hypertarget{classpkg__commands_1_1CreditsCommand}{\section{pkg\-\_\-commands.\-Credits\-Command Class Reference}
+\label{classpkg__commands_1_1CreditsCommand}\index{pkg\-\_\-commands.\-Credits\-Command@{pkg\-\_\-commands.\-Credits\-Command}}
+}
+
+
+Inheritance diagram for pkg\-\_\-commands.\-Credits\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classpkg__commands_1_1CreditsCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pkg\-\_\-commands.\-Credits\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classpkg__commands_1_1CreditsCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpkg__commands_1_1CreditsCommand_aa4338bdebb23612f95fa151ecd6f3bd2}{Credits\-Command} ()
+\item 
+boolean \hyperlink{classpkg__commands_1_1CreditsCommand_aad2b955c6c8a4c3536e6b937165b7790}{execute} (\hyperlink{classpkg__world_1_1Player}{Player} player)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+class \hyperlink{classpkg__commands_1_1CreditsCommand}{Credits\-Command} used to print the credits of the game \begin{DoxyAuthor}{Author}
+Rémi Nicole 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{CreditsCommand_8java_source_l00009}{9} of file \hyperlink{CreditsCommand_8java_source}{Credits\-Command.\-java}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpkg__commands_1_1CreditsCommand_aa4338bdebb23612f95fa151ecd6f3bd2}{\index{pkg\-\_\-commands\-::\-Credits\-Command@{pkg\-\_\-commands\-::\-Credits\-Command}!Credits\-Command@{Credits\-Command}}
+\index{Credits\-Command@{Credits\-Command}!pkg_commands::CreditsCommand@{pkg\-\_\-commands\-::\-Credits\-Command}}
+\subsubsection[{Credits\-Command}]{\setlength{\rightskip}{0pt plus 5cm}pkg\-\_\-commands.\-Credits\-Command.\-Credits\-Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__commands_1_1CreditsCommand_aa4338bdebb23612f95fa151ecd6f3bd2}
+Constructor for \hyperlink{classpkg__commands_1_1CreditsCommand}{Credits\-Command} 
+
+Definition at line \hyperlink{CreditsCommand_8java_source_l00014}{14} of file \hyperlink{CreditsCommand_8java_source}{Credits\-Command.\-java}.
+
+
+\begin{DoxyCode}
+00014                            \{
+00015 
+00016     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpkg__commands_1_1CreditsCommand_aad2b955c6c8a4c3536e6b937165b7790}{\index{pkg\-\_\-commands\-::\-Credits\-Command@{pkg\-\_\-commands\-::\-Credits\-Command}!execute@{execute}}
+\index{execute@{execute}!pkg_commands::CreditsCommand@{pkg\-\_\-commands\-::\-Credits\-Command}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}boolean pkg\-\_\-commands.\-Credits\-Command.\-execute (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{player}
+\end{DoxyParamCaption}
+)}}\label{classpkg__commands_1_1CreditsCommand_aad2b955c6c8a4c3536e6b937165b7790}
+Save the credits into the message field. 
+\begin{DoxyParams}{Parameters}
+{\em player} & The player that called this command \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False because it is not the quit command 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{CreditsCommand_8java_source_l00023}{23} of file \hyperlink{CreditsCommand_8java_source}{Credits\-Command.\-java}.
+
+
+
+References \hyperlink{Command_8java_source_l00089}{pkg\-\_\-commands.\-Command.\-set\-Message()}.
+
+
+\begin{DoxyCode}
+00023                                           \{
+00024         \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(\textcolor{stringliteral}{"Temperate rainforest photo (cc-by-nc-nd) : myheimu
+       (http://www.fotopedia.com/wiki/Temperate\_rainforest#!/items/flickr-7995237868)\(\backslash\)n"}
+00025                 + \textcolor{stringliteral}{"Taiga photo (public domain) : Becker0804
+       (https://commons.wikimedia.org/wiki/File:Talkessel\_von\_Werchojansk.JPG)\(\backslash\)n"}
+00026                 + \textcolor{stringliteral}{"Alpine tundra photo (public domain) : Zewu
+       (https://en.wikipedia.org/wiki/File:Tarfala\_Valley\_-\_Sweden.jpg)\(\backslash\)n"}
+00027                 + \textcolor{stringliteral}{"Steppe photo (cc-by-sa) : Matt Lavin
+       (http://www.fotopedia.com/wiki/Steppe#!/items/flickr-7495949260)\(\backslash\)n"}
+00028                 + \textcolor{stringliteral}{"Lava tube photo : Tim Laman
+       (http://science.nationalgeographic.com/science/photos/caves-gallery/#/lava-tube-cave\_1036\_600x450.jpg)\(\backslash\)n"}
+00029                 + \textcolor{stringliteral}{"Polar desert photo (cc-by) : Stephen Hudson
+       (https://commons.wikimedia.org/wiki/File:AntarcticaDomeCSnow.jpg)\(\backslash\)n"}
+00030                 + \textcolor{stringliteral}{"Thar desert photo (cc-by-sa) : Gégard JANOT
+       (https://commons.wikimedia.org/wiki/File:D%C3%A9sert\_du\_Rajasthan.jpg)\(\backslash\)n"}
+00031                 + \textcolor{stringliteral}{"Savanna photo (public domain) : United States Geological Survey
+       (https://commons.wikimedia.org/wiki/File:Oldoinyolengai.jpg)"});
+00032         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00033     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__commands_1_1CreditsCommand_aad2b955c6c8a4c3536e6b937165b7790_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pkg\-\_\-commands/\hyperlink{CreditsCommand_8java}{Credits\-Command.\-java}\end{DoxyCompactItemize}

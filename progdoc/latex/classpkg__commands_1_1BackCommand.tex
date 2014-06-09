@@ -1,0 +1,121 @@
+\hypertarget{classpkg__commands_1_1BackCommand}{\section{pkg\-\_\-commands.\-Back\-Command Class Reference}
+\label{classpkg__commands_1_1BackCommand}\index{pkg\-\_\-commands.\-Back\-Command@{pkg\-\_\-commands.\-Back\-Command}}
+}
+
+
+class \hyperlink{classpkg__commands_1_1BackCommand}{Back\-Command} used to go back in a previous Room.  
+
+
+
+
+Inheritance diagram for pkg\-\_\-commands.\-Back\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classpkg__commands_1_1BackCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pkg\-\_\-commands.\-Back\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classpkg__commands_1_1BackCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpkg__commands_1_1BackCommand_a81518eb89a9e9126e51f2f7ba6ff1ed9}{Back\-Command} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classpkg__commands_1_1BackCommand}{Back\-Command}. \end{DoxyCompactList}\item 
+boolean \hyperlink{classpkg__commands_1_1BackCommand_a35bf0276436a619d7baeb9c3a752f9d6}{execute} (\hyperlink{classpkg__world_1_1Player}{Player} player)  throws Unauthorized\-Exception 
+\begin{DoxyCompactList}\small\item\em Go back in a previous room of the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+class \hyperlink{classpkg__commands_1_1BackCommand}{Back\-Command} used to go back in a previous Room. 
+
+\begin{DoxyAuthor}{Author}
+Rémi N\-I\-C\-O\-L\-E 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{BackCommand_8java_source_l00010}{10} of file \hyperlink{BackCommand_8java_source}{Back\-Command.\-java}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpkg__commands_1_1BackCommand_a81518eb89a9e9126e51f2f7ba6ff1ed9}{\index{pkg\-\_\-commands\-::\-Back\-Command@{pkg\-\_\-commands\-::\-Back\-Command}!Back\-Command@{Back\-Command}}
+\index{Back\-Command@{Back\-Command}!pkg_commands::BackCommand@{pkg\-\_\-commands\-::\-Back\-Command}}
+\subsubsection[{Back\-Command}]{\setlength{\rightskip}{0pt plus 5cm}pkg\-\_\-commands.\-Back\-Command.\-Back\-Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__commands_1_1BackCommand_a81518eb89a9e9126e51f2f7ba6ff1ed9}
+
+
+Constructor for \hyperlink{classpkg__commands_1_1BackCommand}{Back\-Command}. 
+
+
+
+Definition at line \hyperlink{BackCommand_8java_source_l00015}{15} of file \hyperlink{BackCommand_8java_source}{Back\-Command.\-java}.
+
+
+\begin{DoxyCode}
+00015                         \{
+00016         super();
+00017     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpkg__commands_1_1BackCommand_a35bf0276436a619d7baeb9c3a752f9d6}{\index{pkg\-\_\-commands\-::\-Back\-Command@{pkg\-\_\-commands\-::\-Back\-Command}!execute@{execute}}
+\index{execute@{execute}!pkg_commands::BackCommand@{pkg\-\_\-commands\-::\-Back\-Command}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}boolean pkg\-\_\-commands.\-Back\-Command.\-execute (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{player}
+\end{DoxyParamCaption}
+) throws {\bf Unauthorized\-Exception}}}\label{classpkg__commands_1_1BackCommand_a35bf0276436a619d7baeb9c3a752f9d6}
+
+
+Go back in a previous room of the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player that typed the \char`\"{}back\char`\"{} command \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unauthorized\-Exception} & When the user has no previous room \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+False because it is not the quit command 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{BackCommand_8java_source_l00025}{25} of file \hyperlink{BackCommand_8java_source}{Back\-Command.\-java}.
+
+
+\begin{DoxyCode}
+00025                                                                        \{
+00026         \textcolor{keywordflow}{try} \{
+00027             super.goRoomCheck(player.getPreviousRoom(), player, \textcolor{keyword}{true});
+00028         \} \textcolor{keywordflow}{catch}(pkg\_exceptions.IllegalArgumentException e)  \{
+00029             \textcolor{comment}{// Tried to teleport to null}
+00030             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} UnauthorizedException(\textcolor{stringliteral}{"Awww, that's sweet. The little player want to go home.\(\backslash\)n"}
+00031                     + \textcolor{stringliteral}{"But we're just getting started!"});
+00032         \}
+00033         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00034     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pkg\-\_\-commands/\hyperlink{BackCommand_8java}{Back\-Command.\-java}\end{DoxyCompactItemize}

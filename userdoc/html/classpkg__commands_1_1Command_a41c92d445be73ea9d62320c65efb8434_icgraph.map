@@ -1,0 +1,11 @@
+<map id="pkg_commands.Command.getParameter" name="pkg_commands.Command.getParameter">
+<area shape="rect" id="node2" href="$classpkg__commands_1_1LookCommand.html#af336146fae1e14bf434d85a5acbcdcd7" title="pkg_commands.LookCommand.execute" alt="" coords="263,5,519,32"/>
+<area shape="rect" id="node3" href="$classpkg__commands_1_1TalkCommand.html#a413573388e24a2d442f9814695f7e47c" title="pkg_commands.TalkCommand.execute" alt="" coords="264,56,517,83"/>
+<area shape="rect" id="node4" href="$classpkg__commands_1_1DropCommand.html#a742e37b2d2dd4e111130811ee2f4dd0b" title="pkg_commands.DropCommand.execute" alt="" coords="263,107,519,133"/>
+<area shape="rect" id="node5" href="$classpkg__commands_1_1TakeCommand.html#a17789062aaf2ab5747c7eeac118875cd" title="pkg_commands.TakeCommand.execute" alt="" coords="262,157,519,184"/>
+<area shape="rect" id="node6" href="$classpkg__commands_1_1EatCommand.html#a2a600f09891aa076b3f630293de965f4" title="pkg_commands.EatCommand.execute" alt="" coords="267,208,515,235"/>
+<area shape="rect" id="node7" href="$classpkg__commands_1_1GiveCommand.html#a3a3cca7fae9b86d8ff85cc166564843d" title="pkg_commands.GiveCommand.execute" alt="" coords="263,259,518,285"/>
+<area shape="rect" id="node8" href="$classpkg__commands_1_1BeamerCommand.html#a139dc852e180cabd8af15cfed37dcf0e" title="pkg_commands.BeamerCommand.execute" alt="" coords="254,309,527,336"/>
+<area shape="rect" id="node9" href="$classpkg__commands_1_1TestCommand.html#a1ff07c27a46910d20c2e4569888892ca" title="pkg_commands.TestCommand.execute" alt="" coords="263,360,518,387"/>
+<area shape="rect" id="node10" href="$classpkg__commands_1_1GoCommand.html#a82e9a64a0fac612f788060a90c83f9b1" title="pkg_commands.GoCommand.execute" alt="" coords="268,411,513,437"/>
+</map>

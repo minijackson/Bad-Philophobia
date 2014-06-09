@@ -1,0 +1,7 @@
+<map id="Game" name="Game">
+<area shape="rect" id="node2" href="$classpkg__game_1_1GameEngine.html" title="Class handling the gameplay for the game. " alt="" coords="238,971,399,1151"/>
+<area shape="rect" id="node3" href="$classpkg__game_1_1UserInterface.html" title="Class handling the game&#39;s user interface. " alt="" coords="380,1216,544,1469"/>
+<area shape="rect" id="node7" href="$classpkg__world_1_1Player.html" title="class Player used to handle the user&#39;s player. " alt="" coords="237,653,400,907"/>
+<area shape="rect" id="node8" href="$classpkg__world_1_1Room.html" title="Class used to handle a game&#39;s room. " alt="" coords="243,307,395,575"/>
+<area shape="rect" id="node10" href="$classpkg__world_1_1pkg__items_1_1ItemList.html" title="class ItemList used to handle a list of Item (inventory). " alt="" coords="5,157,200,235"/>
+</map>

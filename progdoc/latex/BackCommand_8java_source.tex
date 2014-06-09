@@ -1,0 +1,31 @@
+\hypertarget{BackCommand_8java}{\section{Back\-Command.\-java}
+\label{BackCommand_8java}\index{pkg\-\_\-commands/\-Back\-Command.\-java@{pkg\-\_\-commands/\-Back\-Command.\-java}}
+}
+
+\begin{DoxyCode}
+\hypertarget{BackCommand_8java_source_l00001}{}\hyperlink{namespacepkg__commands}{00001} \textcolor{keyword}{package }pkg\_commands;
+00002 
+00003 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Player}{pkg\_world.Player};
+00004 \textcolor{keyword}{import} \hyperlink{classpkg__exceptions_1_1UnauthorizedException}{pkg\_exceptions.UnauthorizedException};
+00005 
+\hypertarget{BackCommand_8java_source_l00010}{}\hyperlink{classpkg__commands_1_1BackCommand}{00010} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__commands_1_1BackCommand}{BackCommand} \textcolor{keyword}{extends} \hyperlink{classpkg__commands_1_1GoCommand}{GoCommand} \{
+00011 
+\hypertarget{BackCommand_8java_source_l00015}{}\hyperlink{classpkg__commands_1_1BackCommand_a81518eb89a9e9126e51f2f7ba6ff1ed9}{00015}     \textcolor{keyword}{public} \hyperlink{classpkg__commands_1_1BackCommand_a81518eb89a9e9126e51f2f7ba6ff1ed9}{BackCommand}()\{
+00016         super();
+00017     \}
+00018 
+\hypertarget{BackCommand_8java_source_l00025}{}\hyperlink{classpkg__commands_1_1BackCommand_a35bf0276436a619d7baeb9c3a752f9d6}{00025}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__commands_1_1BackCommand_a35bf0276436a619d7baeb9c3a752f9d6}{execute}(\hyperlink{classpkg__world_1_1Player}{Player} player) \textcolor{keywordflow}{throws} 
+      \hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException} \{
+00026         \textcolor{keywordflow}{try} \{
+00027             super.goRoomCheck(player.getPreviousRoom(), player, \textcolor{keyword}{true});
+00028         \} \textcolor{keywordflow}{catch}(pkg\_exceptions.IllegalArgumentException e)  \{
+00029             \textcolor{comment}{// Tried to teleport to null}
+00030             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException}(\textcolor{stringliteral}{"Awww, that's sweet. The little player
+       want to go home.\(\backslash\)n"}
+00031                     + \textcolor{stringliteral}{"But we're just getting started!"});
+00032         \}
+00033         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00034     \}
+00035 
+00036 \}
+\end{DoxyCode}

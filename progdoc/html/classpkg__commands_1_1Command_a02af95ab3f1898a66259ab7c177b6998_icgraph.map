@@ -1,0 +1,11 @@
+<map id="pkg_commands.Command.hasParameter" name="pkg_commands.Command.hasParameter">
+<area shape="rect" id="node2" href="$classpkg__commands_1_1LookCommand.html#af336146fae1e14bf434d85a5acbcdcd7" title="Saves the information about the current Room or a given Item in the message field. " alt="" coords="265,5,521,32"/>
+<area shape="rect" id="node3" href="$classpkg__commands_1_1TalkCommand.html#a413573388e24a2d442f9814695f7e47c" title="Make the player talk to a Character. " alt="" coords="267,56,520,83"/>
+<area shape="rect" id="node4" href="$classpkg__commands_1_1DropCommand.html#a742e37b2d2dd4e111130811ee2f4dd0b" title="Drop the Item through it&#39;s name in the parameter field. " alt="" coords="265,107,521,133"/>
+<area shape="rect" id="node5" href="$classpkg__commands_1_1TakeCommand.html#a17789062aaf2ab5747c7eeac118875cd" title="Make the player take an Item. " alt="" coords="265,157,522,184"/>
+<area shape="rect" id="node6" href="$classpkg__commands_1_1EatCommand.html#a2a600f09891aa076b3f630293de965f4" title="Make the player eat an object. " alt="" coords="269,208,517,235"/>
+<area shape="rect" id="node7" href="$classpkg__commands_1_1GiveCommand.html#a3a3cca7fae9b86d8ff85cc166564843d" title="Make the player give an Item to a Character. " alt="" coords="266,259,521,285"/>
+<area shape="rect" id="node8" href="$classpkg__commands_1_1BeamerCommand.html#a139dc852e180cabd8af15cfed37dcf0e" title="Teleport to the remembered room or remember a room. " alt="" coords="257,309,530,336"/>
+<area shape="rect" id="node9" href="$classpkg__commands_1_1TestCommand.html#a1ff07c27a46910d20c2e4569888892ca" title="Test series of Commands stored in a .test file and store the messages in the message field..." alt="" coords="266,360,521,387"/>
+<area shape="rect" id="node10" href="$classpkg__commands_1_1GoCommand.html#a82e9a64a0fac612f788060a90c83f9b1" title="Make the player go to the Room through it&#39;s direction in the parameter field. " alt="" coords="271,411,516,437"/>
+</map>

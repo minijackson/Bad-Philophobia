@@ -1,0 +1,5 @@
+<map id="pkg_commands.GoCommand" name="pkg_commands.GoCommand">
+<area shape="rect" id="node3" href="$classpkg__commands_1_1BackCommand.html" title="{pkg_commands.BackCommand\n||+ BackCommand()\l+ execute()\l}" alt="" coords="5,455,213,547"/>
+<area shape="rect" id="node4" href="$classpkg__commands_1_1BeamerCommand.html" title="{pkg_commands.BeamerCommand\n||+ BeamerCommand()\l+ execute()\l+ charge()\l}" alt="" coords="238,448,460,555"/>
+<area shape="rect" id="node2" href="$classpkg__commands_1_1Command.html" title="{pkg_commands.Command\n||+ getParameter()\l+ getSecondParameter()\l+ setParameter()\l+ setSecondParameter()\l+ hasParameter()\l+ hasSecondParameter()\l+ getMessage()\l+ hasMessage()\l+ execute()\l# setMessage()\l}" alt="" coords="140,6,319,215"/>
+</map>

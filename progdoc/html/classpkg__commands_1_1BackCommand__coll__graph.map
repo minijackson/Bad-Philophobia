@@ -1,0 +1,4 @@
+<map id="pkg_commands.BackCommand" name="pkg_commands.BackCommand">
+<area shape="rect" id="node2" href="$classpkg__commands_1_1GoCommand.html" title="class GoCommand used to make the player go to a given Room. " alt="" coords="12,293,207,429"/>
+<area shape="rect" id="node3" href="$classpkg__commands_1_1Command.html" title="Class used to handle a command of one or two words. " alt="" coords="20,6,199,245"/>
+</map>

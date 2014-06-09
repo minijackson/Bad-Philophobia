@@ -1,0 +1,7 @@
+<map id="pkg_commands.Command.hasMessage" name="pkg_commands.Command.hasMessage">
+<area shape="rect" id="node2" href="$classpkg__commands_1_1GoCommand.html#a210afbc5f3ef34d3ad5759d853c8f8c2" title="Go to the Room without checking. " alt="" coords="256,49,469,90"/>
+<area shape="rect" id="node3" href="$classpkg__commands_1_1BeamerCommand.html#a2b6c04242d443d4ff36f255b06ce14be" title="Teleport the player to the remembered room. " alt="" coords="518,5,789,32"/>
+<area shape="rect" id="node5" href="$classpkg__commands_1_1GoCommand.html#a82e9a64a0fac612f788060a90c83f9b1" title="Make the player go to the Room through it&#39;s direction in the parameter field. " alt="" coords="852,85,1097,112"/>
+<area shape="rect" id="node6" href="$classpkg__commands_1_1GoCommand.html#acbf1aa81fa5b1aef7cafb8b4e3ace3a9" title="Check if the wanted Room is connected to the current Room and go to this room. " alt="" coords="547,107,760,149"/>
+<area shape="rect" id="node4" href="$classpkg__commands_1_1BeamerCommand.html#a139dc852e180cabd8af15cfed37dcf0e" title="Teleport to the remembered room or remember a room. " alt="" coords="838,5,1111,32"/>
+</map>

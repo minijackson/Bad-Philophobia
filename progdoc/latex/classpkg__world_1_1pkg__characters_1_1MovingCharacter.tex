@@ -1,0 +1,239 @@
+\hypertarget{classpkg__world_1_1pkg__characters_1_1MovingCharacter}{\section{pkg\-\_\-world.\-pkg\-\_\-characters.\-Moving\-Character Class Reference}
+\label{classpkg__world_1_1pkg__characters_1_1MovingCharacter}\index{pkg\-\_\-world.\-pkg\-\_\-characters.\-Moving\-Character@{pkg\-\_\-world.\-pkg\-\_\-characters.\-Moving\-Character}}
+}
+
+
+class \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter}{Moving\-Character}  
+
+
+
+
+Inheritance diagram for pkg\-\_\-world.\-pkg\-\_\-characters.\-Moving\-Character\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classpkg__world_1_1pkg__characters_1_1MovingCharacter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pkg\-\_\-world.\-pkg\-\_\-characters.\-Moving\-Character\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1pkg__characters_1_1MovingCharacter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter_aa8e7cc0d5fc072ea1bb2545cda28d7ee}{Moving\-Character} (\hyperlink{classpkg__world_1_1Room}{Room} start\-Room, final String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name})
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter}{Moving\-Character} with name only. \end{DoxyCompactList}\item 
+\hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter_a3ff1fb87a50e7370aea5e9da6ef8abe4}{Moving\-Character} (\hyperlink{classpkg__world_1_1Room}{Room} start\-Room, final String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name}, final String dialog)
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter}{Moving\-Character} with name and dialog only. \end{DoxyCompactList}\item 
+\hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter_aa1857c9134647d712611944bfd9d793a}{Moving\-Character} (\hyperlink{classpkg__world_1_1Room}{Room} start\-Room, final String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name}, final String dialog, \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3e5abf14759d18446163db9597d10a44}{wanted\-Item}, final String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3f1c0fc80b859a8625f334782b1bb74a}{success\-Action}, final String \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_add959e452ec866785ef0d48f054b13ab}{failure\-Action})
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter}{Moving\-Character}. \end{DoxyCompactList}\item 
+void \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter_aaf4df04191a12b44ecf4d5e127c3a969}{move} ()
+\begin{DoxyCompactList}\small\item\em Move to a random adjacent \hyperlink{classpkg__world_1_1Room}{Room} to the current one. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter_abef44df79f5b66a48f5bacc6e0f29c54}{current\-Room}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpkg__world_1_1Room}{Room} where the \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter}{Moving\-Character} is currently in. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter}{Moving\-Character} 
+
+\begin{DoxyAuthor}{Author}
+Rémi Nicole 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{MovingCharacter_8java_source_l00011}{11} of file \hyperlink{MovingCharacter_8java_source}{Moving\-Character.\-java}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpkg__world_1_1pkg__characters_1_1MovingCharacter_aa8e7cc0d5fc072ea1bb2545cda28d7ee}{\index{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Moving\-Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Moving\-Character}!Moving\-Character@{Moving\-Character}}
+\index{Moving\-Character@{Moving\-Character}!pkg_world::pkg_characters::MovingCharacter@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Moving\-Character}}
+\subsubsection[{Moving\-Character}]{\setlength{\rightskip}{0pt plus 5cm}pkg\-\_\-world.\-pkg\-\_\-characters.\-Moving\-Character.\-Moving\-Character (
+\begin{DoxyParamCaption}
+\item[{{\bf Room}}]{start\-Room, }
+\item[{final String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1pkg__characters_1_1MovingCharacter_aa8e7cc0d5fc072ea1bb2545cda28d7ee}
+
+
+Constructor for \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter}{Moving\-Character} with name only. 
+
+When using this constructor only, the creature/character says nothing and wants nothing. 
+\begin{DoxyParams}{Parameters}
+{\em start\-Room} & \hyperlink{classpkg__world_1_1Room}{Room} where the creature/character start \\
+\hline
+{\em name} & The name of the creature/character \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{MovingCharacter_8java_source_l00026}{26} of file \hyperlink{MovingCharacter_8java_source}{Moving\-Character.\-java}.
+
+
+
+References \hyperlink{MovingCharacter_8java_source_l00016}{pkg\-\_\-world.\-pkg\-\_\-characters.\-Moving\-Character.\-current\-Room}.
+
+
+\begin{DoxyCode}
+00026                                                              \{
+00027         super(\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name});
+00028         \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter_abef44df79f5b66a48f5bacc6e0f29c54}{currentRoom} = startRoom;
+00029     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1pkg__characters_1_1MovingCharacter_a3ff1fb87a50e7370aea5e9da6ef8abe4}{\index{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Moving\-Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Moving\-Character}!Moving\-Character@{Moving\-Character}}
+\index{Moving\-Character@{Moving\-Character}!pkg_world::pkg_characters::MovingCharacter@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Moving\-Character}}
+\subsubsection[{Moving\-Character}]{\setlength{\rightskip}{0pt plus 5cm}pkg\-\_\-world.\-pkg\-\_\-characters.\-Moving\-Character.\-Moving\-Character (
+\begin{DoxyParamCaption}
+\item[{{\bf Room}}]{start\-Room, }
+\item[{final String}]{name, }
+\item[{final String}]{dialog}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1pkg__characters_1_1MovingCharacter_a3ff1fb87a50e7370aea5e9da6ef8abe4}
+
+
+Constructor for \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter}{Moving\-Character} with name and dialog only. 
+
+When using this constructor only, the creature/character wants nothing. 
+\begin{DoxyParams}{Parameters}
+{\em start\-Room} & \hyperlink{classpkg__world_1_1Room}{Room} where the creature/character start \\
+\hline
+{\em name} & The name of the creature/character \\
+\hline
+{\em dialog} & The dialog displayed when talking to it/him/her \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{MovingCharacter_8java_source_l00039}{39} of file \hyperlink{MovingCharacter_8java_source}{Moving\-Character.\-java}.
+
+
+
+References \hyperlink{MovingCharacter_8java_source_l00016}{pkg\-\_\-world.\-pkg\-\_\-characters.\-Moving\-Character.\-current\-Room}.
+
+
+\begin{DoxyCode}
+00039                                                                                    \{
+00040         super(\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name}, dialog);
+00041         \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter_abef44df79f5b66a48f5bacc6e0f29c54}{currentRoom} = startRoom;
+00042     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1pkg__characters_1_1MovingCharacter_aa1857c9134647d712611944bfd9d793a}{\index{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Moving\-Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Moving\-Character}!Moving\-Character@{Moving\-Character}}
+\index{Moving\-Character@{Moving\-Character}!pkg_world::pkg_characters::MovingCharacter@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Moving\-Character}}
+\subsubsection[{Moving\-Character}]{\setlength{\rightskip}{0pt plus 5cm}pkg\-\_\-world.\-pkg\-\_\-characters.\-Moving\-Character.\-Moving\-Character (
+\begin{DoxyParamCaption}
+\item[{{\bf Room}}]{start\-Room, }
+\item[{final String}]{name, }
+\item[{final String}]{dialog, }
+\item[{{\bf Item}}]{wanted\-Item, }
+\item[{final String}]{success\-Action, }
+\item[{final String}]{failure\-Action}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1pkg__characters_1_1MovingCharacter_aa1857c9134647d712611944bfd9d793a}
+
+
+Constructor for \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter}{Moving\-Character}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\-Room} & \hyperlink{classpkg__world_1_1Room}{Room} where the creature/character start \\
+\hline
+{\em name} & The name of the creature/character \\
+\hline
+{\em dialog} & The dialog displayed when talking to it/him/her \\
+\hline
+{\em wanted\-Item} & Item wanted by the creature/character \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{MovingCharacter_8java_source_l00051}{51} of file \hyperlink{MovingCharacter_8java_source}{Moving\-Character.\-java}.
+
+
+
+References \hyperlink{MovingCharacter_8java_source_l00016}{pkg\-\_\-world.\-pkg\-\_\-characters.\-Moving\-Character.\-current\-Room}.
+
+
+\begin{DoxyCode}
+00051                                                                                                            
+                                                       \{
+00052         super(\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a54831aae75fcaacb68cb500a12ffe457}{name}, dialog, \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3e5abf14759d18446163db9597d10a44}{wantedItem}, \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a3f1c0fc80b859a8625f334782b1bb74a}{successAction}, 
+      \hyperlink{classpkg__world_1_1pkg__characters_1_1Character_add959e452ec866785ef0d48f054b13ab}{failureAction});
+00053         \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter_abef44df79f5b66a48f5bacc6e0f29c54}{currentRoom} = startRoom;
+00054     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpkg__world_1_1pkg__characters_1_1MovingCharacter_aaf4df04191a12b44ecf4d5e127c3a969}{\index{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Moving\-Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Moving\-Character}!move@{move}}
+\index{move@{move}!pkg_world::pkg_characters::MovingCharacter@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Moving\-Character}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-world.\-pkg\-\_\-characters.\-Moving\-Character.\-move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1pkg__characters_1_1MovingCharacter_aaf4df04191a12b44ecf4d5e127c3a969}
+
+
+Move to a random adjacent \hyperlink{classpkg__world_1_1Room}{Room} to the current one. 
+
+
+
+Definition at line \hyperlink{MovingCharacter_8java_source_l00059}{59} of file \hyperlink{MovingCharacter_8java_source}{Moving\-Character.\-java}.
+
+
+
+References \hyperlink{MovingCharacter_8java_source_l00016}{pkg\-\_\-world.\-pkg\-\_\-characters.\-Moving\-Character.\-current\-Room}, and \hyperlink{Character_8java_source_l00127}{pkg\-\_\-world.\-pkg\-\_\-characters.\-Character.\-get\-Name()}.
+
+
+\begin{DoxyCode}
+00059                        \{
+00060         currentRoom.removeCharacter(\hyperlink{classpkg__world_1_1pkg__characters_1_1Character_a660097e198e2e62f83d83a8872eb55d1}{getName}());
+00061         \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter_abef44df79f5b66a48f5bacc6e0f29c54}{currentRoom} = currentRoom.getRandomAdjacentRoom();
+00062         currentRoom.addCharacter(\textcolor{keyword}{this});
+00063     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1pkg__characters_1_1MovingCharacter_aaf4df04191a12b44ecf4d5e127c3a969_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classpkg__world_1_1pkg__characters_1_1MovingCharacter_abef44df79f5b66a48f5bacc6e0f29c54}{\index{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Moving\-Character@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Moving\-Character}!current\-Room@{current\-Room}}
+\index{current\-Room@{current\-Room}!pkg_world::pkg_characters::MovingCharacter@{pkg\-\_\-world\-::pkg\-\_\-characters\-::\-Moving\-Character}}
+\subsubsection[{current\-Room}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Room} pkg\-\_\-world.\-pkg\-\_\-characters.\-Moving\-Character.\-current\-Room\hspace{0.3cm}{\ttfamily [private]}}}\label{classpkg__world_1_1pkg__characters_1_1MovingCharacter_abef44df79f5b66a48f5bacc6e0f29c54}
+
+
+\hyperlink{classpkg__world_1_1Room}{Room} where the \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter}{Moving\-Character} is currently in. 
+
+
+
+Definition at line \hyperlink{MovingCharacter_8java_source_l00016}{16} of file \hyperlink{MovingCharacter_8java_source}{Moving\-Character.\-java}.
+
+
+
+Referenced by \hyperlink{MovingCharacter_8java_source_l00059}{pkg\-\_\-world.\-pkg\-\_\-characters.\-Moving\-Character.\-move()}, and \hyperlink{MovingCharacter_8java_source_l00026}{pkg\-\_\-world.\-pkg\-\_\-characters.\-Moving\-Character.\-Moving\-Character()}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pkg\-\_\-world/pkg\-\_\-characters/\hyperlink{MovingCharacter_8java}{Moving\-Character.\-java}\end{DoxyCompactItemize}

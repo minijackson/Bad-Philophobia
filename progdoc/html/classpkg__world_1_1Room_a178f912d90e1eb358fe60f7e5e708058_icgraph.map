@@ -1,0 +1,5 @@
+<map id="pkg_world.Room.getHumanList" name="pkg_world.Room.getHumanList">
+<area shape="rect" id="node2" href="$classpkg__world_1_1Room.html#a1ddbdc5022f7f494ac6250ca3f42672c" title="Return a human readable list of the characters in the room. " alt="" coords="259,5,528,32"/>
+<area shape="rect" id="node4" href="$classpkg__world_1_1Room.html#a3ea436ad00d00484b429992ef94535ac" title="Return a human readable list of the items in the room. " alt="" coords="274,56,513,83"/>
+<area shape="rect" id="node3" href="$classpkg__world_1_1Room.html#acc8ee9123c9a77428c1e66fbba34aeac" title="Return the description of the room, the available exits plus the items in the room if any..." alt="" coords="577,31,813,57"/>
+</map>

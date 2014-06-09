@@ -1,0 +1,61 @@
+\hypertarget{Command_8java}{\section{Command.\-java}
+\label{Command_8java}\index{pkg\-\_\-commands/\-Command.\-java@{pkg\-\_\-commands/\-Command.\-java}}
+}
+
+\begin{DoxyCode}
+00001 
+00005 \textcolor{keyword}{package }pkg\_commands;
+00006 
+00007 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Player}{pkg\_world.Player};
+00008 \textcolor{keyword}{import} pkg\_exceptions.*;
+00009 
+\hypertarget{Command_8java_source_l00014}{}\hyperlink{classpkg__commands_1_1Command}{00014} \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keyword}{class }\hyperlink{classpkg__commands_1_1Command}{Command} \{
+00015 
+\hypertarget{Command_8java_source_l00021}{}\hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{00021}     \textcolor{keyword}{private} String \hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{parameter};
+00022 
+\hypertarget{Command_8java_source_l00028}{}\hyperlink{classpkg__commands_1_1Command_a5f0b6df5ba798c9ee4446f01a0352210}{00028}     \textcolor{keyword}{private} String \hyperlink{classpkg__commands_1_1Command_a5f0b6df5ba798c9ee4446f01a0352210}{secondParameter};
+00029 
+\hypertarget{Command_8java_source_l00035}{}\hyperlink{classpkg__commands_1_1Command_ab4bc9d76fd948fcf253400793fbfde3f}{00035}     \textcolor{keyword}{private} String \hyperlink{classpkg__commands_1_1Command_ab4bc9d76fd948fcf253400793fbfde3f}{message};
+00036 
+\hypertarget{Command_8java_source_l00041}{}\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{00041}     \textcolor{keyword}{public} String \hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}() \{
+00042         \textcolor{keywordflow}{return} \hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{parameter};
+00043     \}
+00044 
+\hypertarget{Command_8java_source_l00049}{}\hyperlink{classpkg__commands_1_1Command_a20d3ebdc0683a87b43be2a92a1cad111}{00049}     \textcolor{keyword}{public} String \hyperlink{classpkg__commands_1_1Command_a20d3ebdc0683a87b43be2a92a1cad111}{getSecondParameter}() \{
+00050         \textcolor{keywordflow}{return} \hyperlink{classpkg__commands_1_1Command_a5f0b6df5ba798c9ee4446f01a0352210}{secondParameter};
+00051     \}
+00052 
+\hypertarget{Command_8java_source_l00057}{}\hyperlink{classpkg__commands_1_1Command_a18446243a5fd360e9341b4b141c0cccc}{00057}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__commands_1_1Command_a18446243a5fd360e9341b4b141c0cccc}{setParameter}(String \hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{parameter}) \{
+00058         this.parameter = \hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{parameter};
+00059     \}
+00060 
+\hypertarget{Command_8java_source_l00065}{}\hyperlink{classpkg__commands_1_1Command_af6de3828c27cd491ad24c4a97d69e856}{00065}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__commands_1_1Command_af6de3828c27cd491ad24c4a97d69e856}{setSecondParameter}(String \hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{parameter}) \{
+00066         \hyperlink{classpkg__commands_1_1Command_a5f0b6df5ba798c9ee4446f01a0352210}{secondParameter} = \hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{parameter};
+00067     \}
+00068 
+\hypertarget{Command_8java_source_l00073}{}\hyperlink{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998}{00073}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998}{hasParameter}() \{
+00074         \textcolor{keywordflow}{return} (\hyperlink{classpkg__commands_1_1Command_a089fe1b30b43b2ad5f0dcb2f0ffc2fdd}{parameter} != null);
+00075     \}
+00076 
+\hypertarget{Command_8java_source_l00081}{}\hyperlink{classpkg__commands_1_1Command_add688a76d80576c34f23927da19b9e2d}{00081}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__commands_1_1Command_add688a76d80576c34f23927da19b9e2d}{hasSecondParameter}() \{
+00082         \textcolor{keywordflow}{return} (\hyperlink{classpkg__commands_1_1Command_a5f0b6df5ba798c9ee4446f01a0352210}{secondParameter} != null);
+00083     \}
+00084 
+\hypertarget{Command_8java_source_l00089}{}\hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{00089}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(String \hyperlink{classpkg__commands_1_1Command_ab4bc9d76fd948fcf253400793fbfde3f}{message}) \{
+00090         this.message = \hyperlink{classpkg__commands_1_1Command_ab4bc9d76fd948fcf253400793fbfde3f}{message};
+00091     \}
+00092 
+\hypertarget{Command_8java_source_l00097}{}\hyperlink{classpkg__commands_1_1Command_ac2a42e2bab264821892daefaf9a18b6c}{00097}     \textcolor{keyword}{public} String \hyperlink{classpkg__commands_1_1Command_ac2a42e2bab264821892daefaf9a18b6c}{getMessage}() \{
+00098         \textcolor{keywordflow}{return} (\hyperlink{classpkg__commands_1_1Command_ab4bc9d76fd948fcf253400793fbfde3f}{message} == null)? \textcolor{stringliteral}{""} : \hyperlink{classpkg__commands_1_1Command_ab4bc9d76fd948fcf253400793fbfde3f}{message};
+00099     \}
+00100 
+\hypertarget{Command_8java_source_l00105}{}\hyperlink{classpkg__commands_1_1Command_ae46bb048d0fa705a5037a5204b530da2}{00105}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__commands_1_1Command_ae46bb048d0fa705a5037a5204b530da2}{hasMessage}() \{
+00106         \textcolor{keywordflow}{return} (\hyperlink{classpkg__commands_1_1Command_ab4bc9d76fd948fcf253400793fbfde3f}{message} == null) ? \textcolor{keyword}{false} : !message.equals(\textcolor{stringliteral}{""});
+00107     \}
+00108 
+00116     \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keywordtype}{boolean} \hyperlink{classpkg__commands_1_1Command_a19008923c75a87c87d1f3ba8bf8be43f}{execute}(\hyperlink{classpkg__world_1_1Player}{Player} player) \textcolor{keywordflow}{throws} 
+      \hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException},\hyperlink{classpkg__exceptions_1_1IllegalArgumentException}{pkg\_exceptions.IllegalArgumentException}
+      ,\hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException};
+00117 \}
+00118 
+\end{DoxyCode}

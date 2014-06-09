@@ -1,0 +1,10 @@
+<map id="pkg_commands.GiveCommand.execute" name="pkg_commands.GiveCommand.execute">
+<area shape="rect" id="node2" href="$classpkg__commands_1_1Command.html#a41c92d445be73ea9d62320c65efb8434" title="Parameter field getter. " alt="" coords="311,5,511,46"/>
+<area shape="rect" id="node3" href="$classpkg__commands_1_1Command.html#a20d3ebdc0683a87b43be2a92a1cad111" title="Second Parameter field getter. " alt="" coords="311,70,511,111"/>
+<area shape="rect" id="node4" href="$classpkg__commands_1_1Command.html#a02af95ab3f1898a66259ab7c177b6998" title="Return true if the parameter is null. " alt="" coords="309,135,512,177"/>
+<area shape="rect" id="node5" href="$classpkg__commands_1_1Command.html#add688a76d80576c34f23927da19b9e2d" title="Return true if the second parameter is null. " alt="" coords="309,201,512,242"/>
+<area shape="rect" id="node6" href="$classpkg__world_1_1pkg__characters_1_1Character.html#ae18c62b235802dd5bfacf662f0a1d17d" title="pkg_world.pkg_characters.\lCharacter.isSatisfied" alt="" coords="321,266,500,307"/>
+<area shape="rect" id="node7" href="$classpkg__commands_1_1Command.html#ae210ff216fe908b111ba1c988a963d13" title="Message field setter. " alt="" coords="311,331,511,373"/>
+<area shape="rect" id="node8" href="$classpkg__world_1_1pkg__characters_1_1Character.html#a0fb83fcff9b37c94eac3fb35868bebb2" title="Try to give him an Item. " alt="" coords="321,397,500,438"/>
+<area shape="rect" id="node9" href="$classpkg__world_1_1pkg__characters_1_1Character.html#a816f8f79ef1e8c9635f0cdeb180b9f3f" title="Returns true if the given Item is wanted by the creature/character. " alt="" coords="321,462,500,503"/>
+</map>

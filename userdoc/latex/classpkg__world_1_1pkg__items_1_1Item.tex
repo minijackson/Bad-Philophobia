@@ -1,0 +1,151 @@
+\hypertarget{classpkg__world_1_1pkg__items_1_1Item}{\section{pkg\-\_\-world.\-pkg\-\_\-items.\-Item Class Reference}
+\label{classpkg__world_1_1pkg__items_1_1Item}\index{pkg\-\_\-world.\-pkg\-\_\-items.\-Item@{pkg\-\_\-world.\-pkg\-\_\-items.\-Item}}
+}
+
+
+Collaboration diagram for pkg\-\_\-world.\-pkg\-\_\-items.\-Item\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classpkg__world_1_1pkg__items_1_1Item__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpkg__world_1_1pkg__items_1_1Item_a7ece2bd85f9e388cb9c2813f0b5ecc4e}{Item} (String name, int weight, String description)
+\item 
+String \hyperlink{classpkg__world_1_1pkg__items_1_1Item_ab541df9aad01409656af1aadfa66987a}{get\-Name} ()
+\item 
+int \hyperlink{classpkg__world_1_1pkg__items_1_1Item_afd46034ba99392bbe4a4432150c870d4}{get\-Weight} ()
+\item 
+String \hyperlink{classpkg__world_1_1pkg__items_1_1Item_ac2f68a92afd7e089cc4b955c37a63417}{get\-Description} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used to handle an item contained in a \hyperlink{classpkg__world_1_1Room}{Room}. \begin{DoxyAuthor}{Author}
+Rémi Nicole 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{Item_8java_source_l00007}{7} of file \hyperlink{Item_8java_source}{Item.\-java}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpkg__world_1_1pkg__items_1_1Item_a7ece2bd85f9e388cb9c2813f0b5ecc4e}{\index{pkg\-\_\-world\-::pkg\-\_\-items\-::\-Item@{pkg\-\_\-world\-::pkg\-\_\-items\-::\-Item}!Item@{Item}}
+\index{Item@{Item}!pkg_world::pkg_items::Item@{pkg\-\_\-world\-::pkg\-\_\-items\-::\-Item}}
+\subsubsection[{Item}]{\setlength{\rightskip}{0pt plus 5cm}pkg\-\_\-world.\-pkg\-\_\-items.\-Item.\-Item (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{int}]{weight, }
+\item[{String}]{description}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1pkg__items_1_1Item_a7ece2bd85f9e388cb9c2813f0b5ecc4e}
+\hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} class constructor. 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the item \\
+\hline
+{\em weight} & Weight of the item \\
+\hline
+{\em description} & Description of the item \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Item_8java_source_l00030}{30} of file \hyperlink{Item_8java_source}{Item.\-java}.
+
+
+\begin{DoxyCode}
+00030                                                              \{
+00031         this.name = name;
+00032         this.weight = weight;
+00033         this.description = description;
+00034     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpkg__world_1_1pkg__items_1_1Item_ac2f68a92afd7e089cc4b955c37a63417}{\index{pkg\-\_\-world\-::pkg\-\_\-items\-::\-Item@{pkg\-\_\-world\-::pkg\-\_\-items\-::\-Item}!get\-Description@{get\-Description}}
+\index{get\-Description@{get\-Description}!pkg_world::pkg_items::Item@{pkg\-\_\-world\-::pkg\-\_\-items\-::\-Item}}
+\subsubsection[{get\-Description}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-world.\-pkg\-\_\-items.\-Item.\-get\-Description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1pkg__items_1_1Item_ac2f68a92afd7e089cc4b955c37a63417}
+description field getter. \begin{DoxyReturn}{Returns}
+The description of the item 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Item_8java_source_l00056}{56} of file \hyperlink{Item_8java_source}{Item.\-java}.
+
+
+\begin{DoxyCode}
+00056                                    \{
+00057         \textcolor{keywordflow}{return} description;
+00058     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1pkg__items_1_1Item_ab541df9aad01409656af1aadfa66987a}{\index{pkg\-\_\-world\-::pkg\-\_\-items\-::\-Item@{pkg\-\_\-world\-::pkg\-\_\-items\-::\-Item}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!pkg_world::pkg_items::Item@{pkg\-\_\-world\-::pkg\-\_\-items\-::\-Item}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-world.\-pkg\-\_\-items.\-Item.\-get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1pkg__items_1_1Item_ab541df9aad01409656af1aadfa66987a}
+name field getter. \begin{DoxyReturn}{Returns}
+The name of the item 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Item_8java_source_l00040}{40} of file \hyperlink{Item_8java_source}{Item.\-java}.
+
+
+
+Referenced by \hyperlink{Player_8java_source_l00196}{pkg\-\_\-world.\-Player.\-take\-Object()}.
+
+
+\begin{DoxyCode}
+00040                             \{
+00041         \textcolor{keywordflow}{return} name;
+00042     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1pkg__items_1_1Item_ab541df9aad01409656af1aadfa66987a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classpkg__world_1_1pkg__items_1_1Item_afd46034ba99392bbe4a4432150c870d4}{\index{pkg\-\_\-world\-::pkg\-\_\-items\-::\-Item@{pkg\-\_\-world\-::pkg\-\_\-items\-::\-Item}!get\-Weight@{get\-Weight}}
+\index{get\-Weight@{get\-Weight}!pkg_world::pkg_items::Item@{pkg\-\_\-world\-::pkg\-\_\-items\-::\-Item}}
+\subsubsection[{get\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}int pkg\-\_\-world.\-pkg\-\_\-items.\-Item.\-get\-Weight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1pkg__items_1_1Item_afd46034ba99392bbe4a4432150c870d4}
+weight field getter. \begin{DoxyReturn}{Returns}
+The weight of the item 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Item_8java_source_l00048}{48} of file \hyperlink{Item_8java_source}{Item.\-java}.
+
+
+\begin{DoxyCode}
+00048                            \{
+00049         \textcolor{keywordflow}{return} weight;
+00050     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pkg\-\_\-world/pkg\-\_\-items/\hyperlink{Item_8java}{Item.\-java}\end{DoxyCompactItemize}

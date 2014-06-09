@@ -1,0 +1,6 @@
+<map id="pkg_commands.GoCommand.goRoomNoCheck" name="pkg_commands.GoCommand.goRoomNoCheck">
+<area shape="rect" id="node2" href="$classpkg__commands_1_1GoCommand.html#a82e9a64a0fac612f788060a90c83f9b1" title="Make the player go to the Room through it&#39;s direction in the parameter field. " alt="" coords="601,5,847,32"/>
+<area shape="rect" id="node3" href="$classpkg__commands_1_1GoCommand.html#acbf1aa81fa5b1aef7cafb8b4e3ace3a9" title="Check if the wanted Room is connected to the current Room and go to this room. " alt="" coords="296,27,509,69"/>
+<area shape="rect" id="node4" href="$classpkg__commands_1_1BeamerCommand.html#a2b6c04242d443d4ff36f255b06ce14be" title="Teleport the player to the remembered room. " alt="" coords="267,93,538,120"/>
+<area shape="rect" id="node5" href="$classpkg__commands_1_1BeamerCommand.html#a139dc852e180cabd8af15cfed37dcf0e" title="Teleport to the remembered room or remember a room. " alt="" coords="587,93,861,120"/>
+</map>

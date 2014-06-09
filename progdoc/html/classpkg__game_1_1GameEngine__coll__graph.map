@@ -1,0 +1,6 @@
+<map id="pkg_game.GameEngine" name="pkg_game.GameEngine">
+<area shape="rect" id="node2" href="$classpkg__game_1_1UserInterface.html" title="Class handling the game&#39;s user interface. " alt="" coords="341,1216,505,1469"/>
+<area shape="rect" id="node6" href="$classpkg__world_1_1Player.html" title="class Player used to handle the user&#39;s player. " alt="" coords="492,653,655,907"/>
+<area shape="rect" id="node7" href="$classpkg__world_1_1Room.html" title="Class used to handle a game&#39;s room. " alt="" coords="263,307,415,575"/>
+<area shape="rect" id="node9" href="$classpkg__world_1_1pkg__items_1_1ItemList.html" title="class ItemList used to handle a list of Item (inventory). " alt="" coords="454,157,649,235"/>
+</map>

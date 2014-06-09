@@ -1,0 +1,939 @@
+\hypertarget{classpkg__world_1_1Room}{\section{pkg\-\_\-world.\-Room Class Reference}
+\label{classpkg__world_1_1Room}\index{pkg\-\_\-world.\-Room@{pkg\-\_\-world.\-Room}}
+}
+
+
+Class used to handle a game's room.  
+
+
+
+
+Collaboration diagram for pkg\-\_\-world.\-Room\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1Room__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpkg__world_1_1Room_ae48ca6830c8c9368ab1cb7e9b006d157}{Room} (String \hyperlink{classpkg__world_1_1Room_a029ab15b9217139d350f3a6980e49a93}{description}, String image)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpkg__world_1_1Room}{Room} class constructor. \end{DoxyCompactList}\item 
+\hyperlink{classpkg__world_1_1Room_abd6108f1f6d320be8d4fc1418f09d2eb}{Room} (String \hyperlink{classpkg__world_1_1Room_a029ab15b9217139d350f3a6980e49a93}{description}, String image, \hyperlink{classpkg__world_1_1pkg__items_1_1ItemList}{Item\-List} item\-List, Hash\-Map$<$ String, \hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character} $>$ characters)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classpkg__world_1_1Room}{Room} class constructor with the items. \end{DoxyCompactList}\item 
+void \hyperlink{classpkg__world_1_1Room_a4a97591f3b574b3d0086843a919a0214}{set\-Exit} (String direction, \hyperlink{classpkg__world_1_1Room}{Room} neighbor)
+\begin{DoxyCompactList}\small\item\em Define a room in a relative direction to the current room. \end{DoxyCompactList}\item 
+\hyperlink{classpkg__world_1_1pkg__items_1_1ItemList}{Item\-List} \hyperlink{classpkg__world_1_1Room_a969205a4d2d2d9e30d1e1db9fc3f0b43}{get\-Contained\-Items} ()
+\begin{DoxyCompactList}\small\item\em contained\-Item field getter. \end{DoxyCompactList}\item 
+\hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} \hyperlink{classpkg__world_1_1Room_a8624c98bd006830d4484dae2dcd8c8e7}{get\-Item} (String name)
+\begin{DoxyCompactList}\small\item\em Return an Item through it's name. \end{DoxyCompactList}\item 
+\hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character} \hyperlink{classpkg__world_1_1Room_afe89d01c098acd297e91d313cb65aff1}{get\-Character} (String name)
+\begin{DoxyCompactList}\small\item\em Return an Character through it's name. \end{DoxyCompactList}\item 
+boolean \hyperlink{classpkg__world_1_1Room_aefa26e1bc5088dd199dde2e9d471c490}{has\-Item} (String name)
+\begin{DoxyCompactList}\small\item\em Check if the room has the given Item through it's name. \end{DoxyCompactList}\item 
+boolean \hyperlink{classpkg__world_1_1Room_a96612764dfeea7855090e586f02da188}{has\-Character} (String name)
+\begin{DoxyCompactList}\small\item\em Check if the room has the given Character through it's name. \end{DoxyCompactList}\item 
+void \hyperlink{classpkg__world_1_1Room_a118585101b274edfdd43b724382de89c}{add\-Item} (\hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} item)
+\begin{DoxyCompactList}\small\item\em Add the given Item in the \hyperlink{classpkg__world_1_1Room}{Room}. \end{DoxyCompactList}\item 
+void \hyperlink{classpkg__world_1_1Room_a8446601b93b79b1e0ab0c8be500f40b1}{add\-Character} (\hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character} character)
+\item 
+void \hyperlink{classpkg__world_1_1Room_ab84c99b33e69d4a3e0700cab4b9efeaa}{remove\-Item} (String item\-Name)
+\begin{DoxyCompactList}\small\item\em Remove the given Item to the \hyperlink{classpkg__world_1_1Room}{Room}. \end{DoxyCompactList}\item 
+void \hyperlink{classpkg__world_1_1Room_adca74901eed0132c7bb9ba15b993ac0b}{remove\-Character} (String character\-Name)
+\begin{DoxyCompactList}\small\item\em Remove the given Character to the \hyperlink{classpkg__world_1_1Room}{Room}. \end{DoxyCompactList}\item 
+String \hyperlink{classpkg__world_1_1Room_adb98ed16e34549faabed35f90673d266}{get\-Short\-Description} ()
+\begin{DoxyCompactList}\small\item\em Getter for the description field. \end{DoxyCompactList}\item 
+String \hyperlink{classpkg__world_1_1Room_acc8ee9123c9a77428c1e66fbba34aeac}{get\-Long\-Description} ()
+\begin{DoxyCompactList}\small\item\em Return the description of the room, the available exits plus the items in the room if any. \end{DoxyCompactList}\item 
+String \hyperlink{classpkg__world_1_1Room_a3ea436ad00d00484b429992ef94535ac}{get\-Human\-Items\-List} ()
+\begin{DoxyCompactList}\small\item\em Return a human readable list of the items in the room. \end{DoxyCompactList}\item 
+String \hyperlink{classpkg__world_1_1Room_a1ddbdc5022f7f494ac6250ca3f42672c}{get\-Human\-Characters\-List} ()
+\begin{DoxyCompactList}\small\item\em Return a human readable list of the characters in the room. \end{DoxyCompactList}\item 
+\hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Room_ae05ae991a1692ffb29e8aef632d18b95}{get\-Exit} (String direction)
+\begin{DoxyCompactList}\small\item\em Return the room in a specific direction. \end{DoxyCompactList}\item 
+\hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__world_1_1Room_a00952ff3743ec6cd8d238dada7506f63}{get\-Random\-Adjacent\-Room} ()
+\begin{DoxyCompactList}\small\item\em Return a random adjacent \hyperlink{classpkg__world_1_1Room}{Room}. \end{DoxyCompactList}\item 
+boolean \hyperlink{classpkg__world_1_1Room_a305aab25719c2b75a0c28c9a53a3c9d3}{is\-Exit} (\hyperlink{classpkg__world_1_1Room}{Room} exit)
+\begin{DoxyCompactList}\small\item\em Check if the given \hyperlink{classpkg__world_1_1Room}{Room} is an exit of this \hyperlink{classpkg__world_1_1Room}{Room}. \end{DoxyCompactList}\item 
+String \hyperlink{classpkg__world_1_1Room_a5d1a496c1fd2e4ba73177e1182c9f4f1}{get\-Image\-Name} ()
+\begin{DoxyCompactList}\small\item\em Getter for the image\-Name field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classpkg__world_1_1Room_a178f912d90e1eb358fe60f7e5e708058}{get\-Human\-List} (Set$<$ String $>$ names)
+\begin{DoxyCompactList}\small\item\em Return a human readable list of the given Set. \end{DoxyCompactList}\item 
+String \hyperlink{classpkg__world_1_1Room_ac712fe83b1f0d11c82ebea83f893d0f2}{get\-Exit\-String} ()
+\begin{DoxyCompactList}\small\item\em Return the available exits in a human readable format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classpkg__world_1_1Room_a029ab15b9217139d350f3a6980e49a93}{description}
+\begin{DoxyCompactList}\small\item\em Description of the room. \end{DoxyCompactList}\item 
+Hash\-Map$<$ String, \hyperlink{classpkg__world_1_1Room}{Room} $>$ \hyperlink{classpkg__world_1_1Room_a7ddc883b0f176f4e8a866dfb4af66167}{exits}
+\begin{DoxyCompactList}\small\item\em Collection which match a direction with the room in that direction. \end{DoxyCompactList}\item 
+String \hyperlink{classpkg__world_1_1Room_a5d803cae18b95d7a4fc5243fd13ae236}{image\-Name}
+\begin{DoxyCompactList}\small\item\em Image to display for the current room. \end{DoxyCompactList}\item 
+\hyperlink{classpkg__world_1_1pkg__items_1_1ItemList}{Item\-List} \hyperlink{classpkg__world_1_1Room_a3a9b7b85c95e41654c017e1adb74a49b}{contained\-Items}
+\begin{DoxyCompactList}\small\item\em Item currently being in the room. \end{DoxyCompactList}\item 
+Hash\-Map$<$ String, \hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character} $>$ \hyperlink{classpkg__world_1_1Room_a144af7eaf591c4f5ad9eaf123e628de0}{contained\-Characters}
+\begin{DoxyCompactList}\small\item\em Characters currently bing in the room. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used to handle a game's room. 
+
+\begin{DoxyAuthor}{Author}
+Rémi N\-I\-C\-O\-L\-E 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{Room_8java_source_l00019}{19} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpkg__world_1_1Room_ae48ca6830c8c9368ab1cb7e9b006d157}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!Room@{Room}}
+\index{Room@{Room}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{Room}]{\setlength{\rightskip}{0pt plus 5cm}pkg\-\_\-world.\-Room.\-Room (
+\begin{DoxyParamCaption}
+\item[{String}]{description, }
+\item[{String}]{image}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_ae48ca6830c8c9368ab1cb7e9b006d157}
+
+
+\hyperlink{classpkg__world_1_1Room}{Room} class constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em description} & Description for the room \\
+\hline
+{\em image} & Image path to display \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Room_8java_source_l00052}{52} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+References \hyperlink{Room_8java_source_l00024}{pkg\-\_\-world.\-Room.\-description}.
+
+
+\begin{DoxyCode}
+00052                                                   \{
+00053         \textcolor{keyword}{this}(\hyperlink{classpkg__world_1_1Room_a029ab15b9217139d350f3a6980e49a93}{description}, image, \textcolor{keyword}{new} ItemList(), \textcolor{keyword}{new} HashMap<String, Character>());
+00054     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Room_abd6108f1f6d320be8d4fc1418f09d2eb}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!Room@{Room}}
+\index{Room@{Room}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{Room}]{\setlength{\rightskip}{0pt plus 5cm}pkg\-\_\-world.\-Room.\-Room (
+\begin{DoxyParamCaption}
+\item[{String}]{description, }
+\item[{String}]{image, }
+\item[{{\bf Item\-List}}]{item\-List, }
+\item[{Hash\-Map$<$ String, {\bf Character} $>$}]{characters}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_abd6108f1f6d320be8d4fc1418f09d2eb}
+
+
+\hyperlink{classpkg__world_1_1Room}{Room} class constructor with the items. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em description} & Description for the room \\
+\hline
+{\em image} & Image path to display \\
+\hline
+{\em item\-List} & The items currently in the room \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Room_8java_source_l00062}{62} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+References \hyperlink{Room_8java_source_l00045}{pkg\-\_\-world.\-Room.\-contained\-Characters}, \hyperlink{Room_8java_source_l00040}{pkg\-\_\-world.\-Room.\-contained\-Items}, \hyperlink{Room_8java_source_l00024}{pkg\-\_\-world.\-Room.\-description}, \hyperlink{Room_8java_source_l00030}{pkg\-\_\-world.\-Room.\-exits}, and \hyperlink{Room_8java_source_l00035}{pkg\-\_\-world.\-Room.\-image\-Name}.
+
+
+\begin{DoxyCode}
+00062                                                                                                            
+       \{
+00063         this.description = \hyperlink{classpkg__world_1_1Room_a029ab15b9217139d350f3a6980e49a93}{description};
+00064         \hyperlink{classpkg__world_1_1Room_a7ddc883b0f176f4e8a866dfb4af66167}{exits} = \textcolor{keyword}{new} HashMap < String, Room > ();
+00065         \hyperlink{classpkg__world_1_1Room_a5d803cae18b95d7a4fc5243fd13ae236}{imageName} = image;
+00066         \hyperlink{classpkg__world_1_1Room_a3a9b7b85c95e41654c017e1adb74a49b}{containedItems} = itemList;
+00067         \hyperlink{classpkg__world_1_1Room_a144af7eaf591c4f5ad9eaf123e628de0}{containedCharacters} = characters;
+00068     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpkg__world_1_1Room_a8446601b93b79b1e0ab0c8be500f40b1}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!add\-Character@{add\-Character}}
+\index{add\-Character@{add\-Character}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{add\-Character}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-world.\-Room.\-add\-Character (
+\begin{DoxyParamCaption}
+\item[{{\bf Character}}]{character}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_a8446601b93b79b1e0ab0c8be500f40b1}
+
+
+Definition at line \hyperlink{Room_8java_source_l00127}{127} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00127                                                   \{
+00128         containedCharacters.put(character.getName(), character);
+00129     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Room_a118585101b274edfdd43b724382de89c}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!add\-Item@{add\-Item}}
+\index{add\-Item@{add\-Item}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{add\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-world.\-Room.\-add\-Item (
+\begin{DoxyParamCaption}
+\item[{{\bf Item}}]{item}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_a118585101b274edfdd43b724382de89c}
+
+
+Add the given Item in the \hyperlink{classpkg__world_1_1Room}{Room}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Item to be added \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Room_8java_source_l00123}{123} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00123                                    \{
+00124         containedItems.put(item.getName(), item);
+00125     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Room_afe89d01c098acd297e91d313cb65aff1}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!get\-Character@{get\-Character}}
+\index{get\-Character@{get\-Character}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{get\-Character}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Character} pkg\-\_\-world.\-Room.\-get\-Character (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_afe89d01c098acd297e91d313cb65aff1}
+
+
+Return an Character through it's name. 
+
+\begin{DoxyReturn}{Returns}
+The wanted Character 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Room_8java_source_l00099}{99} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00099                                                \{
+00100         \textcolor{keywordflow}{return} containedCharacters.get(name);
+00101     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Room_a969205a4d2d2d9e30d1e1db9fc3f0b43}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!get\-Contained\-Items@{get\-Contained\-Items}}
+\index{get\-Contained\-Items@{get\-Contained\-Items}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{get\-Contained\-Items}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Item\-List} pkg\-\_\-world.\-Room.\-get\-Contained\-Items (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_a969205a4d2d2d9e30d1e1db9fc3f0b43}
+
+
+contained\-Item field getter. 
+
+\begin{DoxyReturn}{Returns}
+The \hyperlink{classpkg__world_1_1Room}{Room}'s inventory 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Room_8java_source_l00083}{83} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+References \hyperlink{Room_8java_source_l00040}{pkg\-\_\-world.\-Room.\-contained\-Items}.
+
+
+\begin{DoxyCode}
+00083                                         \{
+00084         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Room_a3a9b7b85c95e41654c017e1adb74a49b}{containedItems};
+00085     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Room_ae05ae991a1692ffb29e8aef632d18b95}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!get\-Exit@{get\-Exit}}
+\index{get\-Exit@{get\-Exit}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{get\-Exit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Room} pkg\-\_\-world.\-Room.\-get\-Exit (
+\begin{DoxyParamCaption}
+\item[{String}]{direction}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_ae05ae991a1692ffb29e8aef632d18b95}
+
+
+Return the room in a specific direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & The direction of the wanted room \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The wanted \hyperlink{classpkg__world_1_1Room}{Room} 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Room_8java_source_l00227}{227} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00227                                           \{
+00228         \textcolor{keywordflow}{return} exits.get(direction);
+00229     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Room_ac712fe83b1f0d11c82ebea83f893d0f2}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!get\-Exit\-String@{get\-Exit\-String}}
+\index{get\-Exit\-String@{get\-Exit\-String}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{get\-Exit\-String}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-world.\-Room.\-get\-Exit\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classpkg__world_1_1Room_ac712fe83b1f0d11c82ebea83f893d0f2}
+
+
+Return the available exits in a human readable format. 
+
+\begin{DoxyReturn}{Returns}
+The available exits in a human readable format 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Room_8java_source_l00215}{215} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+References \hyperlink{Room_8java_source_l00030}{pkg\-\_\-world.\-Room.\-exits}.
+
+
+
+Referenced by \hyperlink{Room_8java_source_l00160}{pkg\-\_\-world.\-Room.\-get\-Long\-Description()}.
+
+
+\begin{DoxyCode}
+00215                                    \{
+00216         StringBuilder returnString = \textcolor{keyword}{new} StringBuilder(\textcolor{stringliteral}{"Exits:"});
+00217         \textcolor{keywordflow}{for}(String vS:\hyperlink{classpkg__world_1_1Room_a7ddc883b0f176f4e8a866dfb4af66167}{exits}.keySet())
+00218             returnString.append(\textcolor{stringliteral}{" "} + vS);
+00219         \textcolor{keywordflow}{return} returnString.toString();
+00220     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1Room_ac712fe83b1f0d11c82ebea83f893d0f2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classpkg__world_1_1Room_a1ddbdc5022f7f494ac6250ca3f42672c}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!get\-Human\-Characters\-List@{get\-Human\-Characters\-List}}
+\index{get\-Human\-Characters\-List@{get\-Human\-Characters\-List}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{get\-Human\-Characters\-List}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-world.\-Room.\-get\-Human\-Characters\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_a1ddbdc5022f7f494ac6250ca3f42672c}
+
+
+Return a human readable list of the characters in the room. 
+
+\begin{DoxyReturn}{Returns}
+The list of the items 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Room_8java_source_l00179}{179} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+References \hyperlink{Room_8java_source_l00045}{pkg\-\_\-world.\-Room.\-contained\-Characters}, and \hyperlink{Room_8java_source_l00188}{pkg\-\_\-world.\-Room.\-get\-Human\-List()}.
+
+
+
+Referenced by \hyperlink{Room_8java_source_l00160}{pkg\-\_\-world.\-Room.\-get\-Long\-Description()}.
+
+
+\begin{DoxyCode}
+00179                                            \{
+00180         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Room_a178f912d90e1eb358fe60f7e5e708058}{getHumanList}(\hyperlink{classpkg__world_1_1Room_a144af7eaf591c4f5ad9eaf123e628de0}{containedCharacters}.keySet());
+00181     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1Room_a1ddbdc5022f7f494ac6250ca3f42672c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1Room_a1ddbdc5022f7f494ac6250ca3f42672c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classpkg__world_1_1Room_a3ea436ad00d00484b429992ef94535ac}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!get\-Human\-Items\-List@{get\-Human\-Items\-List}}
+\index{get\-Human\-Items\-List@{get\-Human\-Items\-List}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{get\-Human\-Items\-List}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-world.\-Room.\-get\-Human\-Items\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_a3ea436ad00d00484b429992ef94535ac}
+
+
+Return a human readable list of the items in the room. 
+
+\begin{DoxyReturn}{Returns}
+The list of the items 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Room_8java_source_l00171}{171} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+References \hyperlink{Room_8java_source_l00040}{pkg\-\_\-world.\-Room.\-contained\-Items}, and \hyperlink{Room_8java_source_l00188}{pkg\-\_\-world.\-Room.\-get\-Human\-List()}.
+
+
+
+Referenced by \hyperlink{Room_8java_source_l00160}{pkg\-\_\-world.\-Room.\-get\-Long\-Description()}.
+
+
+\begin{DoxyCode}
+00171                                       \{
+00172         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Room_a178f912d90e1eb358fe60f7e5e708058}{getHumanList}(\hyperlink{classpkg__world_1_1Room_a3a9b7b85c95e41654c017e1adb74a49b}{containedItems}.keySet());
+00173     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1Room_a3ea436ad00d00484b429992ef94535ac_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1Room_a3ea436ad00d00484b429992ef94535ac_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classpkg__world_1_1Room_a178f912d90e1eb358fe60f7e5e708058}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!get\-Human\-List@{get\-Human\-List}}
+\index{get\-Human\-List@{get\-Human\-List}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{get\-Human\-List}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-world.\-Room.\-get\-Human\-List (
+\begin{DoxyParamCaption}
+\item[{Set$<$ String $>$}]{names}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classpkg__world_1_1Room_a178f912d90e1eb358fe60f7e5e708058}
+
+
+Return a human readable list of the given Set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em names} & Set to display. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list of the items 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Room_8java_source_l00188}{188} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+Referenced by \hyperlink{Room_8java_source_l00179}{pkg\-\_\-world.\-Room.\-get\-Human\-Characters\-List()}, and \hyperlink{Room_8java_source_l00171}{pkg\-\_\-world.\-Room.\-get\-Human\-Items\-List()}.
+
+
+\begin{DoxyCode}
+00188                                                    \{
+00189         String returnString = \textcolor{stringliteral}{""};
+00190         Iterator<String> it = names.iterator();
+00191         \textcolor{keywordflow}{while}(it.hasNext()) \{
+00192 
+00193             String itemName = it.next();
+00194             \textcolor{comment}{// If the item's name begins with a vowel, the prefix is ' an '}
+00195             \textcolor{comment}{// if not, the prefix is ' a '}
+00196             String prefix = \textcolor{stringliteral}{" a"} + (((\textcolor{keyword}{new} String(\textcolor{stringliteral}{"aeiouy"})).contains(itemName.substring(0,1)))? \textcolor{stringliteral}{"n"} : \textcolor{stringliteral}{""}) +
+       \textcolor{stringliteral}{" "};
+00197 
+00198             \textcolor{keywordflow}{if}(returnString.equals(\textcolor{stringliteral}{""}))
+00199                 returnString += prefix + itemName;
+00200             \textcolor{keywordflow}{else} \{
+00201                 \textcolor{comment}{// Check if it is the last item}
+00202                 \textcolor{keywordflow}{if}(it.hasNext())
+00203                     returnString += \textcolor{stringliteral}{","} + prefix + itemName;
+00204                 \textcolor{keywordflow}{else}
+00205                     returnString += \textcolor{stringliteral}{" and"} + prefix + itemName;
+00206             \}
+00207         \}
+00208         \textcolor{keywordflow}{return} returnString;
+00209     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1Room_a178f912d90e1eb358fe60f7e5e708058_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classpkg__world_1_1Room_a5d1a496c1fd2e4ba73177e1182c9f4f1}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!get\-Image\-Name@{get\-Image\-Name}}
+\index{get\-Image\-Name@{get\-Image\-Name}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{get\-Image\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-world.\-Room.\-get\-Image\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_a5d1a496c1fd2e4ba73177e1182c9f4f1}
+
+
+Getter for the image\-Name field. 
+
+\begin{DoxyReturn}{Returns}
+The name of the \hyperlink{classpkg__world_1_1Room}{Room}'s image representation 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Room_8java_source_l00263}{263} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+References \hyperlink{Room_8java_source_l00035}{pkg\-\_\-world.\-Room.\-image\-Name}.
+
+
+\begin{DoxyCode}
+00263                                  \{
+00264         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Images/"}  + \hyperlink{classpkg__world_1_1Room_a5d803cae18b95d7a4fc5243fd13ae236}{imageName};
+00265     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Room_a8624c98bd006830d4484dae2dcd8c8e7}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!get\-Item@{get\-Item}}
+\index{get\-Item@{get\-Item}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{get\-Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Item} pkg\-\_\-world.\-Room.\-get\-Item (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_a8624c98bd006830d4484dae2dcd8c8e7}
+
+
+Return an Item through it's name. 
+
+\begin{DoxyReturn}{Returns}
+The wanted Item 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Room_8java_source_l00091}{91} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00091                                      \{
+00092         \textcolor{keywordflow}{return} containedItems.get(name);
+00093     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Room_acc8ee9123c9a77428c1e66fbba34aeac}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!get\-Long\-Description@{get\-Long\-Description}}
+\index{get\-Long\-Description@{get\-Long\-Description}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{get\-Long\-Description}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-world.\-Room.\-get\-Long\-Description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_acc8ee9123c9a77428c1e66fbba34aeac}
+
+
+Return the description of the room, the available exits plus the items in the room if any. 
+
+\begin{DoxyReturn}{Returns}
+The description. 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Room_8java_source_l00160}{160} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+References \hyperlink{Room_8java_source_l00045}{pkg\-\_\-world.\-Room.\-contained\-Characters}, \hyperlink{Room_8java_source_l00024}{pkg\-\_\-world.\-Room.\-description}, \hyperlink{Room_8java_source_l00215}{pkg\-\_\-world.\-Room.\-get\-Exit\-String()}, \hyperlink{Room_8java_source_l00179}{pkg\-\_\-world.\-Room.\-get\-Human\-Characters\-List()}, and \hyperlink{Room_8java_source_l00171}{pkg\-\_\-world.\-Room.\-get\-Human\-Items\-List()}.
+
+
+\begin{DoxyCode}
+00160                                        \{
+00161         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"You are "} + \hyperlink{classpkg__world_1_1Room_a029ab15b9217139d350f3a6980e49a93}{description} + \textcolor{stringliteral}{".\(\backslash\)n"}
+00162                 + ((!containedItems.isEmpty())? \textcolor{stringliteral}{"You can see"} + 
+      \hyperlink{classpkg__world_1_1Room_a3ea436ad00d00484b429992ef94535ac}{getHumanItemsList}() + \textcolor{stringliteral}{" near you.\(\backslash\)n"} : \textcolor{stringliteral}{""})
+00163                 + ((!\hyperlink{classpkg__world_1_1Room_a144af7eaf591c4f5ad9eaf123e628de0}{containedCharacters}.isEmpty())? \textcolor{stringliteral}{"You can hear"} + 
+      \hyperlink{classpkg__world_1_1Room_a1ddbdc5022f7f494ac6250ca3f42672c}{getHumanCharactersList}() + \textcolor{stringliteral}{" moving near you\(\backslash\)n"} : \textcolor{stringliteral}{""})
+00164                 + \hyperlink{classpkg__world_1_1Room_ac712fe83b1f0d11c82ebea83f893d0f2}{getExitString}();
+00165     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1Room_acc8ee9123c9a77428c1e66fbba34aeac_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classpkg__world_1_1Room_a00952ff3743ec6cd8d238dada7506f63}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!get\-Random\-Adjacent\-Room@{get\-Random\-Adjacent\-Room}}
+\index{get\-Random\-Adjacent\-Room@{get\-Random\-Adjacent\-Room}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{get\-Random\-Adjacent\-Room}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Room} pkg\-\_\-world.\-Room.\-get\-Random\-Adjacent\-Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_a00952ff3743ec6cd8d238dada7506f63}
+
+
+Return a random adjacent \hyperlink{classpkg__world_1_1Room}{Room}. 
+
+\begin{DoxyReturn}{Returns}
+The wanted \hyperlink{classpkg__world_1_1Room}{Room} 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Room_8java_source_l00235}{235} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+References \hyperlink{Room_8java_source_l00030}{pkg\-\_\-world.\-Room.\-exits}, and \hyperlink{GameEngine_8java_source_l00289}{pkg\-\_\-game.\-Game\-Engine.\-get\-Rooms()}.
+
+
+\begin{DoxyCode}
+00235                                         \{
+00236         \hyperlink{classpkg__world_1_1Room_ae48ca6830c8c9368ab1cb7e9b006d157}{Room} nextRoom;
+00237         \textcolor{keywordflow}{do} \{
+00238             \textcolor{comment}{// Convertit les valeurs en tableau primitif de Room}
+00239             \textcolor{comment}{// cf. http://docs.oracle.com/javase/8/docs/api/java/util/Collection.html#toArray-T:A-}
+00240             nextRoom = exits.values().toArray(\textcolor{keyword}{new} \hyperlink{classpkg__world_1_1Room_ae48ca6830c8c9368ab1cb7e9b006d157}{Room}[0])[
+00241                 \textcolor{comment}{// Valeur aléatoire entre 0 et la taille du tableau (exclus)}
+00242                 (\textcolor{keyword}{new} Random()).nextInt(\hyperlink{classpkg__world_1_1Room_a7ddc883b0f176f4e8a866dfb4af66167}{exits}.values().size())
+00243                 ];
+00244 
+00245             \textcolor{comment}{// prevent the character from going to the random room}
+00246         \} \textcolor{keywordflow}{while} (nextRoom == GameEngine.getRooms().get(0));
+00247         \textcolor{keywordflow}{return} nextRoom;
+00248     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__world_1_1Room_a00952ff3743ec6cd8d238dada7506f63_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classpkg__world_1_1Room_adb98ed16e34549faabed35f90673d266}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!get\-Short\-Description@{get\-Short\-Description}}
+\index{get\-Short\-Description@{get\-Short\-Description}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{get\-Short\-Description}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-world.\-Room.\-get\-Short\-Description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_adb98ed16e34549faabed35f90673d266}
+
+
+Getter for the description field. 
+
+\begin{DoxyReturn}{Returns}
+The description field 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Room_8java_source_l00151}{151} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+References \hyperlink{Room_8java_source_l00024}{pkg\-\_\-world.\-Room.\-description}.
+
+
+\begin{DoxyCode}
+00151                                         \{
+00152         \textcolor{keywordflow}{return} \hyperlink{classpkg__world_1_1Room_a029ab15b9217139d350f3a6980e49a93}{description};
+00153     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Room_a96612764dfeea7855090e586f02da188}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!has\-Character@{has\-Character}}
+\index{has\-Character@{has\-Character}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{has\-Character}]{\setlength{\rightskip}{0pt plus 5cm}boolean pkg\-\_\-world.\-Room.\-has\-Character (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_a96612764dfeea7855090e586f02da188}
+
+
+Check if the room has the given Character through it's name. 
+
+\begin{DoxyReturn}{Returns}
+True if this \hyperlink{classpkg__world_1_1Room}{Room} has the Character 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Room_8java_source_l00115}{115} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00115                                              \{
+00116         \textcolor{keywordflow}{return} containedCharacters.containsKey(name);
+00117     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Room_aefa26e1bc5088dd199dde2e9d471c490}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!has\-Item@{has\-Item}}
+\index{has\-Item@{has\-Item}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{has\-Item}]{\setlength{\rightskip}{0pt plus 5cm}boolean pkg\-\_\-world.\-Room.\-has\-Item (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_aefa26e1bc5088dd199dde2e9d471c490}
+
+
+Check if the room has the given Item through it's name. 
+
+\begin{DoxyReturn}{Returns}
+True if this \hyperlink{classpkg__world_1_1Room}{Room} has the Item 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Room_8java_source_l00107}{107} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00107                                         \{
+00108         \textcolor{keywordflow}{return} containedItems.containsKey(name);
+00109     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Room_a305aab25719c2b75a0c28c9a53a3c9d3}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!is\-Exit@{is\-Exit}}
+\index{is\-Exit@{is\-Exit}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{is\-Exit}]{\setlength{\rightskip}{0pt plus 5cm}boolean pkg\-\_\-world.\-Room.\-is\-Exit (
+\begin{DoxyParamCaption}
+\item[{{\bf Room}}]{exit}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_a305aab25719c2b75a0c28c9a53a3c9d3}
+
+
+Check if the given \hyperlink{classpkg__world_1_1Room}{Room} is an exit of this \hyperlink{classpkg__world_1_1Room}{Room}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exit} & The \hyperlink{classpkg__world_1_1Room}{Room} to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the given \hyperlink{classpkg__world_1_1Room}{Room} is an exit of this \hyperlink{classpkg__world_1_1Room}{Room} 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{Room_8java_source_l00255}{255} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00255                                      \{
+00256         \textcolor{keywordflow}{return} exits.containsValue(exit);
+00257     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Room_adca74901eed0132c7bb9ba15b993ac0b}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!remove\-Character@{remove\-Character}}
+\index{remove\-Character@{remove\-Character}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{remove\-Character}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-world.\-Room.\-remove\-Character (
+\begin{DoxyParamCaption}
+\item[{String}]{character\-Name}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_adca74901eed0132c7bb9ba15b993ac0b}
+
+
+Remove the given Character to the \hyperlink{classpkg__world_1_1Room}{Room}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character\-Name} & Character to be removed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Room_8java_source_l00143}{143} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00143                                                       \{
+00144         containedCharacters.remove(characterName);
+00145     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Room_ab84c99b33e69d4a3e0700cab4b9efeaa}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!remove\-Item@{remove\-Item}}
+\index{remove\-Item@{remove\-Item}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{remove\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-world.\-Room.\-remove\-Item (
+\begin{DoxyParamCaption}
+\item[{String}]{item\-Name}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_ab84c99b33e69d4a3e0700cab4b9efeaa}
+
+
+Remove the given Item to the \hyperlink{classpkg__world_1_1Room}{Room}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item\-Name} & Item to be removed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Room_8java_source_l00135}{135} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00135                                             \{
+00136         containedItems.remove(itemName);
+00137     \}
+\end{DoxyCode}
+\hypertarget{classpkg__world_1_1Room_a4a97591f3b574b3d0086843a919a0214}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!set\-Exit@{set\-Exit}}
+\index{set\-Exit@{set\-Exit}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{set\-Exit}]{\setlength{\rightskip}{0pt plus 5cm}void pkg\-\_\-world.\-Room.\-set\-Exit (
+\begin{DoxyParamCaption}
+\item[{String}]{direction, }
+\item[{{\bf Room}}]{neighbor}
+\end{DoxyParamCaption}
+)}}\label{classpkg__world_1_1Room_a4a97591f3b574b3d0086843a919a0214}
+
+
+Define a room in a relative direction to the current room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Direction in which the room is. \\
+\hline
+{\em neighbor} & The room in that direction. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Room_8java_source_l00075}{75} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+\begin{DoxyCode}
+00075                                                          \{
+00076         exits.put(direction, neighbor);
+00077     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classpkg__world_1_1Room_a144af7eaf591c4f5ad9eaf123e628de0}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!contained\-Characters@{contained\-Characters}}
+\index{contained\-Characters@{contained\-Characters}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{contained\-Characters}]{\setlength{\rightskip}{0pt plus 5cm}Hash\-Map$<$String, {\bf Character}$>$ pkg\-\_\-world.\-Room.\-contained\-Characters\hspace{0.3cm}{\ttfamily [private]}}}\label{classpkg__world_1_1Room_a144af7eaf591c4f5ad9eaf123e628de0}
+
+
+Characters currently bing in the room. 
+
+
+
+Definition at line \hyperlink{Room_8java_source_l00045}{45} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+Referenced by \hyperlink{Room_8java_source_l00179}{pkg\-\_\-world.\-Room.\-get\-Human\-Characters\-List()}, \hyperlink{Room_8java_source_l00160}{pkg\-\_\-world.\-Room.\-get\-Long\-Description()}, and \hyperlink{Room_8java_source_l00062}{pkg\-\_\-world.\-Room.\-Room()}.
+
+\hypertarget{classpkg__world_1_1Room_a3a9b7b85c95e41654c017e1adb74a49b}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!contained\-Items@{contained\-Items}}
+\index{contained\-Items@{contained\-Items}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{contained\-Items}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Item\-List} pkg\-\_\-world.\-Room.\-contained\-Items\hspace{0.3cm}{\ttfamily [private]}}}\label{classpkg__world_1_1Room_a3a9b7b85c95e41654c017e1adb74a49b}
+
+
+Item currently being in the room. 
+
+
+
+Definition at line \hyperlink{Room_8java_source_l00040}{40} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+Referenced by \hyperlink{Room_8java_source_l00083}{pkg\-\_\-world.\-Room.\-get\-Contained\-Items()}, \hyperlink{Room_8java_source_l00171}{pkg\-\_\-world.\-Room.\-get\-Human\-Items\-List()}, and \hyperlink{Room_8java_source_l00062}{pkg\-\_\-world.\-Room.\-Room()}.
+
+\hypertarget{classpkg__world_1_1Room_a029ab15b9217139d350f3a6980e49a93}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!description@{description}}
+\index{description@{description}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{description}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-world.\-Room.\-description\hspace{0.3cm}{\ttfamily [private]}}}\label{classpkg__world_1_1Room_a029ab15b9217139d350f3a6980e49a93}
+
+
+Description of the room. 
+
+
+
+Definition at line \hyperlink{Room_8java_source_l00024}{24} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+Referenced by \hyperlink{Room_8java_source_l00160}{pkg\-\_\-world.\-Room.\-get\-Long\-Description()}, \hyperlink{Room_8java_source_l00151}{pkg\-\_\-world.\-Room.\-get\-Short\-Description()}, and \hyperlink{Room_8java_source_l00052}{pkg\-\_\-world.\-Room.\-Room()}.
+
+\hypertarget{classpkg__world_1_1Room_a7ddc883b0f176f4e8a866dfb4af66167}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!exits@{exits}}
+\index{exits@{exits}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{exits}]{\setlength{\rightskip}{0pt plus 5cm}Hash\-Map$<$String, {\bf Room}$>$ pkg\-\_\-world.\-Room.\-exits\hspace{0.3cm}{\ttfamily [private]}}}\label{classpkg__world_1_1Room_a7ddc883b0f176f4e8a866dfb4af66167}
+
+
+Collection which match a direction with the room in that direction. 
+
+
+
+Definition at line \hyperlink{Room_8java_source_l00030}{30} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+Referenced by \hyperlink{Room_8java_source_l00215}{pkg\-\_\-world.\-Room.\-get\-Exit\-String()}, \hyperlink{Room_8java_source_l00235}{pkg\-\_\-world.\-Room.\-get\-Random\-Adjacent\-Room()}, and \hyperlink{Room_8java_source_l00062}{pkg\-\_\-world.\-Room.\-Room()}.
+
+\hypertarget{classpkg__world_1_1Room_a5d803cae18b95d7a4fc5243fd13ae236}{\index{pkg\-\_\-world\-::\-Room@{pkg\-\_\-world\-::\-Room}!image\-Name@{image\-Name}}
+\index{image\-Name@{image\-Name}!pkg_world::Room@{pkg\-\_\-world\-::\-Room}}
+\subsubsection[{image\-Name}]{\setlength{\rightskip}{0pt plus 5cm}String pkg\-\_\-world.\-Room.\-image\-Name\hspace{0.3cm}{\ttfamily [private]}}}\label{classpkg__world_1_1Room_a5d803cae18b95d7a4fc5243fd13ae236}
+
+
+Image to display for the current room. 
+
+
+
+Definition at line \hyperlink{Room_8java_source_l00035}{35} of file \hyperlink{Room_8java_source}{Room.\-java}.
+
+
+
+Referenced by \hyperlink{Room_8java_source_l00263}{pkg\-\_\-world.\-Room.\-get\-Image\-Name()}, and \hyperlink{Room_8java_source_l00062}{pkg\-\_\-world.\-Room.\-Room()}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pkg\-\_\-world/\hyperlink{Room_8java}{Room.\-java}\end{DoxyCompactItemize}

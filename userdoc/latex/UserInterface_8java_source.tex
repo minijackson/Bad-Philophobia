@@ -1,0 +1,188 @@
+\hypertarget{UserInterface_8java}{\section{User\-Interface.\-java}
+\label{UserInterface_8java}\index{pkg\-\_\-game/\-User\-Interface.\-java@{pkg\-\_\-game/\-User\-Interface.\-java}}
+}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }pkg\_game;
+00002 
+00003 \textcolor{keyword}{import} javax.swing.*;
+00004 \textcolor{keyword}{import} java.awt.*;
+00005 \textcolor{keyword}{import} java.awt.event.*;
+00006 \textcolor{keyword}{import} java.net.URL;
+00007 \textcolor{keyword}{import} java.awt.image.*;
+00008 
+00009 \textcolor{keyword}{import} java.util.HashMap;
+00010 
+\hypertarget{UserInterface_8java_source_l00015}{}\hyperlink{classpkg__game_1_1UserInterface}{00015} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__game_1_1UserInterface}{UserInterface} \textcolor{keyword}{implements} ActionListener \{
+00016 
+00020     \textcolor{keyword}{private} \hyperlink{classpkg__game_1_1GameEngine}{GameEngine} engine;
+00021 
+00025     \textcolor{keyword}{private} JFrame myFrame;
+00026 
+00030     \textcolor{keyword}{private} JTextField entryField;
+00031 
+00035     \textcolor{keyword}{private} JTextArea log;
+00036 
+00040     \textcolor{keyword}{private} JLabel image;
+00041 
+00045     \textcolor{keyword}{private} JLabel commandsLeftLabel;
+00046 
+00050     \textcolor{keyword}{private} HashMap<JButton, String> buttons;
+00051 
+\hypertarget{UserInterface_8java_source_l00056}{}\hyperlink{classpkg__game_1_1UserInterface_abfbaf9bbfd3fd0bb80c8183793739f81}{00056}     \textcolor{keyword}{public} \hyperlink{classpkg__game_1_1UserInterface_abfbaf9bbfd3fd0bb80c8183793739f81}{UserInterface}(\hyperlink{classpkg__game_1_1GameEngine}{GameEngine} gameEngine) \{
+00057         engine = gameEngine;
+00058         buttons = \textcolor{keyword}{new} HashMap<JButton, String>();
+00059         createGUI();
+00060     \}
+00061 
+\hypertarget{UserInterface_8java_source_l00066}{}\hyperlink{classpkg__game_1_1UserInterface_a84ff8e11b23631bd6c5a34f718360a1f}{00066}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__game_1_1UserInterface_a84ff8e11b23631bd6c5a34f718360a1f}{setCommandsLeft}(\textcolor{keywordtype}{int} commandsLeft) \{
+00067         commandsLeftLabel.setText(\textcolor{stringliteral}{" Commands left: "} + commandsLeft + \textcolor{stringliteral}{"  "});
+00068     \}
+00069 
+\hypertarget{UserInterface_8java_source_l00074}{}\hyperlink{classpkg__game_1_1UserInterface_a524492922d9f29b45f4687441017e322}{00074}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__game_1_1UserInterface_a524492922d9f29b45f4687441017e322}{print}(String text) \{
+00075         log.append(text);
+00076         log.setCaretPosition(log.getDocument().getLength());
+00077     \}
+00078 
+\hypertarget{UserInterface_8java_source_l00083}{}\hyperlink{classpkg__game_1_1UserInterface_ac4d82f989416d7cc64a6e2fba2f4ed75}{00083}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__game_1_1UserInterface_ac4d82f989416d7cc64a6e2fba2f4ed75}{println}(String text) \{
+00084         log.append(text + \textcolor{stringliteral}{"\(\backslash\)n"});
+00085         log.setCaretPosition(log.getDocument().getLength());
+00086     \}
+00087 
+\hypertarget{UserInterface_8java_source_l00092}{}\hyperlink{classpkg__game_1_1UserInterface_af87fdba109655a1538da16b55b61dbff}{00092}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__game_1_1UserInterface_af87fdba109655a1538da16b55b61dbff}{showImage}(String imageName) \{
+00093         URL imageURL = this.getClass().getClassLoader().getResource(imageName);
+00094         \textcolor{keywordflow}{if}(imageURL == null)
+00095             System.out.println(\textcolor{stringliteral}{"image not found"});
+00096         \textcolor{keywordflow}{else} \{
+00097             ImageIcon icon = \textcolor{keyword}{new} ImageIcon(imageURL);
+00098             image.setIcon(icon);
+00099             myFrame.pack();
+00100         \}
+00101     \}
+00102 
+\hypertarget{UserInterface_8java_source_l00107}{}\hyperlink{classpkg__game_1_1UserInterface_a36a5a68f8ceca41d7f48cf31ca5f2f0e}{00107}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__game_1_1UserInterface_a36a5a68f8ceca41d7f48cf31ca5f2f0e}{enable}(\textcolor{keywordtype}{boolean} on) \{
+00108         entryField.setEditable(on);
+00109         entryField.setEnabled(on);
+00110         \textcolor{keywordflow}{if}(!on)
+00111             entryField.getCaret().setBlinkRate(0);
+00112 
+00113         \textcolor{keywordflow}{for} (JButton button : buttons.keySet()) \{
+00114             button.setEnabled(on);
+00115         \}
+00116 
+00117         commandsLeftLabel.setEnabled(on);
+00118     \}
+00119 
+00123     \textcolor{keyword}{private} \textcolor{keywordtype}{void} createGUI() \{
+00124         myFrame = \textcolor{keyword}{new} JFrame(\textcolor{stringliteral}{"Bad Philophobia"});
+00125         entryField = \textcolor{keyword}{new} JTextField(34);
+00126 
+00127         log = \textcolor{keyword}{new} JTextArea();
+00128         log.setEditable(\textcolor{keyword}{false});
+00129         JScrollPane listScroller = \textcolor{keyword}{new} JScrollPane(log);
+00130         listScroller.setPreferredSize(\textcolor{keyword}{new} Dimension(200, 200));
+00131         listScroller.setMinimumSize(\textcolor{keyword}{new} Dimension(100, 100));
+00132 
+00133         JPanel panel = \textcolor{keyword}{new} JPanel();
+00134         JPanel buttonsPanel = \textcolor{keyword}{new} JPanel();
+00135         buttonsPanel.setPreferredSize(\textcolor{keyword}{new} Dimension(200,200));
+00136         image = \textcolor{keyword}{new} JLabel();
+00137 
+00138         Font buttonsFont = \textcolor{keyword}{new} Font(Font.SANS\_SERIF, Font.PLAIN, 30);
+00139 
+00140         JButton buttonNorth = \textcolor{keyword}{new} JButton(\textcolor{keyword}{new} ImageIcon(\textcolor{stringliteral}{"Images/sprites/gonorth.png"}));
+00141         buttons.put(buttonNorth, \textcolor{stringliteral}{"go north"});
+00142 
+00143         JButton buttonSouth = \textcolor{keyword}{new} JButton(\textcolor{keyword}{new} ImageIcon(\textcolor{stringliteral}{"Images/sprites/gosouth.png"}));
+00144         buttons.put(buttonSouth, \textcolor{stringliteral}{"go south"});
+00145 
+00146         JButton buttonEast = \textcolor{keyword}{new} JButton(\textcolor{keyword}{new} ImageIcon(\textcolor{stringliteral}{"Images/sprites/goeast.png"}));
+00147         buttons.put(buttonEast, \textcolor{stringliteral}{"go east"});
+00148 
+00149         JButton buttonWest = \textcolor{keyword}{new} JButton(\textcolor{keyword}{new} ImageIcon(\textcolor{stringliteral}{"Images/sprites/gowest.png"}));
+00150         buttons.put(buttonWest, \textcolor{stringliteral}{"go west"});
+00151 
+00152         JButton buttonHelp = \textcolor{keyword}{new} JButton(\textcolor{keyword}{new} ImageIcon(\textcolor{stringliteral}{"Images/sprites/help.png"}));
+00153         buttons.put(buttonHelp, \textcolor{stringliteral}{"help"});
+00154 
+00155         JButton buttonReturn = \textcolor{keyword}{new} JButton(\textcolor{keyword}{new} ImageIcon(\textcolor{stringliteral}{"Images/sprites/enter.png"}));
+00156         buttons.put(buttonReturn, \textcolor{stringliteral}{""});
+00157 
+00158         JButton buttonCharge = \textcolor{keyword}{new} JButton(\textcolor{keyword}{new} ImageIcon(\textcolor{stringliteral}{"Images/sprites/charge.png"}));
+00159         buttons.put(buttonCharge, \textcolor{stringliteral}{"beamer charge"});
+00160 
+00161         JButton buttonTeleport = \textcolor{keyword}{new} JButton(\textcolor{keyword}{new} ImageIcon(\textcolor{stringliteral}{"Images/sprites/teleport.png"}));
+00162         buttons.put(buttonTeleport, \textcolor{stringliteral}{"beamer teleport"});
+00163 
+00164         JButton buttonBack = \textcolor{keyword}{new} JButton(\textcolor{keyword}{new} ImageIcon(\textcolor{stringliteral}{"Images/sprites/back.png"}));
+00165         buttons.put(buttonBack, \textcolor{stringliteral}{"back"});
+00166 
+00167         \textcolor{keywordflow}{for} (JButton button : buttons.keySet()) \{
+00168             button.addActionListener(\textcolor{keyword}{this});
+00169         \}
+00170 
+00171         buttonsPanel.setLayout(\textcolor{keyword}{new} GridLayout(3,3));
+00172         buttonsPanel.add(buttonBack);
+00173         buttonsPanel.add(buttonNorth);
+00174         buttonsPanel.add(buttonCharge);
+00175         buttonsPanel.add(buttonWest);
+00176         buttonsPanel.add(buttonHelp);
+00177         buttonsPanel.add(buttonEast);
+00178         buttonsPanel.add(buttonReturn);
+00179         buttonsPanel.add(buttonSouth);
+00180         buttonsPanel.add(buttonTeleport);
+00181 
+00182         panel.setLayout(\textcolor{keyword}{new} BorderLayout());
+00183         panel.add(image, BorderLayout.NORTH);
+00184         panel.add(listScroller, BorderLayout.CENTER);
+00185         panel.add(buttonsPanel, BorderLayout.EAST);
+00186 
+00187         JPanel bottomPanel = \textcolor{keyword}{new} JPanel();
+00188         bottomPanel.setLayout(\textcolor{keyword}{new} BorderLayout());
+00189         bottomPanel.add(entryField, BorderLayout.CENTER);
+00190         commandsLeftLabel = \textcolor{keyword}{new} JLabel();
+00191         bottomPanel.add(commandsLeftLabel, BorderLayout.EAST);
+00192 
+00193         panel.add(bottomPanel, BorderLayout.SOUTH);
+00194 
+00195         myFrame.getContentPane().add(panel, BorderLayout.CENTER);
+00196 
+00197         myFrame.addWindowListener(\textcolor{keyword}{new} WindowAdapter() \{
+00198             \textcolor{keyword}{public} \textcolor{keywordtype}{void} windowClosing(WindowEvent e) \{
+00199                 System.exit(0);
+00200             \}
+00201         \});
+00202 
+00203         entryField.addActionListener(\textcolor{keyword}{this});
+00204 
+00205         myFrame.pack();
+00206         myFrame.setVisible(\textcolor{keyword}{true});
+00207         entryField.requestFocus();
+00208     \}
+00209 
+\hypertarget{UserInterface_8java_source_l00214}{}\hyperlink{classpkg__game_1_1UserInterface_a55cb092ba130a286917cbd6c064136b2}{00214}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__game_1_1UserInterface_a55cb092ba130a286917cbd6c064136b2}{actionPerformed}(ActionEvent e) \{
+00215 
+00216         \textcolor{keywordflow}{if}(e.getSource() == entryField) \{
+00217             processCommand();
+00218             \textcolor{keywordflow}{return};
+00219         \}
+00220 
+00221         String command = buttons.get(((JButton)e.getSource()));
+00222 
+00223         \textcolor{keywordflow}{if}(command == null)
+00224             processCommand();
+00225         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(command.equals(\textcolor{stringliteral}{""}))
+00226             processCommand();
+00227         \textcolor{keywordflow}{else}
+00228             engine.processCommand(command);
+00229     \}
+00230 
+00234     \textcolor{keyword}{private} \textcolor{keywordtype}{void} processCommand() \{
+00235         \textcolor{keywordtype}{boolean} finished = \textcolor{keyword}{false};
+00236         String input = entryField.getText();
+00237         entryField.setText(\textcolor{stringliteral}{""});
+00238 
+00239         engine.processCommand(input);
+00240     \}
+00241 \}
+\end{DoxyCode}

@@ -1,0 +1,6 @@
+<map id="pkg_world.Room.getLongDescription" name="pkg_world.Room.getLongDescription">
+<area shape="rect" id="node2" href="$classpkg__world_1_1Room.html#ac712fe83b1f0d11c82ebea83f893d0f2" title="Return the available exits in a human readable format. " alt="" coords="326,5,525,32"/>
+<area shape="rect" id="node3" href="$classpkg__world_1_1Room.html#a1ddbdc5022f7f494ac6250ca3f42672c" title="Return a human readable list of the characters in the room. " alt="" coords="291,56,560,83"/>
+<area shape="rect" id="node5" href="$classpkg__world_1_1Room.html#a3ea436ad00d00484b429992ef94535ac" title="Return a human readable list of the items in the room. " alt="" coords="306,107,545,133"/>
+<area shape="rect" id="node4" href="$classpkg__world_1_1Room.html#a178f912d90e1eb358fe60f7e5e708058" title="Return a human readable list of the given Set. " alt="" coords="608,81,813,108"/>
+</map>

@@ -1,0 +1,117 @@
+\hypertarget{classGame}{\section{Game Class Reference}
+\label{classGame}\index{Game@{Game}}
+}
+
+
+Collaboration diagram for Game\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{classGame__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGame_a2e034e53e9c032964ecd2a831b29a616}{Game} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classGame_ae52595a27ac1b327b05db2129ad81fca}{main} (String\mbox{[}$\,$\mbox{]} args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main class used to instantiate other objects. \begin{DoxyAuthor}{Author}
+Rémi N\-I\-C\-O\-L\-E 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{Game_8java_source_l00009}{9} of file \hyperlink{Game_8java_source}{Game.\-java}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classGame_a2e034e53e9c032964ecd2a831b29a616}{\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\subsubsection[{Game}]{\setlength{\rightskip}{0pt plus 5cm}Game.\-Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classGame_a2e034e53e9c032964ecd2a831b29a616}
+\hyperlink{classGame}{Game} class constructor 
+
+Definition at line \hyperlink{Game_8java_source_l00032}{32} of file \hyperlink{Game_8java_source}{Game.\-java}.
+
+
+
+Referenced by \hyperlink{Game_8java_source_l00015}{main()}.
+
+
+\begin{DoxyCode}
+00032                    \{
+00033         engine = \textcolor{keyword}{new} \hyperlink{classpkg__game_1_1GameEngine}{GameEngine}();
+00034         gui = \textcolor{keyword}{new} \hyperlink{classpkg__game_1_1UserInterface}{UserInterface}(engine);
+00035         engine.setGUI(gui);
+00036     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classGame_a2e034e53e9c032964ecd2a831b29a616_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classGame_ae52595a27ac1b327b05db2129ad81fca}{\index{Game@{Game}!main@{main}}
+\index{main@{main}!Game@{Game}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void Game.\-main (
+\begin{DoxyParamCaption}
+\item[{String\mbox{[}$\,$\mbox{]}}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classGame_ae52595a27ac1b327b05db2129ad81fca}
+Main function. 
+\begin{DoxyParams}{Parameters}
+{\em args} & Command line arguments \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{Game_8java_source_l00015}{15} of file \hyperlink{Game_8java_source}{Game.\-java}.
+
+
+
+References \hyperlink{Game_8java_source_l00032}{Game()}.
+
+
+\begin{DoxyCode}
+00015                                            \{
+00016         \hyperlink{classGame}{Game} game = \textcolor{keyword}{new} \hyperlink{classGame_a2e034e53e9c032964ecd2a831b29a616}{Game}();
+00017     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classGame_ae52595a27ac1b327b05db2129ad81fca_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Game_8java}{Game.\-java}\end{DoxyCompactItemize}

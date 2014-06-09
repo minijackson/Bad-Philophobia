@@ -1,0 +1,261 @@
+\hypertarget{GameEngine_8java}{\section{Game\-Engine.\-java}
+\label{GameEngine_8java}\index{pkg\-\_\-game/\-Game\-Engine.\-java@{pkg\-\_\-game/\-Game\-Engine.\-java}}
+}
+
+\begin{DoxyCode}
+\hypertarget{GameEngine_8java_source_l00001}{}\hyperlink{namespacepkg__game}{00001} \textcolor{keyword}{package }pkg\_game;
+00002 
+00003 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Player}{pkg\_world.Player};
+00004 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1Room}{pkg\_world.Room};
+00005 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{pkg\_world.pkg\_items.Item};
+00006 
+00007 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{pkg\_world.pkg\_characters.Character};
+00008 \textcolor{keyword}{import} \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter}{pkg\_world.pkg\_characters.MovingCharacter};
+00009 
+00010 \textcolor{keyword}{import} \hyperlink{classpkg__commands_1_1Command}{pkg\_commands.Command};
+00011 \textcolor{keyword}{import} \hyperlink{classpkg__commands_1_1GoCommand}{pkg\_commands.GoCommand};
+00012 \textcolor{keyword}{import} \hyperlink{classpkg__commands_1_1TestCommand}{pkg\_commands.TestCommand};
+00013 
+00014 \textcolor{keyword}{import} \hyperlink{classpkg__parsing_1_1Parser}{pkg\_parsing.Parser};
+00015 
+00016 \textcolor{keyword}{import} pkg\_exceptions.*;
+00017 
+00018 \textcolor{keyword}{import} java.util.Scanner;
+00019 \textcolor{keyword}{import} java.util.ArrayList;
+00020 \textcolor{keyword}{import} java.util.HashSet;
+00021 \textcolor{keyword}{import} java.util.Random;
+00022 \textcolor{keyword}{import} java.io.File;
+00023 \textcolor{keyword}{import} java.io.FileNotFoundException;
+00024 
+\hypertarget{GameEngine_8java_source_l00031}{}\hyperlink{classpkg__game_1_1GameEngine}{00031} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classpkg__game_1_1GameEngine}{GameEngine}
+00032 \{
+\hypertarget{GameEngine_8java_source_l00036}{}\hyperlink{classpkg__game_1_1GameEngine_a864d14b3375ad026e700ba0c0b9f9d2d}{00036}     \textcolor{keyword}{private} \hyperlink{classpkg__world_1_1Player}{Player} \hyperlink{classpkg__game_1_1GameEngine_a864d14b3375ad026e700ba0c0b9f9d2d}{player};
+00037 
+\hypertarget{GameEngine_8java_source_l00041}{}\hyperlink{classpkg__game_1_1GameEngine_a4b4afca13ceeb1057e50471670bf3306}{00041}     \textcolor{keyword}{private} \textcolor{keyword}{static} ArrayList<Room> \hyperlink{classpkg__game_1_1GameEngine_a4b4afca13ceeb1057e50471670bf3306}{gameRooms};
+00042 
+\hypertarget{GameEngine_8java_source_l00046}{}\hyperlink{classpkg__game_1_1GameEngine_a64a7051b0ae6fb816d566be8ddbab3cb}{00046}     \textcolor{keyword}{private} HashSet<MovingCharacter> \hyperlink{classpkg__game_1_1GameEngine_a64a7051b0ae6fb816d566be8ddbab3cb}{movingCharacters};
+00047 
+\hypertarget{GameEngine_8java_source_l00051}{}\hyperlink{classpkg__game_1_1GameEngine_a152cd31474cc8a5980e32c2cab6e7d36}{00051}     \textcolor{keyword}{private} \hyperlink{classpkg__game_1_1UserInterface}{UserInterface} \hyperlink{classpkg__game_1_1GameEngine_a152cd31474cc8a5980e32c2cab6e7d36}{gui};
+00052 
+\hypertarget{GameEngine_8java_source_l00059}{}\hyperlink{classpkg__game_1_1GameEngine_a3229e823376625b5d9102d24d628a0fb}{00059}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \hyperlink{classpkg__game_1_1GameEngine_a3229e823376625b5d9102d24d628a0fb}{helpCount};
+00060 
+\hypertarget{GameEngine_8java_source_l00065}{}\hyperlink{classpkg__game_1_1GameEngine_af4ea44f51563b4e2c0a67fe918bf5e3c}{00065}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \hyperlink{classpkg__game_1_1GameEngine_af4ea44f51563b4e2c0a67fe918bf5e3c}{commandCountDown};
+00066 
+\hypertarget{GameEngine_8java_source_l00070}{}\hyperlink{classpkg__game_1_1GameEngine_a6b6494f73d268d0c394d819c8425f1d5}{00070}     \textcolor{keyword}{public} \hyperlink{classpkg__game_1_1GameEngine_a6b6494f73d268d0c394d819c8425f1d5}{GameEngine}() \{
+00071         \hyperlink{classpkg__game_1_1GameEngine_a4b4afca13ceeb1057e50471670bf3306}{gameRooms} = \textcolor{keyword}{new} ArrayList<Room>();
+00072         \hyperlink{classpkg__game_1_1GameEngine_a64a7051b0ae6fb816d566be8ddbab3cb}{movingCharacters} = \textcolor{keyword}{new} HashSet<MovingCharacter>();
+00073         \hyperlink{classpkg__game_1_1GameEngine_a864d14b3375ad026e700ba0c0b9f9d2d}{player} = \textcolor{keyword}{new} \hyperlink{classpkg__world_1_1Player}{Player}((javax.swing.JOptionPane.showInputDialog(\textcolor{stringliteral}{"What is your name"})
+      .toLowerCase().equals(\textcolor{stringliteral}{"retard"}))? \textcolor{stringliteral}{"moron"} : \textcolor{stringliteral}{"retard"}, \hyperlink{classpkg__game_1_1GameEngine_a986180eff9d235e3b619c7403accfc31}{createRooms}());
+00074         javax.swing.JOptionPane.showMessageDialog(null, \textcolor{stringliteral}{"Whatever, I'll call you "} + player.getName() + \textcolor{stringliteral}{"."}
+      );
+00075         \hyperlink{classpkg__game_1_1GameEngine_a3229e823376625b5d9102d24d628a0fb}{helpCount} = 0;
+00076         \hyperlink{classpkg__game_1_1GameEngine_af4ea44f51563b4e2c0a67fe918bf5e3c}{commandCountDown} = 42;
+00077     \}
+00078 
+\hypertarget{GameEngine_8java_source_l00083}{}\hyperlink{classpkg__game_1_1GameEngine_a0156eb9ee85fc086aef4da8594fb2891}{00083}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__game_1_1GameEngine_a0156eb9ee85fc086aef4da8594fb2891}{setGUI}(\hyperlink{classpkg__game_1_1UserInterface}{UserInterface} userInterface) \{
+00084         \hyperlink{classpkg__game_1_1GameEngine_a152cd31474cc8a5980e32c2cab6e7d36}{gui} = userInterface;
+00085         gui.setCommandsLeft(\hyperlink{classpkg__game_1_1GameEngine_af4ea44f51563b4e2c0a67fe918bf5e3c}{commandCountDown});
+00086         \hyperlink{classpkg__game_1_1GameEngine_ab0ff9bb9fc35230d82b7e47bf55e40fd}{printWelcome}();
+00087     \}
+00088 
+\hypertarget{GameEngine_8java_source_l00092}{}\hyperlink{classpkg__game_1_1GameEngine_ab0ff9bb9fc35230d82b7e47bf55e40fd}{00092}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \hyperlink{classpkg__game_1_1GameEngine_ab0ff9bb9fc35230d82b7e47bf55e40fd}{printWelcome}() \{
+00093         gui.println(\textcolor{stringliteral}{"Greetings human."});
+00094         gui.println(\textcolor{stringliteral}{"I see the assassins have failed. Too bad..."});
+00095         gui.println(\textcolor{stringliteral}{"You know what they say: if you want something done, do it yourself."});
+00096         gui.println(\textcolor{stringliteral}{"At least I can see that you don't remember anything. At last something that I can take
+       advantage of."});
+00097         gui.println(\textcolor{stringliteral}{"That was predictable, human minds are weak."});
+00098         gui.println(\textcolor{stringliteral}{"\(\backslash\)nBecause you're stupid, I will describe you everything that will be around us."});
+00099         gui.println(\textcolor{stringliteral}{"Who knows ? Maybe you can turn into something useful. One day. Maybe."});
+00100         gui.println(\textcolor{stringliteral}{"\(\backslash\)nBeware: Death is coming!\(\backslash\)n"});
+00101         gui.println(player.getCurrentRoom().getLongDescription());
+00102         gui.showImage(player.getCurrentRoom().getImageName());
+00103     \}
+00104 
+\hypertarget{GameEngine_8java_source_l00109}{}\hyperlink{classpkg__game_1_1GameEngine_a986180eff9d235e3b619c7403accfc31}{00109}     \textcolor{keyword}{private} \hyperlink{classpkg__world_1_1Room}{Room} \hyperlink{classpkg__game_1_1GameEngine_a986180eff9d235e3b619c7403accfc31}{createRooms}() \{
+00110         \textcolor{comment}{// create the rooms}
+00111         \hyperlink{classpkg__world_1_1Room}{Room} temperateBroadleaf = \textcolor{keyword}{new} \hyperlink{classpkg__world_1_1Room}{Room}(\textcolor{stringliteral}{"in temperate forest"}, \textcolor{stringliteral}{"temperatebroadleaf.jpg"});
+00112         temperateBroadleaf.addItem(\textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item}(\textcolor{stringliteral}{"wand"}, 3, \textcolor{stringliteral}{"just an ordinary wand"}));
+00113         \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item} nut = \textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item}(\textcolor{stringliteral}{"nut"}, 2, \textcolor{stringliteral}{"a black and brown oak nut. Too hard for you"});
+00114         temperateBroadleaf.addItem(nut);
+00115 
+00116         \hyperlink{classpkg__world_1_1Room}{Room} taiga = \textcolor{keyword}{new} \hyperlink{classpkg__world_1_1Room}{Room}(\textcolor{stringliteral}{"in a boreal forest"}, \textcolor{stringliteral}{"taiga.jpg"});
+00117         taiga.addItem(\textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item}(\textcolor{stringliteral}{"snowball"}, 1, \textcolor{stringliteral}{"some weirdly yellowy snowball"}));
+00118         taiga.addItem(\textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item}(\textcolor{stringliteral}{"bird"}, 6, \textcolor{stringliteral}{"a frozen inert black bird"}));
+00119         taiga.addCharacter(\textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character}(\textcolor{stringliteral}{"squirrel"}, \textcolor{stringliteral}{"Squeekee squeeki squiki kwiki kwik."},
+00120                 nut, \textcolor{stringliteral}{"The squirrel says \(\backslash\)"Squeekeeee!\(\backslash\)". He looks like happy and run away from you."},
+00121                 \textcolor{stringliteral}{"He looks disapointed and refuses your offer."}));
+00122 
+00123         \hyperlink{classpkg__world_1_1Room}{Room} alpineTundra = \textcolor{keyword}{new} \hyperlink{classpkg__world_1_1Room}{Room}(\textcolor{stringliteral}{"on an alpine mountain"}, \textcolor{stringliteral}{"alpinetundra.jpg"});
+00124         alpineTundra.addItem(\textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item}(\textcolor{stringliteral}{"rock"}, 15, \textcolor{stringliteral}{"a surprisingly solid magnificent rock"}));
+00125         alpineTundra.addItem(\textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item}(\textcolor{stringliteral}{"plank"}, 10, \textcolor{stringliteral}{"a plank of wood, maybe from a chalet"}));
+00126         alpineTundra.addItem(\textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item}(\textcolor{stringliteral}{"snowball"}, 1, \textcolor{stringliteral}{"a snowball. Yes, there is still snow in an alpine
+       biome."}));
+00127 
+00128         \hyperlink{classpkg__world_1_1Room}{Room} steppe = \textcolor{keyword}{new} \hyperlink{classpkg__world_1_1Room}{Room}(\textcolor{stringliteral}{"on a vast grass plain"}, \textcolor{stringliteral}{"steppe.jpg"});
+00129         steppe.addItem(\textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item}(\textcolor{stringliteral}{"grass"}, 1, \textcolor{stringliteral}{"a tuft of yellowish grass. Looking at the grass made you
+       look like stupid"}));
+00130         \hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character} fox = \textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character}(\textcolor{stringliteral}{"fox"}, \textcolor{stringliteral}{"Ring-ding-ding-ding-dingeringeding!"});
+00131         fox.addDialog(\textcolor{stringliteral}{"Gering-ding-ding-ding-dingeringeding!"});
+00132         fox.addDialog(\textcolor{stringliteral}{"Gering-ding-ding-ding-dingeringeding!"});
+00133         fox.addDialog(\textcolor{stringliteral}{"Wa-pa-pa-pa-pa-pa-pow!"});
+00134         fox.addDialog(\textcolor{stringliteral}{"Wa-pa-pa-pa-pa-pa-pow!"});
+00135         fox.addDialog(\textcolor{stringliteral}{"Wa-pa-pa-pa-pa-pa-pow!"});
+00136         fox.addDialog(\textcolor{stringliteral}{"Hatee-hatee-hatee-ho!"});
+00137         fox.addDialog(\textcolor{stringliteral}{"Hatee-hatee-hatee-ho!"});
+00138         fox.addDialog(\textcolor{stringliteral}{"Hatee-hatee-hatee-ho!"});
+00139         fox.addDialog(\textcolor{stringliteral}{"Joff-tchoff-tchoffo-tchoffo-tchoff!"});
+00140         fox.addDialog(\textcolor{stringliteral}{"Tchoff-tchoff-tchoffo-tchoffo-tchoff!"});
+00141         fox.addDialog(\textcolor{stringliteral}{"Joff-tchoff-tchoffo-tchoffo-tchoff!"});
+00142         fox.addDialog(\textcolor{stringliteral}{"Jacha-chacha-chacha-chow!"});
+00143         fox.addDialog(\textcolor{stringliteral}{"Cacha-chacha-chacha-chow!"});
+00144         fox.addDialog(\textcolor{stringliteral}{"Cacha-chacha-chacha-chow!"});
+00145         fox.addDialog(\textcolor{stringliteral}{"Fraka-kaka-kaka-kaka-kow!"});
+00146         fox.addDialog(\textcolor{stringliteral}{"Fraka-kaka-kaka-kaka-kow!"});
+00147         fox.addDialog(\textcolor{stringliteral}{"Fraka-kaka-kaka-kaka-kow!"});
+00148         fox.addDialog(\textcolor{stringliteral}{"A-hee-ahee ha-hee!"});
+00149         fox.addDialog(\textcolor{stringliteral}{"A-hee-ahee ha-hee!"});
+00150         fox.addDialog(\textcolor{stringliteral}{"A-hee-ahee ha-hee!"});
+00151         fox.addDialog(\textcolor{stringliteral}{"A-oo-oo-oo-ooo!"});
+00152         fox.addDialog(\textcolor{stringliteral}{"Woo-oo-oo-ooo!"});
+00153         fox.addDialog(\textcolor{stringliteral}{"Wa-wa-way-do Wub-wid-bid-dum-way-do Wa-wa-way-do"});
+00154         fox.addDialog(\textcolor{stringliteral}{"Bay-budabud-dum-bam"});
+00155         fox.addDialog(\textcolor{stringliteral}{"Mama-dum-day-do"});
+00156         steppe.addCharacter(fox);
+00157 
+00158         \hyperlink{classpkg__world_1_1Room}{Room} cave = \textcolor{keyword}{new} \hyperlink{classpkg__world_1_1Room}{Room}(\textcolor{stringliteral}{"inside a dark cave"}, \textcolor{stringliteral}{"cave.jpg"});
+00159         cave.addItem(\textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item}(\textcolor{stringliteral}{"magiccookie"}, 3, \textcolor{stringliteral}{"a pretend magic cookie with mould on it, probably left
+       there for many years. The use-by date has faded out. Why not eat it?"}));
+00160 
+00161         \hyperlink{classpkg__world_1_1Room}{Room} polarDesert = \textcolor{keyword}{new} \hyperlink{classpkg__world_1_1Room}{Room}(\textcolor{stringliteral}{"in a cold polar desert"}, \textcolor{stringliteral}{"polardesert.jpg"});
+00162         polarDesert.addItem(\textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item}(\textcolor{stringliteral}{"ice"}, 5, \textcolor{stringliteral}{"a little block of ice. But you don't have any drink"}));
+00163 
+00164         \hyperlink{classpkg__world_1_1Room}{Room} xericShrublands = \textcolor{keyword}{new} \hyperlink{classpkg__world_1_1Room}{Room}(\textcolor{stringliteral}{"in a sand desert"}, \textcolor{stringliteral}{"xericshrublands.jpg"});
+00165         xericShrublands.addItem(\textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item}(\textcolor{stringliteral}{"shrub"}, 10, \textcolor{stringliteral}{"a spicky shrub. Useful if you want to make a
+       shruberry"}));
+00166 
+00167         \hyperlink{classpkg__world_1_1Room}{Room} savanna = \textcolor{keyword}{new} \hyperlink{classpkg__world_1_1Room}{Room}(\textcolor{stringliteral}{"in a savanna"}, \textcolor{stringliteral}{"savanna.jpg"});
+00168         savanna.addCharacter(\textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__characters_1_1Character}{Character}(\textcolor{stringliteral}{"elephant"}));
+00169         savanna.addItem(\textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__items_1_1Item}{Item}(\textcolor{stringliteral}{"grass"}, 1, \textcolor{stringliteral}{"a tuft of yellowish grass. You may have other things to
+       do instead of looking at that"}));
+00170 
+00171         \textcolor{comment}{// initialise room exits}
+00172         temperateBroadleaf.setExit(\textcolor{stringliteral}{"east"}, taiga);
+00173         temperateBroadleaf.setExit(\textcolor{stringliteral}{"south"}, steppe);
+00174         \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter}{MovingCharacter} mouse = \textcolor{keyword}{new} \hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter}{MovingCharacter}(temperateBroadleaf, \textcolor{stringliteral}{"
+      mouse"}, \textcolor{stringliteral}{"*very annoying high pitched noise (like a baby)*"});
+00175         temperateBroadleaf.addCharacter(mouse);
+00176         movingCharacters.add(mouse);
+00177 
+00178         taiga.setExit(\textcolor{stringliteral}{"west"}, temperateBroadleaf);
+00179         taiga.setExit(\textcolor{stringliteral}{"east"}, alpineTundra);
+00180         taiga.setExit(\textcolor{stringliteral}{"south"}, cave);
+00181 
+00182         alpineTundra.setExit(\textcolor{stringliteral}{"west"}, taiga);
+00183         alpineTundra.setExit(\textcolor{stringliteral}{"south"}, polarDesert);
+00184 
+00185         steppe.setExit(\textcolor{stringliteral}{"north"}, temperateBroadleaf);
+00186         steppe.setExit(\textcolor{stringliteral}{"east"}, cave);
+00187         steppe.setExit(\textcolor{stringliteral}{"south"}, xericShrublands);
+00188 
+00189         cave.setExit(\textcolor{stringliteral}{"north"}, taiga);
+00190         cave.setExit(\textcolor{stringliteral}{"south"}, savanna);
+00191         cave.setExit(\textcolor{stringliteral}{"east"}, polarDesert);
+00192         cave.setExit(\textcolor{stringliteral}{"west"}, steppe);
+00193 
+00194         \textcolor{comment}{// Trap Door}
+00195         \textcolor{comment}{// polarDesert.setExit("north", alpineTundra);}
+00196         polarDesert.setExit(\textcolor{stringliteral}{"west"}, cave);
+00197 
+00198         xericShrublands.setExit(\textcolor{stringliteral}{"north"}, steppe);
+00199         xericShrublands.setExit(\textcolor{stringliteral}{"east"}, savanna);
+00200 
+00201         savanna.setExit(\textcolor{stringliteral}{"north"}, cave);
+00202         savanna.setExit(\textcolor{stringliteral}{"west"}, xericShrublands);
+00203 
+00204         \hyperlink{classpkg__world_1_1Room}{Room} randomRoom = \textcolor{keyword}{new} \hyperlink{classpkg__world_1_1Room}{Room}(\textcolor{stringliteral}{"in a randomly random room. If you try to escape it, you will be
+       teleported.\(\backslash\)nAs you don't understand, try it."}, \textcolor{stringliteral}{"random.png"});
+00205 
+00206         polarDesert.setExit(\textcolor{stringliteral}{"south"}, randomRoom);
+00207         savanna.setExit(\textcolor{stringliteral}{"east"}, randomRoom);
+00208 
+00209         gameRooms.add(randomRoom);
+00210         gameRooms.add(temperateBroadleaf);
+00211         gameRooms.add(taiga);
+00212         gameRooms.add(alpineTundra);
+00213         gameRooms.add(steppe);
+00214         gameRooms.add(cave);
+00215         gameRooms.add(polarDesert);
+00216         gameRooms.add(xericShrublands);
+00217         gameRooms.add(savanna);
+00218 
+00219         \textcolor{keywordflow}{return} temperateBroadleaf;
+00220     \}
+00221 
+\hypertarget{GameEngine_8java_source_l00226}{}\hyperlink{classpkg__game_1_1GameEngine_a37887ae202eadba82495da82ac4e1908}{00226}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classpkg__game_1_1GameEngine_a37887ae202eadba82495da82ac4e1908}{processCommand}(String commandLine) \{
+00227         gui.println(\textcolor{stringliteral}{"\(\backslash\)n"} + commandLine + \textcolor{stringliteral}{"\(\backslash\)n"});
+00228         \hyperlink{classpkg__commands_1_1Command}{Command} command = Parser.getCommand(commandLine);
+00229 
+00230         \textcolor{keywordflow}{if}(command == null) \{
+00231             gui.println(\textcolor{stringliteral}{"I don't know what you mean..."});
+00232             \textcolor{keywordflow}{return};
+00233         \}
+00234 
+00235         gui.setCommandsLeft(--\hyperlink{classpkg__game_1_1GameEngine_af4ea44f51563b4e2c0a67fe918bf5e3c}{commandCountDown});
+00236 
+00237         \textcolor{comment}{// If we can cast the command into a GoCommand}
+00238         \textcolor{comment}{// Or if it is the test command}
+00239         \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1GoCommand}{GoCommand}.class.isInstance(command) || command.getClass().equals(
+      \hyperlink{classpkg__commands_1_1TestCommand}{TestCommand}.class)) \{
+00240             \textcolor{comment}{// The MovingCharacters move}
+00241             \textcolor{comment}{// Needed before the execute method}
+00242             \textcolor{keywordflow}{for}(\hyperlink{classpkg__world_1_1pkg__characters_1_1MovingCharacter}{MovingCharacter} character : \hyperlink{classpkg__game_1_1GameEngine_a64a7051b0ae6fb816d566be8ddbab3cb}{movingCharacters}) \{
+00243                 character.move();
+00244             \}
+00245         \}
+00246 
+00247         \textcolor{keywordflow}{try} \{
+00248             \textcolor{keywordtype}{boolean} quit = command.execute(\hyperlink{classpkg__game_1_1GameEngine_a864d14b3375ad026e700ba0c0b9f9d2d}{player});
+00249 
+00250             \textcolor{comment}{// If we can cast the command into a GoCommand}
+00251             \textcolor{comment}{// Or if it is the test command}
+00252             \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1GoCommand}{GoCommand}.class.isInstance(command) || command.getClass().equals(
+      \hyperlink{classpkg__commands_1_1TestCommand}{TestCommand}.class)) \{
+00253                 \textcolor{comment}{// The game image is reloaded}
+00254                 \textcolor{keywordflow}{if}(\hyperlink{classpkg__game_1_1GameEngine_a864d14b3375ad026e700ba0c0b9f9d2d}{player}.\hyperlink{classpkg__world_1_1Player_a5ff0ede152d97c0c9cf6603c9a422a77}{getCurrentRoom}().getImageName() != null) \{
+00255                     gui.showImage(player.getCurrentRoom().getImageName());
+00256                 \}
+00257             \}
+00258 
+00259             \textcolor{keywordflow}{if}(command.hasMessage())
+00260                 \hyperlink{classpkg__game_1_1GameEngine_a152cd31474cc8a5980e32c2cab6e7d36}{gui}.\hyperlink{classpkg__game_1_1UserInterface_ac4d82f989416d7cc64a6e2fba2f4ed75}{println}(command.getMessage());
+00261 
+00262             \textcolor{keywordflow}{if}(quit) \{
+00263                 \hyperlink{classpkg__game_1_1GameEngine_a6d7340637e1eb46994a494c149442a22}{endGame}(\textcolor{keyword}{false});
+00264             \}
+00265         \} \textcolor{keywordflow}{catch}(\hyperlink{classpkg__exceptions_1_1NoArgumentException}{NoArgumentException} e) \{
+00266             gui.println(e.getMessage());
+00267         \} \textcolor{keywordflow}{catch}(pkg\_exceptions.IllegalArgumentException e) \{
+00268             gui.println(e.getMessage());
+00269         \} \textcolor{keywordflow}{catch}(\hyperlink{classpkg__exceptions_1_1UnauthorizedException}{UnauthorizedException} e) \{
+00270             gui.println(e.getMessage());
+00271         \}
+00272 
+00273         \textcolor{keywordflow}{if}(\hyperlink{classpkg__game_1_1GameEngine_af4ea44f51563b4e2c0a67fe918bf5e3c}{commandCountDown} == 0) \{
+00274             \hyperlink{classpkg__game_1_1GameEngine_a6d7340637e1eb46994a494c149442a22}{endGame}(\textcolor{keyword}{false});
+00275         \}
+00276 
+00277     \}
+00278 
+\hypertarget{GameEngine_8java_source_l00283}{}\hyperlink{classpkg__game_1_1GameEngine_a6d7340637e1eb46994a494c149442a22}{00283}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \hyperlink{classpkg__game_1_1GameEngine_a6d7340637e1eb46994a494c149442a22}{endGame}(\textcolor{keywordtype}{boolean} winning) \{
+00284         gui.println(\textcolor{stringliteral}{"Thank you for playing. Good bye. By the way, you "}
+00285                 + ((winning)? \textcolor{stringliteral}{"won"} : \textcolor{stringliteral}{"lost"}) + \textcolor{stringliteral}{"."});
+00286         gui.enable(\textcolor{keyword}{false});
+00287     \}
+00288 
+\hypertarget{GameEngine_8java_source_l00289}{}\hyperlink{classpkg__game_1_1GameEngine_ae838a102ca62ef2bfd2e9d2d5ae98214}{00289}     \textcolor{keyword}{public} \textcolor{keyword}{static} ArrayList<Room> \hyperlink{classpkg__game_1_1GameEngine_ae838a102ca62ef2bfd2e9d2d5ae98214}{getRooms}() \{
+00290         \textcolor{keywordflow}{return} \hyperlink{classpkg__game_1_1GameEngine_a4b4afca13ceeb1057e50471670bf3306}{gameRooms};
+00291     \}
+00292 
+00293 \}
+\end{DoxyCode}

@@ -1,0 +1,128 @@
+\hypertarget{classpkg__commands_1_1LookCommand}{\section{pkg\-\_\-commands.\-Look\-Command Class Reference}
+\label{classpkg__commands_1_1LookCommand}\index{pkg\-\_\-commands.\-Look\-Command@{pkg\-\_\-commands.\-Look\-Command}}
+}
+
+
+Inheritance diagram for pkg\-\_\-commands.\-Look\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classpkg__commands_1_1LookCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pkg\-\_\-commands.\-Look\-Command\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classpkg__commands_1_1LookCommand__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpkg__commands_1_1LookCommand_ab689f51a18ea2d40ab995099e076112c}{Look\-Command} ()
+\item 
+boolean \hyperlink{classpkg__commands_1_1LookCommand_af336146fae1e14bf434d85a5acbcdcd7}{execute} (\hyperlink{classpkg__world_1_1Player}{Player} player)  throws Illegal\-Argument\-Exception 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+class \hyperlink{classpkg__commands_1_1LookCommand}{Look\-Command} used to show information about the current Room or a given Item \begin{DoxyAuthor}{Author}
+Rémi Nicole 
+\end{DoxyAuthor}
+
+
+Definition at line \hyperlink{LookCommand_8java_source_l00011}{11} of file \hyperlink{LookCommand_8java_source}{Look\-Command.\-java}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpkg__commands_1_1LookCommand_ab689f51a18ea2d40ab995099e076112c}{\index{pkg\-\_\-commands\-::\-Look\-Command@{pkg\-\_\-commands\-::\-Look\-Command}!Look\-Command@{Look\-Command}}
+\index{Look\-Command@{Look\-Command}!pkg_commands::LookCommand@{pkg\-\_\-commands\-::\-Look\-Command}}
+\subsubsection[{Look\-Command}]{\setlength{\rightskip}{0pt plus 5cm}pkg\-\_\-commands.\-Look\-Command.\-Look\-Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpkg__commands_1_1LookCommand_ab689f51a18ea2d40ab995099e076112c}
+Constructor for \hyperlink{classpkg__commands_1_1LookCommand}{Look\-Command} 
+
+Definition at line \hyperlink{LookCommand_8java_source_l00016}{16} of file \hyperlink{LookCommand_8java_source}{Look\-Command.\-java}.
+
+
+\begin{DoxyCode}
+00016                         \{
+00017 
+00018     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpkg__commands_1_1LookCommand_af336146fae1e14bf434d85a5acbcdcd7}{\index{pkg\-\_\-commands\-::\-Look\-Command@{pkg\-\_\-commands\-::\-Look\-Command}!execute@{execute}}
+\index{execute@{execute}!pkg_commands::LookCommand@{pkg\-\_\-commands\-::\-Look\-Command}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}boolean pkg\-\_\-commands.\-Look\-Command.\-execute (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{player}
+\end{DoxyParamCaption}
+) throws {\bf Illegal\-Argument\-Exception}}}\label{classpkg__commands_1_1LookCommand_af336146fae1e14bf434d85a5acbcdcd7}
+Saves the information about the current Room or a given Item in the message field. 
+\begin{DoxyParams}{Parameters}
+{\em player} & The player that called this command \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\-Argument\-Exception} & When the user typed a name other than any of the items in the Player's or the Room's inventory \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+False because it is not the quit command 
+\end{DoxyReturn}
+
+
+Definition at line \hyperlink{LookCommand_8java_source_l00026}{26} of file \hyperlink{LookCommand_8java_source}{Look\-Command.\-java}.
+
+
+
+References \hyperlink{Command_8java_source_l00041}{pkg\-\_\-commands.\-Command.\-get\-Parameter()}, \hyperlink{Command_8java_source_l00073}{pkg\-\_\-commands.\-Command.\-has\-Parameter()}, and \hyperlink{Command_8java_source_l00089}{pkg\-\_\-commands.\-Command.\-set\-Message()}.
+
+
+\begin{DoxyCode}
+00026                                                                           \{
+00027         \textcolor{keywordflow}{if}(\hyperlink{classpkg__commands_1_1Command_a02af95ab3f1898a66259ab7c177b6998}{hasParameter}()) \{
+00028             \textcolor{keywordflow}{if}(player.getCurrentRoom().hasItem(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}())) \{
+00029                 \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(
+00030                         showItem(player.getCurrentRoom().getItem(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}()))
+00031                         );
+00032             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (player.hasItem(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}()) ) \{
+00033                 \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(
+00034                         showItem(player.getItem(\hyperlink{classpkg__commands_1_1Command_a41c92d445be73ea9d62320c65efb8434}{getParameter}()))
+00035                         );
+00036             \} \textcolor{keywordflow}{else}
+00037                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} IllegalArgumentException( \textcolor{stringliteral}{"I'm not sure you want to look at that."});
+00038         \} \textcolor{keywordflow}{else}
+00039             \hyperlink{classpkg__commands_1_1Command_ae210ff216fe908b111ba1c988a963d13}{setMessage}(player.getCurrentRoom().getLongDescription());
+00040         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00041     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpkg__commands_1_1LookCommand_af336146fae1e14bf434d85a5acbcdcd7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+pkg\-\_\-commands/\hyperlink{LookCommand_8java}{Look\-Command.\-java}\end{DoxyCompactItemize}
