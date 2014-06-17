@@ -137,31 +137,31 @@ public class UserInterface implements ActionListener {
 
 		Font buttonsFont = new Font(Font.SANS_SERIF, Font.PLAIN, 30);
 
-		JButton buttonNorth = new JButton(new ImageIcon("Images/sprites/gonorth.png"));
+		JButton buttonNorth = new JButton(new ImageIcon(this.getClass().getClassLoader().getResource("Images/sprites/gonorth.png")));
 		buttons.put(buttonNorth, "go north");
 
-		JButton buttonSouth = new JButton(new ImageIcon("Images/sprites/gosouth.png"));
+		JButton buttonSouth = new JButton(new ImageIcon(this.getClass().getClassLoader().getResource("Images/sprites/gosouth.png")));
 		buttons.put(buttonSouth, "go south");
 
-		JButton buttonEast = new JButton(new ImageIcon("Images/sprites/goeast.png"));
+		JButton buttonEast = new JButton(new ImageIcon(this.getClass().getClassLoader().getResource("Images/sprites/goeast.png")));
 		buttons.put(buttonEast, "go east");
 
-		JButton buttonWest = new JButton(new ImageIcon("Images/sprites/gowest.png"));
+		JButton buttonWest = new JButton(new ImageIcon(this.getClass().getClassLoader().getResource("Images/sprites/gowest.png")));
 		buttons.put(buttonWest, "go west");
 
-		JButton buttonHelp = new JButton(new ImageIcon("Images/sprites/help.png"));
+		JButton buttonHelp = new JButton(new ImageIcon(this.getClass().getClassLoader().getResource("Images/sprites/help.png")));
 		buttons.put(buttonHelp, "help");
 
-		JButton buttonReturn = new JButton(new ImageIcon("Images/sprites/enter.png"));
+		JButton buttonReturn = new JButton(new ImageIcon(this.getClass().getClassLoader().getResource("Images/sprites/enter.png")));
 		buttons.put(buttonReturn, "");
 
-		JButton buttonCharge = new JButton(new ImageIcon("Images/sprites/charge.png"));
+		JButton buttonCharge = new JButton(new ImageIcon(this.getClass().getClassLoader().getResource("Images/sprites/charge.png")));
 		buttons.put(buttonCharge, "beamer charge");
 
-		JButton buttonTeleport = new JButton(new ImageIcon("Images/sprites/teleport.png"));
+		JButton buttonTeleport = new JButton(new ImageIcon(this.getClass().getClassLoader().getResource("Images/sprites/teleport.png")));
 		buttons.put(buttonTeleport, "beamer teleport");
 
-		JButton buttonBack = new JButton(new ImageIcon("Images/sprites/back.png"));
+		JButton buttonBack = new JButton(new ImageIcon(this.getClass().getClassLoader().getResource("Images/sprites/back.png")));
 		buttons.put(buttonBack, "back");
 
 		for (JButton button : buttons.keySet()) {
